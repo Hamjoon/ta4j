@@ -1,0 +1,610 @@
+{
+  "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar",
+      "-sourcepath",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+      "-d",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/classes",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java"
+    ],
+    "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.72,
+    "log": "work/validation/ouedraogo/round2/23/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/resources:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testDefaultConstructor_hasBuyStartingType()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testConstructorWithStartingType_sell()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testSideAndAmountWhenNoEntry()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateCreatesEntryTrade()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateCreatesExitTrade()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateWithIndexLowerThanEntryThrows()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateWithMismatchedCostModelThrows()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testStateTransitions()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testEqualsAndHashCode()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testProfitForOpenedPositionIsZero()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testProfitForClosedPositionIsNaN()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testHasProfitAndHasLossWithNaNProfit()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGrossReturnForOpenedPositionIsZero()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGrossReturnForClosedPositionIsNaN()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGetTransactionCostModelDefaultsToZeroCostModel()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGetHoldingCostModelDefaultsToZeroCostModel()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testToStringShowsEntryAndExit()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGettersAfterEntry()",
+        "--reports-dir",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/run1"
+      ],
+      "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.57,
+      "log": "work/validation/ouedraogo/round2/23/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/resources:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testDefaultConstructor_hasBuyStartingType()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testConstructorWithStartingType_sell()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testSideAndAmountWhenNoEntry()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateCreatesEntryTrade()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateCreatesExitTrade()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateWithIndexLowerThanEntryThrows()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateWithMismatchedCostModelThrows()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testStateTransitions()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testEqualsAndHashCode()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testProfitForOpenedPositionIsZero()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testProfitForClosedPositionIsNaN()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testHasProfitAndHasLossWithNaNProfit()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGrossReturnForOpenedPositionIsZero()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGrossReturnForClosedPositionIsNaN()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGetTransactionCostModelDefaultsToZeroCostModel()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGetHoldingCostModelDefaultsToZeroCostModel()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testToStringShowsEntryAndExit()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGettersAfterEntry()",
+        "--reports-dir",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/run2"
+      ],
+      "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.618,
+      "log": "work/validation/ouedraogo/round2/23/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/resources:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testDefaultConstructor_hasBuyStartingType()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testConstructorWithStartingType_sell()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testSideAndAmountWhenNoEntry()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateCreatesEntryTrade()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateCreatesExitTrade()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateWithIndexLowerThanEntryThrows()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testOperateWithMismatchedCostModelThrows()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testStateTransitions()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testEqualsAndHashCode()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testProfitForOpenedPositionIsZero()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testProfitForClosedPositionIsNaN()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testHasProfitAndHasLossWithNaNProfit()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGrossReturnForOpenedPositionIsZero()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGrossReturnForClosedPositionIsNaN()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGetTransactionCostModelDefaultsToZeroCostModel()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGetHoldingCostModelDefaultsToZeroCostModel()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testToStringShowsEntryAndExit()",
+        "--select-method",
+        "org.ta4j.core.PositionTest#testGettersAfterEntry()",
+        "--reports-dir",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round2/23/test/run3"
+      ],
+      "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.619,
+      "log": "work/validation/ouedraogo/round2/23/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testDefaultConstructor_hasBuyStartingType",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testDefaultConstructor_hasBuyStartingType",
+      "body_hash": "a25347ebbff5b0bb015791fd00b464b1ac0561264d9ffd22a4afc811b2e770b5",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testDefaultConstructor_hasBuyStartingType()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testConstructorWithStartingType_sell",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithStartingType_sell",
+      "body_hash": "fddd28b9281e9cdf04c8f8188ce4e817955f3e6119f0f095a91d4b233a296dbf",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testConstructorWithStartingType_sell()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testSideAndAmountWhenNoEntry",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testSideAndAmountWhenNoEntry",
+      "body_hash": "17a9c59bc37526037b2b0772c6d7583b2ed8a68364b0bf59668a7b648af8fa7d",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testSideAndAmountWhenNoEntry()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateCreatesEntryTrade",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesEntryTrade",
+      "body_hash": "9080ebb1cb60fd1554f43a406fc2ce0e5b8f31490cfd0ea4b6a02c6fa122430a",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testOperateCreatesEntryTrade()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateCreatesExitTrade",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesExitTrade",
+      "body_hash": "db3e96be182d9efcc42bf51e02f27af91efa761cb92633b6a39c37cd5587e3b8",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testOperateCreatesExitTrade()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateWithIndexLowerThanEntryThrows",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateWithIndexLowerThanEntryThrows",
+      "body_hash": "973fb88184792f003ab6a7dcd849f9371c7d098185d76437259867fee6ba8b02",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testOperateWithIndexLowerThanEntryThrows()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateWithMismatchedCostModelThrows",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateWithMismatchedCostModelThrows",
+      "body_hash": "11b744ae57311906a17a32483b9f0ff0dcfdc698e45fe36d33d46a61879e822d",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "fail",
+      "message": "java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.PositionTest#testOperateWithMismatchedCostModelThrows()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testStateTransitions",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testStateTransitions",
+      "body_hash": "8d830ec6fe3fead2a099f3f4ea4355ecf8d9baab93df78ebe44edf20d44dfa40",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testStateTransitions()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsAndHashCode",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testEqualsAndHashCode",
+      "body_hash": "493e679e995d7564cfe6c372e38baf1d4a8ad9b88a2b7e32f6294872e0f354f3",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsAndHashCode()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testProfitForOpenedPositionIsZero",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testProfitForOpenedPositionIsZero",
+      "body_hash": "ef9380ef2eadd993a68b4122e70a4879c3b9e0625fd914abb8380646753ff529",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "fail",
+      "message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:87)\n\tat org.junit.Assert.assertTrue(Assert.java:42)\n\tat org.junit.Assert.assertTrue(Assert.java:53)\n\tat org.ta4j.core.PositionTest.testProfitForOpenedPositionIsZero(PositionTest.java:165)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)\n\tat org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)\n\tat org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)\n\tat org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)\n\tat org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:66)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:58)\n\tat org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:58)\n\tat org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:120)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:82)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:55)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:48)\n\tat org.junit.platform.console.ConsoleLauncher.main(ConsoleLauncher.java:42)\n",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.PositionTest#testProfitForOpenedPositionIsZero()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testProfitForClosedPositionIsNaN",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testProfitForClosedPositionIsNaN",
+      "body_hash": "c74a9b0e1f92b5a524636329ec3c18e55117df6e608bfb6bbf5eac2c006116b5",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testProfitForClosedPositionIsNaN()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testHasProfitAndHasLossWithNaNProfit",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testHasProfitAndHasLossWithNaNProfit",
+      "body_hash": "58e4744a3e4a43ef81264e532c2f13ec251c3d8310aa5f47911af32052c27cd7",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testHasProfitAndHasLossWithNaNProfit()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGrossReturnForOpenedPositionIsZero",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGrossReturnForOpenedPositionIsZero",
+      "body_hash": "327eefef906349fb41890081151dcf96cc2b1fa50cd15f6f9637fe329f0a471b",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "fail",
+      "message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:87)\n\tat org.junit.Assert.assertTrue(Assert.java:42)\n\tat org.junit.Assert.assertTrue(Assert.java:53)\n\tat org.ta4j.core.PositionTest.testGrossReturnForOpenedPositionIsZero(PositionTest.java:190)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)\n\tat org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)\n\tat org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)\n\tat org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)\n\tat org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:66)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:58)\n\tat org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:58)\n\tat org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:120)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:82)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:55)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:48)\n\tat org.junit.platform.console.ConsoleLauncher.main(ConsoleLauncher.java:42)\n",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGrossReturnForOpenedPositionIsZero()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGrossReturnForClosedPositionIsNaN",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGrossReturnForClosedPositionIsNaN",
+      "body_hash": "201c029050edfaf87a4ac0741f980f8a98de79d59ad2cae2be883002d123841a",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGrossReturnForClosedPositionIsNaN()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetTransactionCostModelDefaultsToZeroCostModel",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGetTransactionCostModelDefaultsToZeroCostModel",
+      "body_hash": "3e8b914158914dfefc0e577d38bc7c28a39b097c01faa98c2294eb2008d1ac6d",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetTransactionCostModelDefaultsToZeroCostModel()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetHoldingCostModelDefaultsToZeroCostModel",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGetHoldingCostModelDefaultsToZeroCostModel",
+      "body_hash": "dc4e91fd917de01c1e33fb6cb27f9e1ff7ec57709aa4dde5c17d19bb4c2db4df",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetHoldingCostModelDefaultsToZeroCostModel()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testToStringShowsEntryAndExit",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testToStringShowsEntryAndExit",
+      "body_hash": "f223476bc66ae02e17b57d42e0060daa29f254190f30106bea8377cd21a2c017",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testToStringShowsEntryAndExit()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGettersAfterEntry",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGettersAfterEntry",
+      "body_hash": "b6ca748a3d0cd35a5f0e4c8f54a89708857a049ce16388d684286bb8bafc4143",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGettersAfterEntry()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.774,
+    "log": "work/validation/ouedraogo/round2/23/inventory.tsv"
+  },
+  "input_sha256": "11a3814bb60072dc5e35259b175acc628d17131a7fe85bde48ddb6f8ee468d08"
+}

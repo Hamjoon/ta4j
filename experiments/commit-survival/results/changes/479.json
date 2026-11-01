@@ -1,0 +1,14 @@
+{
+  "index": 479,
+  "sha": "97f4326e5cc3443da5383d6bf038dd32e2b1599c",
+  "parent": "da4215f57ac2c3f6da47d84b40594d0b7e53a2d3",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java\nindex cfc9cd11d..2bef72e14 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java\n@@ -31,3 +30,0 @@ import org.ta4j.core.indicators.elliott.ElliottSwing;\n- * @throws IllegalArgumentException when the swings are not a contiguous chain,\n- *                                  or when both pivots and swings are non-empty\n- *                                  and mutually inconsistent\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\nindex cf8a5091e..cbec184ae 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n@@ -679 +679,2 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n-     * example {@link VolumeIndicator} or {@link PearsonCorrelationIndicator}) must\n+     * example {@link org.ta4j.core.indicators.helpers.VolumeIndicator} or\n+     * {@link org.ta4j.core.indicators.statistics.PearsonCorrelationIndicator}) must\n@@ -751 +752 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n-     * example {@link MACDVIndicator}'s moving averages). Subclasses with such\n+     * example {@link org.ta4j.core.indicators.macd.MACDVIndicator}'s moving averages). Subclasses with such"
+}

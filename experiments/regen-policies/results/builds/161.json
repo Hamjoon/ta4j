@@ -1,0 +1,25 @@
+{
+  "index": 161,
+  "sha": "9a89421eea9da31e2ca48cd875b2a26d0c642f87",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/regen-policies/work/checkouts/161/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 3.893,
+      "log": "results/builds/logs/161-1.txt"
+    }
+  ],
+  "input_sha256": "23dded980b0d3049dc3645f8735d23af558282789041947df700e0196ed1b151",
+  "pom_sha256": "4dc3ec0255a5b0f5ea83583fb768c2eccf6c75087d56f51bdbbbb30abb1bc452",
+  "classpath": "work/classpaths/4dc3ec0255a5b0f5ea83583fb768c2eccf6c75087d56f51bdbbbb30abb1bc452.txt",
+  "classpath_attempts": []
+}

@@ -1,0 +1,52 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:46: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("test-series");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:317: error: cannot find symbol
+        Rule rule = price.crossedOver(15); // crosses 15 at index 1 (price 20 > 15, previous 10 < 15)
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:326: error: cannot find symbol
+        Rule rule = price.crossedUnder(45); // crosses under 45 at index 3 (price 40 < 45, previous 50 > 45)
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:334: error: cannot find symbol
+        Rule rule = price.crossedOver(100);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:340: error: cannot find symbol
+        Rule rule = price.isGreaterThan(volume);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:346: error: cannot find symbol
+        Rule rule2 = highPrice.isGreaterThan(volume);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:352: error: cannot find symbol
+        Rule rule = price.isLessThan(volume);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:361: error: cannot find symbol
+        Rule rule = price.isGreaterThan(25);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:370: error: cannot find symbol
+        Rule rule = price.isLessThan(35);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:401: error: no suitable method found for plus(Num)
+        NumericIndicator sum = bigConst.plus(big);
+                                       ^
+    method NumericIndicator.plus(Indicator<Num>) is not applicable
+      (argument mismatch; Num cannot be converted to Indicator<Num>)
+    method NumericIndicator.plus(Number) is not applicable
+      (argument mismatch; Num cannot be converted to Number)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+10 errors

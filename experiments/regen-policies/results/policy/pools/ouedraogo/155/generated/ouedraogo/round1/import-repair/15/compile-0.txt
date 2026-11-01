@@ -1,0 +1,21 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:121: error: cannot find symbol
+        @Override public BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BarBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:49: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:75: error: incompatible types: possible lossy conversion from double to long
+        @Override public Num sqrt(MathContext mc) { return new SimpleNum(BigDecimal.valueOf(Math.sqrt(this.value.doubleValue()), mc)); }
+                                                                                                     ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:106: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:111: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(BigDecimal bd) { return new SimpleNum(bd); }
+        ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+5 errors

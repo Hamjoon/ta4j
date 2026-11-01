@@ -1,0 +1,16 @@
+{
+  "index": 57,
+  "sha": "c1d9d3bc7122dca4127b798e4303baf11dfa62b2",
+  "parent": "f29bdd71cacf083028e3c6f722a82bdcc4177563",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      277
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      277
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\nindex 6096484f4..4dc023f14 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n@@ -276,2 +276,2 @@ public class BaseBarSeries implements BarSeries {\n-    public void addTrade(final Number price, final Number amount) {\n-        addTrade(numFactory().numOf(price), numFactory().numOf(amount));\n+    public void addTrade(final Number tradeVolume, final Number tradePrice) {\n+        addTrade(numFactory().numOf(tradeVolume), numFactory().numOf(tradePrice));"
+}

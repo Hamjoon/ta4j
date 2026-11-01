@@ -1,0 +1,34 @@
+{
+  "index": 156,
+  "sha": "a299fbc904a61b2c0866b143689daa173a8a0c77",
+  "parent": "0af7c7176793823733b7bc4f01fbda0899debf73",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      95,
+      96,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      153,
+      299
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      144,
+      145,
+      146,
+      148,
+      149,
+      150,
+      151,
+      153,
+      299
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\nindex 8cad5c182..d10019b7e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n@@ -25,0 +26 @@ package org.ta4j.core;\n+import java.io.Serial;\n@@ -40,0 +42 @@ public class BaseBarSeries implements BarSeries {\n+    @Serial\n@@ -95,2 +96,0 @@ public class BaseBarSeries implements BarSeries {\n-            this.seriesBeginIndex = -1;\n-            this.seriesEndIndex = -1;\n@@ -127 +127 @@ public class BaseBarSeries implements BarSeries {\n-     * @param index  an out of bounds bar index\n+     * @param index  an out-of-bounds bar index\n@@ -143,0 +144,3 @@ public class BaseBarSeries implements BarSeries {\n+        var builder = new BaseBarSeriesBuilder().withName(getName())\n+                .withNumFactory(this.numFactory)\n+                .withMaxBarCount(this.maximumBarCount);\n@@ -145,7 +148,4 @@ public class BaseBarSeries implements BarSeries {\n-            final int start = startIndex - getRemovedBarsCount();\n-            final int end = Math.min(endIndex - getRemovedBarsCount(), this.getEndIndex() + 1);\n-            return new BaseBarSeriesBuilder().withName(getName())\n-                    .withBars(cut(this.bars, start, end))\n-                    .withNumFactory(this.numFactory)\n-                    .withMaxBarCount(this.maximumBarCount)\n-                    .build();\n+            var removedBarsCount = getRemovedBarsCount();\n+            var start = startIndex - removedBarsCount;\n+            var end = Math.min(endIndex - removedBarsCount, this.getEndIndex() + 1);\n+            return builder.withBars(cut(this.bars, start, end)).build();\n@@ -153 +153 @@ public class BaseBarSeries implements BarSeries {\n-        return new BaseBarSeriesBuilder().withNumFactory(this.numFactory).withName(getName()).build();\n+        return builder.build();\n@@ -299 +299 @@ public class BaseBarSeries implements BarSeries {\n-                this.bars.remove(0);\n+                this.bars.removeFirst();"
+}

@@ -1,0 +1,58 @@
+{
+  "class_name": "CashFlow",
+  "technique": "FSL",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-29T16:53:36.868773+00:00",
+      "latency": 72.534,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "Near AI",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1793292816-4MeAuOrc6RbRYBv1TgFE",
+      "usage": {
+        "prompt_tokens": 6271,
+        "completion_tokens": 3464,
+        "total_tokens": 9735,
+        "cost": 0.00070701,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 48,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00070701,
+          "upstream_inference_prompt_cost": 0.00018741,
+          "upstream_inference_completions_cost": 0.0005196
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 660,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "0720240b84b1adc56662cbd323c5805e547b10017334763fee950a00175d69c5",
+      "response_sha256": "25e9dbe421437f9ed340f572a4c951ed2db5ac5cb8ca5e6e115f9b01f0a0edb8"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "CashFlowTest",
+    "package": "org.ta4j.core.analysis",
+    "fqcn": "org.ta4j.core.analysis.CashFlowTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java"
+}

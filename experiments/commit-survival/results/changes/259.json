@@ -1,0 +1,14 @@
+{
+  "index": 259,
+  "sha": "c54238a05b5fbc590619fff179c50131ff7f090c",
+  "parent": "96a017088c71b486e434ece41dfeeef8df4dfee0",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      1884
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex b4a9d2b1a..47c1990a9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -1884 +1884 @@ public final class ElliottWaveAnalysisRunner {\n-        private ElliottLogicProfile logicProfile;\n+        private ElliottLogicProfile logicProfile = ElliottLogicProfile.ORTHODOX_CLASSICAL;"
+}

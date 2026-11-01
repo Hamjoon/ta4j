@@ -1,0 +1,272 @@
+[
+  {
+    "group": "CashFlow.numOf(Number) - delegation tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "42"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(42) (e.g., a Num with value 42)",
+        "description": "Verify that an Integer is correctly delegated to BarSeries.numOf and the returned Num reflects the same numeric value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "3.1415"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(3.1415) (e.g., a Num with value 3.1415)",
+        "description": "Verify that a Double is correctly delegated to BarSeries.numOf and the returned Num reflects the same numeric value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "new java.math.BigDecimal(\"123456.789\")"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(BigDecimal(\"123456.789\")) (e.g., a Num with value 123456.789)",
+        "description": "Verify that a BigDecimal is correctly delegated to BarSeries.numOf and the returned Num reflects the same numeric value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "When a null Number is passed, the method should propagate a NullPointerException (thrown by the underlying BarSeries.numOf implementation)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Long.valueOf(9999999999L)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(9999999999L) (e.g., a Num with value 9999999999)",
+        "description": "Verify that a Long value is correctly delegated and the returned Num matches the long value."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - primitive wrapper types",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Byte.valueOf((byte)7)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Byte.valueOf((byte)7)) (e.g., a Num with value 7)",
+        "description": "Verify that a Byte value is correctly delegated to BarSeries.numOf and the returned Num reflects the same numeric value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Short.valueOf((short)-12)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Short.valueOf((short)-12)) (e.g., a Num with value -12)",
+        "description": "Verify that a Short value (negative) is correctly delegated and the returned Num matches the short value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Float.valueOf(2.5f)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Float.valueOf(2.5f)) (e.g., a Num with value 2.5)",
+        "description": "Verify that a Float value is correctly delegated to BarSeries.numOf and the returned Num reflects the same floating\u2011point value."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - floating point edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Float.NaN"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Float.NaN) (e.g., a Num representing NaN)",
+        "description": "Ensure that Float.NaN is delegated and the resulting Num represents NaN (or the library\u2019s equivalent)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Float.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Float.POSITIVE_INFINITY) (e.g., a Num representing +\u221e)",
+        "description": "Check delegation of Float.POSITIVE_INFINITY and that the returned Num reflects positive infinity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Float.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Float.NEGATIVE_INFINITY) (e.g., a Num representing -\u221e)",
+        "description": "Check delegation of Float.NEGATIVE_INFINITY and that the returned Num reflects negative infinity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Double.NaN) (e.g., a Num representing NaN)",
+        "description": "Ensure that Double.NaN is delegated and the resulting Num represents NaN."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Double.POSITIVE_INFINITY) (e.g., a Num representing +\u221e)",
+        "description": "Check delegation of Double.POSITIVE_INFINITY and that the returned Num reflects positive infinity."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Double.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Double.NEGATIVE_INFINITY) (e.g., a Num representing -\u221e)",
+        "description": "Check delegation of Double.NEGATIVE_INFINITY and that the returned Num reflects negative infinity."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - large integer types and boundaries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "new java.math.BigInteger(\"9876543210123456789\")"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(BigInteger(\"9876543210123456789\")) (e.g., a Num with value 9876543210123456789)",
+        "description": "Verify that a BigInteger value is correctly delegated and the returned Num matches the large integer."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Integer.valueOf(0)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Integer.valueOf(0)) (e.g., a Num with value 0)",
+        "description": "Confirm that zero (Integer) is delegated correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Long.valueOf(-123456789L)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Long.valueOf(-123456789L)) (e.g., a Num with value -123456789)",
+        "description": "Validate delegation of a negative Long value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Integer.valueOf(Integer.MAX_VALUE)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Integer.MAX_VALUE) (e.g., a Num with value 2147483647)",
+        "description": "Test delegation of the maximum int value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "Integer.valueOf(Integer.MIN_VALUE)"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(Integer.MIN_VALUE) (e.g., a Num with value -2147483648)",
+        "description": "Test delegation of the minimum int value."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - custom Number subclass",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "new Number() { public int intValue() { return 42; } public long longValue() { return 42L; } public float floatValue() { return 42.0f; } public double doubleValue() { return 42.0; } }"
+          }
+        ],
+        "expected": "Num instance equal to barSeries.numOf(customNumber) (e.g., a Num with value 42)",
+        "description": "Ensure that a user\u2011defined Number implementation is delegated unchanged and the resulting Num reflects the value returned by the subclass."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - null BarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "42"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "CashFlow is instantiated with a null BarSeries. Any call to numOf should throw NullPointerException because the delegate field is null."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - Number subclass propagates exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "new Number() { public int intValue() { return 0; } public long longValue() { return 0L; } public float floatValue() { throw new IllegalArgumentException(\"invalid float\"); } public double doubleValue() { throw new IllegalArgumentException(\"invalid double\"); } }"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A custom Number implementation throws IllegalArgumentException when its floatValue/doubleValue methods are invoked. The exception should propagate out of CashFlow.numOf."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.numOf(Number) - BarSeries throws runtime exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "number",
+            "value": "123"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "The underlying BarSeries is mocked to throw IllegalStateException for the specific input value. CashFlow.numOf must not catch it and should let the exception bubble up."
+      }
+    ]
+  }
+]

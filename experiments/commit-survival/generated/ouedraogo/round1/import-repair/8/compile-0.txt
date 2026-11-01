@@ -1,0 +1,8 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:74: error: incompatible types: invalid constructor reference
+        @Override public java.util.function.Function<Number, Num> function() { return SimpleNum::new; }
+                                                                                      ^
+    incompatible types: Number cannot be converted to double
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:96: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+2 errors

@@ -1,0 +1,345 @@
+[
+  {
+    "group": "Normal behavior",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(1000)"
+          }
+        ],
+        "expected": "TradingRecord containing trades generated from the whole BarSeries (startIndex = barSeries.getBeginIndex(), finishIndex = barSeries.getEndIndex())",
+        "description": "Valid strategy, trade type and amount should result in a non\u2011null TradingRecord with trades produced by the strategy over the full series."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyNeverEnter"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(500)"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "A strategy that never signals an entry should produce an empty TradingRecord even though the amount and trade type are valid."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyEnterOnce"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(0)"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "When the amount is zero, the manager should not open any position; the resulting TradingRecord must be empty."
+      }
+    ]
+  },
+  {
+    "group": "Invalid arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "null"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(100)"
+          }
+        ],
+        "expected": "NullPointerException or IllegalArgumentException",
+        "description": "Passing a null Strategy must cause the method to reject the call with an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "null"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(100)"
+          }
+        ],
+        "expected": "NullPointerException or IllegalArgumentException",
+        "description": "A null TradeType is not allowed; the method should throw an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "amount",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException or IllegalArgumentException",
+        "description": "A null amount must be rejected with an exception."
+      }
+    ]
+  },
+  {
+    "group": "Edge cases with BarSeries bounds",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(100)"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "If the underlying BarSeries is empty (beginIndex > endIndex), the manager should return an empty TradingRecord without throwing."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyEnterAtLastBar"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(200)"
+          }
+        ],
+        "expected": "TradingRecord with a single trade opened at the last bar and closed immediately (if exit condition is also true)",
+        "description": "When the start and finish indices are the same (single\u2011bar series), the method must still evaluate the strategy for that bar and produce the appropriate trade(s)."
+      }
+    ]
+  },
+  {
+    "group": "Negative amount handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(-100)"
+          }
+        ],
+        "expected": "IllegalArgumentException (amount must be >= 0)",
+        "description": "A negative amount is not a valid investment size; the manager should reject the call with an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Strategy runtime exception propagation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyThrowsOnFirstCall"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(1000)"
+          }
+        ],
+        "expected": "RuntimeException propagated from strategy",
+        "description": "If the supplied strategy throws an unchecked exception while being evaluated, the run method must not swallow it; the exception should propagate to the caller."
+      }
+    ]
+  },
+  {
+    "group": "Multiple sequential trades",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyEnterExitMultipleTimes"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(500)"
+          }
+        ],
+        "expected": "TradingRecord containing exactly 2 trades: first from index 0 to 2, second from index 3 to 5",
+        "description": "A strategy that signals entry at bar 0, exit at bar 2, re\u2011entry at bar 3 and exit at bar 5 should produce a TradingRecord with two distinct trades covering those index ranges."
+      }
+    ]
+  },
+  {
+    "group": "Non\u2011zero start index series",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(250)"
+          }
+        ],
+        "expected": "TradingRecord containing trades only for bars with index 5\u201110 (the series' beginIndex\u2011endIndex)",
+        "description": "When the underlying BarSeries is constructed so that getBeginIndex() returns 5 and getEndIndex() returns 10, the run method must evaluate the strategy only on that window and produce trades limited to those indices."
+      }
+    ]
+  },
+  {
+    "group": "TradeType mismatch \u2013 strategy signals opposite direction",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysSell"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(300)"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "If the strategy only generates SELL signals but the caller restricts the run to BUY trades, the manager should ignore those signals and return an empty TradingRecord."
+      }
+    ]
+  },
+  {
+    "group": "Custom transaction cost model effect",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(1000)"
+          }
+        ],
+        "expected": "TradingRecord with trades where each entry and exit amount is reduced by the configured transaction cost (e.g., 0.1% per trade)",
+        "description": "When a non\u2011zero TransactionCostModel is set on the BarSeriesManager, the run method must apply the cost to every trade; the test verifies that the resulting trades reflect the deducted cost."
+      }
+    ]
+  },
+  {
+    "group": "Large amount handling (no overflow)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(Long.MAX_VALUE)"
+          }
+        ],
+        "expected": "TradingRecord with trades correctly created; no ArithmeticException or overflow occurs",
+        "description": "Using the maximum possible long value as the amount should be handled gracefully; the manager must not throw an overflow\u2011related exception and should still generate the expected trades."
+      }
+    ]
+  },
+  {
+    "group": "Null BarSeries in manager",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "MockStrategyAlwaysEnterExit"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "amount",
+            "value": "Num.valueOf(1000)"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "BarSeriesManager is instantiated with a null BarSeries; calling run should immediately throw a NullPointerException because the internal call to barSeries.getBeginIndex() dereferences a null reference."
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.objenesis:objenesis:3.3",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.objenesis:objenesis:3.3",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.074,
+      "log": "results/runner-dependency-org.objenesis.objenesis-3.3-1.txt",
+      "coordinate": "org.objenesis:objenesis:3.3",
+      "expected_sha256": "02dfd0b0439a5591e35b708ed2f5474eb0948f53abf74637e959b8e4ef69bfeb",
+      "rejected_sha256": null,
+      "downloaded_sha256": "02dfd0b0439a5591e35b708ed2f5474eb0948f53abf74637e959b8e4ef69bfeb"
+    }
+  ]
+}

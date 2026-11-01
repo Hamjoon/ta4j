@@ -1,0 +1,28 @@
+{
+  "index": 80,
+  "sha": "c2e21ed37f85b03dc5a38cf2f9d328758dc09319",
+  "parent": "2b7e311298e16392c28c9f9beb766ded94a339df",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      45,
+      69,
+      71,
+      72,
+      73,
+      74,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      87,
+      114,
+      116
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\nindex 8ae99f01c..337ad9fd2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n@@ -44,0 +45 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+    private boolean isNumFactoryAssigned = false;\n@@ -66,0 +68,21 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+\n+            if (!isNumFactoryAssigned) {\n+                // use numFactory derived from bars instead of default numFactory\n+                var closePrice = bars.get(0).getClosePrice();\n+                if (closePrice != null) {\n+                    var derivedNumFactory = closePrice.getNumFactory();\n+                    numFactory = derivedNumFactory;\n+                }\n+            }\n+\n+            // check if each bar has the same numFactory as the series numFactory\n+            for (var bar : bars) {\n+                if (bar.getClosePrice() != null) {\n+                    if (!numFactory.produces(bar.getClosePrice())) {\n+                        throw new IllegalArgumentException(\n+                                String.format(\"Cannot add Bar with data type: %s to series with datatype: %s\",\n+                                        bar.getClosePrice().getClass(), this.numFactory.one().getClass()));\n+                    }\n+                }\n+            }\n+\n@@ -86 +108,3 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-     * @param numFactory to set {@link BaseBarSeries#numFactory()}\n+     * @param numFactory to set {@link BaseBarSeries#numFactory()} (by default, uses\n+     *                   either {@link DecimalNumFactory} or {@code numFactory}\n+     *                   derived from {@link #bars})\n@@ -89,0 +114,4 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+        if (numFactory != null) {\n+            // user has explicitly assigned a numFactory\n+            isNumFactoryAssigned = true;\n+        }\n@@ -104 +132,4 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-     * @param bars to set {@link BaseBarSeries#getBarData()}\n+     * @param bars to set {@link BaseBarSeries#getBarData()}; If {@link #numFactory}\n+     *             is not assigned by {@link #withNumFactory(NumFactory)},\n+     *             {@link #numFactory} defaults to the {@code numFactory} of the\n+     *             {@code bars}.\n@@ -122 +153,2 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-     * @param barBuilderFactory to build bars with the same datatype as series\n+     * @param barBuilderFactory to build bars with the same datatype as series (by\n+     *                          default, uses {@link TimeBarBuilderFactory})\n@@ -129,0 +162 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+"
+}

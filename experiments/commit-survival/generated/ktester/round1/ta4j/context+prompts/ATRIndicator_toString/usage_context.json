@@ -1,0 +1,4 @@
+{
+  "api document of class org.ta4j.core.indicators.ATRIndicator": "\n * Average true range indicator.\n ",
+  "dependent classes": "class `org.ta4j.core.indicators.ATRIndicator`:\n\trelated functions:\n\t\tmethod `public String toString()` returns `java.lang.String`, related with `org.ta4j.core.indicators.ATRIndicator.toString()`;\nclass `org.ta4j.core.indicators.statistics.SigmaIndicator`:\n\trelated functions:\n\t\tmethod `public String toString()` returns `java.lang.String`, related with `org.ta4j.core.indicators.ATRIndicator.toString()`;"
+}

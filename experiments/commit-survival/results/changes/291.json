@@ -1,0 +1,52 @@
+{
+  "index": 291,
+  "sha": "f56dcc15c45269ebcb0d75248b1f2251bd73b5f6",
+  "parent": "7e74285b401f87badc1e0c3c2efb18926ef657bd",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      138,
+      149,
+      186,
+      279
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardRuntimeReport.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      138,
+      141,
+      183,
+      184,
+      188,
+      260,
+      261,
+      262,
+      267,
+      268,
+      269,
+      270,
+      271,
+      275,
+      276,
+      296,
+      299
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardRuntimeReport.java": [
+      58,
+      59,
+      60,
+      61,
+      63,
+      90,
+      91,
+      99,
+      100,
+      101,
+      102,
+      106,
+      107,
+      108
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\nindex f9dd02bea..d17752835 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n@@ -138 +138 @@ public final class WalkForwardEngine<C, P, O> {\n-            int foldSnapshots = 0;\n+            List<WalkForwardRuntimeReport.SnapshotRuntime> snapshotRuntimes = new ArrayList<>();\n@@ -140,0 +141 @@ public final class WalkForwardEngine<C, P, O> {\n+                long snapshotStart = System.nanoTime();\n@@ -149 +149,0 @@ public final class WalkForwardEngine<C, P, O> {\n-                foldSnapshots++;\n@@ -182,0 +183,2 @@ public final class WalkForwardEngine<C, P, O> {\n+                snapshotRuntimes.add(new WalkForwardRuntimeReport.SnapshotRuntime(decisionIndex,\n+                        Duration.ofNanos(System.nanoTime() - snapshotStart), predictions.size()));\n@@ -186 +188 @@ public final class WalkForwardEngine<C, P, O> {\n-            foldRuntimes.add(new WalkForwardRuntimeReport.FoldRuntime(split.foldId(), foldRuntime, foldSnapshots));\n+            foldRuntimes.add(buildFoldRuntime(split.foldId(), foldRuntime, snapshotRuntimes));\n@@ -257,0 +260,13 @@ public final class WalkForwardEngine<C, P, O> {\n+        DurationSummary summary = summarizeDurations(durations);\n+        return new WalkForwardRuntimeReport(overallRuntime, summary.min(), summary.max(), summary.average(),\n+                summary.median(), foldRuntimes);\n+    }\n+\n+    private WalkForwardRuntimeReport.FoldRuntime buildFoldRuntime(String foldId, Duration foldRuntime,\n+            List<WalkForwardRuntimeReport.SnapshotRuntime> snapshotRuntimes) {\n+        List<WalkForwardRuntimeReport.SnapshotRuntime> immutableSnapshots = List.copyOf(snapshotRuntimes);\n+        DurationSummary summary = summarizeDurations(\n+                immutableSnapshots.stream().map(WalkForwardRuntimeReport.SnapshotRuntime::runtime).toList());\n+        return new WalkForwardRuntimeReport.FoldRuntime(foldId, foldRuntime, immutableSnapshots.size(), summary.min(),\n+                summary.max(), summary.average(), summary.median(), immutableSnapshots);\n+    }\n@@ -258,0 +274,4 @@ public final class WalkForwardEngine<C, P, O> {\n+    private DurationSummary summarizeDurations(List<Duration> durations) {\n+        if (durations == null || durations.isEmpty()) {\n+            return new DurationSummary(Duration.ZERO, Duration.ZERO, Duration.ZERO, Duration.ZERO);\n+        }\n@@ -261 +279,0 @@ public final class WalkForwardEngine<C, P, O> {\n-\n@@ -277,0 +296,2 @@ public final class WalkForwardEngine<C, P, O> {\n+        return new DurationSummary(min, max, average, median);\n+    }\n@@ -279 +299 @@ public final class WalkForwardEngine<C, P, O> {\n-        return new WalkForwardRuntimeReport(overallRuntime, min, max, average, median, foldRuntimes);\n+    private record DurationSummary(Duration min, Duration max, Duration average, Duration median) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRuntimeReport.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRuntimeReport.java\nindex bd53e8f2d..16dd2c592 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRuntimeReport.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRuntimeReport.java\n@@ -44,0 +45,21 @@ public record WalkForwardRuntimeReport(Duration overallRuntime, Duration minFold\n+    /**\n+     * Per-snapshot runtime detail.\n+     *\n+     * @param decisionIndex   decision index processed for the snapshot\n+     * @param runtime         snapshot runtime\n+     * @param predictionCount number of ranked predictions retained\n+     * @since 0.22.4\n+     */\n+    public record SnapshotRuntime(int decisionIndex, Duration runtime, int predictionCount) {\n+\n+        /**\n+         * Creates a validated snapshot runtime.\n+         */\n+        public SnapshotRuntime {\n+            Objects.requireNonNull(runtime, \"runtime\");\n+            if (predictionCount < 0) {\n+                throw new IllegalArgumentException(\"predictionCount must be >= 0\");\n+            }\n+        }\n+    }\n+\n@@ -48,3 +69,9 @@ public record WalkForwardRuntimeReport(Duration overallRuntime, Duration minFold\n-     * @param foldId        fold id\n-     * @param runtime       fold runtime\n-     * @param snapshotCount number of decision snapshots processed in the fold\n+     * @param foldId                 fold id\n+     * @param runtime                fold runtime\n+     * @param snapshotCount          number of decision snapshots processed in the\n+     *                               fold\n+     * @param minSnapshotRuntime     minimum snapshot runtime in the fold\n+     * @param maxSnapshotRuntime     maximum snapshot runtime in the fold\n+     * @param averageSnapshotRuntime average snapshot runtime in the fold\n+     * @param medianSnapshotRuntime  median snapshot runtime in the fold\n+     * @param snapshotRuntimes       per-snapshot runtime details in decision order\n@@ -53 +80,12 @@ public record WalkForwardRuntimeReport(Duration overallRuntime, Duration minFold\n-    public record FoldRuntime(String foldId, Duration runtime, int snapshotCount) {\n+    public record FoldRuntime(String foldId, Duration runtime, int snapshotCount, Duration minSnapshotRuntime,\n+            Duration maxSnapshotRuntime, Duration averageSnapshotRuntime, Duration medianSnapshotRuntime,\n+            List<SnapshotRuntime> snapshotRuntimes) {\n+\n+        /**\n+         * Creates a fold runtime with empty snapshot timing detail.\n+         *\n+         * @since 0.22.4\n+         */\n+        public FoldRuntime(String foldId, Duration runtime, int snapshotCount) {\n+            this(foldId, runtime, snapshotCount, Duration.ZERO, Duration.ZERO, Duration.ZERO, Duration.ZERO, List.of());\n+        }\n@@ -60,0 +99,4 @@ public record WalkForwardRuntimeReport(Duration overallRuntime, Duration minFold\n+            Objects.requireNonNull(minSnapshotRuntime, \"minSnapshotRuntime\");\n+            Objects.requireNonNull(maxSnapshotRuntime, \"maxSnapshotRuntime\");\n+            Objects.requireNonNull(averageSnapshotRuntime, \"averageSnapshotRuntime\");\n+            Objects.requireNonNull(medianSnapshotRuntime, \"medianSnapshotRuntime\");\n@@ -63,0 +106,4 @@ public record WalkForwardRuntimeReport(Duration overallRuntime, Duration minFold\n+            snapshotRuntimes = snapshotRuntimes == null ? List.of() : List.copyOf(snapshotRuntimes);\n+            if (!snapshotRuntimes.isEmpty() && snapshotRuntimes.size() != snapshotCount) {\n+                throw new IllegalArgumentException(\"snapshotRuntimes size must match snapshotCount\");\n+            }"
+}

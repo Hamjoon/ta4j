@@ -1,0 +1,11 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:162: error: cannot find symbol
+        Num profit = p.getProfit();
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:171: error: cannot find symbol
+        Num profit = p.getProfit();
+        ^
+  symbol:   class Num
+  location: class PositionTest
+2 errors

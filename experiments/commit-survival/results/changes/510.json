@@ -1,0 +1,19 @@
+{
+  "index": 510,
+  "sha": "0e9bb2485c62ace5e6d4030a5cf04dec094f181b",
+  "parent": "17b7f5f4849099a726bd42170e1504be7d1dc9ba",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      1801,
+      1803
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      1801,
+      1802,
+      1804
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\nindex d40fe58ac..4b35a6010 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n@@ -1801 +1801,2 @@ public final class RuleSerialization {\n-        if (descriptor.getParameters().containsKey(\"__customName\")) {\n+        Object customName = descriptor.getParameters().get(\"__customName\");\n+        if (customName != null) {\n@@ -1803 +1804 @@ public final class RuleSerialization {\n-            params.put(\"__customName\", descriptor.getParameters().get(\"__customName\"));\n+            params.put(\"__customName\", customName);"
+}

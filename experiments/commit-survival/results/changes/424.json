@@ -1,0 +1,101 @@
+{
+  "index": 424,
+  "sha": "51a6ebbeec60f14cd389442fa103c17f30183bf9",
+  "parent": "402658b11f756dbae77fdf9062dde1b829d74723",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BarSeries.java": [],
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      98,
+      113,
+      124,
+      130,
+      131,
+      133,
+      160,
+      175,
+      178,
+      308
+    ],
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      47,
+      48
+    ],
+    "src/main/java/org/ta4j/core/ConcurrentBarSeries.java": [
+      132
+    ],
+    "src/main/java/org/ta4j/core/ConcurrentBarSeriesBuilder.java": [
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/AbstractIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BarSeries.java": [
+      120
+    ],
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      98,
+      100,
+      105,
+      116,
+      122,
+      133,
+      139,
+      140,
+      142,
+      143,
+      145,
+      172,
+      185,
+      188,
+      189,
+      192,
+      262,
+      263,
+      264,
+      265,
+      266,
+      323,
+      324,
+      340
+    ],
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      41,
+      55,
+      56,
+      77,
+      142,
+      143,
+      145,
+      146
+    ],
+    "src/main/java/org/ta4j/core/ConcurrentBarSeries.java": [
+      98,
+      100,
+      101,
+      102,
+      141,
+      142,
+      146,
+      253,
+      255,
+      256,
+      258,
+      260
+    ],
+    "src/main/java/org/ta4j/core/ConcurrentBarSeriesBuilder.java": [
+      44,
+      59,
+      60,
+      66,
+      115,
+      116,
+      118,
+      119
+    ],
+    "src/main/java/org/ta4j/core/indicators/AbstractIndicator.java": [
+      99
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java\nindex d5b55de05..9075afe49 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java\n@@ -106,0 +107,16 @@ public interface BarSeries extends Serializable {\n+    /**\n+     * Removes every retained bar and resets the series to its initial empty index\n+     * state.\n+     *\n+     * <p>\n+     * The configured name, number factory, bar builder, and maximum bar count are\n+     * preserved. The next appended bar receives index {@code 0}. Implementations\n+     * that cannot safely clear their storage may retain the default behavior, which\n+     * throws {@link UnsupportedOperationException}.\n+     *\n+     * @since 0.22.9\n+     */\n+    default void clear() {\n+        throw new UnsupportedOperationException(\"This bar series does not support clearing\");\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\nindex ca93a6176..288be51d7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n@@ -98 +98,9 @@ public class BaseBarSeries implements BarSeries {\n-        this(validatedConfig(name, bars, seriesBeginIndex, seriesEndIndex, constrained, numFactory, barBuilderFactory));\n+        this(validatedConfig(name, bars, seriesBeginIndex, seriesEndIndex, 0, constrained, numFactory,\n+                barBuilderFactory));\n+    }\n+\n+    BaseBarSeries(final String name, final List<Bar> bars, final int seriesBeginIndex, final int seriesEndIndex,\n+            final int removedBarsCount, final boolean constrained, final NumFactory numFactory,\n+            final BarBuilderFactory barBuilderFactory) {\n+        this(validatedConfig(name, bars, seriesBeginIndex, seriesEndIndex, removedBarsCount, constrained, numFactory,\n+                barBuilderFactory));\n@@ -107,0 +116 @@ public class BaseBarSeries implements BarSeries {\n+        this.removedBarsCount = config.removedBarsCount();\n@@ -113 +122 @@ public class BaseBarSeries implements BarSeries {\n-        return validatedConfig(name, copiedBars, 0, copiedBars.size() - 1, false, DecimalNumFactory.getInstance(),\n+        return validatedConfig(name, copiedBars, 0, copiedBars.size() - 1, 0, false, DecimalNumFactory.getInstance(),\n@@ -118,2 +127,2 @@ public class BaseBarSeries implements BarSeries {\n-            final int seriesEndIndex, final boolean constrained, final NumFactory numFactory,\n-            final BarBuilderFactory barBuilderFactory) {\n+            final int seriesEndIndex, final int removedBarsCount, final boolean constrained,\n+            final NumFactory numFactory, final BarBuilderFactory barBuilderFactory) {\n@@ -124 +133 @@ public class BaseBarSeries implements BarSeries {\n-            return new Config(name, copiedBars, -1, -1, false, numFactory, validatedBarBuilderFactory);\n+            return new Config(name, copiedBars, -1, -1, 0, false, numFactory, validatedBarBuilderFactory);\n@@ -130,2 +139,5 @@ public class BaseBarSeries implements BarSeries {\n-        if (seriesEndIndex >= copiedBars.size()) {\n-            throw new IllegalArgumentException(\"End index must be < to the bar list size\");\n+        if (removedBarsCount < 0 || seriesBeginIndex < removedBarsCount) {\n+            throw new IllegalArgumentException(\"Removed bars count must be between zero and the begin index\");\n+        }\n+        if ((long) seriesEndIndex >= (long) removedBarsCount + copiedBars.size()) {\n+            throw new IllegalArgumentException(\"End index must be within the offset bar list\");\n@@ -133 +145 @@ public class BaseBarSeries implements BarSeries {\n-        return new Config(name, copiedBars, seriesBeginIndex, seriesEndIndex, constrained, numFactory,\n+        return new Config(name, copiedBars, seriesBeginIndex, seriesEndIndex, removedBarsCount, constrained, numFactory,\n@@ -160,2 +172,2 @@ public class BaseBarSeries implements BarSeries {\n-    private record Config(String name, List<Bar> bars, int seriesBeginIndex, int seriesEndIndex, boolean constrained,\n-            NumFactory numFactory, BarBuilderFactory barBuilderFactory) {\n+    private record Config(String name, List<Bar> bars, int seriesBeginIndex, int seriesEndIndex, int removedBarsCount,\n+            boolean constrained, NumFactory numFactory, BarBuilderFactory barBuilderFactory) {\n@@ -172,0 +185 @@ public class BaseBarSeries implements BarSeries {\n+        final int retainedStartIndex = Math.max(startIndex, this.seriesBeginIndex);\n@@ -175 +188,2 @@ public class BaseBarSeries implements BarSeries {\n-                .withMaxBarCount(this.maximumBarCount);\n+                .withMaxBarCount(this.maximumBarCount)\n+                .withBeginIndex(this.removedBarsCount > 0 ? retainedStartIndex : 0);\n@@ -178 +192 @@ public class BaseBarSeries implements BarSeries {\n-            var start = startIndex - removedBarsCount;\n+            var start = retainedStartIndex - removedBarsCount;\n@@ -240,0 +255,13 @@ public class BaseBarSeries implements BarSeries {\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.22.9\n+     */\n+    @Override\n+    public void clear() {\n+        this.bars.clear();\n+        this.seriesBeginIndex = -1;\n+        this.seriesEndIndex = -1;\n+        this.removedBarsCount = 0;\n+    }\n+\n@@ -278,0 +306,2 @@ public class BaseBarSeries implements BarSeries {\n+     * @throws ArithmeticException  if appending would advance the absolute index\n+     *                              beyond {@link Integer#MAX_VALUE}\n@@ -293,0 +323,3 @@ public class BaseBarSeries implements BarSeries {\n+            if (this.seriesEndIndex == Integer.MAX_VALUE) {\n+                throw new ArithmeticException(\"Bar series index overflow\");\n+            }\n@@ -308 +340 @@ public class BaseBarSeries implements BarSeries {\n-        this.seriesEndIndex++;\n+        this.seriesEndIndex = Math.incrementExact(this.seriesEndIndex);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\nindex 012d9f498..71af7b0a1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n@@ -25,0 +26 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+    private int beginIndex;\n@@ -39,0 +41 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+        this.beginIndex = 0;\n@@ -41,0 +44,6 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @throws ArithmeticException if the configured begin index and bars would\n+     *                             exceed {@link Integer#MAX_VALUE}\n+     */\n@@ -47,2 +55,2 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-            beginIndex = 0;\n-            endIndex = bars.size() - 1;\n+            beginIndex = this.beginIndex;\n+            endIndex = Math.addExact(beginIndex, bars.size() - 1);\n@@ -69 +77 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-                constrained, numFactory, barBuilderFactory);\n+                beginIndex < 0 ? 0 : beginIndex, constrained, numFactory, barBuilderFactory);\n@@ -125,0 +134,15 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n+    /**\n+     * Sets the absolute index assigned to the first supplied bar.\n+     *\n+     * @param beginIndex non-negative first bar index\n+     * @return {@code this}\n+     * @since 0.22.9\n+     */\n+    public BaseBarSeriesBuilder withBeginIndex(int beginIndex) {\n+        if (beginIndex < 0) {\n+            throw new IllegalArgumentException(\"beginIndex must be non-negative\");\n+        }\n+        this.beginIndex = beginIndex;\n+        return this;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeries.java\nindex 18db9427b..07497efe1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeries.java\n@@ -94,0 +95,9 @@ public class ConcurrentBarSeries extends BaseBarSeries {\n+    ConcurrentBarSeries(final String name, final List<Bar> bars, final int seriesBeginIndex, final int seriesEndIndex,\n+            final int removedBarsCount, final boolean constrained, final NumFactory numFactory,\n+            final BarBuilderFactory barBuilderFactory) {\n+        super(name, bars, seriesBeginIndex, seriesEndIndex, removedBarsCount, constrained, numFactory,\n+                barBuilderFactory);\n+        initLocks(new ReentrantReadWriteLock());\n+        this.tradeBarBuilder = Objects.requireNonNull(super.barBuilder(), \"barBuilder cannot be null\");\n+    }\n+\n@@ -132 +141,2 @@ public class ConcurrentBarSeries extends BaseBarSeries {\n-                final int start = startIndex - super.getRemovedBarsCount();\n+                final int retainedStartIndex = Math.max(startIndex, super.getBeginIndex());\n+                final int start = retainedStartIndex - super.getRemovedBarsCount();\n@@ -135,0 +146 @@ public class ConcurrentBarSeries extends BaseBarSeries {\n+                        .withBeginIndex(super.getRemovedBarsCount() > 0 ? retainedStartIndex : 0)\n@@ -234,0 +246,16 @@ public class ConcurrentBarSeries extends BaseBarSeries {\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.22.9\n+     */\n+    @Override\n+    public void clear() {\n+        this.writeLock.lock();\n+        try {\n+            super.clear();\n+            this.tradeBarBuilder = null;\n+        } finally {\n+            this.writeLock.unlock();\n+        }\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeriesBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeriesBuilder.java\nindex 5ab94b882..f74e1c182 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeriesBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/ConcurrentBarSeriesBuilder.java\n@@ -25,0 +26 @@ public class ConcurrentBarSeriesBuilder implements BarSeriesBuilder {\n+    private int beginIndex;\n@@ -42,0 +44 @@ public class ConcurrentBarSeriesBuilder implements BarSeriesBuilder {\n+        this.beginIndex = 0;\n@@ -48,0 +51,2 @@ public class ConcurrentBarSeriesBuilder implements BarSeriesBuilder {\n+     * @throws ArithmeticException if the configured begin index and bars would\n+     *                             exceed {@link Integer#MAX_VALUE}\n@@ -55,2 +59,2 @@ public class ConcurrentBarSeriesBuilder implements BarSeriesBuilder {\n-            beginIndex = 0;\n-            endIndex = bars.size() - 1;\n+            beginIndex = this.beginIndex;\n+            endIndex = Math.addExact(beginIndex, bars.size() - 1);\n@@ -62 +66 @@ public class ConcurrentBarSeriesBuilder implements BarSeriesBuilder {\n-                effectiveConstrained, numFactory, barBuilderFactory);\n+                beginIndex < 0 ? 0 : beginIndex, effectiveConstrained, numFactory, barBuilderFactory);\n@@ -102,0 +107,15 @@ public class ConcurrentBarSeriesBuilder implements BarSeriesBuilder {\n+    /**\n+     * Sets the absolute index assigned to the first supplied bar.\n+     *\n+     * @param beginIndex non-negative first bar index\n+     * @return {@code this}\n+     * @since 0.22.9\n+     */\n+    public ConcurrentBarSeriesBuilder withBeginIndex(int beginIndex) {\n+        if (beginIndex < 0) {\n+            throw new IllegalArgumentException(\"beginIndex must be non-negative\");\n+        }\n+        this.beginIndex = beginIndex;\n+        return this;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/AbstractIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/AbstractIndicator.java\nindex 3dc3fb731..51c5dc28d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/AbstractIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/AbstractIndicator.java\n@@ -96,0 +97,5 @@ public abstract class AbstractIndicator<T> implements Indicator<T> {\n+        @Override\n+        public void clear() {\n+            throw new UnsupportedOperationException(\"Indicator bar series views are read-only\");\n+        }\n+"
+}

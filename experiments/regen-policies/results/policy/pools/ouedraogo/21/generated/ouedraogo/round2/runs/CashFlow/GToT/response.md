@@ -1,0 +1,278 @@
+###Test START##
+```java
+package org.ta4j.core.analysis;
+
+import static org.junit.Assert.*;
+
+import java.time.ZonedDateTime;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.Position;
+import org.ta4j.core.Trade;
+import org.ta4j.core.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.DefaultTradingRecord;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link CashFlow}.
+ *
+ * The test class follows the collaborative steps described in the task:
+ *
+ * 1. List public methods (including inherited ones) and their signatures.
+ * 2. Provide a basic test for each method.
+ * 3. Identify edge‑case / exception scenarios.
+ * 4. Add explicit tests for those scenarios.
+ * 5. Merge everything into a single test file.
+ *
+ * All objects are created using the public constructors / builders that belong to
+ * the Ta4j library – no mocks or subclassing of library interfaces are used.
+ */
+public class CashFlowTest {
+
+    /* ---------------------------------------------------------------------- */
+    /* 1. Public API of CashFlow (including Indicator methods)                */
+    /* ---------------------------------------------------------------------- */
+    // CashFlow(BarSeries, Position)
+    // CashFlow(BarSeries, TradingRecord)
+    // CashFlow(BarSeries, TradingRecord, int)
+    // Num getValue(int)
+    // int getUnstableBars()
+    // BarSeries getBarSeries()
+    // int getSize()
+    // static Num addCost(Num, Num, boolean)
+    // static int determineEndIndex(Position, int, int)
+
+    /* ---------------------------------------------------------------------- */
+    /* Test fixtures                                                          */
+    /* ---------------------------------------------------------------------- */
+    private BarSeries series;
+    private Num one;
+    private Num two;
+    private Num three;
+    private Num five;
+
+    @Before
+    public void setUp() {
+        // Build a simple 5‑bar series with deterministic close prices
+        series = new BaseBarSeriesBuilder()
+                .withName("test-series")
+                .withNumFactory(DecimalNum::valueOf)
+                .build();
+
+        // Add 5 bars (index 0..4) with close prices 1,2,3,4,5
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(1), DecimalNum.valueOf(1),
+                DecimalNum.valueOf(1), DecimalNum.valueOf(1), DecimalNum.valueOf(1), DecimalNum.valueOf(1), DecimalNum.valueOf(0)));
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(2), DecimalNum.valueOf(2),
+                DecimalNum.valueOf(2), DecimalNum.valueOf(2), DecimalNum.valueOf(2), DecimalNum.valueOf(2), DecimalNum.valueOf(0)));
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(3), DecimalNum.valueOf(3),
+                DecimalNum.valueOf(3), DecimalNum.valueOf(3), DecimalNum.valueOf(3), DecimalNum.valueOf(3), DecimalNum.valueOf(0)));
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(4), DecimalNum.valueOf(4),
+                DecimalNum.valueOf(4), DecimalNum.valueOf(4), DecimalNum.valueOf(4), DecimalNum.valueOf(4), DecimalNum.valueOf(0)));
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(5), DecimalNum.valueOf(5),
+                DecimalNum.valueOf(5), DecimalNum.valueOf(5), DecimalNum.valueOf(5), DecimalNum.valueOf(5), DecimalNum.valueOf(0)));
+
+        one = series.numFactory().valueOf(1);
+        two = series.numFactory().valueOf(2);
+        three = series.numFactory().valueOf(3);
+        five = series.numFactory().valueOf(5);
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 2. Basic tests for each public method                                  */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testConstructorWithClosedPosition() {
+        // entry at index 0 (price 1), exit at index 4 (price 5) – a long trade
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(), series.numFactory().valueOf(1), series.getBar(0));
+        Trade exit = new Trade(TradeType.SELL, series.getBar(4).getClosePrice(), series.numFactory().valueOf(1), series.getBar(4));
+        Position position = new Position(entry, exit);
+
+        CashFlow cf = new CashFlow(series, position);
+
+        // cash flow starts at 1 (the initial capital)
+        assertEquals(one, cf.getValue(0));
+        // final cash flow should be 5 (1 * 5/1)
+        assertEquals(five, cf.getValue(4));
+        // size of series is 5
+        assertEquals(5, cf.getSize());
+    }
+
+    @Test
+    public void testConstructorWithTradingRecord() {
+        TradingRecord record = new DefaultTradingRecord();
+        // Long position 0→2
+        record.operate(0, series.getBar(0).getClosePrice(), one); // BUY
+        record.operate(2, series.getBar(2).getClosePrice(), one); // SELL
+
+        // Second long position 3→4
+        record.operate(3, series.getBar(3).getClosePrice(), one); // BUY
+        record.operate(4, series.getBar(4).getClosePrice(), one); // SELL
+
+        CashFlow cf = new CashFlow(series, record);
+        // After first trade (price 1→3) cash flow = 3
+        assertEquals(three, cf.getValue(2));
+        // After second trade (price 4→5) cash flow = 3 * (5/4) = 3.75 ≈ 3.75
+        Num expected = three.multipliedBy(series.numFactory().valueOf(5).dividedBy(series.numFactory().valueOf(4)));
+        assertEquals(expected, cf.getValue(4));
+    }
+
+    @Test
+    public void testGetUnstableBars() {
+        CashFlow cf = new CashFlow(series, new DefaultTradingRecord());
+        assertEquals(0, cf.getUnstableBars());
+    }
+
+    @Test
+    public void testGetBarSeries() {
+        CashFlow cf = new CashFlow(series, new DefaultTradingRecord());
+        assertSame(series, cf.getBarSeries());
+    }
+
+    @Test
+    public void testGetSize() {
+        CashFlow cf = new CashFlow(series, new DefaultTradingRecord());
+        assertEquals(series.getBarCount(), cf.getSize());
+    }
+
+    @Test
+    public void testAddCost_LongTrade() {
+        Num raw = three; // price 3
+        Num cost = series.numFactory().valueOf(0.5);
+        Num result = CashFlow.addCost(raw, cost, true);
+        assertEquals(series.numFactory().valueOf(2.5), result);
+    }
+
+    @Test
+    public void testAddCost_ShortTrade() {
+        Num raw = three;
+        Num cost = series.numFactory().valueOf(0.5);
+        Num result = CashFlow.addCost(raw, cost, false);
+        assertEquals(series.numFactory().valueOf(3.5), result);
+    }
+
+    @Test
+    public void testDetermineEndIndex_ClosedPosition() {
+        // closed position with exit index 3, finalIndex supplied = 4, maxIndex = 4
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(),
+                one, series.getBar(0));
+        Trade exit = new Trade(TradeType.SELL, series.getBar(3).getClosePrice(),
+                one, series.getBar(3));
+        Position pos = new Position(entry, exit);
+        int idx = CashFlow.determineEndIndex(pos, 4, 4);
+        assertEquals(3, idx); // should stop at exit index
+    }
+
+    @Test
+    public void testDetermineEndIndex_OpenPosition_ClampToMax() {
+        // open position (no exit), finalIndex = 10 > maxIndex (4)
+        Trade entry = new Trade(TradeType.BUY, series.getBar(1).getClosePrice(),
+                one, series.getBar(1));
+        Position pos = new Position(entry, null);
+        int idx = CashFlow.determineEndIndex(pos, 10, 4);
+        assertEquals(4, idx); // clamp to series max index
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 3. Edge‑case / exception identification                                 */
+    /* ---------------------------------------------------------------------- */
+    // a) Passing an *opened* Position to the (BarSeries, Position) ctor – should
+    //    throw IllegalArgumentException.
+    // b) Providing a finalIndex smaller than entry index – determineEndIndex
+    //    must return the supplied finalIndex (no negative ranges).
+    // c) Empty BarSeries – constructors must still create a CashFlow with a
+    //    single element (value = 1) and fillToTheEnd must not throw.
+    // d) Holding cost = 0 – addCost must return the raw price unchanged.
+    // e) Short trade ratio calculation – verify that the formula
+    //    2 – (exit/entry) is applied.
+
+    /* ---------------------------------------------------------------------- */
+    /* 4. Tests for the identified edge cases                                 */
+    /* ---------------------------------------------------------------------- */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorWithOpenedPositionThrows() {
+        // entry only, position is still opened
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(),
+                one, series.getBar(0));
+        Position openPos = new Position(entry, null);
+        new CashFlow(series, openPos); // should throw
+    }
+
+    @Test
+    public void testDetermineEndIndex_FinalIndexBeforeEntry() {
+        Trade entry = new Trade(TradeType.BUY, series.getBar(2).getClosePrice(),
+                one, series.getBar(2));
+        Position pos = new Position(entry, null); // open position
+        // finalIndex = 1 (before entry index 2)
+        int idx = CashFlow.determineEndIndex(pos, 1, series.getEndIndex());
+        // The algorithm never moves idx forward, so it stays 1
+        assertEquals(1, idx);
+    }
+
+    @Test
+    public void testEmptySeriesBehaviour() {
+        BarSeries empty = new BaseBarSeriesBuilder()
+                .withName("empty")
+                .withNumFactory(DecimalNum::valueOf)
+                .build();
+
+        // No bars – the CashFlow should contain a single element equal to 1
+        CashFlow cf = new CashFlow(empty, new DefaultTradingRecord());
+        assertEquals(1, cf.getSize()); // size reflects series bar count (0) but values list contains the initial 1
+        assertEquals(one, cf.getValue(0));
+    }
+
+    @Test
+    public void testAddCost_HoldingCostZero() {
+        Num price = five;
+        Num zero = series.numFactory().valueOf(0);
+        assertEquals(price, CashFlow.addCost(price, zero, true));
+        assertEquals(price, CashFlow.addCost(price, zero, false));
+    }
+
+    @Test
+    public void testShortTradeIntermediateRatio() {
+        // Simulate a short trade: entry price = 5, exit price = 3
+        boolean isLong = false;
+        Num entryPrice = five;
+        Num exitPrice = three;
+        Num ratio = CashFlow.getIntermediateRatio(isLong, entryPrice, exitPrice);
+        // Expected: 2 - (exit/entry) = 2 - (3/5) = 2 - 0.6 = 1.4
+        Num expected = series.numFactory().valueOf(2).minus(exitPrice.dividedBy(entryPrice));
+        assertEquals(expected, ratio);
+    }
+
+    @Test
+    public void testCashFlowWithOpenPositionAndFinalIndex() {
+        // Build a trading record with ONE open position (entry at index 1)
+        TradingRecord record = new DefaultTradingRecord();
+        record.operate(1, series.getBar(1).getClosePrice(), one); // BUY, open
+
+        // Use finalIndex = 3 (so we accrue cash flow until bar 3)
+        CashFlow cf = new CashFlow(series, record, 3);
+
+        // The cash flow after index 1 should reflect holding cost accrual.
+        // Since holding cost model is default (zero), the cash flow stays at 1.
+        assertEquals(one, cf.getValue(0));
+        assertEquals(one, cf.getValue(1));
+        assertEquals(one, cf.getValue(2));
+        assertEquals(one, cf.getValue(3));
+        // Values after the final index are padded with the last value (1)
+        assertEquals(one, cf.getValue(4));
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 5. Full merged test file – already presented above.                     */
+    /* ---------------------------------------------------------------------- */
+}
+```
+###Test END##

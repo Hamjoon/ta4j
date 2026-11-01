@@ -1,0 +1,187 @@
+[
+  {
+    "group": "NumericIndicator.isLessThan - basic comparisons",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == true",
+        "description": "The NumericIndicator under test wraps a ConstantIndicator(3). Since 3 < 5, the UnderIndicatorRule returned by isLessThan should be satisfied at index 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(3)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == false",
+        "description": "Both the NumericIndicator under test and the other indicator return the same value (3). UnderIndicatorRule uses a strict < comparison, therefore the rule must not be satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == false",
+        "description": "The NumericIndicator under test returns 3 while the other indicator returns 2. Because 3 is not less than 2, the rule must be unsatisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(1) == true",
+        "description": "Using a multi\u2011index series: the NumericIndicator returns values [3,4] (index 0 \u2192 3, index 1 \u2192 4) and the other indicator returns 5 for every index. At index 1, 4 < 5, so the rule must be satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(4)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(1) == false",
+        "description": "At index 1 the NumericIndicator returns 4 and the other indicator also returns 4. Equality does not satisfy UnderIndicatorRule, therefore the rule must be unsatisfied."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan - negative and zero values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(-1)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == true",
+        "description": "NumericIndicator wraps ConstantIndicator(-2). Since -2 < -1, the UnderIndicatorRule should be satisfied at index 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(0)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == false",
+        "description": "Both the NumericIndicator and the other indicator return 0. Equality does not satisfy UnderIndicatorRule, therefore the rule must be unsatisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(0)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == true",
+        "description": "NumericIndicator wraps ConstantIndicator(-0.5). Since -0.5 < 0, the rule must be satisfied at index 0."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan - fractional values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2.5)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == true",
+        "description": "NumericIndicator wraps ConstantIndicator(2.4). 2.4 is less than 2.5, so the rule should be satisfied at index 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2.5)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == false",
+        "description": "NumericIndicator wraps ConstantIndicator(2.5). Equality does not satisfy UnderIndicatorRule, therefore the rule must be unsatisfied."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan - varying other indicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == true",
+        "description": "Series close prices are [1,2,3]; NumericIndicator wraps ClosePriceIndicator(series). At index 0 the value is 1, which is less than 2, so the rule is satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(2) == false",
+        "description": "Using the same series, at index 2 the close price is 3, which is not less than 2; the rule must be unsatisfied."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan - large numeric values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2000000)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == true",
+        "description": "NumericIndicator wraps ConstantIndicator(1000000). Since 1,000,000 < 2,000,000, the rule should be satisfied at index 0."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan - null argument handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "Passing a null Indicator to isLessThan should result in a NullPointerException according to the contract of UnderIndicatorRule."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan - mismatched BarSeries handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5) built from a different BarSeries than the NumericIndicator under test"
+          }
+        ],
+        "expected": "throws IllegalArgumentException",
+        "description": "UnderIndicatorRule requires both indicators to be based on the same BarSeries. Supplying an Indicator that references a different BarSeries should cause the constructor to throw an IllegalArgumentException."
+      }
+    ]
+  }
+]

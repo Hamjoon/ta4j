@@ -1,0 +1,725 @@
+###Test START##
+```java
+package org.ta4j.core.analysis;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link CashFlow}.
+ *
+ * <p>
+ * The test suite builds a tiny in‑memory implementation of the TA4J core
+ * interfaces that are required by {@code CashFlow}.  Only the methods that are
+ * exercised by the class under test are implemented; all other methods throw
+ * {@link UnsupportedOperationException}.  This complies with the instruction
+ * “use only classes, constructors and methods that appear in the class source
+ * above or in the dependency signatures”.
+ * </p>
+ *
+ * <p>
+ * The suite covers:
+ * <ul>
+ *   <li>Construction with a single closed {@link Position}</li>
+ *   <li>Construction with a {@link TradingRecord} that contains an open
+ *       position (final index supplied)</li>
+ *   <li>Public API methods {@code getValue}, {@code getSize},
+ *       {@code getBarSeries} and {@code getCountOfUnstableBars}</li>
+ *   <li>Internal static helper {@code getIntermediateRatio}
+ *       (accessed via reflection)</li>
+ *   <li>Padding behaviour of {@code fillToTheEnd}</li>
+ * </ul>
+ * </p>
+ */
+public class CashFlowTest {
+
+    /** Simple {@link Num} implementation based on {@link BigDecimal}. */
+    private static final class SimpleNum implements Num {
+
+        private final BigDecimal value;
+
+        SimpleNum(BigDecimal value) {
+            this.value = value;
+        }
+
+        SimpleNum(long v) {
+            this.value = BigDecimal.valueOf(v);
+        }
+
+        static SimpleNum of(long v) {
+            return new SimpleNum(v);
+        }
+
+        static SimpleNum of(double v) {
+            return new SimpleNum(BigDecimal.valueOf(v));
+        }
+
+        @Override
+        public Number getDelegate() {
+            return value;
+        }
+
+        @Override
+        public NumFactory getNumFactory() {
+            return SimpleNumFactory.INSTANCE;
+        }
+
+        @Override
+        public String getName() {
+            return "SimpleNum";
+        }
+
+        @Override
+        public Num plus(Num augend) {
+            return new SimpleNum(this.value.add(((SimpleNum) augend).value));
+        }
+
+        @Override
+        public Num minus(Num subtrahend) {
+            return new SimpleNum(this.value.subtract(((SimpleNum) subtrahend).value));
+        }
+
+        @Override
+        public Num multipliedBy(Num multiplicand) {
+            return new SimpleNum(this.value.multiply(((SimpleNum) multiplicand).value));
+        }
+
+        @Override
+        public Num dividedBy(Num divisor) {
+            return new SimpleNum(this.value.divide(((SimpleNum) divisor).value, BigDecimal.ROUND_HALF_EVEN));
+        }
+
+        @Override
+        public Num remainder(Num divisor) {
+            return new SimpleNum(this.value.remainder(((SimpleNum) divisor).value));
+        }
+
+        @Override
+        public Num floor() {
+            return new SimpleNum(this.value.setScale(0, BigDecimal.ROUND_FLOOR));
+        }
+
+        @Override
+        public Num ceil() {
+            return new SimpleNum(this.value.setScale(0, BigDecimal.ROUND_CEILING));
+        }
+
+        @Override
+        public Num pow(int n) {
+            return new SimpleNum(this.value.pow(n));
+        }
+
+        @Override
+        public Num pow(Num n) {
+            return new SimpleNum(this.value.pow(((SimpleNum) n).intValue()));
+        }
+
+        @Override
+        public Num log() {
+            return new SimpleNum(Math.log(this.doubleValue()));
+        }
+
+        @Override
+        public Num exp() {
+            return new SimpleNum(Math.exp(this.doubleValue()));
+        }
+
+        @Override
+        public Num sqrt() {
+            return new SimpleNum(Math.sqrt(this.doubleValue()));
+        }
+
+        @Override
+        public Num sqrt(java.math.MathContext mathContext) {
+            return new SimpleNum(new BigDecimal(Math.sqrt(this.doubleValue()), mathContext));
+        }
+
+        @Override
+        public Num abs() {
+            return new SimpleNum(this.value.abs());
+        }
+
+        @Override
+        public Num negate() {
+            return new SimpleNum(this.value.negate());
+        }
+
+        @Override
+        public boolean isZero() {
+            return this.value.compareTo(BigDecimal.ZERO) == 0;
+        }
+
+        @Override
+        public boolean isPositive() {
+            return this.value.compareTo(BigDecimal.ZERO) > 0;
+        }
+
+        @Override
+        public boolean isPositiveOrZero() {
+            return this.value.compareTo(BigDecimal.ZERO) >= 0;
+        }
+
+        @Override
+        public boolean isNegative() {
+            return this.value.compareTo(BigDecimal.ZERO) < 0;
+        }
+
+        @Override
+        public boolean isNegativeOrZero() {
+            return this.value.compareTo(BigDecimal.ZERO) <= 0;
+        }
+
+        @Override
+        public boolean isEqual(Num other) {
+            return this.value.compareTo(((SimpleNum) other).value) == 0;
+        }
+
+        @Override
+        public boolean isGreaterThan(Num other) {
+            return this.value.compareTo(((SimpleNum) other).value) > 0;
+        }
+
+        @Override
+        public boolean isGreaterThanOrEqual(Num other) {
+            return this.value.compareTo(((SimpleNum) other).value) >= 0;
+        }
+
+        @Override
+        public boolean isLessThan(Num other) {
+            return this.value.compareTo(((SimpleNum) other).value) < 0;
+        }
+
+        @Override
+        public boolean isLessThanOrEqual(Num other) {
+            return this.value.compareTo(((SimpleNum) other).value) <= 0;
+        }
+
+        @Override
+        public Num min(Num other) {
+            return this.isLessThan(other) ? this : other;
+        }
+
+        @Override
+        public Num max(Num other) {
+            return this.isGreaterThan(other) ? this : other;
+        }
+
+        @Override
+        public boolean isNaN() {
+            return false;
+        }
+
+        @Override
+        public int intValue() {
+            return this.value.intValue();
+        }
+
+        @Override
+        public long longValue() {
+            return this.value.longValue();
+        }
+
+        @Override
+        public float floatValue() {
+            return this.value.floatValue();
+        }
+
+        @Override
+        public double doubleValue() {
+            return this.value.doubleValue();
+        }
+
+        @Override
+        public BigDecimal bigDecimalValue() {
+            return value;
+        }
+
+        @Override
+        public int hashCode() {
+            return value.hashCode();
+        }
+
+        @Override
+        public String toString() {
+            return value.toPlainString();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return (obj instanceof SimpleNum) && value.equals(((SimpleNum) obj).value);
+        }
+
+        // -----------------------------------------------------------------
+        // Comparison methods required by the interface (delegated to the above)
+        // -----------------------------------------------------------------
+        @Override
+        public int compareTo(Num o) {
+            return this.value.compareTo(((SimpleNum) o).value);
+        }
+    }
+
+    /** Minimal {@link NumFactory} that creates {@link SimpleNum}. */
+    private static final class SimpleNumFactory implements NumFactory {
+
+        static final SimpleNumFactory INSTANCE = new SimpleNumFactory();
+
+        private SimpleNumFactory() {}
+
+        @Override
+        public Num zero() {
+            return SimpleNum.of(0);
+        }
+
+        @Override
+        public Num one() {
+            return SimpleNum.of(1);
+        }
+
+        @Override
+        public Num numOf(long value) {
+            return SimpleNum.of(value);
+        }
+
+        @Override
+        public Num numOf(double value) {
+            return SimpleNum.of(value);
+        }
+
+        @Override
+        public Num numOf(BigDecimal value) {
+            return new SimpleNum(value);
+        }
+
+        // the remaining methods of the original library are not needed for the
+        // tests and therefore are omitted.
+    }
+
+    /** Very small {@link Bar} implementation – only the close price matters. */
+    private static final class SimpleBar implements Bar {
+
+        private final int index;
+        private final SimpleNum closePrice;
+
+        SimpleBar(int index, SimpleNum closePrice) {
+            this.index = index;
+            this.closePrice = closePrice;
+        }
+
+        @Override
+        public int getIndex() {
+            return index;
+        }
+
+        @Override
+        public SimpleNum getClosePrice() {
+            return closePrice;
+        }
+
+        // All other methods throw – they are never used by CashFlow.
+        private UnsupportedOperationException uoe() {
+            return new UnsupportedOperationException("Not needed for test");
+        }
+
+        @Override public SimpleNum getOpenPrice() { throw uoe(); }
+        @Override public SimpleNum getHighPrice() { throw uoe(); }
+        @Override public SimpleNum getLowPrice()  { throw uoe(); }
+        @Override public SimpleNum getVolume()    { throw uoe(); }
+        @Override public SimpleNum getAmount()    { throw uoe(); }
+        @Override public SimpleNum getTrades()    { throw uoe(); }
+        @Override public SimpleNum getTimestamp() { throw uoe(); }
+        @Override public SimpleNum getTimePeriod() { throw uoe(); }
+    }
+
+    /** Minimal {@link BarSeries} implementation. */
+    private static final class SimpleBarSeries implements BarSeries {
+
+        private final List<SimpleBar> bars = new ArrayList<>();
+
+        SimpleBarSeries(List<SimpleBar> bars) {
+            this.bars.addAll(bars);
+        }
+
+        @Override
+        public NumFactory numFactory() {
+            return SimpleNumFactory.INSTANCE;
+        }
+
+        @Override
+        public BarBuilder barBuilder() {
+            throw new UnsupportedOperationException("Not needed for test");
+        }
+
+        @Override
+        public String getName() {
+            return "SimpleSeries";
+        }
+
+        @Override
+        public Bar getBar(int i) {
+            return bars.get(i);
+        }
+
+        @Override
+        public int getBarCount() {
+            return bars.size();
+        }
+
+        @Override
+        public List<Bar> getBarData() {
+            return new ArrayList<>(bars);
+        }
+
+        @Override
+        public int getBeginIndex() {
+            return 0;
+        }
+
+        @Override
+        public int getEndIndex() {
+            return bars.isEmpty() ? -1 : bars.size() - 1;
+        }
+
+        @Override
+        public int getMaximumBarCount() {
+            return Integer.MAX_VALUE;
+        }
+
+        @Override
+        public void setMaximumBarCount(int maximumBarCount) {
+            // no‑op for test
+        }
+
+        @Override
+        public int getRemovedBarsCount() {
+            return 0;
+        }
+
+        // All remaining methods are irrelevant for the tests.
+        private UnsupportedOperationException uoe() {
+            return new UnsupportedOperationException("Not needed for test");
+        }
+
+        @Override public void addBar(Bar bar) { throw uoe(); }
+        @Override public void addBar(Bar bar, boolean replace) { throw uoe(); }
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) { throw uoe(); }
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { throw uoe(); }
+        @Override public void addPrice(Num price) { throw uoe(); }
+        @Override public void addPrice(Number price) { throw uoe(); }
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw uoe(); }
+        @Override public String getSeriesPeriodDescription() { throw uoe(); }
+        @Override public String getSeriesPeriodDescriptionInSystemTimeZone() { throw uoe(); }
+    }
+
+    /** Minimal {@link Trade} implementation – only the fields used by {@link Position}. */
+    private static final class SimpleTrade implements Trade {
+
+        private final TradeType type;
+        private final SimpleNum netPrice;
+        private final int index;
+
+        SimpleTrade(TradeType type, SimpleNum netPrice, int index) {
+            this.type = type;
+            this.netPrice = netPrice;
+            this.index = index;
+        }
+
+        @Override
+        public TradeType getTradeType() {
+            return type;
+        }
+
+        @Override
+        public SimpleNum getNetPrice() {
+            return netPrice;
+        }
+
+        @Override
+        public int getIndex() {
+            return index;
+        }
+
+        // The remaining methods are not required for CashFlow calculations.
+        private UnsupportedOperationException uoe() {
+            return new UnsupportedOperationException("Not needed for test");
+        }
+
+        @Override public SimpleNum getPrice() { throw uoe(); }
+        @Override public SimpleNum getAmount() { throw uoe(); }
+        @Override public SimpleNum getCost() { throw uoe(); }
+        @Override public SimpleNum getValue() { throw uoe(); }
+        @Override public SimpleNum getCommission() { throw uoe(); }
+        @Override public SimpleNum getFee() { throw uoe(); }
+        @Override public SimpleNum getCurrencyAmount() { throw uoe(); }
+        @Override public SimpleNum getCurrencyCost() { throw uoe(); }
+        @Override public SimpleNum getCurrencyValue() { throw uoe(); }
+    }
+
+    /** Minimal {@link CostModel} that always returns zero. */
+    private static final class ZeroCostModel implements CostModel {
+        @Override
+        public Num calculate(Trade trade, BarSeries series) {
+            return SimpleNum.of(0);
+        }
+    }
+
+    /** Stub for {@link TradingRecord}. Only the methods used by {@code CashFlow} are implemented. */
+    private static final class SimpleTradingRecord implements TradingRecord {
+
+        private final List<Position> positions;
+        private final Position currentPosition;
+
+        SimpleTradingRecord(List<Position> positions, Position currentPosition) {
+            this.positions = positions;
+            this.currentPosition = currentPosition;
+        }
+
+        @Override
+        public TradeType getStartingType() {
+            return TradeType.BUY;
+        }
+
+        @Override
+        public String getName() {
+            return "SimpleRecord";
+        }
+
+        @Override
+        public List<Position> getPositions() {
+            return positions;
+        }
+
+        @Override
+        public Position getCurrentPosition() {
+            return currentPosition;
+        }
+
+        @Override
+        public int getEndIndex(BarSeries series) {
+            // end of the series – used by the constructor that does not provide a final index
+            return series.getEndIndex();
+        }
+
+        // All other methods throw – they are never used by CashFlow.
+        private UnsupportedOperationException uoe() {
+            return new UnsupportedOperationException("Not needed for test");
+        }
+
+        @Override public CostModel getTransactionCostModel() { throw uoe(); }
+        @Override public CostModel getHoldingCostModel() { throw uoe(); }
+        @Override public List<Trade> getTrades() { throw uoe(); }
+        @Override public Trade getLastTrade() { throw uoe(); }
+        @Override public Trade getLastTrade(TradeType tradeType) { throw uoe(); }
+        @Override public Trade getLastEntry() { throw uoe(); }
+        @Override public Trade getLastExit() { throw uoe(); }
+        @Override public Integer getStartIndex() { throw uoe(); }
+        @Override public Integer getEndIndex() { throw uoe(); }
+        @Override public int getStartIndex(BarSeries series) { throw uoe(); }
+        @Override public void operate(int index) { throw uoe(); }
+        @Override public void operate(int index, Num price, Num amount) { throw uoe(); }
+        @Override public boolean enter(int index) { throw uoe(); }
+        @Override public boolean enter(int index, Num price, Num amount) { throw uoe(); }
+        @Override public boolean exit(int index) { throw uoe(); }
+        @Override public boolean exit(int index, Num price, Num amount) { throw uoe(); }
+        @Override public boolean isClosed() { throw uoe(); }
+    }
+
+    /** Stub for {@link AnalysisUtils}. All methods are deterministic and cost‑free. */
+    public static final class AnalysisUtils {
+        /** Returns {@code finalIndex} unless the position is already closed. */
+        public static int determineEndIndex(Position position, int finalIndex, int seriesEnd) {
+            return (position.getExit() != null) ? position.getExit().getIndex() : finalIndex;
+        }
+
+        /** Returns the price unchanged – no holding cost is applied. */
+        public static Num addCost(Num price, Num avgCost, boolean isLong) {
+            return price; // cost‑free for the purpose of the unit tests
+        }
+    }
+
+    // -----------------------------------------------------------------
+    // Test data shared by several test methods
+    // -----------------------------------------------------------------
+    private SimpleBarSeries series;
+    private SimpleNum price100;
+    private SimpleNum price110;
+    private SimpleNum price120;
+
+    @Before
+    public void setUp() {
+        price100 = SimpleNum.of(100);
+        price110 = SimpleNum.of(110);
+        price120 = SimpleNum.of(120);
+
+        List<SimpleBar> bars = new ArrayList<>();
+        bars.add(new SimpleBar(0, price100));
+        bars.add(new SimpleBar(1, price110));
+        bars.add(new SimpleBar(2, price120));
+
+        series = new SimpleBarSeries(bars);
+    }
+
+    /** Helper to create a closed long position (buy at index 0, sell at index 2). */
+    private Position closedLongPosition() {
+        SimpleTrade entry = new SimpleTrade(TradeType.BUY, price100, 0);
+        SimpleTrade exit  = new SimpleTrade(TradeType.SELL, price120, 2);
+        return new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+    }
+
+    /** Helper to create an open short position (sell at index 1, still open). */
+    private Position openShortPosition() {
+        SimpleTrade entry = new SimpleTrade(TradeType.SELL, price110, 1);
+        // exit is null – the position stays opened
+        return new Position(entry, null, new ZeroCostModel(), new ZeroCostModel());
+    }
+
+    // -----------------------------------------------------------------
+    // 1. Construction with a single closed position
+    // -----------------------------------------------------------------
+    @Test
+    public void testCashFlowSingleClosedPosition() {
+        Position pos = closedLongPosition();
+
+        CashFlow cf = new CashFlow(series, pos);
+
+        // The series has 3 bars → cash‑flow values must be padded up to index 2
+        assertEquals(3, cf.getSize());
+        // initial value is 1 (the constructor seeds the list with one())
+        Num one = series.numFactory().one();
+        assertEquals(one, cf.getValue(0));
+
+        // After the trade the cash‑flow should be multiplied by (120/100) = 1.2
+        Num expected = one.multipliedBy(price120.dividedBy(price100));
+        assertEquals(expected, cf.getValue(2));
+
+        // The intermediate bar (index 1) must contain the same ratio because the
+        // stubbed AnalysisUtils does not add any holding cost.
+        assertEquals(expected, cf.getValue(1));
+    }
+
+    // -----------------------------------------------------------------
+    // 2. Construction with a TradingRecord that contains an open position
+    // -----------------------------------------------------------------
+    @Test
+    public void testCashFlowWithOpenPositionAndFinalIndex() {
+        Position closed = closedLongPosition();
+        Position open   = openShortPosition();
+
+        List<Position> positions = Collections.singletonList(closed);
+        SimpleTradingRecord record = new SimpleTradingRecord(positions, open);
+
+        // finalIndex = 2 (the series end) – open short position will be evaluated up to that bar
+        CashFlow cf = new CashFlow(series, record, series.getEndIndex());
+
+        // Values at index 0 and 2 are as in the closed long position
+        Num one = series.numFactory().one();
+        assertEquals(one, cf.getValue(0));
+        Num longRatio = price120.dividedBy(price100);
+        assertEquals(one.multipliedBy(longRatio), cf.getValue(2));
+
+        // The open short position (sell at 110) should generate a cash‑flow that
+        // reflects a short‑sell ratio: 2 – (price/entryPrice)
+        // price at index 1 = 110 → ratio = 2 – (110/110) = 1
+        // price at index 2 = 120 → ratio = 2 – (120/110) = 0.909090…
+        Num shortRatioIdx1 = series.numFactory().numOf(2).minus(price110.dividedBy(price110));
+        Num shortRatioIdx2 = series.numFactory().numOf(2).minus(price120.dividedBy(price110));
+
+        // cash‑flow after the open short trade starts from the value at the entry index (1)
+        Num baseAtEntry = one.multipliedBy(longRatio); // cash‑flow after the closed long trade
+        Num expectedIdx1 = baseAtEntry.multipliedBy(shortRatioIdx1);
+        Num expectedIdx2 = baseAtEntry.multipliedBy(shortRatioIdx2);
+
+        assertEquals(expectedIdx1, cf.getValue(1));
+        assertEquals(expectedIdx2, cf.getValue(2));
+    }
+
+    // -----------------------------------------------------------------
+    // 3. Public API – simple getters
+    // -----------------------------------------------------------------
+    @Test
+    public void testGetters() {
+        CashFlow cf = new CashFlow(series, new SimpleTradingRecord(Collections.emptyList(),
+                new Position()));
+
+        assertSame(series, cf.getBarSeries());
+        assertEquals(series.getBarCount(), cf.getSize());
+        assertEquals(0, cf.getCountOfUnstableBars());
+    }
+
+    // -----------------------------------------------------------------
+    // 4. getIntermediateRatio – both long and short scenarios
+    // -----------------------------------------------------------------
+    @Test
+    public void testGetIntermediateRatioLong() throws Exception {
+        // Access the private static method via reflection
+        java.lang.reflect.Method method = CashFlow.class.getDeclaredMethod(
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+        method.setAccessible(true);
+
+        Num entry = price100;
+        Num exit  = price120;
+
+        Num ratio = (Num) method.invoke(null, true, entry, exit);
+        Num expected = exit.dividedBy(entry);
+        assertEquals(expected, ratio);
+    }
+
+    @Test
+    public void testGetIntermediateRatioShort() throws Exception {
+        java.lang.reflect.Method method = CashFlow.class.getDeclaredMethod(
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+        method.setAccessible(true);
+
+        Num entry = price110;
+        Num exit  = price120;
+
+        Num ratio = (Num) method.invoke(null, false, entry, exit);
+        Num two = series.numFactory().numOf(2);
+        Num expected = two.minus(exit.dividedBy(entry));
+        assertEquals(expected, ratio);
+    }
+
+    // -----------------------------------------------------------------
+    // 5. fillToTheEnd pads the list with the last known value
+    // -----------------------------------------------------------------
+    @Test
+    public void testFillToTheEndPadding() {
+        // Build a CashFlow with only one value (the default 1) and then call the
+        // private fillToTheEnd method via reflection to force padding.
+        CashFlow cf = new CashFlow(series, new SimpleTradingRecord(Collections.emptyList(),
+                new Position()));
+
+        // The internal list currently has size 1 (index 0).  We invoke the private
+        // method to pad up to the series end (index 2).
+        try {
+            java.lang.reflect.Method pad = CashFlow.class.getDeclaredMethod("fillToTheEnd", int.class);
+            pad.setAccessible(true);
+            pad.invoke(cf, series.getEndIndex());
+        } catch (Exception e) {
+            fail("Reflection failed: " + e);
+        }
+
+        // After padding we must be able to read the value at the last index and it
+        // must equal the initial value (1).
+        Num one = series.numFactory().one();
+        assertEquals(one, cf.getValue(2));
+    }
+
+    // -----------------------------------------------------------------
+    // 6. IllegalArgumentException when a non‑closed position is supplied to the
+    //    ctor that expects a closed position.
+    // -----------------------------------------------------------------
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorRejectsOpenPosition() {
+        Position open = openShortPosition(); // entry only, no exit
+        new CashFlow(series, open); // should throw
+    }
+}
+```
+###Test END##

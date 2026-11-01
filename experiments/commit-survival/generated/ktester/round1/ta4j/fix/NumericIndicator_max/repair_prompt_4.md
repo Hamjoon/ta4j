@@ -1,0 +1,358 @@
+
+
+
+You are an experienced Java developer tasked with fixing a piece of code that contains execution errors. Your task is to resolve these issues after analyzing the code and its execution feedback.
+
+Use the following steps to guide your analysis and correction process:
+1. Review the provided Java code for any logical errors.
+2. Analyze the execution feedback to understand the specific errors and their locations within the code.
+3. Apply necessary corrections to the code based on the feedback, and output the compelete correct code.
+The Java code you need to fix is provided below:
+```java
+package org.ta4j.core.indicators.numeric;
+
+import java.util.function.Function;
+import java.util.stream.Stream;
+// import org.mockito.junit.jupiter.MockitoExtension;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Indicator;
+import org.ta4j.core.indicators.helpers.ConstantIndicator;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+// import static org.junit.jupiter.api.Assertions.*;
+// import static org.junit.jupiter.api.Assertions.*;
+// import static org.mockito.Mockito.*;
+// import static org.mockito.ArgumentMatchers.*;
+// import static org.mockito.Mockito.*;
+// import org.junit.jupiter.api.*;
+// import org.junit.jupiter.api.extension.ExtendWith;
+// import org.junit.jupiter.api.AfterEach;
+// import org.junit.jupiter.params.ParameterizedTest;
+// import org.junit.jupiter.api.BeforeEach;
+// import org.junit.jupiter.params.provider.Arguments;
+// import org.junit.jupiter.api.Test;
+// import org.junit.jupiter.params.provider.MethodSource;
+// import org.junit.jupiter.api.extension.ExtendWith;
+// import org.mockito.Mock;
+// import org.junit.jupiter.params.ParameterizedTest;
+// import org.junit.jupiter.params.provider.Arguments;
+// import org.junit.jupiter.params.provider.MethodSource;
+// import org.mockito.Mock;
+// import org.mockito.junit.jupiter.MockitoExtension;
+
+// @ExtendWith(MockitoExtension.class)
+class NumericIndicator_max_Test {
+
+    //     @Mock
+    private Indicator<Num> firstIndicator;
+
+    //     @Mock
+    private Indicator<Num> secondIndicator;
+
+    /**
+     * The {@link NumericIndicator} under test (wraps {@code firstIndicator}).
+     */
+    private NumericIndicator numericFirst;
+
+    /**
+     * Helper to create {@link Num} instances from primitive numbers.
+     */
+    private static final Function<Number, Num> NUM_FACTORY = DecimalNum::valueOf;
+
+    //     @Mock
+    private BarSeries sameSeries;
+
+    //     @Mock
+    private BarSeries otherSeries;
+
+    //     @BeforeEach
+//     void setupBeforeEach() {
+//         // Initialise the NumericIndicator that decorates the first mock.
+//         numericFirst = NumericIndicator.of(firstIndicator);
+//         // Define deterministic behaviour for the two mocked indicators.
+//         // Indexes 0, 1, 2 are enough to demonstrate the max logic.
+//         when(firstIndicator.getValue(0)).thenReturn(NUM_FACTORY.apply(1));
+//         when(firstIndicator.getValue(1)).thenReturn(NUM_FACTORY.apply(5));
+//         when(firstIndicator.getValue(2)).thenReturn(NUM_FACTORY.apply(-3));
+//         when(secondIndicator.getValue(0)).thenReturn(NUM_FACTORY.apply(2));
+//         when(secondIndicator.getValue(1)).thenReturn(NUM_FACTORY.apply(3));
+//         when(secondIndicator.getValue(2)).thenReturn(NUM_FACTORY.apply(-4));
+//     }
+
+    //     @AfterEach
+//     void teardownAfterEach() {
+//         // Reset mocks after each test to avoid interaction leakage.
+//         reset(firstIndicator, secondIndicator);
+//     }
+
+    /**
+     * Convenience wrapper that creates a {@link ConstantIndicator} based on the
+     * supplied {@code series} and a single constant {@code value}.
+     */
+    private static ConstantIndicator constant(BarSeries series, Num value) {
+        return new ConstantIndicator(series, value);
+    }
+
+    // ----------------------------------------------------------------------
+    private static Num[] toNumArray(double[] doubles) {
+        Num[] nums = new Num[doubles.length];
+        for (int i = 0; i < doubles.length; i++) {
+            nums[i] = NUM_FACTORY.apply(doubles[i]);
+        }
+        return nums;
+    }
+
+    /**
+     * Creates a mocked {@link Indicator} that returns the supplied {@code values}
+     * for indexes {@code 0..values.length-1} and reports the given {@code series}
+     * as its {@link Indicator#getBarSeries()}.
+     */
+//     private static Indicator<Num> mockIndicator(BarSeries series, Num... values) {
+//         @SuppressWarnings("unchecked")
+//         Indicator<Num> mock = mock(Indicator.class);
+//         when(mock.getBarSeries()).thenReturn(series);
+//         // Specific stubbing for the provided indices
+//         for (int i = 0; i < values.length; i++) {
+//             when(mock.getValue(i)).thenReturn(values[i]);
+//         }
+//         // Default behaviour for any other index – return NaN
+//         when(mock.getValue(anyInt())).thenAnswer(invocation -> {
+//             int idx = invocation.getArgument(0);
+//             return (idx >= 0 && idx < values.length) ? values[idx] : DecimalNum.NaN;
+//         });
+//         return mock;
+//     }
+
+    /**
+     * Data provider for the basic constant‑value scenarios.
+     */
+//     private static Stream<Arguments> constantScenarios() {
+//         return Stream.of(// identical constant values
+//         Arguments.of(new double[] { 5, 5, 5 }, new double[] { 5, 5, 5 }, new double[] { 5, 5, 5 }, "identical constant values"), // left indicator larger at all indices
+//         Arguments.of(new double[] { 10, 20, 30 }, new double[] { 1, 2, 3 }, new double[] { 10, 20, 30 }, "left indicator dominates"), // right indicator larger at all indices
+//         Arguments.of(new double[] { 10, 20, 30 }, new double[] { 100, 200, 300 }, new double[] { 100, 200, 300 }, "right indicator dominates"), // mixed dominance
+//         Arguments.of(new double[] { 10, 20, 30 }, new double[] { 5, 25, 15 }, new double[] { 10, 25, 30 }, "mixed dominance"));
+//     }
+
+//     @Test
+//     void maxWithIndicator_returnsElementWiseMaximum() {
+//         // Exercise the method under test.
+//         NumericIndicator result = numericFirst.max(secondIndicator);
+//         // Verify that the returned object is indeed a NumericIndicator.
+//         assertNotNull(result);
+//         assertTrue(result instanceof NumericIndicator);
+//         // Expected values are the element‑wise maximum of the two mocked series.
+//         // max(1, 2)
+//         Num expected0 = NUM_FACTORY.apply(2);
+//         // max(5, 3)
+//         Num expected1 = NUM_FACTORY.apply(5);
+//         // max(-3, -4)
+//         Num expected2 = NUM_FACTORY.apply(-3);
+//         assertEquals(expected0, result.getValue(0));
+//         assertEquals(expected1, result.getValue(1));
+//         assertEquals(expected2, result.getValue(2));
+//         // Ensure the underlying delegates were queried the expected number of times.
+//         verify(firstIndicator, times(3)).getValue(anyInt());
+//         verify(secondIndicator, times(3)).getValue(anyInt());
+//     }
+
+//     @ParameterizedTest(name = "max constant scenario – {3}")
+//     @MethodSource("constantScenarios")
+//     void max_constantIndicators_returnsElementWiseMaximum(double[] leftVals, double[] rightVals, double[] expectedVals, String description) {
+//         // Build mocked indicators for both sides (same BarSeries)
+//         Indicator<Num> left = mockIndicator(sameSeries, toNumArray(leftVals));
+//         Indicator<Num> right = mockIndicator(sameSeries, toNumArray(rightVals));
+//         NumericIndicator numericLeft = NumericIndicator.of(left);
+//         NumericIndicator result = numericLeft.max(right);
+//         assertNotNull(result, "Result must not be null");
+//         for (int i = 0; i < expectedVals.length; i++) {
+//             Num expected = NUM_FACTORY.apply(expectedVals[i]);
+//             assertEquals(expected, result.getValue(i), () -> "index " + i + " – expected " + expected + " but got " + result.getValue(i));
+//         }
+//     }
+
+//     @Test
+//     void max_withNaNInOther_propagatesNaNAccordingToNumSemantics() {
+//         // this indicator: [NaN, 0, 5]
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(Double.NaN), NUM_FACTORY.apply(0), NUM_FACTORY.apply(5));
+//         // other indicator: [1, 2, 4]
+//         Indicator<Num> right = mockIndicator(sameSeries, NUM_FACTORY.apply(1), NUM_FACTORY.apply(2), NUM_FACTORY.apply(4));
+//         NumericIndicator result = NumericIndicator.of(left).max(right);
+//         assertEquals(NUM_FACTORY.apply(Double.NaN), result.getValue(0), "NaN should propagate when present on the left side");
+//         assertEquals(NUM_FACTORY.apply(2), result.getValue(1));
+//         assertEquals(NUM_FACTORY.apply(5), result.getValue(2));
+//     }
+
+//     @Test
+//     void max_withNaNInThis_propagatesNaNAccordingToNumSemantics() {
+//         // this indicator: [NaN, 2, 4]
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(Double.NaN), NUM_FACTORY.apply(2), NUM_FACTORY.apply(4));
+//         // other indicator: [1, 2, 4]
+//         Indicator<Num> right = mockIndicator(sameSeries, NUM_FACTORY.apply(1), NUM_FACTORY.apply(2), NUM_FACTORY.apply(4));
+//         NumericIndicator result = NumericIndicator.of(left).max(right);
+//         assertEquals(NUM_FACTORY.apply(Double.NaN), result.getValue(0), "NaN should propagate when present on the left side");
+//         assertEquals(NUM_FACTORY.apply(2), result.getValue(1));
+//         assertEquals(NUM_FACTORY.apply(4), result.getValue(2));
+//     }
+
+//     @Test
+//     void max_withInfinities_andNegativeNumbers() {
+//         // this indicator: [-5, -5, -5]
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(-5), NUM_FACTORY.apply(-5), NUM_FACTORY.apply(-5));
+//         // other indicator: [100, POSITIVE_INFINITY, NEGATIVE_INFINITY]
+//         Indicator<Num> right = mockIndicator(sameSeries, NUM_FACTORY.apply(100), NUM_FACTORY.apply(Double.POSITIVE_INFINITY), NUM_FACTORY.apply(Double.NEGATIVE_INFINITY));
+//         NumericIndicator result = NumericIndicator.of(left).max(right);
+//         assertEquals(NUM_FACTORY.apply(100), result.getValue(0));
+//         assertEquals(NUM_FACTORY.apply(Double.POSITIVE_INFINITY), result.getValue(1));
+//         assertEquals(NUM_FACTORY.apply(-5), result.getValue(2));
+//     }
+
+//     @Test
+//     void max_withNegativeNumbers() {
+//         // this indicator: [-10, -3, 0]
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(-10), NUM_FACTORY.apply(-3), NUM_FACTORY.apply(0));
+//         // other indicator: [-20, -3, -1]
+//         Indicator<Num> right = mockIndicator(sameSeries, NUM_FACTORY.apply(-20), NUM_FACTORY.apply(-3), NUM_FACTORY.apply(-1));
+//         NumericIndicator result = NumericIndicator.of(left).max(right);
+//         assertEquals(NUM_FACTORY.apply(-10), result.getValue(0));
+//         assertEquals(NUM_FACTORY.apply(-3), result.getValue(1));
+//         assertEquals(NUM_FACTORY.apply(0), result.getValue(2));
+//     }
+
+//     @Test
+//     void max_withMixedNaNAndInfinities() {
+//         // this indicator: [NEGATIVE_INFINITY, 0, NEGATIVE_INFINITY]
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(Double.NEGATIVE_INFINITY), NUM_FACTORY.apply(0), NUM_FACTORY.apply(Double.NEGATIVE_INFINITY));
+//         // other indicator: [POSITIVE_INFINITY, 0, NaN]
+//         Indicator<Num> right = mockIndicator(sameSeries, NUM_FACTORY.apply(Double.POSITIVE_INFINITY), NUM_FACTORY.apply(0), NUM_FACTORY.apply(Double.NaN));
+//         NumericIndicator result = NumericIndicator.of(left).max(right);
+//         // According to Num semantics: NaN > any number, but max(NaN, x) = NaN
+//         assertEquals(NUM_FACTORY.apply(Double.NaN), result.getValue(0));
+//         assertEquals(NUM_FACTORY.apply(0), result.getValue(1));
+//         assertEquals(NUM_FACTORY.apply(Double.NaN), result.getValue(2));
+//     }
+
+//     @Test
+//     void max_nullArgument_throwsNullPointerException() {
+//         NumericIndicator left = NumericIndicator.of(mockIndicator(sameSeries, NUM_FACTORY.apply(1)));
+//         assertThrows(NullPointerException.class, () -> left.max(null), "Passing null should result in NPE");
+//     }
+
+//     @Test
+//     void max_sameInstance_returnsIdenticalValues() {
+//         // this indicator: [10, -20, 30]
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(10), NUM_FACTORY.apply(-20), NUM_FACTORY.apply(30));
+//         NumericIndicator numeric = NumericIndicator.of(left);
+//         // same instance
+//         NumericIndicator result = numeric.max(numeric);
+//         assertEquals(NUM_FACTORY.apply(10), result.getValue(0));
+//         assertEquals(NUM_FACTORY.apply(-20), result.getValue(1));
+//         assertEquals(NUM_FACTORY.apply(30), result.getValue(2));
+//     }
+
+//     @Test
+//     void max_commutativity_producesIdenticalResults() {
+//         // a: [5, 15, 25]
+//         Indicator<Num> a = mockIndicator(sameSeries, NUM_FACTORY.apply(5), NUM_FACTORY.apply(15), NUM_FACTORY.apply(25));
+//         // b: [10, 10, 30]
+//         Indicator<Num> b = mockIndicator(sameSeries, NUM_FACTORY.apply(10), NUM_FACTORY.apply(10), NUM_FACTORY.apply(30));
+//         NumericIndicator na = NumericIndicator.of(a);
+//         NumericIndicator nb = NumericIndicator.of(b);
+//         NumericIndicator maxAB = na.max(b);
+//         NumericIndicator maxBA = nb.max(a);
+//         for (int i = 0; i < 3; i++) {
+//             assertEquals(maxAB.getValue(i), maxBA.getValue(i), "Commutative result differs at index " + i);
+//         }
+//     }
+
+//     @Test
+//     void max_differentBarSeries_throwsIllegalArgumentException() {
+//         // left indicator built on series A
+//         Indicator<Num> left = mockIndicator(sameSeries, NUM_FACTORY.apply(10), NUM_FACTORY.apply(20), NUM_FACTORY.apply(30));
+//         // right indicator built on a *different* series
+//         Indicator<Num> right = mockIndicator(otherSeries, NUM_FACTORY.apply(10), NUM_FACTORY.apply(20), NUM_FACTORY.apply(30));
+//         NumericIndicator numericLeft = NumericIndicator.of(left);
+//         assertThrows(IllegalArgumentException.class, () -> numericLeft.max(right), "Mismatched BarSeries should cause IllegalArgumentException");
+//     }
+}
+```
+
+Corresponding execution feedback:
+```
+Picked up _JAVA_OPTIONS: -Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8
+
+╷
+├─ JUnit Jupiter ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 27 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         0 tests found           ]
+[         0 tests skipped         ]
+[         0 tests started         ]
+[         0 tests aborted         ]
+[         0 tests successful      ]
+[         0 tests failed          ]
+
+
+```
+
+
+And you can use the following related information to assist you in your analysis and correction:
+
+api document of class org.ta4j.core.indicators.numeric.NumericIndicator: 
+
+ * NumericIndicator is a "fluent decorator" for Indicator<Num>. It provides
+ * methods to create rules and other "lightweight" indicators, using a
+ * (hopefully) natural-looking and expressive series of method calls.
+ * 
+ * <p>
+ * Methods like plus(), minus() and sqrt() correspond directly to methods in the
+ * {@code Num} interface. These methods create "lightweight" (not cached)
+ * indicators to add, subtract, etc. Many methods are overloaded to accept
+ * either {@code Indicator<Num>} or {@code Number} arguments.
+ * 
+ * <p>
+ * Methods like sma() and ema() simply create the corresponding indicator
+ * objects, (SMAIndicator or EMAIndicator, for example) with "this" as the first
+ * argument. These methods usually instantiate cached objects.
+ * 
+ * <p>
+ * Another set of methods, like crossedOver() and isGreaterThan() create Rule
+ * objects. These are also overloaded to accept both {@code Indicator<Num>} and
+ * {@code Number} arguments.
+ 
+
+api document of method max(Indicator<Num>): 
+
+     * @param other the other indicator
+     * @return the greater of {@code this} and {@code other}; if they are equal,
+     *         {@code this} is returned.
+     
+
+return type: 
+org.ta4j.core.indicators.numeric.NumericIndicator
+
+dependent classes: 
+class `org.ta4j.core.indicators.numeric.NumericIndicator`:
+	related functions:
+		method `public NumericIndicator max(Indicator<Num>)` returns `org.ta4j.core.indicators.numeric.NumericIndicator`, related with `org.ta4j.core.indicators.numeric.NumericIndicator.max(Indicator<Num>)`, api document: 
+     * @param other the other indicator
+     * @return the greater of {@code this} and {@code other}; if they are equal,
+     *         {@code this} is returned.
+     ;
+		method `public static NumericIndicator closePrice(BarSeries)` returns `org.ta4j.core.indicators.numeric.NumericIndicator`, related with `org.ta4j.core.indicators.numeric.NumericIndicator.max(Indicator<Num>)`, api document: 
+     * Creates a fluent version of the ClosePriceIndicator.
+     *
+     * @return a NumericIndicator wrapped around a ClosePriceIndicator
+     ;
+
+
+
+Now you should output the corrected Java code wrapped in a Markdown code block ```java at the beginning and ``` at the end: 

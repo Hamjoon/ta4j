@@ -1,0 +1,64 @@
+{
+  "index": 56,
+  "sha": "f29bdd71cacf083028e3c6f722a82bdcc4177563",
+  "parent": "df40f73bc3a6f256a3de162cda6daa3a6c458547",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BarBuilder.java": [],
+    "src/main/java/org/ta4j/core/BaseBar.java": [
+      89,
+      90,
+      91,
+      92
+    ],
+    "src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/bars/TickBarBuilder.java": [
+      219
+    ],
+    "src/main/java/org/ta4j/core/bars/TimeBarBuilder.java": [
+      209
+    ],
+    "src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java": [
+      220
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BarBuilder.java": [],
+    "src/main/java/org/ta4j/core/BaseBar.java": [
+      102,
+      105,
+      106,
+      107,
+      108,
+      111,
+      113,
+      114,
+      118,
+      119,
+      121,
+      125,
+      126,
+      128
+    ],
+    "src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/bars/TickBarBuilder.java": [
+      87,
+      88,
+      226
+    ],
+    "src/main/java/org/ta4j/core/bars/TimeBarBuilder.java": [
+      78,
+      79,
+      216
+    ],
+    "src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java": [
+      88,
+      89,
+      227
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java\nindex 6815a1eb0..fd3ec0590 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java\n@@ -34 +34,2 @@ public interface BarBuilder {\n-     * @param timePeriod the time period\n+     * @param timePeriod the time period (optional if {@link #beginTime(Instant)}\n+     *                   and {@link #endTime(Instant)} are given)\n@@ -40 +41,9 @@ public interface BarBuilder {\n-     * @param endTime the end time of the bar period\n+     * @param beginTime the begin time of the bar period (optional if\n+     *                  {@link #endTime(Instant)} is given)\n+     * @return {@code this}\n+     */\n+    BarBuilder beginTime(Instant beginTime);\n+\n+    /**\n+     * @param endTime the end time of the bar period (optional if\n+     *                {@link #beginTime(Instant)} is given)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\nindex 403262c94..25a34b8d3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n@@ -72,3 +72,8 @@ public class BaseBar implements Bar {\n-     * <p>\n-     * The {@link #beginTime} will be calculated by {@link #endTime} -\n-     * {@link #timePeriod}.\n+     * <ul>\n+     * <li>If {@link #timePeriod} is not provided, it will be calculated as\n+     * {@link #endTime} - {@link #beginTime}.\n+     * <li>If {@link #beginTime} is not provided, it will be calculated as\n+     * {@link #endTime} - {@link #timePeriod}.\n+     * <li>If {@link #endTime} is not provided, it will be calculated as\n+     * {@link #beginTime} + {@link #timePeriod}.\n+     * </ul>\n@@ -76,2 +81,6 @@ public class BaseBar implements Bar {\n-     * @param timePeriod the time period\n-     * @param endTime    the end time of the bar period (in UTC)\n+     * @param timePeriod the time period (optional if beginTime and endTime is\n+     *                   given)\n+     * @param beginTime  the begin time of the bar period (in UTC) (optional if\n+     *                   endTime is given)\n+     * @param endTime    the end time of the bar period (in UTC) (optional if\n+     *                   beginTime is given)\n@@ -85,2 +94,6 @@ public class BaseBar implements Bar {\n-     * @throws NullPointerException if {@link #endTime} or {@link #timePeriod} is\n-     *                              {@code null}\n+     * @throws NullPointerException     if given or calculated {@link #timePeriod},\n+     *                                  {@link #beginTime} or {@link #endTime}\n+     *                                  values are {@code null}\n+     * @throws IllegalArgumentException If the calculated timePeriod between the\n+     *                                  provided beginTime and endTime does not\n+     *                                  match the provided timePeriod\n@@ -88,5 +101,30 @@ public class BaseBar implements Bar {\n-    public BaseBar(Duration timePeriod, Instant endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice,\n-            Num volume, Num amount, long trades) {\n-        this.timePeriod = Objects.requireNonNull(timePeriod, \"Time period cannot be null\");\n-        this.endTime = Objects.requireNonNull(endTime, \"End time cannot be null\");\n-        this.beginTime = endTime.minus(timePeriod);\n+    public BaseBar(Duration timePeriod, Instant beginTime, Instant endTime, Num openPrice, Num highPrice, Num lowPrice,\n+            Num closePrice, Num volume, Num amount, long trades) {\n+\n+        // set timePeriod\n+        if (timePeriod != null) {\n+            if (beginTime != null && endTime != null\n+                    && timePeriod.compareTo(Duration.between(beginTime, endTime)) != 0) {\n+                throw new IllegalArgumentException(\n+                        \"The calculated timePeriod between beginTime and endTime does not match the given timePeriod.\");\n+            }\n+            this.timePeriod = timePeriod;\n+        } else {\n+            this.timePeriod = beginTime != null && endTime != null ? Duration.between(beginTime, endTime)\n+                    : Objects.requireNonNull(timePeriod, \"Time period cannot be null\");\n+        }\n+\n+        // set beginTime\n+        if (beginTime == null && endTime != null) {\n+            this.beginTime = endTime.minus(timePeriod);\n+        } else {\n+            this.beginTime = Objects.requireNonNull(beginTime, \"Begin time cannot be null\");\n+        }\n+\n+        // set endTime\n+        if (beginTime != null && endTime == null) {\n+            this.endTime = beginTime.plus(timePeriod);\n+        } else {\n+            this.endTime = Objects.requireNonNull(endTime, \"End time cannot be null\");\n+        }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java\nindex 902e577ed..ff386393b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java\n@@ -71,2 +71,2 @@ public class HeikinAshiBarBuilder extends TimeBarBuilder {\n-            return new BaseBar(timePeriod, endTime, heikinAshiOpen, heikinAshiHigh, heikinAshiLow, heikinAshiClose,\n-                    volume, amount, trades);\n+            return new BaseBar(timePeriod, beginTime, endTime, heikinAshiOpen, heikinAshiHigh, heikinAshiLow,\n+                    heikinAshiClose, volume, amount, trades);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java\nindex cd56f90e3..86982c439 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java\n@@ -47,0 +48 @@ public class TickBarBuilder implements BarBuilder {\n+    private Instant beginTime;\n@@ -83,0 +85,6 @@ public class TickBarBuilder implements BarBuilder {\n+    @Override\n+    public BarBuilder beginTime(final Instant beginTime) {\n+        this.beginTime = beginTime;\n+        return this;\n+    }\n+\n@@ -219 +226 @@ public class TickBarBuilder implements BarBuilder {\n-        return new BaseBar(this.timePeriod, this.endTime, this.openPrice, this.highPrice, this.lowPrice,\n+        return new BaseBar(this.timePeriod, this.beginTime, this.endTime, this.openPrice, this.highPrice, this.lowPrice,\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java\nindex 89b791d2f..becdd0ccc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java\n@@ -44,0 +45 @@ public class TimeBarBuilder implements BarBuilder {\n+    Instant beginTime;\n@@ -74,0 +76,6 @@ public class TimeBarBuilder implements BarBuilder {\n+    @Override\n+    public BarBuilder beginTime(final Instant beginTime) {\n+        this.beginTime = beginTime;\n+        return this;\n+    }\n+\n@@ -209 +216 @@ public class TimeBarBuilder implements BarBuilder {\n-        return new BaseBar(this.timePeriod, this.endTime, this.openPrice, this.highPrice, this.lowPrice,\n+        return new BaseBar(this.timePeriod, this.beginTime, this.endTime, this.openPrice, this.highPrice, this.lowPrice,\n@@ -216,0 +224 @@ public class TimeBarBuilder implements BarBuilder {\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java\nindex 8dfae30dd..273f5b065 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java\n@@ -47,0 +48 @@ public class VolumeBarBuilder implements BarBuilder {\n+    private Instant beginTime;\n@@ -84,0 +86,6 @@ public class VolumeBarBuilder implements BarBuilder {\n+    @Override\n+    public BarBuilder beginTime(final Instant beginTime) {\n+        this.beginTime = beginTime;\n+        return this;\n+    }\n+\n@@ -220 +227 @@ public class VolumeBarBuilder implements BarBuilder {\n-        return new BaseBar(this.timePeriod, this.endTime, this.openPrice, this.highPrice, this.lowPrice,\n+        return new BaseBar(this.timePeriod, this.beginTime, this.endTime, this.openPrice, this.highPrice, this.lowPrice,"
+}

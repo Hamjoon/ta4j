@@ -1,0 +1,16 @@
+{
+  "index": 17,
+  "sha": "dae1daef9e87679a26458ac4435ecdef9aac4f1a",
+  "parent": "4755270e61e2478a66a65c1c9606e50be6c02204",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/ATRIndicator.java": [
+      57
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/ATRIndicator.java": [
+      57
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\nindex 78b8a7eec..d1fda62d6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\n@@ -57 +57 @@ public class ATRIndicator extends AbstractIndicator<Num> {\n-        this.averageTrueRangeIndicator = new MMAIndicator(new TRIndicator(tr.getBarSeries()), barCount);\n+        this.averageTrueRangeIndicator = new MMAIndicator(tr, barCount);"
+}

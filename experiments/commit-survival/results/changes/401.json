@@ -1,0 +1,75 @@
+{
+  "index": 401,
+  "sha": "0f637ec08abc602916dd75a8cedc0a0491cd653a",
+  "parent": "c7eff18733533426accae6900ff15683e66fc6ae",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": [
+      320
+    ],
+    "src/main/java/org/ta4j/core/indicators/RWIHighIndicator.java": [
+      34,
+      40,
+      43,
+      48,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/RWILowIndicator.java": [
+      34,
+      38,
+      40,
+      43,
+      48,
+      55,
+      56
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": [
+      99,
+      100,
+      104,
+      105,
+      109,
+      329
+    ],
+    "src/main/java/org/ta4j/core/indicators/RWIHighIndicator.java": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      43,
+      48,
+      50,
+      51,
+      52,
+      53,
+      57,
+      62,
+      69,
+      70
+    ],
+    "src/main/java/org/ta4j/core/indicators/RWILowIndicator.java": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      43,
+      47,
+      48,
+      50,
+      51,
+      52,
+      53,
+      57,
+      62,
+      69,
+      70
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\nindex 1e447302c..30c80ad87 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n@@ -55,0 +56 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+    private final long lastBarWaitTimeoutMs;\n@@ -97,0 +99,4 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+        this(series, LAST_BAR_WAIT_TIMEOUT_MS);\n+    }\n+\n+    CachedIndicator(BarSeries series, long lastBarWaitTimeoutMs) {\n@@ -98,0 +104,3 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+        if (lastBarWaitTimeoutMs <= 0) {\n+            throw new IllegalArgumentException(\"Last-bar wait timeout must be positive\");\n+        }\n@@ -100,0 +109 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+        this.lastBarWaitTimeoutMs = lastBarWaitTimeoutMs;\n@@ -320 +329 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n-                    lastBarLock.wait(LAST_BAR_WAIT_TIMEOUT_MS);\n+                    lastBarLock.wait(lastBarWaitTimeoutMs);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RWIHighIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RWIHighIndicator.java\nindex 0c7b4b0a8..e9bd488d0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RWIHighIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RWIHighIndicator.java\n@@ -19,0 +20,2 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n+    private final transient ATRIndicator[] atrIndicators;\n+    private final transient Num[] sqrtValues;\n@@ -29,0 +32,7 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n+        int helperCount = Math.max(0, barCount + 1);\n+        this.atrIndicators = new ATRIndicator[helperCount];\n+        this.sqrtValues = new Num[helperCount];\n+        for (int n = 2; n <= barCount; n++) {\n+            atrIndicators[n] = new ATRIndicator(series, n);\n+            sqrtValues[n] = series.numFactory().numOf(n).sqrt();\n+        }\n@@ -34 +43 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n-        if (index - barCount + 1 < getBarSeries().getBeginIndex()) {\n+        if (index < getCountOfUnstableBars() || index - barCount + 1 < getBarSeries().getBeginIndex()) {\n@@ -38,0 +48 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n+        boolean hasDefinedValue = false;\n@@ -40 +50,5 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n-            maxRWIH = maxRWIH.max(calcRWIHFor(index, n));\n+            Num rwiHigh = calcRWIHFor(index, n);\n+            if (!IndicatorUtils.isInvalid(rwiHigh)) {\n+                maxRWIH = hasDefinedValue ? maxRWIH.max(rwiHigh) : rwiHigh;\n+                hasDefinedValue = true;\n+            }\n@@ -43 +57 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n-        return maxRWIH;\n+        return hasDefinedValue ? maxRWIH : NaN.NaN;\n@@ -48 +62 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(0, barCount);\n@@ -55,2 +69,2 @@ public class RWIHighIndicator extends CachedIndicator<Num> {\n-        Num atrN = new ATRIndicator(series, n).getValue(index);\n-        Num sqrtN = getBarSeries().numFactory().numOf(n).sqrt();\n+        Num atrN = atrIndicators[n].getValue(index);\n+        Num sqrtN = sqrtValues[n];\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RWILowIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RWILowIndicator.java\nindex 2bf46c3f2..a85e5720f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RWILowIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RWILowIndicator.java\n@@ -19,0 +20,2 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n+    private final transient ATRIndicator[] atrIndicators;\n+    private final transient Num[] sqrtValues;\n@@ -29,0 +32,7 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n+        int helperCount = Math.max(0, barCount + 1);\n+        this.atrIndicators = new ATRIndicator[helperCount];\n+        this.sqrtValues = new Num[helperCount];\n+        for (int n = 2; n <= barCount; n++) {\n+            atrIndicators[n] = new ATRIndicator(series, n);\n+            sqrtValues[n] = series.numFactory().numOf(n).sqrt();\n+        }\n@@ -34 +43 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-        if (index - barCount + 1 < getBarSeries().getBeginIndex()) {\n+        if (index < getCountOfUnstableBars() || index - barCount + 1 < getBarSeries().getBeginIndex()) {\n@@ -38 +47,2 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-        Num minRWIL = getBarSeries().numFactory().zero();\n+        Num maxRWIL = getBarSeries().numFactory().zero();\n+        boolean hasDefinedValue = false;\n@@ -40 +50,5 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-            minRWIL = minRWIL.max(calcRWIHFor(index, n));\n+            Num rwiLow = calcRWILFor(index, n);\n+            if (!IndicatorUtils.isInvalid(rwiLow)) {\n+                maxRWIL = hasDefinedValue ? maxRWIL.max(rwiLow) : rwiLow;\n+                hasDefinedValue = true;\n+            }\n@@ -43 +57 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-        return minRWIL;\n+        return hasDefinedValue ? maxRWIL : NaN.NaN;\n@@ -48 +62 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(0, barCount);\n@@ -51 +65 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-    private Num calcRWIHFor(final int index, final int n) {\n+    private Num calcRWILFor(final int index, final int n) {\n@@ -55,2 +69,2 @@ public class RWILowIndicator extends CachedIndicator<Num> {\n-        Num atrN = new ATRIndicator(series, n).getValue(index);\n-        Num sqrtN = series.numFactory().numOf(n).sqrt();\n+        Num atrN = atrIndicators[n].getValue(index);\n+        Num sqrtN = sqrtValues[n];"
+}

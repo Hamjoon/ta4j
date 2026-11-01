@@ -1,0 +1,17 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:16: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:224: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:364: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:371: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+4 errors

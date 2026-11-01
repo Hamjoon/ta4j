@@ -1,0 +1,43 @@
+{
+  "index": 256,
+  "sha": "c480c49c281c99bf43d6f00c015bb1283bebddb8",
+  "parent": "34b2b12a4bb505390e713d32d4982e26da824b1f",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java": [
+      34,
+      39,
+      45,
+      52,
+      59,
+      69
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      134,
+      135
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java": [
+      34,
+      39,
+      46,
+      53,
+      54,
+      60,
+      73,
+      77,
+      78,
+      113,
+      121
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      134,
+      135,
+      136,
+      137,
+      1913,
+      1927
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java\nindex da5cf8f5e..73dfc14e1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java\n@@ -34 +34 @@ public enum ElliottLogicProfile {\n-    ORTHODOX_CLASSICAL(\"orthodox-classical\", \"Classical Elliott constraints\", 2, PatternSet.all(), false, 0.70),\n+    ORTHODOX_CLASSICAL(\"orthodox-classical\", \"Classical Elliott constraints\", 2, 1, 1, PatternSet.all(), false, 0.70),\n@@ -39 +39,2 @@ public enum ElliottLogicProfile {\n-    HIERARCHICAL_SWING(\"h1-hierarchical-swing\", \"Hierarchical swing extraction\", 4, PatternSet.all(), false, 0.78),\n+    HIERARCHICAL_SWING(\"h1-hierarchical-swing\", \"Hierarchical swing extraction\", 4, 1, 1, PatternSet.all(), false,\n+            0.78),\n@@ -45 +46 @@ public enum ElliottLogicProfile {\n-    BTC_RELAXED_IMPULSE(\"h2-btc-relaxed-impulse\", \"Relaxed impulse rules for BTC\", 4,\n+    BTC_RELAXED_IMPULSE(\"h2-btc-relaxed-impulse\", \"Relaxed impulse rules for BTC\", 4, 1, 1,\n@@ -52,2 +53,2 @@ public enum ElliottLogicProfile {\n-    BTC_RELAXED_CORRECTIVE(\"h3-btc-relaxed-corrective\", \"Relaxed corrective coverage for BTC\", 5, PatternSet.all(),\n-            true, 0.64),\n+    BTC_RELAXED_CORRECTIVE(\"h3-btc-relaxed-corrective\", \"Relaxed corrective coverage for BTC\", 5, 1, 1,\n+            PatternSet.all(), true, 0.64),\n@@ -59 +60 @@ public enum ElliottLogicProfile {\n-    ANCHOR_FIRST_HYBRID(\"h4-anchor-first-hybrid\", \"Anchor-first hybrid profile\", 5, PatternSet.all(), true, 0.58);\n+    ANCHOR_FIRST_HYBRID(\"h4-anchor-first-hybrid\", \"Anchor-first hybrid profile\", 5, 2, 2, PatternSet.all(), true, 0.58);\n@@ -63,0 +65,2 @@ public enum ElliottLogicProfile {\n+    private final int higherDegrees;\n+    private final int lowerDegrees;\n@@ -68,2 +71,3 @@ public enum ElliottLogicProfile {\n-    ElliottLogicProfile(final String id, final String title, final int baseFractalWindow, final PatternSet patternSet,\n-            final boolean patternAwareConfidence, final double baseConfidenceWeight) {\n+    ElliottLogicProfile(final String id, final String title, final int baseFractalWindow, final int higherDegrees,\n+            final int lowerDegrees, final PatternSet patternSet, final boolean patternAwareConfidence,\n+            final double baseConfidenceWeight) {\n@@ -72,0 +77,2 @@ public enum ElliottLogicProfile {\n+        this.higherDegrees = higherDegrees;\n+        this.lowerDegrees = lowerDegrees;\n@@ -101,0 +108,16 @@ public enum ElliottLogicProfile {\n+    /**\n+     * @return default number of higher-degree confirmations to include\n+     * @since 0.22.4\n+     */\n+    public int higherDegrees() {\n+        return higherDegrees;\n+    }\n+\n+    /**\n+     * @return default number of lower-degree confirmations to include\n+     * @since 0.22.4\n+     */\n+    public int lowerDegrees() {\n+        return lowerDegrees;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 00ebcad44..0774a467d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -134,2 +134,4 @@ public final class ElliottWaveAnalysisRunner {\n-        this.higherDegrees = builder.higherDegrees;\n-        this.lowerDegrees = builder.lowerDegrees;\n+        this.higherDegrees = builder.higherDegreesExplicit ? builder.higherDegrees\n+                : logicProfile == null ? builder.higherDegrees : logicProfile.higherDegrees();\n+        this.lowerDegrees = builder.lowerDegreesExplicit ? builder.lowerDegrees\n+                : logicProfile == null ? builder.lowerDegrees : logicProfile.lowerDegrees();\n@@ -1871,0 +1874,2 @@ public final class ElliottWaveAnalysisRunner {\n+        private boolean higherDegreesExplicit;\n+        private boolean lowerDegreesExplicit;\n@@ -1908,0 +1913 @@ public final class ElliottWaveAnalysisRunner {\n+            this.higherDegreesExplicit = true;\n@@ -1921,0 +1927 @@ public final class ElliottWaveAnalysisRunner {\n+            this.lowerDegreesExplicit = true;\n@@ -1977,3 +1983,4 @@ public final class ElliottWaveAnalysisRunner {\n-         * Profiles tune the default swing-detector sensitivity, enabled pattern\n-         * families, confidence-model style, and cross-degree confidence weight. Any\n-         * explicit builder calls made afterwards still take precedence.\n+         * Profiles tune the default swing-detector sensitivity, supporting-degree\n+         * confirmation depth, enabled pattern families, confidence-model style, and\n+         * cross-degree confidence weight. Any explicit builder calls made afterwards\n+         * still take precedence."
+}

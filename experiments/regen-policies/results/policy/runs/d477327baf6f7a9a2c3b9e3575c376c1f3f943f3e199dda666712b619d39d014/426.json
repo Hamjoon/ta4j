@@ -1,0 +1,932 @@
+{
+  "index": 426,
+  "sha": "e869f8b50bdb0359d60df3839fbfc400d75284f4",
+  "status": "evaluated",
+  "imported": true,
+  "methods": [
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnWholeSeries",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeries",
+      "body_hash": "db723cd03476e5b439a5ca0a39a8d8b8e23cf76ff45605df37f9dd6f79490eee",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeries"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeries",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeries"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnWholeSeriesWithAmount",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeriesWithAmount",
+      "body_hash": "39ba8042a93b5ab19fa7c579cbf62d5846874f1080a69d428db04eefd0b1936b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeriesWithAmount"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeriesWithAmount",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeriesWithAmount"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerUsesDynamicEntryAmount",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesDynamicEntryAmount",
+      "body_hash": "ad9affc692e34221e5d2cacee2cd6272dec66490f33b9ed3fb5c5007f3618ea1",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesDynamicEntryAmount"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesDynamicEntryAmount",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerUsesDynamicEntryAmount"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerRejectsNonPositiveAndNonFiniteAmounts",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerRejectsNonPositiveAndNonFiniteAmounts",
+      "body_hash": "37caa2c5258c195c9da91b2f832f204ff73b57a6ccaa080514c209c069caf0d0",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerRejectsNonPositiveAndNonFiniteAmounts"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerRejectsNonPositiveAndNonFiniteAmounts",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerRejectsNonPositiveAndNonFiniteAmounts"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerUsesStrategyStartingTypeAndRange",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesStrategyStartingTypeAndRange",
+      "body_hash": "d2b590573c1fe689ba1367ecdc114ac7a7401fdd84399d711d09e6177be6d022",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesStrategyStartingTypeAndRange"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesStrategyStartingTypeAndRange",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerUsesStrategyStartingTypeAndRange"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "constructorCopiesBarSeriesAndAccessorReturnsSnapshots",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#constructorCopiesBarSeriesAndAccessorReturnsSnapshots",
+      "body_hash": "cc39bb856aa609601e9f23f1705d0fe2498d9d05fff9d8d173f0dc14c77d20ce",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#constructorCopiesBarSeriesAndAccessorReturnsSnapshots"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#constructorCopiesBarSeriesAndAccessorReturnsSnapshots",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|constructorCopiesBarSeriesAndAccessorReturnsSnapshots"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerAndCustomExecutionModelFallsBackToNextOpenEstimate",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerAndCustomExecutionModelFallsBackToNextOpenEstimate",
+      "body_hash": "4f65be432bd12584ff66ab71bc213c8dca6ebd7a7145d97ad45f7a929f826854",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerAndCustomExecutionModelFallsBackToNextOpenEstimate"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerAndCustomExecutionModelFallsBackToNextOpenEstimate",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerAndCustomExecutionModelFallsBackToNextOpenEstimate"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerUsesCustomExecutionModelEstimate",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesCustomExecutionModelEstimate",
+      "body_hash": "8d847b27edbcaa8d9ead44140641f65e880db2ed635c973a1610b7a5ee6632e1",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesCustomExecutionModelEstimate"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUsesCustomExecutionModelEstimate",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerUsesCustomExecutionModelEstimate"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerUnresolvableTargetFallsBackSafely",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUnresolvableTargetFallsBackSafely",
+      "body_hash": "e1e939275c73d2060f6a9a93c074447be7e14f8d4ace377298b753617e0bfaa3",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUnresolvableTargetFallsBackSafely"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerUnresolvableTargetFallsBackSafely",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerUnresolvableTargetFallsBackSafely"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithPositionSizerContextEstimatesStopLimitEntry",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerContextEstimatesStopLimitEntry",
+      "body_hash": "661fb1799638f6f9b2b6d750cdb67936d8a5b7f9239a14f901b73dcb4a205ae8",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerContextEstimatesStopLimitEntry"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithPositionSizerContextEstimatesStopLimitEntry",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithPositionSizerContextEstimatesStopLimitEntry"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerFixedFactoriesUseDefaultAndCustomAmounts",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerFixedFactoriesUseDefaultAndCustomAmounts",
+      "body_hash": "825941db1c3b6e40610e6599ad6b6a8293fd320b9dddc35f7a250469dd424467",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerFixedFactoriesUseDefaultAndCustomAmounts"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerFixedFactoriesUseDefaultAndCustomAmounts",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerFixedFactoriesUseDefaultAndCustomAmounts"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerFixedFactoriesRejectInvalidInputs",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerFixedFactoriesRejectInvalidInputs",
+      "body_hash": "903147fdba22a4fc404adb26e62a266b44348cb86917a865b91dddd2713a9212",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerFixedFactoriesRejectInvalidInputs"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerFixedFactoriesRejectInvalidInputs",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerFixedFactoriesRejectInvalidInputs"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerBalanceUsesMaxAffordableAmountWithEntryFees",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceUsesMaxAffordableAmountWithEntryFees",
+      "body_hash": "1248438c2f8f7f67d5048b818d930df5c9c1443bcc4fcb88720e5667658410a3",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceUsesMaxAffordableAmountWithEntryFees"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceUsesMaxAffordableAmountWithEntryFees",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerBalanceUsesMaxAffordableAmountWithEntryFees"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerBalanceUsesRealizedBalance",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceUsesRealizedBalance",
+      "body_hash": "80aa1d28f442700b5630b0b2e641d3d3966731fc2ffc76a2d69c6fcb1ac21bbb",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceUsesRealizedBalance"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceUsesRealizedBalance",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerBalanceUsesRealizedBalance"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerBalanceRejectsInvalidInputs",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceRejectsInvalidInputs",
+      "body_hash": "b474fee8dc3b1c145c4163764c46d150170fb42fbfdeae69467817bd643dd55a",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceRejectsInvalidInputs"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceRejectsInvalidInputs",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerBalanceRejectsInvalidInputs"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerBalanceSupportsCustomRule",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceSupportsCustomRule",
+      "body_hash": "504f689baf56eb149683bbdbfd8d61fa02cd905fbadcb4f2227d9687e925cc3b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceSupportsCustomRule"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerBalanceSupportsCustomRule",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerBalanceSupportsCustomRule"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerKellyUsesCoefficient",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerKellyUsesCoefficient",
+      "body_hash": "5cfa0dee61f1218fa25fdbaace2af275bd0eeab4d799794a05e3fa055f113a19",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerKellyUsesCoefficient"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerKellyUsesCoefficient",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerKellyUsesCoefficient"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "positionSizerKellyRejectsInvalidInputs",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerKellyRejectsInvalidInputs",
+      "body_hash": "e6ebd10ec7b6b19db68da5248d7fb5d4c4ec5b55afeca0435dd30a02e53a02b8",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerKellyRejectsInvalidInputs"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#positionSizerKellyRejectsInvalidInputs",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|positionSizerKellyRejectsInvalidInputs"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnSeries",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeries",
+      "body_hash": "46921dab163b6fa343177b7e091470506b9751845ba97e7ed25350afff0e9b39",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeries"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeries",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeries"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithOpenEntryBuyLeft",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntryBuyLeft",
+      "body_hash": "0cdfd884edc42ed19d7ee6d9a70614a517d5f6e8282c43dc99cc5e3a642d749b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntryBuyLeft"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntryBuyLeft",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntryBuyLeft"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithOpenEntrySellLeft",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntrySellLeft",
+      "body_hash": "3a15945d24d1eeaff0f95ce1d4be7a31148df6043e83924e86af852934f2049e",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntrySellLeft"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntrySellLeft",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntrySellLeft"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runUsesStrategyStartingTypeByDefault",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runUsesStrategyStartingTypeByDefault",
+      "body_hash": "7eded499221f955f2feab676f906fdddc15fc28275daa1282239346fdb861aab",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runUsesStrategyStartingTypeByDefault"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runUsesStrategyStartingTypeByDefault",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runUsesStrategyStartingTypeByDefault"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithIndexesUsesStrategyStartingTypeByDefault",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithIndexesUsesStrategyStartingTypeByDefault",
+      "body_hash": "b336b72135300afc2b9aa6e3dfb5d94feda6ae5e05cab69140782f1b125e736b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithIndexesUsesStrategyStartingTypeByDefault"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithIndexesUsesStrategyStartingTypeByDefault",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithIndexesUsesStrategyStartingTypeByDefault"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runBetweenIndexes",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runBetweenIndexes",
+      "body_hash": "d246aebac9a1c1a78c8ba86032a97fe1dff63c56b3732ad277398f10f2a8426e",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runBetweenIndexes"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runBetweenIndexes",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runBetweenIndexes"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnSeriesSlices",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeriesSlices",
+      "body_hash": "c7db7e9fda520213c9fe29be83994d83bae48db4762136bd0d97b6f5cfb7fd68",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeriesSlices"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeriesSlices",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeriesSlices"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "invokesExecutionModelOnBarForEachVisitedIndex",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#invokesExecutionModelOnBarForEachVisitedIndex",
+      "body_hash": "843300ee05b6e7c98299974933f79f1e0d087a3ba14e4ea16657e9df43f1a204",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#invokesExecutionModelOnBarForEachVisitedIndex"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#invokesExecutionModelOnBarForEachVisitedIndex",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|invokesExecutionModelOnBarForEachVisitedIndex"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "onBarCanOperateWithoutAnyStrategySignal",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#onBarCanOperateWithoutAnyStrategySignal",
+      "body_hash": "e336ef619b973f7c481178898c020e81ab5b097eebf8bfeae6796804c82eb72a",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#onBarCanOperateWithoutAnyStrategySignal"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#onBarCanOperateWithoutAnyStrategySignal",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|onBarCanOperateWithoutAnyStrategySignal"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithProvidedTradingRecordReturnsSameInstance",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithProvidedTradingRecordReturnsSameInstance",
+      "body_hash": "062cd81bdc56ec34652becfadd258248deba01f748502912aea5a91040a45342",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithProvidedTradingRecordReturnsSameInstance"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithProvidedTradingRecordReturnsSameInstance",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithProvidedTradingRecordReturnsSameInstance"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithProvidedBaseTradingRecordSupportsLiveBacktestStack",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithProvidedBaseTradingRecordSupportsLiveBacktestStack",
+      "body_hash": "d871d3c92632083347ad153b2705681a33a1ef9025a652c8fcb911c17cd92e3c",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithProvidedBaseTradingRecordSupportsLiveBacktestStack"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWithProvidedBaseTradingRecordSupportsLiveBacktestStack",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithProvidedBaseTradingRecordSupportsLiveBacktestStack"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "defaultRunCanUseConfiguredTradingRecordFactory",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#defaultRunCanUseConfiguredTradingRecordFactory",
+      "body_hash": "9c6a1a4b5e656d8b022fd40ef432ea64510236788adbc88be300e5f75af5aa4a",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#defaultRunCanUseConfiguredTradingRecordFactory"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#defaultRunCanUseConfiguredTradingRecordFactory",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|defaultRunCanUseConfiguredTradingRecordFactory"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWalkForwardReturnsAllConfiguredSplits",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardReturnsAllConfiguredSplits",
+      "body_hash": "8e517187df876db5350808f75cad5f62e1a63b84b6b4a09f5cadaf03a66e82cf",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardReturnsAllConfiguredSplits"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardReturnsAllConfiguredSplits",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWalkForwardReturnsAllConfiguredSplits"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWalkForwardRespectsExplicitTradeTypeAndAmount",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardRespectsExplicitTradeTypeAndAmount",
+      "body_hash": "fbcdd20409b6ae411a3c6ffbb3d8ae5ea0d1d15c2e9fc20403f4470b853ee12a",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardRespectsExplicitTradeTypeAndAmount"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardRespectsExplicitTradeTypeAndAmount",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWalkForwardRespectsExplicitTradeTypeAndAmount"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWalkForwardWithPositionSizerUsesDynamicAmount",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardWithPositionSizerUsesDynamicAmount",
+      "body_hash": "51af669b8510bd8340af57656e03b345d28a9a6ab7e4354563e934216bc71242",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "60e46de05f180ba87a821cfc98c8a3734b1ace6aaf322f1ca9fb1045b2fde329",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardWithPositionSizerUsesDynamicAmount"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "d477327baf6f7a9a2c3b9e3575c376c1f3f943f3e199dda666712b619d39d014",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.backtest.BarSeriesManagerTest#runWalkForwardWithPositionSizerUsesDynamicAmount",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWalkForwardWithPositionSizerUsesDynamicAmount"
+    }
+  ]
+}

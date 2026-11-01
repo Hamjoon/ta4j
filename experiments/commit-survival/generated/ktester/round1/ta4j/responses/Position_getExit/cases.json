@@ -1,0 +1,57 @@
+[
+  {
+    "group": "Position.getExit",
+    "cases": [
+      {
+        "input": [],
+        "expected": "null",
+        "description": "A newly created Position has no exit trade; getExit() should return null."
+      },
+      {
+        "input": [],
+        "expected": "non\u2011null Trade instance",
+        "description": "After the position is closed (e.g., by calling operate(...) that creates an exit Trade), getExit() must return the stored exit Trade object."
+      }
+    ]
+  },
+  {
+    "group": "Position.getExit - entry only",
+    "cases": [
+      {
+        "input": [],
+        "expected": "null",
+        "description": "A Position that has only an entry Trade (opened but not yet closed) should still return null for getExit(). The exit is only set after the position is closed."
+      }
+    ]
+  },
+  {
+    "group": "Position.getExit - idempotent after close",
+    "cases": [
+      {
+        "input": [],
+        "expected": "same Trade instance",
+        "description": "After the Position is closed (operate(...) creates the exit Trade), subsequent calls to getExit() must return the exact same Trade object (reference equality). This verifies that the exit reference is stored and not recreated."
+      }
+    ]
+  },
+  {
+    "group": "Position.getExit - unchanged after redundant operate",
+    "cases": [
+      {
+        "input": [],
+        "expected": "same Trade instance as before",
+        "description": "Calling operate(...) on a Position that is already closed must not replace the existing exit Trade. After the first close, capture the exit Trade, invoke operate() again with a later index, and verify getExit() still returns the original Trade instance."
+      }
+    ]
+  },
+  {
+    "group": "Position.getExit - after serialization/deserialization",
+    "cases": [
+      {
+        "input": [],
+        "expected": "non\u2011null Trade instance",
+        "description": "When a closed Position is serialized and then deserialized, getExit() should still return the stored exit Trade (i.e., the exit survives the serialization process)."
+      }
+    ]
+  }
+]

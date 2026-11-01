@@ -1,0 +1,734 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:14: error: cannot find symbol
+class SimpleNum implements Num {
+                           ^
+  symbol: class Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:23: error: cannot find symbol
+    public Num zero() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:28: error: cannot find symbol
+    public Num one() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:33: error: cannot find symbol
+    public Num hundred() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:39: error: cannot find symbol
+    public Num plus(Num augend) {
+                    ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:39: error: cannot find symbol
+    public Num plus(Num augend) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:44: error: cannot find symbol
+    public Num minus(Num subtrahend) {
+                     ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:44: error: cannot find symbol
+    public Num minus(Num subtrahend) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:49: error: cannot find symbol
+    public Num multipliedBy(Num multiplicand) {
+                            ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:49: error: cannot find symbol
+    public Num multipliedBy(Num multiplicand) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:54: error: cannot find symbol
+    public Num dividedBy(Num divisor) {
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:54: error: cannot find symbol
+    public Num dividedBy(Num divisor) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:59: error: cannot find symbol
+    public Num remainder(Num divisor) {
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:59: error: cannot find symbol
+    public Num remainder(Num divisor) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:65: error: cannot find symbol
+    public Num floor() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:70: error: cannot find symbol
+    public Num ceil() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:75: error: cannot find symbol
+    public Num pow(int n) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:80: error: cannot find symbol
+    public Num pow(Num n) {
+                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:80: error: cannot find symbol
+    public Num pow(Num n) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:85: error: cannot find symbol
+    public Num log() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:90: error: cannot find symbol
+    public Num sqrt() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:95: error: cannot find symbol
+    public Num sqrt(int precision) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:102: error: cannot find symbol
+    public Num abs() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:107: error: cannot find symbol
+    public Num negate() {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:137: error: cannot find symbol
+    public boolean isEqual(Num other) {
+                           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:142: error: cannot find symbol
+    public boolean isGreaterThan(Num other) {
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:147: error: cannot find symbol
+    public boolean isGreaterThanOrEqual(Num other) {
+                                        ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:152: error: cannot find symbol
+    public boolean isLessThan(Num other) {
+                              ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:157: error: cannot find symbol
+    public boolean isLessThanOrEqual(Num other) {
+                                     ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:162: error: cannot find symbol
+    public Num min(Num other) {
+                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:162: error: cannot find symbol
+    public Num min(Num other) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:167: error: cannot find symbol
+    public Num max(Num other) {
+                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:167: error: cannot find symbol
+    public Num max(Num other) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:172: error: cannot find symbol
+    public java.util.function.Function<Number, Num> function() {
+                                               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:177: error: cannot find symbol
+    public Num numOf(Number value) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:182: error: cannot find symbol
+    public Num numOf(String value, int precision) {
+           ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:240: error: cannot find symbol
+    public int compareTo(Num o) {
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:282: error: cannot find symbol
+class SimpleBarSeries implements BarSeries {
+                                 ^
+  symbol: class BarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:283: error: cannot find symbol
+    private final List<Bar> bars = new ArrayList<>();
+                       ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:287: error: cannot find symbol
+    @Override public Num num() { return new SimpleNum(0.0); }
+                     ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:289: error: cannot find symbol
+    @Override public Bar getBar(int i) { return bars.get(i); }
+                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:293: error: cannot find symbol
+    @Override public List<Bar> getBarData() { return Collections.unmodifiableList(bars); }
+                          ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:305: error: cannot find symbol
+    @Override public void addBar(Bar bar) { bars.add(bar); }
+                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:307: error: cannot find symbol
+    @Override public void addBar(Bar bar, boolean replace) { bars.add(bar); }
+                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:310: error: cannot find symbol
+    @Override public Bar getFirstBar() { return bars.isEmpty() ? null : bars.get(0); }
+                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:311: error: cannot find symbol
+    @Override public Bar getLastBar() { return bars.isEmpty() ? null : bars.get(bars.size() - 1); }
+                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:323: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                        ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:323: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:323: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                      ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:323: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                                    ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:323: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                                                    ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                        ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                      ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                    ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                                    ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: cannot find symbol
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                                                ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:325: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                             ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:325: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                            ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:325: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                                           ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:325: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                                                         ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:325: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+                                                                                                                                         ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                             ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                            ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                           ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                                         ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                                                         ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: cannot find symbol
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+                                                                                                                                                     ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:329: error: cannot find symbol
+    @Override public void addTrade(Num tradeVolume, Num tradePrice) { }
+                                   ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:329: error: cannot find symbol
+    @Override public void addTrade(Num tradeVolume, Num tradePrice) { }
+                                                    ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:330: error: cannot find symbol
+    @Override public void addPrice(Num price) { }
+                                   ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:333: error: cannot find symbol
+    @Override public BarSeries getSubSeries(int startIndex, int endIndex) { return null; }
+                     ^
+  symbol:   class BarSeries
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:22: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:27: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:32: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:38: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:43: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:48: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:53: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:58: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:64: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:69: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:74: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:79: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:84: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:89: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:94: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:101: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:106: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:111: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:116: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:121: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:126: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:131: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:136: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:141: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:146: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:151: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:156: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:161: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:166: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:171: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:176: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:181: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:186: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:191: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:196: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:201: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:206: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:211: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:216: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:239: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:248: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+class SimpleBar implements org.ta4j.core.Bar {
+^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:272: error: getTrades() in SimpleBar cannot implement getTrades() in Bar
+    @Override public SimpleNum getTrades() { return null; }
+                               ^
+  return type SimpleNum is not compatible with long
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:271: error: getAmount() in SimpleBar cannot implement getAmount() in Bar
+    @Override public SimpleNum getAmount() { return null; }
+                               ^
+  return type SimpleNum is not compatible with Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:270: error: getVolume() in SimpleBar cannot implement getVolume() in Bar
+    @Override public SimpleNum getVolume() { return volume; }
+                               ^
+  return type SimpleNum is not compatible with Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:267: error: getClosePrice() in SimpleBar cannot implement getClosePrice() in Bar
+    @Override public SimpleNum getClosePrice() { return close; }
+                               ^
+  return type SimpleNum is not compatible with Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:268: error: getLowPrice() in SimpleBar cannot implement getLowPrice() in Bar
+    @Override public SimpleNum getLowPrice() { return low; }
+                               ^
+  return type SimpleNum is not compatible with Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:269: error: getHighPrice() in SimpleBar cannot implement getHighPrice() in Bar
+    @Override public SimpleNum getHighPrice() { return high; }
+                               ^
+  return type SimpleNum is not compatible with Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:266: error: getOpenPrice() in SimpleBar cannot implement getOpenPrice() in Bar
+    @Override public SimpleNum getOpenPrice() { return open; }
+                               ^
+  return type SimpleNum is not compatible with Num
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:266: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getOpenPrice() { return open; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:267: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getClosePrice() { return close; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:268: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getLowPrice() { return low; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:269: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getHighPrice() { return high; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:270: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getVolume() { return volume; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:271: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getAmount() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:272: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getTrades() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:273: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getBidVolume() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:274: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getAskVolume() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:275: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getBidPrice() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:276: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getAskPrice() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:285: error: method does not override or implement a method from a supertype
+    @Override public String getName() { return "test-series"; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:287: error: method does not override or implement a method from a supertype
+    @Override public Num num() { return new SimpleNum(0.0); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:289: error: method does not override or implement a method from a supertype
+    @Override public Bar getBar(int i) { return bars.get(i); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:291: error: method does not override or implement a method from a supertype
+    @Override public int getBarCount() { return bars.size(); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:293: error: method does not override or implement a method from a supertype
+    @Override public List<Bar> getBarData() { return Collections.unmodifiableList(bars); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:295: error: method does not override or implement a method from a supertype
+    @Override public int getBeginIndex() { return 0; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:297: error: method does not override or implement a method from a supertype
+    @Override public int getEndIndex() { return bars.isEmpty() ? -1 : bars.size() - 1; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:299: error: method does not override or implement a method from a supertype
+    @Override public int getMaximumBarCount() { return Integer.MAX_VALUE; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:301: error: method does not override or implement a method from a supertype
+    @Override public void setMaximumBarCount(int maximumBarCount) { /* no‑op */ }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:303: error: method does not override or implement a method from a supertype
+    @Override public int getRemovedBarsCount() { return 0; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:305: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Bar bar) { bars.add(bar); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:307: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Bar bar, boolean replace) { bars.add(bar); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:310: error: method does not override or implement a method from a supertype
+    @Override public Bar getFirstBar() { return bars.isEmpty() ? null : bars.get(0); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:311: error: method does not override or implement a method from a supertype
+    @Override public Bar getLastBar() { return bars.isEmpty() ? null : bars.get(bars.size() - 1); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:312: error: method does not override or implement a method from a supertype
+    @Override public boolean isEmpty() { return bars.isEmpty(); }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:313: error: method does not override or implement a method from a supertype
+    @Override public String getSeriesPeriodDescription() { return ""; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:314: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:315: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:316: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+    @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume) { }
+                          ^
+  first method:  addBar(ZonedDateTime,Num,Num,Num,Num,Num) in SimpleBarSeries
+  second method: addBar(ZonedDateTime,String,String,String,String,String) in SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:316: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:317: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+    @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount) { }
+                          ^
+  first method:  addBar(ZonedDateTime,Num,Num,Num,Num,Num,Num) in SimpleBarSeries
+  second method: addBar(ZonedDateTime,String,String,String,String,String,String) in SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:317: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:318: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:319: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:320: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:321: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice, String volume) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:322: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice, String volume, String amount) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:323: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:324: error: method does not override or implement a method from a supertype
+    @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:325: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:326: error: method does not override or implement a method from a supertype
+    @Override public void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:327: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+    @Override public void addTrade(Number tradeVolume, Number tradePrice) { }
+                          ^
+  first method:  addTrade(Num,Num) in SimpleBarSeries
+  second method: addTrade(String,String) in SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:327: error: method does not override or implement a method from a supertype
+    @Override public void addTrade(Number tradeVolume, Number tradePrice) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:328: error: method does not override or implement a method from a supertype
+    @Override public void addTrade(String tradeVolume, String tradePrice) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:329: error: method does not override or implement a method from a supertype
+    @Override public void addTrade(Num tradeVolume, Num tradePrice) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:330: error: method does not override or implement a method from a supertype
+    @Override public void addPrice(Num price) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:331: error: method does not override or implement a method from a supertype
+    @Override public void addPrice(String price) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:332: error: method does not override or implement a method from a supertype
+    @Override public void addPrice(Number price) { }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:333: error: method does not override or implement a method from a supertype
+    @Override public BarSeries getSubSeries(int startIndex, int endIndex) { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:358: error: no suitable constructor found for ATRIndicator(SimpleBarSeries,int)
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+                           ^
+    constructor ATRIndicator.ATRIndicator(BarSeries,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+    constructor ATRIndicator.ATRIndicator(TRIndicator,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to TRIndicator)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:378: error: no suitable constructor found for ATRIndicator(SimpleBarSeries,int)
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+                           ^
+    constructor ATRIndicator.ATRIndicator(BarSeries,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+    constructor ATRIndicator.ATRIndicator(TRIndicator,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to TRIndicator)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:379: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:379: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:384: error: cannot find symbol
+            Num expected = mma.getValue(i);
+            ^
+  symbol:   class Num
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:385: error: cannot find symbol
+            Num actual = atr.getValue(i);
+            ^
+  symbol:   class Num
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:394: error: no suitable constructor found for ATRIndicator(SimpleBarSeries,int)
+        ATRIndicator atrBarCount1 = new ATRIndicator(series, 1);
+                                    ^
+    constructor ATRIndicator.ATRIndicator(BarSeries,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+    constructor ATRIndicator.ATRIndicator(TRIndicator,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to TRIndicator)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:395: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:395: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:398: error: cannot find symbol
+            Num atrVal = atrBarCount1.getValue(i);
+            ^
+  symbol:   class Num
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:399: error: cannot find symbol
+            Num trVal = tr.getValue(i);
+            ^
+  symbol:   class Num
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:406: error: no suitable constructor found for ATRIndicator(SimpleBarSeries,int)
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+                           ^
+    constructor ATRIndicator.ATRIndicator(BarSeries,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+    constructor ATRIndicator.ATRIndicator(TRIndicator,int) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to TRIndicator)
+182 errors

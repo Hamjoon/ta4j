@@ -1,0 +1,52 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:134: error: cannot find symbol
+    @Override public BaseBarConvertibleBuilder barBuilder() { throw new UnsupportedOperationException(); }
+                     ^
+  symbol:   class BaseBarConvertibleBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:136: error: cannot find symbol
+    @Override public Bar getBar(int i) { throw new UnsupportedOperationException(); }
+                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:138: error: cannot find symbol
+    @Override public List<Bar> getBarData() { return Collections.emptyList(); }
+                          ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:145: error: cannot find symbol
+    @Override public void addBar(Bar bar) {}
+                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:146: error: cannot find symbol
+    @Override public void addBar(Bar bar, boolean replace) {}
+                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:44: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+class SimpleNum implements Num {
+^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:98: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+class SimpleNumFactory implements NumFactory {
+^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:243: error: cannot find symbol
+        NumericIndicator zero = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:280: error: cannot find symbol
+        NumericIndicator negative = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:296: error: cannot find symbol
+        NumericIndicator negative = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:396: error: cannot find symbol
+        Indicator<Num> constant = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                          ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+11 errors

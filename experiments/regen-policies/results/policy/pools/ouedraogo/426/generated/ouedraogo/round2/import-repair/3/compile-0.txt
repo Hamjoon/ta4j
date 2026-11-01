@@ -1,0 +1,31 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:53: error: cannot find symbol
+        series.addBar(org.ta4j.core.BaseBar.builder()
+                                           ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:62: error: cannot find symbol
+        series.addBar(org.ta4j.core.BaseBar.builder()
+                                           ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:71: error: cannot find symbol
+        series.addBar(org.ta4j.core.BaseBar.builder()
+                                           ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:109: error: cannot find symbol
+        Indicator<Num> constantHigh  = index -> HIGH;
+        ^
+  symbol:   class Indicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:110: error: cannot find symbol
+        Indicator<Num> constantLow   = index -> LOW;
+        ^
+  symbol:   class Indicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:111: error: cannot find symbol
+        Indicator<Num> constantClose = index -> CLOSE;
+        ^
+  symbol:   class Indicator
+  location: class ATRIndicatorTest
+6 errors

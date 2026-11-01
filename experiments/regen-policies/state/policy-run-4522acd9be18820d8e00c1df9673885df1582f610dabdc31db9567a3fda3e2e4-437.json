@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "revision": {
+    "coverage_version": 2,
+    "regenerate_developer": false
+  },
+  "config_hash": "643228f7fd8efaf35f3e7e06bd9b6fc5486c19b14dc638395c132c6e3995a249",
+  "started": "2026-10-30T09:08:08.980487+00:00",
+  "pid": 44348,
+  "outputs": [
+    "results/policy/runs/4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4/437.json"
+  ],
+  "finished": "2026-10-30T09:08:41.208663+00:00"
+}

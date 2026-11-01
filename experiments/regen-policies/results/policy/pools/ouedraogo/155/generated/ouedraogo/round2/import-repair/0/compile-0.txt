@@ -1,0 +1,36 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:56: error: cannot find symbol
+                .amount(DecimalNum.ZERO)
+                                  ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:55: error: cannot find symbol
+                .volume(DecimalNum.ZERO)
+                                  ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:63: error: cannot find symbol
+        series = new BaseBarSeries("test-series");
+                     ^
+  symbol:   class BaseBarSeries
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:96: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:96: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:175: error: cannot find symbol
+        MMAIndicator mma = new MMAIndicator(atr.getTRIndicator(), BAR_COUNT);
+        ^
+  symbol:   class MMAIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:175: error: cannot find symbol
+        MMAIndicator mma = new MMAIndicator(atr.getTRIndicator(), BAR_COUNT);
+                               ^
+  symbol:   class MMAIndicator
+  location: class ATRIndicatorTest
+7 errors

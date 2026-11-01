@@ -1,0 +1,37 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:22: error: cannot find symbol
+import org.ta4j.core.BaseTrade;
+                    ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:59: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+            Bar bar = new BaseBar(Duration.ofDays(1), start.plusDays(i),
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:95: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, intermediate);
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:103: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, intermediate);
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:257: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, entryIdx, series.getBar(entryIdx).getClosePrice(),
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:259: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, exitIdx, series.getBar(exitIdx).getClosePrice(),
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:269: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, entryIdx, series.getBar(entryIdx).getClosePrice(),
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+7 errors

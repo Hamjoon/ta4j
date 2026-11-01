@@ -1,0 +1,242 @@
+{
+  "index": 468,
+  "sha": "68b04212cd1d3e601e7330e03287b403d65b05f5",
+  "parent": "e4340715c7b4a098993cecc5e21fa53ef56ebfc4",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BaseBar.java": [
+      98,
+      99,
+      227,
+      230
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/AGENTS.md": [],
+    "src/main/java/org/ta4j/core/indicators/candles/AbstractMarubozuIndicator.java": [
+      64,
+      72,
+      91,
+      92,
+      101,
+      102,
+      114,
+      115,
+      142,
+      143,
+      145,
+      155
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java": [
+      44,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java": [
+      44,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudCoverIndicator.java": [
+      74,
+      99,
+      100
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java": [
+      44,
+      56,
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java": [
+      53
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java": [
+      48,
+      61,
+      62,
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java": [
+      33,
+      48,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java": [
+      33,
+      48,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java": [
+      30,
+      45,
+      59,
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/LowerShadowIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java": [
+      48,
+      61,
+      62,
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java": [
+      44,
+      56,
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingLineIndicator.java": [
+      74,
+      99,
+      100
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/RealBodyIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java": [
+      33,
+      48,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/UpperShadowIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BaseBar.java": [
+      103,
+      137,
+      138,
+      141,
+      142,
+      145,
+      146,
+      149,
+      150,
+      153,
+      154,
+      157,
+      267,
+      269,
+      270,
+      271,
+      272,
+      274,
+      275,
+      277,
+      280,
+      282,
+      283,
+      285,
+      286,
+      288,
+      289,
+      291,
+      305,
+      307,
+      308,
+      309
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/AGENTS.md": [],
+    "src/main/java/org/ta4j/core/indicators/candles/AbstractMarubozuIndicator.java": [
+      87,
+      96,
+      108,
+      135,
+      136,
+      146
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java": [
+      44,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java": [
+      44,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/CandleBodyIndicator.java": [
+      38,
+      39,
+      43,
+      44,
+      45,
+      46,
+      47,
+      49,
+      50,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/CandleRangeIndicator.java": [
+      37,
+      38,
+      42,
+      43,
+      44,
+      45,
+      46,
+      48,
+      49,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudCoverIndicator.java": [
+      74,
+      99,
+      100
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java": [
+      44,
+      56,
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java": [
+      48,
+      61,
+      62,
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java": [
+      33,
+      48,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java": [
+      33,
+      48,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java": [
+      30,
+      45,
+      59,
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/LowerShadowIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java": [
+      48,
+      61,
+      62,
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java": [
+      44,
+      56,
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingLineIndicator.java": [
+      74,
+      99,
+      100
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/RealBodyIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java": [
+      33,
+      48,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/UpperShadowIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\nindex 9aa59fb10..1633bc5bf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n@@ -5,0 +6,3 @@ package org.ta4j.core;\n+import java.io.IOException;\n+import java.io.InvalidObjectException;\n+import java.io.ObjectInputStream;\n@@ -78 +81 @@ public class BaseBar implements Bar {\n-     * @throws IllegalArgumentException If the calculated timePeriod between the\n+     * @throws IllegalArgumentException if the calculated timePeriod between the\n@@ -81,3 +84,5 @@ public class BaseBar implements Bar {\n-     *                                  price is below the low price, if volume or\n-     *                                  amount is negative, or if the number of\n-     *                                  trades is negative\n+     *                                  price is below the low price, the open\n+     *                                  price, or the close price, if the low price\n+     *                                  is above the open price or the close price,\n+     *                                  if volume or amount is negative, or if the\n+     *                                  number of trades is negative\n@@ -98,4 +103 @@ public class BaseBar implements Bar {\n-        if (highPrice != null && lowPrice != null && highPrice.isLessThan(lowPrice)) {\n-            throw new IllegalArgumentException(\n-                    \"High price must be greater than or equal to low price, but was \" + highPrice + \" < \" + lowPrice);\n-        }\n+        validatePrices(openPrice, highPrice, lowPrice, closePrice);\n@@ -122,0 +125,34 @@ public class BaseBar implements Bar {\n+    /**\n+     * Validates the OHLC invariant: for every non-null price pair, the high price\n+     * must be greater than or equal to both the open and the close price, and the\n+     * low price must be less than or equal to both the open and the close price.\n+     *\n+     * @param openPrice  the open price, may be {@code null}\n+     * @param highPrice  the high price, may be {@code null}\n+     * @param lowPrice   the low price, may be {@code null}\n+     * @param closePrice the close price, may be {@code null}\n+     * @throws IllegalArgumentException if the OHLC invariant is violated\n+     */\n+    private static void validatePrices(Num openPrice, Num highPrice, Num lowPrice, Num closePrice) {\n+        if (highPrice != null && lowPrice != null && highPrice.isLessThan(lowPrice)) {\n+            throw new IllegalArgumentException(\n+                    \"High price must be greater than or equal to low price, but was \" + highPrice + \" < \" + lowPrice);\n+        }\n+        if (highPrice != null && openPrice != null && highPrice.isLessThan(openPrice)) {\n+            throw new IllegalArgumentException(\n+                    \"High price must be greater than or equal to open price, but was \" + highPrice + \" < \" + openPrice);\n+        }\n+        if (highPrice != null && closePrice != null && highPrice.isLessThan(closePrice)) {\n+            throw new IllegalArgumentException(\"High price must be greater than or equal to close price, but was \"\n+                    + highPrice + \" < \" + closePrice);\n+        }\n+        if (lowPrice != null && openPrice != null && lowPrice.isGreaterThan(openPrice)) {\n+            throw new IllegalArgumentException(\n+                    \"Low price must be less than or equal to open price, but was \" + lowPrice + \" > \" + openPrice);\n+        }\n+        if (lowPrice != null && closePrice != null && lowPrice.isGreaterThan(closePrice)) {\n+            throw new IllegalArgumentException(\n+                    \"Low price must be less than or equal to close price, but was \" + lowPrice + \" > \" + closePrice);\n+        }\n+    }\n+\n@@ -220,0 +257,5 @@ public class BaseBar implements Bar {\n+    /**\n+     * Adds a price to the bar, folding the existing open and close prices into\n+     * freshly initialized extrema so the OHLC invariant survives every mutation\n+     * path.\n+     */\n@@ -225,0 +267 @@ public class BaseBar implements Bar {\n+        final Num priorClose = closePrice;\n@@ -227 +269,9 @@ public class BaseBar implements Bar {\n-        if (highPrice == null || highPrice.isLessThan(price)) {\n+        if (highPrice == null) {\n+            highPrice = price;\n+            if (openPrice.isGreaterThan(highPrice)) {\n+                highPrice = openPrice;\n+            }\n+            if (priorClose != null && priorClose.isGreaterThan(highPrice)) {\n+                highPrice = priorClose;\n+            }\n+        } else if (highPrice.isLessThan(price)) {\n@@ -230 +280 @@ public class BaseBar implements Bar {\n-        if (lowPrice == null || lowPrice.isGreaterThan(price)) {\n+        if (lowPrice == null) {\n@@ -231,0 +282,28 @@ public class BaseBar implements Bar {\n+            if (openPrice.isLessThan(lowPrice)) {\n+                lowPrice = openPrice;\n+            }\n+            if (priorClose != null && priorClose.isLessThan(lowPrice)) {\n+                lowPrice = priorClose;\n+            }\n+        } else if (lowPrice.isGreaterThan(price)) {\n+            lowPrice = price;\n+        }\n+    }\n+\n+    /**\n+     * Validates the deserialized state so serialized bars written by older ta4j\n+     * versions that predate the OHLC invariant are rejected instead of silently\n+     * loading inconsistent prices.\n+     *\n+     * @param stream the object stream\n+     * @throws IOException            if deserialization fails\n+     * @throws ClassNotFoundException if a serialized class is unavailable\n+     * @throws InvalidObjectException if the serialized prices violate the OHLC\n+     *                                invariant\n+     */\n+    private void readObject(ObjectInputStream stream) throws IOException, ClassNotFoundException {\n+        stream.defaultReadObject();\n+        try {\n+            validatePrices(openPrice, highPrice, lowPrice, closePrice);\n+        } catch (IllegalArgumentException e) {\n+            throw new InvalidObjectException(\"Serialized bar violates the OHLC invariant: \" + e.getMessage());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AGENTS.md b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AGENTS.md\nindex 9bea7ccc1..02fd9e522 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AGENTS.md\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AGENTS.md\n@@ -4 +4 @@\n-- Reuse the existing helper indicators in this package (e.g., `RealBodyIndicator`, `UpperShadowIndicator`, `LowerShadowIndicator`) instead of duplicating calculations.\n+- Reuse the existing helper indicators in this package (e.g., `CandleBodyIndicator`, `CandleRangeIndicator`, `UpperShadowIndicator`, `LowerShadowIndicator`) instead of duplicating calculations. `CandleBodyIndicator` provides the body magnitude (`|close - open|`); the legacy signed `RealBodyIndicator` is deprecated — prefer `Bar#isBullish()`/`Bar#isBearish()` for direction.\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AbstractMarubozuIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AbstractMarubozuIndicator.java\nindex dd3cac871..3995608b4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AbstractMarubozuIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/AbstractMarubozuIndicator.java\n@@ -7,0 +8 @@ import java.util.Objects;\n+import org.ta4j.core.Bar;\n@@ -9 +9,0 @@ import org.ta4j.core.BarSeries;\n-import org.ta4j.core.Indicator;\n@@ -12 +11,0 @@ import org.ta4j.core.indicators.averages.SMAIndicator;\n-import org.ta4j.core.indicators.numeric.UnaryOperationIndicator;\n@@ -22 +21,2 @@ import org.ta4j.core.num.NumFactory;\n- * bullish (close &gt; open) or bearish (open &gt; close).\n+ * bullish (close &gt; open) or bearish (open &gt; close). A candle with a zero\n+ * body (open equals close) satisfies neither direction.\n@@ -33,2 +33 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n-    private final transient Indicator<Num> bodyHeightIndicator;\n+    private final transient CandleBodyIndicator bodyHeightIndicator;\n@@ -45 +43,0 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-    private final transient Num zero;\n@@ -64 +61,0 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = config.realBodyIndicator();\n@@ -72 +68,0 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-        this.zero = config.zero();\n@@ -91,2 +87 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-        RealBodyIndicator realBodyIndicator = new RealBodyIndicator(validatedSeries);\n-        Indicator<Num> bodyHeightIndicator = UnaryOperationIndicator.abs(realBodyIndicator);\n+        CandleBodyIndicator bodyHeightIndicator = new CandleBodyIndicator(validatedSeries);\n@@ -101,5 +96,4 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-        Num zero = numFactory.zero();\n-        return new Config(validatedSeries, realBodyIndicator, bodyHeightIndicator, averageBodyHeightIndicator,\n-                upperShadowIndicator, lowerShadowIndicator, bodyAveragePeriod, bodyToAverageBodyRatio,\n-                upperShadowToBodyRatio, lowerShadowToBodyRatio, bodyToAverageBodyRatioThreshold,\n-                upperShadowToBodyRatioThreshold, lowerShadowToBodyRatioThreshold, zero);\n+        return new Config(validatedSeries, bodyHeightIndicator, averageBodyHeightIndicator, upperShadowIndicator,\n+                lowerShadowIndicator, bodyAveragePeriod, bodyToAverageBodyRatio, upperShadowToBodyRatio,\n+                lowerShadowToBodyRatio, bodyToAverageBodyRatioThreshold, upperShadowToBodyRatioThreshold,\n+                lowerShadowToBodyRatioThreshold);\n@@ -114,2 +108 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-        final var realBody = this.realBodyIndicator.getValue(index);\n-        if (!hasExpectedBodyDirection(realBody)) {\n+        if (!hasExpectedBodyDirection(index)) {\n@@ -141,5 +134,3 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-    private boolean hasExpectedBodyDirection(final Num realBody) {\n-        if (realBody.isZero()) {\n-            return false;\n-        }\n-        return isBullish() ? realBody.isGreaterThan(this.zero) : realBody.isLessThan(this.zero);\n+    private boolean hasExpectedBodyDirection(final int index) {\n+        final Bar bar = getBarSeries().getBar(index);\n+        return isBullish() ? bar.isBullish() : bar.isBearish();\n@@ -155 +146 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-    private record Config(BarSeries series, RealBodyIndicator realBodyIndicator, Indicator<Num> bodyHeightIndicator,\n+    private record Config(BarSeries series, CandleBodyIndicator bodyHeightIndicator,\n@@ -159 +150 @@ abstract class AbstractMarubozuIndicator extends CachedIndicator<Boolean> {\n-            Num upperShadowToBodyRatioThreshold, Num lowerShadowToBodyRatioThreshold, Num zero) {\n+            Num upperShadowToBodyRatioThreshold, Num lowerShadowToBodyRatioThreshold) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java\nindex b9b12ad60..67027ddc2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java\n@@ -22 +22 @@ public class BearishKickerIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -44 +44 @@ public class BearishKickerIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -55,2 +55,2 @@ public class BearishKickerIndicator extends CachedIndicator<Boolean> {\n-        Num firstBarPercentage = this.realBodyIndicator.getValue(index - 1).abs().dividedBy(firstBar.getOpenPrice());\n-        Num secondBarPercentage = this.realBodyIndicator.getValue(index).abs().dividedBy(secondBar.getOpenPrice());\n+        Num firstBarPercentage = this.bodyIndicator.getValue(index - 1).dividedBy(firstBar.getOpenPrice());\n+        Num secondBarPercentage = this.bodyIndicator.getValue(index).dividedBy(secondBar.getOpenPrice());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java\nindex f4521d7f3..ab300ff4d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java\n@@ -22 +22 @@ public class BullishKickerIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -44 +44 @@ public class BullishKickerIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -55,2 +55,2 @@ public class BullishKickerIndicator extends CachedIndicator<Boolean> {\n-        Num firstBarPercentage = this.realBodyIndicator.getValue(index - 1).abs().dividedBy(firstBar.getOpenPrice());\n-        Num secondBarPercentage = this.realBodyIndicator.getValue(index).abs().dividedBy(secondBar.getOpenPrice());\n+        Num firstBarPercentage = this.bodyIndicator.getValue(index - 1).dividedBy(firstBar.getOpenPrice());\n+        Num secondBarPercentage = this.bodyIndicator.getValue(index).dividedBy(secondBar.getOpenPrice());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/CandleBodyIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/CandleBodyIndicator.java\nnew file mode 100644\nindex 000000000..e073fa717\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/CandleBodyIndicator.java\n@@ -0,0 +1,57 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.indicators.candles;\n+\n+import org.ta4j.core.Bar;\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.indicators.CachedIndicator;\n+import org.ta4j.core.num.NaN;\n+import org.ta4j.core.num.Num;\n+\n+/**\n+ * Candle body height indicator.\n+ *\n+ * <p>\n+ * Provides the absolute difference between the open price and the close price\n+ * of a bar, i.e. {@code |close - open|}. The value is the magnitude of the real\n+ * body and is always non-negative for well-formed OHLC bars. Bars whose open or\n+ * close price is missing or non-finite, or whose subtraction overflows, report\n+ * {@link NaN#NaN}.\n+ *\n+ * <p>\n+ * Unlike the deprecated {@link RealBodyIndicator}, which reports the signed\n+ * close-to-open change, this indicator reports the body magnitude. Directional\n+ * checks should use {@link Bar#isBullish()} or {@link Bar#isBearish()} instead\n+ * of the sign of the real body.\n+ *\n+ * @since 0.24.2\n+ */\n+public class CandleBodyIndicator extends CachedIndicator<Num> {\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param series the bar series\n+     */\n+    public CandleBodyIndicator(BarSeries series) {\n+        super(series);\n+    }\n+\n+    @Override\n+    protected Num calculate(int index) {\n+        Bar t = getBarSeries().getBar(index);\n+        Num open = t.getOpenPrice();\n+        Num close = t.getClosePrice();\n+        if (!Num.isFinite(open) || !Num.isFinite(close)) {\n+            return NaN.NaN;\n+        }\n+        Num body = close.minus(open).abs();\n+        return Num.isFinite(body) ? body : NaN.NaN;\n+    }\n+\n+    @Override\n+    public int getCountOfUnstableBars() {\n+        return 0;\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/CandleRangeIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/CandleRangeIndicator.java\nnew file mode 100644\nindex 000000000..ad5f39816\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/CandleRangeIndicator.java\n@@ -0,0 +1,56 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.indicators.candles;\n+\n+import org.ta4j.core.Bar;\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.indicators.CachedIndicator;\n+import org.ta4j.core.num.NaN;\n+import org.ta4j.core.num.Num;\n+\n+/**\n+ * Candle range indicator.\n+ *\n+ * <p>\n+ * Provides the full range of the current candle, i.e. {@code high - low}. The\n+ * value is the total vertical span of the candle and equals the sum of the\n+ * upper shadow, the body, and the lower shadow for well-formed OHLC bars. Bars\n+ * whose high or low price is missing or non-finite, or whose subtraction\n+ * overflows, report {@link NaN#NaN}.\n+ *\n+ * <p>\n+ * This is <b>not</b> the true range: the true range also considers the previous\n+ * close (see the ATR indicator for that quantity). This indicator depends only\n+ * on the current candle.\n+ *\n+ * @since 0.24.2\n+ */\n+public class CandleRangeIndicator extends CachedIndicator<Num> {\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param series the bar series\n+     */\n+    public CandleRangeIndicator(BarSeries series) {\n+        super(series);\n+    }\n+\n+    @Override\n+    protected Num calculate(int index) {\n+        Bar t = getBarSeries().getBar(index);\n+        Num high = t.getHighPrice();\n+        Num low = t.getLowPrice();\n+        if (!Num.isFinite(high) || !Num.isFinite(low)) {\n+            return NaN.NaN;\n+        }\n+        Num range = high.minus(low);\n+        return Num.isFinite(range) ? range : NaN.NaN;\n+    }\n+\n+    @Override\n+    public int getCountOfUnstableBars() {\n+        return 0;\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudCoverIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudCoverIndicator.java\nindex 84d09756f..2fca1e099 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudCoverIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudCoverIndicator.java\n@@ -44 +44 @@ public class DarkCloudCoverIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -74 +74 @@ public class DarkCloudCoverIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(getBarSeries());\n+        this.bodyIndicator = new CandleBodyIndicator(getBarSeries());\n@@ -99,2 +99,2 @@ public class DarkCloudCoverIndicator extends CachedIndicator<Boolean> {\n-        final Num firstBodyRatio = realBodyIndicator.getValue(index - 1).abs().dividedBy(firstOpenPrice);\n-        final Num secondBodyRatio = realBodyIndicator.getValue(index).abs().dividedBy(secondOpenPrice);\n+        final Num firstBodyRatio = bodyIndicator.getValue(index - 1).dividedBy(firstOpenPrice);\n+        final Num secondBodyRatio = bodyIndicator.getValue(index).dividedBy(secondOpenPrice);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\nindex 4daa91201..886a988de 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\n@@ -22 +22 @@ public class DarkCloudIndicator extends CachedIndicator<Boolean> {\n-    private final RealBodyIndicator realBodyIndicator;\n+    private final CandleBodyIndicator bodyIndicator;\n@@ -44 +44 @@ public class DarkCloudIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -56,2 +56,2 @@ public class DarkCloudIndicator extends CachedIndicator<Boolean> {\n-        Num firstBarPercentage = this.realBodyIndicator.getValue(index - 1).abs().dividedBy(firstBar.getOpenPrice());\n-        Num secondBarPercentage = this.realBodyIndicator.getValue(index).abs().dividedBy(secondBar.getOpenPrice());\n+        Num firstBarPercentage = this.bodyIndicator.getValue(index - 1).dividedBy(firstBar.getOpenPrice());\n+        Num secondBarPercentage = this.bodyIndicator.getValue(index).dividedBy(secondBar.getOpenPrice());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\nindex 8a46027c7..09dcbe75e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\n@@ -7 +6,0 @@ import org.ta4j.core.BarSeries;\n-import org.ta4j.core.Indicator;\n@@ -10 +8,0 @@ import org.ta4j.core.indicators.averages.SMAIndicator;\n-import org.ta4j.core.indicators.numeric.UnaryOperationIndicator;\n@@ -27 +25 @@ public class DojiIndicator extends CachedIndicator<Boolean> {\n-    private final transient Indicator<Num> bodyHeightInd;\n+    private final transient CandleBodyIndicator bodyHeightInd;\n@@ -53 +51 @@ public class DojiIndicator extends CachedIndicator<Boolean> {\n-        this.bodyHeightInd = UnaryOperationIndicator.abs(new RealBodyIndicator(series));\n+        this.bodyHeightInd = new CandleBodyIndicator(series);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java\nindex a7640380c..7a91c983f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java\n@@ -22 +22 @@ public class EveningStarIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -48 +48 @@ public class EveningStarIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -61,3 +61,3 @@ public class EveningStarIndicator extends CachedIndicator<Boolean> {\n-        Num firstBarPercentage = this.realBodyIndicator.getValue(index - 2).abs().dividedBy(firstBar.getOpenPrice());\n-        Num secondBarPercentage = this.realBodyIndicator.getValue(index - 1).abs().dividedBy(secondBar.getOpenPrice());\n-        Num thirdBarPercentage = this.realBodyIndicator.getValue(index).abs().dividedBy(thirdBar.getOpenPrice());\n+        Num firstBarPercentage = this.bodyIndicator.getValue(index - 2).dividedBy(firstBar.getOpenPrice());\n+        Num secondBarPercentage = this.bodyIndicator.getValue(index - 1).dividedBy(secondBar.getOpenPrice());\n+        Num thirdBarPercentage = this.bodyIndicator.getValue(index).dividedBy(thirdBar.getOpenPrice());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java\nindex 5b266428d..a9e0ec10f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java\n@@ -21 +21 @@ public class HammerIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -33 +33 @@ public class HammerIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -48 +48 @@ public class HammerIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -62 +62 @@ public class HammerIndicator extends CachedIndicator<Boolean> {\n-        final var bodyHeight = this.realBodyIndicator.getValue(index).abs();\n+        final var bodyHeight = this.bodyIndicator.getValue(index);\n@@ -78 +78 @@ public class HammerIndicator extends CachedIndicator<Boolean> {\n-        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\n+        return Math.max(bodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java\nindex b141ed2dd..2655fa608 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java\n@@ -21 +21 @@ public class HangingManIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -33 +33 @@ public class HangingManIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -48 +48 @@ public class HangingManIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -62 +62 @@ public class HangingManIndicator extends CachedIndicator<Boolean> {\n-        final var bodyHeight = this.realBodyIndicator.getValue(index).abs();\n+        final var bodyHeight = this.bodyIndicator.getValue(index);\n@@ -78 +78 @@ public class HangingManIndicator extends CachedIndicator<Boolean> {\n-        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\n+        return Math.max(bodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java\nindex 52d556b57..dff94ce38 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java\n@@ -18 +18 @@ public class InvertedHammerIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -30 +30 @@ public class InvertedHammerIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -45 +45 @@ public class InvertedHammerIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -59 +59 @@ public class InvertedHammerIndicator extends CachedIndicator<Boolean> {\n-        final var bodyHeight = this.realBodyIndicator.getValue(index).abs();\n+        final var bodyHeight = this.bodyIndicator.getValue(index);\n@@ -75 +75 @@ public class InvertedHammerIndicator extends CachedIndicator<Boolean> {\n-        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\n+        return Math.max(bodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/LowerShadowIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/LowerShadowIndicator.java\nindex 423add037..7083be9b3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/LowerShadowIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/LowerShadowIndicator.java\n@@ -15,2 +15,4 @@ import org.ta4j.core.num.Num;\n- * Provides the (absolute) difference between the low price and the lowest price\n- * of the candle body. I.e.: low price - min(open price, close price)\n+ * Provides the (absolute) difference between the lowest price of the candle\n+ * body and the low price of the candle. I.e.: min(open price, close price) -\n+ * low price. The value is the length of the lower wick and is always\n+ * non-negative for well-formed OHLC bars.\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java\nindex 032578847..dd8a95cac 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java\n@@ -22 +22 @@ public class MorningStarIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -48 +48 @@ public class MorningStarIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -61,3 +61,3 @@ public class MorningStarIndicator extends CachedIndicator<Boolean> {\n-        Num firstBarPercentage = this.realBodyIndicator.getValue(index - 2).abs().dividedBy(firstBar.getOpenPrice());\n-        Num secondBarPercentage = this.realBodyIndicator.getValue(index - 1).abs().dividedBy(secondBar.getOpenPrice());\n-        Num thirdBarPercentage = this.realBodyIndicator.getValue(index).abs().dividedBy(thirdBar.getOpenPrice());\n+        Num firstBarPercentage = this.bodyIndicator.getValue(index - 2).dividedBy(firstBar.getOpenPrice());\n+        Num secondBarPercentage = this.bodyIndicator.getValue(index - 1).dividedBy(secondBar.getOpenPrice());\n+        Num thirdBarPercentage = this.bodyIndicator.getValue(index).dividedBy(thirdBar.getOpenPrice());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\nindex b19e0e96a..229f8088b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\n@@ -22 +22 @@ public class PiercingIndicator extends CachedIndicator<Boolean> {\n-    private final RealBodyIndicator realBodyIndicator;\n+    private final CandleBodyIndicator bodyIndicator;\n@@ -44 +44 @@ public class PiercingIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -56,2 +56,2 @@ public class PiercingIndicator extends CachedIndicator<Boolean> {\n-        Num firstBarPercentage = this.realBodyIndicator.getValue(index - 1).abs().dividedBy(firstBar.getOpenPrice());\n-        Num secondBarPercentage = this.realBodyIndicator.getValue(index).abs().dividedBy(secondBar.getOpenPrice());\n+        Num firstBarPercentage = this.bodyIndicator.getValue(index - 1).dividedBy(firstBar.getOpenPrice());\n+        Num secondBarPercentage = this.bodyIndicator.getValue(index).dividedBy(secondBar.getOpenPrice());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingLineIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingLineIndicator.java\nindex 1eddbec95..ccfd7034e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingLineIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingLineIndicator.java\n@@ -45 +45 @@ public class PiercingLineIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -74 +74 @@ public class PiercingLineIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(getBarSeries());\n+        this.bodyIndicator = new CandleBodyIndicator(getBarSeries());\n@@ -99,2 +99,2 @@ public class PiercingLineIndicator extends CachedIndicator<Boolean> {\n-        final Num firstBodyRatio = realBodyIndicator.getValue(index - 1).abs().dividedBy(firstOpenPrice);\n-        final Num secondBodyRatio = realBodyIndicator.getValue(index).abs().dividedBy(secondOpenPrice);\n+        final Num firstBodyRatio = bodyIndicator.getValue(index - 1).dividedBy(firstOpenPrice);\n+        final Num secondBodyRatio = bodyIndicator.getValue(index).dividedBy(secondOpenPrice);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/RealBodyIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/RealBodyIndicator.java\nindex 597f9b8b0..b77fbc464 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/RealBodyIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/RealBodyIndicator.java\n@@ -16 +16,9 @@ import org.ta4j.core.num.Num;\n- * of a bar. I.e.: close price - open price\n+ * of a bar. I.e.: close price - open price. The value is negative for bearish\n+ * candles and positive for bullish candles.\n+ *\n+ * <p>\n+ * This legacy signed quantity is easy to misuse when only the body magnitude\n+ * matters. Prefer {@link CandleBodyIndicator} for magnitude-based candle\n+ * algebra and {@link Bar#isBullish()} / {@link Bar#isBearish()} for direction.\n+ * This indicator is retained for backward compatibility and for consumers that\n+ * need the signed close-to-open change.\n@@ -20,0 +29,2 @@ import org.ta4j.core.num.Num;\n+ * @deprecated Use {@link CandleBodyIndicator} for body magnitude or\n+ *             {@link Bar#isBullish()}/{@link Bar#isBearish()} for direction.\n@@ -21,0 +32 @@ import org.ta4j.core.num.Num;\n+@Deprecated\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java\nindex c1c23407e..5e37951b1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java\n@@ -21 +21 @@ public class ShootingStarIndicator extends CachedIndicator<Boolean> {\n-    private final transient RealBodyIndicator realBodyIndicator;\n+    private final transient CandleBodyIndicator bodyIndicator;\n@@ -33 +33 @@ public class ShootingStarIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -48 +48 @@ public class ShootingStarIndicator extends CachedIndicator<Boolean> {\n-        this.realBodyIndicator = new RealBodyIndicator(series);\n+        this.bodyIndicator = new CandleBodyIndicator(series);\n@@ -62 +62 @@ public class ShootingStarIndicator extends CachedIndicator<Boolean> {\n-        final var bodyHeight = this.realBodyIndicator.getValue(index).abs();\n+        final var bodyHeight = this.bodyIndicator.getValue(index);\n@@ -78 +78 @@ public class ShootingStarIndicator extends CachedIndicator<Boolean> {\n-        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\n+        return Math.max(bodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/UpperShadowIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/UpperShadowIndicator.java\nindex 017099aad..96e69fff1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/UpperShadowIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/UpperShadowIndicator.java\n@@ -16 +16,3 @@ import org.ta4j.core.num.Num;\n- * price of the candle body. I.e.: high price - max(open price, close price)\n+ * price of the candle body. I.e.: high price - max(open price, close price).\n+ * The value is the length of the upper wick and is always non-negative for\n+ * well-formed OHLC bars."
+}

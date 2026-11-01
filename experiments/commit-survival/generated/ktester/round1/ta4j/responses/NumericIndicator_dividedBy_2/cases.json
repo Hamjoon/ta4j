@@ -1,0 +1,227 @@
+[
+  {
+    "group": "NumericIndicator.dividedBy(Number) - branch and edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 2
+          }
+        ],
+        "expected": "5",
+        "description": "Divide a positive constant indicator (value 10) by a positive integer (2). Expected result is 10 / 2 = 5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": -2
+          }
+        ],
+        "expected": "-5",
+        "description": "Divide a positive constant indicator (value 10) by a negative integer (-2). Expected result is 10 / -2 = -5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 2.5
+          }
+        ],
+        "expected": "4",
+        "description": "Divide a positive constant indicator (value 10) by a non\u2011integer Number (2.5). Expected result is 10 / 2.5 = 4."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 0
+          }
+        ],
+        "expected": "ArithmeticException",
+        "description": "Attempt to divide by zero. The underlying Num implementation throws an ArithmeticException; the test verifies that the exception propagates."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Pass a null Number. The method should throw a NullPointerException before delegating to the overloaded method."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.dividedBy(Number) - additional cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 2
+          }
+        ],
+        "expected": "0",
+        "description": "Divide a zero constant indicator (value 0) by a positive integer (2). Expected result is 0 / 2 = 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": -2
+          }
+        ],
+        "expected": "0",
+        "description": "Divide a zero constant indicator (value 0) by a negative integer (-2). Expected result is 0 / -2 = 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 2
+          }
+        ],
+        "expected": "-5",
+        "description": "Divide a negative constant indicator (value -10) by a positive integer (2). Expected result is -10 / 2 = -5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": -2
+          }
+        ],
+        "expected": "5",
+        "description": "Divide a negative constant indicator (value -10) by a negative integer (-2). Expected result is -10 / -2 = 5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": -2.5
+          }
+        ],
+        "expected": "-4",
+        "description": "Divide a positive constant indicator (value 10) by a negative fractional number (-2.5). Expected result is 10 / -2.5 = -4."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 0.0001
+          }
+        ],
+        "expected": "100000",
+        "description": "Divide a positive constant indicator (value 10) by a very small positive number (0.0001). Expected result is 10 / 0.0001 = 100000."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 1000
+          }
+        ],
+        "expected": "0.01",
+        "description": "Divide a positive constant indicator (value 10) by a large integer (1000). Expected result is 10 / 1000 = 0.01."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": 2.0
+          }
+        ],
+        "expected": "5",
+        "description": "Divide a positive constant indicator (value 10) by a Float instance representing 2.0. Expected result is 10 / 2.0 = 5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "2"
+          }
+        ],
+        "expected": "5",
+        "description": "Divide a positive constant indicator (value 10) by a BigDecimal created from the string \"2\". Expected result is 10 / 2 = 5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": -0.5
+          }
+        ],
+        "expected": "-20",
+        "description": "Divide a positive constant indicator (value 10) by a negative fractional number (-0.5). Expected result is 10 / -0.5 = -20."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.dividedBy(Number) - special floating values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Pass NaN as a Double. The Num implementation should reject non\u2011finite numbers and throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Pass positive infinity as a Double. The method should detect the non\u2011finite value and throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Pass negative infinity as a Double. The method should reject the value and throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Float.NaN"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Pass NaN as a Float. The underlying Num conversion should fail and raise IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Float.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Pass positive infinity as a Float. The method should throw IllegalArgumentException due to non\u2011finite input."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Float.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Pass negative infinity as a Float. The method should throw IllegalArgumentException because the number is not finite."
+      }
+    ]
+  }
+]

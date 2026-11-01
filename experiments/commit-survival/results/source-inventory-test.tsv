@@ -1,0 +1,1097 @@
+C	org.ta4j.core.BarSeriesTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BarSeriesTest.java
+M	org.ta4j.core.BarSeriesTest	setUp		true	setUp()		74	a9b51bcc8af9d9b2995007dfd949c630cad8cc4cd87aaec609b2a58117fb7fb9
+M	org.ta4j.core.BarSeriesTest	createWithUnmodifiableCollectionTest	plain	true	createWithUnmodifiableCollectionTest()		99	f2daa28cab74c75364e1aee0f09a9cd29a03931f60b007916acb8813f9e7bd8e
+M	org.ta4j.core.BarSeriesTest	replaceBarTest	plain	true	replaceBarTest()		114	6d4d1855104a4c58978558b8ada93218d9fb320a799495791729f1615158d713
+M	org.ta4j.core.BarSeriesTest	getEndGetBeginGetBarCountIsEmptyTest	plain	true	getEndGetBeginGetBarCountIsEmptyTest()		130	029b2b0cfe0787d325968c380f9e514d7f798146417eeac660f0e90dd316f92c
+M	org.ta4j.core.BarSeriesTest	getBarDataTest	plain	true	getBarDataTest()		150	0c6ef2ef2f1980cc940140f3a394f0d65516b97cb29dd40c27bfe18d92a6aeeb
+M	org.ta4j.core.BarSeriesTest	getSeriesPeriodDescriptionTest	plain	true	getSeriesPeriodDescriptionTest()		160	fff84bae18f7dbc005566262b134b17c09fb38a04fb1f432c0bad35ab93b43c7
+M	org.ta4j.core.BarSeriesTest	getNameTest	plain	true	getNameTest()		177	094035ca92e59233eeaa7574a926e422340c52f7aa9323e9896b15df4949a622
+M	org.ta4j.core.BarSeriesTest	getBarWithRemovedIndexOnMovingSeriesShouldReturnFirstRemainingBarTest	plain	true	getBarWithRemovedIndexOnMovingSeriesShouldReturnFirstRemainingBarTest()		183	b60a37a43f2b1229ae6550281953eebd796acc59319d917526435ea46a448d4d
+M	org.ta4j.core.BarSeriesTest	modificationsOnOriginalListShouldNotAffectBarSeries	plain	true	modificationsOnOriginalListShouldNotAffectBarSeries()		196	86c73fcbedde398e806f63dc6574ceebaa2a550f0bbfdb59508fe1dd0ff830fe
+M	org.ta4j.core.BarSeriesTest	getBarWithNegativeIndexShouldThrowExceptionTest	plain	true	getBarWithNegativeIndexShouldThrowExceptionTest()		204	a280b1e84984d9f7b33880d02d74d819ff561b24a341c007935730b2865a918d
+M	org.ta4j.core.BarSeriesTest	getBarWithIndexGreaterThanBarCountShouldThrowExceptionTest	plain	true	getBarWithIndexGreaterThanBarCountShouldThrowExceptionTest()		209	60214a2fdc3b8e130725228bc407a2d7be080c0bdd9d1d60aa44208acb465f24
+M	org.ta4j.core.BarSeriesTest	getBarOnMovingSeriesTest	plain	true	getBarOnMovingSeriesTest()		214	941014365489d1417fa09069428cd24198ab729de58f3413c50fb9ad316e4dae
+M	org.ta4j.core.BarSeriesTest	subSeriesCreationTest	plain	true	subSeriesCreationTest()		221	c59a7e9112a2a5970eb949caf4e4ac008cf2168d8a99dac701d494fb90a50012
+M	org.ta4j.core.BarSeriesTest	subSeriesCreationWithNegativeIndexTest	plain	true	subSeriesCreationWithNegativeIndexTest()		238	cc594e0b05a741a06b0b3d2b2e0501c401f13a81dd1d6718be024267461e5ff0
+M	org.ta4j.core.BarSeriesTest	subSeriesWithWrongArgumentsTest	plain	true	subSeriesWithWrongArgumentsTest()		243	028a8426b3bd765a43fee7f57a5f01192d10f063d46728570a7c53506f45e3d9
+M	org.ta4j.core.BarSeriesTest	maximumBarCountOnConstrainedSeriesShouldNotThrowExceptionTest	plain	true	maximumBarCountOnConstrainedSeriesShouldNotThrowExceptionTest()		248	73cf1c47b2fbef9b20656a09830d5ae8ee05d27848e88da562faee25c7934d4a
+M	org.ta4j.core.BarSeriesTest	negativeMaximumBarCountShouldThrowExceptionTest	plain	true	negativeMaximumBarCountShouldThrowExceptionTest()		257	30ba0e98ab94caa59322b870d5dd5eec5edeb117103f10a3a024b8faa4dee37a
+M	org.ta4j.core.BarSeriesTest	setMaximumBarCountTest	plain	true	setMaximumBarCountTest()		262	32338a26a9df732ba8a83301cb6d9b67996d273032deef0b6974fd1f8fb02a64
+M	org.ta4j.core.BarSeriesTest	addNullBarShouldThrowExceptionTest	plain	true	addNullBarShouldThrowExceptionTest()		277	ac551a3ad6c4256b260a0f48e95c2df6093996f7a9b619221bc16b76345f9cad
+M	org.ta4j.core.BarSeriesTest	addBarWithEndTimePriorToSeriesEndTimeShouldThrowExceptionTest	plain	true	addBarWithEndTimePriorToSeriesEndTimeShouldThrowExceptionTest()		282	2092b7eb9340104c3d7ec71e883f4247b414dced319ae8d826d63a159beefd4a
+M	org.ta4j.core.BarSeriesTest	addBarTest	plain	true	addBarTest()		288	e6461e57f207dbe5ef4f36783a5786b8a1cec69bc94614fe481abc39d81f5927
+M	org.ta4j.core.BarSeriesTest	addPriceTest	plain	true	addPriceTest()		309	0d0536e82a6b00a4cfb8d7d9c0fb1a0fea7c3810a279466c8e201df24167d900
+M	org.ta4j.core.BarSeriesTest	addTradeTest	plain	true	addTradeTest()		340	51be73158615aa454f7b7fea3103bc0a1a8effd4eaaa1257d28d3c00ec4a3cf1
+M	org.ta4j.core.BarSeriesTest	wrongBarTypeDoubleTest	plain	true	wrongBarTypeDoubleTest()		352	453a35283050add57c8500fac05459daf762a807d4fb8ce807cfe41a0b113c2f
+M	org.ta4j.core.BarSeriesTest	wrongBarTypeBigDecimalTest	plain	true	wrongBarTypeBigDecimalTest()		358	95abc1bcf2e8d1a2c408e64cdcc353a1d55ef70ca94db91cb86b3886cf3d24fb
+M	org.ta4j.core.BarSeriesTest	subSeriesOfMaxBarCountSeriesTest	plain	true	subSeriesOfMaxBarCountSeriesTest()		364	879e46e80cbf1960cde105237febeeba27b831b7bae7ae54400b48ced8ba1d97
+C	org.ta4j.core.BarTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BarTest.java
+M	org.ta4j.core.BarTest	setUp		true	setUp()		52	58d5e49e00b66af693ba44609c57e39cfdd3b1cb2c0511390ce2882dc94f39d8
+M	org.ta4j.core.BarTest	addTrades	plain	true	addTrades()		59	14581ec05613cd068c3dbe5f816afa9bb8e4a6ec14607e71c957d77210060e14
+M	org.ta4j.core.BarTest	getTimePeriod	plain	true	getTimePeriod()		75	155b272f5e7349b7a11abfb12aecf0768eed30e560ac08c601de2316dea99c35
+M	org.ta4j.core.BarTest	getBeginTime	plain	true	getBeginTime()		80	c59eed6e0ad476cbe6f8875fdeaf46bc7003f63bc32e7a3f1c4c7a5512658661
+M	org.ta4j.core.BarTest	inPeriod	plain	true	inPeriod()		85	6b1dc7c7352a1e14fb16eb5559a84330bee9325b870b14068cc75096b718c308
+M	org.ta4j.core.BarTest	equals	plain	true	equals()		97	7be4de13b7a439e219e8ecd88861a4532f74923f0284ee490308f4ac0fbc8848
+M	org.ta4j.core.BarTest	hashCode2	plain	true	hashCode2()		105	cbba702e98f80a66f7b6d9ca320b2b6595277d25a782b73863e64a863aaabec3
+C	org.ta4j.core.BaseBarBuilderTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BaseBarBuilderTest.java
+M	org.ta4j.core.BaseBarBuilderTest	testBuildBar	plain	true	testBuildBar()		43	11f56652f8c90115ffa2f5a380ddaa4fcf7d43c5aeca8fb80e49148396cb7232
+C	org.ta4j.core.BaseBarConvertibleBuilderTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BaseBarConvertibleBuilderTest.java
+M	org.ta4j.core.BaseBarConvertibleBuilderTest	testBuildBigDecimal	parameterized	true	testBuildBigDecimal()		49	c7f85565ddf11f100c395633e1ca97b5ed36be0c823999a57cf267ec5fbb5de2
+C	org.ta4j.core.CriterionFactory	INTERFACE	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/CriterionFactory.java
+M	org.ta4j.core.CriterionFactory	getCriterion		false	getCriterion(Object[])		35	
+C	org.ta4j.core.ExternalCriterionTest	INTERFACE	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/ExternalCriterionTest.java
+M	org.ta4j.core.ExternalCriterionTest	getSeries		false	getSeries()		36	
+M	org.ta4j.core.ExternalCriterionTest	getFinalCriterionValue		false	getFinalCriterionValue(Object[])		46	
+M	org.ta4j.core.ExternalCriterionTest	getTradingRecord		false	getTradingRecord()		54	
+C	org.ta4j.core.ExternalIndicatorTest	INTERFACE	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/ExternalIndicatorTest.java
+M	org.ta4j.core.ExternalIndicatorTest	getSeries		false	getSeries()		36	
+M	org.ta4j.core.ExternalIndicatorTest	getIndicator		false	getIndicator(Object[])		46	
+C	org.ta4j.core.IndicatorFactory	INTERFACE	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/IndicatorFactory.java
+M	org.ta4j.core.IndicatorFactory	getIndicator		false	getIndicator(D, Object[])		36	
+C	org.ta4j.core.IndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/IndicatorTest.java
+M	org.ta4j.core.IndicatorTest	setUp		true	setUp()		55	9cff28595844a765c3d7324cbd4d57d4ff8064f9130947149f5e0ea9da961a1b
+M	org.ta4j.core.IndicatorTest	toDouble	plain	true	toDouble()		60	e7b13d03b0074017759f5c11fa34f8fc26a30ed8eb06cbb1000a07d2f215a9e8
+M	org.ta4j.core.IndicatorTest	shouldProvideStream	plain	true	shouldProvideStream()		76	ef10b1b34d510b16dfc11dc9973e72a32300fef1efbf9e4b62c9678437a988fe
+C	org.ta4j.core.PositionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/PositionTest.java
+M	org.ta4j.core.PositionTest	setUp		true	setUp()		54	8bd9115038851ee6b0ddddec33a22570f57fb6a8617229112925f578e588526b
+M	org.ta4j.core.PositionTest	whenNewShouldCreateBuyOrderWhenEntering	plain	true	whenNewShouldCreateBuyOrderWhenEntering()		83	f3bfbe91de4ebe356da3889695364a470015b28394918bef7e383e1ece79b460
+M	org.ta4j.core.PositionTest	whenNewShouldNotExit	plain	true	whenNewShouldNotExit()		89	d1388c73f79c383ce4d6471358218131852abba41505fa8ba4f96287e9fc8262
+M	org.ta4j.core.PositionTest	whenOpenedShouldCreateSellOrderWhenExiting	plain	true	whenOpenedShouldCreateSellOrderWhenExiting()		94	0c97a3df3cb9e7db24996e02d2e82149e623ae203264aef474c48b3ae6e9426c
+M	org.ta4j.core.PositionTest	whenClosedShouldNotEnter	plain	true	whenClosedShouldNotEnter()		101	65a180365898b2079e23608ce7ba302c348555028d3522eb017a4432b2da5bb4
+M	org.ta4j.core.PositionTest	whenExitIndexIsLessThanEntryIndexShouldThrowException	plain	true	whenExitIndexIsLessThanEntryIndexShouldThrowException()		110	37dc5c407d96915948116dd6da1368fec4e4735f3a5c03e1e1e47dbea0ec7c39
+M	org.ta4j.core.PositionTest	shouldClosePositionOnSameIndex	plain	true	shouldClosePositionOnSameIndex()		116	f65133f32a094858faf9f1374595827c7876cd73e0d483058a87343a1f07a3b9
+M	org.ta4j.core.PositionTest	shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull	plain	true	shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull()		123	3e216bc26b0abb128c67846d605e78726546ff6fca3c9c44c4dd3eb66f877389
+M	org.ta4j.core.PositionTest	shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType	plain	true	shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType()		128	30ba0183f3e77674ef876ac5c1731f505ca4cb7e291af56de7a5d561f70ebaf7
+M	org.ta4j.core.PositionTest	whenNewShouldCreateSellOrderWhenEnteringUncovered	plain	true	whenNewShouldCreateSellOrderWhenEnteringUncovered()		133	9233ac05e223570164ce437ec96d8676c5cbdb72ee6a8203dd0088f310a4a275
+M	org.ta4j.core.PositionTest	whenOpenedShouldCreateBuyOrderWhenExitingUncovered	plain	true	whenOpenedShouldCreateBuyOrderWhenExitingUncovered()		139	d6502adcbbd85c554cb9d889ebc0acfd7e7d3452cdf4d9770c31e1dbf0ddc18b
+M	org.ta4j.core.PositionTest	overrideToString	plain	true	overrideToString()		146	49df266e480ad028d4e8952df7a53f9ca09f685cfd2f69a43a238fea8adfd3b7
+M	org.ta4j.core.PositionTest	testEqualsForNewPositions	plain	true	testEqualsForNewPositions()		153	fceb0157c25a2b3b2c0bd5ed1ea38052628ae6e3864e49394240258593e33f95
+M	org.ta4j.core.PositionTest	testEqualsForEntryOrders	plain	true	testEqualsForEntryOrders()		160	817d72230d11c368f94a9e1771a26a02bc295e84273d45a56b000b48df3231fe
+M	org.ta4j.core.PositionTest	testEqualsForExitOrders	plain	true	testEqualsForExitOrders()		176	9ffed7e3fb21e3404e316d11cd9a1f2f2eb8c312dc8b0e148b923b59bf4804e6
+M	org.ta4j.core.PositionTest	testGetProfitForLongPositions	plain	true	testGetProfitForLongPositions()		196	5aec01b0bf7b3cacace0d709fb406eaff3290f0e5f024be846757d5f562f92f5
+M	org.ta4j.core.PositionTest	testGetProfitForShortPositions	plain	true	testGetProfitForShortPositions()		208	2e3e6682ad5dab8c15c3583bf9b1e4389635b305f9c31c232c3e73c8c5156dca
+M	org.ta4j.core.PositionTest	testGetGrossReturnForLongPositions	plain	true	testGetGrossReturnForLongPositions()		220	1db0bf52766602f273b54c2edb8d286ee1820e05f27e6e8e9fcad408b989a350
+M	org.ta4j.core.PositionTest	testGetGrossReturnForShortPositions	plain	true	testGetGrossReturnForShortPositions()		232	da88989044dcb1eea928ce73418c820915bb1c27913b9058543ab24332451303
+M	org.ta4j.core.PositionTest	testGetGrossReturnForLongPositionsUsingBarCloseOnNaN	plain	true	testGetGrossReturnForLongPositionsUsingBarCloseOnNaN()		244	c6b55a6590b2d78a40f8453281967f841c583507cb111ba9280d5f399763621c
+M	org.ta4j.core.PositionTest	testGetGrossReturnForShortPositionsUsingBarCloseOnNaN	plain	true	testGetGrossReturnForShortPositionsUsingBarCloseOnNaN()		251	0a4940d36d124c72d3c2ea7784659ae1fe7fe72ad895fb14528d1d0d60a36eb9
+M	org.ta4j.core.PositionTest	testCostModelConsistencyTrue	plain	true	testCostModelConsistencyTrue()		258	afaf08e2408dcf1d93e7c746112e450b1c6ce8d65772ac01038dee930316f5e7
+M	org.ta4j.core.PositionTest	testCostModelEntryInconsistent	plain	true	testCostModelEntryInconsistent()		263	750223e626a86f102f9d017a4751f50d8d4d35a1eceb578eea150f328a9040f9
+M	org.ta4j.core.PositionTest	testCostModelExitInconsistent	plain	true	testCostModelExitInconsistent()		268	3c5dbf544c18b3dcba4c354d083a36ad6b5849c722f16c1163ad158e29d612ff
+M	org.ta4j.core.PositionTest	getProfitLongNoFinalBarTest	plain	true	getProfitLongNoFinalBarTest()		273	7578c5d09802d920827378363a46ea5819a2642d43067c013d0de9dd01cd7c54
+M	org.ta4j.core.PositionTest	getProfitLongWithFinalBarTest	plain	true	getProfitLongWithFinalBarTest()		286	00b3bc5191a5b0d8e0d7a9a5aae23633a00f8bbdd369b9314a9c66ac30f11363
+M	org.ta4j.core.PositionTest	getProfitShortNoFinalBarTest	plain	true	getProfitShortNoFinalBarTest()		299	93e844cb9d81636b9f89dc9186ba8d8da36947338d8beadd97823f6bc0c9c50d
+M	org.ta4j.core.PositionTest	getProfitShortWithFinalBarTest	plain	true	getProfitShortWithFinalBarTest()		318	c37597d94bcbd8247f6977957e9ddd6be4fdf8d205270a9afa11c102d0bff1d9
+C	org.ta4j.core.SeriesBuilderTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/SeriesBuilderTest.java
+M	org.ta4j.core.SeriesBuilderTest	testBuilder	plain	true	testBuilder()		47	ed55c1678653ebad31e8ea432236a5633b2d64a8ab0861bb0b39c07ebfc87355
+M	org.ta4j.core.SeriesBuilderTest	testNumFunctions	plain	true	testNumFunctions()		75	34106ac8ccf76e8ef6c4839a485f7ad8f093ae539077a9800be5438d310290e8
+M	org.ta4j.core.SeriesBuilderTest	testWrongNumType	plain	true	testWrongNumType()		84	934ddc5019936112b7867c7a61090ea6f57df6725fe49636af7de89d136982cd
+C	org.ta4j.core.TestUtils	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TestUtils.java
+M	org.ta4j.core.TestUtils	assertNumEquals		true	assertNumEquals(String, Num)		56	38c89fd32b4c982bc6cc301f5a80acecc121361061d12e020b853c5b0b9f937f
+M	org.ta4j.core.TestUtils	assertNumEquals		true	assertNumEquals(Num, Num)		69	cd69812550a97c0c5e2c4fa6aa2b1fde046116eeef0a9c17ca860a4c52bd04f9
+M	org.ta4j.core.TestUtils	assertNumEquals		true	assertNumEquals(int, Num)		84	6f66404d2d50b006a68577959020005da1464da0789b5dd352547a0288d8f776
+M	org.ta4j.core.TestUtils	assertNumEquals		true	assertNumEquals(double, Num)		101	f8c81657785a0b4ef820751f9af66caf90c54005ddb8fd93301e4c4fd8c84f91
+M	org.ta4j.core.TestUtils	assertNumNotEquals		true	assertNumNotEquals(int, Num)		115	b45feb39e99f025b9deb79533257f4518b1ce1ab69424f2ab0473f12707016ec
+M	org.ta4j.core.TestUtils	assertIndicatorEquals		true	assertIndicatorEquals(Indicator<Num>, Indicator<Num>)		125	4c818e6cd596cfe99188efe972afd6f73e24aabc250d8331e6ec1288885a9d5a
+M	org.ta4j.core.TestUtils	assertIndicatorNotEquals		true	assertIndicatorNotEquals(Indicator<Num>, Indicator<Num>)		141	099e88c187353e7241287cb6187bdf4407cb798262acdc8be0e7ba5faf303e21
+M	org.ta4j.core.TestUtils	assertNumNotEquals		true	assertNumNotEquals(String, Num)		161	8e60d9d89e825a2c9310dc4ebd7a34d8cecec7f5963eb8f2cc91581c63504167
+M	org.ta4j.core.TestUtils	assertNumNotEquals		true	assertNumNotEquals(Num, Num)		175	8a73002a2bba6adad24ceef43fd79fbf8019bfc1224d2d0afa0934351cb5b62e
+M	org.ta4j.core.TestUtils	assertNumNotEquals		true	assertNumNotEquals(double, Num)		189	eb92a5d70b14f1238997e94fb879438b8799c7d4ad0097f6995c0cd1d10f026a
+M	org.ta4j.core.TestUtils	assertIndicatorEquals		true	assertIndicatorEquals(Indicator<Num>, Indicator<Num>, Num)		199	0397fc496aef10aae991638675e9b5f628b9ea7a053d773839a545ab7f60372a
+M	org.ta4j.core.TestUtils	assertIndicatorNotEquals		true	assertIndicatorNotEquals(Indicator<Num>, Indicator<Num>, Num)		233	e578beb5989aa3d5d48e103d9123b7e7b9ee356ac34da3b376c794a465403f3f
+C	org.ta4j.core.TestUtilsTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TestUtilsTest.java
+M	org.ta4j.core.TestUtilsTest	randomSeries		false	randomSeries()		75	a2582c28f781a660bc2b68c35dace39991e1346b1f8c18d0650b698065d09e97
+M	org.ta4j.core.TestUtilsTest	testStringNum	plain	true	testStringNum()		89	f17291456019255bca85dd9efe24661f80cb40d61c07e3032aaeb86429446f50
+M	org.ta4j.core.TestUtilsTest	testNumNum	plain	true	testNumNum()		97	6e0f836dced4546b314c93741dc07d72b0a9945c16de7ae37b1a9c4ae8dacf38
+M	org.ta4j.core.TestUtilsTest	testIntNum	plain	true	testIntNum()		105	c369fb5ec68b83f202a68c03a319d5774e08a62323f25b17816288104fa767a8
+M	org.ta4j.core.TestUtilsTest	testDoubleNum	plain	true	testDoubleNum()		113	b9421a226a701ae655b435c34bf16c46d2700f8b8c5ef059bb7a4e286784bcb4
+M	org.ta4j.core.TestUtilsTest	testIndicator	plain	true	testIndicator()		121	481207c72a4d5bad787b068a988dd21c38a311cd8b00cf192981fac34c4bb5d9
+C	org.ta4j.core.TradeTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TradeTest.java
+M	org.ta4j.core.TradeTest	setUp		true	setUp()		46	13a97534bafc833d2c689a443de7794f167c436603e5c0003840d4cd86f88040
+M	org.ta4j.core.TradeTest	type	plain	true	type()		55	6a17bc2249e052e854ecbcde76d25bbda702d6293c85565648337246c340710c
+M	org.ta4j.core.TradeTest	overrideToString	plain	true	overrideToString()		65	277d7f559ee3a20bc9d303802876fc4eacc86846100d51464458d00a7e8a76af
+M	org.ta4j.core.TradeTest	initializeWithCostsTest	plain	true	initializeWithCostsTest()		73	9bddab1a06af7a539933f9b89f17f5a5f0bdaa7511e3ed67585697e66f062e8a
+M	org.ta4j.core.TradeTest	testReturnBarSeriesCloseOnNaN	plain	true	testReturnBarSeriesCloseOnNaN()		89	675854bc626006ef8cd9d1d64c61c1bf4ec50ee02deca8fe57c6fab7d91db6c2
+C	org.ta4j.core.TradingRecordTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TradingRecordTest.java
+M	org.ta4j.core.TradingRecordTest	setUp		true	setUp()		39	ba8d48e4df0f3a35abedfe605871b3e31d9b470106f20d01214b1a49017a9e51
+M	org.ta4j.core.TradingRecordTest	getCurrentPosition	plain	true	getCurrentPosition()		48	a57c3003f8dc0bb7ac1afba66b913ef2a849c4392f5731b7496ca12b78910c19
+M	org.ta4j.core.TradingRecordTest	operate	plain	true	operate()		55	b51acd531c2ee92161dc2f38b1dc505608f24876f5a6290638d1462c0cc96cd5
+M	org.ta4j.core.TradingRecordTest	isClosed	plain	true	isClosed()		90	5191146b81c6e680f7ad4032c452eb96b4228c978bdd1209ac7898b222151365
+M	org.ta4j.core.TradingRecordTest	getPositionCount	plain	true	getPositionCount()		97	e0d47f6407aa458bb8c30ca678090c0a3ef290df9d44ff272100650413ead06d
+M	org.ta4j.core.TradingRecordTest	getLastPosition	plain	true	getLastPosition()		104	a4fe168be7d870d8315cc7d8950909e37deb57361fed921295d0c3d4565508e4
+M	org.ta4j.core.TradingRecordTest	getLastTrade	plain	true	getLastTrade()		111	424f99878dde8efd01804b123a5f50a494b10a77554f16ad2f11ee5fce23697e
+M	org.ta4j.core.TradingRecordTest	getLastEntryExit	plain	true	getLastEntryExit()		127	0162dbefd777d9a34ddb7694b63fd1f416b9688cf4eb14d4d0dbe066e4963871
+C	org.ta4j.core.XlsTestsUtils	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/XlsTestsUtils.java
+M	org.ta4j.core.XlsTestsUtils	getSheet		false	getSheet(Class<?>, String)		65	0b583084b3251b300f3db835fe53613303d130bfc154a9452f8acd129ea03794
+M	org.ta4j.core.XlsTestsUtils	setParams		false	setParams(Sheet, Num[])		87	407a8be83f874007648962ba00b05289e6bbbb3426d3b3be48629c289ce35c87
+M	org.ta4j.core.XlsTestsUtils	getSeries		true	getSeries(Class<?>, String, Function<Number, Num>)		119	a516191918b0c45043fc4ab79bacab9b8c825cf4a5bf924853643883839a6c8e
+M	org.ta4j.core.XlsTestsUtils	getSeries		false	getSeries(Sheet, Function<Number, Num>)		135	88da6c70f0d2a7558da28fd37211edf7069a9393db2510e0fc863f7379ea01a8
+M	org.ta4j.core.XlsTestsUtils	getValues		false	getValues(Sheet, int, Function<Number, Num>, Object[])		188	17f1096ab7fd294c33800d8bd8221f75ea99e146e49c77b9bd7909c7434eb04e
+M	org.ta4j.core.XlsTestsUtils	getValues		false	getValues(Sheet, int, Function<Number, Num>, Num[])		208	f56ec66f0151f6a36eef002be4e7a54d4c3ec4864e0bf08aaa6654cbe8d05fd7
+M	org.ta4j.core.XlsTestsUtils	getValues		false	getValues(Sheet, int, Function<Number, Num>)		223	e69a914e80da442641d4dbbb3d2f2729c422aead9eccb803466d4d9caae35203
+M	org.ta4j.core.XlsTestsUtils	getData		false	getData(Sheet)		252	5ec691b35e53c60088bfcc8f08fecfa66caf0efd5aa5fcd195ce3c5cfd562836
+M	org.ta4j.core.XlsTestsUtils	getIndicator		true	getIndicator(Class<?>, String, int, Function<Number, Num>, Object[])		296	eee204b93a16c86272f3dbc16c59e21f0cbfb5c2388f640f565d1a0d242d4868
+M	org.ta4j.core.XlsTestsUtils	getFinalCriterionValue		true	getFinalCriterionValue(Class<?>, String, int, Function<Number, Num>, Object[])		314	eaee95deb5754dbfbea0246255eaffd2b6f9d9043f2b57df2bba3df5c4ca3397
+M	org.ta4j.core.XlsTestsUtils	getTradingRecord		true	getTradingRecord(Class<?>, String, int, Function<Number, Num>)		331	e1fe8858f4d61c68296375b24338002e7a962cee0a4f379a6edfb7bb8c05a346
+C	org.ta4j.core.aggregator.BaseBarSeriesAggregatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/aggregator/BaseBarSeriesAggregatorTest.java
+M	org.ta4j.core.aggregator.BaseBarSeriesAggregatorTest	testAggregateWithNewName	plain	true	testAggregateWithNewName()		53	a5e5d5c515f988585920a957dbd2671aea2b123ad9af840dac56755d8c155b2d
+M	org.ta4j.core.aggregator.BaseBarSeriesAggregatorTest	testAggregateWithTheSameName	plain	true	testAggregateWithTheSameName()		75	e3ae0746330173b87a116670bd3a36269bc65e6441239d1389091ed26214f319
+C	org.ta4j.core.aggregator.BaseBarSeriesAggregatorTest$BarAggregatorForTest	CLASS	false		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/aggregator/BaseBarSeriesAggregatorTest.java
+M	org.ta4j.core.aggregator.BaseBarSeriesAggregatorTest$BarAggregatorForTest	aggregate		false	aggregate(List<Bar>)		102	01b4626cf9740eed717596dcc072142a202504044e9769c3166edcd739661b40
+C	org.ta4j.core.aggregator.DurationBarAggregatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/aggregator/DurationBarAggregatorTest.java
+M	org.ta4j.core.aggregator.DurationBarAggregatorTest	getOneDayBars		false	getOneDayBars()		50	4cb19f4d770c5828fb0feea1959a1715ef72d79fd9cd7e8cc5d5336267008184
+M	org.ta4j.core.aggregator.DurationBarAggregatorTest	upscaledTo5DayBars	plain	true	upscaledTo5DayBars()		83	5e38884b98aac165cca124920dee5b6013428246220eaab78649a838aa994c5b
+M	org.ta4j.core.aggregator.DurationBarAggregatorTest	upscaledTo10DayBars	plain	true	upscaledTo10DayBars()		123	cc2c0dfded915ccbef33c790187229b6ee707bfdbaa838d71e8e1ae45d881e6e
+M	org.ta4j.core.aggregator.DurationBarAggregatorTest	upscaledTo10DayBarsNotOnlyFinalBars	plain	true	upscaledTo10DayBarsNotOnlyFinalBars()		145	0c6b8b22d4c5c4aeed78c9d11939caa5401f21b1b10964cc7b7e272e57f23c33
+M	org.ta4j.core.aggregator.DurationBarAggregatorTest	testWithGapsInSeries	plain	true	testWithGapsInSeries()		154	9488cad7fca1e116a499f0f9c7e8fdf3cae99bd2a272dba7f8581673d6417b57
+C	org.ta4j.core.analysis.CashFlowTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowSize	plain	true	cashFlowSize()		49	cb762303a116ff646f5f175d7a455260f57b3927956fc79e470e9de3f6190910
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowBuyWithOnlyOnePosition	plain	true	cashFlowBuyWithOnlyOnePosition()		63	6cb64aa0173551bc9b3c1c011179e2cadc57571c6fa62321059f3b64ddb0d840
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowWithSellAndBuyTrades	plain	true	cashFlowWithSellAndBuyTrades()		75	c6a758beea58a8266910197973d1542d96285f56e51206fa427b9b4e26c5f485
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowSell	plain	true	cashFlowSell()		93	7224cdccf2f52f80ca510c365230efcfce69dbc3640cddd7766bdeeb4c972247
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowShortSell	plain	true	cashFlowShortSell()		109	35e385d357610f4401292eb6df4a7a5b6c65edf4f71c35dcc0752536f82c0012
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowShortSellWith20PercentGain	plain	true	cashFlowShortSellWith20PercentGain()		126	237f6a9c8a6443badb5960bb5cd92f6ae5309238f3764138db60d56767771530
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowShortSellWith20PercentLoss	plain	true	cashFlowShortSellWith20PercentLoss()		140	4192ddeec8f152bf75e2d37538d17a49771c2cb5c6408afc270e994015f759be
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowShortSellWith100PercentLoss	plain	true	cashFlowShortSellWith100PercentLoss()		154	5f9705368446635e1bc29d37e6af8f6069870974ef44f29e9fdf557c391175c9
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowShortSellWithOver100PercentLoss	plain	true	cashFlowShortSellWithOver100PercentLoss()		177	767a43b2ed1ce258baa6b490697407ed9418cb299c55f975efc109a71c4b3749
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowShortSellBigLossWithNegativeCashFlow	plain	true	cashFlowShortSellBigLossWithNegativeCashFlow()		191	5d66ab5071aa8caf31777ecadeec43bf62b66466bd422b17637ef30a26e83749
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowValueWithOnlyOnePositionAndAGapBefore	plain	true	cashFlowValueWithOnlyOnePositionAndAGapBefore()		203	22f2095ee27c5bcc8b1046ad6d59252fbfe24f941ed197e2813ff9ae052e53fe
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowValueWithOnlyOnePositionAndAGapAfter	plain	true	cashFlowValueWithOnlyOnePositionAndAGapAfter()		216	7b480f4b6e6e03501bbad4e1242c12b5a3b7d9fa5a67989eed96529f654f707e
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades	plain	true	cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades()		230	b71bb4d1edb19256f597f5232177462942d4e374ceed2fd0152ba449b436783e
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowValue	plain	true	cashFlowValue()		246	829e0365f118be059d86a453289bfa64b62fb93d3d8fac4525e4300cc88a1788
+M	org.ta4j.core.analysis.CashFlowTest	cashFlowValueWithNoPositions	plain	true	cashFlowValueWithNoPositions()		288	f6a276df0ab753b4fc032c319c98a2e6df1688a65b81145147328b9a2bc82cef
+M	org.ta4j.core.analysis.CashFlowTest	reallyLongCashFlow	plain	true	reallyLongCashFlow()		297	5a3d9eaa053e487739fc8550c4dc43e94fd0dc050cd3ab6c07a82ff4e77cd825
+C	org.ta4j.core.analysis.ReturnsTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/ReturnsTest.java
+M	org.ta4j.core.analysis.ReturnsTest	returnSize	plain	true	returnSize()		50	9e80150dade4a634d9e29b53f4c21224707e77373f88396ceefb79de061e2fda
+M	org.ta4j.core.analysis.ReturnsTest	singleReturnPositionArith	plain	true	singleReturnPositionArith()		60	6d4086697df157955653d314f07d3c066a8495729792a3a7ab6622a316084e41
+M	org.ta4j.core.analysis.ReturnsTest	returnsWithSellAndBuyTrades	plain	true	returnsWithSellAndBuyTrades()		70	db4998f683dc8fc7f3da9692537001f3760ec6615b6d77d20256abc2cd145bdb
+M	org.ta4j.core.analysis.ReturnsTest	returnsWithGaps	plain	true	returnsWithGaps()		88	fcb1ea46a9dc592df21c6bdc3048c5a96b4d8293398737c424acf37953c42d22
+M	org.ta4j.core.analysis.ReturnsTest	returnsWithNoPositions	plain	true	returnsWithNoPositions()		111	c284739a0e56357b88dddd05cd6594cc085cd100a32be5f7e078c0d0d460f9c7
+M	org.ta4j.core.analysis.ReturnsTest	returnsPrecision	plain	true	returnsPrecision()		121	18d47cae585e87189e1769da78436de979828dcbcec7f186ea7da115288f7015
+C	org.ta4j.core.analysis.cost.FixedTransactionCostModelTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/FixedTransactionCostModelTest.java
+M	org.ta4j.core.analysis.cost.FixedTransactionCostModelTest	calculatePerPositionWhenPositionIsOpen	plain	true	calculatePerPositionWhenPositionIsOpen()		47	cd7e8c909950da907fe8415c67b1c2ab663ddf2eca58f71b908449613c69da59
+M	org.ta4j.core.analysis.cost.FixedTransactionCostModelTest	calculatePerPositionWhenPositionIsClosed	plain	true	calculatePerPositionWhenPositionIsClosed()		60	dc19bd31ac1afc4eab8d46db95e57ffcf37dad2736f1d94d1b740a96413d843c
+M	org.ta4j.core.analysis.cost.FixedTransactionCostModelTest	calculatePerPrice	plain	true	calculatePerPrice()		76	afdc96b3c64a8bf501f14e38e1639427f3daae425d30b4e5a640e694b76bd56f
+M	org.ta4j.core.analysis.cost.FixedTransactionCostModelTest	testEquality	plain	true	testEquality()		85	cb405553503b18e7b3a54a3fa54ca11df48ca1ebe2fa20fcdddb10624cfcc142
+C	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModelTest.java
+M	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	setUp		true	setUp()		41	54f86bdbab1f74ec3285efa8ceced4f02b6e23e9243178236874a8e592443020
+M	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	calculateZeroTest	plain	true	calculateZeroTest()		46	361f8569bf5073eba98547d05af9c4b674ced77ba99af83d73ad4fdce78d90bc
+M	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	calculateBuyPosition	plain	true	calculateBuyPosition()		56	1cf1c5264e91e7728f0f5ee59b72f9aa40073b953bf1fa12f9a27f7adc993392
+M	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	calculateSellPosition	plain	true	calculateSellPosition()		72	13ce2e6df3acdc5ee99f35a99b82a6aaf324431fd83717c60775b18fa2e3da71
+M	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	calculateOpenSellPosition	plain	true	calculateOpenSellPosition()		88	71967680548d9b1cd76c269f25e691e2d9088f7ab303f0d4a63cf4ca5a2739d7
+M	org.ta4j.core.analysis.cost.LinearBorrowingCostModelTest	testEquality	plain	true	testEquality()		103	2221855d54c79632bff241db3c561237a6ca3f775f49fa1669b9700069ec7f27
+C	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/LinearTransactionCostModelTest.java
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	setUp		true	setUp()		56	c57977611b92ac9a95b2616184055274526be33da07a15b2014e830fc93395a3
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	calculateSingleTradeCost	plain	true	calculateSingleTradeCost()		61	9ec8144c99768bcef337160dc7bc3915849c4b22606c2e28c076e8ea8e0af7ea
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	calculateBuyPosition	plain	true	calculateBuyPosition()		71	b94037a7ff9bf97dbab41646ca8fa92122d14731de1c1dc0a1904a33066209ec
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	calculateSellPosition	plain	true	calculateSellPosition()		89	3c24321c2356e83d369e675158c506ddc324244daf93e982db5ce8f4bf84a03b
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	calculateOpenSellPosition	plain	true	calculateOpenSellPosition()		107	4d6dae9331c2381ee3839bcc9aa85d4be6699bdbdb012348bfa349701ee57784
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	testEquality	plain	true	testEquality()		119	6c5b42e277c678ba0486328136f1794cb9f93ced9e011f11f840fd213a7c0cc0
+M	org.ta4j.core.analysis.cost.LinearTransactionCostModelTest	testBacktesting	plain	true	testBacktesting()		135	7b14a1bdcba84deddcecc67222b9bcfe5aa39767710ee70b887275294d910000
+C	org.ta4j.core.analysis.cost.ZeroCostModelTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/ZeroCostModelTest.java
+M	org.ta4j.core.analysis.cost.ZeroCostModelTest	calculatePerPosition	plain	true	calculatePerPosition()		38	2ebcd53c6049539dda5fdc86e903ab0497b53aa370d1f32cc70a63ae1c28b636
+M	org.ta4j.core.analysis.cost.ZeroCostModelTest	calculatePerPrice	plain	true	calculatePerPrice()		54	6be8023108d65ee2472763ceb87ac50916f80259b2f80ac37d3c80d0bec0d624
+M	org.ta4j.core.analysis.cost.ZeroCostModelTest	testEquality	plain	true	testEquality()		63	9a8e9f7d10d112bce48652e739792ace05a057d0c810be02b582f043b5641c95
+C	org.ta4j.core.backtest.BarSeriesManagerTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java
+M	org.ta4j.core.backtest.BarSeriesManagerTest	setUp		true	setUp()		63	ab293043fff17c386dd27f9cb1daab8f722f72cf8c72ceb69d9af1df83940139
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runOnWholeSeries	plain	true	runOnWholeSeries()		83	0eb2894875cd4d4909bcaf66effe8f42de560835b217675b8f53ebe9f05297bd
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runOnWholeSeriesWithAmount	plain	true	runOnWholeSeriesWithAmount()		91	e01c2ed9ea634ea0a2f00ccf026ed638af5f411ee5b975b8a50d6617b21fed58
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runOnSeries	plain	true	runOnSeries()		103	70f9b7a5edef0cb37173d9c163eb6a9ac81c965391619551ce1c91b83e1dbdc0
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runWithOpenEntryBuyLeft	plain	true	runWithOpenEntryBuyLeft()		115	69ae81e1b82e97765e1ff6902109d28ca6da10d662ab0cb711c4aa06b86fe5e0
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runWithOpenEntrySellLeft	plain	true	runWithOpenEntrySellLeft()		125	fab1ab076fee0d1990ba2fc1521d6cb904bf95314bfd11aa8626fcc2eefef820
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runBetweenIndexes	plain	true	runBetweenIndexes()		135	2b5b43a641705ac08887376557332a21bd3c747938a89a83c4406cd156af6d39
+M	org.ta4j.core.backtest.BarSeriesManagerTest	runOnSeriesSlices	plain	true	runOnSeriesSlices()		164	a2781355dd763b7905844660fc113e5c99ccc98e7654bd124fe8c6a6e26314ef
+C	org.ta4j.core.criteria.AbstractAnalysisCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AbstractAnalysisCriterionTest.java
+M	org.ta4j.core.criteria.AbstractAnalysisCriterionTest	setUp		true	setUp()		57	7812ea91514ec36c5ae9a7ef345baae277bf31060c8ac9a069dc21b74cca059d
+M	org.ta4j.core.criteria.AbstractAnalysisCriterionTest	bestShouldBeAlwaysOperateOnProfit	plain	true	bestShouldBeAlwaysOperateOnProfit()		66	c22a35e5d0566b814f7dfbe34097be89ebef8578eccb808ec32adada7b92a48a
+M	org.ta4j.core.criteria.AbstractAnalysisCriterionTest	bestShouldBeBuyAndHoldOnLoss	plain	true	bestShouldBeBuyAndHoldOnLoss()		74	be2e31ce77ba23ddb77d0ca09365a10bf032b7cc150d6df3107c434bfcfb67b0
+M	org.ta4j.core.criteria.AbstractAnalysisCriterionTest	toStringMethod	plain	true	toStringMethod()		82	ba72a6c1963aa50ccd69430fba9932e4b79ba23c0c33816a7c7d8652417462d2
+C	org.ta4j.core.criteria.AbstractCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AbstractCriterionTest.java
+M	org.ta4j.core.criteria.AbstractCriterionTest	function		true	function()		56	053b8217774de798e2789360a4f056f62acf60741b0213fcb4e6710830f317fe
+M	org.ta4j.core.criteria.AbstractCriterionTest	getCriterion		true	getCriterion(Object[])		67	205abee6434c72ac2ab432afa5429ef97a1a68a08bacdbb749edc3d8bfb15b7e
+M	org.ta4j.core.criteria.AbstractCriterionTest	numOf		true	numOf(Number)		71	2c625f85b23caa7727e95b20ca9d5db91bc6bad31faa7356799f4830e5095710
+C	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AverageReturnPerBarCriterionTest.java
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	calculateOnlyWithGainPositions	plain	true	calculateOnlyWithGainPositions()		48	dce623e0fd27e6694af5c4c371a22ae5e5c53cb71efd4eaa53f75acad736707d
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	calculateWithASimplePosition	plain	true	calculateWithASimplePosition()		57	794a48c55c188df2d0cc869ef3f51f96e1341049c99e38307f997a564d1253d2
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		65	999ab7427fda9b881856f5563b85bd575bdf2d2d1359826614ff3f48c6f5437d
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	calculateWithLosingAShortPositions	plain	true	calculateWithLosingAShortPositions()		75	2ec37e0eded83d11d42b6f49859671c19e624cb6ae2fe0c410ddc103cff37d00
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	calculateWithNoBarsShouldReturn1	plain	true	calculateWithNoBarsShouldReturn1()		83	4f4203ad35d454d2559d14ff6ff5c5315f90fd920309336015c5ef3c6c986b21
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	calculateWithOnePosition	plain	true	calculateWithOnePosition()		90	73baf6d289dad8a12cd63318908a2fb733477ec72da1a77a8275c2a48d36720c
+M	org.ta4j.core.criteria.AverageReturnPerBarCriterionTest	betterThan	plain	true	betterThan()		98	bb99898bd36c92380cf98db80b403a122fd712376c9509dd43b812921acccef8
+C	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterionTest.java
+M	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	calculateWithEmpty	plain	true	calculateWithEmpty()		50	71617512a4cec3ea7357367f75684330b5f207f339fedee1786cf76442e6934e
+M	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	calculateOnlyWithGainPositions	plain	true	calculateOnlyWithGainPositions()		65	cacaaeddc52392064b041c243bb2e9cd3704990576f03e668c08551c5252f754
+M	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		78	a07b060d1751fc00d215b5e815b721c987999e5ba1941601c3f193ae10d1d5ed
+M	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		91	1fb30b777a128531505c67d71346277c15616d32115e8fc4ee529b07cc6550be
+M	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	calculateWithOnePositions	plain	true	calculateWithOnePositions()		102	fac492ee6326b5d16d2252f6af299dfcfe4d8d138990d39d5eb964e5796fff3f
+M	org.ta4j.core.criteria.EnterAndHoldReturnCriterionTest	betterThan	plain	true	betterThan()		113	bb91c6ccf181bb75a7add6dac85978b4a0b667aaa19189cc4fa7487ae1013a25
+C	org.ta4j.core.criteria.ExpectancyCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ExpectancyCriterionTest.java
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		46	109806293a493cb37d85d82416c379fde8692b8d5d30305a61ba2a88c2a40c92
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	calculateWithMixedPositions	plain	true	calculateWithMixedPositions()		56	332aebfc4fb30a00d49e01a913483324a81c13f8e629b2f57f801c2bc06483f8
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		66	3ae2770482b91684a0e3204dbe8a906f63aea2113fe0b99fcb70e6b10ac1d027
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	calculateProfitWithShortPositions	plain	true	calculateProfitWithShortPositions()		76	f35b6a49c6574568d36697dd27a9e87a825733c3510f333f39471d73f3c9ea58
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	calculateProfitWithMixedShortPositions	plain	true	calculateProfitWithMixedShortPositions()		86	e3c24feca7378959b7cbcb95040530091f0bbdf84a7a62f231e1ae53b0016cf5
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	betterThan	plain	true	betterThan()		96	bb99898bd36c92380cf98db80b403a122fd712376c9509dd43b812921acccef8
+M	org.ta4j.core.criteria.ExpectancyCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		103	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ExpectedShortfallCriterionTest.java
+M	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	calculateOnlyWithGainPositions	plain	true	calculateOnlyWithGainPositions()		54	28b5c5f203395ac74401a05fa5be4ba0593dca29ba32edf759e2c402cf0164e2
+M	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	calculateWithASimplePosition	plain	true	calculateWithASimplePosition()		63	fba25d22479aa22a4ecf0b12aff9ad90bf8f775cf5d1fa61df64b0abf966e279
+M	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	calculateOnlyWithLossPosition	plain	true	calculateOnlyWithLossPosition()		72	bf0a0d3fdc47afc07c75e414f745cb510543bb644cf4447bce20a4e9e2763c08
+M	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	calculateWithNoBarsShouldReturn0	plain	true	calculateWithNoBarsShouldReturn0()		87	957d79ddaa4a9ca05fa3638feb59821385d3a4ab50638a2a65f889df3bd6ec56
+M	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	calculateWithBuyAndHold	plain	true	calculateWithBuyAndHold()		94	2e441d3856dd1d84ac79d2a64aea56b2eb43838d33efd1f5ace833b89c33454c
+M	org.ta4j.core.criteria.ExpectedShortfallCriterionTest	betterThan	plain	true	betterThan()		102	5d976f342bda49b36c1ff499ef3d6df0bc1349c84af2102354f20e7d0630306e
+C	org.ta4j.core.criteria.LinearTransactionCostCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/LinearTransactionCostCriterionTest.java
+M	org.ta4j.core.criteria.LinearTransactionCostCriterionTest	externalData	plain	true	externalData()		52	9a77d4069bb64fac1a9ec1a138d182a8b64fd421bb18c2f0a6cbc7c037bf494e
+M	org.ta4j.core.criteria.LinearTransactionCostCriterionTest	dummyData	plain	true	dummyData()		67	e1f55824f7f2a9ba27c58b8bca93f58dd1b4cf1df3b32d1236644c0f7b8f21be
+M	org.ta4j.core.criteria.LinearTransactionCostCriterionTest	fixedCost	plain	true	fixedCost()		88	eaa3b44616ba4524941eb4d4bf4b5709b92972132e9d200b6153895bc424e572
+M	org.ta4j.core.criteria.LinearTransactionCostCriterionTest	fixedCostWithOnePosition	plain	true	fixedCostWithOnePosition()		109	6b8bdec4761d1b4481ad9fa161aba44fe08a6cd1d88bf9ae6088ee0b1a97f5a7
+M	org.ta4j.core.criteria.LinearTransactionCostCriterionTest	betterThan	plain	true	betterThan()		131	ad531493c4fee08a82b932d032555718017e2ac59f3d05b621f089e65e6357b8
+C	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/MaximumDrawdownCriterionTest.java
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	calculateWithNoTrades	plain	true	calculateWithNoTrades()		46	eee8f7006e3d3468b8930ee913d3c777feca28981afb8bafcb1782fdc3b3c431
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	calculateWithOnlyGains	plain	true	calculateWithOnlyGains()		54	94f15bf498649c7afcc5a290418c92f49fe1a6e61981f5dc6b6fbb65ecb1aa68
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	calculateWithGainsAndLosses	plain	true	calculateWithGainsAndLosses()		64	3d44a8b2595ba0f3a8eb0009603dba75be08f8b8385f9abd0f3583855d4b3d72
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	calculateWithNullSeriesSizeShouldReturn0	plain	true	calculateWithNullSeriesSizeShouldReturn0()		74	aed8f3c633620cfb195eda50f2f603a79c174b422be049814910222d931471f6
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	withTradesThatSellBeforeBuying	plain	true	withTradesThatSellBeforeBuying()		81	019ac0dc87ae6cc1d7c6d278d01d598382ab35e98cbcb63a1345bce7dff8ef8e
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	withSimpleTrades	plain	true	withSimpleTrades()		90	854750f0cf1ad34e1c8a867f5424b22a3077f3b16a0301f5804d9710eec62daa
+M	org.ta4j.core.criteria.MaximumDrawdownCriterionTest	betterThan	plain	true	betterThan()		100	0ff29c7769967f75aa8f762ee467c08a9fc868f6a526558b5beb71706697117c
+C	org.ta4j.core.criteria.NumberOfBarsCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfBarsCriterionTest.java
+M	org.ta4j.core.criteria.NumberOfBarsCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		47	8c4ef4eb34352b5a1c91f5de56fc081eb12aaf97d7dffb577c96b00243629e7d
+M	org.ta4j.core.criteria.NumberOfBarsCriterionTest	calculateWithTwoPositions	plain	true	calculateWithTwoPositions()		55	ab195431acc554315c2c35bb7e32d41164977929506486f7b5c8b478e6b24bc0
+M	org.ta4j.core.criteria.NumberOfBarsCriterionTest	calculateWithOnePosition	plain	true	calculateWithOnePosition()		65	2ebb33bbba1b0de8486353a1398493bab934779903409c617e53226958d54726
+M	org.ta4j.core.criteria.NumberOfBarsCriterionTest	betterThan	plain	true	betterThan()		73	f8883afd06c74e2716309a46472c6cf6daccea4793f5319a4a4d49d76607cd20
+M	org.ta4j.core.criteria.NumberOfBarsCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		80	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterionTest.java
+M	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		47	d8b615563e209801b1e0c0ca2aad7902477a3482b939fd2f6e37e1cc56c41fc8
+M	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	calculateWithTwoLongPositions	plain	true	calculateWithTwoLongPositions()		54	f7f9398601e66dc59c2d6d5d93f50e40235a9c0d1a3df9ea9a68e6f1ced61332
+M	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	calculateWithOneLongPosition	plain	true	calculateWithOneLongPosition()		63	c1c01c8c60472951fbf0e0652fb2339cf18ffbe4fd6c99a0496ec571336388fd
+M	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	calculateWithTwoShortPositions	plain	true	calculateWithTwoShortPositions()		71	bb01736ec278559298ca8f9345590b80a729f4f6cc162f86dbc33d2bc7a22de0
+M	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	betterThan	plain	true	betterThan()		80	7f31496e67e3210233b7f9f521e72afd0dffc70c22855a2509279e291e669590
+M	org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		87	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterionTest.java
+M	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		48	7271e1c6aa70f91a55f9c666cfd1f11efc6a47c8bc9034137883bcf400495b54
+M	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	calculateWithTwoLongPositions	plain	true	calculateWithTwoLongPositions()		56	c53a8a3af456ed3f739d7f24211ca752d9fb46c0f303774bba6c515509ec1d6f
+M	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	calculateWithOneLongPosition	plain	true	calculateWithOneLongPosition()		69	2cd2c49d73713ff7e1de752ac40ec8b073a91d76d3c0a1215a7f5f3391a3f940
+M	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	calculateWithTwoShortPositions	plain	true	calculateWithTwoShortPositions()		80	5e5d0a5305f1a6b6a14d2d641a3e18007f22e24886d0c296b42db524299dfeec
+M	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	betterThan	plain	true	betterThan()		93	5f882c282f450f9b834b41b01fc37d3994c4c84718a2ccc58fabbb18fb0912ed
+M	org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		104	e976f6ef4dade36f7e3c84ab441826b93a14fd611b0f84a35a2310463830fffb
+C	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterionTest.java
+M	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		47	d8b615563e209801b1e0c0ca2aad7902477a3482b939fd2f6e37e1cc56c41fc8
+M	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	calculateWithTwoLongPositions	plain	true	calculateWithTwoLongPositions()		54	df94d3718e5d9042d2f5c84e3e611fce791a57e91f5cbbe956853025ea59fafe
+M	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	calculateWithOneLongPosition	plain	true	calculateWithOneLongPosition()		63	1fbe42a7ee0ef62b55455d49aa483dda9a771446740a3be169a75eeee2f639bb
+M	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	calculateWithTwoShortPositions	plain	true	calculateWithTwoShortPositions()		71	adb8c69c6c95b034b093c5f1ee5ac63baa4652ff15aa5276ab25efa3b1436fb1
+M	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	betterThan	plain	true	betterThan()		80	7f31496e67e3210233b7f9f521e72afd0dffc70c22855a2509279e291e669590
+M	org.ta4j.core.criteria.NumberOfLosingPositionsCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		87	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.NumberOfPositionsCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfPositionsCriterionTest.java
+M	org.ta4j.core.criteria.NumberOfPositionsCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		48	4035cc63c07d406ce16d85c31439e96999a010b2b1fc68551bbf5f25d3659d61
+M	org.ta4j.core.criteria.NumberOfPositionsCriterionTest	calculateWithTwoPositions	plain	true	calculateWithTwoPositions()		56	49dc035ab71ef55d4aa3a8f9e0c69dd44aea925e02f37c4b0974e2b71c2409d7
+M	org.ta4j.core.criteria.NumberOfPositionsCriterionTest	calculateWithOnePosition	plain	true	calculateWithOnePosition()		66	6712fd1193508b5b3dacfdb2e1da186386c8288a401fc54f6be0dc84e185db3a
+M	org.ta4j.core.criteria.NumberOfPositionsCriterionTest	betterThanWithLessIsBetter	plain	true	betterThanWithLessIsBetter()		75	7f31496e67e3210233b7f9f521e72afd0dffc70c22855a2509279e291e669590
+M	org.ta4j.core.criteria.NumberOfPositionsCriterionTest	betterThanWithLessIsNotBetter	plain	true	betterThanWithLessIsNotBetter()		82	6585dd4c1b06ceb408ef7020872bd5cdee34c24f7c36c9ba4fb731b2dae80635
+C	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterionTest.java
+M	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		47	d8b615563e209801b1e0c0ca2aad7902477a3482b939fd2f6e37e1cc56c41fc8
+M	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	calculateWithTwoLongPositions	plain	true	calculateWithTwoLongPositions()		54	2ff3e208f83f985ee49645b33d0ba5c57ade6de06648bb777b7b403da9ea18ac
+M	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	calculateWithOneLongPosition	plain	true	calculateWithOneLongPosition()		63	1cecc19ea4d86002da6e16617ac530bfda389dc0bde60e3539ec23916c92469a
+M	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	calculateWithTwoShortPositions	plain	true	calculateWithTwoShortPositions()		71	198f6100bf8b37aeeb2312ed2813ac9d7d6b7d07d3ddb244c1be2460f6928bc8
+M	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	betterThan	plain	true	betterThan()		80	46531a4c455bdec514f9fd4b0db09dca1d867f2f0adba8e099f7c6a33c09215a
+M	org.ta4j.core.criteria.NumberOfWinningPositionsCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		87	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.OpenedPositionUtils	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/OpenedPositionUtils.java
+M	org.ta4j.core.criteria.OpenedPositionUtils	testCalculateOneOpenPositionShouldReturnExpectedValue		true	testCalculateOneOpenPositionShouldReturnExpectedValue(Function<Number, Num>, AnalysisCriterion, Num)		38	91326e79a5366f57b18dec61b22fa2103c6d65089a3970f896f1b18ace1787d2
+M	org.ta4j.core.criteria.OpenedPositionUtils	testCalculateOneOpenPositionShouldReturnExpectedValue		true	testCalculateOneOpenPositionShouldReturnExpectedValue(Function<Number, Num>, AnalysisCriterion, int)		50	19db228b2a32046f7344d71065b1c662297e367985bd22e675c294a603c83dfb
+C	org.ta4j.core.criteria.PositionsRatioCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/PositionsRatioCriterionTest.java
+M	org.ta4j.core.criteria.PositionsRatioCriterionTest	calculate	plain	true	calculate()		49	5f7db3f63a709bc01c3c434ce184cd466d7e8d12fbfd29f6c293f0882d8bd187
+M	org.ta4j.core.criteria.PositionsRatioCriterionTest	calculateWithShortPositions	plain	true	calculateWithShortPositions()		65	d363d9f16cacecc76757529e9f0f5a740e0a03376730bc694f5cc209b6126d5b
+M	org.ta4j.core.criteria.PositionsRatioCriterionTest	calculateWithOnePosition	plain	true	calculateWithOnePosition()		80	0d6bd53b4c7a07a8593f8910fdc3c76270601be8e6821df4ae5c48e5654e3126
+M	org.ta4j.core.criteria.PositionsRatioCriterionTest	betterThan	plain	true	betterThan()		104	71a1cbe6411bf6eb22dc7556850d6d6882525932abe2ad00160f71d0f5cfeb0c
+M	org.ta4j.core.criteria.PositionsRatioCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		115	8110cac45a88b19d7b5a5e65bf6ab6e7483f4fb197740e16a1f2bc0c21ccdd31
+C	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterionTest.java
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	setUp		true	setUp()		51	fc2a8ae207f9642e4eeb76c73236953b4807b3a0d4ba786a8ee744be7598b72d
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	rewardRiskRatioCriterion	plain	true	rewardRiskRatioCriterion()		56	9882cf2257cf840a0026fafa99b01c7ca4058ce3058069e6eed620a7e61b1da9
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	rewardRiskRatioCriterionOnlyWithGain	plain	true	rewardRiskRatioCriterionOnlyWithGain()		69	7eae36340fe570dbe60d82880faa816d36fa2b6621d4878733589c978042306f
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	rewardRiskRatioCriterionWithNoPositions	plain	true	rewardRiskRatioCriterionWithNoPositions()		77	33a16d8b3bdfed08d6b024a9decf222a70c31dfb0041b3f65b0e03ac4b433d2b
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	withOnePosition	plain	true	withOnePosition()		83	232e1f17b5af6d2fff9df27bb6180eb5543bec8a574f3be2f735582d7ffb19a7
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	betterThan	plain	true	betterThan()		92	5ec65fd49f8af1be8130b5ca1dfd79826239ff11b0dac2afb69a22de2306249e
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	testNoDrawDownForTradingRecord	plain	true	testNoDrawDownForTradingRecord()		99	e3cc77d9d090ec31c571fd9352f60e5b79d589ec1af1bfec772bccbdf27271b8
+M	org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterionTest	testNoDrawDownForPosition	plain	true	testNoDrawDownForPosition()		110	53402f421b795e4688c7bb3bac47e9a54412a46bf6de164aa21a7800f2a13f0f
+C	org.ta4j.core.criteria.SqnCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/SqnCriterionTest.java
+M	org.ta4j.core.criteria.SqnCriterionTest	calculateWithWinningLongPositions	plain	true	calculateWithWinningLongPositions()		46	d3897ce4e3fcf2a866699bb68c60af4044abb9e03d5c8e6ff9e78f4e173b598a
+M	org.ta4j.core.criteria.SqnCriterionTest	calculateWithLosingLongPositions	plain	true	calculateWithLosingLongPositions()		56	a4531101e6fa0014e93fe3dc78b550abf4d093f4280a4898fbdb6f28c95a7192
+M	org.ta4j.core.criteria.SqnCriterionTest	calculateWithOneWinningAndOneLosingLongPositions	plain	true	calculateWithOneWinningAndOneLosingLongPositions()		66	3b0da3f5a55715d757ffe7ff72380e68eca1ad3234ec92fb6d437ed390cc9b26
+M	org.ta4j.core.criteria.SqnCriterionTest	calculateWithWinningShortPositions	plain	true	calculateWithWinningShortPositions()		76	2fd67e8dcaeacf8e6f2d3d871e83aaa36c0db614582aec26aff21992572f00f2
+M	org.ta4j.core.criteria.SqnCriterionTest	calculateWithLosingShortPositions	plain	true	calculateWithLosingShortPositions()		86	921985809e1b8cd1e3d38224078b0656cd838fdd9f7df2200eedba876a429ca6
+M	org.ta4j.core.criteria.SqnCriterionTest	betterThan	plain	true	betterThan()		96	6948d8bdddf8cca86b82af4db44556542140432301a381be30303abbb096d1b0
+M	org.ta4j.core.criteria.SqnCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		103	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.ValueAtRiskCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ValueAtRiskCriterionTest.java
+M	org.ta4j.core.criteria.ValueAtRiskCriterionTest	calculateOnlyWithGainPositions	plain	true	calculateOnlyWithGainPositions()		50	28b5c5f203395ac74401a05fa5be4ba0593dca29ba32edf759e2c402cf0164e2
+M	org.ta4j.core.criteria.ValueAtRiskCriterionTest	calculateWithASimplePosition	plain	true	calculateWithASimplePosition()		59	f438c666817862a5c33591664ae93adcfc836ab905cb6a74b38b9727c6aca22a
+M	org.ta4j.core.criteria.ValueAtRiskCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		67	b8134c06b61964885d822f9e7e315cc961ba439c06ca41f735b43ae921d9aae6
+M	org.ta4j.core.criteria.ValueAtRiskCriterionTest	calculateWithNoBarsShouldReturn0	plain	true	calculateWithNoBarsShouldReturn0()		76	957d79ddaa4a9ca05fa3638feb59821385d3a4ab50638a2a65f889df3bd6ec56
+M	org.ta4j.core.criteria.ValueAtRiskCriterionTest	calculateWithBuyAndHold	plain	true	calculateWithBuyAndHold()		83	2e441d3856dd1d84ac79d2a64aea56b2eb43838d33efd1f5ace833b89c33454c
+M	org.ta4j.core.criteria.ValueAtRiskCriterionTest	betterThan	plain	true	betterThan()		91	5d976f342bda49b36c1ff499ef3d6df0bc1349c84af2102354f20e7d0630306e
+C	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterionTest.java
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	calculateOnlyWithGainPositions	plain	true	calculateOnlyWithGainPositions()		49	5c026c50d05cbb7535479c041fa8b0fad2b774c924fa5a3cf9ef8a3ebf29230c
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		59	a3f26fbbb89024b0194767195c76a89fa294145c5ab669c1e93b56e4191f8fe6
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	calculateWithOnlyOnePosition	plain	true	calculateWithOnlyOnePosition()		69	7134c7b98f890f25748c40243d31c2baae85359612f807b965ae257da5919864
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		78	092a3de2685e4c51a826d805fc204d45b5a0d934b5d26fb66fe6e40d6829c377
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	calculateWithAverageProfit	plain	true	calculateWithAverageProfit()		86	dfc252722b8b95af0bbbec55e91f319cee380c34b165ecd52f95a03399d73031
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	calculateWithNumberOfBars	plain	true	calculateWithNumberOfBars()		98	09fcbcd2d8483d58c36a4d61e6423b1369386c35369d31b8bfc02ccd688eb33d
+M	org.ta4j.core.criteria.VersusEnterAndHoldCriterionTest	betterThan	plain	true	betterThan()		109	068923764786144cc45bc4b82d778f5238d9ddba2ecc37f0e524f426919c6222
+C	org.ta4j.core.criteria.XLSCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/XLSCriterionTest.java
+M	org.ta4j.core.criteria.XLSCriterionTest	getSeries		true	getSeries()		68	2069808035228ced4b7261a333982c8b10b44fb71070a830fe717ead88044a24
+M	org.ta4j.core.criteria.XLSCriterionTest	getFinalCriterionValue		true	getFinalCriterionValue(Object[])		84	6496b9e8eb5bc042de23cbc7d0f324b9e92b98f627c5b3773d1117c312b6731a
+M	org.ta4j.core.criteria.XLSCriterionTest	getTradingRecord		true	getTradingRecord()		94	0274d5e0b38b6976ae25c86d5709a3436cefc3486c21de71104d515cf95ac32c
+C	org.ta4j.core.criteria.helpers.AverageCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/AverageCriterionTest.java
+M	org.ta4j.core.criteria.helpers.AverageCriterionTest	calculateStandardErrorPnL	plain	true	calculateStandardErrorPnL()		49	644cf61637b44f0114e2a90ce7996a041cd25becef8c782c57a40a05a806d227
+M	org.ta4j.core.criteria.helpers.AverageCriterionTest	betterThanWithLessIsBetter	plain	true	betterThanWithLessIsBetter()		60	bef4a32ae5d5773e8510c31a2f40918d69219a5f30d39961027b043f0e583dad
+M	org.ta4j.core.criteria.helpers.AverageCriterionTest	betterThanWithLessIsNotBetter	plain	true	betterThanWithLessIsNotBetter()		67	2d4ac89215d586c468c63f0fe77eb0a0024c377863d237f952a0a493771ee4f9
+M	org.ta4j.core.criteria.helpers.AverageCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		74	f8f3724ccaf54299d85d2e9571e7b4285f35d12d5a236689933df76e2c0a4119
+C	org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterionTest.java
+M	org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterionTest	calculateStandardDeviationPnL	plain	true	calculateStandardDeviationPnL()		51	3b7dea6395dc5f753737eb4e79d39d16a84d50394a02d9a8885d2353d252b0e0
+M	org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterionTest	betterThanWithLessIsBetter	plain	true	betterThanWithLessIsBetter()		62	bef4a32ae5d5773e8510c31a2f40918d69219a5f30d39961027b043f0e583dad
+M	org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterionTest	betterThanWithLessIsNotBetter	plain	true	betterThanWithLessIsNotBetter()		69	2d4ac89215d586c468c63f0fe77eb0a0024c377863d237f952a0a493771ee4f9
+M	org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		76	f4b0ae2234b5684d06ba34eae0ac066b73a05f36ee91f24fc43946d69d343216
+C	org.ta4j.core.criteria.helpers.StandardDeviationCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterionTest.java
+M	org.ta4j.core.criteria.helpers.StandardDeviationCriterionTest	calculateStandardDeviationPnL	plain	true	calculateStandardDeviationPnL()		50	a68c5a0220676c3187079c946472a30612a011062987dcb5fd4a241c1e09bd3d
+M	org.ta4j.core.criteria.helpers.StandardDeviationCriterionTest	betterThanWithLessIsBetter	plain	true	betterThanWithLessIsBetter()		61	bef4a32ae5d5773e8510c31a2f40918d69219a5f30d39961027b043f0e583dad
+M	org.ta4j.core.criteria.helpers.StandardDeviationCriterionTest	betterThanWithLessIsNotBetter	plain	true	betterThanWithLessIsNotBetter()		68	2d4ac89215d586c468c63f0fe77eb0a0024c377863d237f952a0a493771ee4f9
+M	org.ta4j.core.criteria.helpers.StandardDeviationCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		75	f8f3724ccaf54299d85d2e9571e7b4285f35d12d5a236689933df76e2c0a4119
+C	org.ta4j.core.criteria.helpers.StandardErrorCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/StandardErrorCriterionTest.java
+M	org.ta4j.core.criteria.helpers.StandardErrorCriterionTest	calculateStandardErrorPnL	plain	true	calculateStandardErrorPnL()		50	0ba400ab182e5b3c0ddf5e9c540b44ffbd980a4e1bed74b062691c9f9c96e576
+M	org.ta4j.core.criteria.helpers.StandardErrorCriterionTest	betterThanWithLessIsBetter	plain	true	betterThanWithLessIsBetter()		61	c813d124ca6f1036d691f01853bb9923f0c226351bd801622628845bcd86e246
+M	org.ta4j.core.criteria.helpers.StandardErrorCriterionTest	betterThanWithLessIsNotBetter	plain	true	betterThanWithLessIsNotBetter()		68	b7a9fbc565a5f149331a3b65ee2d7b8182e81ad9c4c1f98cad9044c6dec70d3d
+M	org.ta4j.core.criteria.helpers.StandardErrorCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		75	f8f3724ccaf54299d85d2e9571e7b4285f35d12d5a236689933df76e2c0a4119
+C	org.ta4j.core.criteria.helpers.VarianceCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/VarianceCriterionTest.java
+M	org.ta4j.core.criteria.helpers.VarianceCriterionTest	calculateVariancePnL	plain	true	calculateVariancePnL()		49	362b9497b4193bb46df568ac9767a7f73534e430978809ad92b8e8fe4657748f
+M	org.ta4j.core.criteria.helpers.VarianceCriterionTest	betterThanWithLessIsBetter	plain	true	betterThanWithLessIsBetter()		60	bef4a32ae5d5773e8510c31a2f40918d69219a5f30d39961027b043f0e583dad
+M	org.ta4j.core.criteria.helpers.VarianceCriterionTest	betterThanWithLessIsNotBetter	plain	true	betterThanWithLessIsNotBetter()		67	2d4ac89215d586c468c63f0fe77eb0a0024c377863d237f952a0a493771ee4f9
+M	org.ta4j.core.criteria.helpers.VarianceCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		74	f8f3724ccaf54299d85d2e9571e7b4285f35d12d5a236689933df76e2c0a4119
+C	org.ta4j.core.criteria.pnl.AverageLossCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/AverageLossCriterionTest.java
+M	org.ta4j.core.criteria.pnl.AverageLossCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		47	4af9549b9202e13238087cc266d7f540b99fbcfd016f93cd6ac917eeb1704609
+M	org.ta4j.core.criteria.pnl.AverageLossCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		57	c9d4a68cc4e94b0fedbea172b2e0e520a1497117d2d480b33db6189941280620
+M	org.ta4j.core.criteria.pnl.AverageLossCriterionTest	calculateProfitWithShortPositions	plain	true	calculateProfitWithShortPositions()		67	25fe27c4cbccca4bea3c3b069ecfedde9a27d88b8fa33eff2b23c82e020365a4
+M	org.ta4j.core.criteria.pnl.AverageLossCriterionTest	betterThan	plain	true	betterThan()		77	bb99898bd36c92380cf98db80b403a122fd712376c9509dd43b812921acccef8
+M	org.ta4j.core.criteria.pnl.AverageLossCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		84	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.pnl.AverageProfitCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/AverageProfitCriterionTest.java
+M	org.ta4j.core.criteria.pnl.AverageProfitCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		47	7529c9ec694c33052032fe777011fca00d9445142a75a6e300763775c26b12ae
+M	org.ta4j.core.criteria.pnl.AverageProfitCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		57	1cd05c618922c7311dfc82aa3f39a5366d0e755d4f17c03b1221d723d02e295c
+M	org.ta4j.core.criteria.pnl.AverageProfitCriterionTest	calculateProfitWithShortPositions	plain	true	calculateProfitWithShortPositions()		67	bfda9c68ce9550b93772ca5748612dd5d2e460cd41aa53df7ead2444fe5cd9c6
+M	org.ta4j.core.criteria.pnl.AverageProfitCriterionTest	betterThan	plain	true	betterThan()		77	bb99898bd36c92380cf98db80b403a122fd712376c9509dd43b812921acccef8
+M	org.ta4j.core.criteria.pnl.AverageProfitCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		84	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.pnl.LossCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/LossCriterionTest.java
+M	org.ta4j.core.criteria.pnl.LossCriterionTest	calculateComparingIncludingVsExcludingCosts	plain	true	calculateComparingIncludingVsExcludingCosts()		49	a058f492fb14f7f4740a91fdee987ad5ebc5e3dcdaf9c724168661ab9097dc6f
+M	org.ta4j.core.criteria.pnl.LossCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		80	73f2f4f4de3098737f9e8a54dd6e93125145a2daa9b8ee401ef2dc5fba548f38
+M	org.ta4j.core.criteria.pnl.LossCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		90	fdbbf7ade999bc93e1d4cb8b3e9873ef803a3c493a6575b95e7795593b7cde43
+M	org.ta4j.core.criteria.pnl.LossCriterionTest	calculateProfitWithShortPositions	plain	true	calculateProfitWithShortPositions()		100	d4f5877019433d1e8a0277cd80ed619b01142bf3d6660554ed99c0734efad66e
+M	org.ta4j.core.criteria.pnl.LossCriterionTest	betterThan	plain	true	betterThan()		110	f56d1206835739e90965447c1570d7b1d7db9a6a2818a717b36800121cb7ef86
+M	org.ta4j.core.criteria.pnl.LossCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		117	2e12b30cb1348fbfc3a2803d46f1cbdcfd2152369fa190b747079f988415cd74
+C	org.ta4j.core.criteria.pnl.ProfitCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitCriterionTest.java
+M	org.ta4j.core.criteria.pnl.ProfitCriterionTest	calculateComparingIncludingVsExcludingCosts	plain	true	calculateComparingIncludingVsExcludingCosts()		49	99aad86a5cf89e820a7112d97185a9dbec1932995ac14286245e0f9554c82620
+M	org.ta4j.core.criteria.pnl.ProfitCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		80	57f6e91388e2279612ca005e48a4404967c2ba22a579d775d481d7944a527a68
+M	org.ta4j.core.criteria.pnl.ProfitCriterionTest	calculateOnlyWithProfitPositions2	plain	true	calculateOnlyWithProfitPositions2()		90	4cccf02ca2a8ad96c21c7e1340433a14b66ccd1c00b605aff18da4b80cfd5643
+M	org.ta4j.core.criteria.pnl.ProfitCriterionTest	calculateProfitWithShortPositions	plain	true	calculateProfitWithShortPositions()		100	32da26f5a1d70aba3774493cb56a413e35d4b2b350fea2c53dae084375496da6
+M	org.ta4j.core.criteria.pnl.ProfitCriterionTest	betterThan	plain	true	betterThan()		110	6daa79fa1e910a54cf971fe7d4da9b5e2c8ddfa7ff185db628548e38a5cfac40
+M	org.ta4j.core.criteria.pnl.ProfitCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		117	686635165dbda879b6f7f12574c619572b6d0e0b5a91835b652de0f728d5d0d4
+C	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitLossCriterionTest.java
+M	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		47	ffee4bb4c33ccf496d5b80d6aba594b4e0214f5ea364e9b2698806073b6f772c
+M	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		58	b10591afdf56c55ac21ba96692a6e1a265929c66539a5ff63deed669bd77db31
+M	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	calculateOnlyWithProfitShortPositions	plain	true	calculateOnlyWithProfitShortPositions()		69	2d7037f3f1a8ca6b8d5b7decca7de0ccdb297215056460c32760235ed9380cb2
+M	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	calculateOnlyWithLossShortPositions	plain	true	calculateOnlyWithLossShortPositions()		80	e714a66430f105af9c360292fd4bdde3876625a5a9ebb505d3bcb2694161f522
+M	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	betterThan	plain	true	betterThan()		91	bffd3320315b9075ba21cb27f9fd1a4300a4175b0aba81fa50b1ace480edc591
+M	org.ta4j.core.criteria.pnl.ProfitLossCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		98	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterionTest.java
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	calculateWithWinningLongPositions	plain	true	calculateWithWinningLongPositions()		47	af636a0db5191af9a55008a603def0317f74bf00ebc531040a685c28c9525b4e
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	calculateWithLosingLongPositions	plain	true	calculateWithLosingLongPositions()		56	be932045685dd04211a7e99104e18ad774f30ce6d1f12549697073f35f375a24
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	calculateWithOneWinningAndOneLosingLongPositions	plain	true	calculateWithOneWinningAndOneLosingLongPositions()		66	1187c4b1cd74b76b6e272724073ae68e1f9d766e47523a3469f8d02ef937051f
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	calculateWithWinningShortPositions	plain	true	calculateWithWinningShortPositions()		76	2934ae94dd82848b5ab46828c1d50f74a64be979f99f5b0ecdce9d2a0baf9d96
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	calculateWithLosingShortPositions	plain	true	calculateWithLosingShortPositions()		85	6d134a48b977a1f5f28b662ab15e80ba33c9bebc53917926252fb74020ea4d83
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	betterThan	plain	true	betterThan()		94	6948d8bdddf8cca86b82af4db44556542140432301a381be30303abbb096d1b0
+M	org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		101	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.pnl.ProfitLossRatioCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitLossRatioCriterionTest.java
+M	org.ta4j.core.criteria.pnl.ProfitLossRatioCriterionTest	calculateOnlyWithProfitPositions	plain	true	calculateOnlyWithProfitPositions()		47	37207a0ad2bd8dd020856ec17d560221aaa24b29b5c23d4247219c35c43a9cf0
+M	org.ta4j.core.criteria.pnl.ProfitLossRatioCriterionTest	calculateOnlyWithLossPositions	plain	true	calculateOnlyWithLossPositions()		57	faede315d27bb259a60bc9353caab595bb17f3f9486f843a8565bf00091416fe
+M	org.ta4j.core.criteria.pnl.ProfitLossRatioCriterionTest	calculateProfitWithShortPositions	plain	true	calculateProfitWithShortPositions()		67	35ca88a872a528ecc69fc287de73cf75fa6b97feca54033a2d5affd048f8d6fb
+M	org.ta4j.core.criteria.pnl.ProfitLossRatioCriterionTest	betterThan	plain	true	betterThan()		77	bb99898bd36c92380cf98db80b403a122fd712376c9509dd43b812921acccef8
+M	org.ta4j.core.criteria.pnl.ProfitLossRatioCriterionTest	testCalculateOneOpenPositionShouldReturnZero	plain	true	testCalculateOneOpenPositionShouldReturnZero()		84	65374b97e004e333275a55cddf074791889854bf5d4bcbad13d719d354086548
+C	org.ta4j.core.criteria.pnl.ReturnCriterionTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ReturnCriterionTest.java
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	calculateWithWinningLongPositions	plain	true	calculateWithWinningLongPositions()		49	d18f0ddbaded54b816f0b9c75aa32d0648dda05781452aa686e4b6550ca65107
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	calculateWithLosingLongPositions	plain	true	calculateWithLosingLongPositions()		64	b8f8dc5169d0ab50cdab1308ac0ad8a82dbb28bb9c781d5517e3e8b6bb2c7c82
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	calculateReturnWithWinningShortPositions	plain	true	calculateReturnWithWinningShortPositions()		79	9c7ade2fb9fc754213e192c5ab7adbbe8352d8eecb45973da44ac5463026928d
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	calculateReturnWithLosingShortPositions	plain	true	calculateReturnWithLosingShortPositions()		94	e2efead697c03f174e81659a7a0295ee00aa1431c8f1fdc37d076ff686249e5e
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	calculateWithNoPositions	plain	true	calculateWithNoPositions()		109	b64ab7a8790c93ff26eb63ffd4aa09f34126e2d7daffbc798b5a4aedaaf31c18
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	calculateWithOpenedPosition	plain	true	calculateWithOpenedPosition()		122	28128516fc9ba74baada96ea4eaacc8311fa6f4c4aab28331e017bbf8922b6d0
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	testCalculateOneOpenPosition	plain	true	testCalculateOneOpenPosition()		141	7ff30c216694848618f5d45475e2c6c683731f3d169838054eca56740a49452e
+M	org.ta4j.core.criteria.pnl.ReturnCriterionTest	betterThan	plain	true	betterThan()		150	bb99898bd36c92380cf98db80b403a122fd712376c9509dd43b812921acccef8
+C	org.ta4j.core.indicators.ATRIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java
+M	org.ta4j.core.indicators.ATRIndicatorTest	testDummy	plain	true	testDummy()		50	52e4139966d53e348912743dfb039d6f3f1f1ccb45976b05d2f9ee5fd0a7c0e4
+M	org.ta4j.core.indicators.ATRIndicatorTest	testXls	plain	true	testXls()		71	1d41af689b465edde2a5307f5b2458281c79a763c1a4b8c80964402256e54a8a
+C	org.ta4j.core.indicators.AbstractIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/AbstractIndicatorTest.java
+M	org.ta4j.core.indicators.AbstractIndicatorTest	function		true	function()		59	053b8217774de798e2789360a4f056f62acf60741b0213fcb4e6710830f317fe
+M	org.ta4j.core.indicators.AbstractIndicatorTest	getIndicator		true	getIndicator(D, Object[])		97	39ca1ee933e9973a4b6a957116e077323cb25401ce28643f09e4c0f6b8a4b50c
+M	org.ta4j.core.indicators.AbstractIndicatorTest	numOf		true	numOf(Number)		102	2c625f85b23caa7727e95b20ca9d5db91bc6bad31faa7356799f4830e5095710
+M	org.ta4j.core.indicators.AbstractIndicatorTest	numOf		true	numOf(String, int)		106	de683d4fcbeada2690866ba98e1e20fa2c14aa2090f55df56bfc05620ce6e1f3
+C	org.ta4j.core.indicators.AccelerationDecelerationIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/AccelerationDecelerationIndicatorTest.java
+M	org.ta4j.core.indicators.AccelerationDecelerationIndicatorTest	setUp		true	setUp()		49	8c7b2d827f60aad96f6a7222e03d578f1352df63ff5753074e600f0c273d1334
+M	org.ta4j.core.indicators.AccelerationDecelerationIndicatorTest	calculateWithSma2AndSma3	plain	true	calculateWithSma2AndSma3()		63	5b41a927da79a3902cf808ac41916c67fae66345f0db124e0d2614085031ea55
+M	org.ta4j.core.indicators.AccelerationDecelerationIndicatorTest	withSma1AndSma2	plain	true	withSma1AndSma2()		74	5c663b0a800ad57c5ff4509302615a996ab717ba77f6e0dd177acd1c736dd746
+M	org.ta4j.core.indicators.AccelerationDecelerationIndicatorTest	withSmaDefault	plain	true	withSmaDefault()		85	2c9a10c5e2cfbab6ad18fcd2aa8e77ec2f0dd1d6ec4b9627e1b9add47fa490c7
+C	org.ta4j.core.indicators.AwesomeOscillatorIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/AwesomeOscillatorIndicatorTest.java
+M	org.ta4j.core.indicators.AwesomeOscillatorIndicatorTest	setUp		true	setUp()		54	03addda14c732c8d3eba328053c61fa002e0162cf5f7556b260a105303ae79e3
+M	org.ta4j.core.indicators.AwesomeOscillatorIndicatorTest	calculateWithSma2AndSma3	plain	true	calculateWithSma2AndSma3()		68	ba0784679a732863b361a466546c689111bc75aa2d69fa4bee085eebc943d694
+M	org.ta4j.core.indicators.AwesomeOscillatorIndicatorTest	withSma1AndSma2	plain	true	withSma1AndSma2()		79	0938bd0bd93bfcb7e32df34a5860fbecc11e8a8e60fefe892f4b3e35db108d4d
+M	org.ta4j.core.indicators.AwesomeOscillatorIndicatorTest	withSmaDefault	plain	true	withSmaDefault()		90	837965c84de9a7b504b665e0e59650197f3c95d7e0a85665a0d680092c532ca2
+C	org.ta4j.core.indicators.CCIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CCIIndicatorTest.java
+M	org.ta4j.core.indicators.CCIIndicatorTest	setUp		true	setUp()		56	eb53696d0cca8efe42d9aefb7896b2c98bd5bf5a762b0caa1d61382026a1491e
+M	org.ta4j.core.indicators.CCIIndicatorTest	getValueWhenBarCountIs20	plain	true	getValueWhenBarCountIs20()		65	fb8bcec124fb762a78d55d1ae895e18560af132c6d9d7c647b3e025d3b10d71b
+C	org.ta4j.core.indicators.CMOIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CMOIndicatorTest.java
+M	org.ta4j.core.indicators.CMOIndicatorTest	setUp		true	setUp()		46	5653a8c24d1461b347376802d8927bd32602e0c679b4ce572efb7e7d72fe1426
+M	org.ta4j.core.indicators.CMOIndicatorTest	dpo	plain	true	dpo()		53	63bb12c9900497b0504fe4e11975652cf9f2568cf433150e523e0a954a44cf25
+C	org.ta4j.core.indicators.CachedIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CachedIndicatorTest.java
+M	org.ta4j.core.indicators.CachedIndicatorTest	setUp		true	setUp()		58	445047f25976caafeff33c44f23b06a2d28d1628f043b717c1c2ef4edb95f956
+M	org.ta4j.core.indicators.CachedIndicatorTest	ifCacheWorks	plain	true	ifCacheWorks()		63	4922948c0081f15f15f4e1b5e7e80c72cbd12fed976d441d8ef1a98d16d67845
+M	org.ta4j.core.indicators.CachedIndicatorTest	getValueWithNullBarSeries	plain	true	getValueWithNullBarSeries()		71	7874d53932bf2a564109bb27890c8bb7ca8d2df67d266e57d40ef3082c1ab847
+M	org.ta4j.core.indicators.CachedIndicatorTest	getValueWithCacheLengthIncrease	plain	true	getValueWithCacheLengthIncrease()		86	7619e16fdda5d28cdfce711eb064766a82eafdec5f525f4a0dcee53a98af9efa
+M	org.ta4j.core.indicators.CachedIndicatorTest	getValueWithOldResultsRemoval	plain	true	getValueWithOldResultsRemoval()		94	f1ee2c0702856fd045e19aef2d756d56375f589002dc235ceaf12f3cebe8c862
+M	org.ta4j.core.indicators.CachedIndicatorTest	strategyExecutionOnCachedIndicatorAndLimitedBarSeries	plain	true	strategyExecutionOnCachedIndicatorAndLimitedBarSeries()		106	f0226eaffe7c13101c1a4b30a91107e30dcfc328cff4291c741b8c915cc8cae1
+M	org.ta4j.core.indicators.CachedIndicatorTest	getValueOnResultsCalculatedFromRemovedBarsShouldReturnFirstRemainingResult	plain	true	getValueOnResultsCalculatedFromRemovedBarsShouldReturnFirstRemainingResult()		147	0f30b40e9a5d4955d0ca325c4e9e0446371c6ce1b8c3bbfb5ae633e783a131ba
+M	org.ta4j.core.indicators.CachedIndicatorTest	recursiveCachedIndicatorOnMovingBarSeriesShouldNotCauseStackOverflow	plain	true	recursiveCachedIndicatorOnMovingBarSeriesShouldNotCauseStackOverflow()		159	780ee9f256c39555b4794c7d26206909c114f10768822fc59de2e57f9c17b5dc
+M	org.ta4j.core.indicators.CachedIndicatorTest	leaveLastBarUncached	plain	true	leaveLastBarUncached()		175	f346059dac4e267d152660588affdf2cdc2e42557f8468a1e67e3c4a1c0b3b6b
+C	org.ta4j.core.indicators.ChandelierExitLongIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ChandelierExitLongIndicatorTest.java
+M	org.ta4j.core.indicators.ChandelierExitLongIndicatorTest	setUp		true	setUp()		49	e21a2cb9028e66f98da5499e5a4777b68a88e36287bb162e4585369910532598
+M	org.ta4j.core.indicators.ChandelierExitLongIndicatorTest	massIndexUsing3And8BarCounts	plain	true	massIndexUsing3And8BarCounts()		72	91882b549afb4b587055d5ddcf044cc7184314440537e7d48e4a5d52d886fa01
+C	org.ta4j.core.indicators.ChandelierExitShortIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ChandelierExitShortIndicatorTest.java
+M	org.ta4j.core.indicators.ChandelierExitShortIndicatorTest	setUp		true	setUp()		49	e21a2cb9028e66f98da5499e5a4777b68a88e36287bb162e4585369910532598
+M	org.ta4j.core.indicators.ChandelierExitShortIndicatorTest	massIndexUsing3And8BarCounts	plain	true	massIndexUsing3And8BarCounts()		72	078c1ece289f89db66f73f37a4ad6785949a219bed18b98618f569bf9c2a2959
+C	org.ta4j.core.indicators.ChopIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ChopIndicatorTest.java
+M	org.ta4j.core.indicators.ChopIndicatorTest	testChoppy	plain	true	testChoppy()		56	21fb24466fa5032d9399eb468e7e895da3cad118b849d1c2fc4b970b1ed2a792
+M	org.ta4j.core.indicators.ChopIndicatorTest	testTradeableTrend	plain	true	testTradeableTrend()		72	d0b84706e1fec80294e03ae24873836c6c183f2ad158b9042c17aab2fb4bf23e
+C	org.ta4j.core.indicators.CoppockCurveIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CoppockCurveIndicatorTest.java
+M	org.ta4j.core.indicators.CoppockCurveIndicatorTest	coppockCurveWithRoc14Roc11Wma10	plain	true	coppockCurveWithRoc14Roc11Wma10()		43	c24b3b2f4d7e92cc23889287372641cb698f8daf68ddf3e5a3f3a2e7e9fe9a2a
+C	org.ta4j.core.indicators.DPOIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/DPOIndicatorTest.java
+M	org.ta4j.core.indicators.DPOIndicatorTest	setUp		true	setUp()		48	a6c2816e9e12f3f0d92ba9066a16c9a9fc5b76d787b5d41c0269aab430fba1d3
+M	org.ta4j.core.indicators.DPOIndicatorTest	dpo	plain	true	dpo()		59	3ecc4d4f3dfd0c2d70ce1edc0310d79e0d59d9341be3c31c202b469c0be61cdf
+M	org.ta4j.core.indicators.DPOIndicatorTest	dpoIOOBE	plain	true	dpoIOOBE()		78	f96983cdfaaf85a732c2a90ad254baa0a1959ece06306009cbbd92c61322f9e0
+C	org.ta4j.core.indicators.DistanceFromMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/DistanceFromMAIndicatorTest.java
+M	org.ta4j.core.indicators.DistanceFromMAIndicatorTest	setUp		true	setUp()		45	9652b47117fc70c920403b279c19a3fab770aa7f6701b322797cfc08309b2725
+M	org.ta4j.core.indicators.DistanceFromMAIndicatorTest	DistanceFromMovingAverageTest	plain	true	DistanceFromMovingAverageTest()		50	f8541b1d8620a40bc68af0d4f83245940a8345320f059923e5e5a07261ecfc42
+M	org.ta4j.core.indicators.DistanceFromMAIndicatorTest	DistanceFromIllegalMovingAverage	plain	true	DistanceFromIllegalMovingAverage()		59	bc1888accef6f5335722f224a32324ecf569efbc9757ea7c5834c14a52dc0e9e
+C	org.ta4j.core.indicators.DoubleEMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/DoubleEMAIndicatorTest.java
+M	org.ta4j.core.indicators.DoubleEMAIndicatorTest	setUp		true	setUp()		46	70163b889beecb86554be62965031d7929419ffbce35a7ff3fca1ea363a44b90
+M	org.ta4j.core.indicators.DoubleEMAIndicatorTest	doubleEMAUsingBarCount5UsingClosePrice	plain	true	doubleEMAUsingBarCount5UsingClosePrice()		53	e3121e9704f8fcfbd72eaad93ad6c85f9a37104c623dd21560a90a8b714661b3
+C	org.ta4j.core.indicators.EMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/EMAIndicatorTest.java
+M	org.ta4j.core.indicators.EMAIndicatorTest	setUp		true	setUp()		57	f6f31a271a93a9622dfa2efc89d2b56dddfdad27e76b51295535fc714965d7d7
+M	org.ta4j.core.indicators.EMAIndicatorTest	firstValueShouldBeEqualsToFirstDataValue	plain	true	firstValueShouldBeEqualsToFirstDataValue()		63	7ada7f46ddaccfffb6e620b23403f5d6aca73af007f552096b8a167a8f082345
+M	org.ta4j.core.indicators.EMAIndicatorTest	usingBarCount10UsingClosePrice	plain	true	usingBarCount10UsingClosePrice()		69	a97f9166e7112eb99acdc5658fc690faa75ac2883f524af45ce89e4ffb6a7d27
+M	org.ta4j.core.indicators.EMAIndicatorTest	stackOverflowError	plain	true	stackOverflowError()		77	f94d27855b9c64bc89798cf073a5487dccdc7d32b8fd9e9ce80f10472af525af
+M	org.ta4j.core.indicators.EMAIndicatorTest	externalData	plain	true	externalData()		90	4ceb9b9b2749823597ec5c74df5aa06305be7f876f260fa3be04fbfdd513b202
+C	org.ta4j.core.indicators.FisherIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/FisherIndicatorTest.java
+M	org.ta4j.core.indicators.FisherIndicatorTest	setUp		true	setUp()		47	7badb00ac38a73ea12dde8bcbb8582ffde6b86acccb0d22635900615d12ccfe0
+M	org.ta4j.core.indicators.FisherIndicatorTest	fisher	plain	true	fisher()		95	0b983b2907d3a7d4a3529e84c8a530695cb831aca3a62d20b6dc586802d77f4f
+C	org.ta4j.core.indicators.HMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/HMAIndicatorTest.java
+M	org.ta4j.core.indicators.HMAIndicatorTest	setUp		true	setUp()		46	755c9e556381f0b1166972e432b6a34ecf79a5c44316472ebd82f3aa9d00f868
+M	org.ta4j.core.indicators.HMAIndicatorTest	hmaUsingBarCount9UsingClosePrice	plain	true	hmaUsingBarCount9UsingClosePrice()		52	61461317d674dbcdf1fd36297fb655b3b994f72398fe5f809d82f1a95b806f9e
+C	org.ta4j.core.indicators.IntraDayMomentumIndexIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicatorTest.java
+M	org.ta4j.core.indicators.IntraDayMomentumIndexIndicatorTest	setUp		true	setUp()		49	95cab7dd770a5e9efd8b424843101828820aa2f8b3849cbe282a79945cc9a62f
+M	org.ta4j.core.indicators.IntraDayMomentumIndexIndicatorTest	givenBarCount_whenGetValueForIndexWithinBarCount_thenReturnNaN	plain	true	givenBarCount_whenGetValueForIndexWithinBarCount_thenReturnNaN()		65	e0972999943a6433b6eab6c4c5835f585eb0325d1e1409a5c5ce991c5fabac6e
+M	org.ta4j.core.indicators.IntraDayMomentumIndexIndicatorTest	givenBarCountOf1_whenGetValue_thenReturnCorrectValue	plain	true	givenBarCountOf1_whenGetValue_thenReturnCorrectValue()		77	7b60fe3074ed65a8579adebdd7305d83a43929810a4537292827d957d6480a52
+M	org.ta4j.core.indicators.IntraDayMomentumIndexIndicatorTest	givenBarCountOf3_whenGetValue_thenReturnCorrectValue	plain	true	givenBarCountOf3_whenGetValue_thenReturnCorrectValue()		90	3294c1084989ed695534377a7d9f78e37a95ae229b8a93029021008ac0286ec3
+C	org.ta4j.core.indicators.KAMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/KAMAIndicatorTest.java
+M	org.ta4j.core.indicators.KAMAIndicatorTest	setUp		true	setUp()		55	cc05a0c720c6e794013ad73535a4054ca1e48eb8b07b3b5ad1844356d40cdca4
+M	org.ta4j.core.indicators.KAMAIndicatorTest	kama	plain	true	kama()		67	013f3adc30cba8476c3e871f53553a7f5bc4714a85dfd5813bbf19b6a9ca6322
+M	org.ta4j.core.indicators.KAMAIndicatorTest	getValueOnDeepIndicesShouldNotCauseStackOverflow	plain	true	getValueOnDeepIndicesShouldNotCauseStackOverflow()		114	bec64564e04512632822ee1f47da3c2c165ad0d4b36bd11eb1145c91f25ea17e
+C	org.ta4j.core.indicators.KSTIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/KSTIndicatorTest.java
+M	org.ta4j.core.indicators.KSTIndicatorTest	setUp		true	setUp()		44	be668e923552613bacef2666c71fe0053679385289df2ba13f0ec51ff01968c6
+M	org.ta4j.core.indicators.KSTIndicatorTest	KSTIndicator	plain	true	KSTIndicator()		54	1c64db0287ae568f7ddfb63ad33c4a6320baaeddfd0e816a2591d2d1be26c6be
+C	org.ta4j.core.indicators.LWMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/LWMAIndicatorTest.java
+M	org.ta4j.core.indicators.LWMAIndicatorTest	setUp		true	setUp()		46	14ef8f103f8958efbb643c86cff7dd4fd1b167d1ee3af35b25720aef5eba00cc
+M	org.ta4j.core.indicators.LWMAIndicatorTest	lwmaUsingBarCount5UsingClosePrice	plain	true	lwmaUsingBarCount5UsingClosePrice()		52	04741eddbb3f4263c7242d6ebcaa6974fba2c2bad9254b01940ce7c364d9470c
+C	org.ta4j.core.indicators.MACDIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/MACDIndicatorTest.java
+M	org.ta4j.core.indicators.MACDIndicatorTest	setUp		true	setUp()		46	60e97c8e1b1af416f8df8b12efc9dbbbd747c0f81f8af6535afdb4c3ba82363e
+M	org.ta4j.core.indicators.MACDIndicatorTest	throwsErrorOnIllegalArguments	plain	true	throwsErrorOnIllegalArguments()		52	b5cfd0493c8194774706d117198407539d3d2f47ed4e3c5141467f8769a9e6ae
+M	org.ta4j.core.indicators.MACDIndicatorTest	macdUsingPeriod5And10	plain	true	macdUsingPeriod5And10()		57	ec295751e74646c2bd1faa695df0424574726fdb435fc69df90ae2fdd7170de0
+C	org.ta4j.core.indicators.MMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/MMAIndicatorTest.java
+M	org.ta4j.core.indicators.MMAIndicatorTest	setUp		true	setUp()		56	f6f31a271a93a9622dfa2efc89d2b56dddfdad27e76b51295535fc714965d7d7
+M	org.ta4j.core.indicators.MMAIndicatorTest	firstValueShouldBeEqualsToFirstDataValue	plain	true	firstValueShouldBeEqualsToFirstDataValue()		62	3dfa8a9d4ce0b5a3741e5fe47226481b0c585b5eaf0d4d8dc2054e9b43c03710
+M	org.ta4j.core.indicators.MMAIndicatorTest	mmaUsingBarCount10UsingClosePrice	plain	true	mmaUsingBarCount10UsingClosePrice()		68	dc76a3d06025bea2c1560aa350a1d3d958e4cd48f75d3e137e9c32fde0c9d43e
+M	org.ta4j.core.indicators.MMAIndicatorTest	stackOverflowError	plain	true	stackOverflowError()		76	e1f00c52b11b30e0821c5d604a52712615f611949c2a374d8b484f42e7d98144
+M	org.ta4j.core.indicators.MMAIndicatorTest	testAgainstExternalData	plain	true	testAgainstExternalData()		90	39bde478c8075f7cb4db9e861f5f56d3a3e73d094c6b5eb0662e6517a5e19c02
+C	org.ta4j.core.indicators.MassIndexIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/MassIndexIndicatorTest.java
+M	org.ta4j.core.indicators.MassIndexIndicatorTest	setUp		true	setUp()		49	81b254d65c6fed7acfa94e15269ae38f387f21c6d9b36fd0ec60154cdff0bb29
+M	org.ta4j.core.indicators.MassIndexIndicatorTest	massIndexUsing3And8BarCounts	plain	true	massIndexUsing3And8BarCounts()		77	8819e449ed0b516fd335144690694330257c85efa6a09249f466e43912816e3f
+C	org.ta4j.core.indicators.PPOIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/PPOIndicatorTest.java
+M	org.ta4j.core.indicators.PPOIndicatorTest	setUp		true	setUp()		46	61c78c4c7c413c7cb445f4a091e6a3ac0988a00e51572e0136c4bf9b624c0938
+M	org.ta4j.core.indicators.PPOIndicatorTest	getValueWithEma10AndEma20	plain	true	getValueWithEma10AndEma20()		54	cbbab97ead9dc0bb6b94e7790f0c11abedd5f2af10fe5c144b43af5774fe8149
+C	org.ta4j.core.indicators.PVOIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/PVOIndicatorTest.java
+M	org.ta4j.core.indicators.PVOIndicatorTest	setUp		true	setUp()		49	38a92c34a57939fea2e1bce76e52a7d347cd8defadc8ec048eb039915dd5176b
+M	org.ta4j.core.indicators.PVOIndicatorTest	createPvoIndicator	plain	true	createPvoIndicator()		62	994b0b26e1dd46ac9192d1bc07e758b29c380d5d0009be79f507fa0e26cbcb71
+C	org.ta4j.core.indicators.ParabolicSarIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ParabolicSarIndicatorTest.java
+M	org.ta4j.core.indicators.ParabolicSarIndicatorTest	growingBarSeriesTest	plain	true	growingBarSeriesTest()		51	21a23da6c3f80e256c69964e0a94e4caab4d9285c7187361264b960cea9480e5
+M	org.ta4j.core.indicators.ParabolicSarIndicatorTest	startUpAndDownTrendTest	plain	true	startUpAndDownTrendTest()		75	7b52f90f29f147369e657aa151cc58a5adcf0e41fee9bad39bad23f7012a7cb2
+M	org.ta4j.core.indicators.ParabolicSarIndicatorTest	startWithDownAndUpTrendTest	plain	true	startWithDownAndUpTrendTest()		148	13f4f14f3e9f63a0f673b55d4534f889538e91cc4ea819a2007791b4bcd2ec16
+M	org.ta4j.core.indicators.ParabolicSarIndicatorTest	testSameValueForSameIndex	plain	true	testSameValueForSameIndex()		178	d529e6dd284421a2c9453adb6c16f63cf1f347e67c41c3b2d8104d3a306a2f58
+C	org.ta4j.core.indicators.RAVIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RAVIIndicatorTest.java
+M	org.ta4j.core.indicators.RAVIIndicatorTest	setUp		true	setUp()		46	3b81579c201663c3ab3ca471c8f5208c5ecf709a3d40320e95c2ea5e46ff66d6
+M	org.ta4j.core.indicators.RAVIIndicatorTest	ravi	plain	true	ravi()		55	6a1b1c3f15b239521cc8d5091e24533e00fa930b5fd26cc119ab8f635e2d59de
+C	org.ta4j.core.indicators.ROCIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ROCIndicatorTest.java
+M	org.ta4j.core.indicators.ROCIndicatorTest	setUp		true	setUp()		49	b946c61c63171e8d62d3df97dc4016f53ef8e4dd05a8ffd60263bda3d04a752a
+M	org.ta4j.core.indicators.ROCIndicatorTest	getValueWhenBarCountIs12	plain	true	getValueWhenBarCountIs12()		54	a5a03a99e1c2ea8fe2564571544e1302b979b8a8b98202016806b1bfcc2ad504
+C	org.ta4j.core.indicators.RSIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RSIIndicatorTest.java
+M	org.ta4j.core.indicators.RSIIndicatorTest	setUp		true	setUp()		56	e6c4d3da46468101a11392c2a15f0895fb8e0aab5146b2908a256d5c003a5a2f
+M	org.ta4j.core.indicators.RSIIndicatorTest	firstValueShouldBeZero	plain	true	firstValueShouldBeZero()		63	e71809a3236b44524a16881b2ba4619a12c915244d7c7eb972963861f15c57f1
+M	org.ta4j.core.indicators.RSIIndicatorTest	hundredIfNoLoss	plain	true	hundredIfNoLoss()		69	9ab7b38af30c35162c62df0c0d04ecb803f430c4eededed6e2edc089488bebe9
+M	org.ta4j.core.indicators.RSIIndicatorTest	zeroIfNoGain	plain	true	zeroIfNoGain()		76	d0b62a7ac043288b95b962f0a7c34b312c0dcf139284d82825759b1aa2eaa09f
+M	org.ta4j.core.indicators.RSIIndicatorTest	usingBarCount14UsingClosePrice	plain	true	usingBarCount14UsingClosePrice()		83	fe91b64efc215152f49b4676f0437df50157e8671ae782ed30adb936c285a596
+M	org.ta4j.core.indicators.RSIIndicatorTest	xlsTest	plain	true	xlsTest()		99	72c3bec611cab858c421c48c9b49d671bff12c7ba190571e558db4d2fd3b1917
+M	org.ta4j.core.indicators.RSIIndicatorTest	onlineExampleTest	plain	true	onlineExampleTest()		120	2d73e3022df501cd4bdb6b825cfb3e6e32429ae7d3e8d01a2fb50f0d4cbb1c49
+C	org.ta4j.core.indicators.RWIHighIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RWIHighIndicatorTest.java
+M	org.ta4j.core.indicators.RWIHighIndicatorTest	randomWalkIndexHigh	plain	true	randomWalkIndexHigh()		51	e6e78666347b0b97a8247644ec9659a7707112ef159e9e65d080524c8eb121dc
+C	org.ta4j.core.indicators.RWILowIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RWILowIndicatorTest.java
+M	org.ta4j.core.indicators.RWILowIndicatorTest	randomWalkIndexHigh	plain	true	randomWalkIndexHigh()		51	f14cbbf761d1bbb812edc4f624e10b2ab1f0c943239071887ed4f78e1b1b7e35
+C	org.ta4j.core.indicators.SMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/SMAIndicatorTest.java
+M	org.ta4j.core.indicators.SMAIndicatorTest	setUp		true	setUp()		53	dca965ef534691d1451e3d076070fcbf9b6d4eb6946778a7844307d97178ba4e
+M	org.ta4j.core.indicators.SMAIndicatorTest	usingBarCount3UsingClosePrice	plain	true	usingBarCount3UsingClosePrice()		58	70926efc2c0d3731d3a4d4d000eeebbe0d15a1cb5d374a7d755a2006c7aad211
+M	org.ta4j.core.indicators.SMAIndicatorTest	whenBarCountIs1ResultShouldBeIndicatorValue	plain	true	whenBarCountIs1ResultShouldBeIndicatorValue()		77	1c829e743bb7b538431a144291450a87433c5302084ce1c39339f102e8628032
+M	org.ta4j.core.indicators.SMAIndicatorTest	externalData	plain	true	externalData()		85	c44781d25059ab7ba3da4ec3c45d7af75d5ba441fe3a07041ba1c02554d2109f
+C	org.ta4j.core.indicators.StochasticOscillatorDIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/StochasticOscillatorDIndicatorTest.java
+M	org.ta4j.core.indicators.StochasticOscillatorDIndicatorTest	setUp		true	setUp()		48	d730e31143b94da543c2c663eb929c4399e3233c76db41bb53942f6d4ea69d75
+M	org.ta4j.core.indicators.StochasticOscillatorDIndicatorTest	stochasticOscilatorDParam14UsingSMA3AndGenericConstructer	plain	true	stochasticOscilatorDParam14UsingSMA3AndGenericConstructer()		70	34a4086a8cbedc76401361b78ed29f9d8daf6d9dc7e8711d7b513e8201fb3e0b
+M	org.ta4j.core.indicators.StochasticOscillatorDIndicatorTest	stochasticOscilatorDParam14UsingSMA3	plain	true	stochasticOscilatorDParam14UsingSMA3()		82	9062ada0386c07d06481d5ca646777935dc0d507e81c88a56fe98a810ef62bf8
+C	org.ta4j.core.indicators.StochasticOscillatorKIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/StochasticOscillatorKIndicatorTest.java
+M	org.ta4j.core.indicators.StochasticOscillatorKIndicatorTest	setUp		true	setUp()		49	d730e31143b94da543c2c663eb929c4399e3233c76db41bb53942f6d4ea69d75
+M	org.ta4j.core.indicators.StochasticOscillatorKIndicatorTest	stochasticOscilatorKParam14	plain	true	stochasticOscilatorKParam14()		71	4a1724adf57aa654d767bf9a94e865da12e6d990be0ab1b5f0bab74e26092761
+C	org.ta4j.core.indicators.StochasticRSIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/StochasticRSIIndicatorTest.java
+M	org.ta4j.core.indicators.StochasticRSIIndicatorTest	xlsTest	plain	true	xlsTest()		49	66b624d6ec19d9584564a4f7813216ab985022d454028c9c4c1595610e3e488a
+M	org.ta4j.core.indicators.StochasticRSIIndicatorTest	setUp		true	setUp()		60	e6c4d3da46468101a11392c2a15f0895fb8e0aab5146b2908a256d5c003a5a2f
+M	org.ta4j.core.indicators.StochasticRSIIndicatorTest	stochasticRSI	plain	true	stochasticRSI()		67	ca8034155cb19f22a5af283164849a6e1720770348418f02829e16bd5a5e2a86
+C	org.ta4j.core.indicators.TripleEMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/TripleEMAIndicatorTest.java
+M	org.ta4j.core.indicators.TripleEMAIndicatorTest	setUp		true	setUp()		46	70163b889beecb86554be62965031d7929419ffbce35a7ff3fca1ea363a44b90
+M	org.ta4j.core.indicators.TripleEMAIndicatorTest	tripleEMAUsingBarCount5UsingClosePrice	plain	true	tripleEMAUsingBarCount5UsingClosePrice()		53	71282579ba31e0233122c3e326f5c4f1ede620005b5c691a2bfefc387500151b
+C	org.ta4j.core.indicators.UlcerIndexIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/UlcerIndexIndicatorTest.java
+M	org.ta4j.core.indicators.UlcerIndexIndicatorTest	setUp		true	setUp()		46	94d13cf8c8853c91c8f4533d77e957fb21aabe8202069bde08cd7ea6860e3aa8
+M	org.ta4j.core.indicators.UlcerIndexIndicatorTest	ulcerIndexUsingBarCount14UsingIBMData	plain	true	ulcerIndexUsingBarCount14UsingIBMData()		54	898b9ef2f8a817c8bea029dcc3f975513f4dd12dcd15f0c5c44b122b5801e96d
+C	org.ta4j.core.indicators.WMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/WMAIndicatorTest.java
+M	org.ta4j.core.indicators.WMAIndicatorTest	calculate	plain	true	calculate()		43	4fdd8dd877b7dd2b53ddd1db62c4096321835ee74e309aeb6ba56b184fa4e20e
+M	org.ta4j.core.indicators.WMAIndicatorTest	wmaWithBarCountGreaterThanSeriesSize	plain	true	wmaWithBarCountGreaterThanSeriesSize()		57	8abee0b7946b8260724bac1c00180c0e25349ee7b593f791cca3e00d167f9933
+M	org.ta4j.core.indicators.WMAIndicatorTest	wmaUsingBarCount9UsingClosePrice	plain	true	wmaUsingBarCount9UsingClosePrice()		71	30c5dbae366a74a2033f340ef063f271e9e655e0f870c07f9b87598807b0194e
+C	org.ta4j.core.indicators.WilliamsRIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/WilliamsRIndicatorTest.java
+M	org.ta4j.core.indicators.WilliamsRIndicatorTest	setUp		true	setUp()		51	469f804001730f96ea5b143cb66d3ed70d26c37c4aec3cb5a6ba32b8604ce40d
+M	org.ta4j.core.indicators.WilliamsRIndicatorTest	williamsRUsingBarCount5UsingClosePrice	plain	true	williamsRUsingBarCount5UsingClosePrice()		72	8dec7c24dd5c20b605cbcbc9c967ecfb98c3625df304d6116c5cc303c475aaed
+M	org.ta4j.core.indicators.WilliamsRIndicatorTest	williamsRUsingBarCount10UsingClosePrice	plain	true	williamsRUsingBarCount10UsingClosePrice()		87	5929253b97dd7b1b98605391c355588f4b1802fd35c62b3dc9f250bde2cf0cae
+M	org.ta4j.core.indicators.WilliamsRIndicatorTest	valueLessThenBarCount	plain	true	valueLessThenBarCount()		99	bcc7a5ee922b8bb894af5b9d8fb7334a6fcd045c02d66f2857e114c2965d5c27
+C	org.ta4j.core.indicators.XLSIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/XLSIndicatorTest.java
+M	org.ta4j.core.indicators.XLSIndicatorTest	getSeries		true	getSeries()		62	2069808035228ced4b7261a333982c8b10b44fb71070a830fe717ead88044a24
+M	org.ta4j.core.indicators.XLSIndicatorTest	getIndicator		true	getIndicator(Object[])		77	5df5d8ac94b4a1213a4c713a074fa121c2572ec4952e167a4403f088972d93cc
+C	org.ta4j.core.indicators.ZLEMAIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ZLEMAIndicatorTest.java
+M	org.ta4j.core.indicators.ZLEMAIndicatorTest	setUp		true	setUp()		47	9652b47117fc70c920403b279c19a3fab770aa7f6701b322797cfc08309b2725
+M	org.ta4j.core.indicators.ZLEMAIndicatorTest	ZLEMAUsingBarCount10UsingClosePrice	plain	true	ZLEMAUsingBarCount10UsingClosePrice()		52	100ce78db260fb54204fd1d2ad40302ec7d99624e3881874dbbc83535081bcf8
+M	org.ta4j.core.indicators.ZLEMAIndicatorTest	ZLEMAFirstValueShouldBeEqualsToFirstDataValue	plain	true	ZLEMAFirstValueShouldBeEqualsToFirstDataValue()		61	b09d602e43daf004f9df4929d599be7f7ae3b7b49a5641a92c02aee6ef99b687
+M	org.ta4j.core.indicators.ZLEMAIndicatorTest	valuesLessThanBarCountMustBeEqualsToSMAValues	plain	true	valuesLessThanBarCountMustBeEqualsToSMAValues()		67	dbacaeae40c18c659493acb30a12889e419887045bd9c200d81665b6c2f98d4d
+M	org.ta4j.core.indicators.ZLEMAIndicatorTest	smallBarCount	plain	true	smallBarCount()		77	f76cca9a694520a846454c0772c119c3efaa801808eda22e36a4eae6c57ee998
+C	org.ta4j.core.indicators.adx.ADXIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/ADXIndicatorTest.java
+M	org.ta4j.core.indicators.adx.ADXIndicatorTest	externalData	plain	true	externalData()		49	2f35e4e773ccd42a7d43d6862e7d572acd265b547806a23179fa5e85031d342e
+C	org.ta4j.core.indicators.adx.MinusDIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/MinusDIIndicatorTest.java
+M	org.ta4j.core.indicators.adx.MinusDIIndicatorTest	xlsTest	plain	true	xlsTest()		49	b7413adcb0b24ed76446d0abdbd53f6ac872c3225c4aaf3c289b1669d1dd2caf
+C	org.ta4j.core.indicators.adx.MinusDMIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/MinusDMIndicatorTest.java
+M	org.ta4j.core.indicators.adx.MinusDMIndicatorTest	zeroDirectionalMovement	plain	true	zeroDirectionalMovement()		46	207f30d75433a4253208381a155cabbe667269ce34eb0621fafd6b8c525e5f06
+M	org.ta4j.core.indicators.adx.MinusDMIndicatorTest	zeroDirectionalMovement2	plain	true	zeroDirectionalMovement2()		58	42828943e1ee9a0811b1c48e56996126f575bb040e6414720a238a107be0d72f
+M	org.ta4j.core.indicators.adx.MinusDMIndicatorTest	zeroDirectionalMovement3	plain	true	zeroDirectionalMovement3()		70	010d63f7680a585f2ae47291bee8b24757c7bdca2b16455ba12bcfcf35e926f8
+M	org.ta4j.core.indicators.adx.MinusDMIndicatorTest	positiveDirectionalMovement	plain	true	positiveDirectionalMovement()		82	02d923c345e2fdcf84e0ae71f57cee5418f07a19f96056ca5280113974c7418f
+C	org.ta4j.core.indicators.adx.PlusDIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/PlusDIIndicatorTest.java
+M	org.ta4j.core.indicators.adx.PlusDIIndicatorTest	testAgainstExternalData	plain	true	testAgainstExternalData()		49	b9de27be762f019ee6e7bc5d4bc194b52ab8f6d406c7ebe352533bcb26df6496
+C	org.ta4j.core.indicators.adx.PlusDMIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/PlusDMIndicatorTest.java
+M	org.ta4j.core.indicators.adx.PlusDMIndicatorTest	zeroDirectionalMovement	plain	true	zeroDirectionalMovement()		46	a070304ada69b84e59f3b227e346b527465d1c3f5eba748640bf4ec551e5f256
+M	org.ta4j.core.indicators.adx.PlusDMIndicatorTest	zeroDirectionalMovement2	plain	true	zeroDirectionalMovement2()		58	b3b578063147a11b80597655a246deb8453da95a3be0bb35fcd9dfb0e73db63e
+M	org.ta4j.core.indicators.adx.PlusDMIndicatorTest	zeroDirectionalMovement3	plain	true	zeroDirectionalMovement3()		70	3781fa4642e3a89a97dcffe70263fac7dbbe42336cfd9319987ee764697884b7
+M	org.ta4j.core.indicators.adx.PlusDMIndicatorTest	positiveDirectionalMovement	plain	true	positiveDirectionalMovement()		82	c6cab26c60aca66279b459008b5b27cd9718cbb1c956002e06f2fbb690c3e0bb
+C	org.ta4j.core.indicators.aroon.AroonDownIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonDownIndicatorTest.java
+M	org.ta4j.core.indicators.aroon.AroonDownIndicatorTest	init		true	init()		49	ff4fb9ffd14caf3e6faa4d711232ebdbffa3a9accee6eb579ded8cffe475ca0d
+M	org.ta4j.core.indicators.aroon.AroonDownIndicatorTest	upDownAndHigh	plain	true	upDownAndHigh()		75	7f4a3c641167d8dc3ee921fa1d4941ad89ee7cfecbfb9ae75fb5d2a519f16001
+M	org.ta4j.core.indicators.aroon.AroonDownIndicatorTest	onlyNaNValues	plain	true	onlyNaNValues()		95	e97b36ad98b0b3e44b82d5b313ae24b3d0a18fc09a001776065ca123c1027ffd
+M	org.ta4j.core.indicators.aroon.AroonDownIndicatorTest	naNValuesInIntervall	plain	true	naNValuesInIntervall()		108	ae0fa5dd991a4decbbd447400a306c3afb385c65f75414c15f01d929eea73c25
+C	org.ta4j.core.indicators.aroon.AroonFacadeTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonFacadeTest.java
+M	org.ta4j.core.indicators.aroon.AroonFacadeTest	init		true	init()		49	ff4fb9ffd14caf3e6faa4d711232ebdbffa3a9accee6eb579ded8cffe475ca0d
+M	org.ta4j.core.indicators.aroon.AroonFacadeTest	testCreation	plain	true	testCreation()		75	94bbbbe6641b320113bfd1cc0995f65ab081e42c93d0a7a3354ed4123f1a2094
+M	org.ta4j.core.indicators.aroon.AroonFacadeTest	testNumericFacadesSameAsDefaultIndicators	plain	true	testNumericFacadesSameAsDefaultIndicators()		81	4651306692e8a036883b6d43d91236d4d5641753b977b0a819fefba635f0edf6
+C	org.ta4j.core.indicators.aroon.AroonOscillatorIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicatorTest.java
+M	org.ta4j.core.indicators.aroon.AroonOscillatorIndicatorTest	init		true	init()		43	ffa46ffd4f97ea1ceea95ad286c4098e4fe3a69c6808d03c633e778248a8c4e7
+M	org.ta4j.core.indicators.aroon.AroonOscillatorIndicatorTest	test	plain	true	test()		218	dc797d4a678a018413ff28f01abf454e79d4ea686580b6d733e752d5aa25609f
+C	org.ta4j.core.indicators.aroon.AroonUpIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonUpIndicatorTest.java
+M	org.ta4j.core.indicators.aroon.AroonUpIndicatorTest	init		true	init()		42	b4b3f5023e78dd81e6c3fc2f6d511eb5b2848210dc7b374818f08bc2f9f3094a
+M	org.ta4j.core.indicators.aroon.AroonUpIndicatorTest	upAndSlowDown	plain	true	upAndSlowDown()		68	a8311a52fe9e9b2f8e4301b9d28c54663c2bda8e14a8732f790e6aa858304a6c
+M	org.ta4j.core.indicators.aroon.AroonUpIndicatorTest	onlyNaNValues	plain	true	onlyNaNValues()		89	189004fcb9a9394a45b956ee9ce62cf9dfd7ff3473173bc6f4c9bd9573e8cf0c
+M	org.ta4j.core.indicators.aroon.AroonUpIndicatorTest	naNValuesInInterval	plain	true	naNValuesInInterval()		102	d4b17dffe5a2022f02209fc49a4962df8d3b7cbf9e042db1eee77b3cbed8354b
+C	org.ta4j.core.indicators.bollinger.BollingerBandFacadeTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandFacadeTest.java
+M	org.ta4j.core.indicators.bollinger.BollingerBandFacadeTest	testCreation	plain	true	testCreation()		49	b06e0879eacb1c76ae66c3635c796fd00729ab76a07034ffc9dd113efa177042
+M	org.ta4j.core.indicators.bollinger.BollingerBandFacadeTest	testNumericFacadesSameAsDefaultIndicators	plain	true	testNumericFacadesSameAsDefaultIndicators()		66	85a43a14b418a5c20381435870fb403fbffadb985311ca9bd0bf3d33d1244ba0
+C	org.ta4j.core.indicators.bollinger.BollingerBandWidthIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicatorTest.java
+M	org.ta4j.core.indicators.bollinger.BollingerBandWidthIndicatorTest	setUp		true	setUp()		49	a4661d3363dcb40f27fc2027c23d756549cac09f216633000364bb571f530cef
+M	org.ta4j.core.indicators.bollinger.BollingerBandWidthIndicatorTest	bollingerBandWidthUsingSMAAndStandardDeviation	plain	true	bollingerBandWidthUsingSMAAndStandardDeviation()		56	a2bb2b360254edfe15a5862e2599b94439b279506e60b06edb4188aec7e78604
+C	org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicatorTest.java
+M	org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicatorTest	setUp		true	setUp()		53	391c72dfd90e2151e7dbfe49590363a0edaf4a14c7e38276abf176d8e2878506
+M	org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicatorTest	bollingerBandsLowerUsingSMAAndStandardDeviation	plain	true	bollingerBandsLowerUsingSMAAndStandardDeviation()		61	a3f8d8288aa20be651519596f652802c2737727ca7626de93e6f0fc54b2b0614
+C	org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicatorTest.java
+M	org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicatorTest	setUp		true	setUp()		47	dca965ef534691d1451e3d076070fcbf9b6d4eb6946778a7844307d97178ba4e
+M	org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicatorTest	bollingerBandsMiddleUsingSMA	plain	true	bollingerBandsMiddleUsingSMA()		52	2606c061e40a65d043ec79673927e42d10ab84060b356344c1b6a02fc7f334cf
+C	org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicatorTest.java
+M	org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicatorTest	setUp		true	setUp()		53	391c72dfd90e2151e7dbfe49590363a0edaf4a14c7e38276abf176d8e2878506
+M	org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicatorTest	bollingerBandsUpperUsingSMAAndStandardDeviation	plain	true	bollingerBandsUpperUsingSMAAndStandardDeviation()		61	e4ea1499c0e999ca1f0c7821e70dfadac92e833888e5a1cbd7109bbb0d978028
+C	org.ta4j.core.indicators.bollinger.PercentBIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/PercentBIndicatorTest.java
+M	org.ta4j.core.indicators.bollinger.PercentBIndicatorTest	setUp		true	setUp()		48	a4661d3363dcb40f27fc2027c23d756549cac09f216633000364bb571f530cef
+M	org.ta4j.core.indicators.bollinger.PercentBIndicatorTest	percentBUsingSMAAndStandardDeviation	plain	true	percentBUsingSMAAndStandardDeviation()		55	173b34dd23d1fed3451c12a3a51bcf7a5bfd4dda2ce71cb1fbec58114df63d4e
+C	org.ta4j.core.indicators.candles.BearishEngulfingIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicatorTest.java
+M	org.ta4j.core.indicators.candles.BearishEngulfingIndicatorTest	setUp		true	setUp()		51	d8fc22423f8c2327f80ffbd0b735144a7fe1a9403da1eed05f7524d422dbde78
+M	org.ta4j.core.indicators.candles.BearishEngulfingIndicatorTest	getValue	plain	true	getValue()		63	fe716451ab6cd24bde459415b8ef183a8b7208b5362ed0171d44726f4865cd6f
+C	org.ta4j.core.indicators.candles.BearishHaramiIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BearishHaramiIndicatorTest.java
+M	org.ta4j.core.indicators.candles.BearishHaramiIndicatorTest	setUp		true	setUp()		51	4ecbf69575353637d9bbaa0e3d158261548cb6f7ab0135cff00c1ddf4bd58eab
+M	org.ta4j.core.indicators.candles.BearishHaramiIndicatorTest	getValue	plain	true	getValue()		63	2428d45554a570cbe17f94d655683b67326204ecb18e1f6bb07862cbad261623
+C	org.ta4j.core.indicators.candles.BullishEngulfingIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicatorTest.java
+M	org.ta4j.core.indicators.candles.BullishEngulfingIndicatorTest	setUp		true	setUp()		51	f963a1fe55f5220c9689ae400fd90b789007d4d5b2f84106a9ebdcb920fe23b0
+M	org.ta4j.core.indicators.candles.BullishEngulfingIndicatorTest	getValue	plain	true	getValue()		63	17aadf371c24886801a5f62c3cbf800681039391e5ea34e78aa81fad185004be
+C	org.ta4j.core.indicators.candles.BullishHaramiIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BullishHaramiIndicatorTest.java
+M	org.ta4j.core.indicators.candles.BullishHaramiIndicatorTest	setUp		true	setUp()		51	86bea260f1808908703a829cf06837f0fee3bfaf28480fba2cf9e86d90f2607c
+M	org.ta4j.core.indicators.candles.BullishHaramiIndicatorTest	getValue	plain	true	getValue()		63	29c9f879b47e72d1d1b2448b1454d2f0c28e5de43f79d4f5b26b5fe64bbb3139
+C	org.ta4j.core.indicators.candles.DojiIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/DojiIndicatorTest.java
+M	org.ta4j.core.indicators.candles.DojiIndicatorTest	setUp		true	setUp()		51	d125f4a46c73078171e10a648b6180e970618521654671e4dfc0f08d86f2e830
+M	org.ta4j.core.indicators.candles.DojiIndicatorTest	getValueAtIndex0	plain	true	getValueAtIndex0()		64	146558e6038a082ca1b35b33b78b682bdd285020f0b12e3c9cf712aac442696d
+M	org.ta4j.core.indicators.candles.DojiIndicatorTest	getValue	plain	true	getValue()		73	e850976fa3e2dda3e0d5b6aa50f8a3fc9f17ec218086d7975df409906519ebd3
+C	org.ta4j.core.indicators.candles.LowerShadowIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/LowerShadowIndicatorTest.java
+M	org.ta4j.core.indicators.candles.LowerShadowIndicatorTest	setUp		true	setUp()		50	026154e42ddd4994d61bfbe09a118fb1cb7d7f9626e5b08389258311c8b649f0
+M	org.ta4j.core.indicators.candles.LowerShadowIndicatorTest	getValue	plain	true	getValue()		62	1879aaca49d516f10df9543b80aa65eb86a53de7d8c20631d3958ce173a5a87b
+C	org.ta4j.core.indicators.candles.RealBodyIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/RealBodyIndicatorTest.java
+M	org.ta4j.core.indicators.candles.RealBodyIndicatorTest	setUp		true	setUp()		49	026154e42ddd4994d61bfbe09a118fb1cb7d7f9626e5b08389258311c8b649f0
+M	org.ta4j.core.indicators.candles.RealBodyIndicatorTest	getValue	plain	true	getValue()		61	5747b7274b74a150b530eb6b3b77b1375a9917927cffa617385a44522f9b33cb
+C	org.ta4j.core.indicators.candles.ThreeBlackCrowsIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicatorTest.java
+M	org.ta4j.core.indicators.candles.ThreeBlackCrowsIndicatorTest	setUp		true	setUp()		51	fe70b35e97a4f4388e4e82f8e50ca5d147b2516c86fb795b9675c70e6581ba73
+M	org.ta4j.core.indicators.candles.ThreeBlackCrowsIndicatorTest	getValue	plain	true	getValue()		66	9cd59bc4cd457558a1be953980f82cc5bf88f9d1a6ee353409412bc448735356
+C	org.ta4j.core.indicators.candles.ThreeWhiteSoldiersIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicatorTest.java
+M	org.ta4j.core.indicators.candles.ThreeWhiteSoldiersIndicatorTest	setUp		true	setUp()		51	be7ebc19f9c2c28909efc6b55ca27bcf506372a85cc1861799f3a87cbb8e00f0
+M	org.ta4j.core.indicators.candles.ThreeWhiteSoldiersIndicatorTest	getValue	plain	true	getValue()		66	719a62f631e1786e777eb86d52729ae504b89234b9bdc038f4f1705bb2ff284a
+C	org.ta4j.core.indicators.candles.UpperShadowIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/UpperShadowIndicatorTest.java
+M	org.ta4j.core.indicators.candles.UpperShadowIndicatorTest	setUp		true	setUp()		49	026154e42ddd4994d61bfbe09a118fb1cb7d7f9626e5b08389258311c8b649f0
+M	org.ta4j.core.indicators.candles.UpperShadowIndicatorTest	getValue	plain	true	getValue()		61	08e65f040c2c097eb27e737d22a8f1dde80988d7621f8e1935f7411e6f107feb
+C	org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicatorTest.java
+M	org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicatorTest	setUp		true	setUp()		52	7e53dc6bac346772feaa5f90d2525c7425dd0e82cbd90b99ff71d14abd30731a
+M	org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicatorTest	tearDown		true	tearDown()		78	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+M	org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicatorTest	testGetValue	plain	true	testGetValue()		82	8d381002eb410a49357c2a063b744e2a553f35630f5445ad7c913533afdcd542
+M	org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicatorTest	testGetValueWhenTimePeriodIs1	plain	true	testGetValueWhenTimePeriodIs1()		97	fa0e0f719af98f1f0fd6ca51692d5729ae9d51280d4341f06969b8b6f64f853e
+M	org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicatorTest	testGetValueWhenTimePeriodExceedsBarCount	plain	true	testGetValueWhenTimePeriodExceedsBarCount()		112	6c3b8f3c4f9de7ec85277af78f9a96a643945d3aefa577baa27248d419b09798
+C	org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicatorTest.java
+M	org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicatorTest	setUp		true	setUp()		52	7846951576305ef203b4ba87e6dceac7e871376b6b9a4dcf7b9c552389206568
+M	org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicatorTest	tearDown		true	tearDown()		78	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+M	org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicatorTest	testGetValue	plain	true	testGetValue()		82	3911c430306f51d3e3aa793ce37b23dc6a0900e303a77a5f9b8affd6cb547617
+C	org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicatorTest.java
+M	org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicatorTest	setUp		true	setUp()		52	6669aabfc0f79f24e286e94c5df3e1caaf253c84a5cc6a5da01ff4c524746938
+M	org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicatorTest	tearDown		true	tearDown()		78	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+M	org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicatorTest	testGetValue	plain	true	testGetValue()		82	6d80a4ee71ce7bb83101a33e01b3c3b999ed073088bb469a597485cbf28d1b16
+M	org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicatorTest	testGetValueWhenBarCountIs1	plain	true	testGetValueWhenBarCountIs1()		97	df8738f5953215ea08abb43c6eabac1beeccbd0d6a909d4b30ffdf437f4b43fd
+C	org.ta4j.core.indicators.helpers.AmountIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/AmountIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.AmountIndicatorTest	setUp		true	setUp()		48	1097fd575c308099438e40c8cdd248dc605ab4c8123723179306690304fd9509
+M	org.ta4j.core.indicators.helpers.AmountIndicatorTest	indicatorShouldRetrieveBarAmountPrice	plain	true	indicatorShouldRetrieveBarAmountPrice()		54	8be2505932fde27d5a49b780af0f7ce0886bdb1fa84353b300d1e6c22940ea79
+C	org.ta4j.core.indicators.helpers.BooleanTransformIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.BooleanTransformIndicatorTest	setUp		true	setUp()		60	7056cbc98cd82e317db8ff2722e04c45e112381c6c8b2343d5e34eac1c8b7cdc
+M	org.ta4j.core.indicators.helpers.BooleanTransformIndicatorTest	getValue	plain	true	getValue()		89	132fbe385f9c84f1dbe1c330533cf4ae2dbebf39792ab11be25fc138526d800f
+C	org.ta4j.core.indicators.helpers.CloseLocationValueIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.CloseLocationValueIndicatorTest	setUp		true	setUp()		51	74db7112ffcd32b8bf0617a7ba63a55662ed36f46f6c52a2a3bc43e5f9d911c1
+M	org.ta4j.core.indicators.helpers.CloseLocationValueIndicatorTest	getValue	plain	true	getValue()		66	b69be75dc8021c8667447394166d3764deac67613bb5dbb197aa454de4bdaed9
+M	org.ta4j.core.indicators.helpers.CloseLocationValueIndicatorTest	returnZeroIfHighEqualsLow	plain	true	returnZeroIfHighEqualsLow()		76	5e2a55301fcd00bc7c40aedd1d09583f00238e39b9c2ea7c3ff0ab256cd47172
+C	org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ClosePriceDifferenceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicatorTest	setUp		true	setUp()		49	3f39b092e3bbb8ab8e53c6386216f63f4e0ba13aba88c20140ee8862e03c6d11
+M	org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicatorTest	indicatorShouldRetrieveBarDifference	plain	true	indicatorShouldRetrieveBarDifference()		55	5662483ac8f0e5a87a9507d441f36e2a8f05605b06ef3b0ff7568a500c9b8dae
+C	org.ta4j.core.indicators.helpers.ClosePriceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ClosePriceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.ClosePriceIndicatorTest	setUp		true	setUp()		47	2563fe9eb3de3c5697fd5297dc0c5c400b3d91efb70366bdcc9af4976c431f3c
+M	org.ta4j.core.indicators.helpers.ClosePriceIndicatorTest	indicatorShouldRetrieveBarClosePrice	plain	true	indicatorShouldRetrieveBarClosePrice()		53	bd67cb8be9cf66fe9a3d5eb859d4dedd2cdbc988a80f529fad0bca769571f27d
+C	org.ta4j.core.indicators.helpers.ClosePriceRatioIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ClosePriceRatioIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.ClosePriceRatioIndicatorTest	setUp		true	setUp()		49	5c6d862ce3e35fa3a4af5e477f3a4980cbe1a443d6190bd1ac84b4c6b8de5922
+M	org.ta4j.core.indicators.helpers.ClosePriceRatioIndicatorTest	indicatorShouldRetrieveBarVariation	plain	true	indicatorShouldRetrieveBarVariation()		55	367f47753f31c8ee412eea27ef4637ab8e9a6d642c76b619c89745c3f426ccb4
+C	org.ta4j.core.indicators.helpers.CombineIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/CombineIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.CombineIndicatorTest	setUp		true	setUp()		53	57b32b478ae0d9e575d6a1b85bc5b50b4b30a83cb5a8ed763784f01a641eef99
+M	org.ta4j.core.indicators.helpers.CombineIndicatorTest	testAllDefaultMathCombineFunctions	plain	true	testAllDefaultMathCombineFunctions()		67	19054e89a39141c89d4d1487bbb448f487036415101b8112d616caa10f5d83b5
+M	org.ta4j.core.indicators.helpers.CombineIndicatorTest	testDifferenceIndicator	plain	true	testDifferenceIndicator()		77	46b5911c60ce55676b9da5699b74b091357aec90fb62b0b20e9a8a6ff548c851
+C	org.ta4j.core.indicators.helpers.ConstantIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ConstantIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.ConstantIndicatorTest	setUp		true	setUp()		37	f3408c9c7bb09822384abe7b0d81f846edd381f9d9914e18fbbe56669960aa35
+M	org.ta4j.core.indicators.helpers.ConstantIndicatorTest	constantIndicator	plain	true	constantIndicator()		43	d5ce3a09cb86bc8fd4123e79c4b9ff4b736806547b7a776b703c213119edc377
+C	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	setUp		true	setUp()		64	dee88fbfefb6fbbf9374188c774995e92529c69fed0f7bd9d35639a27fb3b9d3
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	isSatisfied	plain	true	isSatisfied()		107	097bfdfa3dafa6574faf53c49cac7b90acea335f8d056ff351cfa51eb2be52af
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testPositiveConvergent		true	testPositiveConvergent()		122	39228106534cca5142f364aee6b8470e5cb1e8711beacfff771463cbdf353524
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testNegativeConvergent		true	testNegativeConvergent()		135	fda2f8145caeec322b4485ba5033073b1557abe624de6e7b31eb1a2b59095b24
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testPositiveDivergent		true	testPositiveDivergent()		148	67c2d19515bd0eaa7565685ec6f40ce6ba0472997a4b1299347b1ec52ad95aa8
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testNegativeDivergent		true	testNegativeDivergent()		161	b832c2394879df1930a032767adcd262484c700a6a60855fc0c9825b17dad192
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testPositiveConvergentStrict		true	testPositiveConvergentStrict()		174	c636d64f1d606606d5bfbcb83a6730ce142b893b0bf8b1a50bc081fa5a0a2428
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testNegativeConvergentStrict		true	testNegativeConvergentStrict()		187	b89929a82792ba8ef79b77956f31846a9b896a77421387c1004eef175e11af64
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testPositiveDivergentStrict		true	testPositiveDivergentStrict()		200	25200a924e6f41f41afdda115f556461f348455c8f119540ac6fe6bf274143c8
+M	org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicatorTest	testNegativeDivergentStrict		true	testNegativeDivergentStrict()		213	0f6a5d81aec9ff03db0624d150784e0ec59f9771ec8207d6cded77cac92882cf
+C	org.ta4j.core.indicators.helpers.DateTimeIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/DateTimeIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.DateTimeIndicatorTest	test	plain	true	test()		51	a81344f845e10e8a9d20e7a8821dd7918914d889c4354c79670f85a7ee0bc967
+C	org.ta4j.core.indicators.helpers.DifferencePercentageIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.DifferencePercentageIndicatorTest	getValueWithoutThreshold	plain	true	getValueWithoutThreshold()		45	6d44c737b85233b4882506dac4260ec214dc831ea4770889d3f5648d3d4568fb
+M	org.ta4j.core.indicators.helpers.DifferencePercentageIndicatorTest	getValueWithNumThreshold	plain	true	getValueWithNumThreshold()		61	61091b43a39bd2dba090044f64c5925a226c60cf04862d5e17a1dfdfad4cb2f2
+M	org.ta4j.core.indicators.helpers.DifferencePercentageIndicatorTest	getValueWithNumberThreshold	plain	true	getValueWithNumberThreshold()		82	45820497bed37421d3ba69001fbd2922727f32a67e9648945bdf5fc5672f7be9
+C	org.ta4j.core.indicators.helpers.FixedIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/FixedIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.FixedIndicatorTest	getValueOnFixedDecimalIndicator	plain	true	getValueOnFixedDecimalIndicator()		35	2e574d1f4a323140a83699599295501d6157cdb0e8196c050a4e62f919156d0c
+M	org.ta4j.core.indicators.helpers.FixedIndicatorTest	getValueOnFixedBooleanIndicator	plain	true	getValueOnFixedBooleanIndicator()		50	457029cecff55724bd0585c5a43afeb5d39ee0b5deaaa7f671b49d54a6104029
+C	org.ta4j.core.indicators.helpers.GainIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/GainIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.GainIndicatorTest	setUp		true	setUp()		46	59d064278c69fd04eddf7ce58b64c3a388afd6d6737d298566f62a9161611475
+M	org.ta4j.core.indicators.helpers.GainIndicatorTest	gainUsingClosePrice	plain	true	gainUsingClosePrice()		51	1cca31c66e9f6b45cf44e1533636d4d521bd3db74a7454900afa442c9a998ad3
+C	org.ta4j.core.indicators.helpers.HighPriceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/HighPriceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.HighPriceIndicatorTest	setUp		true	setUp()		47	c3b1f8ef82cdb58377918795ef9fe6db026566c0e0ff2af7b0c48fae3c417651
+M	org.ta4j.core.indicators.helpers.HighPriceIndicatorTest	indicatorShouldRetrieveBarHighPrice	plain	true	indicatorShouldRetrieveBarHighPrice()		54	4547d4b8b703ca0076a564b3061e8b733379b6c75392d48a9dc0329c48e1244b
+C	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/HighestValueIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	setUp		true	setUp()		50	c907ece53e76919e5823a779d4e876c9e41e66e1ee741aefe45c2549410da32c
+M	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	highestValueUsingBarCount5UsingClosePrice	plain	true	highestValueUsingBarCount5UsingClosePrice()		55	357486cbf74040012b47e05426b1f2bb6a13011af3da8dd250d1871435186583
+M	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	firstHighestValueIndicatorValueShouldBeEqualsToFirstDataValue	plain	true	firstHighestValueIndicatorValueShouldBeEqualsToFirstDataValue()		70	0f9a222f65f17d1399d86d1409eb3fcbd9db06daa1c444728bb8347cf21c1953
+M	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	highestValueIndicatorWhenBarCountIsGreaterThanIndex	plain	true	highestValueIndicatorWhenBarCountIsGreaterThanIndex()		76	309519664e0bbdf8f3e2c6e80ffe9a96c56561d22dd80b5a3870b5eea694139b
+M	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	onlyNaNValues	plain	true	onlyNaNValues()		82	a5f2bb0130fea09125e11dc99db7351b65876bb53e8afc8025283ada5328aa43
+M	org.ta4j.core.indicators.helpers.HighestValueIndicatorTest	naNValuesInIntervall	plain	true	naNValuesInIntervall()		95	cd6f1131a507c425e1eda283051d2f8329b622893a4dbef8c589d6ddf455a7a5
+C	org.ta4j.core.indicators.helpers.LossIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/LossIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.LossIndicatorTest	setUp		true	setUp()		46	59d064278c69fd04eddf7ce58b64c3a388afd6d6737d298566f62a9161611475
+M	org.ta4j.core.indicators.helpers.LossIndicatorTest	lossUsingClosePrice	plain	true	lossUsingClosePrice()		51	28e5ad8c848e6b07d2c544849c9508bced13d88d2d0d976efdcd27d6d5b0bbe3
+C	org.ta4j.core.indicators.helpers.LowPriceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/LowPriceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.LowPriceIndicatorTest	setUp		true	setUp()		47	fd8b98465d7b02bca1f463e95762874ccc58e7265fa1cf60fe9c62639ad60877
+M	org.ta4j.core.indicators.helpers.LowPriceIndicatorTest	indicatorShouldRetrieveBarLowPrice	plain	true	indicatorShouldRetrieveBarLowPrice()		53	2b0ca14354f9ef385cd1d7ca85bc97f5a3576194316298e06dc552afdb390afd
+C	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/LowestValueIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	setUp		true	setUp()		50	8a277554814fea0711fce35164800290eaac1cd3c572429113ca30e09dc627e0
+M	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	lowestValueIndicatorUsingBarCount5UsingClosePrice	plain	true	lowestValueIndicatorUsingBarCount5UsingClosePrice()		55	f77c9a85f471da7ae0a2700a43b274a5e45f1163a243c392d52592ea87969c75
+M	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	lowestValueIndicatorValueShouldBeEqualsToFirstDataValue	plain	true	lowestValueIndicatorValueShouldBeEqualsToFirstDataValue()		73	b6371c514be8523efa0c272b1694c19f8fb5b7e5fd54586b3239d3741a858502
+M	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	lowestValueIndicatorWhenBarCountIsGreaterThanIndex	plain	true	lowestValueIndicatorWhenBarCountIsGreaterThanIndex()		79	b737bc149d231b979f078f9af62faa4bad33f58b37eace95d666c09a9d8c6d9e
+M	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	onlyNaNValues	plain	true	onlyNaNValues()		85	f9a6c4637c99350ea7bbe754a89e858661edd02f6dd2bac5e4d3d79fbfee1f0d
+M	org.ta4j.core.indicators.helpers.LowestValueIndicatorTest	naNValuesInIntervall	plain	true	naNValuesInIntervall()		98	8d7b1cb0c266908ab280c8ef75d156e05e3c2344259a67d86632d26fcaeddee1
+C	org.ta4j.core.indicators.helpers.MedianPriceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/MedianPriceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.MedianPriceIndicatorTest	setUp		true	setUp()		51	b1e54a57e1e7964bce08dcfb5686b3bab0ca263584d6d16c15a950f23fa4f866
+M	org.ta4j.core.indicators.helpers.MedianPriceIndicatorTest	indicatorShouldRetrieveBarClosePrice	plain	true	indicatorShouldRetrieveBarClosePrice()		70	6abcb60bd8338ae4bcb9ea83208884632c4c71ffe95ab8de6df3d2560d54e756
+C	org.ta4j.core.indicators.helpers.NumndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/NumndicatorTest.java
+M	org.ta4j.core.indicators.helpers.NumndicatorTest	setUp		true	setUp()		48	eda42180e54a3e0df43bbd971cf3516a309348a08e1be171d3bdbf7664e25f4c
+M	org.ta4j.core.indicators.helpers.NumndicatorTest	indicatorShouldRetrieveBarClosePrice	plain	true	indicatorShouldRetrieveBarClosePrice()		54	bd67cb8be9cf66fe9a3d5eb859d4dedd2cdbc988a80f529fad0bca769571f27d
+C	org.ta4j.core.indicators.helpers.OpenPriceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/OpenPriceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.OpenPriceIndicatorTest	setUp		true	setUp()		47	1710585d3431d5ffef52801fd3e036c8272a0028b30aaae2cb00ed692583ba4d
+M	org.ta4j.core.indicators.helpers.OpenPriceIndicatorTest	indicatorShouldRetrieveBarOpenPrice	plain	true	indicatorShouldRetrieveBarOpenPrice()		53	daadd2e0e6ee35b478eb344c9d2b52ac8b5814ce5ee20fdb7db33c83b5ef12ce
+C	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/PreviousValueIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	setUp		true	setUp()		52	80094e411cb78c7b5f34ca26a1ef6d3ea52d1f70b903e7167e0f8f0114a58364
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	shouldBePreviousValueFromIndicator	plain	true	shouldBePreviousValueFromIndicator()		73	487d33392070e1b5053366695ed8ab2f8be3ac8b4530065f7991819207beedf9
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	shouldBeNthPreviousValueFromIndicator	plain	true	shouldBeNthPreviousValueFromIndicator()		99	04c01f54e3b47d488e70e4663a4f9325d81c8168b7ae02a21aaa5b8afcbc5e12
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	testWithN		false	testWithN(int)		106	2caed99552a97915b3ba7681a3ff83bfed4489d825195bac02ff4171b22f898a
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	testToStringMethodWithN1	plain	true	testToStringMethodWithN1()		127	2b9217a7b65c5c18c56b73df57e3bb20a376b88122103270b3d2377d9ed33888
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	testToStringMethodWithNGreaterThen1	plain	true	testToStringMethodWithNGreaterThen1()		137	d253542e009ea5830643b869e6d4c6d95abe22e8928ba73937e8a78f224292d9
+M	org.ta4j.core.indicators.helpers.PreviousValueIndicatorTest	testPreviousValueIndicatorWithNonPositiveN	plain	true	testPreviousValueIndicatorWithNonPositiveN()		147	c392bf45551434b8a5a40fa567c0e11e375086e1d06bf67ac87704328e07181d
+C	org.ta4j.core.indicators.helpers.RunningTotalIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/RunningTotalIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.RunningTotalIndicatorTest	setUp		true	setUp()		45	85a35961955ddfcfd4da020ffa97b10d3ce8c85286b2531c98db0ec556c79c04
+M	org.ta4j.core.indicators.helpers.RunningTotalIndicatorTest	calculate	plain	true	calculate()		50	b6f123d3016d52c9b21dd4542d622f6aa3d76cbda228c69330056a8d5b4d0edc
+C	org.ta4j.core.indicators.helpers.SumIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/SumIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.SumIndicatorTest	setUp		true	setUp()		38	4a7a932279d75a02c160dd1c4f258c3ffd8f5521ff402fcd82fd32070f361b07
+M	org.ta4j.core.indicators.helpers.SumIndicatorTest	getValue	plain	true	getValue()		49	7ad77300ebd2f08ee5ea5808001760a0e496500bce5216171dcff806e6383d33
+C	org.ta4j.core.indicators.helpers.TRIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TRIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.TRIndicatorTest	getValue	plain	true	getValue()		46	8863c5062e42707d4093501bb68f21442e36735005ebed73abb65fe9024c394a
+C	org.ta4j.core.indicators.helpers.TradeCountIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TradeCountIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.TradeCountIndicatorTest	setUp		true	setUp()		47	c6e8deb16b03134bc5a7362333e69c0d05727343113ceae55a74b4a6ab36ed67
+M	org.ta4j.core.indicators.helpers.TradeCountIndicatorTest	indicatorShouldRetrieveBarTrade	plain	true	indicatorShouldRetrieveBarTrade()		53	d8f38443b83b9cb68d22f0e6e9b54662c7250376a63d7b31c7f6d6a5812c32c0
+C	org.ta4j.core.indicators.helpers.TransformIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TransformIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.TransformIndicatorTest	setUp		true	setUp()		56	25465a181560678d6feb9d68b4e646e232df8c0328a28298f4edbbcadaf4a809
+M	org.ta4j.core.indicators.helpers.TransformIndicatorTest	getValue	plain	true	getValue()		74	95ffef5447ddbb6d8423273e9cf03824ac83e6668c5553525dfdc49eb6d259e7
+C	org.ta4j.core.indicators.helpers.TypicalPriceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TypicalPriceIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.TypicalPriceIndicatorTest	setUp		true	setUp()		49	74e11c0b8da5fd013b8cd564e055f4f03c2f7c47b6b94fec67f78e34b310a11e
+M	org.ta4j.core.indicators.helpers.TypicalPriceIndicatorTest	indicatorShouldRetrieveBarHighPrice	plain	true	indicatorShouldRetrieveBarHighPrice()		55	5c692f01db42ee7d2e9ba57b1f10ce97356f4ccd9a36741a78862dbe028d2a37
+C	org.ta4j.core.indicators.helpers.UnstableIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/UnstableIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.UnstableIndicatorTest	setUp		true	setUp()		48	db07915cca60f3c511ab2668909f022fc90f6b79e84f1df456bc67cf01af973f
+M	org.ta4j.core.indicators.helpers.UnstableIndicatorTest	indicatorReturnsNanBeforeUnstableBars	plain	true	indicatorReturnsNanBeforeUnstableBars()		55	e774327cc122111f941cab696a290fe424731996b6b43e14ca64f50f2b0c6d99
+M	org.ta4j.core.indicators.helpers.UnstableIndicatorTest	indicatorNotReturnsNanAfterUnstableBars	plain	true	indicatorNotReturnsNanAfterUnstableBars()		62	43b2c7504064095e2921b444d37c0d308a68adef5ec5d53f5ce25096db493aaa
+C	org.ta4j.core.indicators.helpers.VolumeIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/VolumeIndicatorTest.java
+M	org.ta4j.core.indicators.helpers.VolumeIndicatorTest	indicatorShouldRetrieveBarVolume	plain	true	indicatorShouldRetrieveBarVolume()		48	c1e08c525f100e0e634667c71664d5a93166117d9ec7d104ca0973960cb3ef83
+M	org.ta4j.core.indicators.helpers.VolumeIndicatorTest	sumOfVolume	plain	true	sumOfVolume()		57	577e581777db3025afa399f90a5882a3377ead5ccd10c396f1cd5057f1e9d8d9
+C	org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicatorTest.java
+M	org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicatorTest	bar		false	bar(int)		48	0cf4eaa9e46c7a16aac1df12784b8cc10f80455f4cb5ebe3baf7e863e645ff91
+M	org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicatorTest	barSeries		false	barSeries(int)		52	50703ae76526083eba62aba8affb3a6bc8d1fe319d7fe771c04091e06f38e814
+M	org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicatorTest	testCalculateWithDefaultParam	plain	true	testCalculateWithDefaultParam()		57	615aa4e784505a430374f208070d8092b74b95a6a4f666b9097b608c476b5d6b
+M	org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicatorTest	testCalculateWithSpecifiedValue	plain	true	testCalculateWithSpecifiedValue()		92	6900013d3225f9677bd2ccef7907ab7c15f52570a28ac1275df0e9020a6a8b8e
+C	org.ta4j.core.indicators.ichimoku.IchimokuIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ichimoku/IchimokuIndicatorTest.java
+M	org.ta4j.core.indicators.ichimoku.IchimokuIndicatorTest	setUp		true	setUp()		51	2c05c42ff4b5a6bd2ed510d7f06919204a72de5e6e12d77a93b138bc304b5c0c
+M	org.ta4j.core.indicators.ichimoku.IchimokuIndicatorTest	ichimoku	plain	true	ichimoku()		77	047d5ed0c38e9c8c481dedad348ab2457213dbdc2a672caceae05cdeace04a13
+C	org.ta4j.core.indicators.keltner.KeltnerChannelFacadeTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelFacadeTest.java
+M	org.ta4j.core.indicators.keltner.KeltnerChannelFacadeTest	setUp		true	setUp()		52	2d763f10fe10418ea23c22c414dec23ae43b3d8c0939bfbebed7c856499f724b
+M	org.ta4j.core.indicators.keltner.KeltnerChannelFacadeTest	testCreation	plain	true	testCreation()		93	0e87f3aa6a7b04acaea3dabad7645e0c93b0859eb88478aeed0e5d63a2dafdae
+M	org.ta4j.core.indicators.keltner.KeltnerChannelFacadeTest	testNumericFacadesSameAsDefaultIndicators	plain	true	testNumericFacadesSameAsDefaultIndicators()		99	fc9f60323dfd1e6a6b7157c7ffaf5c5000a7237e02ad1b7dbf43b7a1ab0d2aee
+C	org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicatorTest.java
+M	org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicatorTest	setUp		true	setUp()		51	28b23baf95a385c5c131522f21807dcf27d5da499337b555355ee2dc1e88776d
+M	org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicatorTest	keltnerChannelLowerIndicatorTest	plain	true	keltnerChannelLowerIndicatorTest()		92	33fb90024b82891ad3db5228c1e26eabf7e6e12d551c8b487e1384c6ec258307
+C	org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicatorTest.java
+M	org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicatorTest	setUp		true	setUp()		51	28b23baf95a385c5c131522f21807dcf27d5da499337b555355ee2dc1e88776d
+M	org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicatorTest	keltnerChannelMiddleIndicatorTest	plain	true	keltnerChannelMiddleIndicatorTest()		92	b007d35b0f5a470087759f82f26a41ff7e391bb9c1b15ece6818cd479a2fd161
+C	org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicatorTest.java
+M	org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicatorTest	setUp		true	setUp()		51	28b23baf95a385c5c131522f21807dcf27d5da499337b555355ee2dc1e88776d
+M	org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicatorTest	keltnerChannelUpperIndicatorTest	plain	true	keltnerChannelUpperIndicatorTest()		92	3864179772bfd7969d45a1268047437193d0e18b575390314894bacfdf673d79
+C	org.ta4j.core.indicators.numeric.NumericIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	plus	plain	true	plus()		62	8f7bb82abf33f54b48c884116b2b907ac6a255ded9ffc74f8a387e2f7d78e4c3
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	minus	plain	true	minus()		75	bd382549f4f3b51a72c6aeb8c1fd2390bfc28359b3b67bf308805caf35c619d1
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	multipliedBy	plain	true	multipliedBy()		88	acd0a2d200d9c59c9691bde91c6218b6274fd7c9a9742fe07a8aeb422126038a
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	dividedBy	plain	true	dividedBy()		101	e088ee142ab89f2b80a907245936e43bd7fc623448c458898b47bfc70c4623c7
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	max	plain	true	max()		118	2201e8f8f37c1e67acf23317bb7e5517f47fc03ac68ea71ac57d5cc0d4108625
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	min	plain	true	min()		131	435fc300489c2bdd2529e372db84d773445300ad9525fdacb8334e55aa228283
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	sqrt	plain	true	sqrt()		144	3b76c843d86ca08069148a06ad6faa7edf8a2806beae1bf34245064d222bfa63
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	abs	plain	true	abs()		153	d67f37446cdb80d2aea04d129024ddd28005b95cac60eddc215652f33ec235ef
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	squared	plain	true	squared()		161	389ae4abab30e4a13fc09f61f2aeaae637401cdcdebdc7cd21152912ec747733
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	indicators	plain	true	indicators()		169	788a6615ce9a20da738a09cb325bf02e9679f8369c9688f44af3ab2fb9986003
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	rules	plain	true	rules()		186	8b65d846bbb8b24b8523e426f11b2c2806ab8fe850c526ca5e51f70e9767df53
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	previous	plain	true	previous()		200	c7162564e059db0ea71eafb1a0420d809443727070c6266e5b39a78121534530
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	getValue	plain	true	getValue()		210	9b692e34c5bdea87d5aee6880549dcfe3329af7ed1051640e66a9c0534e4d8ad
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	barSeries	plain	true	barSeries()		219	67f77def56df72ac7489032b2eed5d1ddf591a1ce08db61128b1be217df9a269
+M	org.ta4j.core.indicators.numeric.NumericIndicatorTest	numOf	plain	true	numOf()		225	bf65a481187d192d80de609ac768ec216e368afbd2a0bf5914d6dd358ce4deda
+C	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/pivotpoints/PivotPointIndicatorTest.java
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	initDataForDailyBarCount		true	initDataForDailyBarCount()		57	6d1fc096bf0196fd62b6d4adb796a0456ab8bd481708871aa4682134273a7994
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	initDataForWeeklyBarCount		true	initDataForWeeklyBarCount()		624	a9db10b4c166d49063ae928d122989dc751530a224d6e5694892588d9707362d
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	initDataForMonthlyBarCount		true	initDataForMonthlyBarCount()		818	de4339ca06ffebc0a8fdfb0bc5fb7eeb6aeae3d5ad06f286f64ad4576ee195f5
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	initDataForYearlyBarCount		true	initDataForYearlyBarCount()		995	36ea9e981539cd2bb88beef704e7cbb29e92c2d860b849a97e3f9e3dcab42d8d
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	PivotPointTestDailyBarCount	plain	true	PivotPointTestDailyBarCount()		1295	16580e9b6b29f069a2c1d973cc8134ca735441f9a11c5790e0a3f67465f0847d
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	PivotPointTestWeeklyBarCount	plain	true	PivotPointTestWeeklyBarCount()		1360	f9fe63f119c17f76728b3640970e0684aad5e9a1d0d545296d8dc9ca7c08ee93
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	PivotPointTestMonthlyBarCount	plain	true	PivotPointTestMonthlyBarCount()		1431	2da60b96f6dd7c3e001fdf3dd5df3f4a00f1024bf771b2dd3d806b6e551a0313
+M	org.ta4j.core.indicators.pivotpoints.PivotPointIndicatorTest	PivotPointTestYearlyBarCount	plain	true	PivotPointTestYearlyBarCount()		1487	80a7a52fd1d308e1df56ed6eda2f6221d9b7af95a29fffb279a83d9e95a8d8a9
+C	org.ta4j.core.indicators.statistics.CorrelationCoefficientIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.CorrelationCoefficientIndicatorTest	setUp		true	setUp()		51	bccde6dcfe767c9cc68c4d6f26068c7138e83adfc2a742a7da1e013efb1a0bd9
+M	org.ta4j.core.indicators.statistics.CorrelationCoefficientIndicatorTest	usingBarCount5UsingClosePriceAndVolume	plain	true	usingBarCount5UsingClosePriceAndVolume()		81	7a35d451e065ac76871007cc807b104e829c2aa3238b673babaea2d0e1642963
+C	org.ta4j.core.indicators.statistics.CovarianceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/CovarianceIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.CovarianceIndicatorTest	setUp		true	setUp()		50	bccde6dcfe767c9cc68c4d6f26068c7138e83adfc2a742a7da1e013efb1a0bd9
+M	org.ta4j.core.indicators.statistics.CovarianceIndicatorTest	usingBarCount5UsingClosePriceAndVolume	plain	true	usingBarCount5UsingClosePriceAndVolume()		79	00f205deb386503ffc206473727f146dd21b19e65907a291c82e7f20d6234f6f
+M	org.ta4j.core.indicators.statistics.CovarianceIndicatorTest	firstValueShouldBeZero	plain	true	firstValueShouldBeZero()		105	721a1f46dd08a55957bab5976dd2425d52879b7ff32b809e65f388a127a3fe46
+M	org.ta4j.core.indicators.statistics.CovarianceIndicatorTest	shouldBeZeroWhenBarCountIs1	plain	true	shouldBeZeroWhenBarCountIs1()		111	96c2babaabb6fff9f1b29cd2801a3bde6da76ace4a274ee24695c7760da42e9b
+C	org.ta4j.core.indicators.statistics.MeanDeviationIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.MeanDeviationIndicatorTest	setUp		true	setUp()		47	6629d838fa237e65e2e0837c77102d01d34e7e5d088421f152f6208289c03ae8
+M	org.ta4j.core.indicators.statistics.MeanDeviationIndicatorTest	meanDeviationUsingBarCount5UsingClosePrice	plain	true	meanDeviationUsingBarCount5UsingClosePrice()		52	bf2d2ba145a745f85e7223f085781f6d621094cb17970071ea8289c1604615e6
+M	org.ta4j.core.indicators.statistics.MeanDeviationIndicatorTest	firstValueShouldBeZero	plain	true	firstValueShouldBeZero()		63	3d5d5a4c52e00eb3ead97159835abaced436c97fe167da598a158f96c01f5467
+M	org.ta4j.core.indicators.statistics.MeanDeviationIndicatorTest	meanDeviationShouldBeZeroWhenBarCountIs1	plain	true	meanDeviationShouldBeZeroWhenBarCountIs1()		69	a4a5fd164e003f902d5aaf24b3521aef2ec5d211046b17fdc84559422a7b1dbf
+C	org.ta4j.core.indicators.statistics.PearsonCorrelationIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.PearsonCorrelationIndicatorTest	setUp		true	setUp()		50	bccde6dcfe767c9cc68c4d6f26068c7138e83adfc2a742a7da1e013efb1a0bd9
+M	org.ta4j.core.indicators.statistics.PearsonCorrelationIndicatorTest	test	plain	true	test()		80	a80fd5175d80865c2901e14a008a4ffc0772f55c872368efb5394c0b78a9c66a
+C	org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicatorTest	setUp		true	setUp()		57	80406ce177330d0f18105e7859b4f36fbf234c65ec7835d80793a8d76c4e6ed7
+M	org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicatorTest	testGetTotalReturn	plain	true	testGetTotalReturn()		66	c36bcb24f36dbca0198c2f6ca386d95ab5477044222b12633d626fb712853868
+M	org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicatorTest	testCalculation	plain	true	testCalculation()		73	3f43d6d13d784b7af7e1710ad0f7c29d6f8aa3ffebb7a4a2609da07aa1a5dead
+M	org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicatorTest	testStrategies	plain	true	testStrategies()		88	7fdad8a4ad2f399d8f0fe88ab3274d29bf6cd7b083f3c8d0bf50904f6bccc29c
+C	org.ta4j.core.indicators.statistics.SigmaIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/SigmaIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.SigmaIndicatorTest	setUp		true	setUp()		47	b70ef311e48360e003a7614fba12b284ff82983b8d0c3462b30520093155b6ae
+M	org.ta4j.core.indicators.statistics.SigmaIndicatorTest	test	plain	true	test()		52	279ac9325c36b04904fb9af56530a14ad1664695eb33f2ba0d8a102b19dd21b6
+C	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	setUp		true	setUp()		48	200ef991e885834bd95078cfadb4a9e0054c208eae4bcf2320e898286cc33e08
+M	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	notComputedLinearRegression	plain	true	notComputedLinearRegression()		54	4db763c17be7709cd19fc07bfcc640a4bfeff962fa3aff6a5f7b3421be882156
+M	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	calculateLinearRegressionWithLessThan2ObservationsReturnsNaN	plain	true	calculateLinearRegressionWithLessThan2ObservationsReturnsNaN()		68	067604ec5562c315dd51d9b8ee7704d1af0423701747de3185d45ac93fbe4ced
+M	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	calculateLinearRegressionOn4Observations	plain	true	calculateLinearRegressionOn4Observations()		82	323cf8c4af91b0e058aeb4a72b11a5011c7f8762b9d3d251b8e88b7970af175a
+M	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	calculateLinearRegression	plain	true	calculateLinearRegression()		100	d696b72afbf7e8025227f33df98c0108c59b8772644b56d449118801b542361e
+M	org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicatorTest	buildSimpleRegression		false	buildSimpleRegression(double[])		114	3bcabcdb4924c3fb16287a49205fe4bbd53fde81c614203afa5b54c9beb3dbf7
+C	org.ta4j.core.indicators.statistics.StandardDeviationIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.StandardDeviationIndicatorTest	setUp		true	setUp()		46	f52c712363d269ea81b5ea005d8fa267b487501dd7fc6a1c4811c2facb82332c
+M	org.ta4j.core.indicators.statistics.StandardDeviationIndicatorTest	standardDeviationUsingBarCount4UsingClosePrice	plain	true	standardDeviationUsingBarCount4UsingClosePrice()		51	ea53f424a0ab345e96da2fbf9fa74c14cb6887666aeddbf6d7ae8b2554efdfeb
+M	org.ta4j.core.indicators.statistics.StandardDeviationIndicatorTest	standardDeviationShouldBeZeroWhenBarCountIs1	plain	true	standardDeviationShouldBeZeroWhenBarCountIs1()		68	9887f031ecd2a02f7d0c0c8a07dc6f10a29cb8e3d4a66050b11f3fe3a020f107
+C	org.ta4j.core.indicators.statistics.StandardErrorIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/StandardErrorIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.StandardErrorIndicatorTest	setUp		true	setUp()		46	e630617e35aa9fb00ec5e305680197950d5affa38e28f3145360ba8b853e4c09
+M	org.ta4j.core.indicators.statistics.StandardErrorIndicatorTest	usingBarCount5UsingClosePrice	plain	true	usingBarCount5UsingClosePrice()		51	9910322bf793b02306a3cb724cd4e191f44cea9b5874251a6812f37a087a41d9
+M	org.ta4j.core.indicators.statistics.StandardErrorIndicatorTest	shouldBeZeroWhenBarCountIs1	plain	true	shouldBeZeroWhenBarCountIs1()		69	f15a5477dd442b3dbc0379f9bc9bae6aa7985c8d8a756c5d6f9a32697e29e718
+C	org.ta4j.core.indicators.statistics.VarianceIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/VarianceIndicatorTest.java
+M	org.ta4j.core.indicators.statistics.VarianceIndicatorTest	setUp		true	setUp()		46	f52c712363d269ea81b5ea005d8fa267b487501dd7fc6a1c4811c2facb82332c
+M	org.ta4j.core.indicators.statistics.VarianceIndicatorTest	varianceUsingBarCount4UsingClosePrice	plain	true	varianceUsingBarCount4UsingClosePrice()		51	0d77c1e48ea4078165626f3d47bfe15ad095c6f5c124dfd31805e3b9981f9ebc
+M	org.ta4j.core.indicators.statistics.VarianceIndicatorTest	firstValueShouldBeZero	plain	true	firstValueShouldBeZero()		68	3d9c6c247bf6406125382207ea432c2dea66e08efbcf95a72c65414ef664b488
+M	org.ta4j.core.indicators.statistics.VarianceIndicatorTest	varianceShouldBeZeroWhenBarCountIs1	plain	true	varianceShouldBeZeroWhenBarCountIs1()		74	8d89829c2c64651c16f63f93aeac87cab3ea4abea9fc148a2b067a3ef19103c8
+M	org.ta4j.core.indicators.statistics.VarianceIndicatorTest	varianceUsingBarCount2UsingClosePrice	plain	true	varianceUsingBarCount2UsingClosePrice()		81	04da581d54f99122995ce558540a4160e2c9e0da6064d360e26a4310b428aa29
+C	org.ta4j.core.indicators.supertrend.SuperTrendIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/supertrend/SuperTrendIndicatorTest.java
+M	org.ta4j.core.indicators.supertrend.SuperTrendIndicatorTest	setUp		true	setUp()		51	78b34cec33fd6ea23770aa4bbfd189782d8893d6e61fee902dbe8ebdbf7e575c
+M	org.ta4j.core.indicators.supertrend.SuperTrendIndicatorTest	testSuperTrendIndicator	plain	true	testSuperTrendIndicator()		80	7f38f595bd914201cd66e00e308933b57c4eab26b3a082633d1ecc823cd7e41a
+M	org.ta4j.core.indicators.supertrend.SuperTrendIndicatorTest	regressionTestOnZeroSuperTrendValueWhenClosePriceIsEqualToPreviousSuperTrendValue	plain	true	regressionTestOnZeroSuperTrendValueWhenClosePriceIsEqualToPreviousSuperTrendValue()		89	fa2f24d5ac47122afb79dcd273033100d2fd6063e5898e9ec960ef73e044a89e
+C	org.ta4j.core.indicators.supertrend.SuperTrendLowerBandIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/supertrend/SuperTrendLowerBandIndicatorTest.java
+M	org.ta4j.core.indicators.supertrend.SuperTrendLowerBandIndicatorTest	setUp		true	setUp()		51	a41d780077ca5503c878a1e03893c27b65201f9a8dd08a3fa82f3a2110aef17b
+M	org.ta4j.core.indicators.supertrend.SuperTrendLowerBandIndicatorTest	testSuperTrendLowerBandIndicator	plain	true	testSuperTrendLowerBandIndicator()		74	dce896a9c642a838ed3be5769f70f84db60d0c47d76f62b9f6552cc73d5e8d4a
+C	org.ta4j.core.indicators.supertrend.SuperTrendUpperBandIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/supertrend/SuperTrendUpperBandIndicatorTest.java
+M	org.ta4j.core.indicators.supertrend.SuperTrendUpperBandIndicatorTest	setUp		true	setUp()		51	a41d780077ca5503c878a1e03893c27b65201f9a8dd08a3fa82f3a2110aef17b
+M	org.ta4j.core.indicators.supertrend.SuperTrendUpperBandIndicatorTest	testSuperTrendUpperBandIndicator	plain	true	testSuperTrendUpperBandIndicator()		74	85a0530d9b0d5a9fb9779ac994006caad0669b1a5bbe11390938daf66c9c2f1c
+C	org.ta4j.core.indicators.volume.AccumulationDistributionIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/AccumulationDistributionIndicatorTest.java
+M	org.ta4j.core.indicators.volume.AccumulationDistributionIndicatorTest	accumulationDistribution	plain	true	accumulationDistribution()		48	9b19217d4c0b0a1d2923307995900f370e008bc8a5bf1a70a8a053ae50a4c8d7
+C	org.ta4j.core.indicators.volume.ChaikinMoneyFlowIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicatorTest.java
+M	org.ta4j.core.indicators.volume.ChaikinMoneyFlowIndicatorTest	getValue	plain	true	getValue()		36	ea626c3b857a1d194c5a5dc51250ef0f708a703e54730d0e9b9150dcb2c9aa5a
+C	org.ta4j.core.indicators.volume.ChaikinOscillatorIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicatorTest.java
+M	org.ta4j.core.indicators.volume.ChaikinOscillatorIndicatorTest	getValue	plain	true	getValue()		47	9c2ce7566635a846fafd3551c95b46c486f198b8b62777effad9aec5be09d9ff
+C	org.ta4j.core.indicators.volume.IIIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/IIIIndicatorTest.java
+M	org.ta4j.core.indicators.volume.IIIIndicatorTest	intradayIntensityIndex	plain	true	intradayIntensityIndex()		47	83967cb438b00aa522d5ddd2d336814d77b3ca14b818c61c82b0fbee8f75fdba
+C	org.ta4j.core.indicators.volume.MVWAPIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/MVWAPIndicatorTest.java
+M	org.ta4j.core.indicators.volume.MVWAPIndicatorTest	setUp		true	setUp()		49	89b7984483e957917af3f202b7b8ad9783d33e677998f9c0909fa82035bcf41f
+M	org.ta4j.core.indicators.volume.MVWAPIndicatorTest	mvwap	plain	true	mvwap()		76	25cc4ade59b355baaa7889c9bb47cca0f75763b1360911029e83394afb06fd59
+C	org.ta4j.core.indicators.volume.MoneyFlowIndexIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicatorTest.java
+M	org.ta4j.core.indicators.volume.MoneyFlowIndexIndicatorTest	givenBarCount_whenGetValueForIndexWithinBarCount_thenReturnNaN	plain	true	givenBarCount_whenGetValueForIndexWithinBarCount_thenReturnNaN()		53	3868fbbd39159482d087178daadc7bbc3e39eb3d44cb2d7ea9213c067b79d777
+M	org.ta4j.core.indicators.volume.MoneyFlowIndexIndicatorTest	givenBarCountOf1_whenGetValue_thenReturnEdgeCaseCorrectedValue	plain	true	givenBarCountOf1_whenGetValue_thenReturnEdgeCaseCorrectedValue()		75	63830a7bf5fa8edb9d3ffef2ee2f19d0f63f22ff9a2becbce6fe405e8178a659
+M	org.ta4j.core.indicators.volume.MoneyFlowIndexIndicatorTest	givenBarCountOf3_whenGetValue_thenReturnCorrectValue	plain	true	givenBarCountOf3_whenGetValue_thenReturnCorrectValue()		97	405204cd270e17f92f90370b9722bdd7175c7de412c9894ef070a718a16c294c
+C	org.ta4j.core.indicators.volume.NVIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/NVIIndicatorTest.java
+M	org.ta4j.core.indicators.volume.NVIIndicatorTest	getValue	plain	true	getValue()		47	4b9ac201b20ad5c4ff5f63048302475772073148c51c04d1a7e4c3cd26634ed6
+C	org.ta4j.core.indicators.volume.OnBalanceVolumeIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/OnBalanceVolumeIndicatorTest.java
+M	org.ta4j.core.indicators.volume.OnBalanceVolumeIndicatorTest	getValue	plain	true	getValue()		47	1280d9d3972c3855df48dec4a55d05ba588b6eaf9af2654197b274de2060a39a
+M	org.ta4j.core.indicators.volume.OnBalanceVolumeIndicatorTest	stackOverflowError	plain	true	stackOverflowError()		67	d7f8d0889b0e483d951b90e955c5835851379500ddd7eabc04d5cc0fd61e3a14
+C	org.ta4j.core.indicators.volume.PVIIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/PVIIndicatorTest.java
+M	org.ta4j.core.indicators.volume.PVIIndicatorTest	getValue	plain	true	getValue()		47	0b0181f268c106a17b9d33b579429af5d991f83f0056ac7da2c470d522478dcb
+C	org.ta4j.core.indicators.volume.ROCVIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/ROCVIndicatorTest.java
+M	org.ta4j.core.indicators.volume.ROCVIndicatorTest	setUp		true	setUp()		50	4486a507cbde561ee9feead2c8df70a710380718d2fa4d7a5f308aa85981d7ea
+M	org.ta4j.core.indicators.volume.ROCVIndicatorTest	test	plain	true	test()		66	c735a82b24fe833f3809aafd98d8e38d510017317af566b73112620bbdec3f8c
+C	org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicatorTest.java
+M	org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicatorTest	setUp		true	setUp()		54	3468f15014f3dc8f35346e1cd8eb1b8e643870769467d6af292d85d1291ff74b
+M	org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicatorTest	givenBarCount_whenGetValueForIndexWithinBarCount_thenReturnNaN	plain	true	givenBarCount_whenGetValueForIndexWithinBarCount_thenReturnNaN()		70	5d1984a03d6c7fc0401f6129b5df6dc9854b188a4858bc142af7cc05d7250a58
+M	org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicatorTest	givenBarCountOf2_whenGetValue_thenReturnCorrectValue	plain	true	givenBarCountOf2_whenGetValue_thenReturnCorrectValue()		83	4c9ebfe070318caac26f7d2f62299d3a2898b7f4b7a5cab043bbbe0d2eb3aacf
+M	org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicatorTest	givenBarCountOf3_whenGetValue_thenReturnCorrectValue	plain	true	givenBarCountOf3_whenGetValue_thenReturnCorrectValue()		99	af2dece898c672f6f8861ea7a5043ecb829fa70474f7b40f3e6e19f02c1c4570
+C	org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicatorTest.java
+M	org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicatorTest	setUp		true	setUp()		52	b78c389d94f5c35a828d500b90827d3159c4d1ebe5bcbe23d5015a11d8ebe1d3
+M	org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicatorTest	whenIndexIsLessThanBarCount_returnNaN	plain	true	whenIndexIsLessThanBarCount_returnNaN()		65	96309c88d8d0d2fea003bd7d54ac0ff93c4ab2d62680216176ff947c75ba9338
+M	org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicatorTest	whenBarCountIsOne_returnCorrectValue	plain	true	whenBarCountIsOne_returnCorrectValue()		77	92a25394b8b8e00ac753551898b896eb3649cf1dad7137440d8329f6f2165205
+M	org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicatorTest	whenBarCountIsThree_returnCorrectValue	plain	true	whenBarCountIsThree_returnCorrectValue()		89	478cfb35674e6a7c9804845a062125061c7feabf4d0691607c111f2c968b18c1
+C	org.ta4j.core.indicators.volume.VWAPIndicatorTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/VWAPIndicatorTest.java
+M	org.ta4j.core.indicators.volume.VWAPIndicatorTest	setUp		true	setUp()		50	03dd9a251573d4ba63488ad3cb5acb5d7d86246a6f9fbf92be9db818cd6aa6e6
+M	org.ta4j.core.indicators.volume.VWAPIndicatorTest	vwap	plain	true	vwap()		78	ef556596abb4b016fa73e146c2ed67d5b39a80a3588eac2061abc46d59fdc47a
+C	org.ta4j.core.mocks.MockAnalysisCriterion	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockAnalysisCriterion.java
+M	org.ta4j.core.mocks.MockAnalysisCriterion	calculate		true	calculate(BarSeries, Position)		56	a334e30a80d5cb885d56d4473ddaf71808d7140c17f25af69f7ec1efbc44bd59
+M	org.ta4j.core.mocks.MockAnalysisCriterion	calculate		true	calculate(BarSeries, TradingRecord)		67	a334e30a80d5cb885d56d4473ddaf71808d7140c17f25af69f7ec1efbc44bd59
+M	org.ta4j.core.mocks.MockAnalysisCriterion	betterThan		true	betterThan(Num, Num)		80	17c001dbd2c04b276bc15a8af460cd7611450ef8a02a5064ebfe34dafd74e8ba
+M	org.ta4j.core.mocks.MockAnalysisCriterion	getSeries		true	getSeries()		85	728eb235c8dee40374d792338b97a86d5998ee82d97cbaf49c6f914adb2dde20
+C	org.ta4j.core.mocks.MockBar	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockBar.java
+M	org.ta4j.core.mocks.MockBar	getTrades		true	getTrades()		76	62c1e835b50cc7cc80afc21db8d670154c5f9f62a78555fddfdfc31c202c7847
+C	org.ta4j.core.mocks.MockBarSeries	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockBarSeries.java
+M	org.ta4j.core.mocks.MockBarSeries	doublesToBars		false	doublesToBars(Function<Number, Num>, List<Double>)		66	5049aa459d37051f9c54ede3e4f1d9f072c9afbf0a3bfd268780bb50b05eecea
+M	org.ta4j.core.mocks.MockBarSeries	doublesToBars		false	doublesToBars(Function<Number, Num>, double[])		74	9258baab20047e8c99d2e9abb9b2219ad4958f436babce2a86ff1de823fe2e13
+M	org.ta4j.core.mocks.MockBarSeries	doublesAndTimesToBars		false	doublesAndTimesToBars(Function<Number, Num>, double[], ZonedDateTime[])		82	6b970a27c5ffc0c5f7d39eae746805ee951fb8417245c74f8681620f497cbfc3
+M	org.ta4j.core.mocks.MockBarSeries	timesToBars		false	timesToBars(Function<Number, Num>, ZonedDateTime[])		93	f0e6e6e5aaddb791cfeb2c95932352cb4e43abc6519014fe9b7b2ccf89ce64a4
+M	org.ta4j.core.mocks.MockBarSeries	arbitraryBars		false	arbitraryBars(Function<Number, Num>)		102	4f315a9c805edbe14d4d2fad54e7311db3244f3f1369f37c38a263d64054c144
+C	org.ta4j.core.mocks.MockIndicator	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockIndicator.java
+M	org.ta4j.core.mocks.MockIndicator	getValue		true	getValue(int)		54	dde3467c64fad7f70c1d99906e4a6c6dce0702a01fd2b125422c01024c686dd3
+M	org.ta4j.core.mocks.MockIndicator	getUnstableBars		true	getUnstableBars()		59	71450af6462dcee295e9d88cab76ae5d6aaaa239e871f4da75ac1c52d55f0e6f
+M	org.ta4j.core.mocks.MockIndicator	getBarSeries		true	getBarSeries()		69	728eb235c8dee40374d792338b97a86d5998ee82d97cbaf49c6f914adb2dde20
+M	org.ta4j.core.mocks.MockIndicator	numOf		true	numOf(Number)		74	3d03eac8069e1ea60387a1e3a7883d452730a2923ed0dd8009e491023202bddf
+C	org.ta4j.core.mocks.MockTradingRecord	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockTradingRecord.java
+C	org.ta4j.core.num.DecimalNumTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/num/DecimalNumTest.java
+M	org.ta4j.core.num.DecimalNumTest	testPowOverflowExponent	plain	true	testPowOverflowExponent()		101	fa271b3dd5af4eff58b55547cba5692ac325c7b0cea0d491e5dc584ed3361f7b
+M	org.ta4j.core.num.DecimalNumTest	testPowLargeBase	plain	true	testPowLargeBase()		108	ccf4557bdfad46d3e367005c00bca368b432adea19b6baf43ec27a14ac979eab
+M	org.ta4j.core.num.DecimalNumTest	decimalNumTest	plain	true	decimalNumTest()		120	a93916af5621c11a6752ba705251171c22d7f1583dba5adc773ef93d4c1b7882
+M	org.ta4j.core.num.DecimalNumTest	init		false	init()		126	65dc2ce4a431e53e0dd7af20f5445119710a49e6a848e8f3bc775d58c82a13f9
+M	org.ta4j.core.num.DecimalNumTest	test		true	test()		178	b67a079b32d70ef751bfb857edc8fb1317ca7159921195f082b1751b17ae8e68
+M	org.ta4j.core.num.DecimalNumTest	calculateSuperPrecision		false	calculateSuperPrecision()		259	984d0762ba1a2cb08747541fe1d5f8056ba8afe73ad4d6defb7fb03258417a59
+M	org.ta4j.core.num.DecimalNumTest	calculatePrecision		false	calculatePrecision()		266	72b763c00b8bd909933e93081ccac1d502134a11b03476629027a1903397ce1a
+M	org.ta4j.core.num.DecimalNumTest	calculatePrecision32		false	calculatePrecision32()		273	12568f6b949527e281454d21bedef86bf09aaafd93ebea68189f548a4308091b
+M	org.ta4j.core.num.DecimalNumTest	calculateDouble		false	calculateDouble()		280	e85f5a53c61029a63e31cc474757e48431ca5e9be4bb1659278a96d0766e11bc
+M	org.ta4j.core.num.DecimalNumTest	calculateLowPrecision		false	calculateLowPrecision()		287	dd8274caa0480af394029577ff4405d3d02ecfc40718b80ec6aaa2725376c4b8
+M	org.ta4j.core.num.DecimalNumTest	testValueOfForFloatNaNShouldThrowNumberFormatException	plain	true	testValueOfForFloatNaNShouldThrowNumberFormatException()		294	a3c8e7e4c2168282e3e100b6110d11dd93f6eba334b2d896293539fe47f801cf
+M	org.ta4j.core.num.DecimalNumTest	testValueOfForDoubleNaNShouldThrowNumberFormatException	plain	true	testValueOfForDoubleNaNShouldThrowNumberFormatException()		299	222b59f33295c692d8e742d923cd18125843159c775c669633bc608a3e13cfc2
+M	org.ta4j.core.num.DecimalNumTest	testEqualsDecimalNumWithDoubleNum	plain	true	testEqualsDecimalNumWithDoubleNum()		304	7e2e66f814a34355fbe13bf8fb1fdb73b6c0c48c8d0fa67a7807dd95fabf9772
+C	org.ta4j.core.num.DoubleNumTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/num/DoubleNumTest.java
+M	org.ta4j.core.num.DoubleNumTest	testEqualsDoubleNumWithDecimalNum	plain	true	testEqualsDoubleNumWithDecimalNum()		33	fde66b7d791f559e6366a38fe13994064df6f57e6de2eac1e5b7d3f841fb1ac7
+M	org.ta4j.core.num.DoubleNumTest	testZeroEquals	plain	true	testZeroEquals()		41	25c37a61cc8a33bd484a782f11438f3d3bdecbdb26d1444de9eb3c57fb312fed
+C	org.ta4j.core.num.NumTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/num/NumTest.java
+M	org.ta4j.core.num.NumTest	testZero	plain	true	testZero()		57	c69cbdd5995d96c5bc21b63c92d627cd792976554556485ddc788cb1e1816f7d
+M	org.ta4j.core.num.NumTest	testOne	plain	true	testOne()		68	31dc2419aa211a2c031afe91c993c2876b93cbfd4e7ed8cc783d875b207089c5
+M	org.ta4j.core.num.NumTest	testHundred	plain	true	testHundred()		79	970251a66f2d0d6db9630e552fc541b5bc3db2bcfee9b85c08e280cb56f13790
+M	org.ta4j.core.num.NumTest	testStringNumFail	plain	true	testStringNumFail()		90	d0874451810402e746619c7c8da12809bace2d2c2f32df1b46bedc5651f2e8db
+M	org.ta4j.core.num.NumTest	testStringNumPass	plain	true	testStringNumPass()		95	3a8e3428dfccc9dcee377e8c5e74514ba96f309dc945f2ccf0ddf09cd948fb6a
+M	org.ta4j.core.num.NumTest	testDecimalNumPrecision	plain	true	testDecimalNumPrecision()		100	fd4070791185da4955392301970037d530ea6544bc8bc2f46a17ca37dc9bee05
+M	org.ta4j.core.num.NumTest	testDecimalNumOffset	plain	true	testDecimalNumOffset()		119	9e97eb389dde9e1a472baa0068a8de0bbd73b8ea339dafbf27fbfeec7ac8bc42
+M	org.ta4j.core.num.NumTest	testValueOf	plain	true	testValueOf()		146	ffd49381bf450611361c3dcdbbf84f15f59d080e24bd4d215f5f72aa017ceb8f
+M	org.ta4j.core.num.NumTest	testMultiplicationSymmetrically	plain	true	testMultiplicationSymmetrically()		157	05a9288169875bf99c78b37726d414d45ee6826bd5107b359361d22ffaf6806c
+M	org.ta4j.core.num.NumTest	testFailDifferentNumsAdd	plain	true	testFailDifferentNumsAdd()		170	2438d1c987175b400baf08b14bc90dd92badaae5710dfe1d85b68056b82ed61f
+M	org.ta4j.core.num.NumTest	testFailDifferentNumsCompare	plain	true	testFailDifferentNumsCompare()		177	44238ee2709ee1a34f572b6e5e2bb12ced241a8d9eac0fb1097da2728bc3d7c7
+M	org.ta4j.core.num.NumTest	testFailNaNtoInt	plain	true	testFailNaNtoInt()		184	595cff9c4b0c3e7792d368d3ceb52dcc57c136bd38ea8518b62e1759b683908a
+M	org.ta4j.core.num.NumTest	testFailNaNtoLong	plain	true	testFailNaNtoLong()		189	1d5c7eb9e1b9ad93d3242721f3ef457d1dede786dd408a8e7db3c3ba0d0223e2
+M	org.ta4j.core.num.NumTest	testNaN	plain	true	testNaN()		194	3b8e769f1412f4e017e4d2df4723414a851b827038294eaea9ca6a8431cb3087
+M	org.ta4j.core.num.NumTest	testArithmetic	plain	true	testArithmetic()		233	ef0d629ff2fa496e6b998abf5f6c64daf173439d0ce694eb474d02aeaa88d17b
+M	org.ta4j.core.num.NumTest	sqrtOfBigInteger	plain	true	sqrtOfBigInteger()		279	63cd78ddd16b8b4146e0bd75b565e9ab9b2c9a7d19cc8c3f0f6462a8af838b80
+M	org.ta4j.core.num.NumTest	sqrtOfBigDouble	plain	true	sqrtOfBigDouble()		289	160e1f7b99dfb7455a8059eb026a1f0b3977474bda5c273d353a8c5e6a385031
+M	org.ta4j.core.num.NumTest	sqrtOfNegativeDouble	plain	true	sqrtOfNegativeDouble()		297	a80e90b61f43bf075b98ada73396539dda5d198068eb2311894e9abc180d605c
+M	org.ta4j.core.num.NumTest	sqrtOfZero	plain	true	sqrtOfZero()		303	c051a5cfccfa445dbae9a95b92830735e1d107efabb4c1481e77681ac2b49136
+M	org.ta4j.core.num.NumTest	sqrtLudicrousPrecision	plain	true	sqrtLudicrousPrecision()		309	0480f67aeeb80768bc01d3921f4fb5e2870036b6cb915fe194d76b4853177775
+M	org.ta4j.core.num.NumTest	sqrtOddExponent	plain	true	sqrtOddExponent()		347	57469c63e0c01952a03ffe6de74e1bad5a1a3897705e73239d3f08172474faa8
+M	org.ta4j.core.num.NumTest	testSerialization	plain	true	testSerialization()		354	a6b82a313192049bdeeb56afebb9309009eaa2f346249406d30dfa14cd9ba8fc
+M	org.ta4j.core.num.NumTest	serializeDeserialize		false	serializeDeserialize(Num)		360	b3ec18341c3cd0be1f16a20669a60b2a34332ee140fa24d3687ca8601560c655
+C	org.ta4j.core.rules.AndRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/AndRuleTest.java
+M	org.ta4j.core.rules.AndRuleTest	setUp		true	setUp()		38	9b823f9669e78997d96abfc75cdeff8afed99bdd568e6692358d9f0a6164d211
+M	org.ta4j.core.rules.AndRuleTest	isSatisfied	plain	true	isSatisfied()		44	17700217b420cc28cf2c4223f87248ab9feff41aa301a008a4939ece27558d90
+C	org.ta4j.core.rules.BooleanIndicatorRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/BooleanIndicatorRuleTest.java
+M	org.ta4j.core.rules.BooleanIndicatorRuleTest	setUp		true	setUp()		39	0262b0ce87076d49dfe501982258856e9fdf4e84df54477632c574890b219730
+M	org.ta4j.core.rules.BooleanIndicatorRuleTest	isSatisfied	plain	true	isSatisfied()		45	de39da0ef6343a3b20f25a804623e97c6a7a844c11321e98db822489ab6a9134
+C	org.ta4j.core.rules.BooleanRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/BooleanRuleTest.java
+M	org.ta4j.core.rules.BooleanRuleTest	setUp		true	setUp()		37	9b823f9669e78997d96abfc75cdeff8afed99bdd568e6692358d9f0a6164d211
+M	org.ta4j.core.rules.BooleanRuleTest	isSatisfied	plain	true	isSatisfied()		43	f9f34f7869f085c638e720b73e590cd04823880c540ee8bb82dc269a7aa280b1
+C	org.ta4j.core.rules.ChainRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/ChainRuleTest.java
+M	org.ta4j.core.rules.ChainRuleTest	setUp		true	setUp()		42	8288eb3478a5f08e3f2a6512f5e0a101048a5686547ff29799c3d639890a2f14
+M	org.ta4j.core.rules.ChainRuleTest	isSatisfied	plain	true	isSatisfied()		53	a6c0b4a5369a073ba816a15851e845b8111bc1f6a320577473e34e04f2401103
+C	org.ta4j.core.rules.CrossedDownIndicatorRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/CrossedDownIndicatorRuleTest.java
+M	org.ta4j.core.rules.CrossedDownIndicatorRuleTest	setUp		true	setUp()		41	fc3906ed75bc7db5540b9b46c1fd7e6a91ad99e2d176b97b24ef455df732a72c
+M	org.ta4j.core.rules.CrossedDownIndicatorRuleTest	isSatisfied	plain	true	isSatisfied()		46	8b4acdf017887050bbcc906888c07be9d088ddc960634d4667d9cf5a35f88c3b
+M	org.ta4j.core.rules.CrossedDownIndicatorRuleTest	onlyThresholdBetweenFirstBarAndLastBar	plain	true	onlyThresholdBetweenFirstBarAndLastBar()		61	45164aa8c0fff0af88204b727d4907c702581a0dd41ea4c48b9e73c502fe5fec
+M	org.ta4j.core.rules.CrossedDownIndicatorRuleTest	repeatedlyHittingThresholdAfterCrossDown	plain	true	repeatedlyHittingThresholdAfterCrossDown()		72	04efb7acca2f518e4de09b06d557e3d4c81dc4ef91304149c9abbf88ad651bd0
+C	org.ta4j.core.rules.CrossedUpIndicatorRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/CrossedUpIndicatorRuleTest.java
+M	org.ta4j.core.rules.CrossedUpIndicatorRuleTest	setUp		true	setUp()		41	fc3906ed75bc7db5540b9b46c1fd7e6a91ad99e2d176b97b24ef455df732a72c
+M	org.ta4j.core.rules.CrossedUpIndicatorRuleTest	isSatisfied	plain	true	isSatisfied()		46	2562ce0d92bec5c983cc62b69f00c5406785c4f8248e072c3f511e141e5997c6
+M	org.ta4j.core.rules.CrossedUpIndicatorRuleTest	onlyThresholdBetweenFirstBarAndLastBar	plain	true	onlyThresholdBetweenFirstBarAndLastBar()		61	163abb3b8943c8a0bf4f26b69990af8dfc28b4e5e2baf2ca422274faf14a39ab
+M	org.ta4j.core.rules.CrossedUpIndicatorRuleTest	repeatedlyHittingThresholdAfterCrossUp	plain	true	repeatedlyHittingThresholdAfterCrossUp()		73	d28636346b24d55a352f99d8cab3d01b054742eeb719d9cee8088a1143aacb15
+C	org.ta4j.core.rules.DayOfWeekRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/DayOfWeekRuleTest.java
+M	org.ta4j.core.rules.DayOfWeekRuleTest	isSatisfied	plain	true	isSatisfied()		47	fa0208cbc5ed595e139acc01a360e7f74e9da56474c5727fc23e5be806ca70f4
+C	org.ta4j.core.rules.FixedRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/FixedRuleTest.java
+M	org.ta4j.core.rules.FixedRuleTest	isSatisfied	plain	true	isSatisfied()		33	23a62fadffa416df9f24c7561ed5d9a10cd7aef4dabf6080b44cffa3e8348f0c
+C	org.ta4j.core.rules.InPipeRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/InPipeRuleTest.java
+M	org.ta4j.core.rules.InPipeRuleTest	setUp		true	setUp()		41	befd1c13fcc24ab600d46993366e1d581f9a20256bdb7ea6f1b96a56b756b4a1
+M	org.ta4j.core.rules.InPipeRuleTest	isSatisfied	plain	true	isSatisfied()		48	d5ecffffe0d806c3508588fbc6a4cf57037b1722543acd0ebbfdfb9d0dcf8e2a
+C	org.ta4j.core.rules.InSlopeRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/InSlopeRuleTest.java
+M	org.ta4j.core.rules.InSlopeRuleTest	setUp		true	setUp()		42	ac1288458118a2554e24bc37a27309ac08bd517929a4f295976654a1ccaebd78
+M	org.ta4j.core.rules.InSlopeRuleTest	isSatisfied	plain	true	isSatisfied()		50	a51ea4fa7a855a44e379f0d152930f289de7d576f13c327fc792e7cc79faff5a
+C	org.ta4j.core.rules.IsEqualRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsEqualRuleTest.java
+M	org.ta4j.core.rules.IsEqualRuleTest	setUp		true	setUp()		41	cc102aceacb3eec48b5bddc755913f05bcfdc9e917a28a982058a47139b8bdf6
+M	org.ta4j.core.rules.IsEqualRuleTest	isSatisfied	plain	true	isSatisfied()		48	f6ec7c9f1618f01cee6bfe1716fe8f06725ac80224ec257a746728e133d61a67
+C	org.ta4j.core.rules.IsFallingRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsFallingRuleTest.java
+M	org.ta4j.core.rules.IsFallingRuleTest	setUp		true	setUp()		41	14ad0e3f2c8eb729ec082403aa3f06bc327b2d984d943218cd9519f029d3fb37
+M	org.ta4j.core.rules.IsFallingRuleTest	isSatisfied	plain	true	isSatisfied()		48	c0ff9b1eb346e29ea4acffe8777ce7274e0ddd8c40566c278f477c3fdb1f58a3
+C	org.ta4j.core.rules.IsHighestRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsHighestRuleTest.java
+M	org.ta4j.core.rules.IsHighestRuleTest	setUp		true	setUp()		41	4d75b4b85de846e092725fccd9ef4107342aeb56c779a85e41477193a787a8b5
+M	org.ta4j.core.rules.IsHighestRuleTest	isSatisfied	plain	true	isSatisfied()		48	71a804822392f4288a67bb986a8b89e9987c45762f45742116248e3c0fe98ea8
+C	org.ta4j.core.rules.IsLowestRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsLowestRuleTest.java
+M	org.ta4j.core.rules.IsLowestRuleTest	setUp		true	setUp()		41	cc7d01708046c55f2f4ec762722103a93f354a3b3ae1a80b38657245ab815fcd
+M	org.ta4j.core.rules.IsLowestRuleTest	isSatisfied	plain	true	isSatisfied()		48	63558dee993e59842fdc887708c2bd6093e632ebaa38cd42c113d9dfd652744e
+C	org.ta4j.core.rules.IsRisingRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsRisingRuleTest.java
+M	org.ta4j.core.rules.IsRisingRuleTest	setUp		true	setUp()		41	049e2e4f99eb6592f95c999b8c4a709e057d8fdd631222f7dea0e255e0ac5488
+M	org.ta4j.core.rules.IsRisingRuleTest	isSatisfied	plain	true	isSatisfied()		48	8336b81e787d2c53a78ac0ddd36e5f3b554e06ec5902bd998107963f81ac1455
+C	org.ta4j.core.rules.JustOnceRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/JustOnceRuleTest.java
+M	org.ta4j.core.rules.JustOnceRuleTest	setUp		true	setUp()		36	98ba084cdb3787d42790a3920be257a6f5ce84fa62e855aa996081db99e1c31d
+M	org.ta4j.core.rules.JustOnceRuleTest	isSatisfied	plain	true	isSatisfied()		41	5b1c1b034b0eeb775691c01a58af15242467882f34c86bb17e6fe400f3fafd9d
+M	org.ta4j.core.rules.JustOnceRuleTest	isSatisfiedInReverseOrder	plain	true	isSatisfiedInReverseOrder()		50	2e349e61b70a72576c43cb6fcd71a8144c459df473fcd024964077d51e493744
+M	org.ta4j.core.rules.JustOnceRuleTest	isSatisfiedWithInnerSatisfiedRule	plain	true	isSatisfiedWithInnerSatisfiedRule()		58	c8abe3d60b73c7dc613000af73162da5bd4719af1534f48b33f6de6639f5f379
+M	org.ta4j.core.rules.JustOnceRuleTest	isSatisfiedWithInnerNonSatisfiedRule	plain	true	isSatisfiedWithInnerNonSatisfiedRule()		67	9d7a94a0271affd2c67880e9ff541157eff1fba07af0410d053dcc13d9edd57b
+M	org.ta4j.core.rules.JustOnceRuleTest	isSatisfiedWithInnerRule	plain	true	isSatisfiedWithInnerRule()		76	66d2bd985e86a470ff36adba6c6845b746a1da299f870813da5ba7b5f43e97b3
+C	org.ta4j.core.rules.NotRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/NotRuleTest.java
+M	org.ta4j.core.rules.NotRuleTest	setUp		true	setUp()		38	9b823f9669e78997d96abfc75cdeff8afed99bdd568e6692358d9f0a6164d211
+M	org.ta4j.core.rules.NotRuleTest	isSatisfied	plain	true	isSatisfied()		44	494e339e7f5f70c96b5293cbafa162865fda6a9c82c7fad4efcf41d46f1649d8
+C	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/OpenedPositionMinimumBarCountRuleTest.java
+M	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	testAtLeastBarCountRuleForNegativeNumberShouldThrowException	plain	true	testAtLeastBarCountRuleForNegativeNumberShouldThrowException()		39	152a57b1c1cdf9724975c4d68c20b67b32e6563ddea0f3067c80ba6ba12258c7
+M	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	testAtLeastBarCountRuleForZeroShouldThrowException	plain	true	testAtLeastBarCountRuleForZeroShouldThrowException()		44	4915159e2159ef00ae0ddb53f1ae3d4988345f045dc9b740b704404a314dae8d
+M	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	testAtLeastOneBarRuleForOpenedTrade	plain	true	testAtLeastOneBarRuleForOpenedTrade()		49	87066b677fd02475228f4c4c48850d646bb7bd30e9cba3352d1828b0f173710d
+M	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	testAtLeastMoreThanOneBarRuleForOpenedTrade	plain	true	testAtLeastMoreThanOneBarRuleForOpenedTrade()		63	fde40588f93f20a9ef88bc633856fbb94a766da851aeac97a70ab595b39abc65
+M	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	testAtLeastBarCountRuleForClosedTradeShouldAlwaysReturnsFalse	plain	true	testAtLeastBarCountRuleForClosedTradeShouldAlwaysReturnsFalse()		77	ec871ed81c89a5d76c15c50f643a7f21a66943256c45084e1ffe82bda7a0f47d
+M	org.ta4j.core.rules.OpenedPositionMinimumBarCountRuleTest	testAtLeastBarCountRuleForEmptyTradingRecordShouldAlwaysReturnsFalse	plain	true	testAtLeastBarCountRuleForEmptyTradingRecordShouldAlwaysReturnsFalse()		91	8ed5be43f374f60a4940b025e7d830ce706907a131e8c0d00b03e630fcfcc9a0
+C	org.ta4j.core.rules.OrRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/OrRuleTest.java
+M	org.ta4j.core.rules.OrRuleTest	setUp		true	setUp()		38	9b823f9669e78997d96abfc75cdeff8afed99bdd568e6692358d9f0a6164d211
+M	org.ta4j.core.rules.OrRuleTest	isSatisfied	plain	true	isSatisfied()		44	c6f8e9f1af29963dec53aa1a43cd7b6d60205bd6888a3629c1fb0618da6b724e
+C	org.ta4j.core.rules.OverIndicatorRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/OverIndicatorRuleTest.java
+M	org.ta4j.core.rules.OverIndicatorRuleTest	setUp		true	setUp()		41	5207c4ac169c7f1369f4107e1721a86855897089a684ed269bb35e532f8935a2
+M	org.ta4j.core.rules.OverIndicatorRuleTest	isSatisfied	plain	true	isSatisfied()		48	480a95c75a90215de15a695913c14849356ec440694c19af3f8239c04c1d0386
+C	org.ta4j.core.rules.StopGainRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/StopGainRuleTest.java
+M	org.ta4j.core.rules.StopGainRuleTest	setUp		true	setUp()		50	3f6743935a224d991c00cea744939c6d8ba8cb34b360d46a4559b442d6ed95cb
+M	org.ta4j.core.rules.StopGainRuleTest	isSatisfiedWorksForBuy	plain	true	isSatisfiedWorksForBuy()		56	00b21c13c8b634efb22ed9f6b0ae113f4a7ee0602d2d1585b0f43d554cb319e7
+M	org.ta4j.core.rules.StopGainRuleTest	isSatisfiedWorksForSell	plain	true	isSatisfiedWorksForSell()		82	fdec2a6fc0491b18fc66afaf0138861620cbb940d9f9642cd11a7ebe3dd8ea65
+C	org.ta4j.core.rules.StopLossRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/StopLossRuleTest.java
+M	org.ta4j.core.rules.StopLossRuleTest	setUp		true	setUp()		50	01696f537c0570028599012e31431f45f93d4ef055b5575cbf9a08d76310c947
+M	org.ta4j.core.rules.StopLossRuleTest	isSatisfiedWorksForBuy	plain	true	isSatisfiedWorksForBuy()		55	70787951d3e4d3b144b693fe96ab1e124233d21603739b9adeead902da59ace9
+M	org.ta4j.core.rules.StopLossRuleTest	isSatisfiedWorksForSell	plain	true	isSatisfiedWorksForSell()		81	1e3705857a34f6469edf568a7c40fbd00ea1eecb95e67268f7cb19e824f71146
+C	org.ta4j.core.rules.TimeRangeRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/TimeRangeRuleTest.java
+M	org.ta4j.core.rules.TimeRangeRuleTest	isSatisfiedForBuy	plain	true	isSatisfiedForBuy()		48	f4e6d74ba27b1bcee3c9335b11145264dbdc57c3cd08df98d926bebe857c9b39
+C	org.ta4j.core.rules.TrailingStopLossRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/TrailingStopLossRuleTest.java
+M	org.ta4j.core.rules.TrailingStopLossRuleTest	isSatisfiedForBuy	plain	true	isSatisfiedForBuy()		67	ea6aa3a0bb532fb19621443d27db2a1ebed60781deb40ae439e43328cf9f7677
+M	org.ta4j.core.rules.TrailingStopLossRuleTest	isSatisfiedForBuyForBarCount	plain	true	isSatisfiedForBuyForBarCount()		93	b0abc60fe6b32766757a5324aa371cc6344280203d9e528c990967c2fc29ac0b
+M	org.ta4j.core.rules.TrailingStopLossRuleTest	isSatisfiedForSell	plain	true	isSatisfiedForSell()		121	d8b2960d28158907ab995c141e347528e7ac9445a61da22588f95ef9104ab49a
+M	org.ta4j.core.rules.TrailingStopLossRuleTest	isSatisfiedForSellForBarCount	plain	true	isSatisfiedForSellForBarCount()		148	2fa99352804c2c59c0ecc9e3ab0eb24e0bda69c6bb1eeeb809427031363529c4
+C	org.ta4j.core.rules.UnderIndicatorRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/UnderIndicatorRuleTest.java
+M	org.ta4j.core.rules.UnderIndicatorRuleTest	setUp		true	setUp()		41	2f7e02e917f1be76904c0d657418e7511d3e3414656ec6e70593e7b74b0c1e65
+M	org.ta4j.core.rules.UnderIndicatorRuleTest	isSatisfied	plain	true	isSatisfied()		48	8b312e676363ee48acc20b02be1ac883833421b7176fc8dd487857f3af1aa5ff
+C	org.ta4j.core.rules.WaitForRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/WaitForRuleTest.java
+M	org.ta4j.core.rules.WaitForRuleTest	setUp		true	setUp()		40	3c23bf660778560eb7a177dd8da565371e5a2c4371f79e111cbcf436beb93d4e
+M	org.ta4j.core.rules.WaitForRuleTest	waitForSinceLastBuyRuleIsSatisfied	plain	true	waitForSinceLastBuyRuleIsSatisfied()		45	599abdf84c541cabda552ce41c18f327b197d360935a2b22da61a2ef6abdd240
+M	org.ta4j.core.rules.WaitForRuleTest	waitForSinceLastSellRuleIsSatisfied	plain	true	waitForSinceLastSellRuleIsSatisfied()		71	f374fc8c3d432f5ec8746df32227b91c7a3dbf163301057b259a7d71eeef148e
+C	org.ta4j.core.rules.XorRuleTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/XorRuleTest.java
+M	org.ta4j.core.rules.XorRuleTest	setUp		true	setUp()		38	9b823f9669e78997d96abfc75cdeff8afed99bdd568e6692358d9f0a6164d211
+M	org.ta4j.core.rules.XorRuleTest	isSatisfied	plain	true	isSatisfied()		44	f2cff177a4318d8ec378f6ffcdded85cfc23550ed8d2c2e171c373698ff3d5ba
+C	org.ta4j.core.utils.BarSeriesUtilsTest	CLASS	true		/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/utils/BarSeriesUtilsTest.java
+M	org.ta4j.core.utils.BarSeriesUtilsTest	replaceBarIfChangedTest	plain	true	replaceBarIfChangedTest()		62	010165c2567962741e04eee25dcfc010d012201f6e425e8ed65ca7f134f6abab
+M	org.ta4j.core.utils.BarSeriesUtilsTest	findMissingBarsTest	plain	true	findMissingBarsTest()		113	cc1bf4a4130fda45967ced5d6bbb829394c7393de37983bcc727b2d32c589940
+M	org.ta4j.core.utils.BarSeriesUtilsTest	convertBarSeriesTest	plain	true	convertBarSeriesTest()		154	1b1896773d45bd25a270e3d45062775e2c36d67842371fb943451b20abde0438
+M	org.ta4j.core.utils.BarSeriesUtilsTest	findOverlappingBarsTest	plain	true	findOverlappingBarsTest()		189	b3b05a805e8f05197a1ecde0f540d9d31a9884201ea4311952ca6a2750b260eb
+M	org.ta4j.core.utils.BarSeriesUtilsTest	addBars	plain	true	addBars()		218	803fd7f45c1bf7541fd4cbdf11388d2e76d987336c5e3c3aaef20663bb093f62
+M	org.ta4j.core.utils.BarSeriesUtilsTest	sortBars	plain	true	sortBars()		245	00b242867b7b52373ba57518f2f08fce35797a868e49a2c015684aa6bcf486aa

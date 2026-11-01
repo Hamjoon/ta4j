@@ -1,0 +1,67 @@
+{
+  "index": 324,
+  "sha": "bb23bc84b0236dc4b4a9d76125f1a4c709069ddd",
+  "parent": "bd85856b603a6a4bf7d9fe36489fa03c7ae7c6e7",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      674
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [
+      788,
+      789,
+      790,
+      791,
+      793,
+      800,
+      808,
+      822,
+      823,
+      824,
+      825,
+      826,
+      828,
+      829,
+      831,
+      845,
+      846,
+      847,
+      848
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      505,
+      506,
+      507,
+      510,
+      511,
+      512,
+      513,
+      515,
+      516,
+      703,
+      704,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      722,
+      724,
+      729,
+      730,
+      732,
+      733,
+      734,
+      2269,
+      2270
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex 2e4f65b68..24939c5d5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -768,0 +769,82 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n+    /**\n+     * One completed historical leg selected by the canonical structure search.\n+     *\n+     * <p>\n+     * This exposes the ordered bullish and bearish macro legs discovered from the\n+     * series-native canonical search so higher layers can render completed history\n+     * without rebuilding leg windows from an external anchor registry.\n+     *\n+     * @param startIndex inclusive leg start index\n+     * @param endIndex   inclusive leg end index\n+     * @param bullish    {@code true} for bullish impulse legs, {@code false} for\n+     *                   bearish corrective legs\n+     * @param assessment selected anchored-window assessment for this leg\n+     * @param accepted   whether the leg passed the anchored-window acceptance gate\n+     * @since 0.22.4\n+     */\n+    public record HistoricalLegAssessment(int startIndex, int endIndex, boolean bullish,\n+            WindowScenarioAssessment assessment, boolean accepted) {\n+\n+        public HistoricalLegAssessment {\n+            Objects.requireNonNull(assessment, \"assessment\");\n+            if (endIndex <= startIndex) {\n+                throw new IllegalArgumentException(\"endIndex must be > startIndex\");\n+            }\n+        }\n+\n+        /**\n+         * @return selected scenario for this leg\n+         * @since 0.22.4\n+         */\n+        public ElliottScenario scenario() {\n+            return assessment.scenario();\n+        }\n+\n+        /**\n+         * @return blended leg fit score\n+         * @since 0.22.4\n+         */\n+        public double fitScore() {\n+            return assessment.fitScore();\n+        }\n+    }\n+\n+    /**\n+     * One completed bullish-plus-bearish macro cycle selected by the canonical\n+     * structure search.\n+     *\n+     * @param bullishLeg completed bullish impulse leg\n+     * @param bearishLeg completed bearish corrective leg\n+     * @since 0.22.4\n+     */\n+    public record HistoricalCycleAssessment(HistoricalLegAssessment bullishLeg, HistoricalLegAssessment bearishLeg) {\n+\n+        public HistoricalCycleAssessment {\n+            Objects.requireNonNull(bullishLeg, \"bullishLeg\");\n+            Objects.requireNonNull(bearishLeg, \"bearishLeg\");\n+            if (!bullishLeg.bullish()) {\n+                throw new IllegalArgumentException(\"bullishLeg must be bullish\");\n+            }\n+            if (bearishLeg.bullish()) {\n+                throw new IllegalArgumentException(\"bearishLeg must be bearish\");\n+            }\n+        }\n+    }\n+\n+    /**\n+     * Completed historical structure discovered by the canonical series-native\n+     * search.\n+     *\n+     * @param legs   ordered completed macro legs\n+     * @param cycles ordered completed bullish/bearish macro cycles\n+     * @since 0.22.4\n+     */\n+    public record HistoricalStructureAssessment(List<HistoricalLegAssessment> legs,\n+            List<HistoricalCycleAssessment> cycles) {\n+\n+        public HistoricalStructureAssessment {\n+            legs = legs == null ? List.of() : List.copyOf(legs);\n+            cycles = cycles == null ? List.of() : List.copyOf(cycles);\n+        }\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex bf617fec9..164f4da68 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -489,0 +490,29 @@ public final class ElliottWaveAnalysisRunner {\n+    /**\n+     * Discovers the strongest completed historical macro structure directly from\n+     * the supplied series.\n+     *\n+     * <p>\n+     * This is the historical counterpart to\n+     * {@link #analyzeCurrentCycle(BarSeries)}. It reuses the runner's macro pivot\n+     * graph, completed-leg fitting, and bounded canonical search to emit ordered\n+     * completed bullish and bearish macro legs plus paired completed cycles.\n+     *\n+     * @param series series to analyze\n+     * @return completed historical structure selected by the canonical search\n+     * @since 0.22.4\n+     */\n+    public ElliottWaveAnalysisResult.HistoricalStructureAssessment analyzeHistoricalStructure(final BarSeries series) {\n+        Objects.requireNonNull(series, \"series\");\n+        if (series.isEmpty()) {\n+            throw new IllegalArgumentException(\"series cannot be empty\");\n+        }\n+\n+        final ElliottWaveAnalysisResult fullAnalysis = analyze(series);\n+        final ElliottAnalysisResult baseAnalysis = fullAnalysis.analysisFor(baseDegree).orElseThrow().analysis();\n+        final MacroPivotGraph macroPivotGraph = buildMacroPivotGraph(series, baseAnalysis);\n+        final List<CanonicalLegCandidate> historicalCandidates = buildHistoricalCanonicalLegCandidates(series,\n+                macroPivotGraph);\n+        return searchCanonicalStructure(historicalCandidates).map(this::historicalStructureAssessment)\n+                .orElseGet(() -> new ElliottWaveAnalysisResult.HistoricalStructureAssessment(List.of(), List.of()));\n+    }\n+\n@@ -674 +703,2 @@ public final class ElliottWaveAnalysisRunner {\n-            candidates.add(new CanonicalLegCandidate(id, start.barIndex(), end.barIndex(), bullish, fitScore));\n+            candidates.add(new CanonicalLegCandidate(id, start.barIndex(), end.barIndex(), bullish, fitScore,\n+                    selection.orElseThrow()));\n@@ -678,0 +709,28 @@ public final class ElliottWaveAnalysisRunner {\n+    ElliottWaveAnalysisResult.HistoricalStructureAssessment historicalStructureAssessment(\n+            final CanonicalStructurePath path) {\n+        final List<ElliottWaveAnalysisResult.HistoricalLegAssessment> legs = path.legs()\n+                .stream()\n+                .map(this::historicalLegAssessment)\n+                .toList();\n+        final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> cycles = new ArrayList<>();\n+        for (int index = 0; index < legs.size() - 1; index++) {\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment bullishLeg = legs.get(index);\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment bearishLeg = legs.get(index + 1);\n+            if (!bullishLeg.bullish() || bearishLeg.bullish()) {\n+                continue;\n+            }\n+            cycles.add(new ElliottWaveAnalysisResult.HistoricalCycleAssessment(bullishLeg, bearishLeg));\n+        }\n+        return new ElliottWaveAnalysisResult.HistoricalStructureAssessment(legs, cycles);\n+    }\n+\n+    private ElliottWaveAnalysisResult.HistoricalLegAssessment historicalLegAssessment(\n+            final CanonicalLegCandidate candidate) {\n+        if (candidate.selection() == null) {\n+            throw new IllegalArgumentException(\"Historical canonical leg candidate is missing a selection\");\n+        }\n+        return new ElliottWaveAnalysisResult.HistoricalLegAssessment(candidate.startPivotIndex(),\n+                candidate.endPivotIndex(), candidate.bullish(), candidate.selection().assessment(),\n+                candidate.selection().accepted());\n+    }\n+\n@@ -2199 +2257,2 @@ public final class ElliottWaveAnalysisRunner {\n-    record CanonicalLegCandidate(String id, int startPivotIndex, int endPivotIndex, boolean bullish, double fitScore) {\n+    record CanonicalLegCandidate(String id, int startPivotIndex, int endPivotIndex, boolean bullish, double fitScore,\n+            AnchoredWindowSelection selection) {\n@@ -2206,0 +2266,5 @@ public final class ElliottWaveAnalysisRunner {\n+\n+        CanonicalLegCandidate(final String id, final int startPivotIndex, final int endPivotIndex,\n+                final boolean bullish, final double fitScore) {\n+            this(id, startPivotIndex, endPivotIndex, bullish, fitScore, null);\n+        }"
+}

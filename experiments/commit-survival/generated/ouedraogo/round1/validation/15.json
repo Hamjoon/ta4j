@@ -1,0 +1,1170 @@
+{
+  "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/CoT",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/classes",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 1.027,
+    "log": "work/validation/ouedraogo/round1/15/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testOfFactory()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testAbs()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrt()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSquared()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSma()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testEma()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testStddev()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testHighest()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testLowest()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousWithBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousDefault()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDivisionByZeroReturnsNaN()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrtOfNegativeNumberReturnsNaN()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinMaxWithEqualValues()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverAtExactThreshold()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderAtExactThreshold()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testToStringDelegates()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetUnstableBarsAlwaysZero()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetBarSeriesMatchesDelegate()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/run1"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.229,
+      "log": "work/validation/ouedraogo/round1/15/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testOfFactory()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testAbs()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrt()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSquared()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSma()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testEma()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testStddev()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testHighest()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testLowest()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousWithBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousDefault()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDivisionByZeroReturnsNaN()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrtOfNegativeNumberReturnsNaN()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinMaxWithEqualValues()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverAtExactThreshold()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderAtExactThreshold()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testToStringDelegates()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetUnstableBarsAlwaysZero()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetBarSeriesMatchesDelegate()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/run2"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.121,
+      "log": "work/validation/ouedraogo/round1/15/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testOfFactory()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testAbs()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrt()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSquared()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSma()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testEma()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testStddev()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testHighest()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testLowest()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousWithBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousDefault()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanNumber()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDivisionByZeroReturnsNaN()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrtOfNegativeNumberReturnsNaN()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinMaxWithEqualValues()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverAtExactThreshold()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderAtExactThreshold()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testToStringDelegates()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetUnstableBarsAlwaysZero()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetBarSeriesMatchesDelegate()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/15/test/run3"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.024,
+      "log": "work/validation/ouedraogo/round1/15/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testOfFactory",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testOfFactory",
+      "body_hash": "5a7efecd5b4c60c99af8761b37d01ab99307149808f02f00fee68a2130fb60b0",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testOfFactory()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testDelegate",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testDelegate",
+      "body_hash": "028bdbc566a98d80f1ffd694a1d07330fa231e86f900556d091e7c4ebb5b7d22",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDelegate()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testPlusIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testPlusIndicator",
+      "body_hash": "bfb48bdb6af33d3b57cd365e5adc865860f994668e9d74de02d600081510b8ec",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testPlusNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testPlusNumber",
+      "body_hash": "fd055acf739da11db0a83cace70886c4c19e8a6de0bcf02667bcef919d3bbe52",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPlusNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMinusIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMinusIndicator",
+      "body_hash": "0ea81d5a75ade8bee4fed6d3975388f371213f0e3728cc138bc6f5c12eb0a491",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMinusNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMinusNumber",
+      "body_hash": "21beb533e14268e0f461f55cf980aa853cec7d4aeb84ea11861ed48318684dfb",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinusNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMultipliedByIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMultipliedByIndicator",
+      "body_hash": "63c14597f79c109c05014cc1b21f7dda4f4d54fb9ccb139050b7f3e733bf9c49",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMultipliedByNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMultipliedByNumber",
+      "body_hash": "9be19fe365a88c268bf18c509ae30123d9084240f530c571ffa06bf68f4fb524",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMultipliedByNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testDividedByIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testDividedByIndicator",
+      "body_hash": "8f3ddb2ad06e65a21a088cc3ed34abf2b343dfebaf0d9091538571057ea26e1b",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testDividedByNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testDividedByNumber",
+      "body_hash": "2c9b3fd08c50d5c6da66da00d717e1fad6c65824819d5c58a26f109180bf544e",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDividedByNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMinIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMinIndicator",
+      "body_hash": "3b3d84ba9487de0cde48f03c1efbfdc8c033a8d90d0ceacbf416783446356268",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMinNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMinNumber",
+      "body_hash": "0968c2d016eaffe7ce5b545e1c053eaa6e83eeeda7ad31d41fa56aeee82a1c2a",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMaxIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMaxIndicator",
+      "body_hash": "b4f7fec8fc821b77817652e530a39f072fff8041af80b2388ba889615449a2b0",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMaxNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMaxNumber",
+      "body_hash": "cffb9b2605d1d8d9c31a86eb2470c561810bd608e8e694be226e7a10ab80a32b",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMaxNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testAbs",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testAbs",
+      "body_hash": "9cf6eaf7efe78a834394e8f3e0cfc1e5316ca0d73712fc89ba3fa99478ea6ce8",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testAbs()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testSqrt",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testSqrt",
+      "body_hash": "d63493e68f79723b74ae73e752359aaab805d2c23d73fdab90c77426392e2335",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrt()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testSquared",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testSquared",
+      "body_hash": "051e94a27ff59ec8e5873668254ba7fcf7b87d928260356e1feb779ba256487f",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSquared()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testSma",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testSma",
+      "body_hash": "6de660dff40da411bbb4e67cbbe4f5c0f8485cdda4f1f8b74f830bb05db2173d",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSma()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testEma",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testEma",
+      "body_hash": "4687d7b730f5ddf3fe01199c28788ff15f62135a269ccf17033d43d9a8484516",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testEma()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testStddev",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testStddev",
+      "body_hash": "39e4e7d3ee9e521eed7a0da3ebac7385a8325e7d211cef675078c0df577d9b8f",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testStddev()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testHighest",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testHighest",
+      "body_hash": "7438a833cc216cc9d738cbb5dcc0641a21e9a232557f8192abb1a126700987ee",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testHighest()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testLowest",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testLowest",
+      "body_hash": "542707611400883f85ddd305d12324598000ddf168474f29553852933442312b",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testLowest()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testPreviousWithBarCount",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testPreviousWithBarCount",
+      "body_hash": "f4b48d430e745e7da92923674ab0bbbc20d832680933d9fe4c6bcc040928b337",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousWithBarCount()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testPreviousDefault",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testPreviousDefault",
+      "body_hash": "df537729c0978d58a59394db62d46c8c67363d1406b5f2e4f66ca877d539a1e8",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testPreviousDefault()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testCrossedOverIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testCrossedOverIndicator",
+      "body_hash": "b96f94604a4664ce2dcb98b43468640e578048874b4e2613477ae607b0244ed0",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "fail",
+      "message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:87)\n\tat org.junit.Assert.assertTrue(Assert.java:42)\n\tat org.junit.Assert.assertTrue(Assert.java:53)\n\tat org.ta4j.core.indicators.numeric.NumericIndicatorTest.testCrossedOverIndicator(NumericIndicatorTest.java:281)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)\n\tat org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)\n\tat org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)\n\tat org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)\n\tat org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)\n\tat org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)\n\tat org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)\n\tat org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)\n\tat org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)\n\tat org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.executeTests(ConsoleTestExecutor.java:66)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.lambda$execute$0(ConsoleTestExecutor.java:58)\n\tat org.junit.platform.console.tasks.CustomContextClassLoaderExecutor.invoke(CustomContextClassLoaderExecutor.java:33)\n\tat org.junit.platform.console.tasks.ConsoleTestExecutor.execute(ConsoleTestExecutor.java:58)\n\tat org.junit.platform.console.ConsoleLauncher.executeTests(ConsoleLauncher.java:120)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:82)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:55)\n\tat org.junit.platform.console.ConsoleLauncher.execute(ConsoleLauncher.java:48)\n\tat org.junit.platform.console.ConsoleLauncher.main(Consol",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverIndicator()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testCrossedUnderNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testCrossedUnderNumber",
+      "body_hash": "05e679c68085379c1e18ac6f0580d93fb86a4c365f5dfa6a6163ea793affdf2e",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testIsGreaterThanIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testIsGreaterThanIndicator",
+      "body_hash": "d0aa5e372c301069f4021411891447440955cd66654bca5759724f6dddd68082",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testIsGreaterThanNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testIsGreaterThanNumber",
+      "body_hash": "76c61ba9b5d1aa1d315ce08d741e4e28afc26bd35ac7192842c1a2a1965f7a9f",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsGreaterThanNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testIsLessThanIndicator",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testIsLessThanIndicator",
+      "body_hash": "c6a7dd6a2d58ad935eca9b5c0de1578e87f12c4b4e1a9d41510470e3e71073c3",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanIndicator()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testIsLessThanNumber",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testIsLessThanNumber",
+      "body_hash": "229ca9fad00e4b6e53b9766d8c39e659d56a5abf9d867c861169ab913366f314",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testIsLessThanNumber()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testDivisionByZeroReturnsNaN",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testDivisionByZeroReturnsNaN",
+      "body_hash": "a2129f6700708a8cba82bc35f0e06c10580eea4fad341ebe34b3ff500d979bb3",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testDivisionByZeroReturnsNaN()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testSqrtOfNegativeNumberReturnsNaN",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testSqrtOfNegativeNumberReturnsNaN",
+      "body_hash": "25c3394989909d83e6c91fe32dfbe7299941811a36609f1c2e4bb1111fd29cde",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testSqrtOfNegativeNumberReturnsNaN()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testMinMaxWithEqualValues",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testMinMaxWithEqualValues",
+      "body_hash": "8a15b1d8bd52f732d7396d2fa781fb29bbfb69823975c369a8d8ca5cc647b544",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testMinMaxWithEqualValues()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testCrossedOverAtExactThreshold",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testCrossedOverAtExactThreshold",
+      "body_hash": "76b16c4fa000edc7a78bc333014c0f1a4276d677e7a50dd74ca415dcbb62e1b1",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedOverAtExactThreshold()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testCrossedUnderAtExactThreshold",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testCrossedUnderAtExactThreshold",
+      "body_hash": "f98d30b431a0da3a5efe5ec0aadbc73de310f53026ae08c146bc1dce2dfa107f",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testCrossedUnderAtExactThreshold()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testToStringDelegates",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testToStringDelegates",
+      "body_hash": "9b4ef0beaa871e4bf5365887a4287bf74a2f4e0f090c1b5e61612cf682d93208",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testToStringDelegates()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testGetUnstableBarsAlwaysZero",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testGetUnstableBarsAlwaysZero",
+      "body_hash": "5d8df416219a09e5aa505cfc3661755274b7bcc00362745d33c0981f69dd5021",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetUnstableBarsAlwaysZero()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "testGetBarSeriesMatchesDelegate",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|testGetBarSeriesMatchesDelegate",
+      "body_hash": "cb9b2c2433e59b4b22c3ab7c58b6240eea9b0316083d5e3dbf22873f9afcd737",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#testGetBarSeriesMatchesDelegate()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.569,
+    "log": "work/validation/ouedraogo/round1/15/inventory.tsv"
+  },
+  "input_sha256": "751b911bd573f2f0bc72bd7cbf2c4dafa04a38e57d5f831947a0d186f71d09c1"
+}

@@ -1,0 +1,296 @@
+{
+  "index": 505,
+  "sha": "9beef61bcf99c666bcf8e410c581d019cd4528e5",
+  "parent": "cef8acbf3ad78420fa744fa8795c87a39e98dc94",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/AnalysisCriterion.java": [
+      359
+    ],
+    "src/main/java/org/ta4j/core/TradingRecord.java": [],
+    "src/main/java/org/ta4j/core/criteria/AbstractAnalysisCriterion.java": [],
+    "src/main/java/org/ta4j/core/criteria/LinearTransactionCostCriterion.java": [
+      69,
+      82,
+      83,
+      84
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterion.java": [
+      23
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterion.java": [
+      36
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterion.java": [
+      23
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfPositionsCriterion.java": [
+      148,
+      167
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterion.java": [
+      23
+    ],
+    "src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java": [
+      135
+    ],
+    "src/main/java/org/ta4j/core/criteria/ProcessCapabilityCriterion.java": [
+      149,
+      325,
+      336
+    ],
+    "src/main/java/org/ta4j/core/criteria/SqnCriterion.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/criteria/commissions/CommissionsCriterion.java": [
+      55,
+      61,
+      62,
+      63,
+      64,
+      66
+    ],
+    "src/main/java/org/ta4j/core/criteria/commissions/TotalFeesCriterion.java": [
+      54,
+      55,
+      56,
+      58,
+      64,
+      65,
+      66,
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/drawdown/MonteCarloMaximumDrawdownCriterion.java": [
+      243
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/AverageCriterion.java": [
+      62
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterion.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterion.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/StandardErrorCriterion.java": [
+      63
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/VarianceCriterion.java": [
+      68,
+      77
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractConsecutivePnlCriterion.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractPnlCriterion.java": [
+      28
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractProfitLossPercentageCriterion.java": [
+      79,
+      80,
+      81,
+      82,
+      83,
+      85,
+      86
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java": [
+      124
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetLossCriterion.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetProfitCriterion.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/criteria/risk/RMultipleCriterion.java": [
+      76
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/AnalysisCriterion.java": [
+      359
+    ],
+    "src/main/java/org/ta4j/core/TradingRecord.java": [
+      254,
+      255,
+      256,
+      257,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      270,
+      271,
+      274
+    ],
+    "src/main/java/org/ta4j/core/WindowProjectedTradingRecord.java": [
+      31,
+      32,
+      36
+    ],
+    "src/main/java/org/ta4j/core/criteria/AbstractAnalysisCriterion.java": [
+      66,
+      67,
+      68,
+      69,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      79,
+      80,
+      81,
+      82,
+      84,
+      85,
+      86,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      98,
+      99,
+      100,
+      102,
+      103,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      115,
+      116,
+      117,
+      118,
+      119,
+      126,
+      130,
+      131,
+      136,
+      137,
+      138,
+      143
+    ],
+    "src/main/java/org/ta4j/core/criteria/LinearTransactionCostCriterion.java": [
+      69,
+      82,
+      83
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterion.java": [
+      23
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterion.java": [
+      36
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterion.java": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfPositionsCriterion.java": [
+      148,
+      167
+    ],
+    "src/main/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterion.java": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java": [
+      135
+    ],
+    "src/main/java/org/ta4j/core/criteria/ProcessCapabilityCriterion.java": [
+      149,
+      325,
+      326,
+      337
+    ],
+    "src/main/java/org/ta4j/core/criteria/SqnCriterion.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/criteria/commissions/CommissionsCriterion.java": [
+      58,
+      64,
+      65,
+      66,
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/commissions/TotalFeesCriterion.java": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      63,
+      69,
+      70,
+      71,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78
+    ],
+    "src/main/java/org/ta4j/core/criteria/drawdown/MonteCarloMaximumDrawdownCriterion.java": [
+      243
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/AverageCriterion.java": [
+      62
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterion.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterion.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/StandardErrorCriterion.java": [
+      63
+    ],
+    "src/main/java/org/ta4j/core/criteria/helpers/VarianceCriterion.java": [
+      70,
+      71,
+      80
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractConsecutivePnlCriterion.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractPnlCriterion.java": [
+      28
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractProfitLossPercentageCriterion.java": [
+      79,
+      80,
+      82
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java": [
+      124
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetLossCriterion.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetProfitCriterion.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/criteria/risk/RMultipleCriterion.java": [
+      76
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/AnalysisCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/AnalysisCriterion.java\nindex 3bb93e372..ecb3049e2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/AnalysisCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/AnalysisCriterion.java\n@@ -359 +359 @@ public interface AnalysisCriterion {\n-        BaseTradingRecord projectedRecord = new BaseTradingRecord(source.getStartingType(), start, end,\n+        BaseTradingRecord projectedRecord = new WindowProjectedTradingRecord(source.getStartingType(), start, end,\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java b/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java\nindex f48b8ffec..5d3d1f917 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java\n@@ -8,0 +9,2 @@ import java.io.Serializable;\n+import java.util.ArrayList;\n+import java.util.Collections;\n@@ -233,0 +236,41 @@ public interface TradingRecord extends Serializable {\n+    /**\n+     * Returns the closed positions contained in this record's logical range:\n+     * entered at or after {@link #getStartIndex(BarSeries)} and exited at or before\n+     * {@link #getEndIndex(BarSeries)}.\n+     *\n+     * <p>\n+     * A position entered before the logical start is outside the analyzed range. A\n+     * position exiting after the logical end was still open at that end and is not\n+     * returned. Records without an explicit start or end index return\n+     * {@link #getPositions()} unchanged. The returned list is the\n+     * {@link #getPositions()} list itself when every position is contained.\n+     * </p>\n+     *\n+     * @param series the bar series used to resolve the logical range, not null\n+     * @return the contained closed positions, in recording order\n+     * @since 0.26.1\n+     */\n+    default List<Position> getContainedPositions(BarSeries series) {\n+        Objects.requireNonNull(series, \"series\");\n+        List<Position> positions = getPositions();\n+        if (getStartIndex() == null && getEndIndex() == null) {\n+            return positions;\n+        }\n+        int startIndex = getStartIndex(series);\n+        int endIndex = getEndIndex(series);\n+        List<Position> contained = null;\n+        for (int i = 0; i < positions.size(); i++) {\n+            Position position = positions.get(i);\n+            boolean isContained = position != null && position.isClosed()\n+                    && position.getEntry().getIndex() >= startIndex && position.getExit().getIndex() <= endIndex;\n+            if (contained != null) {\n+                if (isContained) {\n+                    contained.add(position);\n+                }\n+            } else if (!isContained) {\n+                contained = new ArrayList<>(positions.subList(0, i));\n+            }\n+        }\n+        return contained == null ? positions : Collections.unmodifiableList(contained);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/WindowProjectedTradingRecord.java b/ta4j-core/src/main/java/org/ta4j/core/WindowProjectedTradingRecord.java\nnew file mode 100644\nindex 000000000..bb389e30b\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/WindowProjectedTradingRecord.java\n@@ -0,0 +1,38 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core;\n+\n+import java.io.Serial;\n+import java.util.List;\n+\n+import org.ta4j.core.Trade.TradeType;\n+import org.ta4j.core.analysis.cost.CostModel;\n+\n+/**\n+ * Record produced by an explicit analysis-window projection.\n+ *\n+ * <p>\n+ * The projection has already selected its positions with the requested\n+ * {@link org.ta4j.core.analysis.AnalysisContext.PositionInclusionPolicy}, so\n+ * {@link #getContainedPositions(BarSeries)} returns them unchanged instead of\n+ * re-applying the stricter record-bounds containment. This keeps windowed\n+ * results independent of whether a criterion is invoked directly or through a\n+ * delegating criterion.\n+ * </p>\n+ */\n+final class WindowProjectedTradingRecord extends BaseTradingRecord {\n+\n+    @Serial\n+    private static final long serialVersionUID = 1L;\n+\n+    WindowProjectedTradingRecord(TradeType startingType, int startIndex, int endIndex, CostModel transactionCostModel,\n+            CostModel holdingCostModel) {\n+        super(startingType, startIndex, endIndex, transactionCostModel, holdingCostModel);\n+    }\n+\n+    @Override\n+    public List<Position> getContainedPositions(BarSeries series) {\n+        return getPositions();\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/AbstractAnalysisCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/AbstractAnalysisCriterion.java\nindex 29b0158be..29f60c4b9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/AbstractAnalysisCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/AbstractAnalysisCriterion.java\n@@ -5,0 +6,6 @@ package org.ta4j.core.criteria;\n+import java.time.Instant;\n+import java.util.ArrayList;\n+import java.util.LinkedHashMap;\n+import java.util.List;\n+import java.util.Map;\n+import java.util.Objects;\n@@ -8,0 +15,7 @@ import org.ta4j.core.AnalysisCriterion;\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.ExecutionSide;\n+import org.ta4j.core.Position;\n+import org.ta4j.core.Trade;\n+import org.ta4j.core.TradeFill;\n+import org.ta4j.core.TradingRecord;\n+import org.ta4j.core.num.Num;\n@@ -28,0 +42,105 @@ public abstract class AbstractAnalysisCriterion implements AnalysisCriterion {\n+    /**\n+     * Returns the positions open at the logical end of a trading record, for\n+     * criteria that account for open exposure.\n+     *\n+     * <p>\n+     * For a record with an explicit start or end index, this is every position\n+     * entered within {@code [getStartIndex(series), getEndIndex(series)]} that is\n+     * still open at the end: recorded positions exiting after the end (as open\n+     * views of their entries) and the record's open lots\n+     * ({@link TradingRecord#getOpenPositions()}, or the current position for\n+     * records without lots). Slices of one entry trade, created when a lot-aware\n+     * record splits an entry across several exits, are merged back into one open\n+     * position so per-trade costs are charged once per entry. These are the\n+     * positions excluded by {@link TradingRecord#getContainedPositions(BarSeries)}\n+     * only because they were still open at the end. Records without explicit bounds\n+     * return the current open position, if any.\n+     * </p>\n+     *\n+     * @param series        the bar series used to resolve the logical range\n+     * @param tradingRecord the trading record\n+     * @return the open positions, possibly empty\n+     * @since 0.26.1\n+     */\n+    protected static List<Position> positionsOpenAtEnd(BarSeries series, TradingRecord tradingRecord) {\n+        Position current = tradingRecord.getCurrentPosition();\n+        boolean currentOpened = current != null && current.isOpened();\n+        if (tradingRecord.getStartIndex() == null && tradingRecord.getEndIndex() == null) {\n+            return currentOpened ? List.of(current) : List.of();\n+        }\n+        int startIndex = tradingRecord.getStartIndex(series);\n+        int endIndex = tradingRecord.getEndIndex(series);\n+        Map<EntryKey, List<Position>> slicesByEntry = new LinkedHashMap<>();\n+        for (Position position : tradingRecord.getPositions()) {\n+            if (position != null && position.isClosed() && position.getExit().getIndex() > endIndex) {\n+                addOpenSlice(slicesByEntry, new Position(position.getEntry(), position.getTransactionCostModel(),\n+                        position.getHoldingCostModel()), startIndex, endIndex);\n+            }\n+        }\n+        List<Position> openLots = tradingRecord.getOpenPositions();\n+        if (openLots.isEmpty() && currentOpened) {\n+            openLots = List.of(current);\n+        }\n+        for (Position openLot : openLots) {\n+            if (openLot != null && openLot.isOpened()) {\n+                addOpenSlice(slicesByEntry, openLot, startIndex, endIndex);\n+            }\n+        }\n+        List<Position> openPositions = new ArrayList<>(slicesByEntry.size());\n+        for (List<Position> slices : slicesByEntry.values()) {\n+            openPositions.add(slices.size() == 1 ? slices.get(0) : mergeSlices(slices));\n+        }\n+        return openPositions;\n+    }\n+\n+    private static void addOpenSlice(Map<EntryKey, List<Position>> slicesByEntry, Position slice, int startIndex,\n+            int endIndex) {\n+        Trade entry = slice.getEntry();\n+        if (entry.getIndex() < startIndex || entry.getIndex() > endIndex) {\n+            return;\n+        }\n+        slicesByEntry.computeIfAbsent(EntryKey.of(entry), key -> new ArrayList<>(1)).add(slice);\n+    }\n+\n+    private static Position mergeSlices(List<Position> slices) {\n+        Position first = slices.get(0);\n+        Trade entry = first.getEntry();\n+        Num amount = entry.getAmount();\n+        Num fee = entry.getCost();\n+        for (int i = 1; i < slices.size(); i++) {\n+            Trade slice = slices.get(i).getEntry();\n+            amount = amount.plus(slice.getAmount());\n+            fee = fee.plus(slice.getCost());\n+        }\n+        ExecutionSide side = entry.isBuy() ? ExecutionSide.BUY : ExecutionSide.SELL;\n+        Trade merged = Trade.fromFills(entry.getType(), List.of(new TradeFill(entry.getIndex(), entry.getTime(),\n+                entry.getPricePerAsset(), amount, fee, side, entry.getOrderId(), entry.getCorrelationId())),\n+                entry.getCostModel());\n+        return new Position(merged, first.getTransactionCostModel(), first.getHoldingCostModel());\n+    }\n+\n+    /**\n+     * Identity of an entry trade shared by the slices a lot-aware record creates\n+     * when one entry is closed by several exits.\n+     */\n+    private record EntryKey(int index, Trade.TradeType type, Num price, Instant time, String orderId,\n+            String correlationId) {\n+\n+        static EntryKey of(Trade entry) {\n+            return new EntryKey(entry.getIndex(), entry.getType(), entry.getPricePerAsset(), entry.getTime(),\n+                    entry.getOrderId(), entry.getCorrelationId());\n+        }\n+\n+        @Override\n+        public boolean equals(Object other) {\n+            return other instanceof EntryKey key && index == key.index && type == key.type && price.isEqual(key.price)\n+                    && Objects.equals(time, key.time) && Objects.equals(orderId, key.orderId)\n+                    && Objects.equals(correlationId, key.correlationId);\n+        }\n+\n+        @Override\n+        public int hashCode() {\n+            return Objects.hash(index, type, time, orderId, correlationId);\n+        }\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/LinearTransactionCostCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/LinearTransactionCostCriterion.java\nindex 4be534ab8..51f9f4f76 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/LinearTransactionCostCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/LinearTransactionCostCriterion.java\n@@ -69 +69 @@ public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : tradingRecord.getContainedPositions(series)) {\n@@ -81,4 +81,3 @@ public class LinearTransactionCostCriterion extends AbstractAnalysisCriterion {\n-        // Special case: if the current position is open\n-        Position currentPosition = tradingRecord.getCurrentPosition();\n-        if (currentPosition.isOpened()) {\n-            totalCosts = totalCosts.plus(getTradeCost(currentPosition.getEntry(), tradedAmount));\n+        // Positions still open at the logical end only pay their entry cost\n+        for (Position openPosition : positionsOpenAtEnd(series, tradingRecord)) {\n+            totalCosts = totalCosts.plus(getTradeCost(openPosition.getEntry(), tradedAmount));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterion.java\nindex 9fa8d7122..4e37a6bb6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterion.java\n@@ -23 +23 @@ public class NumberOfBreakEvenPositionsCriterion extends AbstractAnalysisCriteri\n-        long numberOfBreakEvenTrades = tradingRecord.getPositions()\n+        long numberOfBreakEvenTrades = tradingRecord.getContainedPositions(series)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterion.java\nindex bdb21e964..39bc81ef3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterion.java\n@@ -36 +36 @@ public class NumberOfConsecutivePositionsCriterion extends AbstractAnalysisCrite\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : tradingRecord.getContainedPositions(series)) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterion.java\nindex 6d66142ca..2c570fb09 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterion.java\n@@ -23 +23,4 @@ public class NumberOfLosingPositionsCriterion extends AbstractAnalysisCriterion\n-        long numberOfLosingPositions = tradingRecord.getPositions().stream().filter(Position::hasLoss).count();\n+        long numberOfLosingPositions = tradingRecord.getContainedPositions(series)\n+                .stream()\n+                .filter(Position::hasLoss)\n+                .count();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfPositionsCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfPositionsCriterion.java\nindex 675117a1b..7d4487143 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfPositionsCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfPositionsCriterion.java\n@@ -148 +148 @@ public class NumberOfPositionsCriterion extends AbstractAnalysisCriterion {\n-        int closedPositions = countClosedPositionsAtOrBefore(tradingRecord, finalIndex);\n+        int closedPositions = countClosedPositionsAtOrBefore(tradingRecord.getContainedPositions(series), finalIndex);\n@@ -165 +165 @@ public class NumberOfPositionsCriterion extends AbstractAnalysisCriterion {\n-    private static int countClosedPositionsAtOrBefore(TradingRecord tradingRecord, int endIndex) {\n+    private static int countClosedPositionsAtOrBefore(List<Position> positions, int endIndex) {\n@@ -167 +167 @@ public class NumberOfPositionsCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : positions) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterion.java\nindex 82a0ba684..9d65edc2d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterion.java\n@@ -23 +23,4 @@ public class NumberOfWinningPositionsCriterion extends AbstractAnalysisCriterion\n-        long numberOfWinningPositions = tradingRecord.getPositions().stream().filter(Position::hasProfit).count();\n+        long numberOfWinningPositions = tradingRecord.getContainedPositions(series)\n+                .stream()\n+                .filter(Position::hasProfit)\n+                .count();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java\nindex 3f10ada4e..bd7931d39 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java\n@@ -135 +135 @@ public class PositionsRatioCriterion extends AbstractAnalysisCriterion {\n-        var ratio = numberOfPositions.dividedBy(numFactory.numOf(tradingRecord.getPositionCount()));\n+        var ratio = numberOfPositions.dividedBy(numFactory.numOf(tradingRecord.getContainedPositions(series).size()));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/ProcessCapabilityCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/ProcessCapabilityCriterion.java\nindex a1efb3af0..3da0bcf10 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/ProcessCapabilityCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/ProcessCapabilityCriterion.java\n@@ -149 +149 @@ public class ProcessCapabilityCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : tradingRecord.getContainedPositions(series)) {\n@@ -325 +325,2 @@ public class ProcessCapabilityCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        List<Position> positions = tradingRecord.getContainedPositions(series);\n+        for (Position position : positions) {\n@@ -336 +337 @@ public class ProcessCapabilityCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : positions) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/SqnCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/SqnCriterion.java\nindex 55dce2447..092ac4f46 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/SqnCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/SqnCriterion.java\n@@ -79 +79 @@ public class SqnCriterion extends AbstractAnalysisCriterion {\n-        if (tradingRecord.getPositions().isEmpty()) {\n+        if (tradingRecord.getContainedPositions(series).isEmpty()) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/CommissionsCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/CommissionsCriterion.java\nindex 42c560f89..c036593c3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/CommissionsCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/CommissionsCriterion.java\n@@ -46 +46,4 @@ public class CommissionsCriterion extends AbstractAnalysisCriterion {\n-     * Calculates the total commission paid for every position in a trading record.\n+     * Calculates the total commission paid for the positions in a trading record.\n+     * Closed positions contained in the record's logical range pay their full\n+     * commission; positions still open at the logical end pay the commission\n+     * accrued up to that end.\n@@ -55 +58 @@ public class CommissionsCriterion extends AbstractAnalysisCriterion {\n-        var closedPositionsCommissions = tradingRecord.getPositions()\n+        var commissions = tradingRecord.getContainedPositions(series)\n@@ -61,4 +64,3 @@ public class CommissionsCriterion extends AbstractAnalysisCriterion {\n-        var current = tradingRecord.getCurrentPosition();\n-        if (current.isOpened()) {\n-            var openPositionCommissions = model.calculate(current, tradingRecord.getEndIndex(series));\n-            return closedPositionsCommissions.plus(openPositionCommissions);\n+        int endIndex = tradingRecord.getEndIndex(series);\n+        for (Position openPosition : positionsOpenAtEnd(series, tradingRecord)) {\n+            commissions = commissions.plus(model.calculate(openPosition, endIndex));\n@@ -66 +68 @@ public class CommissionsCriterion extends AbstractAnalysisCriterion {\n-        return closedPositionsCommissions;\n+        return commissions;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/TotalFeesCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/TotalFeesCriterion.java\nindex 4ff1a7622..64b5f3a7a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/TotalFeesCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/commissions/TotalFeesCriterion.java\n@@ -27,3 +27,5 @@ import org.ta4j.core.num.NumFactory;\n- * When a trading record does not expose execution fees, this criterion falls\n- * back to the transaction cost model (matching {@link CommissionsCriterion}\n- * semantics).\n+ * When a trading record does not expose execution fees, or declares an explicit\n+ * start or end index, this criterion falls back to the transaction cost model\n+ * (matching {@link CommissionsCriterion} semantics) over the positions in the\n+ * record's logical range, because recorded totals are not attributable to a\n+ * sub-range.\n@@ -54,3 +56,6 @@ public class TotalFeesCriterion extends AbstractAnalysisCriterion {\n-        Num recordedFees = tradingRecord.getRecordedTotalFees();\n-        if (recordedFees != null) {\n-            return toSeriesNum(factory, recordedFees);\n+        boolean bounded = tradingRecord.getStartIndex() != null || tradingRecord.getEndIndex() != null;\n+        if (!bounded) {\n+            Num recordedFees = tradingRecord.getRecordedTotalFees();\n+            if (recordedFees != null) {\n+                return toSeriesNum(factory, recordedFees);\n+            }\n@@ -58 +63 @@ public class TotalFeesCriterion extends AbstractAnalysisCriterion {\n-        Num closedFees = tradingRecord.getPositions()\n+        Num fees = tradingRecord.getContainedPositions(series)\n@@ -64,3 +69,3 @@ public class TotalFeesCriterion extends AbstractAnalysisCriterion {\n-        Position current = tradingRecord.getCurrentPosition();\n-        if (current.isOpened()) {\n-            return closedFees.plus(calculate(series, current));\n+        if (!bounded) {\n+            Position current = tradingRecord.getCurrentPosition();\n+            return current.isOpened() ? fees.plus(calculate(series, current)) : fees;\n@@ -68 +73,6 @@ public class TotalFeesCriterion extends AbstractAnalysisCriterion {\n-        return closedFees;\n+        int endIndex = tradingRecord.getEndIndex(series);\n+        for (Position openPosition : positionsOpenAtEnd(series, tradingRecord)) {\n+            Num cost = openPosition.getEntry().getCostModel().calculate(openPosition, endIndex);\n+            fees = fees.plus(toSeriesNum(factory, cost));\n+        }\n+        return fees;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/MonteCarloMaximumDrawdownCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/MonteCarloMaximumDrawdownCriterion.java\nindex a4fbbd530..469c066d6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/MonteCarloMaximumDrawdownCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/MonteCarloMaximumDrawdownCriterion.java\n@@ -243 +243 @@ public class MonteCarloMaximumDrawdownCriterion extends AbstractEquityCurveSetti\n-        for (Position position : record.getPositions()) {\n+        for (Position position : record.getContainedPositions(series)) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/AverageCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/AverageCriterion.java\nindex e88d8e9da..5a27fa395 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/AverageCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/AverageCriterion.java\n@@ -62 +62 @@ public class AverageCriterion extends AbstractAnalysisCriterion {\n-        if (tradingRecord.getPositions().isEmpty()) {\n+        if (tradingRecord.getContainedPositions(series).isEmpty()) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterion.java\nindex 232745094..d983e412b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterion.java\n@@ -68 +68 @@ public class RelativeStandardDeviationCriterion extends AbstractAnalysisCriterio\n-        if (tradingRecord.getPositions().isEmpty()) {\n+        if (tradingRecord.getContainedPositions(series).isEmpty()) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterion.java\nindex 8be80f353..ecd795af7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterion.java\n@@ -60 +60 @@ public class StandardDeviationCriterion extends AbstractAnalysisCriterion {\n-        if (tradingRecord.getPositions().isEmpty()) {\n+        if (tradingRecord.getContainedPositions(series).isEmpty()) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardErrorCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardErrorCriterion.java\nindex 797b911cc..f849f06f5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardErrorCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/StandardErrorCriterion.java\n@@ -63 +63 @@ public class StandardErrorCriterion extends AbstractAnalysisCriterion {\n-        if (tradingRecord.getPositions().isEmpty()) {\n+        if (tradingRecord.getContainedPositions(series).isEmpty()) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/VarianceCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/VarianceCriterion.java\nindex 16ee8124b..e04134225 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/VarianceCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/helpers/VarianceCriterion.java\n@@ -5,0 +6,2 @@ package org.ta4j.core.criteria.helpers;\n+import java.util.List;\n+\n@@ -68 +70,2 @@ public class VarianceCriterion extends AbstractAnalysisCriterion {\n-        if (tradingRecord.getPositions().isEmpty()) {\n+        List<Position> positions = tradingRecord.getContainedPositions(series);\n+        if (positions.isEmpty()) {\n@@ -77 +80 @@ public class VarianceCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : positions) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractConsecutivePnlCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractConsecutivePnlCriterion.java\nindex 4d671b8e8..64dc2fa01 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractConsecutivePnlCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractConsecutivePnlCriterion.java\n@@ -68 +68 @@ public abstract class AbstractConsecutivePnlCriterion extends AbstractAnalysisCr\n-        for (var position : tradingRecord.getPositions()) {\n+        for (var position : tradingRecord.getContainedPositions(series)) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractPnlCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractPnlCriterion.java\nindex ba8a323e0..3fbcd0613 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractPnlCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractPnlCriterion.java\n@@ -28 +28 @@ public abstract class AbstractPnlCriterion extends AbstractAnalysisCriterion {\n-        return tradingRecord.getPositions()\n+        return tradingRecord.getContainedPositions(series)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractProfitLossPercentageCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractProfitLossPercentageCriterion.java\nindex 42d00a30c..1be9052a7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractProfitLossPercentageCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractProfitLossPercentageCriterion.java\n@@ -79,5 +79,2 @@ public abstract class AbstractProfitLossPercentageCriterion extends AbstractAnal\n-        var totalProfit = tradingRecord.getPositions()\n-                .stream()\n-                .filter(Position::isClosed)\n-                .map(this::profit)\n-                .reduce(zero, Num::plus);\n+        var positions = tradingRecord.getContainedPositions(series);\n+        var totalProfit = positions.stream().filter(Position::isClosed).map(this::profit).reduce(zero, Num::plus);\n@@ -85,2 +82 @@ public abstract class AbstractProfitLossPercentageCriterion extends AbstractAnal\n-        var totalEntryPrice = tradingRecord.getPositions()\n-                .stream()\n+        var totalEntryPrice = positions.stream()\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java\nindex 3d256471e..3a24c7b5b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java\n@@ -124 +124 @@ public abstract class AbstractReturnCriterion extends AbstractAnalysisCriterion\n-        var totalReturn = tradingRecord.getPositions()\n+        var totalReturn = tradingRecord.getContainedPositions(series)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetLossCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetLossCriterion.java\nindex f68ff1c18..e7b8b916e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetLossCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetLossCriterion.java\n@@ -49 +49 @@ public final class MaxPositionNetLossCriterion extends AbstractAnalysisCriterion\n-        return tradingRecord.getPositions()\n+        return tradingRecord.getContainedPositions(barSeries)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetProfitCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetProfitCriterion.java\nindex df7d44b1b..00fd024aa 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetProfitCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/MaxPositionNetProfitCriterion.java\n@@ -49 +49 @@ public final class MaxPositionNetProfitCriterion extends AbstractAnalysisCriteri\n-        return tradingRecord.getPositions()\n+        return tradingRecord.getContainedPositions(barSeries)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/risk/RMultipleCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/risk/RMultipleCriterion.java\nindex e2938c241..000878fdd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/risk/RMultipleCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/risk/RMultipleCriterion.java\n@@ -76 +76 @@ public class RMultipleCriterion extends AbstractAnalysisCriterion {\n-        for (Position position : tradingRecord.getPositions()) {\n+        for (Position position : tradingRecord.getContainedPositions(series)) {"
+}

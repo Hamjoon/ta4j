@@ -1,0 +1,100 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:86: error: cannot find symbol
+    private static final class AlwaysOperateStrategy implements Strategy {
+                                                                ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:100: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:105: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:64: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:68: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now().plusDays(1),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:72: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now().plusDays(2),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:94: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:99: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:104: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:109: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:172: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:191: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:203: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:215: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:229: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:253: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:274: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+            longerSeries.addBar(new BaseBar(ZonedDateTime.now().plusDays(i),
+                                ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:281: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:291: error: int cannot be dereferenced
+        assertEquals(3, record.getLastTrade().getIndex().intValue());
+                                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:305: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:324: error: cannot find symbol
+        Strategy strategy = new AlwaysOperateStrategy("always-operate");
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+21 errors

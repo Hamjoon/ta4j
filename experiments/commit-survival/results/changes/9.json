@@ -1,0 +1,65 @@
+{
+  "index": 9,
+  "sha": "f72ba167c397042a83670606e1f4a335312c400e",
+  "parent": "7f223a1c7ca5e27ed81dcee5c794d6bc708a124b",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterion.java": [
+      59,
+      67,
+      75,
+      81,
+      85,
+      91,
+      95
+    ],
+    "src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java": [
+      69,
+      75,
+      76,
+      77,
+      78,
+      83,
+      84,
+      85,
+      86,
+      96,
+      97,
+      98,
+      99
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [
+      61,
+      72,
+      73,
+      74,
+      86,
+      87,
+      88,
+      90,
+      91,
+      94,
+      101,
+      107,
+      111,
+      116,
+      120,
+      127,
+      128,
+      129,
+      130,
+      135
+    ],
+    "src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java": [
+      64,
+      69,
+      74,
+      75,
+      77,
+      78,
+      89
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\nsimilarity index 50%\nrename from ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterion.java\nrename to ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\nindex 3a9e47a0b..03573e08f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n@@ -25,0 +26 @@ package org.ta4j.core.criteria;\n+import org.ta4j.core.AnalysisCriterion;\n@@ -26,0 +28 @@ import org.ta4j.core.BarSeries;\n+import org.ta4j.core.BaseTradingRecord;\n@@ -29,0 +32 @@ import org.ta4j.core.TradingRecord;\n+import org.ta4j.core.criteria.pnl.ReturnCriterion;\n@@ -33 +36 @@ import org.ta4j.core.num.Num;\n- * Enter and hold criterion, returned in decimal format.\n+ * Enter and hold criterion.\n@@ -36 +39,2 @@ import org.ta4j.core.num.Num;\n- * Calculates the gross return (in percent) of an enter-and-hold strategy:\n+ * Calculates the {@link AnalysisCriterion criterion} from an enter-and-hold\n+ * strategy:\n@@ -42,0 +47,2 @@ import org.ta4j.core.num.Num;\n+ * <li>If {@code barSeries} is empty, it returns {@code 1} because the\n+ * investment hasn't changed and is still 100%.\n@@ -48 +54 @@ import org.ta4j.core.num.Num;\n-public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n+public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n@@ -50,0 +57,6 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n+    private final AnalysisCriterion criterion;\n+\n+    /** The {@link ReturnCriterion} (with base) from a buy-and-hold strategy. */\n+    public static EnterAndHoldCriterion EnterAndHoldReturnCriterion() {\n+        return new EnterAndHoldCriterion(TradeType.BUY, new ReturnCriterion());\n+    }\n@@ -53 +65 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-     * Constructor.\n+     * Constructor for buy-and-hold strategy.\n@@ -55,2 +67,4 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-     * <p>\n-     * For buy-and-hold strategy.\n+     * @param criterion the {@link AnalysisCriterion criterion} to calculate\n+     * @throws IllegalArgumentException if {@code criterion} is an instance of\n+     *                                  {@code EnterAndHoldCriterion} or\n+     *                                  {@code VersusEnterAndHoldCriterion}\n@@ -58,2 +72,3 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-    public EnterAndHoldReturnCriterion() {\n-        this(TradeType.BUY);\n+    public EnterAndHoldCriterion(AnalysisCriterion criterion) {\n+        this.tradeType = TradeType.BUY;\n+        this.criterion = criterion;\n@@ -65,0 +81,4 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n+     * @param criterion the {@link AnalysisCriterion criterion} to calculate\n+     * @throws IllegalArgumentException if {@code criterion} is an instance of\n+     *                                  {@code EnterAndHoldCriterion} or\n+     *                                  {@code VersusEnterAndHoldCriterion}\n@@ -67 +86,7 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-    public EnterAndHoldReturnCriterion(TradeType tradeType) {\n+    public EnterAndHoldCriterion(TradeType tradeType, AnalysisCriterion criterion) {\n+        if (criterion instanceof EnterAndHoldCriterion) {\n+            throw new IllegalArgumentException(\"Criterion cannot be an instance of EnterAndHoldCriterion.\");\n+        }\n+        if (criterion instanceof VersusEnterAndHoldCriterion) {\n+            throw new IllegalArgumentException(\"Criterion cannot be an instance of VersusEnterAndHoldCriterion.\");\n+        }\n@@ -68,0 +94 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n+        this.criterion = criterion;\n@@ -75 +101 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-        return createEnterAndHoldTrade(series, beginIndex, endIndex).getGrossReturn(series);\n+        return criterion.calculate(series, createEnterAndHoldTrade(series, beginIndex, endIndex));\n@@ -81 +107 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-            return series.numOf(1);\n+            return series.one();\n@@ -85 +111 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-        return createEnterAndHoldTrade(series, beginIndex, endIndex).getGrossReturn(series);\n+        return criterion.calculate(series, createEnterAndHoldTradingRecord(series, beginIndex, endIndex));\n@@ -88 +113,0 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-    /** The higher the criterion value the better. */\n@@ -91 +116 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-        return criterionValue1.isGreaterThan(criterionValue2);\n+        return criterion.betterThan(criterionValue1, criterionValue2);\n@@ -95 +120 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n-        Position position = new Position(this.tradeType);\n+        Position position = new Position(tradeType);\n@@ -99,0 +125,12 @@ public class EnterAndHoldReturnCriterion extends AbstractAnalysisCriterion {\n+\n+    private TradingRecord createEnterAndHoldTradingRecord(BarSeries series, int beginIndex, int endIndex) {\n+        TradingRecord fakeRecord = new BaseTradingRecord(tradeType);\n+        fakeRecord.enter(beginIndex, series.getBar(beginIndex).getClosePrice(), series.one());\n+        fakeRecord.exit(endIndex, series.getBar(endIndex).getClosePrice(), series.one());\n+        return fakeRecord;\n+    }\n+\n+    @Override\n+    public String toString() {\n+        return getClass().getSimpleName() + \" of \" + criterion.getClass().getSimpleName();\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\nindex 1a70431c0..6549c2541 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\n@@ -28 +27,0 @@ import org.ta4j.core.BarSeries;\n-import org.ta4j.core.BaseTradingRecord;\n@@ -36,0 +36 @@ import org.ta4j.core.num.Num;\n+ * <p>\n@@ -38,9 +38 @@ import org.ta4j.core.num.Num;\n- * value of an \"enter and hold\". The \"enter and hold\"-strategy is done as\n- * follows:\n- *\n- * <ul>\n- * <li>For {@link #tradeType} = {@link TradeType#BUY}: Buy with the close price\n- * of the first bar and sell with the close price of the last bar.\n- * <li>For {@link #tradeType} = {@link TradeType#SELL}: Sell with the close\n- * price of the first bar and buy with the close price of the last bar.\n- * </ul>\n+ * value of an {@link EnterAndHoldCriterion}.\n@@ -50 +41,0 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-    private final TradeType tradeType;\n@@ -51,0 +43 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n+    private final EnterAndHoldCriterion enterAndHoldCriterion;\n@@ -56 +48,2 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-     * @param criterion the criterion to be compared\n+     * @param criterion the criterion to be compared to\n+     *                  {@link EnterAndHoldCriterion}\n@@ -66 +59,2 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-     * @param criterion the criterion to be compared\n+     * @param criterion the criterion to be compared to\n+     *                  {@link EnterAndHoldCriterion}\n@@ -69 +62,0 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        this.tradeType = tradeType;\n@@ -70,0 +64 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n+        this.enterAndHoldCriterion = new EnterAndHoldCriterion(tradeType, criterion);\n@@ -75,4 +69 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        int beginIndex = position.getEntry().getIndex();\n-        int endIndex = series.getEndIndex();\n-        TradingRecord fakeRecord = createEnterAndHoldTradingRecord(series, beginIndex, endIndex);\n-        return criterion.calculate(series, position).dividedBy(criterion.calculate(series, fakeRecord));\n+        return criterion.calculate(series, position).dividedBy(enterAndHoldCriterion.calculate(series, position));\n@@ -83,4 +74,5 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        int beginIndex = tradingRecord.getStartIndex(series);\n-        int endIndex = tradingRecord.getEndIndex(series);\n-        TradingRecord fakeRecord = createEnterAndHoldTradingRecord(series, beginIndex, endIndex);\n-        return criterion.calculate(series, tradingRecord).dividedBy(criterion.calculate(series, fakeRecord));\n+        if (series.isEmpty()) {\n+            return series.one();\n+        }\n+        return criterion.calculate(series, tradingRecord)\n+                .dividedBy(enterAndHoldCriterion.calculate(series, tradingRecord));\n@@ -95,5 +87,3 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-    private TradingRecord createEnterAndHoldTradingRecord(BarSeries series, int beginIndex, int endIndex) {\n-        TradingRecord fakeRecord = new BaseTradingRecord(tradeType);\n-        fakeRecord.enter(beginIndex, series.getBar(beginIndex).getClosePrice(), series.one());\n-        fakeRecord.exit(endIndex, series.getBar(endIndex).getClosePrice(), series.one());\n-        return fakeRecord;\n+    @Override\n+    public String toString() {\n+        return criterion.getClass().getSimpleName() + \" vs. \" + enterAndHoldCriterion.getClass().getSimpleName();"
+}

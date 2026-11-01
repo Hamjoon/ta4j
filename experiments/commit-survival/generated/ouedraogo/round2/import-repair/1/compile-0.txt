@@ -1,0 +1,17 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:112: error: cannot find symbol
+        @Override public Bar getBar(int i) { return null; }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:114: error: cannot find symbol
+        @Override public java.util.List<Bar> getBarData() { return java.util.Collections.emptyList(); }
+                                        ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:99: error: method does not override or implement a method from a supertype
+        @Override public java.util.stream.Stream<Num> stream() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:106: error: SimpleBarSeries is not abstract and does not override abstract method addPrice(Num) in BarSeries
+    private static final class SimpleBarSeries implements BarSeries {
+                         ^
+4 errors

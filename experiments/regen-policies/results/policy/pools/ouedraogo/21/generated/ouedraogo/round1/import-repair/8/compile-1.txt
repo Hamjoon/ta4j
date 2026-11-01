@@ -1,0 +1,62 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:135: error: method addBar(Bar,boolean) is already defined in class SimpleBarSeries
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:152: error: cannot find symbol
+        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class IndexBasedStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:153: error: cannot find symbol
+        @Override public Rule getExitRule() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class IndexBasedStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:98: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:106: error: incompatible types: NumFactory is not a functional interface
+        private final NumFactory numFactory = DecimalNum::valueOf; // lambda works because DecimalNum implements NumFactory
+                                              ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:186: error: cannot find symbol
+        @Override public Num calculate(Position position, int finalIndex) { return DecimalNum.ZERO; }
+                                                                                             ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:187: error: cannot find symbol
+        @Override public Num calculate(Position position) { return DecimalNum.ZERO; }
+                                                                             ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:188: error: cannot find symbol
+        @Override public Num calculate(Num price, Num amount) { return DecimalNum.ZERO; }
+                                                                                 ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:215: error: tradeExecutionModel has private access in BarSeriesManager
+        assertNotNull(manager.tradeExecutionModel); // default model is not null
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:227: error: tradeExecutionModel has private access in BarSeriesManager
+        assertSame(customExec, manager.tradeExecutionModel);
+                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:252: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:253: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(3), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:276: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:302: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(0), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:303: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+15 errors

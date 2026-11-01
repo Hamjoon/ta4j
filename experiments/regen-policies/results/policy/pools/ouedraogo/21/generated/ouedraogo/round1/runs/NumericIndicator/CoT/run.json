@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-29T15:39:50.062602+00:00",
+  "latency": 85.981,
+  "status": "ok",
+  "http_status": 200,
+  "finish_reason": "stop",
+  "provider": "DekaLLM",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "request_id": "gen-1793288390-gXe1d7oyratzsBD3I89F",
+  "usage": {
+    "prompt_tokens": 4388,
+    "completion_tokens": 5297,
+    "total_tokens": 9685,
+    "cost": 0.0010851,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0010851,
+      "upstream_inference_prompt_cost": 0.00013164,
+      "upstream_inference_completions_cost": 0.00095346
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 665,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "error_type": null,
+  "prompt_sha256": "63a0a1168a5040d5df52feda96e4519d5df35197fd270be935ae3a9b711793d0",
+  "response_sha256": "85846f11f9f8d8f06f80f7cb00f1f639d9600edab1a9f79262592e6a3590789d"
+}

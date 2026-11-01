@@ -1,0 +1,30 @@
+{
+  "index": 180,
+  "sha": "846f610f1e55c2ce99903e769875d57095c3009d",
+  "parent": "282cf02bfb9226ca5e43915d89e152aca3508318",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelFacade.java": [
+      32,
+      33,
+      35,
+      37,
+      38,
+      39,
+      41,
+      52,
+      64,
+      76
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java": [
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelFacade.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelFacade.java\nnew file mode 100644\nindex 000000000..daa1679b9\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelFacade.java\n@@ -0,0 +1,79 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.indicators.donchian;\n+\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.indicators.numeric.NumericIndicator;\n+\n+/**\n+ * A facade to create the 3 Donchian Channel indicators.\n+ *\n+ * <p>\n+ * This class creates lightweight \"fluent\" numeric indicators. These objects are\n+ * not cached, although they may be wrapped around cached objects. Overall,\n+ * there is less caching and probably better performance.\n+ *\n+ * @since 0.22.2\n+ */\n+public class DonchianChannelFacade {\n+    private final NumericIndicator lower;\n+    private final NumericIndicator upper;\n+    private final NumericIndicator middle;\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param series   the bar series\n+     * @param barCount the time frame\n+     *\n+     * @since 0.22.2\n+     */\n+    public DonchianChannelFacade(BarSeries series, int barCount) {\n+        DonchianChannelLowerIndicator donchianChannelLowerIndicator = new DonchianChannelLowerIndicator(series,\n+                barCount);\n+        DonchianChannelUpperIndicator donchianChannelUpperIndicator = new DonchianChannelUpperIndicator(series,\n+                barCount);\n+        this.lower = NumericIndicator.of(donchianChannelLowerIndicator);\n+        this.upper = NumericIndicator.of(donchianChannelUpperIndicator);\n+        this.middle = NumericIndicator.of(new DonchianChannelMiddleIndicator(series, barCount,\n+                donchianChannelLowerIndicator, donchianChannelUpperIndicator));\n+    }\n+\n+    /**\n+     * A fluent DonchianChannelLower indicator.\n+     *\n+     * @return a NumericIndicator wrapped around a cached\n+     *         DonchianChannelLowerIndicator\n+     *\n+     * @since 0.22.2\n+     */\n+    public NumericIndicator lower() {\n+        return lower;\n+    }\n+\n+    /**\n+     * A fluent DonchianChannelUpper indicator.\n+     *\n+     * @return a NumericIndicator wrapped around a cached\n+     *         DonchianChannelUpperIndicator\n+     *\n+     * @since 0.22.2\n+     */\n+    public NumericIndicator upper() {\n+        return upper;\n+    }\n+\n+    /**\n+     * A fluent DonchianChannelMiddle indicator.\n+     *\n+     * @return a NumericIndicator wrapped around a cached\n+     *         DonchianChannelMiddleIndicator\n+     *\n+     * @since 0.22.2\n+     */\n+    public NumericIndicator middle() {\n+        return middle;\n+    }\n+\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java\nindex 3eac0eb50..641338071 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java\n@@ -31,0 +32,9 @@ public class DonchianChannelMiddleIndicator extends CachedIndicator<Num> {\n+    public DonchianChannelMiddleIndicator(BarSeries series, int barCount,\n+            DonchianChannelLowerIndicator donchianChannelLowerIndicator,\n+            DonchianChannelUpperIndicator donchianChannelUpperIndicator) {\n+        super(series);\n+        this.barCount = barCount;\n+        this.lower = donchianChannelLowerIndicator;\n+        this.upper = donchianChannelUpperIndicator;\n+    }\n+"
+}

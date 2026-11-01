@@ -1,0 +1,34 @@
+{
+  "index": 502,
+  "sha": "6448f810d933cd882ee03a806eeb5ff084e667ff",
+  "parent": "f77110709fb7690ae9f40295ef7e1e590ba3f6ed",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      759,
+      773,
+      774,
+      775
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      758,
+      759,
+      761,
+      762,
+      765,
+      783,
+      794,
+      795,
+      802,
+      806,
+      807,
+      808,
+      810,
+      811,
+      815,
+      816
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex eb7136275..4ab8af159 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -736,4 +736,19 @@ public final class DecimalNum implements Num {\n-    /***\n-     * TODO: DecimalNum throws NumberFormatException when Math.pow returns\n-     * NaN/Infinity This is also an edge case behavior that should be documented or\n-     * handled properly.\n+    /**\n+     * Returns a {@code Num} whose value is <code>(this<sup>n</sup>)</code>.\n+     *\n+     * <p>\n+     * If {@code n} is {@link NaN} or infinite (including primitive-backed values),\n+     * or if calculating the power produces an undefined or infinite value (such as\n+     * taking a fractional power of a negative number or dividing by zero),\n+     * {@link NaN#NaN} is returned.\n+     *\n+     * @param n power to raise this {@code Num} to\n+     * @return <code>this<sup>n</sup></code>, or {@link NaN#NaN} if invalid or\n+     *         infinite\n+     * @throws ArithmeticException if the integer part of the exponent {@code n}\n+     *                             overflows {@code int} or its magnitude exceeds\n+     *                             {@code 999999999}, the limit of\n+     *                             {@link BigDecimal#pow(int, MathContext)}; or if\n+     *                             this number's {@link MathContext} uses\n+     *                             {@link RoundingMode#UNNECESSARY} and the result\n+     *                             is inexact\n@@ -742,0 +758,9 @@ public final class DecimalNum implements Num {\n+        if (!Num.isFinite(n)) {\n+            return NaN;\n+        }\n+        if (this.isZero() && n.isNegative()) {\n+            return NaN;\n+        }\n+\n+        final DecimalNum decimalN = n instanceof DecimalNum dn ? dn : DecimalNum.valueOf(n);\n+\n@@ -759 +783 @@ public final class DecimalNum implements Num {\n-        final BigDecimal aplusb = (((DecimalNum) n).delegate);\n+        final BigDecimal aplusb = decimalN.delegate;\n@@ -767,0 +792,5 @@ public final class DecimalNum implements Num {\n+        // a fractional power of a negative base is undefined; detect it before x^a,\n+        // which BigDecimal rejects for negative whole parts at unlimited precision\n+        if (this.delegate.signum() < 0 && b.signum() != 0) {\n+            return NaN;\n+        }\n@@ -770,2 +799 @@ public final class DecimalNum implements Num {\n-        // rounded to mathContext anyway. Also accepts negative whole parts.\n-        // Precision 0 means unlimited: keep x^a exact rather than 10 digits.\n+        // rounded to mathContext anyway.\n@@ -773,3 +801,12 @@ public final class DecimalNum implements Num {\n-        final MathContext powContext = precision == 0 ? MathContext.UNLIMITED\n-                : new MathContext(precision + POW_GUARD_DIGITS, this.mathContext.getRoundingMode());\n-        final BigDecimal xpowa = this.delegate.pow(aInt, powContext);\n+        final BigDecimal xpowa;\n+        if (precision == 0) {\n+            // Unlimited precision: BigDecimal.pow rejects negative exponents without a\n+            // finite context, so use the exact positive power and, for negative\n+            // exponents, a reciprocal at DEFAULT_PRECISION (1/x^k need not terminate).\n+            xpowa = aInt >= 0 ? this.delegate.pow(aInt)\n+                    : BigDecimal.ONE.divide(this.delegate.pow(Math.negateExact(aInt)),\n+                            new MathContext(DEFAULT_PRECISION, this.mathContext.getRoundingMode()));\n+        } else {\n+            xpowa = this.delegate.pow(aInt,\n+                    new MathContext(precision + POW_GUARD_DIGITS, this.mathContext.getRoundingMode()));\n+        }\n@@ -777,0 +815,3 @@ public final class DecimalNum implements Num {\n+        if (!Double.isFinite(xpowb)) {\n+            return NaN;\n+        }"
+}

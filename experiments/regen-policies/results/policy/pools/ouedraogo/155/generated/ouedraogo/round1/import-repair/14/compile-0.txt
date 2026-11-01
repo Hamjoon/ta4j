@@ -1,0 +1,21 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:46: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries();
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:48: error: Bar is abstract; cannot be instantiated
+        series.addBar(new Bar(0, null, ONE.multipliedBy(100), ONE.multipliedBy(100), ONE.multipliedBy(100),
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:50: error: Bar is abstract; cannot be instantiated
+        series.addBar(new Bar(1, null, ONE.multipliedBy(110), ONE.multipliedBy(110), ONE.multipliedBy(110),
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:52: error: Bar is abstract; cannot be instantiated
+        series.addBar(new Bar(2, null, ONE.multipliedBy(120), ONE.multipliedBy(120), ONE.multipliedBy(120),
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:74: error: cannot find symbol
+        Position p = new Position(org.ta4j.core.TradeType.SELL);
+                                               ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+5 errors

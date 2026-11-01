@@ -1,0 +1,177 @@
+[
+  {
+    "group": "NumericIndicator.crossedOver(Number) - basic functionality and edge cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "5"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(2) == true (delegate crosses from <=5 to >5 at index 2)",
+        "description": "Verify that crossedOver(Number) creates a CrossedUpIndicatorRule that becomes satisfied when the underlying NumericIndicator value crosses above the constant 5. The series is set up so the value is 4 at index 1 and 6 at index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-3"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(3) == true (cross from <=-3 to >-3)",
+        "description": "Test crossing over a negative constant. The series values are -4 at index 2 and -2 at index 3, causing the rule to be satisfied at index 3."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(1) == false, rule.isSatisfied(2) == true",
+        "description": "Crossing over zero. The series is -1 at index 0, -0.5 at index 1, and 0.2 at index 2, so the rule should become satisfied only at index 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "1000"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(any index) == false",
+        "description": "Constant far above any series value \u2013 the rule should never be satisfied because the indicator never crosses the constant."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null Number should result in a NullPointerException, as the method attempts to create a constant indicator from the argument."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "IllegalArgumentException or Rule that is never satisfied",
+        "description": "NaN is not a valid constant for comparison; the implementation should either reject it with an exception or produce a rule that never becomes satisfied."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.crossedOver(Number) - additional edge and type cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-1000"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(any index) == false (indicator values are always > -1000, so no crossing from <= to > can occur)",
+        "description": "Constant far below the minimum series value. The underlying NumericIndicator never goes from <= -1000 to > -1000, therefore the rule must never be satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "3.5"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(2) == true, rule.isSatisfied(1) == false",
+        "description": "Series values: 3.5 at index\u202f0, 3.4 at index\u202f1, 3.6 at index\u202f2. The constant equals the first value; the rule should become satisfied only when the value crosses from \u2264\u202f3.5 (index\u202f1) to >\u202f3.5 (index\u202f2)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(any index) == false (a finite indicator can never cross above positive infinity)",
+        "description": "Using Double.POSITIVE_INFINITY as the constant. No crossing can ever happen, so the rule must always be unsatisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(any index) == false (the indicator is always > -\u221e, thus never crosses from <= to >)",
+        "description": "Using Double.NEGATIVE_INFINITY as the constant. Since every numeric value is greater than -\u221e, there is no crossing event."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "2147483647"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(any index) == false (series values stay well below Integer.MAX_VALUE)",
+        "description": "Constant set to Integer.MAX_VALUE. The series values are far lower, so the rule never becomes satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(1) == true, rule.isSatisfied(2) == false, rule.isSatisfied(3) == true (multiple up\u2011crossings)",
+        "description": "Series values: -1 at index\u202f0, 0.1 at index\u202f1 (first up\u2011cross), -0.2 at index\u202f2, 0.5 at index\u202f3 (second up\u2011cross). The rule should be satisfied only at the indices where the crossing from \u2264\u202f0 to >\u202f0 occurs."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "5L"
+          }
+        ],
+        "expected": "Rule instance of CrossedUpIndicatorRule; rule.isSatisfied(1) == true",
+        "description": "Constant supplied as a Long (5L). Series values: 4 at index\u202f0, 6 at index\u202f1. Confirms that the method correctly handles non\u2011Double Number types."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.crossedOver(Number) - exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Passing Double.NaN should cause the method to reject the constant and throw IllegalArgumentException, as NaN is not a valid numeric value for comparison."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Passing Double.POSITIVE_INFINITY should trigger an IllegalArgumentException because an infinite constant cannot be represented as a finite Num for rule evaluation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Passing Double.NEGATIVE_INFINITY should trigger an IllegalArgumentException for the same reason as positive infinity \u2013 infinite values are not allowed in constant indicators."
+      }
+    ]
+  }
+]

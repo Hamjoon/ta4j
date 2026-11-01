@@ -1,0 +1,21 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:360: error: cannot find symbol
+        assertEquals(DecimalNum.valueOf(1.10).setScale(2), grossReturn.setScale(2));
+                                             ^
+  symbol:   method setScale(int)
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:360: error: cannot find symbol
+        assertEquals(DecimalNum.valueOf(1.10).setScale(2), grossReturn.setScale(2));
+                                                                      ^
+  symbol:   method setScale(int)
+  location: variable grossReturn of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:378: error: cannot find symbol
+        assertEquals(DecimalNum.valueOf(1.10).setScale(2), grossReturn.setScale(2));
+                                             ^
+  symbol:   method setScale(int)
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:378: error: cannot find symbol
+        assertEquals(DecimalNum.valueOf(1.10).setScale(2), grossReturn.setScale(2));
+                                                                      ^
+  symbol:   method setScale(int)
+  location: variable grossReturn of type Num
+4 errors

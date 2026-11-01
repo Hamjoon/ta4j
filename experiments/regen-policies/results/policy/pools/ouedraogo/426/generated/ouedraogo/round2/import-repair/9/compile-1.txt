@@ -1,0 +1,38 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:27: error: package org.ta4j.core.trading.rules does not exist
+import org.ta4j.core.trading.rules.Rule;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:58: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysSignalStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:63: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysSignalStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:45: error: AlwaysSignalStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysSignalStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:101: error: cannot find symbol
+            return DecimalNum.NaN;
+                             ^
+  symbol:   variable NaN
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:111: error: no suitable constructor found for BaseBar(ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        singleBar = new BaseBar(
+                    ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:198: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, record.getCurrentPosition().amount());
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:274: error: reference to run is ambiguous
+        manager.run(strategy, TradeType.BUY, null, 0, 0);
+               ^
+  both method run(Strategy,TradeType,Num,int,int) in BarSeriesManager and method run(Strategy,TradeType,PositionSizer,int,int) in BarSeriesManager match
+8 errors

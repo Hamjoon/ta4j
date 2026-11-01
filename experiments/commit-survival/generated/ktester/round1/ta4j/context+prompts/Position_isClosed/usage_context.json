@@ -1,0 +1,6 @@
+{
+  "api document of class org.ta4j.core.Position": "\n * A {@code Position} is a pair of two {@link Trade trades}.\n *\n * <p>\n * The exit trade has the complement type of the entry trade, i.e.:\n * <ul>\n * <li>entry == BUY --> exit == SELL\n * <li>entry == SELL --> exit == BUY\n * </ul>\n ",
+  "api document of method isClosed()": "\n     * @return true if the position is closed, false otherwise\n     ",
+  "return type": "boolean",
+  "dependent classes": "class `org.ta4j.core.Position`:\n\tdependent fields:\n\t\torg.ta4j.core.Trade org.ta4j.core.Position.entry;\n\t\torg.ta4j.core.Trade org.ta4j.core.Position.exit;\n\trelated functions:\n\t\tmethod `public Trade getEntry()` returns `org.ta4j.core.Trade`, related with `org.ta4j.core.Position.isClosed()`, api document: \n     * @return the entry {@link Trade trade} of the position\n     ;\n\t\tmethod `public boolean equals(Object)` returns `boolean`, related with `org.ta4j.core.Position.isClosed()`;"
+}

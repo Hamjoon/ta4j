@@ -1,0 +1,2991 @@
+{
+  "index": 18,
+  "sha": "15ddaf9966f2ea64e167cdac84c5bc50c02b67aa",
+  "group": "dev-scope",
+  "phase": "A",
+  "status": "evaluated",
+  "input_sha256": "48d31eb53e5467b28a5b538328ec57e2b15ea57f21676e37d5268219752c55b2",
+  "runner_sha256": {
+    "AccessorAudit.java": "8c082858b2264ef33b1688dc04692630d2506184a3fc586c1f817d9b0ea9da9a",
+    "DependencyInventory2.java": "366cec31e3bad91f6479a06b2461565ad61bc9f987f001fca21aa0fb8d79fb7c",
+    "MethodSelectors.java": "dce25f26bae1f123086a0f58df2fad6a4b66085e67a5a70a035d3fbe10f80646",
+    "SourceInventory.java": "03d7596d7f53d4e193672ec8fdd24f2cd2d901c3e563ef031c60c33d695e0f5e",
+    "classpath-artifacts.json": "9175ba6dc75e88d8a229d91075ccebcdbe97a9d888b37c922d9f408584d407a1",
+    "java_maven.py": "16c7b387100aed4fcb5232e7d4d27d2257050fce8249b4b65df93b610e1b6381",
+    "java_worker.py": "ebb1fe71b8d9ec0150eab6d0ce4f53aeaa79c220d1391e3719157794db7f7d50",
+    "maven_dependencies.py": "895d95439e2c27937e14c3d78aa954570f5d5ad515de3a5859b0f53c4a3fa8dd",
+    "docker.py": "329e0922d6d0f025778fd5ace37f3f4aac4a0ea13ee4794e1a95b4ee7320cebc",
+    "cache.py": "5a5396703aab5a9060b76e87ce7a459e6307d2849db770bdfc086578997526cc",
+    "environment.py": "687e46bd557642367cab60f4d3338b711af5bb08e5be117adedfcb4d6f9b0b75"
+  },
+  "files": [
+    {
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/dev/src-test-t/java",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-A/18/dev/5/classes",
+          "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/PositionTest.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.975,
+        "log": "work/phase-A/18/dev/5/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/5/classes:/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenNewShouldCreateBuyOrderWhenEntering",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenNewShouldNotExit",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenOpenedShouldCreateSellOrderWhenExiting",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenClosedShouldNotEnter",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenExitIndexIsLessThanEntryIndexShouldThrowException",
+            "--select-method",
+            "org.ta4j.core.PositionTest#shouldClosePositionOnSameIndex",
+            "--select-method",
+            "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+            "--select-method",
+            "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenNewShouldCreateSellOrderWhenEnteringUncovered",
+            "--select-method",
+            "org.ta4j.core.PositionTest#whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+            "--select-method",
+            "org.ta4j.core.PositionTest#overrideToString",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testEqualsForNewPositions",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testEqualsForEntryOrders",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testEqualsForExitOrders",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testGetProfitForLongPositions",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testGetProfitForShortPositions",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositions",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositions",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testCostModelConsistencyTrue",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testCostModelEntryInconsistent",
+            "--select-method",
+            "org.ta4j.core.PositionTest#testCostModelExitInconsistent",
+            "--select-method",
+            "org.ta4j.core.PositionTest#getProfitLongNoFinalBarTest",
+            "--select-method",
+            "org.ta4j.core.PositionTest#getProfitLongWithFinalBarTest",
+            "--select-method",
+            "org.ta4j.core.PositionTest#getProfitShortNoFinalBarTest",
+            "--select-method",
+            "org.ta4j.core.PositionTest#getProfitShortWithFinalBarTest",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/5/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 1.275,
+          "log": "work/phase-A/18/dev/5/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenNewShouldCreateBuyOrderWhenEntering",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateBuyOrderWhenEntering",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenNewShouldCreateBuyOrderWhenEntering"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenNewShouldNotExit",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldNotExit",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenNewShouldNotExit"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenOpenedShouldCreateSellOrderWhenExiting",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateSellOrderWhenExiting",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenOpenedShouldCreateSellOrderWhenExiting"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenClosedShouldNotEnter",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenClosedShouldNotEnter",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenClosedShouldNotEnter"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenExitIndexIsLessThanEntryIndexShouldThrowException",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenExitIndexIsLessThanEntryIndexShouldThrowException",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenExitIndexIsLessThanEntryIndexShouldThrowException"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "shouldClosePositionOnSameIndex",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldClosePositionOnSameIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#shouldClosePositionOnSameIndex"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenNewShouldCreateSellOrderWhenEnteringUncovered",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateSellOrderWhenEnteringUncovered",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenNewShouldCreateSellOrderWhenEnteringUncovered"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#whenOpenedShouldCreateBuyOrderWhenExitingUncovered"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "overrideToString",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|overrideToString",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#overrideToString"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testEqualsForNewPositions",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForNewPositions",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testEqualsForNewPositions"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testEqualsForEntryOrders",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForEntryOrders",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testEqualsForEntryOrders"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testEqualsForExitOrders",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForExitOrders",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testEqualsForExitOrders"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testGetProfitForLongPositions",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForLongPositions",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testGetProfitForLongPositions"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testGetProfitForShortPositions",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForShortPositions",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testGetProfitForShortPositions"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testGetGrossReturnForLongPositions",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositions",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositions"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testGetGrossReturnForShortPositions",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositions",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositions"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositionsUsingBarCloseOnNaN"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositionsUsingBarCloseOnNaN"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testCostModelConsistencyTrue",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelConsistencyTrue",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testCostModelConsistencyTrue"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testCostModelEntryInconsistent",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelEntryInconsistent",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testCostModelEntryInconsistent"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "testCostModelExitInconsistent",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelExitInconsistent",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#testCostModelExitInconsistent"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "getProfitLongNoFinalBarTest",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongNoFinalBarTest",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#getProfitLongNoFinalBarTest"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "getProfitLongWithFinalBarTest",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongWithFinalBarTest",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#getProfitLongWithFinalBarTest"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "getProfitShortNoFinalBarTest",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortNoFinalBarTest",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#getProfitShortNoFinalBarTest"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.PositionTest",
+          "method": "getProfitShortWithFinalBarTest",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortWithFinalBarTest",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.PositionTest#getProfitShortWithFinalBarTest"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/dev/src-test-t/java",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-A/18/dev/12/classes",
+          "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 1.794,
+        "log": "work/phase-A/18/dev/12/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/12/classes:/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowSize",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyWithOnlyOnePosition",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowWithSellAndBuyTrades",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowSell",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSell",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentGain",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentLoss",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith100PercentLoss",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWithOver100PercentLoss",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellBigLossWithNegativeCashFlow",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapBefore",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapAfter",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValue",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithNoPositions",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlowTest#reallyLongCashFlow",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/12/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 1.781,
+          "log": "work/phase-A/18/dev/12/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowSize",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSize",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowSize"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowBuyWithOnlyOnePosition",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowBuyWithOnlyOnePosition",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyWithOnlyOnePosition"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowWithSellAndBuyTrades",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWithSellAndBuyTrades",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowWithSellAndBuyTrades"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowSell",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSell",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowSell"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowShortSell",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSell",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSell"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowShortSellWith20PercentGain",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentGain",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentGain"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowShortSellWith20PercentLoss",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentLoss",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentLoss"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowShortSellWith100PercentLoss",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith100PercentLoss",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith100PercentLoss"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowShortSellWithOver100PercentLoss",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWithOver100PercentLoss",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWithOver100PercentLoss"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowShortSellBigLossWithNegativeCashFlow",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellBigLossWithNegativeCashFlow",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellBigLossWithNegativeCashFlow"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowValueWithOnlyOnePositionAndAGapBefore",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapBefore",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapBefore"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowValueWithOnlyOnePositionAndAGapAfter",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapAfter",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapAfter"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowValue",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValue",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValue"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "cashFlowValueWithNoPositions",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithNoPositions",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithNoPositions"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlowTest",
+          "method": "reallyLongCashFlow",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|reallyLongCashFlow",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlowTest#reallyLongCashFlow"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/dev/src-test-t/java",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-A/18/dev/18/classes",
+          "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.823,
+        "log": "work/phase-A/18/dev/18/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/18/classes:/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeries",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeriesWithAmount",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeries",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntryBuyLeft",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntrySellLeft",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runBetweenIndexes",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeriesSlices",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/18/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 2.117,
+          "log": "work/phase-A/18/dev/18/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runOnWholeSeries",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeries",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeries"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runOnWholeSeriesWithAmount",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeriesWithAmount",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeriesWithAmount"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runOnSeries",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeries",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeries"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runWithOpenEntryBuyLeft",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntryBuyLeft",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntryBuyLeft"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runWithOpenEntrySellLeft",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntrySellLeft",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntrySellLeft"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runBetweenIndexes",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runBetweenIndexes",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runBetweenIndexes"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+          "method": "runOnSeriesSlices",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeriesSlices",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeriesSlices"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/dev/src-test-t/java",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-A/18/dev/50/classes",
+          "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.975,
+        "log": "work/phase-A/18/dev/50/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/50/classes:/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.indicators.ATRIndicatorTest#testDummy",
+            "--select-method",
+            "org.ta4j.core.indicators.ATRIndicatorTest#testXls",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/50/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 1.829,
+          "log": "work/phase-A/18/dev/50/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+          "method": "testDummy",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testDummy",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.ATRIndicatorTest#testDummy"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+          "method": "testXls",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testXls",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.ATRIndicatorTest#testXls"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/dev/src-test-t/java",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-A/18/dev/154/classes",
+          "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 1.076,
+        "log": "work/phase-A/18/dev/154/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/154/classes:/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#plus",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#minus",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#multipliedBy",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#dividedBy",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#max",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#min",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#sqrt",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#abs",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#squared",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#indicators",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#rules",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#previous",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#getValue",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#barSeries",
+            "--select-method",
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#numOf",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-A/18/dev/154/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 1.585,
+          "log": "work/phase-A/18/dev/154/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "plus",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|plus",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#plus"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "minus",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|minus",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#minus"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "multipliedBy",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|multipliedBy",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#multipliedBy"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "dividedBy",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|dividedBy",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#dividedBy"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "max",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|max",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#max"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "min",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|min",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#min"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "sqrt",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|sqrt",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#sqrt"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "abs",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|abs",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#abs"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "squared",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|squared",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#squared"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "indicators",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|indicators",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#indicators"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "rules",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|rules",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#rules"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "previous",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|previous",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#previous"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "getValue",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|getValue",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#getValue"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "barSeries",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|barSeries",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#barSeries"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+          "method": "numOf",
+          "kind": "plain",
+          "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+          "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|numOf",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.indicators.numeric.NumericIndicatorTest#numOf"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenNewShouldCreateBuyOrderWhenEntering",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateBuyOrderWhenEntering",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenNewShouldCreateBuyOrderWhenEntering"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenNewShouldNotExit",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldNotExit",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenNewShouldNotExit"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenOpenedShouldCreateSellOrderWhenExiting",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateSellOrderWhenExiting",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenOpenedShouldCreateSellOrderWhenExiting"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenClosedShouldNotEnter",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenClosedShouldNotEnter",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenClosedShouldNotEnter"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenExitIndexIsLessThanEntryIndexShouldThrowException",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenExitIndexIsLessThanEntryIndexShouldThrowException",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenExitIndexIsLessThanEntryIndexShouldThrowException"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "shouldClosePositionOnSameIndex",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldClosePositionOnSameIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#shouldClosePositionOnSameIndex"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenNewShouldCreateSellOrderWhenEnteringUncovered",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateSellOrderWhenEnteringUncovered",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenNewShouldCreateSellOrderWhenEnteringUncovered"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenOpenedShouldCreateBuyOrderWhenExitingUncovered"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "overrideToString",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|overrideToString",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#overrideToString"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsForNewPositions",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForNewPositions",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsForNewPositions"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsForEntryOrders",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForEntryOrders",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsForEntryOrders"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsForExitOrders",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForExitOrders",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsForExitOrders"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetProfitForLongPositions",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForLongPositions",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetProfitForLongPositions"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetProfitForShortPositions",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForShortPositions",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetProfitForShortPositions"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForLongPositions",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositions",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositions"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForShortPositions",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositions",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositions"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositionsUsingBarCloseOnNaN"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositionsUsingBarCloseOnNaN"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testCostModelConsistencyTrue",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelConsistencyTrue",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testCostModelConsistencyTrue"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testCostModelEntryInconsistent",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelEntryInconsistent",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testCostModelEntryInconsistent"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testCostModelExitInconsistent",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelExitInconsistent",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testCostModelExitInconsistent"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitLongNoFinalBarTest",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongNoFinalBarTest",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitLongNoFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitLongWithFinalBarTest",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongWithFinalBarTest",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitLongWithFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitShortNoFinalBarTest",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortNoFinalBarTest",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitShortNoFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitShortWithFinalBarTest",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortWithFinalBarTest",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitShortWithFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowSize",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSize",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowSize"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowBuyWithOnlyOnePosition",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowBuyWithOnlyOnePosition",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyWithOnlyOnePosition"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowWithSellAndBuyTrades",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWithSellAndBuyTrades",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowWithSellAndBuyTrades"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowSell",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSell",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowSell"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSell",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSell",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSell"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWith20PercentGain",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentGain",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentGain"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWith20PercentLoss",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentLoss",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentLoss"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWith100PercentLoss",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith100PercentLoss",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith100PercentLoss"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWithOver100PercentLoss",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWithOver100PercentLoss",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWithOver100PercentLoss"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellBigLossWithNegativeCashFlow",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellBigLossWithNegativeCashFlow",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellBigLossWithNegativeCashFlow"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithOnlyOnePositionAndAGapBefore",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapBefore",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapBefore"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithOnlyOnePositionAndAGapAfter",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapAfter",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapAfter"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValue",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValue",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValue"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithNoPositions",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithNoPositions",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithNoPositions"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "reallyLongCashFlow",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|reallyLongCashFlow",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#reallyLongCashFlow"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnWholeSeries",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeries",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeries"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnWholeSeriesWithAmount",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeriesWithAmount",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnWholeSeriesWithAmount"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnSeries",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeries",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeries"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithOpenEntryBuyLeft",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntryBuyLeft",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntryBuyLeft"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runWithOpenEntrySellLeft",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntrySellLeft",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runWithOpenEntrySellLeft"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runBetweenIndexes",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runBetweenIndexes",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runBetweenIndexes"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "runOnSeriesSlices",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeriesSlices",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManagerTest#runOnSeriesSlices"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testDummy",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testDummy",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testDummy"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testXls",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testXls",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testXls"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "plus",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|plus",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#plus"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "minus",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|minus",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#minus"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "multipliedBy",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|multipliedBy",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#multipliedBy"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "dividedBy",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|dividedBy",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#dividedBy"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "max",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|max",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#max"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "min",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|min",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#min"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "sqrt",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|sqrt",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#sqrt"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "abs",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|abs",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#abs"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "squared",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|squared",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#squared"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "indicators",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|indicators",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#indicators"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "rules",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|rules",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#rules"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "previous",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|previous",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#previous"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "getValue",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|getValue",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#getValue"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "barSeries",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|barSeries",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#barSeries"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "numOf",
+      "kind": "plain",
+      "file": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|numOf",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#numOf"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    }
+  ],
+  "requested_ids": [
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateBuyOrderWhenEntering",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldNotExit",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateSellOrderWhenExiting",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenClosedShouldNotEnter",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenExitIndexIsLessThanEntryIndexShouldThrowException",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldClosePositionOnSameIndex",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateSellOrderWhenEnteringUncovered",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|overrideToString",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForNewPositions",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForEntryOrders",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForExitOrders",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForLongPositions",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForShortPositions",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositions",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositions",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelConsistencyTrue",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelEntryInconsistent",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelExitInconsistent",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongNoFinalBarTest",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongWithFinalBarTest",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortNoFinalBarTest",
+    "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortWithFinalBarTest",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSize",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowBuyWithOnlyOnePosition",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWithSellAndBuyTrades",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSell",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSell",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentGain",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentLoss",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith100PercentLoss",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWithOver100PercentLoss",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellBigLossWithNegativeCashFlow",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapBefore",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapAfter",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValue",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithNoPositions",
+    "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|reallyLongCashFlow",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeries",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnWholeSeriesWithAmount",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeries",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntryBuyLeft",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runWithOpenEntrySellLeft",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runBetweenIndexes",
+    "dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|runOnSeriesSlices",
+    "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testDummy",
+    "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testXls",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|plus",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|minus",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|multipliedBy",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|dividedBy",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|max",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|min",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|sqrt",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|abs",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|squared",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|indicators",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|rules",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|previous",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|getValue",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|barSeries",
+    "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|numOf"
+  ],
+  "whole_frozen_suite_compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/dev/src-test-t/java",
+      "-d",
+      "/repo/experiments/commit-survival/work/phase-A/18/dev/suite-classes",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BarSeriesTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BarTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BaseBarBuilderTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/BaseBarConvertibleBuilderTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/CriterionFactory.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/ExternalCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/ExternalIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/IndicatorFactory.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/IndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/SeriesBuilderTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TestUtils.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TestUtilsTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TradeTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/TradingRecordTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/XlsTestsUtils.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/aggregator/BaseBarSeriesAggregatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/aggregator/DurationBarAggregatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/ReturnsTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/FixedTransactionCostModelTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModelTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/LinearTransactionCostModelTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/analysis/cost/ZeroCostModelTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/backtest/BarSeriesManagerTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AbstractAnalysisCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AbstractCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AverageReturnPerBarCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ExpectancyCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ExpectedShortfallCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/LinearTransactionCostCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/MaximumDrawdownCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfBarsCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfBreakEvenPositionsCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfConsecutivePositionsCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfLosingPositionsCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfPositionsCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/NumberOfWinningPositionsCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/OpenedPositionUtils.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/PositionsRatioCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/SqnCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/ValueAtRiskCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/XLSCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/AverageCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/RelativeStandardDeviationCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/StandardDeviationCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/StandardErrorCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/helpers/VarianceCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/AverageLossCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/AverageProfitCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/LossCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitLossCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ProfitLossRatioCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/pnl/ReturnCriterionTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/AbstractIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/AccelerationDecelerationIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/AwesomeOscillatorIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CCIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CMOIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CachedIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ChandelierExitLongIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ChandelierExitShortIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ChopIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/CoppockCurveIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/DPOIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/DistanceFromMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/DoubleEMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/EMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/FisherIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/HMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/KAMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/KSTIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/LWMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/MACDIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/MMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/MassIndexIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/PPOIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/PVOIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ParabolicSarIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RAVIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ROCIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RSIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RWIHighIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/RWILowIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/SMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/StochasticOscillatorDIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/StochasticOscillatorKIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/StochasticRSIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/TripleEMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/UlcerIndexIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/WMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/WilliamsRIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/XLSIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ZLEMAIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/ADXIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/MinusDIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/MinusDMIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/PlusDIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/adx/PlusDMIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonDownIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonFacadeTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/aroon/AroonUpIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandFacadeTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/bollinger/PercentBIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BearishHaramiIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/BullishHaramiIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/DojiIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/LowerShadowIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/RealBodyIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/candles/UpperShadowIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/AmountIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ClosePriceDifferenceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ClosePriceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ClosePriceRatioIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/CombineIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ConstantIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/DateTimeIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/FixedIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/GainIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/HighPriceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/HighestValueIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/LossIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/LowPriceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/LowestValueIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/MedianPriceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/NumndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/OpenPriceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/PreviousValueIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/RunningTotalIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/SumIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TRIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TradeCountIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TransformIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/TypicalPriceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/UnstableIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/VolumeIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/ichimoku/IchimokuIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelFacadeTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/pivotpoints/PivotPointIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/CovarianceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/SigmaIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/StandardErrorIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/statistics/VarianceIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/supertrend/SuperTrendIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/supertrend/SuperTrendLowerBandIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/supertrend/SuperTrendUpperBandIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/AccumulationDistributionIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/IIIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/MVWAPIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/NVIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/OnBalanceVolumeIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/PVIIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/ROCVIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/volume/VWAPIndicatorTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockAnalysisCriterion.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockBar.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockBarSeries.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockIndicator.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/mocks/MockTradingRecord.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/num/DecimalNumTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/num/DoubleNumTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/num/NumTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/AndRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/BooleanIndicatorRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/BooleanRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/ChainRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/CrossedDownIndicatorRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/CrossedUpIndicatorRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/DayOfWeekRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/FixedRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/InPipeRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/InSlopeRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsEqualRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsFallingRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsHighestRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsLowestRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/IsRisingRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/JustOnceRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/NotRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/OpenedPositionMinimumBarCountRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/OrRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/OverIndicatorRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/StopGainRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/StopLossRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/TimeRangeRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/TrailingStopLossRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/UnderIndicatorRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/WaitForRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/rules/XorRuleTest.java",
+      "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/utils/BarSeriesUtilsTest.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/18/ta4j-core",
+    "exit_code": 1,
+    "timeout": false,
+    "seconds": 2.743,
+    "log": "work/phase-A/18/dev/suite-javac.txt",
+    "source_count": 229,
+    "diagnostics": "/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:37: error: cannot find symbol\nimport org.ta4j.core.indicators.helpers.BooleanTransformIndicator.BooleanTransformSimpleType;\n                                                                 ^\n  symbol:   class BooleanTransformSimpleType\n  location: class BooleanTransformIndicator\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:38: error: cannot find symbol\nimport org.ta4j.core.indicators.helpers.BooleanTransformIndicator.BooleanTransformType;\n                                                                 ^\n  symbol:   class BooleanTransformType\n  location: class BooleanTransformIndicator\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/AbstractAnalysisCriterionTest.java:86: error: cannot find symbol\n        AbstractAnalysisCriterion c2 = new EnterAndHoldReturnCriterion();\n                                           ^\n  symbol:   class EnterAndHoldReturnCriterion\n  location: class AbstractAnalysisCriterionTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterionTest.java:46: error: cannot find symbol\n        super(params -> params.length == 0 ? new EnterAndHoldReturnCriterion()\n                                                 ^\n  symbol:   class EnterAndHoldReturnCriterion\n  location: class EnterAndHoldReturnCriterionTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/criteria/EnterAndHoldReturnCriterionTest.java:47: error: cannot find symbol\n                : new EnterAndHoldReturnCriterion((TradeType) params[0]), numFunction);\n                      ^\n  symbol:   class EnterAndHoldReturnCriterion\n  location: class EnterAndHoldReturnCriterionTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:67: error: cannot find symbol\n        transEquals = new BooleanTransformIndicator(constantIndicator, FOUR, BooleanTransformType.equals);\n                                                                             ^\n  symbol:   variable BooleanTransformType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:69: error: cannot find symbol\n                BooleanTransformType.isGreaterThan);\n                ^\n  symbol:   variable BooleanTransformType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:71: error: cannot find symbol\n                BooleanTransformType.isGreaterThanOrEqual);\n                ^\n  symbol:   variable BooleanTransformType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:73: error: cannot find symbol\n                BooleanTransformType.isLessThan);\n                ^\n  symbol:   variable BooleanTransformType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:75: error: cannot find symbol\n                BooleanTransformType.isLessThanOrEqual);\n                ^\n  symbol:   variable BooleanTransformType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:77: error: cannot find symbol\n        transIsNaN = new BooleanTransformIndicator(constantIndicator, BooleanTransformSimpleType.isNaN);\n                                                                      ^\n  symbol:   variable BooleanTransformSimpleType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:79: error: cannot find symbol\n                BooleanTransformSimpleType.isNegative);\n                ^\n  symbol:   variable BooleanTransformSimpleType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:81: error: cannot find symbol\n                BooleanTransformSimpleType.isNegativeOrZero);\n                ^\n  symbol:   variable BooleanTransformSimpleType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:82: error: cannot find symbol\n        transIsPositive = new BooleanTransformIndicator(constantIndicator, BooleanTransformSimpleType.isPositive);\n                                                                           ^\n  symbol:   variable BooleanTransformSimpleType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:84: error: cannot find symbol\n                BooleanTransformSimpleType.isPositiveOrZero);\n                ^\n  symbol:   variable BooleanTransformSimpleType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:86: error: cannot find symbol\n                BooleanTransformSimpleType.isZero);\n                ^\n  symbol:   variable BooleanTransformSimpleType\n  location: class BooleanTransformIndicatorTest\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:91: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transEquals.getValue(0));\n                                       ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:92: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsGreaterThan.getValue(0));\n                                              ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:93: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsGreaterThanOrEqual.getValue(0));\n                                                     ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:94: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsLessThan.getValue(0));\n                                           ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:95: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsLessThanOrEqual.getValue(0));\n                                                  ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:97: error: incompatible types: Object cannot be converted to boolean\n        assertFalse(transIsNaN.getValue(0));\n                                       ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:98: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsNegative.getValue(0));\n                                           ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:99: error: incompatible types: Object cannot be converted to boolean\n        assertFalse(transIsNegativeOrZero.getValue(0));\n                                                  ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:100: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsPositive.getValue(0));\n                                           ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:101: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsPositiveOrZero.getValue(0));\n                                                 ^\n/repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java:102: error: incompatible types: Object cannot be converted to boolean\n        assertTrue(transIsZero.getValue(0));\n                                       ^\nNote: /repo/experiments/commit-survival/dev/src-test-t/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicatorTest.java uses unchecked or unsafe operations.\nNote: Recompile with -Xlint:unchecked for details.\nNote: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n27 errors\n"
+  },
+  "seconds": 676.381,
+  "derived_from": "dev"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "group": "hashCode - both entry and exit are null",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Objects.hash(null, null) == 961",
+        "description": "A Position with no entry and no exit should return the hash code computed by Objects.hash(null, null). This verifies that the method correctly handles null fields."
+      }
+    ]
+  },
+  {
+    "group": "hashCode - entry non-null, exit null",
+    "cases": [
+      {
+        "input": [],
+        "expected": "1271",
+        "description": "A Position with a non\u2011null entry Trade (hashCode() == 10) and a null exit should return the hash code computed by Objects.hash(entry, null) which equals 1271."
+      }
+    ]
+  },
+  {
+    "group": "hashCode - entry hashCode throws RuntimeException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "RuntimeException thrown from entry.hashCode()",
+        "description": "When the entry Trade object's hashCode() method throws a RuntimeException, Position.hashCode() should propagate that exception."
+      }
+    ]
+  }
+]

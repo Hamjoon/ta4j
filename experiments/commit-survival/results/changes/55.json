@@ -1,0 +1,18 @@
+{
+  "index": 55,
+  "sha": "df40f73bc3a6f256a3de162cda6daa3a6c458547",
+  "parent": "4ef47226d6815130a4c00fe70fb781bdbf588688",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java": [],
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java": [],
+    "src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java": [],
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [],
+    "src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java": [],
+    "src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java\nindex 64cc16806..902e577ed 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/HeikinAshiBarBuilder.java\n@@ -31,3 +30,0 @@ import org.ta4j.core.num.NumFactory;\n-import java.util.ArrayList;\n-import java.util.List;\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\nindex f00b78547..fe389226e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n@@ -25,0 +26,3 @@ package org.ta4j.core.criteria;\n+import java.math.BigDecimal;\n+import java.util.Objects;\n+\n@@ -33 +35,0 @@ import org.ta4j.core.analysis.cost.ZeroCostModel;\n-import org.ta4j.core.criteria.pnl.GrossReturnCriterion;\n@@ -37,3 +38,0 @@ import org.ta4j.core.num.Num;\n-import java.math.BigDecimal;\n-import java.util.Objects;\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java\nindex a08d64e70..1e3c4cc2f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AbstractReturnCriterion.java\n@@ -31 +30,0 @@ import org.ta4j.core.num.Num;\n-import org.ta4j.core.num.NumFactory;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java\nindex 986d291bf..47f2d97a8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java\n@@ -28 +27,0 @@ import org.ta4j.core.Position;\n-import org.ta4j.core.Trade;"
+}

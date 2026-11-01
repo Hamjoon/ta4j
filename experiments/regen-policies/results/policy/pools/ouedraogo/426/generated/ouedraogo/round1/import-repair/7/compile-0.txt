@@ -1,0 +1,192 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:29: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.Position;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:30: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.Trade;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:31: error: package org.ta4j.core.trading.Trade does not exist
+import org.ta4j.core.trading.Trade.TradeType;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:33: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:175: error: cannot find symbol
+        private final TradeType startingType = TradeType.BUY;
+                      ^
+  symbol:   class TradeType
+  location: class NoOpStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:180: error: cannot find symbol
+        @Override public TradeType getStartingType() { return startingType; }
+                         ^
+  symbol:   class TradeType
+  location: class NoOpStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:187: error: cannot find symbol
+        private final TradeType startingType = TradeType.BUY;
+                      ^
+  symbol:   class TradeType
+  location: class AlwaysOnStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:192: error: cannot find symbol
+        @Override public TradeType getStartingType() { return startingType; }
+                         ^
+  symbol:   class TradeType
+  location: class AlwaysOnStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:132: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)   // DecimalNum implements NumFactory
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:148: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:174: error: NoOpStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class NoOpStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:175: error: cannot find symbol
+        private final TradeType startingType = TradeType.BUY;
+                                               ^
+  symbol:   variable TradeType
+  location: class NoOpStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:186: error: AlwaysOnStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysOnStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:187: error: cannot find symbol
+        private final TradeType startingType = TradeType.BUY;
+                                               ^
+  symbol:   variable TradeType
+  location: class AlwaysOnStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:239: error: cannot find symbol
+        TradingRecord record = manager.run(new NoOpStrategy(), TradeType.SELL);
+                                                               ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:241: error: cannot find symbol
+        assertEquals(TradeType.SELL, record.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:247: error: cannot find symbol
+        TradingRecord record = manager.run(new NoOpStrategy(), TradeType.SELL, 0, 0);
+                                                               ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:248: error: cannot find symbol
+        assertEquals(TradeType.SELL, record.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:255: error: cannot find symbol
+        TradingRecord record = manager.run(new NoOpStrategy(), TradeType.BUY, amount);
+                                                               ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:264: error: cannot find symbol
+        TradingRecord record = manager.run(new NoOpStrategy(), TradeType.BUY, amount, 0, 0);
+                                                               ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:271: error: cannot find symbol
+        TradingRecord record = manager.run(new AlwaysOnStrategy(), TradeType.BUY, fixedSizer);
+                                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:282: error: cannot find symbol
+                TradeType.BUY, fixedSizer, 0, 0);
+                ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:290: error: cannot find symbol
+        TradingRecord supplied = new BaseTradingRecord(TradeType.BUY);
+                                                       ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:299: error: cannot find symbol
+        TradingRecord supplied = new BaseTradingRecord(TradeType.BUY);
+                                                       ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:323: error: cannot find symbol
+                manager.runWalkForward(new NoOpStrategy(), TradeType.SELL, amount, cfg);
+                                                           ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:325: error: cannot find symbol
+        assertEquals(TradeType.SELL, result.strategy().getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:352: error: cannot find symbol
+        manager.run(new NoOpStrategy(), TradeType.BUY, null);
+                                        ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:358: error: cannot find symbol
+        Num nan = DecimalNum.NaN;
+                            ^
+  symbol:   variable NaN
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:359: error: cannot find symbol
+        manager.run(new NoOpStrategy(), TradeType.BUY, nan);
+                                        ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:366: error: cannot find symbol
+        manager.run(new NoOpStrategy(), TradeType.BUY, neg);
+                                        ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:385: error: cannot find symbol
+        manager.run(new NoOpStrategy(), TradeType.BUY, DecimalNum.valueOf(1), -10, 10);
+                                        ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:404: error: cannot find symbol
+                TradeType.BUY, sizer);
+                ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:413: error: cannot find symbol
+        BaseTradingRecord closedRecord = new BaseTradingRecord(TradeType.BUY);
+                                                               ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:437: error: BaseBarBuilder is not abstract and does not override abstract method add() in BarBuilder
+    private static class BaseBarBuilder implements BarBuilder {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:472: error: volume(Num) in BaseBarBuilder cannot implement volume(Num) in BarBuilder
+        BaseBarBuilder volume(Num vol) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:467: error: closePrice(Num) in BaseBarBuilder cannot implement closePrice(Num) in BarBuilder
+        BaseBarBuilder closePrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:462: error: lowPrice(Num) in BaseBarBuilder cannot implement lowPrice(Num) in BarBuilder
+        BaseBarBuilder lowPrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:457: error: highPrice(Num) in BaseBarBuilder cannot implement highPrice(Num) in BarBuilder
+        BaseBarBuilder highPrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:452: error: openPrice(Num) in BaseBarBuilder cannot implement openPrice(Num) in BarBuilder
+        BaseBarBuilder openPrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:442: error: timePeriod(Duration) in BaseBarBuilder cannot implement timePeriod(Duration) in BarBuilder
+        BaseBarBuilder timePeriod(java.time.Duration period) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:487: error: BaseBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class BaseBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:509: error: getEndTime() in BaseBar cannot implement getEndTime() in Bar
+        @Override public java.time.ZonedDateTime getEndTime() { return endTime; }
+                                                 ^
+  return type ZonedDateTime is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:509: error: method does not override or implement a method from a supertype
+        @Override public java.time.ZonedDateTime getEndTime() { return endTime; }
+        ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+43 errors

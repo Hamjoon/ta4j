@@ -1,0 +1,233 @@
+package org.ta4j.core.analysis;
+
+import static org.junit.Assert.*;
+
+import java.time.Duration;
+import java.time.ZonedDateTime;
+import java.util.List;
+
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.Position;
+import org.ta4j.core.Trade;
+import org.ta4j.core.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive JUnit4 test suite for {@link CashFlow}.
+ *
+ * The tests cover:
+ * <ul>
+ *   <li>Construction with a closed position</li>
+ *   <li>Construction with an opened (unclosed) position and a final index</li>
+ *   <li>Construction with a {@link TradingRecord} containing several positions</li>
+ *   <li>Utility static methods {@code addCost} and {@code determineEndIndex}</li>
+ *   <li>Behaviour of {@code getValue}, {@code getSize}, {@code getBarSeries},
+ *       {@code numOf}</li>
+ *   <li>Edge‑cases such as illegal arguments and padding of the internal
+ *       {@code values} list.</li>
+ * </ul>
+ *
+ * The tests use only the public API of the TA‑4J library (no mocking, no
+ * subclassing of library classes) and rely on the concrete implementations
+ * {@code BaseBarSeries}, {@code BaseBar}, {@code BaseTradingRecord},
+ * {@code Trade} and {@code Position}.
+ */
+public class CashFlowTest {
+
+    /**
+     * Helper that creates a {@link BarSeries} with four bars whose close prices are
+     * 100, 110, 120 and 130. All other OHLC values are set equal to the close price
+     * for simplicity.
+     */
+    private BarSeries createSimpleSeries() {
+        BarSeries series = new BaseBarSeries("test-series");
+        ZonedDateTime now = ZonedDateTime.now();
+
+        // Bar 0 – close 100
+        series.addBar(Duration.ofDays(1), now, 100, 100, 100, 100, 0);
+        // Bar 1 – close 110
+        series.addBar(Duration.ofDays(1), now.plusDays(1), 110, 110, 110, 110, 0);
+        // Bar 2 – close 120
+        series.addBar(Duration.ofDays(1), now.plusDays(2), 120, 120, 120, 120, 0);
+        // Bar 3 – close 130
+        series.addBar(Duration.ofDays(1), now.plusDays(3), 130, 130, 130, 130, 0);
+
+        return series;
+    }
+
+    @Test
+    public void testAddCostLongAndShort() {
+        BarSeries series = new BaseBarSeries("dummy");
+        Num raw = series.numOf(100);
+        Num cost = series.numOf(5);
+
+        // Long trade – cost is subtracted
+        Num longResult = CashFlow.addCost(raw, cost, true);
+        assertEquals(95.0, longResult.doubleValue(), 1e-10);
+
+        // Short trade – cost is added
+        Num shortResult = CashFlow.addCost(raw, cost, false);
+        assertEquals(105.0, shortResult.doubleValue(), 1e-10);
+    }
+
+    @Test
+    public void testDetermineEndIndexVariousScenarios() {
+        BarSeries series = createSimpleSeries();
+        int maxIndex = series.getEndIndex(); // 3
+
+        // Position with an exit at index 2, finalIndex larger than exit
+        Position closedPos = new Position(
+                new Trade(TradeType.BUY, 0, series.numOf(100)),
+                new Trade(TradeType.SELL, 2, series.numOf(120)));
+
+        int result1 = CashFlow.determineEndIndex(closedPos, 3, maxIndex);
+        assertEquals(2, result1); // exit index caps the result
+
+        // Position without exit (opened), finalIndex = 2
+        Position openedPos = new Position(new Trade(TradeType.BUY, 0, series.numOf(100)));
+        int result2 = CashFlow.determineEndIndex(openedPos, 2, maxIndex);
+        assertEquals(2, result2); // finalIndex is used
+
+        // finalIndex exceeds maxIndex – should be limited to maxIndex
+        int result3 = CashFlow.determineEndIndex(openedPos, 10, maxIndex);
+        assertEquals(maxIndex, result3);
+    }
+
+    @Test
+    public void testCashFlowWithClosedPosition() {
+        BarSeries series = createSimpleSeries();
+
+        // Entry at index 0 (price 100), exit at index 2 (price 120)
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+        Trade exit = new Trade(TradeType.SELL, 2, series.numOf(120));
+        Position position = new Position(entry, exit);
+
+        CashFlow cf = new CashFlow(series, position);
+
+        // Expected cash‑flow values:
+        // index 0 – initial 1
+        // index 1 – 1 * (110 / 100) = 1.1
+        // index 2 – 1 * (120 / 100) = 1.2
+        // index 3 – padded to last value = 1.2
+        assertEquals(4, cf.getSize()); // series size
+        assertEquals(1.0, cf.getValue(0).doubleValue(), 1e-10);
+        assertEquals(1.1, cf.getValue(1).doubleValue(), 1e-10);
+        assertEquals(1.2, cf.getValue(2).doubleValue(), 1e-10);
+        assertEquals(1.2, cf.getValue(3).doubleValue(), 1e-10);
+    }
+
+    @Test
+    public void testCashFlowWithOpenedPositionAndFinalIndex() {
+        BarSeries series = createSimpleSeries();
+
+        // Opened long position: entry at index 0 (price 100), no exit
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+        Position openedPos = new Position(entry); // no exit => opened
+
+        // Use finalIndex = series.getEndIndex() (3) so that cash‑flow is accrued
+        // until the last bar.
+        CashFlow cf = new CashFlow(series, openedPos, series.getEndIndex());
+
+        // Expected values (no holding cost):
+        // index0 = 1
+        // index1 = 110/100 = 1.1
+        // index2 = 120/100 = 1.2
+        // index3 = 130/100 = 1.3
+        assertEquals(1.0, cf.getValue(0).doubleValue(), 1e-10);
+        assertEquals(1.1, cf.getValue(1).doubleValue(), 1e-10);
+        assertEquals(1.2, cf.getValue(2).doubleValue(), 1e-10);
+        assertEquals(1.3, cf.getValue(3).doubleValue(), 1e-10);
+    }
+
+    @Test
+    public void testCashFlowWithTradingRecordMultiplePositions() {
+        BarSeries series = createSimpleSeries();
+
+        // Position 1 : BUY at 0 (100) – SELL at 1 (110)
+        Trade e1 = new Trade(TradeType.BUY, 0, series.numOf(100));
+        Trade x1 = new Trade(TradeType.SELL, 1, series.numOf(110));
+        Position p1 = new Position(e1, x1);
+
+        // Position 2 : BUY at 2 (120) – SELL at 3 (130)
+        Trade e2 = new Trade(TradeType.BUY, 2, series.numOf(120));
+        Trade x2 = new Trade(TradeType.SELL, 3, series.numOf(130));
+        Position p2 = new Position(e2, x2);
+
+        BaseTradingRecord record = new BaseTradingRecord();
+        record.enter(e1);
+        record.exit(x1);
+        record.enter(e2);
+        record.exit(x2);
+
+        CashFlow cf = new CashFlow(series, record);
+
+        // The cash‑flow is cumulative:
+        // after first trade (index 1) : 1 * (110/100) = 1.1
+        // after second trade (index 3) : 1.1 * (130/120) = 1.188888...
+        assertEquals(1.0, cf.getValue(0).doubleValue(), 1e-10);
+        assertEquals(1.1, cf.getValue(1).doubleValue(), 1e-10);
+        // index 2 is between the two trades – cash‑flow stays at 1.1
+        assertEquals(1.1, cf.getValue(2).doubleValue(), 1e-10);
+        // final index
+        double expectedFinal = 1.1 * (130.0 / 120.0);
+        assertEquals(expectedFinal, cf.getValue(3).doubleValue(), 1e-10);
+    }
+
+    @Test
+    public void testCashFlowConstructorThrowsOnOpenPositionWithoutFinalIndex() {
+        BarSeries series = createSimpleSeries();
+
+        // Opened position (no exit)
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+        Position openedPos = new Position(entry);
+
+        try {
+            // This constructor expects a *closed* position – should throw
+            new CashFlow(series, openedPos);
+            fail("Expected IllegalArgumentException for opened position");
+        } catch (IllegalArgumentException e) {
+            // expected
+        }
+    }
+
+    @Test
+    public void testGettersAndNumOf() {
+        BarSeries series = createSimpleSeries();
+        Position dummy = new Position(
+                new Trade(TradeType.BUY, 0, series.numOf(100)),
+                new Trade(TradeType.SELL, 1, series.numOf(110)));
+
+        CashFlow cf = new CashFlow(series, dummy);
+
+        // getBarSeries returns the same reference
+        assertSame(series, cf.getBarSeries());
+
+        // getSize equals series bar count
+        assertEquals(series.getBarCount(), cf.getSize());
+
+        // numOf delegates to series.numOf
+        Num n = cf.numOf(42);
+        assertEquals(42.0, n.doubleValue(), 1e-10);
+    }
+
+    @Test
+    public void testFillToTheEndPadsCorrectly() {
+        BarSeries series = createSimpleSeries();
+
+        // Position that ends at index 1, leaving the series longer.
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+        Trade exit = new Trade(TradeType.SELL, 1, series.numOf(110));
+        Position pos = new Position(entry, exit);
+
+        CashFlow cf = new CashFlow(series, pos);
+
+        // Values after index 1 should be padded with the last computed value (1.1)
+        assertEquals(1.1, cf.getValue(2).doubleValue(), 1e-10);
+        assertEquals(1.1, cf.getValue(3).doubleValue(), 1e-10);
+    }
+}

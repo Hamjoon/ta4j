@@ -1,0 +1,11 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:37: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:75: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL); // starting with SELL (short)
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+2 errors

@@ -1,0 +1,206 @@
+Imagine three different experts in software testing who are tasked with developing comprehensive JUnit 4 test cases for the following Java class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
+The Java class is:
+/*
+ * SPDX-License-Identifier: MIT
+ */
+package org.ta4j.core.indicators;
+
+import java.util.Objects;
+
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.indicators.averages.MMAIndicator;
+import org.ta4j.core.indicators.helpers.TRIndicator;
+import org.ta4j.core.num.Num;
+
+import static org.ta4j.core.num.NaN.NaN;
+
+/**
+ * Average true range indicator.
+ */
+public class ATRIndicator extends AbstractIndicator<Num> {
+
+    private final int trueRangeUnstableBars;
+    private final transient MMAIndicator averageTrueRangeIndicator;
+    private final int barCount;
+
+    /**
+     * Constructor.
+     *
+     * @param series   the bar series
+     * @param barCount the time frame
+     */
+    public ATRIndicator(BarSeries series, int barCount) {
+        this(new TRIndicator(series), barCount);
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param tr       the {@link TRIndicator}
+     * @param barCount the time frame
+     */
+    public ATRIndicator(TRIndicator tr, int barCount) {
+        this(validatedConfig(tr, barCount));
+    }
+
+    private ATRIndicator(Config config) {
+        super(config.trueRangeIndicator().getBarSeries());
+        this.trueRangeUnstableBars = config.trueRangeUnstableBars();
+        this.barCount = config.barCount();
+        this.averageTrueRangeIndicator = new MMAIndicator(config.trueRangeIndicator(), config.barCount());
+    }
+
+    private static Config validatedConfig(TRIndicator tr, int barCount) {
+        TRIndicator validatedTrueRange = Objects.requireNonNull(tr, "tr");
+        return new Config(validatedTrueRange, validatedTrueRange.getCountOfUnstableBars(), barCount);
+    }
+
+    @Override
+    public Num getValue(int index) {
+        if (index < getCountOfUnstableBars()) {
+            return NaN;
+        }
+        return averageTrueRangeIndicator.getValue(index);
+    }
+
+    @Override
+    public int getCountOfUnstableBars() {
+        return trueRangeUnstableBars + getBarCount();
+    }
+
+    /** @return a true range indicator for this indicator's bar series */
+    public TRIndicator getTRIndicator() {
+        return new TRIndicator(getBarSeries());
+    }
+
+    /** @return the bar count of {@link #averageTrueRangeIndicator} */
+    public int getBarCount() {
+        return barCount;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " barCount: " + getBarCount();
+    }
+
+    private record Config(TRIndicator trueRangeIndicator, int trueRangeUnstableBars, int barCount) {
+    }
+}
+
+
+Use only classes, constructors and methods that appear in the class source above or in the dependency signatures below. Do not use APIs from other versions of this library. Construct real objects through the constructors or factory methods shown instead of mocking; do not mock or subclass abstract classes or interfaces of this library.
+
+// public API of org.ta4j.core.indicators.AbstractIndicator
+public abstract class AbstractIndicator<T> implements Indicator<T> {
+  protected AbstractIndicator(BarSeries series);
+  public BarSeries getBarSeries();
+  public String toString();
+}
+
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+  default boolean isStable();
+   int getCountOfUnstableBars();
+   BarSeries getBarSeries();
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+  default String toJson();
+  default ComponentDescriptor toDescriptor();
+  static Indicator<?> fromJson(BarSeries series, String json);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+  static boolean isFinite(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+  default void clear();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.indicators.helpers.TRIndicator
+public class TRIndicator extends CachedIndicator<Num> {
+  public TRIndicator(BarSeries series);
+  public TRIndicator(Indicator<Num> highPriceIndicator, Indicator<Num> lowPriceIndicator, Indicator<Num> closePriceIndicator);
+  protected Num calculate(int index);
+  public int getCountOfUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.ATRIndicator.Config
+private record Config(TRIndicator trueRangeIndicator, int trueRangeUnstableBars, int barCount) {
+}
+
+// public API of org.ta4j.core.indicators.averages.MMAIndicator
+public class MMAIndicator extends AbstractEMAIndicator {
+  public MMAIndicator(Indicator<Num> indicator, int barCount);
+  public int getCountOfUnstableBars();
+}
+
+
+At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) JUnit 4 test file (ATRIndicatorTest.java) for the given Java class. The complete JUnit test file must start with ###Test START## and finish with ###Test END##

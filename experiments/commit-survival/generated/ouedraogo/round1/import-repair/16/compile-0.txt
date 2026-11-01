@@ -1,0 +1,5 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/FSL/NumericIndicatorTest.java:114: error: incompatible types: invalid constructor reference
+        @Override public java.util.function.Function<Number, org.ta4j.core.num.Num> function() { return SimpleNum::new; }
+                                                                                                        ^
+    incompatible types: Number cannot be converted to double
+1 error

@@ -1,0 +1,111 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:430: error: interface expected here
+    private static final class SimpleTrade implements Trade {
+                                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:135: error: no suitable constructor found for SimpleNum(double)
+            return new SimpleNum(Math.log(this.doubleValue()));
+                   ^
+    constructor SimpleNum.SimpleNum(BigDecimal) is not applicable
+      (argument mismatch; double cannot be converted to BigDecimal)
+    constructor SimpleNum.SimpleNum(long) is not applicable
+      (argument mismatch; possible lossy conversion from double to long)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:140: error: no suitable constructor found for SimpleNum(double)
+            return new SimpleNum(Math.exp(this.doubleValue()));
+                   ^
+    constructor SimpleNum.SimpleNum(BigDecimal) is not applicable
+      (argument mismatch; double cannot be converted to BigDecimal)
+    constructor SimpleNum.SimpleNum(long) is not applicable
+      (argument mismatch; possible lossy conversion from double to long)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:145: error: no suitable constructor found for SimpleNum(double)
+            return new SimpleNum(Math.sqrt(this.doubleValue()));
+                   ^
+    constructor SimpleNum.SimpleNum(BigDecimal) is not applicable
+      (argument mismatch; double cannot be converted to BigDecimal)
+    constructor SimpleNum.SimpleNum(long) is not applicable
+      (argument mismatch; possible lossy conversion from double to long)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:278: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:294: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:299: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:304: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:314: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static final class SimpleBar implements Bar {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:344: error: getTrades() in SimpleBar cannot implement getTrades() in Bar
+        @Override public SimpleNum getTrades()    { throw uoe(); }
+                                   ^
+  return type SimpleNum is not compatible with long
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:346: error: getTimePeriod() in SimpleBar cannot implement getTimePeriod() in Bar
+        @Override public SimpleNum getTimePeriod() { throw uoe(); }
+                                   ^
+  return type SimpleNum is not compatible with Duration
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:324: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:344: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getTrades()    { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:345: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getTimestamp() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:346: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getTimePeriod() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:442: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:447: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:452: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:462: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getPrice() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:463: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getAmount() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:464: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCost() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:465: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getValue() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:466: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCommission() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:467: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getFee() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:468: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCurrencyAmount() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:469: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCurrencyCost() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:470: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCurrencyValue() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:474: error: ZeroCostModel is not abstract and does not override abstract method equals(CostModel) in CostModel
+    private static final class ZeroCostModel implements CostModel {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:475: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:581: error: incompatible types: SimpleTrade cannot be converted to Trade
+        return new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:588: error: incompatible types: SimpleTrade cannot be converted to Trade
+        return new Position(entry, null, new ZeroCostModel(), new ZeroCostModel());
+                            ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+31 errors

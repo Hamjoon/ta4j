@@ -1,0 +1,152 @@
+2026-10-29T16:41:24.249275+00:00 generate: ouedraogo round1 NumericIndicator FSL call 1 recorded | elapsed 00:00:00; 1/50 calls; estimated finish unknown
+2026-10-29T16:42:01.408403+00:00 generate: ouedraogo round1 NumericIndicator ZSL call 1 recorded | elapsed 00:00:00; 2/50 calls; estimated finish unknown
+2026-10-29T16:42:07.726063+00:00 generate: ouedraogo round1 NumericIndicator CoT call 1 recorded | elapsed 00:00:00; 3/50 calls; estimated finish unknown
+2026-10-29T16:42:44.545630+00:00 generate: ouedraogo round1 NumericIndicator GToT call 1 recorded | elapsed 00:00:00; 4/50 calls; estimated finish unknown
+2026-10-29T16:43:04.804951+00:00 generate: ouedraogo round1 Position ZSL call 1 recorded | elapsed 00:00:00; 5/50 calls; estimated finish unknown
+2026-10-29T16:44:05.748848+00:00 generate: ouedraogo round1 NumericIndicator ToT call 1 recorded | elapsed 00:00:00; 6/50 calls; estimated finish unknown
+2026-10-29T16:45:17.033601+00:00 generate: ouedraogo round1 Position FSL call 1 recorded | elapsed 00:00:00; 7/50 calls; estimated finish unknown
+2026-10-29T16:45:45.625754+00:00 generate: ouedraogo round1 Position CoT call 1 recorded | elapsed 00:00:00; 8/50 calls; estimated finish unknown
+2026-10-29T16:47:14.829081+00:00 generate: ouedraogo round1 Position ToT call 1 recorded | elapsed 00:00:00; 9/50 calls; estimated finish unknown
+2026-10-29T16:49:00.561953+00:00 generate: ouedraogo round1 Position GToT call 1 recorded | elapsed 00:00:00; 10/50 calls; estimated finish unknown
+2026-10-29T16:49:19.635971+00:00 generate: ouedraogo round1 BarSeriesManager ZSL call 1 recorded | elapsed 00:00:00; 11/50 calls; estimated finish unknown
+2026-10-29T16:51:06.052850+00:00 generate: ouedraogo round1 BarSeriesManager CoT call 1 recorded | elapsed 00:00:00; 12/50 calls; estimated finish unknown
+2026-10-29T16:51:46.319031+00:00 generate: ouedraogo round1 BarSeriesManager FSL call 1 recorded | elapsed 00:00:00; 13/50 calls; estimated finish unknown
+2026-10-29T16:52:49.925301+00:00 generate: ouedraogo round1 BarSeriesManager ToT call 1 recorded | elapsed 00:00:00; 14/50 calls; estimated finish unknown
+2026-10-29T16:53:36.850962+00:00 generate: ouedraogo round1 BarSeriesManager GToT call 1 recorded | elapsed 00:00:00; 15/50 calls; estimated finish unknown
+2026-10-29T16:54:16.970933+00:00 generate: ouedraogo round1 CashFlow ZSL call 1 recorded | elapsed 00:00:00; 16/50 calls; estimated finish unknown
+2026-10-29T16:54:49.405399+00:00 generate: ouedraogo round1 CashFlow FSL call 1 recorded | elapsed 00:00:00; 17/50 calls; estimated finish unknown
+2026-10-29T16:54:51.494485+00:00 generate: ouedraogo round1 CashFlow CoT call 1 recorded | elapsed 00:00:00; 18/50 calls; estimated finish unknown
+2026-10-29T16:56:30.507519+00:00 generate: ouedraogo round1 CashFlow GToT call 1 recorded | elapsed 00:00:00; 19/50 calls; estimated finish unknown
+2026-10-29T16:56:30.762018+00:00 generate: ouedraogo round1 CashFlow ToT call 1 recorded | elapsed 00:00:00; 20/50 calls; estimated finish unknown
+2026-10-29T16:57:12.719112+00:00 generate: ouedraogo round1 ATRIndicator ZSL call 1 recorded | elapsed 00:00:00; 21/50 calls; estimated finish unknown
+2026-10-29T16:57:45.242652+00:00 generate: ouedraogo round1 ATRIndicator FSL call 1 recorded | elapsed 00:00:00; 22/50 calls; estimated finish unknown
+2026-10-29T16:58:17.092105+00:00 generate: ouedraogo round1 ATRIndicator CoT call 1 recorded | elapsed 00:00:00; 23/50 calls; estimated finish unknown
+2026-10-29T16:58:59.809391+00:00 generate: ouedraogo round1 ATRIndicator GToT call 1 recorded | elapsed 00:00:00; 24/50 calls; estimated finish unknown
+2026-10-29T16:59:12.836326+00:00 generate: ouedraogo round1 ATRIndicator ToT call 1 recorded | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:35.317044+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:35.518679+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:35.587129+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:35.693159+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:37.957819+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:38.009712+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:38.255223+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:38.458701+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:40.645868+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:40.743302+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:40.827160+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:41.189028+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:43.188449+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:43.297204+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:43.766273+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:45.499821+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:46.191011+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:46.420696+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:48.764839+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:48.773203+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:49.102712+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:51.437734+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:51.989462+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:51.991901+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:52.102727+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T16:59:52.113601+00:00 generate: ouedraogo round1: 1 compiled files; 0 kept; next | elapsed 00:00:00; 25/50 calls; estimated finish unknown
+2026-10-29T17:01:30.259187+00:00 generate: ouedraogo round2 NumericIndicator ZSL call 1 recorded | elapsed 00:00:00; 26/50 calls; estimated finish unknown
+2026-10-29T17:02:57.766605+00:00 generate: ouedraogo round2 NumericIndicator FSL call 1 recorded | elapsed 00:00:00; 27/50 calls; estimated finish unknown
+2026-10-29T17:03:48.154105+00:00 generate: ouedraogo round2 NumericIndicator ToT call 1 recorded | elapsed 00:00:00; 28/50 calls; estimated finish unknown
+2026-10-29T17:04:36.691539+00:00 generate: ouedraogo round2 NumericIndicator GToT call 1 recorded | elapsed 00:00:00; 29/50 calls; estimated finish unknown
+2026-10-29T17:04:52.679013+00:00 generate: ouedraogo round2 Position ZSL call 1 recorded | elapsed 00:00:00; 30/50 calls; estimated finish unknown
+2026-10-29T17:05:12.035163+00:00 generate: ouedraogo round2 NumericIndicator CoT call 1 recorded | elapsed 00:00:00; 31/50 calls; estimated finish unknown
+2026-10-29T17:07:08.972162+00:00 generate: ouedraogo round2 Position CoT call 1 recorded | elapsed 00:00:00; 32/50 calls; estimated finish unknown
+2026-10-29T17:08:04.500540+00:00 generate: ouedraogo round2 Position FSL call 1 recorded | elapsed 00:00:00; 33/50 calls; estimated finish unknown
+2026-10-29T17:08:51.984088+00:00 generate: ouedraogo round2 Position ToT call 1 recorded | elapsed 00:00:00; 34/50 calls; estimated finish unknown
+2026-10-29T17:09:34.618353+00:00 generate: ouedraogo round2 Position GToT call 1 recorded | elapsed 00:00:00; 35/50 calls; estimated finish unknown
+2026-10-29T17:10:49.000801+00:00 generate: ouedraogo round2 BarSeriesManager ZSL call 1 recorded | elapsed 00:00:00; 36/50 calls; estimated finish unknown
+2026-10-29T17:11:27.898976+00:00 generate: ouedraogo round2 BarSeriesManager FSL call 1 recorded | elapsed 00:00:00; 37/50 calls; estimated finish unknown
+2026-10-29T17:12:48.900491+00:00 generate: ouedraogo round2 BarSeriesManager CoT call 1 recorded | elapsed 00:00:00; 38/50 calls; estimated finish unknown
+2026-10-29T17:12:48.936438+00:00 generate: ouedraogo round2 BarSeriesManager ToT call 1 recorded | elapsed 00:00:00; 39/50 calls; estimated finish unknown
+2026-10-29T17:13:05.079604+00:00 generate: ouedraogo round2 CashFlow ZSL call 1 recorded | elapsed 00:00:00; 40/50 calls; estimated finish unknown
+2026-10-29T17:14:27.358270+00:00 generate: ouedraogo round2 BarSeriesManager GToT call 1 recorded | elapsed 00:00:00; 41/50 calls; estimated finish unknown
+2026-10-29T17:14:42.373515+00:00 generate: ouedraogo round2 CashFlow FSL call 1 recorded | elapsed 00:00:00; 42/50 calls; estimated finish unknown
+2026-10-29T17:15:20.959601+00:00 generate: ouedraogo round2 CashFlow ToT call 1 recorded | elapsed 00:00:00; 43/50 calls; estimated finish unknown
+2026-10-29T17:15:35.725938+00:00 generate: ouedraogo round2 CashFlow GToT call 1 recorded | elapsed 00:00:00; 44/50 calls; estimated finish unknown
+2026-10-29T17:16:08.483570+00:00 generate: ouedraogo round2 CashFlow CoT call 1 recorded | elapsed 00:00:00; 45/50 calls; estimated finish unknown
+2026-10-29T17:16:12.428470+00:00 generate: ouedraogo round2 ATRIndicator ZSL call 1 recorded | elapsed 00:00:00; 46/50 calls; estimated finish unknown
+2026-10-29T17:16:50.797992+00:00 generate: ouedraogo round2 ATRIndicator CoT call 1 recorded | elapsed 00:00:00; 47/50 calls; estimated finish unknown
+2026-10-29T17:17:49.754948+00:00 generate: ouedraogo round2 ATRIndicator ToT call 1 recorded | elapsed 00:00:00; 48/50 calls; estimated finish unknown
+2026-10-29T17:18:20.134860+00:00 generate: ouedraogo round2 ATRIndicator FSL call 1 recorded | elapsed 00:00:00; 49/50 calls; estimated finish unknown
+2026-10-29T17:21:19.528320+00:00 generate: ouedraogo round2 ATRIndicator GToT call 1 recorded | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:41.645001+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:41.688100+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:41.687467+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:41.948623+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:43.887020+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:43.825977+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:43.977606+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:43.999543+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:46.545701+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:46.563657+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:46.699121+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:46.914132+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:49.343266+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:49.478373+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:49.507983+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:49.624310+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:52.675441+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:52.668448+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:52.742063+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:52.742269+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:54.739900+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:54.917759+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:55.007972+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:57.425912+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.047322+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.180495+00:00 generate: ouedraogo round2: 2 compiled files; 26 kept; max-rounds | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.195438+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.195193+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.195543+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.195583+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.225723+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.226415+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.225553+00:00 generate: ouedraogo round1 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.226395+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.255424+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.255991+00:00 generate: ouedraogo round1 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.255841+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.255786+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.288440+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.288516+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.288234+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.288297+00:00 generate: ouedraogo round1 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.319702+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.321084+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.321252+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.321140+00:00 generate: ouedraogo round1 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.351733+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.351419+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.351840+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.352220+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.380761+00:00 generate: ouedraogo round1 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.399649+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.399738+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.399698+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.399562+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.430463+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.429806+00:00 generate: ouedraogo round2 screened ATRIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.430080+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.430553+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.461223+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.462166+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.461971+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.461377+00:00 generate: ouedraogo round2 screened BarSeriesManagerTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.491472+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.493814+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.493401+00:00 generate: ouedraogo round2 screened CashFlowTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.493893+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.519518+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.525570+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.526048+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.525477+00:00 generate: ouedraogo round2 screened NumericIndicatorTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.553581+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.558037+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.558805+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.558992+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown
+2026-10-29T17:21:59.584657+00:00 generate: ouedraogo round2 screened PositionTest.java | elapsed 00:00:00; 50/50 calls; estimated finish unknown

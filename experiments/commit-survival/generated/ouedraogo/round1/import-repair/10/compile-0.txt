@@ -1,0 +1,95 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:67: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now, one, one, one, one, one));
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:68: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.plusMinutes(1), two, two, two, two, one));
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:69: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.plusMinutes(2), three, three, three, three, one));
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:70: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.plusMinutes(3), three, three, three, three, one));
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:71: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.plusMinutes(4), three, three, three, three, one));
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:221: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:222: error: ONE has private access in DecimalNum
+                DecimalNum.ONE); // amount = 1
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:223: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, series.getBar(exitIdx).getClosePrice(),
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:224: error: ONE has private access in DecimalNum
+                DecimalNum.ONE);
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:232: error: cannot find symbol
+        Trade entry = new Trade(TradeType.SELL, series.getBar(entryIdx).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:233: error: ONE has private access in DecimalNum
+                DecimalNum.ONE);
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:234: error: cannot find symbol
+        Trade exit = new Trade(TradeType.BUY, series.getBar(exitIdx).getClosePrice(),
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:235: error: ONE has private access in DecimalNum
+                DecimalNum.ONE);
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:243: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:244: error: ONE has private access in DecimalNum
+                DecimalNum.ONE);
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java:258: error: ONE has private access in DecimalNum
+        record.enter(0, series.getBar(0).getClosePrice(), DecimalNum.ONE);
+                                                                    ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+17 errors

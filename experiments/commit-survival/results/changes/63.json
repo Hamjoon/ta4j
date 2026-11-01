@@ -1,0 +1,14 @@
+{
+  "index": 63,
+  "sha": "56c99df6f9c2f107fff282d74261c393781d66b1",
+  "parent": "31ef93b298bf78134baaab3636b35abf6fe9ac5e",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java": [],
+    "src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java": [],
+    "src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\nindex a44476e8b..7862f3378 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\n@@ -31 +30,0 @@ import org.ta4j.core.criteria.pnl.NetReturnCriterion;\n-import org.ta4j.core.num.NaN;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\nindex 30b032119..8af144991 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\n@@ -27 +26,0 @@ import org.ta4j.core.BarSeries;\n-import org.ta4j.core.Indicator;\n@@ -29 +27,0 @@ import org.ta4j.core.indicators.averages.EMAIndicator;\n-import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -31,0 +30 @@ import org.ta4j.core.indicators.helpers.LowPriceIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;"
+}

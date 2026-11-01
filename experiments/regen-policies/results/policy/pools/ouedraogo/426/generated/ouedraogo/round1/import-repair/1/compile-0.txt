@@ -1,0 +1,15 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:43: error: incompatible types: String cannot be converted to Config
+        BarSeries series = new BaseBarSeries("test-series");
+                                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:70: error: cannot find symbol
+            BaseBar bar = BaseBar.builder()
+                                 ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:172: error: cannot find symbol
+        assertTrue("Last value must be finite", !lastValue.isNaN() && !lastValue.isInfinite());
+                                                                                ^
+  symbol:   method isInfinite()
+  location: variable lastValue of type Num
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+3 errors

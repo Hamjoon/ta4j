@@ -1,0 +1,16 @@
+{
+  "index": 486,
+  "sha": "19a9e454517e2b2704d1d8af7ef419d51aae6afe",
+  "parent": "f8d32f1caf5e104faae3c38dfcdd9b3371eceea2",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/rules/RuleCopies.java": [
+      71
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/rules/RuleCopies.java": [
+      74
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java b/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java\nindex 3f2be38b3..509608a15 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java\n@@ -13,0 +14 @@ import java.util.Optional;\n+import org.slf4j.Logger;\n@@ -71 +72,3 @@ public final class RuleCopies {\n-        if (value == null || visited.containsKey(value)) {\n+        // Loggers (for example AbstractRule#log) never own rule inputs; walking one\n+        // traverses the logging backend's JVM-wide registries on every copy.\n+        if (value == null || value instanceof Logger || visited.containsKey(value)) {"
+}

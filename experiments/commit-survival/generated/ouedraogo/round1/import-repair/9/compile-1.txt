@@ -1,0 +1,9 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:88: error: cannot find symbol
+    @Override public Function<Number, Num> function() {
+                     ^
+  symbol:   class Function
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:115: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+class SimpleBar implements org.ta4j.core.Bar {
+^
+2 errors

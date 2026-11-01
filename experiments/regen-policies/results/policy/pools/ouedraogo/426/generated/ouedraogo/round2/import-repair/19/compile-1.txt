@@ -1,0 +1,13 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:159: error: SimpleBarSeries is not abstract and does not override abstract method numFactory() in BarSeries
+    private static class SimpleBarSeries implements BarSeries {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:170: error: numFactory() in SimpleBarSeries cannot implement numFactory() in BarSeries
+        @Override public SimpleNumFactory numFactory() { return factory; }
+                                          ^
+  return type SimpleNumFactory is not compatible with NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:170: error: method does not override or implement a method from a supertype
+        @Override public SimpleNumFactory numFactory() { return factory; }
+        ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 errors

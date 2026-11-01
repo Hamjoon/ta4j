@@ -1,0 +1,80 @@
+{
+  "index": 76,
+  "sha": "83a4f4fc08ec361d3696e9bc1327092c7a151b3c",
+  "parent": "40b99cffddd2e549b74c17a9f27e636206195999",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      58,
+      80,
+      81,
+      82
+    ],
+    "src/main/java/org/ta4j/core/num/DecimalNumFactory.java": [
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      43,
+      44,
+      49,
+      54,
+      59,
+      64,
+      69,
+      74,
+      79,
+      93,
+      97
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      58,
+      59,
+      81,
+      82,
+      83,
+      84,
+      85,
+      209,
+      218,
+      231,
+      232,
+      233,
+      235,
+      236,
+      245,
+      246,
+      247,
+      255,
+      256
+    ],
+    "src/main/java/org/ta4j/core/num/DecimalNumFactory.java": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      51,
+      55,
+      56,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 2682c1460..02635221b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -26 +26,2 @@ package org.ta4j.core.num;\n-import static org.ta4j.core.num.NaN.NaN;\n+import org.slf4j.Logger;\n+import org.slf4j.LoggerFactory;\n@@ -34,0 +36 @@ import java.util.Objects;\n+import java.util.concurrent.atomic.AtomicReference;\n@@ -36,2 +38 @@ import java.util.Objects;\n-import org.slf4j.Logger;\n-import org.slf4j.LoggerFactory;\n+import static org.ta4j.core.num.NaN.NaN;\n@@ -53,0 +55 @@ public final class DecimalNum implements Num {\n+    static final int DEFAULT_PRECISION = 16;\n@@ -56,3 +58,3 @@ public final class DecimalNum implements Num {\n-\n-    static final int DEFAULT_PRECISION = 32;\n-    private static final MathContext DEFAULT_MATH_CONTEXT = new MathContext(DEFAULT_PRECISION, RoundingMode.HALF_UP);\n+    private static final RoundingMode DEFAULT_ROUNDING_MODE = RoundingMode.HALF_UP;\n+    private static final AtomicReference<MathContext> DEFAULT_MATH_CONTEXT = new AtomicReference<>(\n+            new MathContext(DEFAULT_PRECISION, DEFAULT_ROUNDING_MODE));\n@@ -72 +73,0 @@ public final class DecimalNum implements Num {\n-     *\n@@ -80,3 +81,5 @@ public final class DecimalNum implements Num {\n-        final int precision = Math.max(this.delegate.precision(), DEFAULT_PRECISION);\n-        this.mathContext = precision == DEFAULT_PRECISION ? DEFAULT_MATH_CONTEXT\n-                : new MathContext(precision, RoundingMode.HALF_UP);\n+        final var defaultContext = getDefaultMathContext();\n+        final int defaultPrecision = defaultContext.getPrecision();\n+        final int precision = Math.max(this.delegate.precision(), defaultPrecision);\n+        this.mathContext = precision == defaultPrecision ? defaultContext\n+                : new MathContext(precision, defaultContext.getRoundingMode());\n@@ -199,0 +203,55 @@ public final class DecimalNum implements Num {\n+    /**\n+     * Returns the default {@link MathContext} used when no precision is specified.\n+     *\n+     * @return default math context\n+     */\n+    public static MathContext getDefaultMathContext() {\n+        return DEFAULT_MATH_CONTEXT.get();\n+    }\n+\n+    /**\n+     * Returns the default precision used when no precision is specified.\n+     *\n+     * @return default precision\n+     */\n+    public static int getDefaultPrecision() {\n+        return getDefaultMathContext().getPrecision();\n+    }\n+\n+    /**\n+     * Configures the default {@link MathContext} used by {@link DecimalNum}.\n+     *\n+     * @param mathContext new default math context\n+     * @throws NullPointerException     if {@code mathContext} is {@code null}\n+     * @throws IllegalArgumentException if {@code mathContext#getPrecision()} is not\n+     *                                  positive\n+     * @since 0.19\n+     */\n+    public static void configureDefaultMathContext(final MathContext mathContext) {\n+        Objects.requireNonNull(mathContext, \"mathContext\");\n+        if (mathContext.getPrecision() <= 0) {\n+            throw new IllegalArgumentException(\"Precision must be greater than zero\");\n+        }\n+        DEFAULT_MATH_CONTEXT.set(mathContext);\n+    }\n+\n+    /**\n+     * Configures the default precision while preserving the current rounding mode.\n+     *\n+     * @param precision new default precision (> 0)\n+     * @since 0.19\n+     */\n+    public static void configureDefaultPrecision(final int precision) {\n+        final var current = getDefaultMathContext();\n+        configureDefaultMathContext(new MathContext(precision, current.getRoundingMode()));\n+    }\n+\n+    /**\n+     * Resets the default precision and rounding mode to the library defaults.\n+     *\n+     * @since 0.19\n+     */\n+    public static void resetDefaultPrecision() {\n+        DEFAULT_MATH_CONTEXT.set(new MathContext(DEFAULT_PRECISION, DEFAULT_ROUNDING_MODE));\n+    }\n+\n@@ -281 +339 @@ public final class DecimalNum implements Num {\n-     *\n+     * <p>\n@@ -287 +344,0 @@ public final class DecimalNum implements Num {\n-     *\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNumFactory.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNumFactory.java\nindex 055bb95a1..b0a6e3eab 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNumFactory.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNumFactory.java\n@@ -26,2 +25,0 @@ package org.ta4j.core.num;\n-import static org.ta4j.core.num.DecimalNum.DEFAULT_PRECISION;\n-\n@@ -29 +26,0 @@ import java.math.MathContext;\n-import java.math.RoundingMode;\n@@ -33,8 +29,0 @@ public class DecimalNumFactory implements NumFactory {\n-    private static final DecimalNum MINUS_ONE = DecimalNum.valueOf(-1, new MathContext(1));\n-    private static final DecimalNum ZERO = DecimalNum.valueOf(0, new MathContext(1));\n-    private static final DecimalNum ONE = DecimalNum.valueOf(1, new MathContext(1));\n-    private static final DecimalNum TWO = DecimalNum.valueOf(2, new MathContext(1));\n-    private static final DecimalNum THREE = DecimalNum.valueOf(3, new MathContext(1));\n-    private static final DecimalNum HUNDRED = DecimalNum.valueOf(100, new MathContext(3));\n-    private static final DecimalNum THOUSAND = DecimalNum.valueOf(1000, new MathContext(4));\n-\n@@ -41,0 +31,27 @@ public class DecimalNumFactory implements NumFactory {\n+    private final DecimalNum minusOne;\n+    private final DecimalNum zero;\n+    private final DecimalNum one;\n+    private final DecimalNum two;\n+    private final DecimalNum three;\n+    private final DecimalNum hundred;\n+    private final DecimalNum thousand;\n+\n+    private DecimalNumFactory(final MathContext mathContext) {\n+        this.mathContext = mathContext;\n+        this.minusOne = DecimalNum.valueOf(-1, mathContext);\n+        this.zero = DecimalNum.valueOf(0, mathContext);\n+        this.one = DecimalNum.valueOf(1, mathContext);\n+        this.two = DecimalNum.valueOf(2, mathContext);\n+        this.three = DecimalNum.valueOf(3, mathContext);\n+        this.hundred = DecimalNum.valueOf(100, mathContext);\n+        this.thousand = DecimalNum.valueOf(1000, mathContext);\n+    }\n+\n+    public static NumFactory getInstance() {\n+        return getInstance(DecimalNum.getDefaultMathContext());\n+    }\n+\n+    public static NumFactory getInstance(final int precision) {\n+        final var roundingMode = DecimalNum.getDefaultMathContext().getRoundingMode();\n+        return new DecimalNumFactory(new MathContext(precision, roundingMode));\n+    }\n@@ -43,2 +59,2 @@ public class DecimalNumFactory implements NumFactory {\n-    private DecimalNumFactory(final int precision) {\n-        this.mathContext = new MathContext(precision, RoundingMode.HALF_UP);\n+    public static NumFactory getInstance(final MathContext mathContext) {\n+        return new DecimalNumFactory(mathContext);\n@@ -49 +65 @@ public class DecimalNumFactory implements NumFactory {\n-        return MINUS_ONE;\n+        return this.minusOne;\n@@ -54 +70 @@ public class DecimalNumFactory implements NumFactory {\n-        return ZERO;\n+        return this.zero;\n@@ -59 +75 @@ public class DecimalNumFactory implements NumFactory {\n-        return ONE;\n+        return this.one;\n@@ -64 +80 @@ public class DecimalNumFactory implements NumFactory {\n-        return TWO;\n+        return this.two;\n@@ -69 +85 @@ public class DecimalNumFactory implements NumFactory {\n-        return THREE;\n+        return this.three;\n@@ -74 +90 @@ public class DecimalNumFactory implements NumFactory {\n-        return HUNDRED;\n+        return this.hundred;\n@@ -79 +95 @@ public class DecimalNumFactory implements NumFactory {\n-        return THOUSAND;\n+        return this.thousand;\n@@ -92,7 +107,0 @@ public class DecimalNumFactory implements NumFactory {\n-    public static NumFactory getInstance() {\n-        return getInstance(DEFAULT_PRECISION);\n-    }\n-\n-    public static NumFactory getInstance(final int precision) {\n-        return new DecimalNumFactory(precision);\n-    }"
+}

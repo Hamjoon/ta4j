@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "config_hash": "643228f7fd8efaf35f3e7e06bd9b6fc5486c19b14dc638395c132c6e3995a249",
+  "started": "2026-10-29T15:38:50.189800+00:00",
+  "pid": 55414,
+  "outputs": [
+    "results/policy/pools/ouedraogo/21/pool.json"
+  ],
+  "finished": "2026-10-29T16:21:09.257936+00:00"
+}

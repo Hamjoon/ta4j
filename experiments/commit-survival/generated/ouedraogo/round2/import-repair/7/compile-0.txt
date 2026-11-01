@@ -1,0 +1,17 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:169: error: cannot find symbol
+        @Override public Function<Number, Num> function() { return SimpleNum::new; }
+                         ^
+  symbol:   class Function
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:63: error: cannot find symbol
+        @Override public Function<Number, Num> function() { return SimpleNum::new; }
+                         ^
+  symbol:   class Function
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:78: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static final class SimpleBar implements Bar {
+                         ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:282: error: tradeExecutionModel has private access in BarSeriesManager
+        assertSame(execModel, mgr.tradeExecutionModel);
+                                 ^
+4 errors

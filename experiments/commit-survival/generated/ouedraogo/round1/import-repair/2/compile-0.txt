@@ -1,0 +1,26 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:90: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:90: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:100: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:100: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:134: error: cannot find symbol
+        new ATRIndicator((TRIndicator) null, BAR_COUNT);
+                          ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+5 errors

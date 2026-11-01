@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.apache.commons:commons-lang3:3.14.0",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.apache.commons:commons-lang3:3.14.0",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.072,
+      "log": "results/runner-dependency-org.apache.commons.commons-lang3-3.14.0-1.txt",
+      "coordinate": "org.apache.commons:commons-lang3:3.14.0",
+      "expected_sha256": "7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c",
+      "rejected_sha256": null,
+      "downloaded_sha256": "7b96bf3ee68949abb5bc465559ac270e0551596fa34523fddf890ec418dde13c"
+    }
+  ]
+}

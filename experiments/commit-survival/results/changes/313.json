@@ -1,0 +1,32 @@
+{
+  "index": 313,
+  "sha": "dc7e213ca9760a8ff0d9a868f88cb7e9aabe0e45",
+  "parent": "e7426101679636d4ee3848afe1624c3a64580a3a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      541,
+      542,
+      543,
+      544,
+      545,
+      546
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      542,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex e416595d9..0b0d40328 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -105,0 +106 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final int CANONICAL_SEARCH_MAX_CANDIDATES = 128;\n@@ -541,6 +542 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<CanonicalLegCandidate> ordered = candidates.stream()\n-                .filter(Objects::nonNull)\n-                .sorted(Comparator.comparingInt(CanonicalLegCandidate::startPivotIndex)\n-                        .thenComparingInt(CanonicalLegCandidate::endPivotIndex)\n-                        .thenComparing(Comparator.comparingDouble(CanonicalLegCandidate::fitScore).reversed()))\n-                .toList();\n+        final List<CanonicalLegCandidate> ordered = boundCanonicalCandidates(candidates);\n@@ -562,0 +559,14 @@ public final class ElliottWaveAnalysisRunner {\n+    List<CanonicalLegCandidate> boundCanonicalCandidates(final List<CanonicalLegCandidate> candidates) {\n+        return candidates.stream()\n+                .filter(Objects::nonNull)\n+                .sorted(Comparator.comparingDouble(CanonicalLegCandidate::fitScore)\n+                        .reversed()\n+                        .thenComparingInt(CanonicalLegCandidate::startPivotIndex)\n+                        .thenComparingInt(CanonicalLegCandidate::endPivotIndex))\n+                .limit(CANONICAL_SEARCH_MAX_CANDIDATES)\n+                .sorted(Comparator.comparingInt(CanonicalLegCandidate::startPivotIndex)\n+                        .thenComparingInt(CanonicalLegCandidate::endPivotIndex)\n+                        .thenComparing(Comparator.comparingDouble(CanonicalLegCandidate::fitScore).reversed()))\n+                .toList();\n+    }\n+"
+}

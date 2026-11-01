@@ -1,0 +1,68 @@
+{
+  "index": 186,
+  "sha": "b112d34b0c676cebf966b70c674501f4e8795c31",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/186/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.646,
+      "log": "results/builds/logs/186-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/186/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 10.722,
+      "log": "results/builds/logs/186-2.txt"
+    }
+  ],
+  "input_sha256": "489e36e8babbc7d0c11af9c96430a6913bc716fe9e2e0b50afaa1d38a4bcfd1f",
+  "pom_sha256": "984fd284df57c44e1de1b1913d9f640d9f8d1756bc20869c2417d053c3de3388",
+  "classpath": "work/classpaths/984fd284df57c44e1de1b1913d9f640d9f8d1756bc20869c2417d053c3de3388.txt",
+  "classpath_attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/984fd284df57c44e1de1b1913d9f640d9f8d1756bc20869c2417d053c3de3388.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/186/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.861,
+      "log": "results/builds/logs/classpath-186-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/984fd284df57c44e1de1b1913d9f640d9f8d1756bc20869c2417d053c3de3388.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/186/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.149,
+      "log": "results/builds/logs/classpath-186-2.txt"
+    }
+  ]
+}

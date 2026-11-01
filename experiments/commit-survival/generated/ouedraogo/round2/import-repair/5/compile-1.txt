@@ -1,0 +1,6 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:296: error: incompatible types: SimpleBar cannot be converted to Bar
+            return new SimpleBar(); // not used in the manager
+                   ^
+Note: /repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 error

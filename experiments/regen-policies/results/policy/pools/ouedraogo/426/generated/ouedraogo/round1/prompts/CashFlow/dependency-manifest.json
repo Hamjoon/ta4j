@@ -1,0 +1,52 @@
+{
+  "class_name": "org.ta4j.core.analysis.CashFlow",
+  "ordered_types": [
+    "org.ta4j.core.analysis.PerformanceIndicator",
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.TradingRecord",
+    "org.ta4j.core.analysis.EquityCurveMode",
+    "org.ta4j.core.analysis.OpenPositionHandling",
+    "org.ta4j.core.Position",
+    "org.ta4j.core.BaseBarSeriesBuilder",
+    "org.ta4j.core.BaseTradingRecord",
+    "org.ta4j.core.Trade",
+    "org.ta4j.core.num.NumFactory"
+  ],
+  "included": [
+    "org.ta4j.core.analysis.PerformanceIndicator",
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.TradingRecord",
+    "org.ta4j.core.analysis.EquityCurveMode",
+    "org.ta4j.core.analysis.OpenPositionHandling",
+    "org.ta4j.core.Position",
+    "org.ta4j.core.BaseBarSeriesBuilder",
+    "org.ta4j.core.BaseTradingRecord",
+    "org.ta4j.core.Trade",
+    "org.ta4j.core.num.NumFactory"
+  ],
+  "omitted": [],
+  "reasons": {
+    "org.ta4j.core.analysis.PerformanceIndicator": "superclass/interface chain",
+    "org.ta4j.core.Indicator": "superclass/interface chain",
+    "org.ta4j.core.num.Num": "superclass/interface chain",
+    "org.ta4j.core.BarSeries": "constructor",
+    "org.ta4j.core.TradingRecord": "constructor",
+    "org.ta4j.core.analysis.EquityCurveMode": "constructor",
+    "org.ta4j.core.analysis.OpenPositionHandling": "constructor",
+    "org.ta4j.core.Position": "constructor",
+    "org.ta4j.core.BaseBarSeriesBuilder": "import",
+    "org.ta4j.core.BaseTradingRecord": "import",
+    "org.ta4j.core.Trade": "import",
+    "org.ta4j.core.num.NumFactory": "import"
+  },
+  "types": 12,
+  "lines": 299,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

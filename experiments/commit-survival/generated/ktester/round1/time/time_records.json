@@ -1,0 +1,409 @@
+{
+  "details": {
+    "NumericIndicator_of": {
+      "process_init_response": 4.490875482559204,
+      "process_case_response": 24.48654532432556,
+      "check_test_class": 176.1893994808197
+    },
+    "NumericIndicator_volume": {
+      "process_init_response": 5.524381875991821,
+      "process_case_response": 45.1217679977417,
+      "check_test_class": 93.95583534240723
+    },
+    "NumericIndicator_closePrice": {
+      "process_init_response": 8.836639165878296,
+      "process_case_response": 91.03398942947388,
+      "check_test_class": 605.9675011634827
+    },
+    "NumericIndicator_plus": {
+      "process_init_response": 10.02038049697876,
+      "process_case_response": 41.12816143035889,
+      "check_test_class": 178.461528301239
+    },
+    "NumericIndicator_plus_2": {
+      "process_init_response": 11.176912307739258,
+      "process_case_response": 84.79132652282715,
+      "check_test_class": 193.18779921531677
+    },
+    "NumericIndicator_minus": {
+      "process_init_response": 14.11089539527893,
+      "process_case_response": 52.538087606430054,
+      "check_test_class": 230.26384949684143
+    },
+    "NumericIndicator_minus_2": {
+      "process_init_response": 14.738576650619507,
+      "process_case_response": 52.314263105392456,
+      "check_test_class": 222.8382489681244
+    },
+    "NumericIndicator_min": {
+      "process_init_response": 6.6722800731658936,
+      "process_case_response": 45.85723090171814,
+      "check_test_class": 144.87483382225037
+    },
+    "NumericIndicator_multipliedBy_2": {
+      "process_init_response": 16.069079399108887,
+      "process_case_response": 38.76143836975098,
+      "check_test_class": 147.5205307006836
+    },
+    "NumericIndicator_dividedBy_2": {
+      "process_init_response": 13.816030740737915,
+      "process_case_response": 53.33950591087341,
+      "check_test_class": 167.36984515190125
+    },
+    "NumericIndicator_abs": {
+      "process_init_response": 4.074112892150879,
+      "process_case_response": 58.1518976688385,
+      "check_test_class": 252.3324420452118
+    },
+    "NumericIndicator_multipliedBy": {
+      "process_init_response": 24.83212447166443,
+      "process_case_response": 76.75366139411926,
+      "check_test_class": 227.71216368675232
+    },
+    "NumericIndicator_dividedBy": {
+      "process_init_response": 22.3736789226532,
+      "process_case_response": 58.33882164955139,
+      "check_test_class": 183.38562440872192
+    },
+    "NumericIndicator_max_2": {
+      "process_init_response": 13.635064125061035,
+      "process_case_response": 49.49268913269043,
+      "check_test_class": 121.24212646484375
+    },
+    "NumericIndicator_max": {
+      "process_init_response": 19.822962045669556,
+      "process_case_response": 74.19800114631653,
+      "check_test_class": 246.74328088760376
+    },
+    "NumericIndicator_squared": {
+      "process_init_response": 15.036481142044067,
+      "process_case_response": 59.377196311950684,
+      "check_test_class": 146.80213594436646
+    },
+    "NumericIndicator_delegate": {
+      "process_init_response": 41.4066801071167,
+      "process_case_response": 20.63600754737854,
+      "check_test_class": 105.50266885757446
+    },
+    "NumericIndicator_min_2": {
+      "process_init_response": 28.35202646255493,
+      "process_case_response": 45.33787703514099,
+      "check_test_class": 174.6234176158905
+    },
+    "NumericIndicator_lowest": {
+      "process_init_response": 3.256918430328369,
+      "process_case_response": 41.20706295967102,
+      "check_test_class": 141.27992367744446
+    },
+    "NumericIndicator_ema": {
+      "process_init_response": 16.985628604888916,
+      "process_case_response": 52.343952655792236,
+      "check_test_class": 156.58724403381348
+    },
+    "NumericIndicator_stddev": {
+      "process_init_response": 17.151535749435425,
+      "process_case_response": 64.97074747085571,
+      "check_test_class": 190.96909189224243
+    },
+    "NumericIndicator_highest": {
+      "process_init_response": 14.858585834503174,
+      "process_case_response": 47.862300157547,
+      "check_test_class": 105.08644795417786
+    },
+    "NumericIndicator_sqrt": {
+      "process_init_response": 27.564716815948486,
+      "process_case_response": 48.1053409576416,
+      "check_test_class": 262.81190371513367
+    },
+    "NumericIndicator_crossedUnder": {
+      "process_init_response": 6.9826295375823975,
+      "process_case_response": 63.31757426261902,
+      "check_test_class": 280.15692710876465
+    },
+    "NumericIndicator_crossedUnder_2": {
+      "process_init_response": 10.7286536693573,
+      "process_case_response": 48.275731801986694,
+      "check_test_class": 87.60410499572754
+    },
+    "NumericIndicator_previous": {
+      "process_init_response": 22.888785123825073,
+      "process_case_response": 57.25600814819336,
+      "check_test_class": 200.51575660705566
+    },
+    "NumericIndicator_sma": {
+      "process_init_response": 41.64667320251465,
+      "process_case_response": 63.129075050354004,
+      "check_test_class": 182.17767882347107
+    },
+    "NumericIndicator_isLessThan_2": {
+      "process_init_response": 11.514999628067017,
+      "process_case_response": 64.52452993392944,
+      "check_test_class": 113.36659598350525
+    },
+    "NumericIndicator_getUnstableBars": {
+      "process_init_response": 2.8184778690338135,
+      "process_case_response": 25.222163200378418,
+      "check_test_class": 137.92019295692444
+    },
+    "NumericIndicator_isLessThan": {
+      "process_init_response": 20.938507080078125,
+      "process_case_response": 81.72977042198181,
+      "check_test_class": 213.52661442756653
+    },
+    "NumericIndicator_isGreaterThan": {
+      "process_init_response": 35.153894901275635,
+      "process_case_response": 48.468639612197876,
+      "check_test_class": 155.17085933685303
+    },
+    "NumericIndicator_crossedOver": {
+      "process_init_response": 44.94850564002991,
+      "process_case_response": 68.86740517616272,
+      "check_test_class": 179.13120913505554
+    },
+    "NumericIndicator_getValue": {
+      "process_init_response": 18.015379190444946,
+      "process_case_response": 57.658921241760254,
+      "check_test_class": 104.08563470840454
+    },
+    "NumericIndicator_getBarSeries": {
+      "process_init_response": 11.35861086845398,
+      "process_case_response": 38.52532386779785,
+      "check_test_class": 207.45065593719482
+    },
+    "Position_hashCode": {
+      "process_init_response": 11.99435305595398,
+      "process_case_response": 39.79347109794617,
+      "check_test_class": 235.46098828315735
+    },
+    "Position_equals": {
+      "process_init_response": 16.077932357788086,
+      "process_case_response": 60.02382135391235,
+      "check_test_class": 214.36551022529602
+    },
+    "NumericIndicator_toString": {
+      "process_init_response": 25.580407857894897,
+      "process_case_response": 56.58460831642151,
+      "check_test_class": 201.0084593296051
+    },
+    "NumericIndicator_previous_2": {
+      "process_init_response": 66.23201370239258,
+      "process_case_response": 47.714571475982666,
+      "check_test_class": 91.17776250839233
+    },
+    "NumericIndicator_isGreaterThan_2": {
+      "process_init_response": 55.222973585128784,
+      "process_case_response": 61.777546882629395,
+      "check_test_class": 168.82918310165405
+    },
+    "Position_operate": {
+      "process_init_response": 11.567295789718628,
+      "process_case_response": 47.45013117790222,
+      "check_test_class": 191.4996063709259
+    },
+    "NumericIndicator_crossedOver_2": {
+      "process_init_response": 67.0579788684845,
+      "process_case_response": 54.430301666259766,
+      "check_test_class": 91.31971502304077
+    },
+    "Position_operate_2": {
+      "process_init_response": 10.67323637008667,
+      "process_case_response": 42.97123908996582,
+      "check_test_class": 80.75845003128052
+    },
+    "Position_getProfit": {
+      "process_init_response": 4.564168214797974,
+      "process_case_response": 81.28501677513123,
+      "check_test_class": 76.90679168701172
+    },
+    "Position_hasLoss": {
+      "process_init_response": 9.32073974609375,
+      "process_case_response": 50.400941371917725,
+      "check_test_class": 207.550626039505
+    },
+    "Position_isOpened": {
+      "process_init_response": 22.88024353981018,
+      "process_case_response": 36.665592193603516,
+      "check_test_class": 138.78968596458435
+    },
+    "Position_getEntry": {
+      "process_init_response": 50.23072838783264,
+      "process_case_response": 45.59561824798584,
+      "check_test_class": 123.07616710662842
+    },
+    "Position_isNew": {
+      "process_init_response": 29.099265575408936,
+      "process_case_response": 33.688406467437744,
+      "check_test_class": 134.9344916343689
+    },
+    "Position_isClosed": {
+      "process_init_response": 38.155447483062744,
+      "process_case_response": 34.067657232284546,
+      "check_test_class": 196.46004462242126
+    },
+    "Position_getGrossProfit_2": {
+      "process_init_response": 14.381701707839966,
+      "process_case_response": 118.47360062599182,
+      "check_test_class": 311.7520167827606
+    },
+    "Position_getGrossReturn": {
+      "process_init_response": 13.193234920501709,
+      "process_case_response": 50.57037162780762,
+      "check_test_class": 124.68466258049011
+    },
+    "Position_getExit": {
+      "process_init_response": 67.73743176460266,
+      "process_case_response": 36.81799602508545,
+      "check_test_class": 96.41018462181091
+    },
+    "Position_getGrossReturn_2": {
+      "process_init_response": 14.432694435119629,
+      "process_case_response": 75.01975059509277,
+      "check_test_class": 81.5934545993805
+    },
+    "Position_getPositionCost_2": {
+      "process_init_response": 3.9371755123138428,
+      "process_case_response": 124.05749940872192,
+      "check_test_class": 126.91147089004517
+    },
+    "Position_getHoldingCost_2": {
+      "process_init_response": 6.988787651062012,
+      "process_case_response": 136.67071652412415,
+      "check_test_class": 185.23293662071228
+    },
+    "Position_getPositionCost": {
+      "process_init_response": 18.37142848968506,
+      "process_case_response": 88.37031149864197,
+      "check_test_class": 120.26579165458679
+    },
+    "Position_getStartingType": {
+      "process_init_response": 4.037940502166748,
+      "process_case_response": 92.02590131759644,
+      "check_test_class": 122.27150177955627
+    },
+    "Position_getHoldingCost": {
+      "process_init_response": 15.05233097076416,
+      "process_case_response": 84.73621320724487,
+      "check_test_class": 154.61005473136902
+    },
+    "BarSeriesManager_getBarSeries": {
+      "process_init_response": 3.3858072757720947,
+      "process_case_response": 64.81774258613586,
+      "check_test_class": 62.23679208755493
+    },
+    "Position_getProfit_2": {
+      "process_init_response": 62.07592844963074,
+      "process_case_response": 77.28462433815002,
+      "check_test_class": 112.9568202495575
+    },
+    "Position_hasProfit": {
+      "process_init_response": 71.73284268379211,
+      "process_case_response": 46.96647357940674,
+      "check_test_class": 165.47089099884033
+    },
+    "Position_getGrossReturn_4": {
+      "process_init_response": 40.00409698486328,
+      "process_case_response": 87.42133212089539,
+      "check_test_class": 254.1906659603119
+    },
+    "Position_getGrossReturn_3": {
+      "process_init_response": 46.05173206329346,
+      "process_case_response": 77.0710289478302,
+      "check_test_class": 183.5301158428192
+    },
+    "BarSeriesManager_getTransactionCostModel": {
+      "process_init_response": 14.859229803085327,
+      "process_case_response": 91.64698767662048,
+      "check_test_class": 278.85864210128784
+    },
+    "BarSeriesManager_run_5": {
+      "process_init_response": 6.159305810928345,
+      "process_case_response": 83.82717180252075
+    },
+    "Position_getGrossProfit": {
+      "process_init_response": 68.5523087978363,
+      "process_case_response": 58.38647150993347,
+      "check_test_class": 133.22735333442688
+    },
+    "BarSeriesManager_run_4": {
+      "process_init_response": 17.447482347488403,
+      "process_case_response": 93.89299631118774,
+      "check_test_class": 250.07179069519043
+    },
+    "BarSeriesManager_run_3": {
+      "process_init_response": 17.528290271759033,
+      "process_case_response": 101.14568901062012
+    },
+    "CashFlow_getUnstableBars": {
+      "process_init_response": 6.105877161026001,
+      "process_case_response": 39.79278206825256
+    },
+    "Position_toString": {
+      "process_init_response": 43.17336988449097,
+      "process_case_response": 69.52132534980774,
+      "check_test_class": 108.80115103721619
+    },
+    "BarSeriesManager_run": {
+      "process_init_response": 32.1471049785614,
+      "process_case_response": 86.49870562553406,
+      "check_test_class": 249.84714460372925
+    },
+    "CashFlow_getSize": {
+      "process_init_response": 3.446052312850952,
+      "process_case_response": 90.5802435874939
+    },
+    "CashFlow_determineEndIndex": {
+      "process_init_response": 6.4055962562561035,
+      "process_case_response": 120.07224774360657
+    },
+    "CashFlow_numOf": {
+      "process_init_response": 13.736138820648193,
+      "process_case_response": 137.4274275302887
+    },
+    "CashFlow_addCost": {
+      "process_init_response": 8.233127355575562,
+      "process_case_response": 128.74425172805786
+    },
+    "BarSeriesManager_getHoldingCostModel": {
+      "process_init_response": 54.33181548118591,
+      "process_case_response": 62.68706297874451,
+      "check_test_class": 147.7749800682068
+    },
+    "ATRIndicator_getTRIndicator": {
+      "process_init_response": 9.219458103179932,
+      "process_case_response": 83.33911514282227
+    },
+    "ATRIndicator_getBarCount": {
+      "process_init_response": 9.813416242599487,
+      "process_case_response": 64.37728595733643
+    },
+    "ATRIndicator_getValue": {
+      "process_init_response": 18.732940196990967,
+      "process_case_response": 88.3052568435669
+    },
+    "ATRIndicator_toString": {
+      "process_init_response": 14.332717180252075,
+      "process_case_response": 58.64056205749512
+    },
+    "BarSeriesManager_run_2": {
+      "process_init_response": 60.85070323944092,
+      "process_case_response": 92.97678637504578,
+      "check_test_class": 177.62608885765076
+    },
+    "CashFlow_getBarSeries": {
+      "process_init_response": 42.82122206687927,
+      "process_case_response": 52.58960819244385
+    },
+    "BarSeriesManager_run_6": {
+      "process_init_response": 83.91372179985046,
+      "process_case_response": 168.06957626342773
+    },
+    "ATRIndicator_getUnstableBars": {
+      "process_init_response": 55.54817533493042,
+      "process_case_response": 104.81069493293762
+    },
+    "CashFlow_getValue": {
+      "process_init_response": 88.14205074310303,
+      "process_case_response": 54.6509165763855
+    }
+  }
+}

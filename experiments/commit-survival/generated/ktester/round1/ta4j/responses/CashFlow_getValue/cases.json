@@ -1,0 +1,167 @@
+[
+  {
+    "group": "Valid index retrieval",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "Num instance representing the first element of the internal list (e.g., DecimalNum.valueOf(100))",
+        "description": "When the list contains at least one element and the index is 0, getValue should return the element at position 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 2
+          }
+        ],
+        "expected": "Num instance representing the third element of the internal list (e.g., DecimalNum.valueOf(300))",
+        "description": "When the index points to a middle element of a non\u2011empty list, getValue must return the correct Num object."
+      },
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 4
+          }
+        ],
+        "expected": "Num instance representing the last element of the internal list (e.g., DecimalNum.valueOf(500))",
+        "description": "When the index equals list.size()\u20111, getValue should correctly return the last element."
+      }
+    ]
+  },
+  {
+    "group": "Negative index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": -1
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "When the provided index is negative, List#get throws IndexOutOfBoundsException; getValue should propagate this exception."
+      }
+    ]
+  },
+  {
+    "group": "Index equal to size (upper bound)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 5
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "For a list of size 5 (indices 0\u20114), an index equal to the size is out of range and should cause IndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "Index greater than size",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 10
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "When the index is larger than the last valid index, getValue must throw IndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "Empty list handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "If the internal values list is empty, any index (including 0) is invalid and should result in IndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "Single element list",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "Num instance representing the sole element (e.g., DecimalNum.valueOf(42))",
+        "description": "When the list contains exactly one Num element, getValue(0) must return that same Num instance."
+      }
+    ]
+  },
+  {
+    "group": "Null element retrieval",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 1
+          }
+        ],
+        "expected": "null",
+        "description": "If the internal list stores a null at the requested position, getValue should return null without throwing an exception."
+      }
+    ]
+  },
+  {
+    "group": "Null internal list",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 0
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "If the internal `values` list reference is null, calling `getValue` should throw a NullPointerException when attempting to invoke `values.get(index)`."
+      }
+    ]
+  },
+  {
+    "group": "Extreme index values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": 2147483647
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "When `index` is Integer.MAX_VALUE, it is far beyond the list size and should result in an IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "index",
+            "value": -2147483648
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "When `index` is Integer.MIN_VALUE (a large negative number), the underlying list access should throw IndexOutOfBoundsException."
+      }
+    ]
+  }
+]

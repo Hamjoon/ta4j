@@ -1,0 +1,325 @@
+package org.ta4j.core.backtest;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+import java.util.Collections;
+import java.util.function.Consumer;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.NumFactory;
+import org.ta4j.core.backtest.PositionSizer;
+import org.ta4j.core.backtest.TradeExecutionModel;
+import org.ta4j.core.backtest.TradeOnNextOpenModel;
+import org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory;
+import org.ta4j.core.backtest.BarSeriesManager;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link BarSeriesManager}.
+ *
+ * <p>
+ * The tests cover:
+ * <ul>
+ *   <li>Constructor argument validation (null checks).</li>
+ *   <li>Immutability of the managed {@link BarSeries} (snapshot behaviour).</li>
+ *   <li>Correct handling of start / end index clamping.</li>
+ *   <li>Behaviour of {@code run(...)} when the supplied {@link Strategy}
+ *       never triggers any operation.</li>
+ *   <li>Validation of dynamic entry {@link PositionSizer} amount handling.</li>
+ *   <li>Fallback sizing target logic for empty series.</li>
+ *   <li>Walk‑forward execution null‑check.</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * All objects are created using the public constructors / factory methods
+ * that appear in the supplied source code – no mocking or external libraries are
+ * used.
+ * </p>
+ */
+public class BarSeriesManagerTest {
+
+    private BarSeries emptySeries;
+    private CostModel zeroCostModel;
+    private TradeExecutionModel defaultExecutionModel;
+
+    @Before
+    public void setUp() {
+        // An empty series – sufficient for the majority of tests.
+        emptySeries = new BaseBarSeriesBuilder()
+                .withName("empty")
+                .build();
+
+        zeroCostModel = new ZeroCostModel();
+        defaultExecutionModel = new TradeOnNextOpenModel();
+    }
+
+    /**
+     * Helper strategy that never signals an operation.
+     * All default methods are overridden to avoid any dependence on {@link Rule}
+     * objects (which are not part of the public API supplied for the exercise).
+     */
+    private static class NoOpStrategy implements Strategy {
+        @Override
+        public String getName() {
+            return "NoOpStrategy";
+        }
+
+        @Override
+        public Rule getEntryRule() {
+            // Not used because we override {@code shouldOperate}.
+            return null;
+        }
+
+        @Override
+        public Rule getExitRule() {
+            // Not used because we override {@code shouldOperate}.
+            return null;
+        }
+
+        @Override
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+            // Never operate – this makes the back‑test a no‑op.
+            return false;
+        }
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Constructor argument validation
+     * ------------------------------------------------------------------------
+     */
+    @Test(expected = NullPointerException.class)
+    public void constructor_nullBarSeries_throwsNPE() {
+        new BarSeriesManager(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructor_nullTransactionCostModel_throwsNPE() {
+        new BarSeriesManager(emptySeries, null, zeroCostModel, defaultExecutionModel);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructor_nullHoldingCostModel_throwsNPE() {
+        new BarSeriesManager(emptySeries, zeroCostModel, null, defaultExecutionModel);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructor_nullExecutionModel_throwsNPE() {
+        new BarSeriesManager(emptySeries, zeroCostModel, zeroCostModel, null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructor_nullTradingRecordFactory_throwsNPE() {
+        new BarSeriesManager(emptySeries, zeroCostModel, zeroCostModel,
+                defaultExecutionModel, null);
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Immutability / snapshot behaviour of the managed series
+     * ------------------------------------------------------------------------
+     */
+    @Test
+    public void getBarSeries_returnsSnapshotNotOriginalReference() {
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        BarSeries snapshot = manager.getBarSeries();
+
+        // The snapshot must be a different instance (deep copy of the bar list).
+        assertNotSame("Snapshot should not be the same reference as the original series",
+                emptySeries, snapshot);
+
+        // Modifying the original series must NOT affect the manager's series.
+        // (We add a dummy bar to the original – the manager's snapshot stays empty.)
+        NumFactory nf = emptySeries.numFactory();
+        // Use a minimal Num implementation (DecimalNum) for the price.
+        Num price = nf.numOf(1.0);
+        // The Bar interface is not part of the supplied API, but BaseBarSeriesBuilder
+        // can add a bar via its builder. We therefore rebuild a new series with a bar
+        // and replace the original reference.
+        BarSeries modified = new BaseBarSeriesBuilder()
+                .withName("modified")
+                .withNumFactory(nf)
+                .withBars(List.of(new SimpleBar(price, price, price, price, price, 0L)))
+                .build();
+
+        // Ensure the manager still returns the original empty snapshot.
+        BarSeries afterModification = manager.getBarSeries();
+        assertEquals("Manager's series should remain empty after external modification",
+                0, afterModification.getBarCount());
+        assertEquals("Snapshot obtained earlier should still be empty",
+                0, snapshot.getBarCount());
+        // The newly created series is not used by the manager.
+        assertNotSame(afterModification, modified);
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Index clamping in the default trading record creation
+     * ------------------------------------------------------------------------
+     */
+    @Test
+    public void createDefaultTradingRecord_clampsIndicesCorrectly() throws Exception {
+        // Build a series with three bars (indices 0,1,2)
+        NumFactory nf = emptySeries.numFactory();
+        BarSeries threeBars = new BaseBarSeriesBuilder()
+                .withName("three")
+                .withNumFactory(nf)
+                .withBars(List.of(
+                        new SimpleBar(nf.numOf(1), nf.numOf(1), nf.numOf(1), nf.numOf(1), nf.numOf(1), 0L),
+                        new SimpleBar(nf.numOf(2), nf.numOf(2), nf.numOf(2), nf.numOf(2), nf.numOf(2), 0L),
+                        new SimpleBar(nf.numOf(3), nf.numOf(3), nf.numOf(3), nf.numOf(3), nf.numOf(3), 0L)
+                ))
+                .build();
+
+        BarSeriesManager manager = new BarSeriesManager(threeBars,
+                zeroCostModel, zeroCostModel, defaultExecutionModel,
+                // custom factory that records the indices it receives
+                (tradeType, start, end, tCost, hCost) -> {
+                    assertEquals("Start index should be clamped to series begin (0)", 0, start);
+                    assertEquals("End index should be clamped to series end (2)", 2, end);
+                    return new BaseTradingRecord(tradeType);
+                });
+
+        // Request a run with out‑of‑range indices – the factory asserts correct clamping.
+        manager.run(new NoOpStrategy(), TradeType.BUY,  -5,  99);
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Run with a strategy that never operates – expect an empty record.
+     * ------------------------------------------------------------------------
+     */
+    @Test
+    public void run_noOperationStrategy_returnsEmptyTradingRecord() {
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        Strategy strategy = new NoOpStrategy();
+
+        TradingRecord record = manager.run(strategy);
+        assertNotNull("Returned TradingRecord must not be null", record);
+        assertTrue("No trades should have been recorded", record.getTrades().isEmpty());
+        assertTrue("The record should be considered closed (no open position)", record.isClosed());
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * PositionSizer amount validation – illegal amounts must raise an exception.
+     * ------------------------------------------------------------------------
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void run_withInvalidFixedSizer_negativeAmount_throws() {
+        // Fixed sizer with a negative amount (invalid)
+        PositionSizer sizer = PositionSizer.fixed(DecimalNum.valueOf(-10));
+
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        manager.run(new NoOpStrategy(), TradeType.BUY, sizer);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void run_withInvalidFixedSizer_zeroAmount_throws() {
+        PositionSizer sizer = PositionSizer.fixed(DecimalNum.valueOf(0));
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        manager.run(new NoOpStrategy(), TradeType.BUY, sizer);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void run_withInvalidFixedSizer_NaNAmount_throws() {
+        PositionSizer sizer = PositionSizer.fixed(DecimalNum.NaN);
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        manager.run(new NoOpStrategy(), TradeType.BUY, sizer);
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Fallback sizing target – when the series is empty the method must still
+     * return a valid {@link ExecutionTarget}.
+     * ------------------------------------------------------------------------
+     */
+    @Test
+    public void fallbackSizingTarget_onEmptySeries_returnsDefaultTarget() throws Exception {
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        // Use reflection to invoke the private method.
+        java.lang.reflect.Method method = BarSeriesManager.class
+                .getDeclaredMethod("fallbackSizingTarget", int.class);
+        method.setAccessible(true);
+
+        // Index 5 is arbitrary; with an empty series we expect the method to
+        // return the same index and a price of one (numFactory().one()).
+        Object result = method.invoke(manager, 5);
+        assertTrue("Result must be an ExecutionTarget", result instanceof TradeExecutionModel.ExecutionTarget);
+        TradeExecutionModel.ExecutionTarget target = (TradeExecutionModel.ExecutionTarget) result;
+        assertEquals("Target index should be the requested index", 5, target.index());
+        assertEquals("Target price must be one (the series' numFactory one)",
+                emptySeries.numFactory().one(), target.price());
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Walk‑forward execution null‑check – passing a null strategy must throw.
+     * ------------------------------------------------------------------------
+     */
+    @Test(expected = NullPointerException.class)
+    public void runWalkForward_nullStrategy_throwsNPE() {
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig();
+        manager.runWalkForward(null, config);
+    }
+
+    /**
+     * ------------------------------------------------------------------------
+     * Helper class – a very small {@link Bar} implementation sufficient for
+     * constructing a series in the tests. It implements only the methods used
+     * by the builder and the manager (price getters). All other methods are
+     * left with default (zero) behaviour.
+     * ------------------------------------------------------------------------
+     */
+    private static class SimpleBar implements org.ta4j.core.Bar {
+        private final Num open;
+        private final Num high;
+        private final Num low;
+        private final Num close;
+        private final Num volume;
+        private final long endTime;
+
+        SimpleBar(Num price, Num open, Num high, Num low, Num volume, long endTime) {
+            this.open = price;
+            this.high = price;
+            this.low = price;
+            this.close = price;
+            this.volume = volume;
+            this.endTime = endTime;
+        }
+
+        @Override public Num getOpenPrice() { return open; }
+        @Override public Num getHighPrice() { return high; }
+        @Override public Num getLowPrice() { return low; }
+        @Override public Num getClosePrice() { return close; }
+        @Override public Num getVolume() { return volume; }
+        @Override public long getEndTime() { return endTime; }
+
+        // The remaining methods of Bar have default implementations in the
+        // actual library; for the purpose of these tests they are not needed.
+        @Override public Num getPrice() { return close; }
+        @Override public Num getBidPrice() { return close; }
+        @Override public Num getAskPrice() { return close; }
+        @Override public Num getSpread() { return close; }
+        @Override public Num getMidPrice() { return close; }
+        @Override public Num getWeightedPrice() { return close; }
+        @Override public long getBeginTime() { return endTime; }
+        @Override public long getNumberOfTrades() { return 0L; }
+        @Override public int getTradesCount() { return 0; }
+        @Override public boolean isBullish() { return true; }
+        @Override public boolean isBearish() { return false; }
+        @Override public boolean isNeutral() { return false; }
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "index": 377,
+  "sha": "be775887ef9dc30edb388f6376624c6a1ec99858",
+  "parent": "f4c1d68067ac1714daf7dc70df5c3eed616438a7",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      119,
+      120,
+      121,
+      122,
+      124,
+      125
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      354,
+      479,
+      480,
+      481,
+      482,
+      483
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      110,
+      111,
+      112,
+      113,
+      115,
+      116
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      354
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\nindex 786c4a2c5..3a7fda971 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n@@ -109,0 +110,8 @@ final class SwingDetectorSupport {\n+        final Num existingPrice = existing.price();\n+        final Num candidatePrice = candidate.price();\n+        if (Num.isNaNOrNull(existingPrice)) {\n+            return Num.isNaNOrNull(candidatePrice) ? deterministicSharedIndexTieBreak(existing, candidate) : candidate;\n+        }\n+        if (Num.isNaNOrNull(candidatePrice)) {\n+            return existing;\n+        }\n@@ -119,8 +126,0 @@ final class SwingDetectorSupport {\n-        final Num existingPrice = existing.price();\n-        final Num candidatePrice = candidate.price();\n-        if (Num.isNaNOrNull(existingPrice)) {\n-            return Num.isNaNOrNull(candidatePrice) ? deterministicSharedIndexTieBreak(existing, candidate) : candidate;\n-        }\n-        if (Num.isNaNOrNull(candidatePrice)) {\n-            return existing;\n-        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\nindex 1d8f476eb..b9a931aaa 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n@@ -354 +354 @@ public final class WalkForwardEngine<C, P, O> {\n-                immutableObservationLists(observationsByHorizon),\n+                immutableObservationMap(observationsByHorizon),\n@@ -477,9 +476,0 @@ public final class WalkForwardEngine<C, P, O> {\n-    private static <P, O> Map<Integer, List<WalkForwardObservation<P, O>>> immutableObservationLists(\n-            Map<Integer, List<WalkForwardObservation<P, O>>> mutable) {\n-        Map<Integer, List<WalkForwardObservation<P, O>>> immutable = new LinkedHashMap<>();\n-        for (Map.Entry<Integer, List<WalkForwardObservation<P, O>>> entry : mutable.entrySet()) {\n-            immutable.put(entry.getKey(), List.copyOf(entry.getValue()));\n-        }\n-        return Map.copyOf(immutable);\n-    }\n-"
+}

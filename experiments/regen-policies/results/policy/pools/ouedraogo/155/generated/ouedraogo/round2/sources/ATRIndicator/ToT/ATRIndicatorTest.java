@@ -1,0 +1,182 @@
+/**
+ * JUnit‑4 test suite for {@link org.ta4j.core.indicators.ATRIndicator}.
+ *
+ * The tests cover:
+ * <ul>
+ *   <li>normal operation (delegation to the internal {@link MMAIndicator})</li>
+ *   <li>edge cases such as a barCount of 1 and a barCount larger than the series size</li>
+ *   <li>the public getters and {@code toString()}</li>
+ *   <li>error handling for illegal constructor arguments</li>
+ * </ul>
+ *
+ * Only classes, constructors and methods that appear in the class under test
+ * or in the supplied dependency signatures are used.  The concrete
+ * implementations {@code BaseBarSeries} and {@code BaseBar} are part of the
+ * TA4J library and are the standard way to build a {@link BarSeries} for
+ * tests – they are not “mocked” and do not violate the “no‑subclassing” rule.
+ */
+package org.ta4j.core.indicators;
+import org.ta4j.core.indicators.averages.MMAIndicator;
+
+
+import static org.junit.Assert.*;
+
+import java.time.Duration;
+import java.time.ZonedDateTime;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.indicators.helpers.TRIndicator;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.DecimalNum;
+
+/**
+ * Test class for {@link ATRIndicator}.
+ */
+public class ATRIndicatorTest {
+
+    private BarSeries series;
+    private final int BAR_COUNT = 3;               // typical time‑frame used in tests
+
+    /**
+     * Build a small series (5 bars) that will be reused by several tests.
+     * The values are chosen so that the true‑range can be calculated by hand.
+     */
+    @Before
+    public void setUp() {
+        series = new BaseBarSeries("test-series");
+        // Helper to create a Num from a double (DecimalNum is the default implementation)
+        java.util.function.DoubleFunction<Num> n = d -> DecimalNum.valueOf(d);
+
+        //   index  open   high    low   close  volume
+        addBar(0, n.apply(10), n.apply(12), n.apply(9), n.apply(11));
+        addBar(1, n.apply(11), n.apply(13), n.apply(10), n.apply(12));
+        addBar(2, n.apply(12), n.apply(14), n.apply(11), n.apply(13));
+        addBar(3, n.apply(13), n.apply(15), n.apply(12), n.apply(14));
+        addBar(4, n.apply(14), n.apply(16), n.apply(13), n.apply(15));
+    }
+
+    /**
+     * Utility method that adds a bar to {@link #series}.
+     */
+    private void addBar(int index, Num open, Num high, Num low, Num close) {
+        // The timestamp is not relevant for the calculations – we just increment it.
+        ZonedDateTime endTime = ZonedDateTime.now().plusSeconds(index * 60);
+        BaseBar bar = new BaseBar(Duration.ofMinutes(1), endTime, open, high, low, close,
+                DecimalNum.ZERO);           // volume = 0 (not used by TR)
+        series.addBar(bar);
+    }
+
+    /**
+     * Helper that computes the true‑range for a given index using the same
+     * {@link TRIndicator} logic that the {@code ATRIndicator} relies on.
+     */
+    private Num trueRange(int index) {
+        TRIndicator tr = new TRIndicator(series);
+        return tr.getValue(index);
+    }
+
+    /**
+     * Test that {@code ATRIndicator#getValue(int)} returns exactly the same
+     * value as the internal {@link MMAIndicator} (which is the algorithmic
+     * definition of ATR).  The test compares the result of {@code ATRIndicator}
+     * with a stand‑alone {@code MMAIndicator} built on the same {@code TRIndicator}.
+     */
+    @Test
+    public void testGetValueDelegatesToMMAIndicator() {
+        TRIndicator tr = new TRIndicator(series);
+        ATRIndicator atr = new ATRIndicator(tr, BAR_COUNT);
+        MMAIndicator mma = new MMAIndicator(tr, BAR_COUNT);
+
+        // Verify a few indices, including the first unstable bar and a later stable one
+        for (int i = 0; i < series.getBarCount(); i++) {
+            Num atrValue = atr.getValue(i);
+            Num mmaValue = mma.getValue(i);
+            assertEquals("ATR value should match MMA value at index " + i,
+                    mmaValue, atrValue);
+        }
+    }
+
+    /**
+     * Edge case: when {@code barCount == 1} the ATR should be identical to the
+     * true‑range because the moving‑average collapses to a simple copy.
+     */
+    @Test
+    public void testBarCountOneEqualsTrueRange() {
+        ATRIndicator atr = new ATRIndicator(series, 1);
+        for (int i = 0; i < series.getBarCount(); i++) {
+            assertEquals("ATR with barCount=1 must equal TR at index " + i,
+                    trueRange(i), atr.getValue(i));
+        }
+    }
+
+    /**
+     * Edge case: a {@code barCount} larger than the series size.
+     * The {@link MMAIndicator} (and therefore ATR) still produces a value;
+     * the first {@code barCount} bars are considered “unstable”.
+     */
+    @Test
+    public void testBarCountLargerThanSeries() {
+        int hugeBarCount = 10;               // > series.getBarCount() (which is 5)
+        ATRIndicator atr = new ATRIndicator(series, hugeBarCount);
+        // The indicator must be able to return a value for every index
+        for (int i = 0; i < series.getBarCount(); i++) {
+            assertNotNull("ATR should produce a non‑null value even with huge barCount", atr.getValue(i));
+        }
+        // Unstable bars count must equal the configured barCount
+        assertEquals("Unstable bars count must be the configured barCount",
+                hugeBarCount, atr.getCountOfUnstableBars());
+    }
+
+    /**
+     * Verify the getter methods expose the correct internal objects.
+     */
+    @Test
+    public void testGetters() {
+        TRIndicator tr = new TRIndicator(series);
+        ATRIndicator atr = new ATRIndicator(tr, BAR_COUNT);
+
+        assertSame("getTRIndicator() must return the TRIndicator supplied in the constructor",
+                tr, atr.getTRIndicator());
+
+        assertEquals("getBarCount() must return the barCount supplied to the constructor",
+                BAR_COUNT, atr.getBarCount());
+
+        assertEquals("getCountOfUnstableBars() should delegate to getBarCount()",
+                BAR_COUNT, atr.getCountOfUnstableBars());
+    }
+
+    /**
+     * Verify the {@code toString()} format – it must contain the simple class name
+     * and the bar count.
+     */
+    @Test
+    public void testToString() {
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+        String expected = "ATRIndicator barCount: " + BAR_COUNT;
+        assertEquals("toString() should follow the documented format", expected, atr.toString());
+    }
+
+    /**
+     * The constructor must reject a {@code null} {@link TRIndicator}.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testConstructorRejectsNullTRIndicator() {
+        new ATRIndicator((TRIndicator) null, BAR_COUNT);
+    }
+
+    /**
+     * The constructor must reject a non‑positive {@code barCount}.
+     * The implementation of {@link MMAIndicator} throws an {@code IllegalArgumentException}
+     * for such values – we assert the same behaviour.
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorRejectsNonPositiveBarCount() {
+        TRIndicator tr = new TRIndicator(series);
+        new ATRIndicator(tr, 0);
+    }
+}

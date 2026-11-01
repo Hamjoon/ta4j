@@ -1,0 +1,13 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:15: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:48: error: SimpleBarSeries is not abstract and does not override abstract method barBuilder() in BarSeries
+    private static class SimpleBarSeries implements BarSeries {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:54: error: incompatible types: NumFactory is not a functional interface
+            this.numFactory = DecimalNum::valueOf;
+                              ^
+    multiple non-overriding abstract methods found in interface NumFactory
+3 errors

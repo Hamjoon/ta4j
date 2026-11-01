@@ -1,0 +1,291 @@
+[
+  {
+    "group": "Basic multiplication with constant indicators",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(3)))"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(2))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == DecimalNum.valueOf(6) for any i",
+        "description": "Multiplying two constant indicators (3 * 2) should yield a constant indicator with value 6."
+      },
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(0)))"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(5))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == DecimalNum.valueOf(0) for any i",
+        "description": "Multiplying by zero must always produce zero, regardless of the other indicator."
+      },
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(-4)))"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(3))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == DecimalNum.valueOf(-12) for any i",
+        "description": "Multiplication with a negative constant should preserve the sign (\u20114 * 3 = \u201112)."
+      }
+    ]
+  },
+  {
+    "group": "Multiplication with a varying indicator (ClosePriceIndicator)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(5)))"
+          },
+          {
+            "parameter": "other",
+            "value": "ClosePriceIndicator(series) where series values are [1, 2, 3]"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(0) == 5, getValue(1) == 10, getValue(2) == 15",
+        "description": "When the left operand is a constant (5) and the right operand varies (1,2,3), the product must be (5,10,15)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "ClosePriceIndicator(series) where series values are [2, 4, 6]"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(3))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(0) == 6, getValue(1) == 12, getValue(2) == 18",
+        "description": "Multiplying a varying indicator (2,4,6) by a constant (3) should produce (6,12,18)."
+      }
+    ]
+  },
+  {
+    "group": "Null argument handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(1)))"
+          },
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Calling multipliedBy with a null indicator must throw a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Identity multiplication (self * self)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(7)))"
+          },
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(7)))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == DecimalNum.valueOf(49) for any i",
+        "description": "Multiplying an indicator by itself should square its values (7 * 7 = 49)."
+      }
+    ]
+  },
+  {
+    "group": "Multiplication of two varying indicators",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "ClosePriceIndicator(series) where series values are [1, 2, 3]"
+          },
+          {
+            "parameter": "other",
+            "value": "VolumeIndicator(series) where series values are [10, 20, 30]"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(0) == DecimalNum.valueOf(10), getValue(1) == DecimalNum.valueOf(40), getValue(2) == DecimalNum.valueOf(90)",
+        "description": "Both operands vary per bar; product should be element\u2011wise multiplication of close price and volume series."
+      }
+    ]
+  },
+  {
+    "group": "Multiplication with negative and zero values in varying indicators",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "ClosePriceIndicator(series) where series values are [-5, 0, 5]"
+          },
+          {
+            "parameter": "other",
+            "value": "ClosePriceIndicator(series) where series values are [2, -2, 0]"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(0) == DecimalNum.valueOf(-10), getValue(1) == DecimalNum.valueOf(0), getValue(2) == DecimalNum.valueOf(0)",
+        "description": "Both indicators contain negative and zero values; the product must reflect sign rules and zero propagation."
+      }
+    ]
+  },
+  {
+    "group": "Multiplication involving derived indicators (HighestValueIndicator)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "HighestValueIndicator(series, 2) where series values are [1, 3, 2, 5]"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(2))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(0) == DecimalNum.valueOf(2), getValue(1) == DecimalNum.valueOf(6), getValue(2) == DecimalNum.valueOf(6), getValue(3) == DecimalNum.valueOf(10)",
+        "description": "Highest value over the last 2 bars yields [1,3,3,5]; multiplied by 2 the expected series is [2,6,6,10]."
+      }
+    ]
+  },
+  {
+    "group": "Chained operations resulting indicator multiplication",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(2))).plus(ConstantIndicator(DecimalNum.valueOf(3)))"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(4))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == DecimalNum.valueOf(20) for any i",
+        "description": "((2 + 3) = 5) * 4 = 20; verifies that chaining of plus() followed by multipliedBy() yields the correct constant result."
+      }
+    ]
+  },
+  {
+    "group": "Commutativity check between two indicators",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "ClosePriceIndicator(series) where series values are [1, 4]"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(5))"
+          }
+        ],
+        "expected": "Both a.multipliedBy(b) and b.multipliedBy(a) produce NumericIndicator whose getValue(0) == DecimalNum.valueOf(5), getValue(1) == DecimalNum.valueOf(20)",
+        "description": "Multiplication should be commutative; swapping operands must not change the resulting series."
+      }
+    ]
+  },
+  {
+    "group": "Mismatched series length handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "ClosePriceIndicator(seriesA) where seriesA values are [1, 2]"
+          },
+          {
+            "parameter": "other",
+            "value": "ClosePriceIndicator(seriesB) where seriesB values are [10]"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException when getValue(1) is called on the resulting indicator",
+        "description": "When the two underlying indicators have different bar counts, accessing an index that exists only in the longer series should raise an IndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "Different BarSeries handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "ClosePriceIndicator(seriesA) where seriesA values are [1, 2, 3]"
+          },
+          {
+            "parameter": "other",
+            "value": "ClosePriceIndicator(seriesB) where seriesB values are [10, 20, 30]"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "When the two indicators belong to different BarSeries instances, multipliedBy must reject the operation and throw an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Null delegate indicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(null)"
+          },
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(DecimalNum.valueOf(5))"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Creating a NumericIndicator with a null delegate and then calling multipliedBy should result in a NullPointerException because the internal delegate is accessed during the multiplication."
+      }
+    ]
+  },
+  {
+    "group": "Indicator returning null values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "this",
+            "value": "NumericIndicator.of(ConstantIndicator(DecimalNum.valueOf(4)))"
+          },
+          {
+            "parameter": "other",
+            "value": "CustomIndicatorReturningNull() where getValue(i) returns null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "If the supplied indicator returns null for a bar value, the product operation will attempt to multiply a Num with null, leading to a NullPointerException when getValue is invoked on the resulting indicator."
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "index": 525,
+  "sha": "a9e750adfb44472164e50cf378655936c98c5d08",
+  "parent": "a6cf36a58ecff7545153513a8852e2584f7f7165",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java\nindex ad7824e7f..f4e76c7c9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java\n@@ -14 +14,11 @@ import org.ta4j.core.num.Num;\n- * linearly.\n+ * linearly on the entry trade value: {@code entry.getValue() * indexDistance\n+ * * feePerPeriod}. A period is one index step, not a calendar day. Later marks,\n+ * timestamps, weekends and holidays do not change that calculation. The caller\n+ * must supply a rate in these units; no annual-rate conversion is performed.\n+ *\n+ * <p>\n+ * A closed position uses its actual exit index. An open position uses the\n+ * supplied observation index and requires that overload. The price/amount\n+ * overload returns zero because it cannot determine a holding duration. These\n+ * legacy conventions are preserved. Calendar/mark-based borrowing requires an\n+ * explicitly supplied cost model with the relevant historical inputs."
+}

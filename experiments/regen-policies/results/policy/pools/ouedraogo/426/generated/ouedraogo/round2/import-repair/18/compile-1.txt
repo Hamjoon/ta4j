@@ -1,0 +1,80 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:18: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:70: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("test-series");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:75: error: no suitable constructor found for BaseBar(ZonedDateTime,Num,Num,Num,Num,Num,Num)
+            Bar bar = new BaseBar(
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:176: error: incompatible types: String cannot be converted to Config
+        BarSeries negSeries = new BaseBarSeries("neg");
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:179: error: no suitable constructor found for BaseBar(ZonedDateTime,Num,Num,Num,Num,Num,Num)
+            Bar bar = new BaseBar(
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:206: error: incompatible types: String cannot be converted to Config
+        BarSeries negSeries = new BaseBarSeries("neg2");
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:209: error: no suitable constructor found for BaseBar(ZonedDateTime,Num,Num,Num,Num,Num,Num)
+            Bar bar = new BaseBar(
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:390: error: cannot find symbol
+        Rule rule = close.crossedOver(constant);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:401: error: cannot find symbol
+        Rule rule = close.crossedUnder(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:406: error: cannot find symbol
+        Rule rule2 = close.crossedUnder(8);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:412: error: incompatible types: String cannot be converted to Config
+        BarSeries decSeries = new BaseBarSeries("dec");
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:415: error: no suitable constructor found for BaseBar(ZonedDateTime,Num,Num,Num,Num,Num,Num)
+            Bar bar = new BaseBar(
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:423: error: cannot find symbol
+        Rule decRule = decClose.crossedUnder(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:433: error: cannot find symbol
+        Rule rule = close.isGreaterThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:445: error: cannot find symbol
+        Rule rule = close.isLessThan(constant);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:496: error: incompatible types: String cannot be converted to Config
+        BarSeries empty = new BaseBarSeries("empty");
+                                            ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+16 errors

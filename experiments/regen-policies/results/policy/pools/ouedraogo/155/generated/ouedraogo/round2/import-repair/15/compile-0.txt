@@ -1,0 +1,62 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:34: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:112: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static class SimpleNumFactory implements org.ta4j.core.num.NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:121: error: DummyBarSeries is not abstract and does not override abstract method addPrice(Num) in BarSeries
+    private static class DummyBarSeries implements BarSeries {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:151: error: cannot find symbol
+        Indicator<Num> constInd = new ConstantIndicator<>(series, num);
+                                      ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:440: error: cannot find symbol
+        assertTrue(sma.delegate() instanceof SMAIndicator);
+                                             ^
+  symbol:   class SMAIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:447: error: cannot find symbol
+        assertTrue(ema.delegate() instanceof EMAIndicator);
+                                             ^
+  symbol:   class EMAIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:454: error: cannot find symbol
+        assertTrue(std.delegate() instanceof StandardDeviationIndicator);
+                                             ^
+  symbol:   class StandardDeviationIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:461: error: cannot find symbol
+        assertTrue(hv.delegate() instanceof HighestValueIndicator);
+                                            ^
+  symbol:   class HighestValueIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:468: error: cannot find symbol
+        assertTrue(lv.delegate() instanceof LowestValueIndicator);
+                                            ^
+  symbol:   class LowestValueIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:475: error: cannot find symbol
+        assertTrue(prev.delegate() instanceof PreviousValueIndicator);
+                                              ^
+  symbol:   class PreviousValueIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:484: error: cannot find symbol
+        Indicator<Num> constInd = new ConstantIndicator<>(series, numFactory.numOf(3));
+                                      ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:493: error: cannot find symbol
+        assertTrue(ind.delegate() instanceof ClosePriceIndicator);
+                                             ^
+  symbol:   class ClosePriceIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:499: error: cannot find symbol
+        assertTrue(ind.delegate() instanceof VolumeIndicator);
+                                             ^
+  symbol:   class VolumeIndicator
+  location: class NumericIndicatorTest
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+13 errors

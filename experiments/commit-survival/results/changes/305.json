@@ -1,0 +1,29 @@
+{
+  "index": 305,
+  "sha": "5d96fad2eca4754f3907fe37dfa6f455a0c3bb42",
+  "parent": "7c986d8295bffec6fe5e647aeb03e8903c670e68",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      545,
+      722,
+      723,
+      727,
+      728
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      545,
+      664,
+      665,
+      668,
+      669,
+      670,
+      731,
+      732,
+      740,
+      744
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex f81a24fc6..bab570634 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -545 +545,2 @@ public final class ElliottScenarioGenerator {\n-        }, cutPoints -> true, prunedBranches);\n+        }, cutPoints -> partialCorrectiveDecompositionRemainsViable(swings.get(0).degree(), pivots, cutPoints),\n+                prunedBranches);\n@@ -660,0 +662,11 @@ public final class ElliottScenarioGenerator {\n+    private boolean partialCorrectiveDecompositionRemainsViable(final ElliottDegree degree,\n+            final List<SwingPivotPoint> pivots, final List<Integer> cutPoints) {\n+        if (cutPoints.size() < 2) {\n+            return true;\n+        }\n+\n+        final ElliottSwing waveA = swingBetween(degree, pivots, 0, cutPoints.get(0));\n+        final ElliottSwing waveB = swingBetween(degree, pivots, cutPoints.get(0), cutPoints.get(1));\n+        return fibValidator.isWaveBRetracementValid(waveA, waveB);\n+    }\n+\n@@ -716,0 +729,6 @@ public final class ElliottScenarioGenerator {\n+    private ElliottSwing swingBetween(final ElliottDegree degree, final List<SwingPivotPoint> pivots,\n+            final int startPivot, final int endPivot) {\n+        return new ElliottSwing(pivots.get(startPivot).index(), pivots.get(endPivot).index(),\n+                pivots.get(startPivot).price(), pivots.get(endPivot).price(), degree);\n+    }\n+\n@@ -722,2 +740 @@ public final class ElliottScenarioGenerator {\n-            decomposition.add(new ElliottSwing(pivots.get(previousPivot).index(), pivots.get(cutPoint).index(),\n-                    pivots.get(previousPivot).price(), pivots.get(cutPoint).price(), degree));\n+            decomposition.add(swingBetween(degree, pivots, previousPivot, cutPoint));\n@@ -727,2 +744 @@ public final class ElliottScenarioGenerator {\n-        decomposition.add(new ElliottSwing(pivots.get(previousPivot).index(), pivots.get(endPivot).index(),\n-                pivots.get(previousPivot).price(), pivots.get(endPivot).price(), degree));\n+        decomposition.add(swingBetween(degree, pivots, previousPivot, endPivot));"
+}

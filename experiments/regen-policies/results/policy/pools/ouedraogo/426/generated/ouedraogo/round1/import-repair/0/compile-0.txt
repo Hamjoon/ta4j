@@ -1,0 +1,5 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:94: error: reference to ATRIndicator is ambiguous
+        new ATRIndicator(null, 4);
+        ^
+  both constructor ATRIndicator(BarSeries,int) in ATRIndicator and constructor ATRIndicator(TRIndicator,int) in ATRIndicator match
+1 error

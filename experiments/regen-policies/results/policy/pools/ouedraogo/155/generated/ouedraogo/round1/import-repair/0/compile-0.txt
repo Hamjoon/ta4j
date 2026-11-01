@@ -1,0 +1,12 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:39: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:41: error: cannot find symbol
+        NumFactory nf = series.numFactory();
+        ^
+  symbol:   class NumFactory
+  location: class ATRIndicatorTest
+2 errors

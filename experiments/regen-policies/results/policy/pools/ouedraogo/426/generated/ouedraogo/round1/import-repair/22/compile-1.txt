@@ -1,0 +1,22 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:236: error: incompatible types: DecimalNum cannot be converted to double
+        CostModel other = new FixedTransactionCostModel(DecimalNum.valueOf(1));
+                                                                          ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:434: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(100));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:435: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(115));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:446: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(150));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:447: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(180));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:449: error: cannot find symbol
+        Trade entry = Trade.buyAt(0, NaN, DecimalNum.valueOf(1), zeroCostModel);
+                                     ^
+  symbol:   variable NaN
+  location: class PositionTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+6 errors

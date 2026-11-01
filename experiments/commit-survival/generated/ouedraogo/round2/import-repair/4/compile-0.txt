@@ -1,0 +1,11 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:65: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+            BaseBar bar = new BaseBar(Duration.ofDays(1), end, open, high, low, close, volume);
+                          ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error

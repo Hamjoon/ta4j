@@ -1,0 +1,85 @@
+class,method,signature,line
+org.ta4j.core.Position,getEntry,getEntry(),136
+org.ta4j.core.Position,getExit,getExit(),143
+org.ta4j.core.Position,equals,equals(Object),147
+org.ta4j.core.Position,hashCode,hashCode(),157
+org.ta4j.core.Position,operate,operate(int),169
+org.ta4j.core.Position,operate,"operate(int, Num, Num)",182
+org.ta4j.core.Position,isClosed,isClosed(),200
+org.ta4j.core.Position,isOpened,isOpened(),207
+org.ta4j.core.Position,isNew,isNew(),214
+org.ta4j.core.Position,hasProfit,hasProfit(),221
+org.ta4j.core.Position,hasLoss,hasLoss(),228
+org.ta4j.core.Position,getProfit,getProfit(),238
+org.ta4j.core.Position,getProfit,"getProfit(int, Num)",256
+org.ta4j.core.Position,getGrossProfit,getGrossProfit(),268
+org.ta4j.core.Position,getGrossProfit,getGrossProfit(Num),284
+org.ta4j.core.Position,getGrossReturn,getGrossReturn(),306
+org.ta4j.core.Position,getGrossReturn,getGrossReturn(Num),323
+org.ta4j.core.Position,getGrossReturn,getGrossReturn(BarSeries),337
+org.ta4j.core.Position,getGrossReturn,"getGrossReturn(Num, Num)",359
+org.ta4j.core.Position,getPositionCost,getPositionCost(int),375
+org.ta4j.core.Position,getPositionCost,getPositionCost(),386
+org.ta4j.core.Position,getHoldingCost,getHoldingCost(),397
+org.ta4j.core.Position,getHoldingCost,getHoldingCost(int),408
+org.ta4j.core.Position,getStartingType,getStartingType(),415
+org.ta4j.core.Position,toString,toString(),426
+org.ta4j.core.analysis.CashFlow,getValue,getValue(int),92
+org.ta4j.core.analysis.CashFlow,getUnstableBars,getUnstableBars(),97
+org.ta4j.core.analysis.CashFlow,getBarSeries,getBarSeries(),102
+org.ta4j.core.analysis.CashFlow,numOf,numOf(Number),107
+org.ta4j.core.analysis.CashFlow,getSize,getSize(),115
+org.ta4j.core.analysis.CashFlow,addCost,"addCost(Num, Num, boolean)",228
+org.ta4j.core.analysis.CashFlow,determineEndIndex,"determineEndIndex(Position, int, int)",257
+org.ta4j.core.backtest.BarSeriesManager,getBarSeries,getBarSeries(),109
+org.ta4j.core.backtest.BarSeriesManager,getTransactionCostModel,getTransactionCostModel(),116
+org.ta4j.core.backtest.BarSeriesManager,getHoldingCostModel,getHoldingCostModel(),123
+org.ta4j.core.backtest.BarSeriesManager,run,run(Strategy),134
+org.ta4j.core.backtest.BarSeriesManager,run,"run(Strategy, int, int)",149
+org.ta4j.core.backtest.BarSeriesManager,run,"run(Strategy, TradeType)",162
+org.ta4j.core.backtest.BarSeriesManager,run,"run(Strategy, TradeType, int, int)",178
+org.ta4j.core.backtest.BarSeriesManager,run,"run(Strategy, TradeType, Num)",190
+org.ta4j.core.backtest.BarSeriesManager,run,"run(Strategy, TradeType, Num, int, int)",205
+org.ta4j.core.indicators.ATRIndicator,getValue,getValue(int),60
+org.ta4j.core.indicators.ATRIndicator,getUnstableBars,getUnstableBars(),65
+org.ta4j.core.indicators.ATRIndicator,getTRIndicator,getTRIndicator(),71
+org.ta4j.core.indicators.ATRIndicator,getBarCount,getBarCount(),76
+org.ta4j.core.indicators.ATRIndicator,toString,toString(),80
+org.ta4j.core.indicators.numeric.NumericIndicator,of,of(Indicator<Num>),74
+org.ta4j.core.indicators.numeric.NumericIndicator,closePrice,closePrice(BarSeries),83
+org.ta4j.core.indicators.numeric.NumericIndicator,volume,volume(BarSeries),92
+org.ta4j.core.indicators.numeric.NumericIndicator,delegate,delegate(),102
+org.ta4j.core.indicators.numeric.NumericIndicator,plus,plus(Indicator<Num>),110
+org.ta4j.core.indicators.numeric.NumericIndicator,plus,plus(Number),118
+org.ta4j.core.indicators.numeric.NumericIndicator,minus,minus(Indicator<Num>),126
+org.ta4j.core.indicators.numeric.NumericIndicator,minus,minus(Number),134
+org.ta4j.core.indicators.numeric.NumericIndicator,multipliedBy,multipliedBy(Indicator<Num>),142
+org.ta4j.core.indicators.numeric.NumericIndicator,multipliedBy,multipliedBy(Number),150
+org.ta4j.core.indicators.numeric.NumericIndicator,dividedBy,dividedBy(Indicator<Num>),158
+org.ta4j.core.indicators.numeric.NumericIndicator,dividedBy,dividedBy(Number),166
+org.ta4j.core.indicators.numeric.NumericIndicator,min,min(Indicator<Num>),175
+org.ta4j.core.indicators.numeric.NumericIndicator,min,min(Number),184
+org.ta4j.core.indicators.numeric.NumericIndicator,max,max(Indicator<Num>),193
+org.ta4j.core.indicators.numeric.NumericIndicator,max,max(Number),202
+org.ta4j.core.indicators.numeric.NumericIndicator,abs,abs(),211
+org.ta4j.core.indicators.numeric.NumericIndicator,sqrt,sqrt(),220
+org.ta4j.core.indicators.numeric.NumericIndicator,squared,squared(),229
+org.ta4j.core.indicators.numeric.NumericIndicator,sma,sma(int),238
+org.ta4j.core.indicators.numeric.NumericIndicator,ema,ema(int),246
+org.ta4j.core.indicators.numeric.NumericIndicator,stddev,stddev(int),254
+org.ta4j.core.indicators.numeric.NumericIndicator,highest,highest(int),262
+org.ta4j.core.indicators.numeric.NumericIndicator,lowest,lowest(int),270
+org.ta4j.core.indicators.numeric.NumericIndicator,previous,previous(int),278
+org.ta4j.core.indicators.numeric.NumericIndicator,previous,previous(),286
+org.ta4j.core.indicators.numeric.NumericIndicator,crossedOver,crossedOver(Indicator<Num>),294
+org.ta4j.core.indicators.numeric.NumericIndicator,crossedOver,crossedOver(Number),302
+org.ta4j.core.indicators.numeric.NumericIndicator,crossedUnder,crossedUnder(Indicator<Num>),311
+org.ta4j.core.indicators.numeric.NumericIndicator,crossedUnder,crossedUnder(Number),319
+org.ta4j.core.indicators.numeric.NumericIndicator,isGreaterThan,isGreaterThan(Indicator<Num>),327
+org.ta4j.core.indicators.numeric.NumericIndicator,isGreaterThan,isGreaterThan(Number),335
+org.ta4j.core.indicators.numeric.NumericIndicator,isLessThan,isLessThan(Indicator<Num>),343
+org.ta4j.core.indicators.numeric.NumericIndicator,isLessThan,isLessThan(Number),351
+org.ta4j.core.indicators.numeric.NumericIndicator,getValue,getValue(int),359
+org.ta4j.core.indicators.numeric.NumericIndicator,getUnstableBars,getUnstableBars(),364
+org.ta4j.core.indicators.numeric.NumericIndicator,getBarSeries,getBarSeries(),369
+org.ta4j.core.indicators.numeric.NumericIndicator,toString,toString(),374

@@ -1,0 +1,115 @@
+{
+  "index": 213,
+  "sha": "6cce88098ebe376a74b51ebefa553fbd956e6fbc",
+  "parent": "279d9056fd045ed94bb38ca8aeffc5d84f6c80b7",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [],
+    "src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java": [
+      32,
+      33,
+      34
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java": [
+      35
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java": [
+      29
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java": [
+      26,
+      27,
+      32
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java": [
+      28,
+      29,
+      30,
+      44,
+      45,
+      55
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [
+      127,
+      128,
+      130
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java": [
+      35,
+      36,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      70,
+      84,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SampleType.java": [
+      11,
+      14,
+      16,
+      23
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java": [
+      33,
+      34,
+      49,
+      50,
+      51,
+      52,
+      63,
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java": [
+      30,
+      31,
+      43,
+      44,
+      45,
+      46,
+      57,
+      69
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java": [
+      27,
+      28,
+      40,
+      41,
+      42,
+      43,
+      44,
+      55,
+      67,
+      72
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java": [
+      37,
+      38,
+      50,
+      51,
+      52,
+      53,
+      54,
+      65,
+      77,
+      91,
+      92,
+      93,
+      95,
+      105
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\nindex 433139ce0..5d34f60e9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n@@ -7,0 +8 @@ import java.util.Objects;\n+import java.util.Optional;\n@@ -123,0 +125,8 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n+    @Override\n+    public Optional<ReturnRepresentation> getReturnRepresentation() {\n+        if (criterion instanceof AbstractAnalysisCriterion) {\n+            return ((AbstractAnalysisCriterion) criterion).getReturnRepresentation();\n+        }\n+        return Optional.empty();\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\nindex 1a43934ba..bb039c851 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\n@@ -5,0 +6,2 @@ package org.ta4j.core.indicators.statistics;\n+import java.util.Objects;\n+\n@@ -18,0 +21,2 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n+    private final int barCount;\n+    private final SampleType sampleType;\n@@ -24 +28 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n-     * Constructor.\n+     * Constructor using {@link SampleType#POPULATION} for backward compatibility.\n@@ -30,0 +35,14 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n+        this(indicator1, indicator2, barCount, SampleType.POPULATION);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param indicator1 the first indicator\n+     * @param indicator2 the second indicator\n+     * @param barCount   the time frame\n+     * @param sampleType sample/population variance selection\n+     * @since 0.22.4\n+     */\n+    public CorrelationCoefficientIndicator(Indicator<Num> indicator1, Indicator<Num> indicator2, int barCount,\n+            SampleType sampleType) {\n@@ -32,3 +50,35 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n-        this.variance1 = new VarianceIndicator(indicator1, barCount);\n-        this.variance2 = new VarianceIndicator(indicator2, barCount);\n-        this.covariance = new CovarianceIndicator(indicator1, indicator2, barCount);\n+        this.barCount = Math.max(barCount, 1);\n+        this.sampleType = Objects.requireNonNull(sampleType, \"sampleType must not be null\");\n+        this.variance1 = this.sampleType.isSample() ? VarianceIndicator.ofSample(indicator1, this.barCount)\n+                : VarianceIndicator.ofPopulation(indicator1, this.barCount);\n+        this.variance2 = this.sampleType.isSample() ? VarianceIndicator.ofSample(indicator2, this.barCount)\n+                : VarianceIndicator.ofPopulation(indicator2, this.barCount);\n+        this.covariance = new CovarianceIndicator(indicator1, indicator2, this.barCount);\n+    }\n+\n+    /**\n+     * Creates an indicator using sample variance/covariance normalization.\n+     *\n+     * @param indicator1 the first indicator\n+     * @param indicator2 the second indicator\n+     * @param barCount   the time frame\n+     * @return a sample correlation coefficient indicator\n+     * @since 0.22.4\n+     */\n+    public static CorrelationCoefficientIndicator ofSample(Indicator<Num> indicator1, Indicator<Num> indicator2,\n+            int barCount) {\n+        return new CorrelationCoefficientIndicator(indicator1, indicator2, barCount, SampleType.SAMPLE);\n+    }\n+\n+    /**\n+     * Creates an indicator using population variance/covariance normalization.\n+     *\n+     * @param indicator1 the first indicator\n+     * @param indicator2 the second indicator\n+     * @param barCount   the time frame\n+     * @return a population correlation coefficient indicator\n+     * @since 0.22.4\n+     */\n+    public static CorrelationCoefficientIndicator ofPopulation(Indicator<Num> indicator1, Indicator<Num> indicator2,\n+            int barCount) {\n+        return new CorrelationCoefficientIndicator(indicator1, indicator2, barCount, SampleType.POPULATION);\n@@ -39,0 +90,9 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n+        if (sampleType.isSample()) {\n+            final int startIndex = Math.max(0, index - barCount + 1);\n+            final int numberOfObservations = index - startIndex + 1;\n+            if (numberOfObservations > 1) {\n+                final var numFactory = getBarSeries().numFactory();\n+                cov = cov.multipliedBy(numFactory.numOf(numberOfObservations))\n+                        .dividedBy(numFactory.numOf(numberOfObservations - 1));\n+            }\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SampleType.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SampleType.java\nnew file mode 100644\nindex 000000000..345fe418a\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SampleType.java\n@@ -0,0 +1,25 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.indicators.statistics;\n+\n+/**\n+ * Defines whether a rolling statistic should use sample or population formulas.\n+ *\n+ * @since 0.22.4\n+ */\n+public enum SampleType {\n+\n+    /** Uses sample formulas, e.g. variance divisor {@code n - 1}. */\n+    SAMPLE,\n+    /** Uses population formulas, e.g. variance divisor {@code n}. */\n+    POPULATION;\n+\n+    /**\n+     * @return {@code true} when this type is {@link #SAMPLE}\n+     * @since 0.22.4\n+     */\n+    public boolean isSample() {\n+        return this == SAMPLE;\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java\nindex ccfa566ba..df6a31c01 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java\n@@ -5,0 +6,2 @@ package org.ta4j.core.indicators.statistics;\n+import java.util.Objects;\n+\n@@ -25 +27 @@ public class SigmaIndicator extends CachedIndicator<Num> {\n-     * Constructor.\n+     * Constructor using {@link SampleType#POPULATION} for backward compatibility.\n@@ -30,0 +33,12 @@ public class SigmaIndicator extends CachedIndicator<Num> {\n+        this(ref, barCount, SampleType.POPULATION);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param ref        the indicator\n+     * @param barCount   the time frame\n+     * @param sampleType sample/population variance selection\n+     * @since 0.22.4\n+     */\n+    public SigmaIndicator(Indicator<Num> ref, int barCount, SampleType sampleType) {\n@@ -35 +49,27 @@ public class SigmaIndicator extends CachedIndicator<Num> {\n-        this.sd = new StandardDeviationIndicator(ref, barCount);\n+        this.sd = Objects.requireNonNull(sampleType, \"sampleType must not be null\").isSample()\n+                ? StandardDeviationIndicator.ofSample(ref, barCount)\n+                : StandardDeviationIndicator.ofPopulation(ref, barCount);\n+    }\n+\n+    /**\n+     * Creates a sigma indicator using sample standard deviation.\n+     *\n+     * @param ref      the indicator\n+     * @param barCount the time frame\n+     * @return a sample sigma indicator\n+     * @since 0.22.4\n+     */\n+    public static SigmaIndicator ofSample(Indicator<Num> ref, int barCount) {\n+        return new SigmaIndicator(ref, barCount, SampleType.SAMPLE);\n+    }\n+\n+    /**\n+     * Creates a sigma indicator using population standard deviation.\n+     *\n+     * @param ref      the indicator\n+     * @param barCount the time frame\n+     * @return a population sigma indicator\n+     * @since 0.22.4\n+     */\n+    public static SigmaIndicator ofPopulation(Indicator<Num> ref, int barCount) {\n+        return new SigmaIndicator(ref, barCount, SampleType.POPULATION);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java\nindex b1459fa4c..c9e42da79 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java\n@@ -5,0 +6,2 @@ package org.ta4j.core.indicators.statistics;\n+import java.util.Objects;\n+\n@@ -22 +24 @@ public class StandardDeviationIndicator extends CachedIndicator<Num> {\n-     * Constructor.\n+     * Constructor using {@link SampleType#POPULATION} for backward compatibility.\n@@ -27,0 +30,12 @@ public class StandardDeviationIndicator extends CachedIndicator<Num> {\n+        this(indicator, barCount, SampleType.POPULATION);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param indicator  the indicator\n+     * @param barCount   the time frame\n+     * @param sampleType sample/population variance selection\n+     * @since 0.22.4\n+     */\n+    public StandardDeviationIndicator(Indicator<Num> indicator, int barCount, SampleType sampleType) {\n@@ -29 +43,27 @@ public class StandardDeviationIndicator extends CachedIndicator<Num> {\n-        this.variance = new VarianceIndicator(indicator, barCount);\n+        this.variance = Objects.requireNonNull(sampleType, \"sampleType must not be null\").isSample()\n+                ? VarianceIndicator.ofSample(indicator, barCount)\n+                : VarianceIndicator.ofPopulation(indicator, barCount);\n+    }\n+\n+    /**\n+     * Creates an indicator using sample variance ({@code n - 1} divisor).\n+     *\n+     * @param indicator the indicator\n+     * @param barCount  the time frame\n+     * @return a sample-standard-deviation indicator\n+     * @since 0.22.4\n+     */\n+    public static StandardDeviationIndicator ofSample(Indicator<Num> indicator, int barCount) {\n+        return new StandardDeviationIndicator(indicator, barCount, SampleType.SAMPLE);\n+    }\n+\n+    /**\n+     * Creates an indicator using population variance ({@code n} divisor).\n+     *\n+     * @param indicator the indicator\n+     * @param barCount  the time frame\n+     * @return a population-standard-deviation indicator\n+     * @since 0.22.4\n+     */\n+    public static StandardDeviationIndicator ofPopulation(Indicator<Num> indicator, int barCount) {\n+        return new StandardDeviationIndicator(indicator, barCount, SampleType.POPULATION);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\nindex 2d9357b36..1889ba970 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\n@@ -5,0 +6,2 @@ package org.ta4j.core.indicators.statistics;\n+import java.util.Objects;\n+\n@@ -19 +21 @@ public class StandardErrorIndicator extends CachedIndicator<Num> {\n-     * Constructor.\n+     * Constructor using {@link SampleType#POPULATION} for backward compatibility.\n@@ -24,0 +27,12 @@ public class StandardErrorIndicator extends CachedIndicator<Num> {\n+        this(indicator, barCount, SampleType.POPULATION);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param indicator  the indicator\n+     * @param barCount   the time frame\n+     * @param sampleType sample/population variance selection\n+     * @since 0.22.4\n+     */\n+    public StandardErrorIndicator(Indicator<Num> indicator, int barCount, SampleType sampleType) {\n@@ -26,2 +40,28 @@ public class StandardErrorIndicator extends CachedIndicator<Num> {\n-        this.barCount = barCount;\n-        this.sdev = new StandardDeviationIndicator(indicator, barCount);\n+        this.barCount = Math.max(barCount, 1);\n+        this.sdev = Objects.requireNonNull(sampleType, \"sampleType must not be null\").isSample()\n+                ? StandardDeviationIndicator.ofSample(indicator, this.barCount)\n+                : StandardDeviationIndicator.ofPopulation(indicator, this.barCount);\n+    }\n+\n+    /**\n+     * Creates an indicator using sample standard deviation.\n+     *\n+     * @param indicator the indicator\n+     * @param barCount  the time frame\n+     * @return a sample-standard-error indicator\n+     * @since 0.22.4\n+     */\n+    public static StandardErrorIndicator ofSample(Indicator<Num> indicator, int barCount) {\n+        return new StandardErrorIndicator(indicator, barCount, SampleType.SAMPLE);\n+    }\n+\n+    /**\n+     * Creates an indicator using population standard deviation.\n+     *\n+     * @param indicator the indicator\n+     * @param barCount  the time frame\n+     * @return a population-standard-error indicator\n+     * @since 0.22.4\n+     */\n+    public static StandardErrorIndicator ofPopulation(Indicator<Num> indicator, int barCount) {\n+        return new StandardErrorIndicator(indicator, barCount, SampleType.POPULATION);\n@@ -32 +72 @@ public class StandardErrorIndicator extends CachedIndicator<Num> {\n-        final int startIndex = Math.max(0, index - barCount + 1);\n+        final int startIndex = Math.max(0, index - this.barCount + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\nindex f11996b4a..79754f33a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\n@@ -5,0 +6,2 @@ package org.ta4j.core.indicators.statistics;\n+import java.util.Objects;\n+\n@@ -12,0 +15,6 @@ import org.ta4j.core.num.Num;\n+ *\n+ * <p>\n+ * The default constructor computes <b>sample variance</b> (divisor\n+ * {@code n - 1}) for rolling windows. Use {@link #ofPopulation(Indicator, int)}\n+ * (or the {@link SampleType} constructor) when population variance is required.\n+ * </p>\n@@ -18,0 +27 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n+    private final SampleType sampleType;\n@@ -21 +30 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n-     * Constructor.\n+     * Constructor using {@link SampleType#SAMPLE}.\n@@ -24,0 +34 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n+     * @since 0.22.4\n@@ -26,0 +37,12 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n+        this(indicator, barCount, SampleType.SAMPLE);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param indicator  the indicator\n+     * @param barCount   the time frame\n+     * @param sampleType sample/population variance selection\n+     * @since 0.22.4\n+     */\n+    public VarianceIndicator(Indicator<Num> indicator, int barCount, SampleType sampleType) {\n@@ -28,3 +50,28 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n-        this.indicator = indicator;\n-        this.barCount = barCount;\n-        this.sma = new SMAIndicator(indicator, barCount);\n+        this.indicator = Objects.requireNonNull(indicator, \"indicator must not be null\");\n+        this.barCount = Math.max(barCount, 1);\n+        this.sampleType = Objects.requireNonNull(sampleType, \"sampleType must not be null\");\n+        this.sma = new SMAIndicator(indicator, this.barCount);\n+    }\n+\n+    /**\n+     * Creates an indicator using sample variance ({@code n - 1} divisor).\n+     *\n+     * @param indicator the indicator\n+     * @param barCount  the time frame\n+     * @return a sample-variance indicator\n+     * @since 0.22.4\n+     */\n+    public static VarianceIndicator ofSample(Indicator<Num> indicator, int barCount) {\n+        return new VarianceIndicator(indicator, barCount, SampleType.SAMPLE);\n+    }\n+\n+    /**\n+     * Creates an indicator using population variance ({@code n} divisor).\n+     *\n+     * @param indicator the indicator\n+     * @param barCount  the time frame\n+     * @return a population-variance indicator\n+     * @since 0.22.4\n+     */\n+    public static VarianceIndicator ofPopulation(Indicator<Num> indicator, int barCount) {\n+        return new VarianceIndicator(indicator, barCount, SampleType.POPULATION);\n@@ -44,2 +91,5 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n-        variance = variance.dividedBy(numFactory.numOf(numberOfObservations));\n-        return variance;\n+        final int divisor = sampleType.isSample() ? numberOfObservations - 1 : numberOfObservations;\n+        if (divisor <= 0) {\n+            return numFactory.zero();\n+        }\n+        return variance.dividedBy(numFactory.numOf(divisor));\n@@ -55 +105 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n-        return getClass().getSimpleName() + \" barCount: \" + barCount;\n+        return getClass().getSimpleName() + \" barCount: \" + barCount + \" sampleType: \" + sampleType;"
+}

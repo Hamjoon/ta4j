@@ -1,0 +1,96 @@
+{
+  "index": 86,
+  "sha": "8cb1d5b4adb73e0833266d2ebebedc715a2e245a",
+  "parent": "f48e1a95daae559d2c2697cc3f622488be26b284",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutor.java": [],
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": [
+      109,
+      181
+    ],
+    "src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java": [
+      105,
+      107,
+      112,
+      123
+    ],
+    "src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/RecursiveCachedIndicator.java": [
+      72,
+      73,
+      74,
+      78,
+      80,
+      83,
+      84,
+      88
+    ],
+    "src/main/java/org/ta4j/core/reports/TradingStatement.java": [
+      47
+    ],
+    "src/main/java/org/ta4j/core/reports/TradingStatementGenerator.java": [
+      65
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutor.java": [],
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": [
+      109,
+      181
+    ],
+    "src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java": [
+      106,
+      107,
+      108,
+      114,
+      116,
+      117,
+      123,
+      124,
+      125,
+      128,
+      140
+    ],
+    "src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/RecursiveCachedIndicator.java": [
+      58,
+      59,
+      81,
+      82,
+      83,
+      84,
+      86,
+      87,
+      88,
+      89,
+      91,
+      92,
+      97,
+      101,
+      102,
+      103,
+      104,
+      107,
+      109,
+      110,
+      113,
+      114,
+      115,
+      117,
+      119,
+      120
+    ],
+    "src/main/java/org/ta4j/core/reports/TradingStatement.java": [
+      55,
+      56,
+      71,
+      72,
+      99,
+      104
+    ],
+    "src/main/java/org/ta4j/core/reports/TradingStatementGenerator.java": [
+      65
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\nindex 0cfe86374..311c9c9f1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\n@@ -26,3 +25,0 @@ package org.ta4j.core.backtest;\n-import java.util.List;\n-import java.util.stream.Collectors;\n-\n@@ -38,0 +36,3 @@ import org.ta4j.core.reports.TradingStatementGenerator;\n+import java.util.List;\n+import java.util.stream.Collectors;\n+\n@@ -51,4 +51 @@ public class BacktestExecutor {\n-     * @param series               the bar series\n-     * @param transactionCostModel the cost model for transactions of the asset\n-     * @param holdingCostModel     the cost model for holding the asset (e.g.\n-     *                             borrowing)\n+     * @param series the bar series\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\nindex c35cde1ad..8bfdb48af 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n@@ -25,0 +26,3 @@ package org.ta4j.core.indicators;\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.Indicator;\n+\n@@ -30,3 +32,0 @@ import java.util.List;\n-import org.ta4j.core.BarSeries;\n-import org.ta4j.core.Indicator;\n-\n@@ -109 +109 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n-            result = results.get(0);\n+            result = results.getFirst();\n@@ -181 +181 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n-                results.remove(0);\n+                results.removeFirst();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java\nindex 6d9eb9061..5bdc9c50d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java\n@@ -103,0 +104,7 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n+\n+        // Check if the current value is NaN - if so, return NaN immediately\n+        double currentMeasurement = this.indicator.getValue(index).doubleValue();\n+        if (Double.isNaN(currentMeasurement) || Double.isInfinite(currentMeasurement)) {\n+            return NaN.NaN;\n+        }\n+\n@@ -105 +111,0 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-            filter.predict();\n@@ -107 +113,6 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-            filter.correct(new double[] { measurement });\n+\n+            filter.predict();\n+            // Skip NaN or infinite values - only process valid measurements\n+            if (!Double.isNaN(measurement) && !Double.isInfinite(measurement)) {\n+                filter.correct(new double[] { measurement });\n+            }\n@@ -112 +123,6 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-        return numFactory.numOf(filter.getStateEstimation()[0]);\n+        Double value = filter.getStateEstimation()[0];\n+        if (value.isNaN()) {\n+            return NaN.NaN;\n+        }\n+\n+        return numFactory.numOf(value);\n@@ -116,2 +132,3 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-     * Returns the number of unstable bars for this indicator. Since the Kalman\n-     * filter is a stateful algorithm, there are no unstable bars.\n+     * Returns the number of bars up to which this indicator calculates unstable\n+     * values. This typically corresponds to the number of bars required for the\n+     * underlying indicator to produce reliable results.\n@@ -119 +136 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-     * @return 0, as there are no unstable bars for this indicator\n+     * @return the number of unstable bars\n@@ -123 +140 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return indicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\nindex 59bdb57ce..f8498068f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\n@@ -26,2 +25,0 @@ package org.ta4j.core.indicators;\n-import java.util.Objects;\n-\n@@ -32,0 +31,2 @@ import org.ta4j.core.num.NumFactory;\n+import java.util.Objects;\n+\n@@ -123 +122,0 @@ import org.ta4j.core.num.NumFactory;\n- * @see RunningTotalIndicator\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RecursiveCachedIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RecursiveCachedIndicator.java\nindex 0845f318f..7c297baa9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RecursiveCachedIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RecursiveCachedIndicator.java\n@@ -28,0 +29,3 @@ import org.ta4j.core.Indicator;\n+import java.util.IdentityHashMap;\n+import java.util.Map;\n+\n@@ -38 +41 @@ import org.ta4j.core.Indicator;\n- * Concretely when an index value is asked, if the last cached value is too\n+ * Concretely when an index value is asked if the last cached value is too\n@@ -46 +49 @@ public abstract class RecursiveCachedIndicator<T> extends CachedIndicator<T> {\n-     *\n+     * <p>\n@@ -51,0 +55,6 @@ public abstract class RecursiveCachedIndicator<T> extends CachedIndicator<T> {\n+    /**\n+     * Guards against recursively re-entering prefill for the same indicator.\n+     */\n+    private static final ThreadLocal<Map<RecursiveCachedIndicator<?>, Integer>> PREFILL_DEPTH = ThreadLocal\n+            .withInitial(IdentityHashMap::new);\n+\n@@ -71,4 +80,15 @@ public abstract class RecursiveCachedIndicator<T> extends CachedIndicator<T> {\n-    public T getValue(int index) {\n-        final BarSeries series = getBarSeries();\n-        if (series == null || index > series.getEndIndex()) {\n-            return super.getValue(index);\n+    public synchronized T getValue(int index) {\n+        BarSeries series = getBarSeries();\n+        if (series != null) {\n+            final int seriesEndIndex = series.getEndIndex();\n+            if (index <= seriesEndIndex) {\n+                // We are not after the end of the series\n+                final int removedBarsCount = series.getRemovedBarsCount();\n+                int startIndex = Math.max(removedBarsCount, highestResultIndex);\n+                if (startIndex < 0) {\n+                    startIndex = Math.max(0, removedBarsCount);\n+                }\n+                if (index - startIndex > RECURSION_THRESHOLD) {\n+                    prefillMissingValues(startIndex, index);\n+                }\n+            }\n@@ -77,2 +97,9 @@ public abstract class RecursiveCachedIndicator<T> extends CachedIndicator<T> {\n-        // We're not at the end of the series yet.\n-        final int startIndex = Math.max(series.getRemovedBarsCount(), highestResultIndex);\n+        return super.getValue(index);\n+    }\n+\n+    private void prefillMissingValues(int startIndex, int targetIndex) {\n+        Map<RecursiveCachedIndicator<?>, Integer> depthByIndicator = PREFILL_DEPTH.get();\n+        Integer depth = depthByIndicator.get(this);\n+        if (depth != null && depth > 0) {\n+            return;\n+        }\n@@ -80,5 +107,14 @@ public abstract class RecursiveCachedIndicator<T> extends CachedIndicator<T> {\n-        if (index - startIndex > RECURSION_THRESHOLD) {\n-            // Too many uncalculated values; the risk for a StackOverflowError becomes high.\n-            // Calculating the previous values iteratively.\n-            for (int prevIndex = startIndex; prevIndex < index; prevIndex++) {\n-                super.getValue(prevIndex);\n+        depthByIndicator.put(this, (depth == null ? 0 : depth) + 1);\n+        try {\n+            for (int prevIdx = startIndex; prevIdx < targetIndex; prevIdx++) {\n+                super.getValue(prevIdx);\n+            }\n+        } finally {\n+            int updatedDepth = depthByIndicator.getOrDefault(this, 1) - 1;\n+            if (updatedDepth <= 0) {\n+                depthByIndicator.remove(this);\n+            } else {\n+                depthByIndicator.put(this, updatedDepth);\n+            }\n+            if (depthByIndicator.isEmpty()) {\n+                PREFILL_DEPTH.remove();\n@@ -87,2 +122,0 @@ public abstract class RecursiveCachedIndicator<T> extends CachedIndicator<T> {\n-\n-        return super.getValue(index);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatement.java b/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatement.java\nindex 21f68ba4a..a4429eb31 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatement.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatement.java\n@@ -25,0 +26 @@ package org.ta4j.core.reports;\n+import com.google.gson.Gson;\n@@ -26,0 +28 @@ import org.ta4j.core.Strategy;\n+import org.ta4j.core.TradingRecord;\n@@ -34,3 +36,4 @@ public class TradingStatement {\n-    private final Strategy strategy;\n-    private final PositionStatsReport positionStatsReport;\n-    private final PerformanceReport performanceReport;\n+    public final PositionStatsReport positionStatsReport;\n+    public final PerformanceReport performanceReport;\n+    public final TradingRecord tradingRecord;\n+    public final Strategy strategy;\n@@ -39 +42,2 @@ public class TradingStatement {\n-     * Constructor.\n+     * Constructs a TradingStatement with the specified strategy, trading record,\n+     * position statistics report, and performance report.\n@@ -41,3 +45,5 @@ public class TradingStatement {\n-     * @param strategy            the {@link Strategy}\n-     * @param positionStatsReport the {@link PositionStatsReport}\n-     * @param performanceReport   the {@link PerformanceReport}\n+     * @param strategy            the trading strategy used to generate the\n+     *                            statement\n+     * @param tradingRecord       the record of all trading operations\n+     * @param positionStatsReport the report containing position-related statistics\n+     * @param performanceReport   the report containing performance metrics\n@@ -45 +51 @@ public class TradingStatement {\n-    public TradingStatement(Strategy strategy, PositionStatsReport positionStatsReport,\n+    public TradingStatement(Strategy strategy, TradingRecord tradingRecord, PositionStatsReport positionStatsReport,\n@@ -47 +52,0 @@ public class TradingStatement {\n-        this.strategy = strategy;\n@@ -49,0 +55,2 @@ public class TradingStatement {\n+        this.tradingRecord = tradingRecord;\n+        this.strategy = strategy;\n@@ -52 +59,18 @@ public class TradingStatement {\n-    /** @return {@link #strategy} */\n+    /**\n+     * Constructs a TradingStatement with the specified strategy, position\n+     * statistics report, and performance report. The trading record is set to null\n+     * by default.\n+     *\n+     * @param strategy            the trading strategy used to generate the\n+     *                            statement\n+     * @param positionStatsReport the report containing position-related statistics\n+     * @param performanceReport   the report containing performance metrics\n+     */\n+    public TradingStatement(Strategy strategy, PositionStatsReport positionStatsReport,\n+            PerformanceReport performanceReport) {\n+        this(strategy, null, positionStatsReport, performanceReport);\n+    }\n+\n+    /**\n+     * @return {@link #strategy}\n+     */\n@@ -57 +81,3 @@ public class TradingStatement {\n-    /** @return {@link #positionStatsReport} */\n+    /**\n+     * @return {@link #positionStatsReport}\n+     */\n@@ -62 +88,3 @@ public class TradingStatement {\n-    /** @return {@link #performanceReport} */\n+    /**\n+     * @return {@link #performanceReport}\n+     */\n@@ -65,0 +94,12 @@ public class TradingStatement {\n+\n+    /**\n+     * @return {@link #tradingRecord}\n+     */\n+    public TradingRecord getTradingRecord() {\n+        return tradingRecord;\n+    }\n+\n+    @Override\n+    public String toString() {\n+        return new Gson().toJson(this);\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatementGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatementGenerator.java\nindex adb860c17..74bf96409 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatementGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/reports/TradingStatementGenerator.java\n@@ -65 +65 @@ public class TradingStatementGenerator implements ReportGenerator<TradingStateme\n-        return new TradingStatement(strategy, positionStatsReport, performanceReport);\n+        return new TradingStatement(strategy, tradingRecord, positionStatsReport, performanceReport);"
+}

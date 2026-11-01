@@ -1,0 +1,442 @@
+{
+  "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/CoT",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/classes",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.618,
+    "log": "work/validation/ouedraogo/round1/0/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withBarSeries_andBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withTRIndicator_andBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_equalsMMAofTR()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountOne_ATREqualsTR()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountLargerThanSeriesSize()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_negativeIndex_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_indexBeyondSeries_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testToString_containsClassNameAndBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testEmptySeries_behaviour()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_zeroBarCount_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_negativeBarCount_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetUnstableBars_equalsBarCount()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/run1"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.918,
+      "log": "work/validation/ouedraogo/round1/0/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withBarSeries_andBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withTRIndicator_andBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_equalsMMAofTR()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountOne_ATREqualsTR()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountLargerThanSeriesSize()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_negativeIndex_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_indexBeyondSeries_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testToString_containsClassNameAndBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testEmptySeries_behaviour()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_zeroBarCount_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_negativeBarCount_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetUnstableBars_equalsBarCount()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/run2"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.879,
+      "log": "work/validation/ouedraogo/round1/0/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withBarSeries_andBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withTRIndicator_andBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_equalsMMAofTR()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountOne_ATREqualsTR()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountLargerThanSeriesSize()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_negativeIndex_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_indexBeyondSeries_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testToString_containsClassNameAndBarCount()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testEmptySeries_behaviour()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_zeroBarCount_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_negativeBarCount_throwsException()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetUnstableBars_equalsBarCount()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ouedraogo/round1/0/test/run3"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.124,
+      "log": "work/validation/ouedraogo/round1/0/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testConstructor_withBarSeries_andBarCount",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testConstructor_withBarSeries_andBarCount",
+      "body_hash": "e228aa270e67680208f0ec8fc30418c9923f4f1e8ed08bf07b3f228b575dd0af",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withBarSeries_andBarCount()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testConstructor_withTRIndicator_andBarCount",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testConstructor_withTRIndicator_andBarCount",
+      "body_hash": "6a72f733e3a80c1e15c3a4867eed5f72592b2aadbab97d63f46d31b54c873b67",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_withTRIndicator_andBarCount()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testGetValue_equalsMMAofTR",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testGetValue_equalsMMAofTR",
+      "body_hash": "12ef89064b93be118254afd3fcb842ac90e4f8521a6829dea180790d79a58b55",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_equalsMMAofTR()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testBarCountOne_ATREqualsTR",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testBarCountOne_ATREqualsTR",
+      "body_hash": "842230f0b50050c069e86ac8a63cef967759e18b32341602cbb2c0bf191a799e",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountOne_ATREqualsTR()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testBarCountLargerThanSeriesSize",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testBarCountLargerThanSeriesSize",
+      "body_hash": "80d9ec245c8b12a173e66cf882fb075791c3e3521b19b9420c1133babb000fab",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testBarCountLargerThanSeriesSize()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testGetValue_negativeIndex_throwsException",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testGetValue_negativeIndex_throwsException",
+      "body_hash": "f5b3fcb7eb9942e786ae5dd8c42d4145d46d85a281659033f99901040c2389c8",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "fail",
+      "message": "java.lang.AssertionError: Expected exception: java.lang.IndexOutOfBoundsException",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_negativeIndex_throwsException()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testGetValue_indexBeyondSeries_throwsException",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testGetValue_indexBeyondSeries_throwsException",
+      "body_hash": "8544a7eaab4daa72c4b8478f910f9b60a7cd886a47cbf8d089540404b1f3358a",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetValue_indexBeyondSeries_throwsException()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testToString_containsClassNameAndBarCount",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testToString_containsClassNameAndBarCount",
+      "body_hash": "576177bdb835970b1094269291d5fc51e459543214388649eb306fc336cd591d",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testToString_containsClassNameAndBarCount()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testEmptySeries_behaviour",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testEmptySeries_behaviour",
+      "body_hash": "5a00f95d8805930168fbb1d71f195b9def12539d6c75ddb70f6854c73151c95d",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testEmptySeries_behaviour()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testConstructor_zeroBarCount_throwsException",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testConstructor_zeroBarCount_throwsException",
+      "body_hash": "1d1c57995ac41d66b92c404f4fceb6ceaf14ae99c0942c6e9c54283206fee131",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_zeroBarCount_throwsException()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testConstructor_negativeBarCount_throwsException",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testConstructor_negativeBarCount_throwsException",
+      "body_hash": "ed6534e1e8e9dc6e8978f59614f7e5eeaffca7347ca0aab5340da547dde11a2e",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "fail",
+      "message": "java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testConstructor_negativeBarCount_throwsException()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testGetUnstableBars_equalsBarCount",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testGetUnstableBars_equalsBarCount",
+      "body_hash": "fe9c1c5b343211ab6a39ebb3fb068b62218bac0d486694d7105e3c3f4bda7a6f",
+      "round": "round1",
+      "technique": "CoT",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testGetUnstableBars_equalsBarCount()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.677,
+    "log": "work/validation/ouedraogo/round1/0/inventory.tsv"
+  },
+  "input_sha256": "2e4d665d5e36984c63b9ca0c91b1b178e0d176db03f3048cd37b27cd6877fa8f"
+}

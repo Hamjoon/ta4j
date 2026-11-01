@@ -1,0 +1,153 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:12: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:48: error: cannot find symbol
+        private final java.util.List<Num> closePrices;
+                                     ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:125: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) {}
+                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:125: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) {}
+                                                        ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:126: error: cannot find symbol
+        @Override public void addPrice(Num price) {}
+                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:45: error: SimpleBarSeries is not abstract and does not override abstract method barBuilder() in BarSeries
+    private static class SimpleBarSeries implements BarSeries {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:51: error: incompatible types: NumFactory is not a functional interface
+            this.numFactory = DecimalNum::valueOf;
+                              ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:124: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) {}
+                              ^
+  first method:  addTrade(Num,Num) in SimpleBarSeries
+  second method: addTrade(Num,Num) in BarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:127: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+        @Override public void addPrice(Number price) {}
+                              ^
+  first method:  addPrice(Num) in SimpleBarSeries
+  second method: addPrice(Num) in BarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:139: error: cannot find symbol
+        ConstantIndicator<Num> const10 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:217: error: cannot find symbol
+        ConstantIndicator<Num> const5 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:231: error: cannot find symbol
+        ConstantIndicator<Num> const3 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:245: error: cannot find symbol
+        ConstantIndicator<Num> const2 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:259: error: cannot find symbol
+        ConstantIndicator<Num> const2 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:273: error: cannot find symbol
+        ConstantIndicator<Num> const12 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:288: error: cannot find symbol
+        ConstantIndicator<Num> const8 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:303: error: cannot find symbol
+        ConstantIndicator<Num> constNeg = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:314: error: cannot find symbol
+        Num expected = DecimalNum.valueOf(Math.sqrt(10));
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:343: error: cannot find symbol
+        Num expected = DecimalNum.valueOf(Math.sqrt(200.0 / 3));
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:377: error: cannot find symbol
+        ConstantIndicator<Num> const11 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:391: error: cannot find symbol
+        ConstantIndicator<Num> const9 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:405: error: cannot find symbol
+        ConstantIndicator<Num> const5 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:419: error: cannot find symbol
+        ConstantIndicator<Num> const15 = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:437: error: cannot find symbol
+        baseIndicator.plus((Indicator<Num>) null);
+                            ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:437: error: cannot find symbol
+        baseIndicator.plus((Indicator<Num>) null);
+                                      ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:442: error: cannot find symbol
+        baseIndicator.minus((Indicator<Num>) null);
+                             ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:442: error: cannot find symbol
+        baseIndicator.minus((Indicator<Num>) null);
+                                       ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:452: error: cannot find symbol
+        ConstantIndicator<Num> zero = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:464: error: cannot find symbol
+        ConstantIndicator<Num> neg = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:474: error: cannot find symbol
+        ConstantIndicator<Num> equal = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java:485: error: cannot find symbol
+        ConstantIndicator<Num> equal = new ConstantIndicator<>(series,
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+31 errors

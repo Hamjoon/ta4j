@@ -1,0 +1,63 @@
+{
+  "index": 266,
+  "sha": "d55dc79c558425bb05c86a9dd578c440abb35f87",
+  "parent": "babe0c371d6cbdee931d79f53cf27759eb1ebb22",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      342,
+      366,
+      639,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      650,
+      655,
+      658,
+      665,
+      693,
+      694
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      342,
+      366,
+      640,
+      643,
+      644,
+      645,
+      647,
+      648,
+      650,
+      655,
+      658,
+      665,
+      693,
+      694,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      708,
+      709,
+      710,
+      711,
+      712,
+      890,
+      891,
+      892,
+      893,
+      894,
+      899
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 2ba3ca2ab..15b6935d8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -342,2 +342,2 @@ public final class ElliottWaveAnalysisRunner {\n-                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitCurrentBullishPhase(series,\n-                        windowAnalysis, startIndex, endIndex, phase);\n+                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitCurrentPhaseForWindow(series,\n+                        windowAnalysis, startIndex, endIndex, true, phase);\n@@ -366,2 +366,2 @@ public final class ElliottWaveAnalysisRunner {\n-                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitCurrentBullishPhase(series,\n-                        fallbackAnalysis, fallbackStartIndex, endIndex, phase);\n+                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitCurrentPhaseForWindow(series,\n+                        fallbackAnalysis, fallbackStartIndex, endIndex, true, phase);\n@@ -637,3 +637,4 @@ public final class ElliottWaveAnalysisRunner {\n-    private Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fitCurrentBullishPhase(final BarSeries series,\n-            final ElliottWaveAnalysisResult analysis, final int startIndex, final int endIndex, final int phase) {\n-        if (phase < 1 || phase > 5 || endIndex <= startIndex) {\n+    Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fitCurrentPhaseForWindow(final BarSeries series,\n+            final ElliottWaveAnalysisResult analysis, final int startIndex, final int endIndex, final boolean bullish,\n+            final int phase) {\n+        if (endIndex <= startIndex) {\n@@ -642,7 +643,6 @@ public final class ElliottWaveAnalysisRunner {\n-        final ElliottPhase currentPhase = switch (phase) {\n-        case 2 -> ElliottPhase.WAVE2;\n-        case 3 -> ElliottPhase.WAVE3;\n-        case 4 -> ElliottPhase.WAVE4;\n-        case 5 -> ElliottPhase.WAVE5;\n-        default -> ElliottPhase.WAVE1;\n-        };\n+        final ElliottPhase currentPhase = currentPhase(bullish, phase);\n+        if (currentPhase == null) {\n+            return Optional.empty();\n+        }\n+        final ScenarioType scenarioType = bullish ? ScenarioType.IMPULSE : null;\n+        final Boolean expectedDirection = Boolean.valueOf(bullish);\n@@ -650,2 +650,2 @@ public final class ElliottWaveAnalysisRunner {\n-                .recommendedBaseScenarioForWindow(series, startIndex, endIndex, ScenarioType.IMPULSE, currentPhase,\n-                        phase, Boolean.TRUE, CURRENT_CYCLE_MAX_ANCHOR_DRIFT_BARS);\n+                .recommendedBaseScenarioForWindow(series, startIndex, endIndex, scenarioType, currentPhase, phase,\n+                        expectedDirection, CURRENT_CYCLE_MAX_ANCHOR_DRIFT_BARS);\n@@ -655 +655 @@ public final class ElliottWaveAnalysisRunner {\n-                    assessment.windowFitScore());\n+                    assessment.windowFitScore(), bullish);\n@@ -658,2 +658,2 @@ public final class ElliottWaveAnalysisRunner {\n-                .recommendedBaseScenarioForSpan(startIndex, endIndex, ScenarioType.IMPULSE, currentPhase, phase,\n-                        Boolean.TRUE, CURRENT_CYCLE_MAX_ANCHOR_DRIFT_BARS);\n+                .recommendedBaseScenarioForSpan(startIndex, endIndex, scenarioType, currentPhase, phase,\n+                        expectedDirection, CURRENT_CYCLE_MAX_ANCHOR_DRIFT_BARS);\n@@ -665 +665 @@ public final class ElliottWaveAnalysisRunner {\n-                assessment.compositeScore());\n+                assessment.compositeScore(), bullish);\n@@ -670 +670 @@ public final class ElliottWaveAnalysisRunner {\n-            final double baseFitScore) {\n+            final double baseFitScore, final boolean bullish) {\n@@ -693,3 +693,21 @@ public final class ElliottWaveAnalysisRunner {\n-                fitScore, lowPriceNum(series, startIndex),\n-                bullishCountLabel(currentPhase.isImpulse() ? scenario.waveCount() : 0), structuralInvalidation,\n-                phaseInvalidation));\n+                fitScore, bullish ? lowPriceNum(series, startIndex) : highPriceNum(series, startIndex),\n+                currentCountLabel(bullish, scenario.waveCount()), structuralInvalidation, phaseInvalidation));\n+    }\n+\n+    private static ElliottPhase currentPhase(final boolean bullish, final int phase) {\n+        if (bullish) {\n+            return switch (phase) {\n+            case 1 -> ElliottPhase.WAVE1;\n+            case 2 -> ElliottPhase.WAVE2;\n+            case 3 -> ElliottPhase.WAVE3;\n+            case 4 -> ElliottPhase.WAVE4;\n+            case 5 -> ElliottPhase.WAVE5;\n+            default -> null;\n+            };\n+        }\n+        return switch (phase) {\n+        case 1 -> ElliottPhase.CORRECTIVE_A;\n+        case 2 -> ElliottPhase.CORRECTIVE_B;\n+        case 3 -> ElliottPhase.CORRECTIVE_C;\n+        default -> null;\n+        };\n@@ -870,0 +889,13 @@ public final class ElliottWaveAnalysisRunner {\n+    private static String bearishCountLabel(final int phase) {\n+        return switch (phase) {\n+        case 1 -> \"Bearish A\";\n+        case 2 -> \"Bearish A-B\";\n+        case 3 -> \"Bearish A-B-C\";\n+        default -> \"Bearish\";\n+        };\n+    }\n+\n+    private static String currentCountLabel(final boolean bullish, final int phase) {\n+        return bullish ? bullishCountLabel(phase) : bearishCountLabel(phase);\n+    }\n+"
+}

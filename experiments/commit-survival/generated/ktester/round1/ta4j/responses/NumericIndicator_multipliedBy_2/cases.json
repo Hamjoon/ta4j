@@ -1,0 +1,122 @@
+[
+  {
+    "group": "NumericIndicator.multipliedBy(Number)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "5"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals original delegate value multiplied by 5",
+        "description": "Standard case: multiply a positive integer constant. The returned indicator should produce values = delegate * 5."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals Num.ZERO regardless of delegate values",
+        "description": "Edge case: multiplication by zero should yield zero for any index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-3.2"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals original delegate value multiplied by -3.2",
+        "description": "Negative and non\u2011integer constant: verify that sign and decimal part are handled correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Invalid input: passing null should cause the method (via createConstant) to throw a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.multipliedBy(Number) - additional scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "1"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals the original delegate value (identity multiplication).",
+        "description": "Identity case: multiplying by 1 should return an indicator whose values are exactly the same as the delegate."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-1"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals the negated original delegate value.",
+        "description": "Negation case: multiplying by -1 should invert the sign of every value produced by the delegate."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Long.MAX_VALUE"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals original delegate value multiplied by 9,223,372,036,854,775,807 (Long.MAX_VALUE).",
+        "description": "Large positive integer: verify that the method correctly handles multiplication with the maximum long value without overflow in the underlying Num implementation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "new java.math.BigDecimal(\"0.0000001\")"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals original delegate value multiplied by 0.0000001.",
+        "description": "Small fractional constant using BigDecimal to ensure high\u2011precision handling of tiny multipliers."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "NumericIndicator where each value is Num.NaN (propagation of NaN).",
+        "description": "Special floating\u2011point value NaN: the constant indicator should represent NaN, and multiplication should propagate NaN for every index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "NumericIndicator where each value is Num.POSITIVE_INFINITY (or an overflow representation defined by Num).",
+        "description": "Infinity constant: verify that multiplying by positive infinity yields infinite values according to the Num implementation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "new java.math.BigInteger(\"123456789012345678901234567890\")"
+          }
+        ],
+        "expected": "NumericIndicator where each value equals original delegate value multiplied by the very large BigInteger constant.",
+        "description": "Very large integer via BigInteger to test that the method accepts arbitrary\u2011precision Number subclasses and correctly creates a constant Num."
+      }
+    ]
+  }
+]

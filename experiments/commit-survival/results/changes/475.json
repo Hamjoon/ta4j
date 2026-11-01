@@ -1,0 +1,20 @@
+{
+  "index": 475,
+  "sha": "6e33cc894b138f0bf7f20cbefb7e82e75b72b9c9",
+  "parent": "558a2efb44ebc2706db073b70d0af4f17107a21a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java": [
+      32
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java": [
+      100
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java": [
+      31
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java\nindex 05a443e8d..5f9ef3abd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java\n@@ -88,0 +89,14 @@ public class WildersMAIndicator extends RecursiveCachedIndicator<Num> {\n+    /**\n+     * The Wilder's MA recursion seeds at the first retained bar (see\n+     * {@link #calculate(int)}), so after a head advance every cached value embeds\n+     * the pre-advance chain. Discard the whole cache so the retained head\n+     * re-anchors the recurrence from the first retained bar instead of serving\n+     * stale values.\n+     *\n+     * @return {@code true}\n+     */\n+    @Override\n+    protected boolean requiresFullCacheInvalidationAfterHeadAdvance() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\nindex 850fd8c9f..25d42ed61 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\n@@ -31,2 +31 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n-        // TODO: check if up series is equal to low series\n-        super(up, low);\n+        super(up.getBarSeries(), up, low);"
+}

@@ -1,0 +1,29 @@
+{
+  "index": 267,
+  "sha": "f2d105ee95fcd0e2cc0ed723bf02669f323c0945",
+  "parent": "d55dc79c558425bb05c86a9dd578c440abb35f87",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      734,
+      735,
+      739,
+      755,
+      772
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      734,
+      735,
+      737,
+      738,
+      739,
+      740,
+      741,
+      745,
+      761,
+      779
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 15b6935d8..db4e20e7f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -734,2 +734,8 @@ public final class ElliottWaveAnalysisRunner {\n-        if (scenario == null || scenario.swings().isEmpty() || !scenario.currentPhase().isImpulse()\n-                || scenario.type() != ScenarioType.IMPULSE || !scenario.hasKnownDirection() || !scenario.isBullish()) {\n+        if (scenario == null || scenario.swings().isEmpty() || !scenario.hasKnownDirection()) {\n+            return scenario;\n+        }\n+        final boolean normalizeBullishImpulse = scenario.isBullish() && scenario.currentPhase().isImpulse()\n+                && scenario.type() == ScenarioType.IMPULSE;\n+        final boolean normalizeBearishCorrective = !scenario.isBullish() && scenario.type().isCorrective()\n+                && scenario.currentPhase().isCorrective();\n+        if (!normalizeBullishImpulse && !normalizeBearishCorrective) {\n@@ -739 +745 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<ElliottSwing> normalizedSwings = normalizeBullishImpulseSwings(series, scenario.swings());\n+        final List<ElliottSwing> normalizedSwings = normalizeAlternatingWindowSwings(series, scenario.swings());\n@@ -755 +761 @@ public final class ElliottWaveAnalysisRunner {\n-                .bullishDirection(true);\n+                .bullishDirection(scenario.isBullish());\n@@ -759 +765,2 @@ public final class ElliottWaveAnalysisRunner {\n-    private List<ElliottSwing> normalizeBullishImpulseSwings(final BarSeries series, final List<ElliottSwing> swings) {\n+    private List<ElliottSwing> normalizeAlternatingWindowSwings(final BarSeries series,\n+            final List<ElliottSwing> swings) {\n@@ -772 +779 @@ public final class ElliottWaveAnalysisRunner {\n-        highPivots[0] = false;\n+        highPivots[0] = !firstSwing.isRising();"
+}

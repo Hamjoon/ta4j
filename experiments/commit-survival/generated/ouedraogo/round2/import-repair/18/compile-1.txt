@@ -1,0 +1,81 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:18: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:65: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+                new BaseBar(Duration.ofDays(1), now.minusDays(4), n(10), n(12), n(9), n(11), n(1000)),
+                ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:66: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+                new BaseBar(Duration.ofDays(1), now.minusDays(3), n(11), n(13), n(10), n(12), n(1100)),
+                ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:67: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+                new BaseBar(Duration.ofDays(1), now.minusDays(2), n(12), n(14), n(11), n(13), n(1200)),
+                ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:68: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+                new BaseBar(Duration.ofDays(1), now.minusDays(1), n(13), n(15), n(12), n(14), n(1300))
+                ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:281: error: incompatible types: Indicator<Num> cannot be converted to NumericIndicator
+        NumericIndicator prev = close.previous();
+                                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:298: error: cannot find symbol
+        Rule rule = low.crossedOver(high);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:301: error: cannot find symbol
+        Rule opposite = high.crossedOver(low);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:308: error: cannot find symbol
+        Rule rule = indicator.crossedUnder(10); // 7 crosses under 10 at first bar
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:317: error: cannot find symbol
+        Rule greater = a.isGreaterThan(b);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:318: error: cannot find symbol
+        Rule less = b.isLessThan(a);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:324: error: cannot find symbol
+        Rule greaterNum = a.isGreaterThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:325: error: cannot find symbol
+        Rule lessNum = b.isLessThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+13 errors

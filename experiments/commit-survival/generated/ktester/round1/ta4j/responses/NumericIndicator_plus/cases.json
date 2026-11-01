@@ -1,0 +1,57 @@
+[
+  {
+    "group": "NumericIndicator.plus(Indicator<Num>)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) returns 8 for any index i (3 + 5)",
+        "description": "Add a constant indicator (value 5) to a NumericIndicator wrapping a constant 3. The result should be a new NumericIndicator that yields the sum (8) for all indices."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "same instance (numericIndicator)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) returns 6 for any index i (3 + 3)",
+        "description": "Add the NumericIndicator to itself. The sum operation should double the original values, producing 6 for each index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null indicator should result in a NullPointerException, as the sum operation cannot be performed with a null operand."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "PreviousValueIndicator(wrapped ConstantIndicator(2))"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(0) returns 5 (3 + 2) and getValue(1) returns 5 (3 + 2)",
+        "description": "Add a PreviousValueIndicator that always returns 2 to a NumericIndicator wrapping constant 3. The resulting indicator should correctly sum the two underlying values for each index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator wrapping an indicator that throws IndexOutOfBoundsException for index < 0"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException when getValue is called with a negative index",
+        "description": "Ensure that exceptions from the 'other' indicator are propagated through the summed NumericIndicator. Calling getValue with a negative index should trigger the same exception."
+      }
+    ]
+  }
+]

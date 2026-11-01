@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-29T16:39:56.631733+00:00",
+  "blocks": [
+    {
+      "class_name": "org.ta4j.core.indicators.numeric.NumericIndicator",
+      "ordered_types": [
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.Rule",
+        "org.ta4j.core.indicators.averages.EMAIndicator",
+        "org.ta4j.core.indicators.averages.SMAIndicator",
+        "org.ta4j.core.indicators.helpers.ClosePriceIndicator",
+        "org.ta4j.core.indicators.helpers.ConstantIndicator",
+        "org.ta4j.core.indicators.helpers.HighestValueIndicator",
+        "org.ta4j.core.indicators.helpers.LowestValueIndicator",
+        "org.ta4j.core.indicators.helpers.PreviousValueIndicator",
+        "org.ta4j.core.indicators.helpers.VolumeIndicator",
+        "org.ta4j.core.indicators.statistics.StandardDeviationIndicator",
+        "org.ta4j.core.rules.CrossedDownIndicatorRule",
+        "org.ta4j.core.rules.CrossedUpIndicatorRule",
+        "org.ta4j.core.rules.OverIndicatorRule",
+        "org.ta4j.core.rules.UnderIndicatorRule"
+      ],
+      "included": [
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.Rule",
+        "org.ta4j.core.indicators.averages.EMAIndicator",
+        "org.ta4j.core.indicators.averages.SMAIndicator",
+        "org.ta4j.core.indicators.helpers.ClosePriceIndicator",
+        "org.ta4j.core.indicators.helpers.ConstantIndicator",
+        "org.ta4j.core.indicators.helpers.HighestValueIndicator",
+        "org.ta4j.core.indicators.helpers.LowestValueIndicator",
+        "org.ta4j.core.indicators.helpers.PreviousValueIndicator",
+        "org.ta4j.core.indicators.helpers.VolumeIndicator",
+        "org.ta4j.core.indicators.statistics.StandardDeviationIndicator",
+        "org.ta4j.core.rules.CrossedDownIndicatorRule",
+        "org.ta4j.core.rules.CrossedUpIndicatorRule"
+      ],
+      "omitted": [
+        "org.ta4j.core.rules.OverIndicatorRule",
+        "org.ta4j.core.rules.UnderIndicatorRule"
+      ],
+      "reasons": {
+        "org.ta4j.core.Indicator": "superclass/interface chain",
+        "org.ta4j.core.num.Num": "superclass/interface chain",
+        "org.ta4j.core.BarSeries": "method",
+        "org.ta4j.core.Rule": "method",
+        "org.ta4j.core.indicators.averages.EMAIndicator": "import",
+        "org.ta4j.core.indicators.averages.SMAIndicator": "import",
+        "org.ta4j.core.indicators.helpers.ClosePriceIndicator": "import",
+        "org.ta4j.core.indicators.helpers.ConstantIndicator": "import",
+        "org.ta4j.core.indicators.helpers.HighestValueIndicator": "import",
+        "org.ta4j.core.indicators.helpers.LowestValueIndicator": "import",
+        "org.ta4j.core.indicators.helpers.PreviousValueIndicator": "import",
+        "org.ta4j.core.indicators.helpers.VolumeIndicator": "import",
+        "org.ta4j.core.indicators.statistics.StandardDeviationIndicator": "import",
+        "org.ta4j.core.rules.CrossedDownIndicatorRule": "import",
+        "org.ta4j.core.rules.CrossedUpIndicatorRule": "import",
+        "org.ta4j.core.rules.OverIndicatorRule": "import",
+        "org.ta4j.core.rules.UnderIndicatorRule": "import"
+      },
+      "types": 15,
+      "lines": 195,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.Position",
+      "ordered_types": [
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.Trade",
+        "org.ta4j.core.Position.ValidatedStartingPosition",
+        "org.ta4j.core.Position.ValidatedClosedPosition",
+        "org.ta4j.core.Position.ValidatedOpenPosition",
+        "org.ta4j.core.ExecutionSide",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.analysis.cost.ZeroCostModel"
+      ],
+      "included": [
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.Trade",
+        "org.ta4j.core.Position.ValidatedStartingPosition",
+        "org.ta4j.core.Position.ValidatedClosedPosition",
+        "org.ta4j.core.Position.ValidatedOpenPosition",
+        "org.ta4j.core.ExecutionSide",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.analysis.cost.ZeroCostModel"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.Trade.TradeType": "constructor",
+        "org.ta4j.core.analysis.cost.CostModel": "constructor",
+        "org.ta4j.core.Trade": "constructor",
+        "org.ta4j.core.Position.ValidatedStartingPosition": "constructor",
+        "org.ta4j.core.Position.ValidatedClosedPosition": "constructor",
+        "org.ta4j.core.Position.ValidatedOpenPosition": "constructor",
+        "org.ta4j.core.ExecutionSide": "method",
+        "org.ta4j.core.num.Num": "method",
+        "org.ta4j.core.BarSeries": "method",
+        "org.ta4j.core.analysis.cost.ZeroCostModel": "import"
+      },
+      "types": 10,
+      "lines": 151,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.backtest.BarSeriesManager",
+      "ordered_types": [
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.backtest.TradeExecutionModel",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory",
+        "org.ta4j.core.Strategy",
+        "org.ta4j.core.TradingRecord",
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.backtest.PositionSizer",
+        "org.ta4j.core.walkforward.WalkForwardConfig",
+        "org.ta4j.core.backtest.StrategyWalkForwardExecutionResult",
+        "org.ta4j.core.backtest.PositionSizer.Context",
+        "org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget",
+        "org.ta4j.core.BaseBarSeriesBuilder",
+        "org.ta4j.core.BaseTradingRecord",
+        "org.ta4j.core.analysis.cost.ZeroCostModel",
+        "org.ta4j.core.reports.TradingStatementGenerator",
+        "org.ta4j.core.walkforward.AnchoredExpandingWalkForwardSplitter"
+      ],
+      "included": [
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.backtest.TradeExecutionModel",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory",
+        "org.ta4j.core.Strategy",
+        "org.ta4j.core.TradingRecord",
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.backtest.PositionSizer",
+        "org.ta4j.core.walkforward.WalkForwardConfig",
+        "org.ta4j.core.backtest.StrategyWalkForwardExecutionResult",
+        "org.ta4j.core.backtest.PositionSizer.Context",
+        "org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget",
+        "org.ta4j.core.BaseBarSeriesBuilder",
+        "org.ta4j.core.BaseTradingRecord"
+      ],
+      "omitted": [
+        "org.ta4j.core.analysis.cost.ZeroCostModel",
+        "org.ta4j.core.reports.TradingStatementGenerator",
+        "org.ta4j.core.walkforward.AnchoredExpandingWalkForwardSplitter"
+      ],
+      "reasons": {
+        "org.ta4j.core.BarSeries": "constructor",
+        "org.ta4j.core.backtest.TradeExecutionModel": "constructor",
+        "org.ta4j.core.analysis.cost.CostModel": "constructor",
+        "org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory": "constructor",
+        "org.ta4j.core.Strategy": "method",
+        "org.ta4j.core.TradingRecord": "method",
+        "org.ta4j.core.Trade.TradeType": "method",
+        "org.ta4j.core.num.Num": "method",
+        "org.ta4j.core.backtest.PositionSizer": "method",
+        "org.ta4j.core.walkforward.WalkForwardConfig": "method",
+        "org.ta4j.core.backtest.StrategyWalkForwardExecutionResult": "method",
+        "org.ta4j.core.backtest.PositionSizer.Context": "method",
+        "org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget": "method",
+        "org.ta4j.core.BaseBarSeriesBuilder": "import",
+        "org.ta4j.core.BaseTradingRecord": "import",
+        "org.ta4j.core.analysis.cost.ZeroCostModel": "import",
+        "org.ta4j.core.reports.TradingStatementGenerator": "import",
+        "org.ta4j.core.walkforward.AnchoredExpandingWalkForwardSplitter": "import"
+      },
+      "types": 15,
+      "lines": 285,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.analysis.CashFlow",
+      "ordered_types": [
+        "org.ta4j.core.analysis.PerformanceIndicator",
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.TradingRecord",
+        "org.ta4j.core.analysis.EquityCurveMode",
+        "org.ta4j.core.analysis.OpenPositionHandling",
+        "org.ta4j.core.Position",
+        "org.ta4j.core.BaseBarSeriesBuilder",
+        "org.ta4j.core.BaseTradingRecord",
+        "org.ta4j.core.Trade",
+        "org.ta4j.core.num.NumFactory"
+      ],
+      "included": [
+        "org.ta4j.core.analysis.PerformanceIndicator",
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.TradingRecord",
+        "org.ta4j.core.analysis.EquityCurveMode",
+        "org.ta4j.core.analysis.OpenPositionHandling",
+        "org.ta4j.core.Position",
+        "org.ta4j.core.BaseBarSeriesBuilder",
+        "org.ta4j.core.BaseTradingRecord",
+        "org.ta4j.core.Trade",
+        "org.ta4j.core.num.NumFactory"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.analysis.PerformanceIndicator": "superclass/interface chain",
+        "org.ta4j.core.Indicator": "superclass/interface chain",
+        "org.ta4j.core.num.Num": "superclass/interface chain",
+        "org.ta4j.core.BarSeries": "constructor",
+        "org.ta4j.core.TradingRecord": "constructor",
+        "org.ta4j.core.analysis.EquityCurveMode": "constructor",
+        "org.ta4j.core.analysis.OpenPositionHandling": "constructor",
+        "org.ta4j.core.Position": "constructor",
+        "org.ta4j.core.BaseBarSeriesBuilder": "import",
+        "org.ta4j.core.BaseTradingRecord": "import",
+        "org.ta4j.core.Trade": "import",
+        "org.ta4j.core.num.NumFactory": "import"
+      },
+      "types": 12,
+      "lines": 299,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.indicators.ATRIndicator",
+      "ordered_types": [
+        "org.ta4j.core.indicators.AbstractIndicator",
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.indicators.helpers.TRIndicator",
+        "org.ta4j.core.indicators.ATRIndicator.Config",
+        "org.ta4j.core.indicators.averages.MMAIndicator"
+      ],
+      "included": [
+        "org.ta4j.core.indicators.AbstractIndicator",
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.indicators.helpers.TRIndicator",
+        "org.ta4j.core.indicators.ATRIndicator.Config",
+        "org.ta4j.core.indicators.averages.MMAIndicator"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.indicators.AbstractIndicator": "superclass/interface chain",
+        "org.ta4j.core.Indicator": "superclass/interface chain",
+        "org.ta4j.core.num.Num": "superclass/interface chain",
+        "org.ta4j.core.BarSeries": "constructor",
+        "org.ta4j.core.indicators.helpers.TRIndicator": "constructor",
+        "org.ta4j.core.indicators.ATRIndicator.Config": "constructor",
+        "org.ta4j.core.indicators.averages.MMAIndicator": "field"
+      },
+      "types": 7,
+      "lines": 112,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    }
+  ],
+  "empty_angle_brackets": false,
+  "headers_valid": true
+}

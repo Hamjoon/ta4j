@@ -1,0 +1,133 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:87: error: no suitable constructor found for Trade(TradeType,int,Num)
+                new Trade(TradeType.BUY, 0, series.numOf(100)),
+                ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:88: error: no suitable constructor found for Trade(TradeType,int,Num)
+                new Trade(TradeType.SELL, 2, series.numOf(120)));
+                ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:94: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Position openedPos = new Position(new Trade(TradeType.BUY, 0, series.numOf(100)));
+                                          ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:108: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:109: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade exit = new Trade(TradeType.SELL, 2, series.numOf(120));
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:131: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:132: error: incompatible types: Trade cannot be converted to TradeType
+        Position openedPos = new Position(entry); // no exit => opened
+                                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:136: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openedPos, series.getEndIndex());
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:154: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade e1 = new Trade(TradeType.BUY, 0, series.numOf(100));
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:155: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade x1 = new Trade(TradeType.SELL, 1, series.numOf(110));
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:159: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade e2 = new Trade(TradeType.BUY, 2, series.numOf(120));
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:160: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade x2 = new Trade(TradeType.SELL, 3, series.numOf(130));
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:164: error: incompatible types: Trade cannot be converted to int
+        record.enter(e1);
+                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:165: error: incompatible types: Trade cannot be converted to int
+        record.exit(x1);
+                    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:166: error: incompatible types: Trade cannot be converted to int
+        record.enter(e2);
+                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:167: error: incompatible types: Trade cannot be converted to int
+        record.exit(x2);
+                    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:188: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:189: error: incompatible types: Trade cannot be converted to TradeType
+        Position openedPos = new Position(entry);
+                                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:204: error: no suitable constructor found for Trade(TradeType,int,Num)
+                new Trade(TradeType.BUY, 0, series.numOf(100)),
+                ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:205: error: no suitable constructor found for Trade(TradeType,int,Num)
+                new Trade(TradeType.SELL, 1, series.numOf(110)));
+                ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:225: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:226: error: no suitable constructor found for Trade(TradeType,int,Num)
+        Trade exit = new Trade(TradeType.SELL, 1, series.numOf(110));
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+23 errors

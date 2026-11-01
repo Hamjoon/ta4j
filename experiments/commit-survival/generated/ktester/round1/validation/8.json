@@ -1,0 +1,498 @@
+{
+  "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/classes",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.722,
+    "log": "work/validation/ktester/round1/8/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#shouldDelegateRunToAmountBasedMethod_andReturnItsResult()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullStrategy_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullTradeType_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#barSeriesOneReturnsNull_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegatesToThreeArgOverload(org.ta4j.core.Trade$TradeType,org.ta4j.core.num.Num)",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithZeroAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithPositiveAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithNegativeAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromBarSeriesOne_propagates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromOverload_propagates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#spyVerification_delegationCalledOnce()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyAlwaysEnter_delegates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyNeverEnter_delegates()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/run1"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 2.024,
+      "log": "work/validation/ktester/round1/8/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#shouldDelegateRunToAmountBasedMethod_andReturnItsResult()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullStrategy_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullTradeType_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#barSeriesOneReturnsNull_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegatesToThreeArgOverload(org.ta4j.core.Trade$TradeType,org.ta4j.core.num.Num)",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithZeroAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithPositiveAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithNegativeAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromBarSeriesOne_propagates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromOverload_propagates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#spyVerification_delegationCalledOnce()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyAlwaysEnter_delegates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyNeverEnter_delegates()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/run2"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 2.446,
+      "log": "work/validation/ktester/round1/8/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#shouldDelegateRunToAmountBasedMethod_andReturnItsResult()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullStrategy_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullTradeType_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#barSeriesOneReturnsNull_throwsNPE()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegatesToThreeArgOverload(org.ta4j.core.Trade$TradeType,org.ta4j.core.num.Num)",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithZeroAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithPositiveAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithNegativeAmount()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromBarSeriesOne_propagates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromOverload_propagates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#spyVerification_delegationCalledOnce()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyAlwaysEnter_delegates()",
+        "--select-method",
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyNeverEnter_delegates()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/8/test/run3"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 3.051,
+      "log": "work/validation/ktester/round1/8/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "shouldDelegateRunToAmountBasedMethod_andReturnItsResult",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|shouldDelegateRunToAmountBasedMethod_andReturnItsResult",
+      "body_hash": "c524c5e54546d70ec297a01078137f395a747a6633163b15249d58a4d7006be1",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     strategy,     BUY,     oneAmount ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.shouldDelegateRunToAmountBasedMethod_andReturnItsResult(BarSeriesManager_run_2_Test.java:98) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#shouldDelegateRunToAmountBasedMethod_andReturnItsResult()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "run_nullStrategy_throwsNPE",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|run_nullStrategy_throwsNPE",
+      "body_hash": "3386310fa117f2575786c7c50553bf603dee51384f1e55a7a32e07cc2bf5f879",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.NoInteractionsWanted:  No interactions wanted here: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.run_nullStrategy_throwsNPE(BarSeriesManager_run_2_Test.java:115) But found these interactions on mock 'barSeries': -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:207) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:208) *** For your reference, here is the list of all invocations ([?] - means unverified). 1. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163) 2. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) 3. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) 4. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:207) 5. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:208) ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullStrategy_throwsNPE()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "run_nullTradeType_throwsNPE",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|run_nullTradeType_throwsNPE",
+      "body_hash": "b6300ccd367213b853af4ffb651843eddf4da90d0b88ccebedf3718d7c55a4bf",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.NoInteractionsWanted:  No interactions wanted here: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.run_nullTradeType_throwsNPE(BarSeriesManager_run_2_Test.java:124) But found these interactions on mock 'barSeries': -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:207) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:208) *** For your reference, here is the list of all invocations ([?] - means unverified). 1. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163) 2. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) 3. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) 4. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:207) 5. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:208) ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#run_nullTradeType_throwsNPE()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "managerConstructedWithNullBarSeries_throwsNPE",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|managerConstructedWithNullBarSeries_throwsNPE",
+      "body_hash": "f44f58b138ddb34265c93840474fbeb06f79c92f1666475594adde0e8c883237",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "barSeriesOneReturnsNull_throwsNPE",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|barSeriesOneReturnsNull_throwsNPE",
+      "body_hash": "e7654ec0c9544e04710e62e6b10e79e993e5d194cabb5dc7c66bdf86dd9bbdb2",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "fail",
+      "message": "org.opentest4j.AssertionFailedError: A null amount from barSeries.one() must cause NPE ==> Expected java.lang.NullPointerException to be thrown, but nothing was thrown.",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#barSeriesOneReturnsNull_throwsNPE()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "delegatesToThreeArgOverload",
+      "kind": "parameterized",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|delegatesToThreeArgOverload",
+      "body_hash": "b7c643765ad825f464a3b9074395804f71c3d9c2866499208ecb63e5ab627419",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(strategy, BUY, null); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.delegatesToThreeArgOverload(BarSeriesManager_run_2_Test.java:154) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegatesToThreeArgOverload(org.ta4j.core.Trade$TradeType,org.ta4j.core.num.Num)"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "delegationWithZeroAmount",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|delegationWithZeroAmount",
+      "body_hash": "0fa09143f78e6bedb488a9c7b84bfbb42850f38df4077e5649875c610bf56e0d",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     strategy,     BUY,     amountZero ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.delegationWithZeroAmount(BarSeriesManager_run_2_Test.java:169) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithZeroAmount()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "delegationWithPositiveAmount",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|delegationWithPositiveAmount",
+      "body_hash": "ed375f3cd21165c7c5a80e5a5ff9cdec257492ae2919d26b0e90ddc18e52e1d6",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     strategy,     SELL,     amountPositive ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.delegationWithPositiveAmount(BarSeriesManager_run_2_Test.java:181) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithPositiveAmount()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "delegationWithNegativeAmount",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|delegationWithNegativeAmount",
+      "body_hash": "cce6a3095b63852457b071d3efe46aee855fb571a636834f12abb3ba1f666b05",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     strategy,     BUY,     amountNegative ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.delegationWithNegativeAmount(BarSeriesManager_run_2_Test.java:193) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#delegationWithNegativeAmount()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "exceptionFromBarSeriesOne_propagates",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|exceptionFromBarSeriesOne_propagates",
+      "body_hash": "b10d95d0b29aefe4b7a695a7313a6730a15382ac9fc23324db363864b198c8f5",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.NoInteractionsWanted:  No interactions wanted here: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.exceptionFromBarSeriesOne_propagates(BarSeriesManager_run_2_Test.java:210) But found these interactions on mock 'barSeriesManager': -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.lambda$exceptionFromBarSeriesOne_propagates$0(BarSeriesManager_run_2_Test.java:207) Actually, above is the only interaction with this mock.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromBarSeriesOne_propagates()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "exceptionFromOverload_propagates",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|exceptionFromOverload_propagates",
+      "body_hash": "23ba968b7a5c8e7010784cd3366f8633c3bd9cd818dcc2bd6618c7c55f269d9d",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     strategy,     BUY,     amountOne ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.exceptionFromOverload_propagates(BarSeriesManager_run_2_Test.java:218) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#exceptionFromOverload_propagates()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "spyVerification_delegationCalledOnce",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|spyVerification_delegationCalledOnce",
+      "body_hash": "cde61fdffeff7f68bfeba8ce36cec600b4d98f0d1ee638cb5f0db4844648ef32",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.NoInteractionsWanted:  No interactions wanted here: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.spyVerification_delegationCalledOnce(BarSeriesManager_run_2_Test.java:238) But found this interaction on mock 'barSeries': -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) *** For your reference, here is the list of all invocations ([?] - means unverified). 1. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) 2. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) 3. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:207) 4. [?]-> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:208) 5. -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163) ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#spyVerification_delegationCalledOnce()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "strategyAlwaysEnter_delegates",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|strategyAlwaysEnter_delegates",
+      "body_hash": "669d2e88986d09bfb188f9af6e0488bbc61776ef51932521acd25102bc46c495",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     Mock for Strategy, hashCode: 220040730,     BUY,     amountOne ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.strategyAlwaysEnter_delegates(BarSeriesManager_run_2_Test.java:246) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyAlwaysEnter_delegates()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "strategyNeverEnter_delegates",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|strategyNeverEnter_delegates",
+      "body_hash": "238e74ca6799cd510c55b134a3f8f3039ab788b0832c3e925d4ba67a5641b03c",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.verification.TooManyActualInvocations:  barSeriesManager.run(     Mock for Strategy, hashCode: 1490466745,     SELL,     amountOne ); Wanted 1 time: -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:191) But was 2 times: -> at org.ta4j.core.backtest.BarSeriesManager_run_2_Test.strategyNeverEnter_delegates(BarSeriesManager_run_2_Test.java:258) -> at org.ta4j.core.backtest.BarSeriesManager.run(BarSeriesManager.java:163)  ",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#strategyNeverEnter_delegates()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.778,
+    "log": "work/validation/ktester/round1/8/inventory.tsv"
+  },
+  "input_sha256": "fcd42f8e896b9dd97a59b26afe8ec786e50ab3b316d6cde216e3afb6aebdbbcf"
+}

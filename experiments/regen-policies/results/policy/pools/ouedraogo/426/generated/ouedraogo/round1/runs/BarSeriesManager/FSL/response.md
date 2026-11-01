@@ -1,0 +1,428 @@
+###Test START##
+```java
+package org.ta4j.core.backtest;
+
+import static org.junit.Assert.*;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.IntFunction;
+
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.NumFactory;
+import org.ta4j.core.num.PrecisionNum;
+import org.ta4j.core.rules.Rule;
+import org.ta4j.core.walkforward.WalkForwardConfig;
+
+/**
+ * Comprehensive unit tests for {@link BarSeriesManager}.
+ *
+ * <p>
+ * All tests use only the public API that is visible in the supplied source
+ * snippets. No mocking frameworks are used – concrete objects are instantiated
+ * directly.
+ * </p>
+ */
+public class BarSeriesManagerTest {
+
+    /* --------------------------------------------------------------------- *
+     * Helper implementations
+     * --------------------------------------------------------------------- */
+
+    /** Simple strategy that always wants to operate. */
+    private static class AlwaysOperateStrategy implements Strategy {
+
+        private final TradeType startingType;
+
+        AlwaysOperateStrategy(TradeType startingType) {
+            this.startingType = startingType;
+        }
+
+        @Override
+        public String getName() {
+            return "AlwaysOperate";
+        }
+
+        @Override
+        public Rule getEntryRule() {
+            return null; // not used – we override shouldOperate()
+        }
+
+        @Override
+        public Rule getExitRule() {
+            return null; // not used – we override shouldOperate()
+        }
+
+        @Override
+        public TradeType getStartingType() {
+            return startingType;
+        }
+
+        @Override
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+            // always trigger an operation (enter on first call, then exit, …)
+            return true;
+        }
+
+        // default implementations for the remaining methods are sufficient
+    }
+
+    /** TradeExecutionModel that always uses the provided amount and forces a
+     *  fallback entry target (by returning {@code null} from {@code estimateEntryTarget}). */
+    private static class SimpleExecutionModel implements TradeExecutionModel {
+
+        @Override
+        public void onBar(int index, TradingRecord tradingRecord, BarSeries barSeries) {
+            // nothing to do
+        }
+
+        @Override
+        public ExecutionTarget estimateEntryTarget(int signalIndex, BarSeries barSeries, TradeType tradeType) {
+            // force the manager to use the fallback sizing target
+            return null;
+        }
+
+        @Override
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+            // Very simple logic:
+            // - if there is no open position, open one (enter)
+            // - otherwise close the current position (exit)
+            if (tradingRecord.isClosed() || tradingRecord.getCurrentPosition() == null) {
+                // use the close price of the current bar as the price (if any)
+                Num price = barSeries.isEmpty()
+                        ? barSeries.numFactory().one()
+                        : barSeries.getBar(index).getClosePrice();
+                tradingRecord.enter(index, price, amount);
+            } else {
+                Num price = barSeries.isEmpty()
+                        ? barSeries.numFactory().one()
+                        : barSeries.getBar(index).getClosePrice();
+                tradingRecord.exit(index, price, amount);
+            }
+        }
+    }
+
+    /** A {@link PositionSizer} implementation that returns a fixed amount
+     *  (provided at construction time). */
+    private static PositionSizer fixedSizer(final Num amount) {
+        return context -> amount;
+    }
+
+    /** A {@link PositionSizer} that returns a negative amount – used to
+     *  verify the validation logic. */
+    private static PositionSizer negativeSizer(final Num amount) {
+        return context -> amount; // caller will supply a negative value
+    }
+
+    /** A {@link TradingRecordFactory} that deliberately returns {@code null}
+     *  – used to test the IllegalStateException path. */
+    private static BarSeriesManager.TradingRecordFactory nullReturningFactory() {
+        return (type, start, end, tx, hold) -> null;
+    }
+
+    /** Helper to build a minimal (empty) {@link BarSeries}. */
+    private static BarSeries emptySeries() {
+        // BaseBarSeriesBuilder creates a mutable series; we do not add any bars.
+        return new BaseBarSeriesBuilder()
+                .withName("empty")
+                .build();
+    }
+
+    /** Helper to build a small series containing three bars with deterministic
+     *  close prices (1, 2, 3). */
+    private static BarSeries threeBarSeries() {
+        BarSeries series = new BaseBarSeriesBuilder()
+                .withName("three")
+                .build();
+        // The default BarBuilder of a BaseBarSeries creates a bar with the
+        // supplied close price.  We use the builder directly.
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(1)));
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(2)));
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(3)));
+        return series;
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Tests for constructors and basic getters
+     * --------------------------------------------------------------------- */
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructor_nullBarSeries() {
+        new BarSeriesManager(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructor_nullCostModel() {
+        new BarSeriesManager(emptySeries(), null, new ZeroCostModel(), new SimpleExecutionModel(),
+                BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructor_nullHoldingCostModel() {
+        new BarSeriesManager(emptySeries(), new ZeroCostModel(), null, new SimpleExecutionModel(),
+                BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructor_nullExecutionModel() {
+        new BarSeriesManager(emptySeries(), new ZeroCostModel(), new ZeroCostModel(),
+                null, BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructor_nullFactory() {
+        new BarSeriesManager(emptySeries(), new ZeroCostModel(), new ZeroCostModel(),
+                new SimpleExecutionModel(), null);
+    }
+
+    @Test
+    public void testGetters_andSnapshotSeries() {
+        BarSeries original = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(original);
+
+        // The manager must keep a snapshot – the returned instance must not be
+        // the same reference as the one supplied to the constructor.
+        BarSeries snapshot = manager.getBarSeries();
+        assertNotSame("snapshot must be a different object", original, snapshot);
+        assertEquals("name must be preserved", original.getName(), snapshot.getName());
+        assertEquals("bar count must be preserved", original.getBarCount(), snapshot.getBarCount());
+
+        // Changing the snapshot must NOT affect the manager's internal series.
+        // (We add a bar to the snapshot and verify the manager still sees the
+        // original count.)
+        snapshot.addBar(snapshot.barBuilder().newBar(DecimalNum.valueOf(99)));
+        assertEquals("manager's series must stay unchanged after mutating snapshot",
+                3, manager.getBarSeries().getBarCount());
+    }
+
+    @Test
+    public void testCostModelGetters() {
+        CostModel tx = new ZeroCostModel();
+        CostModel hold = new ZeroCostModel();
+        BarSeriesManager manager = new BarSeriesManager(emptySeries(), tx, hold);
+        assertSame("transaction cost model must be the one supplied", tx, manager.getTransactionCostModel());
+        assertSame("holding cost model must be the one supplied", hold, manager.getHoldingCostModel());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Tests for createDefaultTradingRecord (clamping & null-return handling)
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testCreateDefaultTradingRecord_clampsIndices() {
+        BarSeries series = threeBarSeries(); // indexes 0..2
+        BarSeriesManager manager = new BarSeriesManager(series);
+
+        // start index < begin, end index > end → should be clamped to 0 and 2
+        TradingRecord record = manager.run(
+                new AlwaysOperateStrategy(TradeType.BUY), // strategy (won't be used)
+                TradeType.BUY,
+                series.numFactory().one(),
+                -10, // start
+                100 // end
+        );
+
+        // The underlying record is created by the default factory, which stores the
+        // clamped start/end indices.  BaseTradingRecord exposes them via
+        // getStartIndex() / getEndIndex().
+        assertEquals("start index must be clamped to series begin", Integer.valueOf(series.getBeginIndex()),
+                record.getStartIndex());
+        assertEquals("end index must be clamped to series end", Integer.valueOf(series.getEndIndex()),
+                record.getEndIndex());
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testCreateDefaultTradingRecord_factoryReturnsNull() {
+        BarSeries series = emptySeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new ZeroCostModel(),
+                new ZeroCostModel(), new SimpleExecutionModel(),
+                nullReturningFactory());
+
+        // This call triggers the factory; the factory returns null and the
+        // manager must throw IllegalStateException.
+        manager.run(new AlwaysOperateStrategy(TradeType.BUY), TradeType.BUY);
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Tests for the various run overloads
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_defaultOverload_usesStartingType() {
+        BarSeries series = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.SELL); // starting type = SELL
+        TradingRecord record = manager.run(strategy); // uses starting type
+
+        // The first operation must be a SELL (i.e. a short position).  BaseTradingRecord
+        // stores the starting type, so we can check it directly.
+        assertEquals("starting type must be the one defined by the strategy",
+                TradeType.SELL, record.getStartingType());
+    }
+
+    @Test
+    public void testRun_withExplicitAmount() {
+        BarSeries series = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        Num amount = DecimalNum.valueOf(5);
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount);
+
+        // After three bars the record must contain exactly one closed position
+        // (enter on bar 0, exit on bar 1, then a second open on bar 2 that stays
+        // open because the series ends).  We therefore expect two trades.
+        assertEquals("exact number of trades recorded", 2, record.getTrades().size());
+        assertEquals("amount of first trade must match the supplied amount",
+                amount, record.getTrades().get(0).getAmount());
+    }
+
+    @Test
+    public void testRun_withPositionSizer_fixedAmount() {
+        BarSeries series = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        Num fixedAmount = DecimalNum.valueOf(7);
+        PositionSizer sizer = fixedSizer(fixedAmount);
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        TradingRecord record = manager.run(strategy, TradeType.BUY, sizer);
+
+        // The sizer supplies a constant amount; verify that the first trade uses it.
+        assertFalse("record must contain at least one trade", record.getTrades().isEmpty());
+        assertEquals("trade amount must be the fixed amount supplied by the sizer",
+                fixedAmount, record.getTrades().get(0).getAmount());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testRun_withPositionSizer_negativeAmount_throws() {
+        BarSeries series = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        Num negative = DecimalNum.valueOf(-3);
+        PositionSizer sizer = negativeSizer(negative);
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        // The run should fail when the manager validates the amount returned by
+        // the sizer.
+        manager.run(strategy, TradeType.BUY, sizer);
+    }
+
+    @Test
+    public void testRun_withSuppliedTradingRecord_mutatesIt() {
+        BarSeries series = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        // Create a custom trading record (empty) that we will pass in.
+        TradingRecord customRecord = new BaseTradingRecord(TradeType.BUY);
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        manager.run(strategy, customRecord, DecimalNum.valueOf(2));
+
+        // The supplied record must have been populated.
+        assertFalse("custom record must have been mutated", customRecord.getTrades().isEmpty());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Tests for amount validation (private helper exercised via public API)
+     * --------------------------------------------------------------------- */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAmountValidation_nanAmount_throws() {
+        BarSeries series = emptySeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        // PositionSizer that returns NaN (DecimalNum.NaN is not public; we use
+        // a value that the manager treats as NaN via the isNaN() check)
+        PositionSizer nanSizer = context -> DecimalNum.valueOf(Double.NaN);
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        manager.run(strategy, TradeType.BUY, nanSizer);
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Tests for fallback entry target (when the execution model cannot estimate)
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testFallbackSizingTarget_usedWhenEstimateIsNull() {
+        BarSeries series = threeBarSeries(); // non‑empty series
+        SimpleExecutionModel execModel = new SimpleExecutionModel(); // estimateEntryTarget returns null
+        BarSeriesManager manager = new BarSeriesManager(series, new ZeroCostModel(),
+                new ZeroCostModel(), execModel);
+
+        // Capture the context passed to the PositionSizer
+        final PositionSizer.Context[] capturedContext = new PositionSizer.Context[1];
+        PositionSizer probingSizer = context -> {
+            capturedContext[0] = context;
+            return DecimalNum.valueOf(1);
+        };
+
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        manager.run(strategy, TradeType.BUY, probingSizer, series.getBeginIndex(), series.getEndIndex());
+
+        // After the run, the context must have been created.  The entry price
+        // inside the context must equal the close price of the bar at the index
+        // used for sizing (fallback target uses the bar's close price).
+        assertNotNull("context must have been captured", capturedContext[0]);
+        int expectedIndex = series.getBeginIndex(); // first bar used for the first operation
+        DecimalNum expectedPrice = (DecimalNum) series.getBar(expectedIndex).getClosePrice();
+        assertEquals("fallback entry price must be the bar close price",
+                expectedPrice, capturedContext[0].entryPrice());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Walk‑forward execution tests (basic sanity – full execution is delegated
+     * to StrategyWalkForwardExecutor which is not re‑implemented here)
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunWalkForward_returnsResult() {
+        BarSeries series = threeBarSeries();
+        BarSeriesManager manager = new BarSeriesManager(series, new SimpleExecutionModel());
+
+        Strategy strategy = new AlwaysOperateStrategy(TradeType.BUY);
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig(series);
+
+        StrategyWalkForwardExecutionResult result = manager.runWalkForward(strategy, config);
+        assertNotNull("walk‑forward execution must return a non‑null result", result);
+        assertSame("result must contain the original series", series, result.barSeries());
+        assertSame("result must contain the original strategy", strategy, result.strategy());
+        assertSame("result must contain the supplied config", config, result.config());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * Additional edge‑case tests for the private helper methods
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testSnapshotSeries_createsIndependentCopy() {
+        BarSeries original = threeBarSeries();
+        BarSeries snapshot = BarSeriesManagerTestHelper.invokeSnapshotSeries(original);
+        assertNotSame("snapshot must be a new instance", original, snapshot);
+        assertEquals("name must be equal", original.getName(), snapshot.getName());
+        assertEquals("bar count must be equal", original.getBarCount(), snapshot.getBarCount());
+    }
+
+    // Helper class to expose the private static snapshotSeries method via reflection.
+    private static class BarSeriesManagerTestHelper {
+        static BarSeries invokeSnapshotSeries(BarSeries series) {
+            try {
+                java.lang.reflect.Method m = BarSeriesManager.class.getDeclaredMethod("snapshotSeries", BarSeries.class);
+                m.setAccessible(true);
+                return (BarSeries) m.invoke(null, series);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+}
+```
+###Test END##

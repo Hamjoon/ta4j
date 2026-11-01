@@ -1,0 +1,34 @@
+{
+  "class_name": "org.ta4j.core.Position",
+  "ordered_types": [
+    "org.ta4j.core.Trade.TradeType",
+    "org.ta4j.core.analysis.cost.CostModel",
+    "org.ta4j.core.Trade",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.analysis.cost.ZeroCostModel"
+  ],
+  "included": [
+    "org.ta4j.core.Trade.TradeType",
+    "org.ta4j.core.analysis.cost.CostModel",
+    "org.ta4j.core.Trade",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.analysis.cost.ZeroCostModel"
+  ],
+  "omitted": [],
+  "reasons": {
+    "org.ta4j.core.Trade.TradeType": "constructor",
+    "org.ta4j.core.analysis.cost.CostModel": "constructor",
+    "org.ta4j.core.Trade": "constructor",
+    "org.ta4j.core.num.Num": "method",
+    "org.ta4j.core.BarSeries": "method",
+    "org.ta4j.core.analysis.cost.ZeroCostModel": "import"
+  },
+  "types": 6,
+  "lines": 145,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

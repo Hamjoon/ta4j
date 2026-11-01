@@ -1,0 +1,5 @@
+{
+  "api document of class org.ta4j.core.analysis.CashFlow": "\n * Allows to follow the money cash flow involved by a list of positions over a\n * bar series.\n ",
+  "return type": "int",
+  "dependent classes": "class `org.ta4j.core.Strategy`:\n\trelated functions:\n\t\tmethod ` boolean shouldOperate(int, TradingRecord)` returns `boolean`, related with `org.ta4j.core.analysis.CashFlow.getUnstableBars()`, api document: \n     * @param index         the bar index\n     * @param tradingRecord the potentially needed trading history\n     * @return true to recommend a trade, false otherwise (no recommendation)\n     ;"
+}

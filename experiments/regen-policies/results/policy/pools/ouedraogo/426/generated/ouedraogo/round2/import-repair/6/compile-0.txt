@@ -1,0 +1,56 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:24: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:52: error: cannot find symbol
+            public Rule getEntryRule() {
+                   ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:63: error: cannot find symbol
+            public Rule getExitRule() {
+                   ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:45: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$1> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+        return new Strategy() {
+                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:54: error: cannot find symbol
+                return new Rule() {
+                           ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:55: error: method does not override or implement a method from a supertype
+                    @Override
+                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:65: error: cannot find symbol
+                return new Rule() {
+                           ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:66: error: method does not override or implement a method from a supertype
+                    @Override
+                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:95: error: cannot find symbol
+            public Rule getEntryRule() {
+                   ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:106: error: cannot find symbol
+            public Rule getExitRule() {
+                   ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:88: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$2> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+        return new Strategy() {
+                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:96: error: cannot find symbol
+                return new Rule() {
+                           ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:97: error: method does not override or implement a method from a supertype
+                    @Override
+                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:107: error: cannot find symbol
+                return new Rule() {
+                           ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:108: error: method does not override or implement a method from a supertype
+                    @Override
+                    ^
+15 errors

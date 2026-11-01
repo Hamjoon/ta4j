@@ -1,0 +1,4 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:85: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+1 error

@@ -1,0 +1,99 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:15: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:48: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new org.ta4j.core.BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:53: error: no suitable method found for addBar(Num,Num,Num,Num)
+            series.addBar(
+                  ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:88: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:98: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:105: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 0,
+                                       ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:105: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 0,
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:107: error: cannot find symbol
+        Trade exit = new org.ta4j.core.BaseTrade(TradeType.SELL, 2,
+                                      ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:107: error: cannot find symbol
+        Trade exit = new org.ta4j.core.BaseTrade(TradeType.SELL, 2,
+                                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:121: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 1,
+                                       ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:121: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 1,
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:139: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 0,
+                                       ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:139: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 0,
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:142: error: cannot find symbol
+        Trade exit = new org.ta4j.core.BaseTrade(TradeType.SELL, 2,
+                                      ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:142: error: cannot find symbol
+        Trade exit = new org.ta4j.core.BaseTrade(TradeType.SELL, 2,
+                                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:174: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 1,
+                                       ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:174: error: cannot find symbol
+        Trade entry = new org.ta4j.core.BaseTrade(TradeType.BUY, 1,
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:179: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openPos, 3);
+                                           ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:239: error: cannot find symbol
+                new Position(new org.ta4j.core.BaseTrade(TradeType.BUY, 0,
+                                              ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:239: error: cannot find symbol
+                new Position(new org.ta4j.core.BaseTrade(TradeType.BUY, 0,
+                                                         ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+20 errors

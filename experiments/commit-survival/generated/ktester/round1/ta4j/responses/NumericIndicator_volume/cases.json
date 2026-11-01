@@ -1,0 +1,112 @@
+[
+  {
+    "group": "NumericIndicator.volume(BarSeries) \u2013 basic functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries with 3 bars, volumes: [100, 200, 300]"
+          }
+        ],
+        "expected": "NumericIndicator whose delegate is a VolumeIndicator wrapping the given BarSeries; getValue(0) == 100, getValue(1) == 200, getValue(2) == 300",
+        "description": "Verify that volume(bs) creates a NumericIndicator that correctly forwards volume values from a non\u2011empty BarSeries."
+      },
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries with 0 bars (empty series)"
+          }
+        ],
+        "expected": "NumericIndicator whose delegate is a VolumeIndicator wrapping the empty BarSeries; calling getValue(any index) throws IndexOutOfBoundsException",
+        "description": "Ensure that the method works with an empty series \u2013 the wrapper is created, but accessing values behaves as the underlying VolumeIndicator (which should throw when the index is out of range)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Confirm that passing a null BarSeries results in a NullPointerException, matching the typical contract of factory methods that require a non\u2011null argument."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.volume(BarSeries) \u2013 single\u2011bar series",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries with 1 bar, volume: [42]"
+          }
+        ],
+        "expected": "NumericIndicator whose delegate is a VolumeIndicator wrapping the given BarSeries; getValue(0) == 42 and getBarSeries() returns the original BarSeries",
+        "description": "Validate that volume(bs) works for the minimal non\u2011empty series and that the returned indicator correctly forwards the sole volume value and preserves the original BarSeries reference."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.volume(BarSeries) \u2013 null bar within series",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries with 2 bars, first bar valid, second bar is null"
+          }
+        ],
+        "expected": "NullPointerException when calling getValue(1) on the returned NumericIndicator",
+        "description": "The VolumeIndicator iterates over the BarSeries to fetch volume values. If a bar object is null, accessing its volume should raise a NullPointerException. This test verifies that the exception propagates through the NumericIndicator wrapper."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.volume(BarSeries) \u2013 bar with null volume",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries with 1 bar whose getVolume() returns null"
+          }
+        ],
+        "expected": "NullPointerException when calling getValue(0) on the returned NumericIndicator",
+        "description": "A VolumeIndicator expects each bar to provide a non\u2011null Num for volume. Supplying a bar with a null volume should cause a NullPointerException when the indicator tries to wrap the value."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.volume(BarSeries) \u2013 delegate null via of()",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries mock that returns null from new VolumeIndicator(bs) (simulated by a subclass whose constructor returns null)"
+          }
+        ],
+        "expected": "IllegalArgumentException (or NullPointerException) thrown by NumericIndicator.of when delegate is null",
+        "description": "If, for any reason, the VolumeIndicator constructor yields a null delegate, the static factory method NumericIndicator.of should reject it and throw an exception. This test forces that situation to confirm defensive programming."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.volume(BarSeries) \u2013 negative bar count (invalid series)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "bs",
+            "value": "BarSeries implementation whose getBarCount() returns -1"
+          }
+        ],
+        "expected": "IllegalArgumentException when constructing VolumeIndicator or when calling getValue",
+        "description": "A well\u2011formed BarSeries must have a non\u2011negative bar count. Supplying a series reporting a negative count should cause the VolumeIndicator (or the NumericIndicator wrapper) to reject the input with an IllegalArgumentException."
+      }
+    ]
+  }
+]

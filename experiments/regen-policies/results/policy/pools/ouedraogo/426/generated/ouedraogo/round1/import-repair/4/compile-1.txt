@@ -1,0 +1,34 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:47: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("test-series");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:49: error: incompatible types: Num is not a functional interface
+        Num n = DecimalNum::valueOf;
+                ^
+    multiple non-overriding abstract methods found in interface Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:53: error: cannot find symbol
+                series.numFactory().numberOf(1), // duration (ignored)
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:63: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:73: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:83: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:93: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+7 errors

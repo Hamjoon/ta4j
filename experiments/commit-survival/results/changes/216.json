@@ -1,0 +1,17 @@
+{
+  "index": 216,
+  "sha": "ea4e4ac65b5142b500e7911d5a5cb05356f883f4",
+  "parent": "62b1a7e594c4cf2f849a3ba37b82dc69e2b80e41",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardExperimentManifest.java": [
+      38
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardExperimentManifest.java": [
+      40,
+      41
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardExperimentManifest.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardExperimentManifest.java\nindex edfde1229..4c0e77cc9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardExperimentManifest.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardExperimentManifest.java\n@@ -5,0 +6 @@ package org.ta4j.core.walkforward;\n+import java.util.Collections;\n@@ -7,0 +9 @@ import java.util.Objects;\n+import java.util.TreeMap;\n@@ -38 +40,2 @@ public record WalkForwardExperimentManifest(String datasetId, String candidateId\n-        metadata = metadata == null ? Map.of() : Map.copyOf(metadata);\n+        metadata = metadata == null || metadata.isEmpty() ? Map.of()\n+                : Collections.unmodifiableMap(new TreeMap<>(metadata));"
+}

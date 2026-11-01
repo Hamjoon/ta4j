@@ -1,0 +1,12 @@
+{
+  "index": 197,
+  "sha": "9a034b8630b861be7a09ff9fe00562abca7b3ff2",
+  "parent": "39194498d1236aafea3ed5ec78124579cad48f66",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/strategy/named/AGENTS.md": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/strategy/named/AGENTS.md": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/strategy/named/AGENTS.md b/ta4j-core/src/main/java/org/ta4j/core/strategy/named/AGENTS.md\nindex 73ababc19..e890256ee 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/strategy/named/AGENTS.md\n+++ b/ta4j-core/src/main/java/org/ta4j/core/strategy/named/AGENTS.md\n@@ -22 +22 @@\n-- Follow the root [`AGENTS.md`](../../../../../../../AGENTS.md) for changelog expectations and the Maven-driven formatting pipeline described there.\n+- Follow the root [`AGENTS.md`](../../../../../../../AGENTS.md) for PR-gated changelog expectations (update changelog only when the user indicates PR readiness or asks for PR creation) and the Maven-driven formatting pipeline described there."
+}

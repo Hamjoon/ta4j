@@ -1,0 +1,64 @@
+{
+  "index": 21,
+  "sha": "632b3077a63c11d356efdea2f2cd813a6fd84ff4",
+  "status": "evaluated",
+  "imported": true,
+  "methods": [
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testDummy",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/21/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#testDummy",
+      "body_hash": "74405f95e36005013deeac7217533ab79abc6558ef16a4ae509547c68564fae3",
+      "source_root": "results/policy/pools/dev-scope/21/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/21/dev/src-test-t",
+      "file_hash": "f78ebb173a5a32f1f8d0e839d12c43c651af653f9ebe314a09c9eec25d1cc2cb",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testDummy"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "5c6623ef3969cfcc4419ebb48cfcc49624f8910e4362a2d8b360f6d51526b15c",
+      "source_tree_hash": "b87f5bc2af5694f8b8be595ea9e06d3d27e7aba2ad4b5c6772c52df251c91045",
+      "resource_tree_hash": "afdea0ab0837fda7a089726007cbf44b19753b6a4317d72885111123200dcb54",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#testDummy",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testDummy"
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testXls",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/21/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#testXls",
+      "body_hash": "1d41af689b465edde2a5307f5b2458281c79a763c1a4b8c80964402256e54a8a",
+      "source_root": "results/policy/pools/dev-scope/21/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/21/dev/src-test-t",
+      "file_hash": "f78ebb173a5a32f1f8d0e839d12c43c651af653f9ebe314a09c9eec25d1cc2cb",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testXls"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "5c6623ef3969cfcc4419ebb48cfcc49624f8910e4362a2d8b360f6d51526b15c",
+      "source_tree_hash": "b87f5bc2af5694f8b8be595ea9e06d3d27e7aba2ad4b5c6772c52df251c91045",
+      "resource_tree_hash": "afdea0ab0837fda7a089726007cbf44b19753b6a4317d72885111123200dcb54",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#testXls",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testXls"
+    }
+  ]
+}

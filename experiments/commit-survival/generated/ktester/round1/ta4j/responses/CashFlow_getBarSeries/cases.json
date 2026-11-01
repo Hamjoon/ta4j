@@ -1,0 +1,27 @@
+[
+  {
+    "group": "CashFlow.getBarSeries",
+    "cases": [
+      {
+        "input": [],
+        "expected": "the same BarSeries instance that was passed to the CashFlow constructor",
+        "description": "Verify that getBarSeries() returns the BarSeries object supplied during construction (normal, non\u2011null series)."
+      },
+      {
+        "input": [],
+        "expected": "null",
+        "description": "Verify that getBarSeries() returns null when the CashFlow instance was constructed with a null BarSeries (edge case)."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow.getBarSeries reference identity",
+    "cases": [
+      {
+        "input": [],
+        "expected": "the same BarSeries instance (identity) that reflects modifications made through the returned reference",
+        "description": "Construct a CashFlow with a non\u2011null BarSeries, retrieve it via getBarSeries(), add a Bar to the returned series, and verify that the original BarSeries size has increased, confirming that getBarSeries returns the actual stored reference."
+      }
+    ]
+  }
+]

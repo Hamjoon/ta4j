@@ -1,0 +1,111 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:161: error: cannot find symbol
+        private final TradeType startTradeType;
+                      ^
+  symbol:   class TradeType
+  location: class OneTimeStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:163: error: cannot find symbol
+        OneTimeStrategy(int entryIdx, int exitIdx, TradeType startTradeType) {
+                                                   ^
+  symbol:   class TradeType
+  location: class OneTimeStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:97: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:106: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:120: error: getEndTime() in SimpleBar cannot implement getEndTime() in Bar
+        @Override public long getEndTime() { return 0L; }
+                              ^
+  return type long is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:121: error: getBeginTime() in SimpleBar cannot implement getBeginTime() in Bar
+        @Override public long getBeginTime() { return 0L; }
+                              ^
+  return type long is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:119: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:120: error: method does not override or implement a method from a supertype
+        @Override public long getEndTime() { return 0L; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:121: error: method does not override or implement a method from a supertype
+        @Override public long getBeginTime() { return 0L; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:263: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(0, 2, TradeType.BUY);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:274: error: cannot find symbol
+        assertEquals(TradeType.BUY, record.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:285: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(1, 3, TradeType.SELL);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:286: error: cannot find symbol
+        TradingRecord record = manager.run(strat, TradeType.SELL);
+                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:292: error: cannot find symbol
+        assertEquals(TradeType.SELL, record.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:303: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(0, 1, TradeType.BUY);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:305: error: cannot find symbol
+        TradingRecord record = manager.run(strat, TradeType.BUY, customAmount);
+                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:325: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(0, 4, TradeType.BUY);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:326: error: cannot find symbol
+        TradingRecord record = manager.run(strat, TradeType.BUY, -10, 100);
+                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:345: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(2, 10, TradeType.BUY); // exit index is beyond series
+                                                    ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:346: error: cannot find symbol
+        TradingRecord record = manager.run(strat, TradeType.BUY, 2, 3); // run only 2‑3
+                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:368: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(0, 0, TradeType.BUY);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:387: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(1, 2, TradeType.BUY);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:388: error: cannot find symbol
+        TradingRecord record = manager.run(strat, TradeType.BUY, 4, 2); // start > finish
+                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:413: error: cannot find symbol
+        Strategy strat = new OneTimeStrategy(0, 1, TradeType.BUY);
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+24 errors

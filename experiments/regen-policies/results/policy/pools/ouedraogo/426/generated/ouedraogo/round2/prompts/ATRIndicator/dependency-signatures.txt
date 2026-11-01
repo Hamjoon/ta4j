@@ -1,0 +1,112 @@
+// public API of org.ta4j.core.indicators.AbstractIndicator
+public abstract class AbstractIndicator<T> implements Indicator<T> {
+  protected AbstractIndicator(BarSeries series);
+  public BarSeries getBarSeries();
+  public String toString();
+}
+
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+  default boolean isStable();
+   int getCountOfUnstableBars();
+   BarSeries getBarSeries();
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+  default String toJson();
+  default ComponentDescriptor toDescriptor();
+  static Indicator<?> fromJson(BarSeries series, String json);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+  static boolean isFinite(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+  default void clear();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.indicators.helpers.TRIndicator
+public class TRIndicator extends CachedIndicator<Num> {
+  public TRIndicator(BarSeries series);
+  public TRIndicator(Indicator<Num> highPriceIndicator, Indicator<Num> lowPriceIndicator, Indicator<Num> closePriceIndicator);
+  protected Num calculate(int index);
+  public int getCountOfUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.ATRIndicator.Config
+private record Config(TRIndicator trueRangeIndicator, int trueRangeUnstableBars, int barCount) {
+}
+
+// public API of org.ta4j.core.indicators.averages.MMAIndicator
+public class MMAIndicator extends AbstractEMAIndicator {
+  public MMAIndicator(Indicator<Num> indicator, int barCount);
+  public int getCountOfUnstableBars();
+}
+

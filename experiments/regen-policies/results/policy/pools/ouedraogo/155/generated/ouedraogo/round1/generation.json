@@ -1,0 +1,1489 @@
+[
+  {
+    "class_name": "NumericIndicator",
+    "technique": "ZSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:39:55.859923+00:00",
+        "latency": 58.569,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "BaseTen",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793291995-QVXVRQPqSXdlHg2krvRI",
+        "usage": {
+          "prompt_tokens": 4437,
+          "completion_tokens": 6113,
+          "total_tokens": 10550,
+          "cost": 0.0035002,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0035002,
+            "upstream_inference_prompt_cost": 0.0004437,
+            "upstream_inference_completions_cost": 0.0030565
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "7424729514cfda0f0e356200c60561c93b5d946a40d60567df9064918c4001f6",
+        "response_sha256": "5c1d4bbe994581bf4881778f2b248996c8455b33194459b396228871235a47fd"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "NumericIndicatorTest",
+      "package": "org.ta4j.core.indicators.numeric",
+      "fqcn": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java"
+  },
+  {
+    "class_name": "NumericIndicator",
+    "technique": "FSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:39:55.860583+00:00",
+        "latency": 85.611,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Near AI",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793291995-NypqlyEx9k79ztKnzGVP",
+        "usage": {
+          "prompt_tokens": 4825,
+          "completion_tokens": 4552,
+          "total_tokens": 9377,
+          "cost": 0.00082683,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 48,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00082683,
+            "upstream_inference_prompt_cost": 0.00014403,
+            "upstream_inference_completions_cost": 0.0006828
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1354,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "76a8ef369f0693279d1fc03c745354a829701fef8f13add8c204fc451984728d",
+        "response_sha256": "f83167113deff1fedccc056a946ac1fc8783eab6876cb85a15f1f2bd53d5aba9"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "NumericIndicatorTest",
+      "package": "org.ta4j.core.indicators.numeric",
+      "fqcn": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/NumericIndicator/FSL/NumericIndicatorTest.java"
+  },
+  {
+    "class_name": "NumericIndicator",
+    "technique": "CoT",
+    "status": "ok",
+    "attempts": 2,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:40:54.442708+00:00",
+        "latency": 410.604,
+        "status": "empty-content",
+        "http_status": 200,
+        "finish_reason": "length",
+        "provider": "Mancer 2",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292054-appEQYWVUVopOe0K18iZ",
+        "usage": {
+          "prompt_tokens": 4518,
+          "completion_tokens": 16384,
+          "total_tokens": 20902,
+          "cost": 0.00432,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00432,
+            "upstream_inference_prompt_cost": 0.00022580068951155743,
+            "upstream_inference_completions_cost": 0.004094199310488443
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18135,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "ae785d86d42f08b2ba3261c6f0a342275cc5e4d246817ecd548a4845aac0c9eb",
+        "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "timestamp": "2026-10-29T16:48:45.078782+00:00",
+        "latency": 55.498,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "BaseTen",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292525-01wXWpGffKxmnQrMoZ8x",
+        "usage": {
+          "prompt_tokens": 4542,
+          "completion_tokens": 7133,
+          "total_tokens": 11675,
+          "cost": 0.0040207,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0040207,
+            "upstream_inference_prompt_cost": 0.0004542,
+            "upstream_inference_completions_cost": 0.0035665
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "ae785d86d42f08b2ba3261c6f0a342275cc5e4d246817ecd548a4845aac0c9eb",
+        "response_sha256": "ab1705f3d03dcf70d5dbd71245dc46aa30c2f77a71073e0942b05fcf55138426"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "NumericIndicatorTest",
+      "package": "org.ta4j.core.indicators.numeric",
+      "fqcn": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/NumericIndicator/CoT/NumericIndicatorTest.java"
+  },
+  {
+    "class_name": "NumericIndicator",
+    "technique": "ToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:41:21.485073+00:00",
+        "latency": 22.994,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292081-DmUEBFtk9z8zHiOfn0xv",
+        "usage": {
+          "prompt_tokens": 4489,
+          "completion_tokens": 4617,
+          "total_tokens": 9106,
+          "cost": 0.00211422,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00211422,
+            "upstream_inference_prompt_cost": 0.00026742,
+            "upstream_inference_completions_cost": 0.0018468
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1307,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "c60f4e21c5e43ee807ae6dd7c932afd6ceab9b6c9c0852216e7f3674dac04aa7",
+        "response_sha256": "b5ccef382f58ad4bca70cc33a40cbdd693162a8c149c30c96d43c66b11ba370b"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "NumericIndicatorTest",
+      "package": "org.ta4j.core.indicators.numeric",
+      "fqcn": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java"
+  },
+  {
+    "class_name": "NumericIndicator",
+    "technique": "GToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:41:44.493334+00:00",
+        "latency": 128.501,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "CoreWeave",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292104-K6FW0ksDX8VO6uNbv7E8",
+        "usage": {
+          "prompt_tokens": 4612,
+          "completion_tokens": 6643,
+          "total_tokens": 11255,
+          "cost": 0.00126767,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00126767,
+            "upstream_inference_prompt_cost": 0.00013836,
+            "upstream_inference_completions_cost": 0.00112931
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2119,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "0d6d38293d56cbe982cf499e666570d0711210f92cf17011bd69865567e4eb06",
+        "response_sha256": "7d7bc7a84cc1ca69455f826bfc73d977e25b253ffc47a89c8f770d22082c05ee"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "NumericIndicatorTest",
+      "package": "org.ta4j.core.indicators.numeric",
+      "fqcn": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java"
+  },
+  {
+    "class_name": "Position",
+    "technique": "ZSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:43:53.010913+00:00",
+        "latency": 110.98,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Venice",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292233-Iod1eL3wvlvfeGFsLveP",
+        "usage": {
+          "prompt_tokens": 4358,
+          "completion_tokens": 5759,
+          "total_tokens": 10117,
+          "cost": 0.00099459,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00099459,
+            "upstream_inference_prompt_cost": 0.00013074,
+            "upstream_inference_completions_cost": 0.00086385
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1871,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "0c1fa01c3473fb5175013d4b3b2190f97da2d3bce3ed72e8ab684bd3f0071aab",
+        "response_sha256": "24ad12a87ff32471531e304bba16c8814c3c03cdd0748d82a96516e3a0d435c9"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "PositionTest",
+      "package": "org.ta4j.core",
+      "fqcn": "org.ta4j.core.PositionTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java"
+  },
+  {
+    "class_name": "Position",
+    "technique": "FSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:45:44.005477+00:00",
+        "latency": 130.07,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Near AI",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292344-SPZMcQ19PP1JcxRAnh9J",
+        "usage": {
+          "prompt_tokens": 4758,
+          "completion_tokens": 4747,
+          "total_tokens": 9505,
+          "cost": 0.00084759,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 480,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00084759,
+            "upstream_inference_prompt_cost": 0.00013554,
+            "upstream_inference_completions_cost": 0.00071205
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2059,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "32c1273fbbf15a02d288d6a1d7bf022a8ab89492ee8d28a89a23cee18bab11fb",
+        "response_sha256": "423b6bbfb305ac4b5617c0a8ac70d4328b3ab4b03c105bc373fcbd4a4637b670"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "PositionTest",
+      "package": "org.ta4j.core",
+      "fqcn": "org.ta4j.core.PositionTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java"
+  },
+  {
+    "class_name": "Position",
+    "technique": "CoT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:47:54.091705+00:00",
+        "latency": 64.659,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "DeepInfra",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292474-mkQQ5XZYiMjFs3ZvKDpD",
+        "usage": {
+          "prompt_tokens": 4449,
+          "completion_tokens": 3358,
+          "total_tokens": 7807,
+          "cost": 0.000735473,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000735473,
+            "upstream_inference_prompt_cost": 0.000164613,
+            "upstream_inference_completions_cost": 0.00057086
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 967,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "64570cbf6e11b503697f79bae80761fd9496fce136fc2d123cbb6d600f1651b5",
+        "response_sha256": "0eaa8f9baac63b40e73ff27f7c94421c4f6ffc2a6adaf5816aec1eedabe72deb"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "PositionTest",
+      "package": "org.ta4j.core",
+      "fqcn": "org.ta4j.core.PositionTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java"
+  },
+  {
+    "class_name": "Position",
+    "technique": "ToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:48:58.765050+00:00",
+        "latency": 17.559,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292538-QooWVjsdT1mUBW6bCHW6",
+        "usage": {
+          "prompt_tokens": 4422,
+          "completion_tokens": 3310,
+          "total_tokens": 7732,
+          "cost": 0.0015874,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0015874,
+            "upstream_inference_prompt_cost": 0.0002634,
+            "upstream_inference_completions_cost": 0.001324
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1435,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "385c048b596bfd8115fe05173d4966d1edc03220c1a945aa7fc1cc3c167b40be",
+        "response_sha256": "b820b21978b966ef3934cbc8f54853d69d7e7367f9784d1b2afb4afbb0010f5a"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "PositionTest",
+      "package": "org.ta4j.core",
+      "fqcn": "org.ta4j.core.PositionTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java"
+  },
+  {
+    "class_name": "Position",
+    "technique": "GToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:49:16.341809+00:00",
+        "latency": 39.548,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Crusoe",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292556-BtmhjRxNd5IsqntbjrIo",
+        "usage": {
+          "prompt_tokens": 4543,
+          "completion_tokens": 7234,
+          "total_tokens": 11777,
+          "cost": 0.00203565,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 48,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00203565,
+            "upstream_inference_prompt_cost": 0.00022715,
+            "upstream_inference_completions_cost": 0.0018085
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1069,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "0babaa40a2edf55bcef2da5fe5556bd95603faca363397a0b9f6a46f592bfb0e",
+        "response_sha256": "618c04b67fc2048fe47ca85ea64eaf44400fa1e9c4efd5abe1e8d9967d40131a"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "PositionTest",
+      "package": "org.ta4j.core",
+      "fqcn": "org.ta4j.core.PositionTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java"
+  },
+  {
+    "class_name": "BarSeriesManager",
+    "technique": "ZSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:49:40.591477+00:00",
+        "latency": 25.547,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292580-od0RYlqKm3Wui7ly3p7H",
+        "usage": {
+          "prompt_tokens": 3669,
+          "completion_tokens": 4258,
+          "total_tokens": 7927,
+          "cost": 0.00192142,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00192142,
+            "upstream_inference_prompt_cost": 0.00021822,
+            "upstream_inference_completions_cost": 0.0017032
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1708,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "6069018bb5ce04bbc2f31b800cdba0b791b8d6877d7f8a1e16383231efe86ed5",
+        "response_sha256": "a054988da669a8942f4fa2fce9679bf162e071e586186162a5649a07d45a101c"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "BarSeriesManagerTest",
+      "package": "org.ta4j.core.backtest",
+      "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java"
+  },
+  {
+    "class_name": "BarSeriesManager",
+    "technique": "FSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:49:55.906459+00:00",
+        "latency": 119.331,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Near AI",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292595-R3I6ZsdXRVw2qrGTrzdN",
+        "usage": {
+          "prompt_tokens": 4067,
+          "completion_tokens": 4061,
+          "total_tokens": 8128,
+          "cost": 0.00072396,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 480,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00072396,
+            "upstream_inference_prompt_cost": 0.00011481,
+            "upstream_inference_completions_cost": 0.00060915
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2271,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "f1848090eba25bda6219095c5bdfc34b451690df9820d55b21f9b8a70e29bad4",
+        "response_sha256": "1633d8a6ad00fefd50c8136b540fc595f89a353b9383ff9b8b6b2a4b18a7b93a"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "BarSeriesManagerTest",
+      "package": "org.ta4j.core.backtest",
+      "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java"
+  },
+  {
+    "class_name": "BarSeriesManager",
+    "technique": "CoT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:50:06.175467+00:00",
+        "latency": 43.779,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "CoreWeave",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292606-PgzLnptjsp0uYPmloZMl",
+        "usage": {
+          "prompt_tokens": 3775,
+          "completion_tokens": 4531,
+          "total_tokens": 8306,
+          "cost": 0.00088352,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00088352,
+            "upstream_inference_prompt_cost": 0.00011325,
+            "upstream_inference_completions_cost": 0.00077027
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1500,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "6ead837abc6c902b7c404a531068765bdf0888dcba610942460b9bd58c64e9ac",
+        "response_sha256": "041f16d9bf885d79a07643d594bfbd6e779575a92b5901401e8f19ddeca3b40d"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "BarSeriesManagerTest",
+      "package": "org.ta4j.core.backtest",
+      "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java"
+  },
+  {
+    "class_name": "BarSeriesManager",
+    "technique": "ToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:50:49.964415+00:00",
+        "latency": 29.345,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292649-mePU5EV60vFuRJ41cHuV",
+        "usage": {
+          "prompt_tokens": 3731,
+          "completion_tokens": 5967,
+          "total_tokens": 9698,
+          "cost": 0.00260874,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00260874,
+            "upstream_inference_prompt_cost": 0.00022194,
+            "upstream_inference_completions_cost": 0.0023868
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1503,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "a56a6484bb039e5cd606dc425ef05ab31e5a2e26ced962d8465047e321b1fb92",
+        "response_sha256": "af6ae653891172a1e486697e412e27254d5c164ab0b307d48983f6cd1ddaff57"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "BarSeriesManagerTest",
+      "package": "org.ta4j.core.backtest",
+      "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java"
+  },
+  {
+    "class_name": "BarSeriesManager",
+    "technique": "GToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:51:19.322505+00:00",
+        "latency": 71.965,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "DekaLLM",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292679-UPTk4IABTlPTEJKLre9P",
+        "usage": {
+          "prompt_tokens": 3856,
+          "completion_tokens": 4096,
+          "total_tokens": 7952,
+          "cost": 0.00085296,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00085296,
+            "upstream_inference_prompt_cost": 0.00011568,
+            "upstream_inference_completions_cost": 0.00073728
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1281,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "0960a09aa1feb3526ccaabed1bec91c78f33bb359a6aa7c905ec9d06208e2482",
+        "response_sha256": "a80dd061edc980c5d986e7cb846cc92b3fa25ac3c2d9c75306c62d76b002be48"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "BarSeriesManagerTest",
+      "package": "org.ta4j.core.backtest",
+      "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java"
+  },
+  {
+    "class_name": "CashFlow",
+    "technique": "ZSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:51:55.249521+00:00",
+        "latency": 32.881,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "CoreWeave",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292715-RyfJxsW81x5F9sRLuaXI",
+        "usage": {
+          "prompt_tokens": 3091,
+          "completion_tokens": 3458,
+          "total_tokens": 6549,
+          "cost": 0.00068059,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00068059,
+            "upstream_inference_prompt_cost": 9.273e-05,
+            "upstream_inference_completions_cost": 0.00058786
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1372,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "6d89178952236c0ff5b6a931512b3d91996fba38af5dad9f85cf661876e0ba59",
+        "response_sha256": "c520314898231155189b652d1eb78ff97c7b03a4e2fcbaa78c94d882cc3597d0"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "CashFlowTest",
+      "package": "org.ta4j.core.analysis",
+      "fqcn": "org.ta4j.core.analysis.CashFlowTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java"
+  },
+  {
+    "class_name": "CashFlow",
+    "technique": "FSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:52:28.147701+00:00",
+        "latency": 112.908,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Near AI",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292748-5IAHoKMiux99Mp1jbzA0",
+        "usage": {
+          "prompt_tokens": 3490,
+          "completion_tokens": 5796,
+          "total_tokens": 9286,
+          "cost": 0.00097338,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 48,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00097338,
+            "upstream_inference_prompt_cost": 0.00010398,
+            "upstream_inference_completions_cost": 0.0008694
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2354,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "ef3552cdab050b78876439128e3781bf3c5428256255830ce05714710e22b93d",
+        "response_sha256": "31c9328a287cb36ec7156ed74a9f2f8dd7132807d97cc94c8a89c2dd813eceb5"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "CashFlowTest",
+      "package": "org.ta4j.core.analysis",
+      "fqcn": "org.ta4j.core.analysis.CashFlowTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java"
+  },
+  {
+    "class_name": "CashFlow",
+    "technique": "CoT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:52:31.304832+00:00",
+        "latency": 20.061,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Novita",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292751-xF2TUoO0YH48BgPrSJHT",
+        "usage": {
+          "prompt_tokens": 3198,
+          "completion_tokens": 4363,
+          "total_tokens": 7561,
+          "cost": 0.00125065,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00125065,
+            "upstream_inference_prompt_cost": 0.0001599,
+            "upstream_inference_completions_cost": 0.00109075
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 806,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "cf69483d8586b9254a1c39351b23ed35451dda52abb4e27e1bee992848b03a7a",
+        "response_sha256": "11cac022b02c36f8b4721e64599b1b5b2f4d80b224caf25e111bce9abf026be5"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "CashFlowTest",
+      "package": "org.ta4j.core.analysis",
+      "fqcn": "org.ta4j.core.analysis.CashFlowTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/CashFlow/CoT/CashFlowTest.java"
+  },
+  {
+    "class_name": "CashFlow",
+    "technique": "ToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:52:51.380263+00:00",
+        "latency": 34.637,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292771-NCO0xgxXyW5fDIq5Cooj",
+        "usage": {
+          "prompt_tokens": 3154,
+          "completion_tokens": 7160,
+          "total_tokens": 10314,
+          "cost": 0.00305132,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00305132,
+            "upstream_inference_prompt_cost": 0.00018732,
+            "upstream_inference_completions_cost": 0.002864
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1922,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "48673f74d9e5e49f5c44cbcb726de6d59a15ae94f7637cf80f8bbd25b2174ab1",
+        "response_sha256": "f1aab21ffd0ce143c3aea262c08002c4baeaa161b3a3fe06cbfdb48ddda525d5"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "CashFlowTest",
+      "package": "org.ta4j.core.analysis",
+      "fqcn": "org.ta4j.core.analysis.CashFlowTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java"
+  },
+  {
+    "class_name": "CashFlow",
+    "technique": "GToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:53:26.039299+00:00",
+        "latency": 26.184,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Crusoe",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292806-nRf8C79GeUqu24JhtCiL",
+        "usage": {
+          "prompt_tokens": 3277,
+          "completion_tokens": 3979,
+          "total_tokens": 7256,
+          "cost": 0.0011586,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 48,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0011586,
+            "upstream_inference_prompt_cost": 0.00016385,
+            "upstream_inference_completions_cost": 0.00099475
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 943,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "dbf44607bc47e7bcf83affe5c4e8f7b34981b0a54c0b1c802a09a0331e2f75ac",
+        "response_sha256": "2fd8707299e779ba60cc7baf46202f6a50a719536e89f5bdac4ee2c7a335a9a4"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "CashFlowTest",
+      "package": "org.ta4j.core.analysis",
+      "fqcn": "org.ta4j.core.analysis.CashFlowTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java"
+  },
+  {
+    "class_name": "ATRIndicator",
+    "technique": "ZSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:53:52.242669+00:00",
+        "latency": 11.217,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Parasail",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292832-aLSViai4878jT2T3ObGZ",
+        "usage": {
+          "prompt_tokens": 1590,
+          "completion_tokens": 3121,
+          "total_tokens": 4711,
+          "cost": 0.00249687,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00249687,
+            "upstream_inference_prompt_cost": 0.00015612,
+            "upstream_inference_completions_cost": 0.00234075
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1340,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "7bd7da9089ba8a97201931604c42482530ed8d9e4da0aaa075016531dd6ae6ba",
+        "response_sha256": "1b02a27a555db649388af849439ef55ed21e9c2f0bd4a8062a45c0b4cdfcbe26"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "ATRIndicatorTest",
+      "package": "org.ta4j.core.indicators",
+      "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java"
+  },
+  {
+    "class_name": "ATRIndicator",
+    "technique": "FSL",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:54:03.475510+00:00",
+        "latency": 79.272,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Near AI",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292843-iVtRk8nq5TmAMyFHFkP2",
+        "usage": {
+          "prompt_tokens": 1989,
+          "completion_tokens": 3479,
+          "total_tokens": 5468,
+          "cost": 0.0005808,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 48,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0005808,
+            "upstream_inference_prompt_cost": 5.895e-05,
+            "upstream_inference_completions_cost": 0.00052185
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1588,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "e025b1e6f01e63acabdc5c956b19b2ffbe8f62f3d0d17ac6e3e4272239746334",
+        "response_sha256": "0226e7eb9017a24be0891325c7bee0aab4089c50cd81c3de7be809b6c1541321"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "ATRIndicatorTest",
+      "package": "org.ta4j.core.indicators",
+      "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java"
+  },
+  {
+    "class_name": "ATRIndicator",
+    "technique": "CoT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:54:21.077522+00:00",
+        "latency": 56.657,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Near AI",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292861-6OnEnVukgMeHWObvauy8",
+        "usage": {
+          "prompt_tokens": 1695,
+          "completion_tokens": 2849,
+          "total_tokens": 4544,
+          "cost": 0.00047748,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 48,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00047748,
+            "upstream_inference_prompt_cost": 5.013e-05,
+            "upstream_inference_completions_cost": 0.00042735
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1064,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "a6fe076d4d1091eba494a184466bc2c494fc27a65a280cb7d738f7a5f716cf5a",
+        "response_sha256": "3f5a0ba5f4cf3d5ba25e231022b2875b8dc8ee8ac9efc4b913de28aa2d52ef75"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "ATRIndicatorTest",
+      "package": "org.ta4j.core.indicators",
+      "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java"
+  },
+  {
+    "class_name": "ATRIndicator",
+    "technique": "ToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:55:17.752601+00:00",
+        "latency": 15.282,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292917-nsiNZWWpRaiLexjaGPgu",
+        "usage": {
+          "prompt_tokens": 1653,
+          "completion_tokens": 3115,
+          "total_tokens": 4768,
+          "cost": 0.00134326,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00134326,
+            "upstream_inference_prompt_cost": 9.726e-05,
+            "upstream_inference_completions_cost": 0.001246
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1497,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "a35d23b82bc4f757568ddf66f1a6e4a4c8bf5e04f53ff91455cb25d6b3fda7f0",
+        "response_sha256": "05192f222f1cee8236f14542698ca5949055b23eb2948c6e0a95c9ec694e96c9"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "ATRIndicatorTest",
+      "package": "org.ta4j.core.indicators",
+      "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/ATRIndicator/ToT/ATRIndicatorTest.java"
+  },
+  {
+    "class_name": "ATRIndicator",
+    "technique": "GToT",
+    "status": "ok",
+    "attempts": 1,
+    "calls": [
+      {
+        "timestamp": "2026-10-29T16:55:22.763969+00:00",
+        "latency": 17.249,
+        "status": "ok",
+        "http_status": 200,
+        "finish_reason": "stop",
+        "provider": "Sail Research",
+        "model_requested": "openai/gpt-oss-120b",
+        "model_reported": "openai/gpt-oss-120b",
+        "request_id": "gen-1793292922-njCDFdz4mtgHB37g7im4",
+        "usage": {
+          "prompt_tokens": 1776,
+          "completion_tokens": 3370,
+          "total_tokens": 5146,
+          "cost": 0.00145264,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00145264,
+            "upstream_inference_prompt_cost": 0.00010464,
+            "upstream_inference_completions_cost": 0.001348
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 914,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "error_type": null,
+        "prompt_sha256": "3b7b9a40078e548fe4e32e0aac480ba3a13c405368aaa8081574946129c065e3",
+        "response_sha256": "2204b8025733454ccc2aaab15e922a3c6f33dbf931ac6bd193d3a90dd6c6680b"
+      }
+    ],
+    "extraction": {
+      "msr_detected": true,
+      "csr_v2": true,
+      "class_name": "ATRIndicatorTest",
+      "package": "org.ta4j.core.indicators",
+      "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "csr_success": null,
+      "selection": "markers",
+      "marker_pair": true,
+      "braces_balanced": true,
+      "html_detected": false
+    },
+    "file": "generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java"
+  }
+]

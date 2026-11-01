@@ -1,0 +1,414 @@
+{
+  "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar",
+      "-sourcepath",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/ToT",
+      "-d",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/classes",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java"
+    ],
+    "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.872,
+    "log": "work/validation/ouedraogo/round1/13/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/resources:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testSimpleConstructorAndGetters()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testConstructorWithWindowIndices()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketLongPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketShortPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeIgnoresOpenPositions()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeWithClosedPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testEmptySeriesProducesEmptyCashFlow()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testStartIndexGreaterThanEndIndexYieldsNoValues()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testEntryAfterFinalIndexIsIgnored()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testSeriesSnapshotIsolation()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMultiplyRangeDoesNotAffectOutsideWindow()",
+        "--reports-dir",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/run1"
+      ],
+      "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 2.705,
+      "log": "work/validation/ouedraogo/round1/13/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/resources:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testSimpleConstructorAndGetters()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testConstructorWithWindowIndices()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketLongPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketShortPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeIgnoresOpenPositions()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeWithClosedPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testEmptySeriesProducesEmptyCashFlow()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testStartIndexGreaterThanEndIndexYieldsNoValues()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testEntryAfterFinalIndexIsIgnored()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testSeriesSnapshotIsolation()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMultiplyRangeDoesNotAffectOutsideWindow()",
+        "--reports-dir",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/run2"
+      ],
+      "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.761,
+      "log": "work/validation/ouedraogo/round1/13/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-io-2.16.1.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-2.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-core-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/objenesis-3.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/opentest4j-1.3.0.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-4.13.2.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/hamcrest-core-1.3.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.18/slf4j-api-2.0.18.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar:/root/.m2/repository/com/google/errorprone/error_prone_annotations/2.48.0/error_prone_annotations-2.48.0.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/root/.m2/repository/org/assertj/assertj-core/3.27.7/assertj-core-3.27.7.jar:/root/.m2/repository/net/bytebuddy/byte-buddy/1.18.3/byte-buddy-1.18.3.jar:/root/.m2/repository/org/apache/poi/poi/5.5.1/poi-5.5.1.jar:/root/.m2/repository/commons-codec/commons-codec/1.20.0/commons-codec-1.20.0.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/root/.m2/repository/commons-io/commons-io/2.21.0/commons-io-2.21.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.25.4/log4j-api-2.25.4.jar:/root/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/root/.m2/repository/org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar:/root/.m2/repository/org/apache/commons/commons-text/1.13.1/commons-text-1.13.1.jar:/root/.m2/repository/commons-beanutils/commons-beanutils/1.11.0/commons-beanutils-1.11.0.jar:/root/.m2/repository/commons-logging/commons-logging/1.3.5/commons-logging-1.3.5.jar:/root/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-slf4j2-impl/2.25.4/log4j-slf4j2-impl-2.25.4.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-core/2.25.4/log4j-core-2.25.4.jar:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/resources:/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testSimpleConstructorAndGetters()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testConstructorWithWindowIndices()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketLongPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketShortPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeIgnoresOpenPositions()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeWithClosedPosition()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testEmptySeriesProducesEmptyCashFlow()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testStartIndexGreaterThanEndIndexYieldsNoValues()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testEntryAfterFinalIndexIsIgnored()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testSeriesSnapshotIsolation()",
+        "--select-method",
+        "org.ta4j.core.analysis.CashFlowTest#testMultiplyRangeDoesNotAffectOutsideWindow()",
+        "--reports-dir",
+        "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/validation/ouedraogo/round1/13/test/run3"
+      ],
+      "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 2.392,
+      "log": "work/validation/ouedraogo/round1/13/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testSimpleConstructorAndGetters",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testSimpleConstructorAndGetters",
+      "body_hash": "97e8ec72c69ccbe09a94f584faa7122bb55d1d343277c77c6b8470726735414c",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testSimpleConstructorAndGetters()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testConstructorWithWindowIndices",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testConstructorWithWindowIndices",
+      "body_hash": "e4aa896dd68ac3f7b98fedb7a914f6767e3eb430971921ab33a30ed5ffc0fcec",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testConstructorWithWindowIndices()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testMarkToMarketLongPosition",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testMarkToMarketLongPosition",
+      "body_hash": "629f8383ee1ca5b4b5d5bebc6a29179800df50edd725347af15a261455c9faa3",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketLongPosition()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testMarkToMarketShortPosition",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testMarkToMarketShortPosition",
+      "body_hash": "bca55ff8a3691555085bd5d52f2014cc829a8c4c06d34dc0fdcc2c360517c015",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testMarkToMarketShortPosition()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testRealizedModeIgnoresOpenPositions",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testRealizedModeIgnoresOpenPositions",
+      "body_hash": "23b1fccbf0a67dc975ae36a4b6caa6db0dbb7555df98cfcbcc2390393fa07434",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeIgnoresOpenPositions()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testRealizedModeWithClosedPosition",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testRealizedModeWithClosedPosition",
+      "body_hash": "5f439adb44fdffbc907c4ab0238bb32923feb861b92304578816328ff8c1cd21",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testRealizedModeWithClosedPosition()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testEmptySeriesProducesEmptyCashFlow",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testEmptySeriesProducesEmptyCashFlow",
+      "body_hash": "d93a735704d5ee7b639183d7f6c437210da9fc23b8037fc6ca5a7c8ffa90a667",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testEmptySeriesProducesEmptyCashFlow()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testStartIndexGreaterThanEndIndexYieldsNoValues",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testStartIndexGreaterThanEndIndexYieldsNoValues",
+      "body_hash": "0ed93cff68f9868659ae364995ac39ece6fa196d464ae24e9839522f40d88f89",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testStartIndexGreaterThanEndIndexYieldsNoValues()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testEntryAfterFinalIndexIsIgnored",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testEntryAfterFinalIndexIsIgnored",
+      "body_hash": "9e8c6b6ecfb4af3a9d0083698c20ea36237d2a484b808800b8aa26d9e1aba36e",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testEntryAfterFinalIndexIsIgnored()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testSeriesSnapshotIsolation",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testSeriesSnapshotIsolation",
+      "body_hash": "add560589158024af63d40fb99b396ddcc64dde06bb498a21cbfc6f2614e1279",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testSeriesSnapshotIsolation()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "testMultiplyRangeDoesNotAffectOutsideWindow",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|testMultiplyRangeDoesNotAffectOutsideWindow",
+      "body_hash": "2715d412570d86920d4a200144670ca45ac684a546699ccd776d79bbcb102215",
+      "round": "round1",
+      "technique": "ToT",
+      "state": "error",
+      "message": "java.lang.IndexOutOfBoundsException: Size of series: 0 bars, 0 bars removed, index = -1",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#testMultiplyRangeDoesNotAffectOutsideWindow()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.84,
+    "log": "work/validation/ouedraogo/round1/13/inventory.tsv"
+  },
+  "input_sha256": "44607743bbdddff56f97e827c2217602ade5fc64d2a89d96330fca4527ca295b"
+}

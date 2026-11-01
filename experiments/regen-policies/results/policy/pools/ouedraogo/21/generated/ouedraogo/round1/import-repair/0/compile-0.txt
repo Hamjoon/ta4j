@@ -1,0 +1,52 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:52: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("testSeries");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:55: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        Bar bar0 = new BaseBar(
+                   ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:66: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        Bar bar1 = new BaseBar(
+                   ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:77: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        Bar bar2 = new BaseBar(
+                   ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:105: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:105: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:131: error: cannot find symbol
+        TRIndicator tr = atr.getTRIndicator();
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:241: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries singleBarSeries = new BaseBarSeries("single");
+                                    ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java:242: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        Bar onlyBar = new BaseBar(
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+9 errors

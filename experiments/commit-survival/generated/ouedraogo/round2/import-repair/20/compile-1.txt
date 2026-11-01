@@ -1,0 +1,76 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:86: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:92: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:93: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:99: error: cannot find symbol
+        Position p = new Position(TradeType.BUY, ZERO_COST, ZERO_COST);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:100: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:127: error: cannot find symbol
+        assertEquals(TradeType.BUY, created.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:139: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:150: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:182: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:200: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:225: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:243: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:374: error: no suitable method found for addBar(DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        series.addBar(DecimalNum.valueOf(10), DecimalNum.valueOf(10), DecimalNum.valueOf(10),
+              ^
+    method BarSeries.addBar(ZonedDateTime,Number,Number,Number,Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to ZonedDateTime)
+    method BarSeries.addBar(ZonedDateTime,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to ZonedDateTime)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:376: error: no suitable method found for addBar(DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        series.addBar(DecimalNum.valueOf(12), DecimalNum.valueOf(12), DecimalNum.valueOf(12),
+              ^
+    method BarSeries.addBar(ZonedDateTime,Number,Number,Number,Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to ZonedDateTime)
+    method BarSeries.addBar(ZonedDateTime,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to ZonedDateTime)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+14 errors

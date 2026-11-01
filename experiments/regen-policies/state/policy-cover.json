@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "revision": {
+    "coverage_version": 2,
+    "regenerate_developer": false
+  },
+  "config_hash": "643228f7fd8efaf35f3e7e06bd9b6fc5486c19b14dc638395c132c6e3995a249",
+  "started": "2026-10-30T09:19:54.167979+00:00",
+  "pid": 44348,
+  "outputs": [
+    "results/policy/release-reset/coverage-total.json",
+    "results/policy/half-reset/coverage-total.json",
+    "results/policy/half-fill/coverage-total.json"
+  ],
+  "finished": "2026-10-30T09:19:55.856582+00:00"
+}

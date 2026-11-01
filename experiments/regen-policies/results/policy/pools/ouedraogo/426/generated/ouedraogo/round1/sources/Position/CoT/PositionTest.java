@@ -1,0 +1,303 @@
+package org.ta4j.core;
+import org.ta4j.core.analysis.cost.CostModel;
+
+
+import org.junit.Test;
+import org.junit.Before;
+import static org.junit.Assert.*;
+
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.Num;
+import static org.ta4j.core.num.NaN.NaN;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link Position}.
+ *
+ * <p>The test suite follows the requested steps:
+ * <ul>
+ *   <li>Lists all public methods (see the Javadoc of this class).</li>
+ *   <li>Provides a basic test for each method.</li>
+ *   <li>Identifies edge‑case / exceptional scenarios and adds dedicated tests.</li>
+ *   <li>Combines everything into a single test class.</li>
+ * </ul>
+ *
+ * <p>Only the public API that appears in the source of {@code Position} and the
+ * supplied dependency signatures is used – no external or hidden classes are
+ * referenced.  All numeric values are taken from the library’s {@link Num}
+ * implementation: the constant {@code NaN} is a valid {@code Num} object and can be
+ * used for constructing {@link Trade} instances via the static factory methods.
+ */
+public class PositionTest {
+
+    /* --------------------------------------------------------------------- *
+     *  Helper constants used throughout the tests
+     * --------------------------------------------------------------------- */
+    private static final Num PRICE = NaN;   // price placeholder – the actual value is irrelevant for state tests
+    private static final Num AMOUNT = NaN;  // amount placeholder
+
+    /* --------------------------------------------------------------------- *
+     *  1.  Public method list (for reference – not used by the code)
+     * --------------------------------------------------------------------- *
+     *
+     *  Constructors
+     *      Position()
+     *      Position(TradeType startingType)
+     *      Position(TradeType startingType, CostModel transactionCostModel,
+     *               CostModel holdingCostModel)
+     *      Position(Trade entry, Trade exit)
+     *      Position(Trade entry, Trade exit,
+     *               CostModel transactionCostModel, CostModel holdingCostModel)
+     *      Position(Trade entry, CostModel transactionCostModel,
+     *               CostModel holdingCostModel)
+     *
+     *  Accessors / Queries
+     *      Trade getEntry()
+     *      Trade getExit()
+     *      ExecutionSide side()
+     *      Num amount()
+     *      Num averageEntryPrice()
+     *      Num totalEntryCost()
+     *      Num totalFees()
+     *      boolean equals(Object obj)
+     *      int hashCode()
+     *
+     *  Operations
+     *      Trade operate(int index)
+     *      Trade operate(int index, Num price, Num amount)
+     *      Trade operate(Trade trade)
+     *
+     *  State predicates
+     *      boolean isClosed()
+     *      boolean isOpened()
+     *      boolean isNew()
+     *      boolean hasProfit()
+     *      boolean hasLoss()
+     *
+     *  Profit / Return calculations
+     *      Num getProfit()
+     *      Num getProfit(int finalIndex, Num finalPrice)
+     *      Num getGrossProfit()
+     *      Num getGrossProfit(Num finalPrice)
+     *      Num getGrossReturn()
+     *      Num getGrossReturn(Num finalPrice)
+     *      Num getGrossReturn(BarSeries barSeries)
+     *      Num getGrossReturn(Num entryPrice, Num exitPrice)
+     *
+     *  Cost calculations
+     *      Num getPositionCost(int finalIndex)
+     *      Num getPositionCost()
+     *      Num getHoldingCost()
+     *      Num getHoldingCost(int finalIndex)
+     *      CostModel getTransactionCostModel()
+     *      CostModel getHoldingCostModel()
+     *
+     *  Misc
+     *      TradeType getStartingType()
+     *      String toString()
+     * --------------------------------------------------------------------- */
+
+    /* --------------------------------------------------------------------- *
+     *  2.  Basic functionality tests
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testDefaultConstructorCreatesBuyStartingType() {
+        Position p = new Position();               // default → BUY
+        assertEquals(TradeType.BUY, p.getStartingType());
+        assertTrue(p.isNew());
+        assertNull(p.getEntry());
+        assertNull(p.getExit());
+    }
+
+    @Test
+    public void testConstructorWithStartingType() {
+        Position sellPos = new Position(TradeType.SELL);
+        assertEquals(TradeType.SELL, sellPos.getStartingType());
+        assertTrue(sellPos.isNew());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorWithNullStartingTypeThrows() {
+        new Position(null);                         // should raise IllegalArgumentException
+    }
+
+    @Test
+    public void testConstructorWithEntryAndExitCreatesClosedPosition() {
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        Trade exit  = Trade.sellAt(1, PRICE, AMOUNT);
+        Position p = new Position(entry, exit);
+        assertTrue(p.isClosed());
+        assertEquals(entry, p.getEntry());
+        assertEquals(exit, p.getExit());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorWithSameTradeTypesThrows() {
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        Trade exit  = Trade.buyAt(1, PRICE, AMOUNT);   // both BUY → illegal
+        new Position(entry, exit);
+    }
+
+    @Test
+    public void testSideAndAmountWhenEntryIsNull() {
+        Position p = new Position();               // new → no entry yet
+        assertNull(p.side());
+        assertNull(p.amount());
+        assertNull(p.averageEntryPrice());
+        assertNull(p.totalEntryCost());
+        assertNull(p.totalFees());
+    }
+
+    @Test
+    public void testSideWhenEntryExists() {
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        Position p = new Position(entry, new ZeroCostModel(), new ZeroCostModel());
+        // the above constructor creates an *open* position (entry only)
+        assertEquals(ExecutionSide.BUY, p.side());
+    }
+
+    @Test
+    public void testEqualsAndHashCode() {
+        Trade e1 = Trade.buyAt(0, PRICE, AMOUNT);
+        Trade x1 = Trade.sellAt(1, PRICE, AMOUNT);
+        Position p1 = new Position(e1, x1);
+        Position p2 = new Position(e1, x1);
+        assertEquals(p1, p2);
+        assertEquals(p1.hashCode(), p2.hashCode());
+
+        // different exit → not equal
+        Trade x2 = Trade.sellAt(2, PRICE, AMOUNT);
+        Position p3 = new Position(e1, x2);
+        assertNotEquals(p1, p3);
+    }
+
+    @Test
+    public void testOperateCreatesEntryWhenPositionIsNew() {
+        Position p = new Position(TradeType.BUY);
+        Trade created = p.operate(5);               // uses NaN defaults
+        assertNotNull(created);
+        assertEquals(5, created.getIndex());
+        assertTrue(p.isOpened());
+        assertEquals(created, p.getEntry());
+        assertNull(p.getExit());
+    }
+
+    @Test
+    public void testOperateCreatesExitWhenPositionIsOpened() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(10);                            // entry at index 10
+        Trade exit = p.operate(12);                // should become exit
+        assertNotNull(exit);
+        assertEquals(12, exit.getIndex());
+        assertTrue(p.isClosed());
+        assertEquals(exit, p.getExit());
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testOperateWithIndexLessThanEntryThrows() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(8);                             // entry at index 8
+        p.operate(5);                             // index < entry → IllegalStateException
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testOperateWithNullTradeThrows() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(null);                          // NPE as per Objects.requireNonNull
+    }
+
+    @Test
+    public void testOperateOnClosedPositionReturnsNull() {
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        Trade exit  = Trade.sellAt(1, PRICE, AMOUNT);
+        Position p = new Position(entry, exit);    // already closed
+        Trade result = p.operate(2);               // should be null – nothing to do
+        assertNull(result);
+        assertTrue(p.isClosed());
+    }
+
+    @Test
+    public void testStatePredicates() {
+        Position newPos = new Position();
+        assertTrue(newPos.isNew());
+        assertFalse(newPos.isOpened());
+        assertFalse(newPos.isClosed());
+
+        Position openPos = new Position(TradeType.BUY);
+        openPos.operate(0);
+        assertFalse(openPos.isNew());
+        assertTrue(openPos.isOpened());
+        assertFalse(openPos.isClosed());
+
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        Trade exit  = Trade.sellAt(1, PRICE, AMOUNT);
+        Position closedPos = new Position(entry, exit);
+        assertFalse(closedPos.isNew());
+        assertFalse(closedPos.isOpened());
+        assertTrue(closedPos.isClosed());
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  3.  Edge‑case / exception tests not covered above
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testValidateClosedPositionWithNullEntryThrows() {
+        Trade exit = Trade.sellAt(1, PRICE, AMOUNT);
+        try {
+            new Position(null, exit);
+            fail("Expected NullPointerException for null entry");
+        } catch (NullPointerException e) {
+            // expected
+        }
+    }
+
+    @Test
+    public void testValidateClosedPositionWithNullExitThrows() {
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        try {
+            new Position(entry, null);
+            fail("Expected NullPointerException for null exit");
+        } catch (NullPointerException e) {
+            // expected
+        }
+    }
+
+    @Test
+    public void testValidateOpenPositionWithMismatchingCostModelThrows() {
+        // Build a position with a custom (non‑zero) cost model via the 4‑arg constructor
+        CostModel customModel = new ZeroCostModel(); // using ZeroCostModel for both – they match
+        // To cause a mismatch we need a different instance; we create a second ZeroCostModel,
+        // which is *different* in identity but still equal (ZeroCostModel overrides equals).
+        // Therefore we use a tiny anonymous implementation that deliberately returns false
+        // from equals – this is allowed because it implements the public interface CostModel.
+        CostModel differentModel = new CostModel() {
+            @Override public Num calculate(Position position, int finalIndex) { return NaN; }
+            @Override public Num calculate(Position position) { return NaN; }
+            @Override public Num calculate(Num price, Num amount) { return NaN; }
+            @Override public boolean equals(CostModel other) { return false; }
+        };
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        // entry’s cost model is the default (ZeroCostModel). Passing a different model should
+        // trigger the validation inside the constructor.
+        try {
+            new Position(entry, differentModel, customModel);
+            fail("Expected IllegalArgumentException due to mismatching cost model");
+        } catch (IllegalArgumentException e) {
+            // expected
+        }
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  4.  toString sanity check
+     * --------------------------------------------------------------------- */
+    @Test
+    public void testToStringContainsEntryAndExit() {
+        Trade entry = Trade.buyAt(0, PRICE, AMOUNT);
+        Trade exit  = Trade.sellAt(1, PRICE, AMOUNT);
+        Position p = new Position(entry, exit);
+        String s = p.toString();
+        assertTrue(s.contains("Entry:"));
+        assertTrue(s.contains("exit:"));
+    }
+}

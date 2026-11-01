@@ -1,0 +1,687 @@
+{
+  "index": 0,
+  "sha": "897a114c2c74413d05a7a2091efb0fe3611b0036",
+  "group": "ktester",
+  "phase": "control",
+  "status": "evaluated",
+  "input_sha256": "1dc3c1d7b4c0dde7340da1800a1a9fae9a13f65aeeb0c9b371b6ae61e7f52e8a",
+  "runner_sha256": {
+    "AccessorAudit.java": "8c082858b2264ef33b1688dc04692630d2506184a3fc586c1f817d9b0ea9da9a",
+    "DependencyInventory2.java": "366cec31e3bad91f6479a06b2461565ad61bc9f987f001fca21aa0fb8d79fb7c",
+    "MethodSelectors.java": "dce25f26bae1f123086a0f58df2fad6a4b66085e67a5a70a035d3fbe10f80646",
+    "SourceInventory.java": "03d7596d7f53d4e193672ec8fdd24f2cd2d901c3e563ef031c60c33d695e0f5e",
+    "classpath-artifacts.json": "9175ba6dc75e88d8a229d91075ccebcdbe97a9d888b37c922d9f408584d407a1",
+    "java_maven.py": "16c7b387100aed4fcb5232e7d4d27d2257050fce8249b4b65df93b610e1b6381",
+    "java_worker.py": "ebb1fe71b8d9ec0150eab6d0ce4f53aeaa79c220d1391e3719157794db7f7d50",
+    "maven_dependencies.py": "895d95439e2c27937e14c3d78aa954570f5d5ad515de3a5859b0f53c4a3fa8dd",
+    "docker.py": "329e0922d6d0f025778fd5ace37f3f4aac4a0ea13ee4794e1a95b4ee7320cebc",
+    "cache.py": "5a5396703aab5a9060b76e87ce7a459e6307d2849db770bdfc086578997526cc",
+    "environment.py": "687e46bd557642367cab60f4d3338b711af5bb08e5be117adedfcb4d6f9b0b75"
+  },
+  "files": [
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-control/0/ktester/0/classes",
+          "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.587,
+        "log": "work/phase-control/0/ktester/0/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-control/0/ktester/0/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-control/0/ktester/0/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 0.963,
+          "log": "work/phase-control/0/ktester/0/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+          "method": "managerConstructedWithNullBarSeries_throwsNPE",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|managerConstructedWithNullBarSeries_throwsNPE",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-control/0/ktester/1/classes",
+          "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.419,
+        "log": "work/phase-control/0/ktester/1/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-control/0/ktester/1/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenNoExit_thenReturnFinalIndexClampedToMaxIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitAndFinalBeyondMax_thenClampToMaxIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex()",
+            "--select-method",
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenNegativeExitIndex_thenReturnNegativeExit()",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-control/0/ktester/1/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 0.825,
+          "log": "work/phase-control/0/ktester/1/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenNoExit_thenReturnFinalIndexClampedToMaxIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenNoExit_thenReturnFinalIndexClampedToMaxIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenNoExit_thenReturnFinalIndexClampedToMaxIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenExitAndFinalBeyondMax_thenClampToMaxIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitAndFinalBeyondMax_thenClampToMaxIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitAndFinalBeyondMax_thenClampToMaxIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+          "method": "whenNegativeExitIndex_thenReturnNegativeExit",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenNegativeExitIndex_thenReturnNegativeExit",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenNegativeExitIndex_thenReturnNegativeExit()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "compile": {
+        "command": [
+          "javac",
+          "-J-Xmx512m",
+          "-cp",
+          "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+          "-sourcepath",
+          "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+          "-d",
+          "/repo/experiments/commit-survival/work/phase-control/0/ktester/2/classes",
+          "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java"
+        ],
+        "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.47,
+        "log": "work/phase-control/0/ktester/2/javac.txt"
+      },
+      "runs": [
+        {
+          "command": [
+            "java",
+            "-Xmx1g",
+            "-XX:+UseSerialGC",
+            "-cp",
+            "/repo/experiments/commit-survival/work/phase-control/0/ktester/2/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+            "org.junit.platform.console.ConsoleLauncher",
+            "--disable-banner",
+            "--disable-ansi-colors",
+            "--fail-if-no-tests",
+            "--details",
+            "summary",
+            "--select-method",
+            "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()",
+            "--select-method",
+            "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()",
+            "--select-method",
+            "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)",
+            "--select-method",
+            "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()",
+            "--select-method",
+            "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()",
+            "--reports-dir",
+            "/repo/experiments/commit-survival/work/phase-control/0/ktester/2/run1"
+          ],
+          "cwd": "/repo/experiments/commit-survival/work/runtime",
+          "exit_code": 0,
+          "timeout": false,
+          "seconds": 0.825,
+          "log": "work/phase-control/0/ktester/2/run1/console.txt"
+        }
+      ],
+      "methods": [
+        {
+          "class": "org.ta4j.core.Position_getPositionCost_Test",
+          "method": "getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.Position_getPositionCost_Test",
+          "method": "getPositionCost_callsBothCostModelsExactlyOnce",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_callsBothCostModelsExactlyOnce",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.Position_getPositionCost_Test",
+          "method": "standardCalculations",
+          "kind": "parameterized",
+          "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|standardCalculations",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.Position_getPositionCost_Test",
+          "method": "holdingCostModelThrowsIllegalStateException_isPropagated",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|holdingCostModelThrowsIllegalStateException_isPropagated",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        },
+        {
+          "class": "org.ta4j.core.Position_getPositionCost_Test",
+          "method": "transactionCostModelReturnsNull_throwsNullPointerException",
+          "kind": "plain",
+          "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+          "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|transactionCostModelReturnsNull_throwsNullPointerException",
+          "state": "pass",
+          "message": "",
+          "flaky": false,
+          "initial_state": "pass",
+          "selector": [
+            "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()"
+          ],
+          "baseline_states": [
+            "pass"
+          ]
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManager_run_2_Test",
+      "method": "managerConstructedWithNullBarSeries_throwsNPE",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|managerConstructedWithNullBarSeries_throwsNPE",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.backtest.BarSeriesManager_run_2_Test#managerConstructedWithNullBarSeries_throwsNPE()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenNoExit_thenReturnFinalIndexClampedToMaxIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenNoExit_thenReturnFinalIndexClampedToMaxIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenNoExit_thenReturnFinalIndexClampedToMaxIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenExitAndFinalBeyondMax_thenClampToMaxIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitAndFinalBeyondMax_thenClampToMaxIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitAndFinalBeyondMax_thenClampToMaxIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test",
+      "method": "whenNegativeExitIndex_thenReturnNegativeExit",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenNegativeExitIndex_thenReturnNegativeExit",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlow_determineEndIndex_Test#whenNegativeExitIndex_thenReturnNegativeExit()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "getPositionCost_callsBothCostModelsExactlyOnce",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_callsBothCostModelsExactlyOnce",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "standardCalculations",
+      "kind": "parameterized",
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|standardCalculations",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "holdingCostModelThrowsIllegalStateException_isPropagated",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|holdingCostModelThrowsIllegalStateException_isPropagated",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    },
+    {
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "transactionCostModelReturnsNull_throwsNullPointerException",
+      "kind": "plain",
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|transactionCostModelReturnsNull_throwsNullPointerException",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()"
+      ],
+      "baseline_states": [
+        "pass"
+      ]
+    }
+  ],
+  "requested_ids": [
+    "generated/ktester/round1/ta4j/test_classes/BarSeriesManager_run_2_Test.java|org.ta4j.core.backtest.BarSeriesManager_run_2_Test|managerConstructedWithNullBarSeries_throwsNPE",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenNoExit_thenReturnFinalIndexClampedToMaxIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeforeFinalIndex_thenUseExitIndexClampedToMaxIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitAfterFinalIndex_thenIgnoreExitUseFinalIndexClampedToMaxIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitEqualsFinalIndex_thenReturnThatValueClampedToMaxIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeforeMaxIndexAndFinalExceedsMax_thenReturnExitIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitAndFinalBeyondMax_thenClampToMaxIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenExitBeyondMaxButFinalWithinMax_thenReturnFinalIndex",
+    "generated/ktester/round1/ta4j/test_classes/CashFlow_determineEndIndex_Test.java|org.ta4j.core.analysis.CashFlow_determineEndIndex_Test|whenNegativeExitIndex_thenReturnNegativeExit",
+    "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+    "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_callsBothCostModelsExactlyOnce",
+    "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|standardCalculations",
+    "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|holdingCostModelThrowsIllegalStateException_isPropagated",
+    "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|transactionCostModelReturnsNull_throwsNullPointerException"
+  ],
+  "seconds": 5.31
+}

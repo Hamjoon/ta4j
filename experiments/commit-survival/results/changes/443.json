@@ -1,0 +1,186 @@
+{
+  "index": 443,
+  "sha": "fda20b2e53d140403e0e7e273a63b01387cad3c3",
+  "parent": "cbfeb540a1cf07bf14fb7ea9f3345d5af769865e",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      37,
+      49,
+      62,
+      66
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java": [
+      38,
+      51,
+      64,
+      68
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopGainRule.java": [
+      51,
+      64,
+      78,
+      93,
+      105,
+      109,
+      110,
+      114,
+      115,
+      130
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java": [
+      38,
+      51,
+      67,
+      95,
+      107
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityStopGainRule.java": [
+      82,
+      106
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityStopLossRule.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityTrailingStopGainRule.java": [
+      61
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityTrailingStopLossRule.java": [
+      61
+    ],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      634
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      41,
+      53,
+      66,
+      67,
+      70,
+      71,
+      72,
+      73,
+      74,
+      79,
+      80,
+      81,
+      82,
+      84
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java": [
+      42,
+      55,
+      68,
+      69,
+      72,
+      73,
+      74,
+      75,
+      76,
+      81,
+      82,
+      83,
+      84,
+      86
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopGainRule.java": [
+      56,
+      69,
+      82,
+      97,
+      102,
+      103,
+      104,
+      105,
+      106,
+      110,
+      111,
+      119,
+      123,
+      128,
+      129,
+      130,
+      145
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java": [
+      43,
+      56,
+      72,
+      100,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      115,
+      116,
+      117,
+      118,
+      120
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityStopGainRule.java": [
+      79,
+      80,
+      81,
+      89,
+      90,
+      114
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityStopLossRule.java": [
+      63,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      87,
+      88,
+      89,
+      91
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityTrailingStopGainRule.java": [
+      66,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      106,
+      107,
+      108,
+      110
+    ],
+    "src/main/java/org/ta4j/core/rules/VolatilityTrailingStopLossRule.java": [
+      66,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      106,
+      107,
+      108,
+      110
+    ],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      444,
+      445,
+      638,
+      1286,
+      1287,
+      1473,
+      1474
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\nindex 779e6ce7f..89e2ccaf6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n@@ -28,0 +29,4 @@ public class AverageTrueRangeStopGainRule extends BaseVolatilityStopGainRule {\n+    private final Indicator<Num> referencePrice;\n+    private final ATRIndicator atrIndicator;\n+    private final Number atrCoefficient;\n+\n@@ -37 +41 @@ public class AverageTrueRangeStopGainRule extends BaseVolatilityStopGainRule {\n-        this(series, new ClosePriceIndicator(series), atrBarCount, atrCoefficient);\n+        this(new ClosePriceIndicator(series), new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -49 +53 @@ public class AverageTrueRangeStopGainRule extends BaseVolatilityStopGainRule {\n-        super(referencePrice, createStopGainThreshold(series, atrBarCount, atrCoefficient));\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -62 +66,9 @@ public class AverageTrueRangeStopGainRule extends BaseVolatilityStopGainRule {\n-        super(referencePrice, BinaryOperationIndicator.product(requireNonNull(atrIndicator), atrCoefficient));\n+        this(new Config(referencePrice, requireNonNull(atrIndicator), atrCoefficient));\n+    }\n+\n+    private AverageTrueRangeStopGainRule(Config config) {\n+        super(config.referencePrice(),\n+                BinaryOperationIndicator.product(config.atrIndicator(), config.atrCoefficient()));\n+        this.referencePrice = config.referencePrice();\n+        this.atrIndicator = config.atrIndicator();\n+        this.atrCoefficient = config.atrCoefficient();\n@@ -65,2 +77,8 @@ public class AverageTrueRangeStopGainRule extends BaseVolatilityStopGainRule {\n-    private static Indicator<Num> createStopGainThreshold(BarSeries series, int atrBarCount, Number atrCoefficient) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    private record Config(Indicator<Num> referencePrice, ATRIndicator atrIndicator, Number atrCoefficient) {\n+\n+        private Config {\n+            if (atrCoefficient == null || Double.isNaN(atrCoefficient.doubleValue())\n+                    || atrCoefficient.doubleValue() <= 0) {\n+                throw new IllegalArgumentException(\"atrCoefficient must be positive\");\n+            }\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\nindex 368356d07..8e83ab904 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\n@@ -29,0 +30,4 @@ public class AverageTrueRangeStopLossRule extends BaseVolatilityStopLossRule {\n+    private final Indicator<Num> referencePrice;\n+    private final ATRIndicator atrIndicator;\n+    private final Number atrCoefficient;\n+\n@@ -38 +42 @@ public class AverageTrueRangeStopLossRule extends BaseVolatilityStopLossRule {\n-        this(series, new ClosePriceIndicator(series), atrBarCount, atrCoefficient);\n+        this(new ClosePriceIndicator(series), new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -51 +55 @@ public class AverageTrueRangeStopLossRule extends BaseVolatilityStopLossRule {\n-        super(referencePrice, createStopLossThreshold(series, atrBarCount, atrCoefficient));\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -64 +68,9 @@ public class AverageTrueRangeStopLossRule extends BaseVolatilityStopLossRule {\n-        super(referencePrice, BinaryOperationIndicator.product(requireNonNull(atrIndicator), atrCoefficient));\n+        this(new Config(referencePrice, requireNonNull(atrIndicator), atrCoefficient));\n+    }\n+\n+    private AverageTrueRangeStopLossRule(Config config) {\n+        super(config.referencePrice(),\n+                BinaryOperationIndicator.product(config.atrIndicator(), config.atrCoefficient()));\n+        this.referencePrice = config.referencePrice();\n+        this.atrIndicator = config.atrIndicator();\n+        this.atrCoefficient = config.atrCoefficient();\n@@ -67,2 +79,8 @@ public class AverageTrueRangeStopLossRule extends BaseVolatilityStopLossRule {\n-    private static Indicator<Num> createStopLossThreshold(BarSeries series, int atrBarCount, Number atrCoefficient) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    private record Config(Indicator<Num> referencePrice, ATRIndicator atrIndicator, Number atrCoefficient) {\n+\n+        private Config {\n+            if (atrCoefficient == null || Double.isNaN(atrCoefficient.doubleValue())\n+                    || atrCoefficient.doubleValue() <= 0) {\n+                throw new IllegalArgumentException(\"atrCoefficient must be positive\");\n+            }\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopGainRule.java\nindex 8e6d7d5ae..24c7ab280 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopGainRule.java\n@@ -28,0 +29,5 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n+    private final Indicator<Num> referencePrice;\n+    private final ATRIndicator atrIndicator;\n+    private final Number atrCoefficient;\n+    private final int barCount;\n+\n@@ -51 +56 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-        this(validatedConfig(referencePrice, createStopGainThreshold(series, atrBarCount, atrCoefficient), barCount));\n+        this(validatedConfig(referencePrice, series, atrBarCount, atrCoefficient, barCount));\n@@ -64,2 +69 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-        this(validatedConfig(referencePrice, createStopGainThreshold(series, atrBarCount, atrCoefficient),\n-                Integer.MAX_VALUE));\n+        this(validatedConfig(referencePrice, series, atrBarCount, atrCoefficient, Integer.MAX_VALUE));\n@@ -78 +82 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-        this(validatedConfig(referencePrice, createStopGainThreshold(atrIndicator, atrCoefficient), Integer.MAX_VALUE));\n+        this(validatedConfig(referencePrice, atrIndicator, atrCoefficient, Integer.MAX_VALUE));\n@@ -93 +97 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-        this(validatedConfig(referencePrice, createStopGainThreshold(atrIndicator, atrCoefficient), barCount));\n+        this(validatedConfig(referencePrice, atrIndicator, atrCoefficient, barCount));\n@@ -97,0 +102,10 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n+        this.referencePrice = config.referencePrice();\n+        this.atrIndicator = config.atrIndicator();\n+        this.atrCoefficient = config.atrCoefficient();\n+        this.barCount = config.barCount();\n+    }\n+\n+    private static Config validatedConfig(Indicator<Num> referencePrice, ATRIndicator atrIndicator,\n+            Number atrCoefficient, int barCount) {\n+        return validatedConfig(referencePrice, atrIndicator, atrCoefficient,\n+                createStopGainThreshold(atrIndicator, atrCoefficient), barCount);\n@@ -100,2 +114,2 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-    private static Config validatedConfig(Indicator<Num> referencePrice, Indicator<Num> stopGainThreshold,\n-            int barCount) {\n+    private static Config validatedConfig(Indicator<Num> referencePrice, ATRIndicator atrIndicator,\n+            Number atrCoefficient, Indicator<Num> stopGainThreshold, int barCount) {\n@@ -105 +119 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-        return new Config(referencePrice, stopGainThreshold, barCount);\n+        return new Config(referencePrice, atrIndicator, atrCoefficient, stopGainThreshold, barCount);\n@@ -109,2 +123 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-        return validatedConfig(new ClosePriceIndicator(series),\n-                createStopGainThreshold(series, atrBarCount, atrCoefficient), barCount);\n+        return validatedConfig(new ClosePriceIndicator(series), series, atrBarCount, atrCoefficient, barCount);\n@@ -113,3 +126,5 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-    private static Indicator<Num> createStopGainThreshold(BarSeries series, int atrBarCount, Number atrCoefficient) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount),\n-                requirePositiveAtrCoefficient(atrCoefficient));\n+    private static Config validatedConfig(Indicator<Num> referencePrice, BarSeries series, int atrBarCount,\n+            Number atrCoefficient, int barCount) {\n+        ATRIndicator atrIndicator = new ATRIndicator(series, atrBarCount);\n+        return validatedConfig(referencePrice, atrIndicator, atrCoefficient,\n+                createStopGainThreshold(atrIndicator, atrCoefficient), barCount);\n@@ -130 +145,2 @@ public class AverageTrueRangeTrailingStopGainRule extends BaseVolatilityTrailing\n-    private record Config(Indicator<Num> referencePrice, Indicator<Num> stopGainThreshold, int barCount) {\n+    private record Config(Indicator<Num> referencePrice, ATRIndicator atrIndicator, Number atrCoefficient,\n+            Indicator<Num> stopGainThreshold, int barCount) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\nindex 3c2aa9475..7e8733225 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\n@@ -29,0 +30,5 @@ public class AverageTrueRangeTrailingStopLossRule extends BaseVolatilityTrailing\n+    private final Indicator<Num> referencePrice;\n+    private final ATRIndicator atrIndicator;\n+    private final Number atrCoefficient;\n+    private final int barCount;\n+\n@@ -38 +43 @@ public class AverageTrueRangeTrailingStopLossRule extends BaseVolatilityTrailing\n-        this(series, new ClosePriceIndicator(series), atrBarCount, atrCoefficient);\n+        this(new ClosePriceIndicator(series), new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -51 +56 @@ public class AverageTrueRangeTrailingStopLossRule extends BaseVolatilityTrailing\n-        this(series, referencePrice, atrBarCount, atrCoefficient, Integer.MAX_VALUE);\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient, Integer.MAX_VALUE);\n@@ -67 +72 @@ public class AverageTrueRangeTrailingStopLossRule extends BaseVolatilityTrailing\n-        super(referencePrice, createStopLossThreshold(series, atrBarCount, atrCoefficient), barCount);\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient, barCount);\n@@ -95 +100 @@ public class AverageTrueRangeTrailingStopLossRule extends BaseVolatilityTrailing\n-        super(referencePrice, BinaryOperationIndicator.product(requireNonNull(atrIndicator), atrCoefficient), barCount);\n+        this(new Config(referencePrice, requireNonNull(atrIndicator), atrCoefficient, barCount));\n@@ -98,10 +103,18 @@ public class AverageTrueRangeTrailingStopLossRule extends BaseVolatilityTrailing\n-    /**\n-     * Builds ATR-based trailing stop-loss threshold indicator.\n-     *\n-     * @param series         bar series\n-     * @param atrBarCount    ATR lookback length\n-     * @param atrCoefficient ATR multiplier\n-     * @return ATR-scaled threshold indicator\n-     */\n-    private static Indicator<Num> createStopLossThreshold(BarSeries series, int atrBarCount, Number atrCoefficient) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    private AverageTrueRangeTrailingStopLossRule(Config config) {\n+        super(config.referencePrice(), BinaryOperationIndicator.product(config.atrIndicator(), config.atrCoefficient()),\n+                config.barCount());\n+        this.referencePrice = config.referencePrice();\n+        this.atrIndicator = config.atrIndicator();\n+        this.atrCoefficient = config.atrCoefficient();\n+        this.barCount = config.barCount();\n+    }\n+\n+    private record Config(Indicator<Num> referencePrice, ATRIndicator atrIndicator, Number atrCoefficient,\n+            int barCount) {\n+\n+        private Config {\n+            if (atrCoefficient == null || Double.isNaN(atrCoefficient.doubleValue())\n+                    || atrCoefficient.doubleValue() <= 0) {\n+                throw new IllegalArgumentException(\"atrCoefficient must be positive\");\n+            }\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopGainRule.java\nindex be418ed46..b9adab5cb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopGainRule.java\n@@ -25,0 +26,4 @@ public class VolatilityStopGainRule extends BaseVolatilityStopGainRule {\n+    private final Indicator<Num> referencePrice;\n+    private final Indicator<Num> volatilityIndicator;\n+    private final Number coefficient;\n+\n@@ -74,0 +79,3 @@ public class VolatilityStopGainRule extends BaseVolatilityStopGainRule {\n+        this.referencePrice = config.referencePrice();\n+        this.volatilityIndicator = config.volatilityIndicator();\n+        this.coefficient = config.coefficient();\n@@ -82 +89,2 @@ public class VolatilityStopGainRule extends BaseVolatilityStopGainRule {\n-        return new Config(referencePrice, createStopGainThreshold(volatilityIndicator, coefficient));\n+        return new Config(referencePrice, volatilityIndicator, coefficient,\n+                createStopGainThreshold(volatilityIndicator, coefficient));\n@@ -106 +114,2 @@ public class VolatilityStopGainRule extends BaseVolatilityStopGainRule {\n-    private record Config(Indicator<Num> referencePrice, Indicator<Num> stopGainThreshold) {\n+    private record Config(Indicator<Num> referencePrice, Indicator<Num> volatilityIndicator, Number coefficient,\n+            Indicator<Num> stopGainThreshold) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopLossRule.java\nindex 8672864e3..8d512a9f1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityStopLossRule.java\n@@ -25,0 +26,4 @@ public class VolatilityStopLossRule extends BaseVolatilityStopLossRule {\n+    private final Indicator<Num> referencePrice;\n+    private final Indicator<Num> volatilityIndicator;\n+    private final Number coefficient;\n+\n@@ -59 +63 @@ public class VolatilityStopLossRule extends BaseVolatilityStopLossRule {\n-        super(referencePrice, BinaryOperationIndicator.product(volatilityIndicator, coefficient));\n+        this(new Config(referencePrice, volatilityIndicator, coefficient));\n@@ -71,0 +76,17 @@ public class VolatilityStopLossRule extends BaseVolatilityStopLossRule {\n+\n+    private VolatilityStopLossRule(Config config) {\n+        super(config.referencePrice(),\n+                BinaryOperationIndicator.product(config.volatilityIndicator(), config.coefficient()));\n+        this.referencePrice = config.referencePrice();\n+        this.volatilityIndicator = config.volatilityIndicator();\n+        this.coefficient = config.coefficient();\n+    }\n+\n+    private record Config(Indicator<Num> referencePrice, Indicator<Num> volatilityIndicator, Number coefficient) {\n+\n+        private Config {\n+            if (coefficient == null || Double.isNaN(coefficient.doubleValue()) || coefficient.doubleValue() <= 0) {\n+                throw new IllegalArgumentException(\"coefficient must be positive\");\n+            }\n+        }\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopGainRule.java\nindex 936f5c352..f2f9121be 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopGainRule.java\n@@ -25,0 +26,5 @@ public class VolatilityTrailingStopGainRule extends BaseVolatilityTrailingStopGa\n+    private final Indicator<Num> referencePrice;\n+    private final Indicator<Num> volatilityIndicator;\n+    private final Number coefficient;\n+    private final int barCount;\n+\n@@ -61 +66 @@ public class VolatilityTrailingStopGainRule extends BaseVolatilityTrailingStopGa\n-        super(referencePrice, BinaryOperationIndicator.product(volatilityIndicator, coefficient), barCount);\n+        this(new Config(referencePrice, volatilityIndicator, coefficient, barCount));\n@@ -86,0 +92,20 @@ public class VolatilityTrailingStopGainRule extends BaseVolatilityTrailingStopGa\n+\n+    private VolatilityTrailingStopGainRule(Config config) {\n+        super(config.referencePrice(),\n+                BinaryOperationIndicator.product(config.volatilityIndicator(), config.coefficient()),\n+                config.barCount());\n+        this.referencePrice = config.referencePrice();\n+        this.volatilityIndicator = config.volatilityIndicator();\n+        this.coefficient = config.coefficient();\n+        this.barCount = config.barCount();\n+    }\n+\n+    private record Config(Indicator<Num> referencePrice, Indicator<Num> volatilityIndicator, Number coefficient,\n+            int barCount) {\n+\n+        private Config {\n+            if (coefficient == null || Double.isNaN(coefficient.doubleValue()) || coefficient.doubleValue() <= 0) {\n+                throw new IllegalArgumentException(\"coefficient must be positive\");\n+            }\n+        }\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopLossRule.java\nindex 8536a374a..bc17e6829 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/VolatilityTrailingStopLossRule.java\n@@ -25,0 +26,5 @@ public class VolatilityTrailingStopLossRule extends BaseVolatilityTrailingStopLo\n+    private final Indicator<Num> referencePrice;\n+    private final Indicator<Num> volatilityIndicator;\n+    private final Number coefficient;\n+    private final int barCount;\n+\n@@ -61 +66 @@ public class VolatilityTrailingStopLossRule extends BaseVolatilityTrailingStopLo\n-        super(referencePrice, BinaryOperationIndicator.product(volatilityIndicator, coefficient), barCount);\n+        this(new Config(referencePrice, volatilityIndicator, coefficient, barCount));\n@@ -86,0 +92,20 @@ public class VolatilityTrailingStopLossRule extends BaseVolatilityTrailingStopLo\n+\n+    private VolatilityTrailingStopLossRule(Config config) {\n+        super(config.referencePrice(),\n+                BinaryOperationIndicator.product(config.volatilityIndicator(), config.coefficient()),\n+                config.barCount());\n+        this.referencePrice = config.referencePrice();\n+        this.volatilityIndicator = config.volatilityIndicator();\n+        this.coefficient = config.coefficient();\n+        this.barCount = config.barCount();\n+    }\n+\n+    private record Config(Indicator<Num> referencePrice, Indicator<Num> volatilityIndicator, Number coefficient,\n+            int barCount) {\n+\n+        private Config {\n+            if (coefficient == null || Double.isNaN(coefficient.doubleValue()) || coefficient.doubleValue() <= 0) {\n+                throw new IllegalArgumentException(\"coefficient must be positive\");\n+            }\n+        }\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\nindex 96edba78e..4d89e32c8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n@@ -10,0 +11 @@ import org.ta4j.core.named.NamedAssetRegistry;\n+import org.ta4j.core.indicators.ATRIndicator;\n@@ -442,0 +444,3 @@ public final class RuleSerialization {\n+        if (type.equals(ATRIndicator.class)) {\n+            return 100;\n+        }\n@@ -634 +638 @@ public final class RuleSerialization {\n-                    if (componentValue != null) {\n+                    if (componentValue != null && paramType.isInstance(componentValue)) {\n@@ -1281,0 +1286,3 @@ public final class RuleSerialization {\n+            if (type.equals(ATRIndicator.class)) {\n+                return 100;\n+            }\n@@ -1465,0 +1473,3 @@ public final class RuleSerialization {\n+            if (!parameter.getType().isInstance(indicator)) {\n+                return false;\n+            }"
+}

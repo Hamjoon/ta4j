@@ -1,0 +1,21 @@
+{
+  "index": 344,
+  "sha": "ebcf627e7121ace7a582e379f34b5f2e1094ca1d",
+  "parent": "8ee535036d0651734a49ff92d67a697dd820b860",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      1014
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      830,
+      831,
+      1018,
+      1019,
+      1037,
+      1038
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex a601ffdf5..ab2085ed6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -112,0 +113 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final double HISTORICAL_BOUNDARY_BOTTOM_FIT_FLOOR = 0.78;\n@@ -828,0 +830,3 @@ public final class ElliottWaveAnalysisRunner {\n+        if (!path.legs().isEmpty() && path.legs().getLast().bullish()) {\n+            return new ElliottWaveAnalysisResult.HistoricalStructureAssessment(legs, List.of());\n+        }\n@@ -1014 +1018,2 @@ public final class ElliottWaveAnalysisRunner {\n-        if (historicalMacroBottomConfirmed(series, pending, series.getEndIndex())) {\n+        if (historicalMacroBottomConfirmed(series, pending, series.getEndIndex())\n+                || boundaryHistoricalMacroBottom(series, pending)) {\n@@ -1029,0 +1035,6 @@ public final class ElliottWaveAnalysisRunner {\n+    private boolean boundaryHistoricalMacroBottom(final BarSeries series,\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment candidate) {\n+        return candidate.endIndex() == series.getEndIndex()\n+                && (candidate.accepted() || candidate.fitScore() >= HISTORICAL_BOUNDARY_BOTTOM_FIT_FLOOR);\n+    }\n+"
+}

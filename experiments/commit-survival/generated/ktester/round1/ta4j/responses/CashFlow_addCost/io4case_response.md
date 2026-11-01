@@ -1,0 +1,95 @@
+{
+    "group": "addCost",
+    "cases": [
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"10\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"-2\")" },
+                { "parameter": "isLongTrade", "value": "true" }
+            ],
+            "expected": "DecimalNum.valueOf(\"12\")",
+            "description": "Long trade with a negative holding cost: net price = rawPrice - (-holdingCost) = 10 + 2 = 12."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"10\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"-2\")" },
+                { "parameter": "isLongTrade", "value": "false" }
+            ],
+            "expected": "DecimalNum.valueOf(\"8\")",
+            "description": "Short trade with a negative holding cost: net price = rawPrice + (-holdingCost) = 10 - 2 = 8."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"3\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"5\")" },
+                { "parameter": "isLongTrade", "value": "true" }
+            ],
+            "expected": "DecimalNum.valueOf(\"-2\")",
+            "description": "Long trade where holding cost exceeds raw price, producing a negative net price."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"7\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"0\")" },
+                { "parameter": "isLongTrade", "value": "false" }
+            ],
+            "expected": "DecimalNum.valueOf(\"7\")",
+            "description": "Short trade with zero holding cost: net price should be unchanged."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"0\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"5\")" },
+                { "parameter": "isLongTrade", "value": "true" }
+            ],
+            "expected": "DecimalNum.valueOf(\"-5\")",
+            "description": "Long trade with a zero raw price: net price = 0 - holdingCost = -5."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"0\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"5\")" },
+                { "parameter": "isLongTrade", "value": "false" }
+            ],
+            "expected": "DecimalNum.valueOf(\"5\")",
+            "description": "Short trade with a zero raw price: net price = 0 + holdingCost = 5."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"-4\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"-3\")" },
+                { "parameter": "isLongTrade", "value": "true" }
+            ],
+            "expected": "DecimalNum.valueOf(\"-1\")",
+            "description": "Long trade where both raw price and holding cost are negative: net price = -4 - (-3) = -1."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"-4\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"-3\")" },
+                { "parameter": "isLongTrade", "value": "false" }
+            ],
+            "expected": "DecimalNum.valueOf(\"-7\")",
+            "description": "Short trade where both raw price and holding cost are negative: net price = -4 + (-3) = -7."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"-1000000000\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"999999999\")" },
+                { "parameter": "isLongTrade", "value": "true" }
+            ],
+            "expected": "DecimalNum.valueOf(\"-1999999999\")",
+            "description": "Long trade with very large negative raw price and large positive holding cost to test handling of large magnitude negative results."
+        },
+        {
+            "input": [
+                { "parameter": "rawPrice", "value": "DecimalNum.valueOf(\"-1000000000\")" },
+                { "parameter": "holdingCost", "value": "DecimalNum.valueOf(\"999999999\")" },
+                { "parameter": "isLongTrade", "value": "false" }
+            ],
+            "expected": "DecimalNum.valueOf(\"-1\")",
+            "description": "Short trade with very large negative raw price and large positive holding cost, net price should be -1."
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:54: error: cannot find symbol
+    private BarSeries series;
+            ^
+  symbol:   class BarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:63: error: cannot find symbol
+    private BarSeries buildSeries(double... closePrices) {
+            ^
+  symbol:   class BarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:69: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+            Bar bar = new BaseBar(Duration.ofMinutes(1), time, nPrice, nPrice, nPrice, nPrice, numFactory.one());
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:84: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        Bar dummyBar = new BaseBar(Duration.ofMinutes(1), ZonedDateTime.now(),
+                       ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:90: error: cannot find symbol
+        BarSeries dummySeries = new BaseBarSeriesBuilder()
+        ^
+  symbol:   class BarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:112: error: values has private access in CashFlow
+        assertEquals(3, cf.values.size());
+                          ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:133: error: cannot find symbol
+        BarSeries snapshot = cf.getBarSeries();
+        ^
+  symbol:   class BarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:138: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        Bar extraBar = new BaseBar(Duration.ofMinutes(1), ZonedDateTime.now(),
+                       ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:225: error: no suitable constructor found for Position(Trade)
+        Position openPosition = new Position(entry);
+                                ^
+    constructor Position.Position(TradeType) is not applicable
+      (argument mismatch; Trade cannot be converted to TradeType)
+    constructor Position.Position(ValidatedStartingPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedStartingPosition)
+    constructor Position.Position(ValidatedClosedPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedClosedPosition)
+    constructor Position.Position(ValidatedOpenPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedOpenPosition)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:246: error: no suitable constructor found for Position(Trade)
+        Position position = new Position(entry);
+                            ^
+    constructor Position.Position(TradeType) is not applicable
+      (argument mismatch; Trade cannot be converted to TradeType)
+    constructor Position.Position(ValidatedStartingPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedStartingPosition)
+    constructor Position.Position(ValidatedClosedPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedClosedPosition)
+    constructor Position.Position(ValidatedOpenPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedOpenPosition)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+10 errors

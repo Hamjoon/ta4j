@@ -1,0 +1,104 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:58: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        return new BaseBar(Duration.ofDays(1),
+               ^
+  required: Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long
+  found:    Duration,ZonedDateTime,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:65: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:110: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, n(1), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:111: error: cannot find symbol
+        Trade exit  = new Trade(TradeType.SELL, 3, n(4), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:126: error: cannot find symbol
+        Trade entry = new Trade(TradeType.SELL, 0, n(5), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:127: error: cannot find symbol
+        Trade exit  = new Trade(TradeType.BUY, 2, n(2), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:142: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, n(1), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:157: error: cannot find symbol
+        Trade entry1 = new Trade(TradeType.BUY, 0, n(1), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:158: error: cannot find symbol
+        Trade exit1  = new Trade(TradeType.SELL, 3, n(4), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:161: error: cannot find symbol
+        Trade entry2 = new Trade(TradeType.SELL, 4, n(5), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:162: error: cannot find symbol
+        Trade exit2  = new Trade(TradeType.BUY, 4, n(5), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:185: error: cannot find symbol
+        Trade entry1 = new Trade(TradeType.BUY, 0, n(1), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:186: error: cannot find symbol
+        Trade exit1  = new Trade(TradeType.SELL, 2, n(3), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:189: error: cannot find symbol
+        Trade entry2 = new Trade(TradeType.BUY, 3, n(4), n(1));
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:248: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries empty = new BaseBarSeries("empty");
+                          ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:258: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, n(1), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:259: error: cannot find symbol
+        Trade exit  = new Trade(TradeType.SELL, 2, n(3), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:281: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, n(1), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:282: error: cannot find symbol
+        Trade exit  = new Trade(TradeType.SELL, 1, n(2), n(1));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+20 errors

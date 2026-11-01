@@ -1,0 +1,45 @@
+{
+  "index": 372,
+  "sha": "2f489fd32b74efa2b119d5dfb1b2c9950fe87fad",
+  "parent": "274ea6e69034f96101e0264c50bd0877cc4f6ab4",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      1348,
+      1392,
+      1393,
+      1394,
+      1410,
+      1411,
+      1412,
+      1413,
+      1414,
+      1415,
+      1502
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      110
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      264
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      1348,
+      1392,
+      1491
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      110
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      282,
+      293,
+      294,
+      296,
+      297,
+      299
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex 9ad9f6b97..d231e1bb8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -626 +626 @@ public final class ElliottScenarioGenerator {\n-    private boolean partialImpulseDecompositionRemainsViable(final List<SwingPivotPoint> pivots,\n+    boolean partialImpulseDecompositionRemainsViable(final List<SwingPivotPoint> pivots,\n@@ -682 +682 @@ public final class ElliottScenarioGenerator {\n-    private List<SwingPivotPoint> extractPivots(final List<ElliottSwing> swings) {\n+    List<SwingPivotPoint> extractPivots(final List<ElliottSwing> swings) {\n@@ -1348 +1348 @@ public final class ElliottScenarioGenerator {\n-                    .min(startAnchoredComparator())\n+                    .min(startDiversityComparator())\n@@ -1392,3 +1392 @@ public final class ElliottScenarioGenerator {\n-            if (!addedAny) {\n-                minimumSpacing = Math.max(0, minimumSpacing / 2);\n-            } else if (selected.size() < quota) {\n+            if (!addedAny || selected.size() < quota) {\n@@ -1409,9 +1406,0 @@ public final class ElliottScenarioGenerator {\n-    private Comparator<ElliottScenario> startAnchoredComparator() {\n-        return Comparator.comparing(ElliottScenario::expectsCompletion)\n-                .reversed()\n-                .thenComparing(Comparator.comparingInt(ElliottScenario::waveCount).reversed())\n-                .thenComparing(Comparator.comparingInt(this::scenarioSpan).reversed())\n-                .thenComparing(ElliottScenario::confidenceScore, Comparator.reverseOrder())\n-                .thenComparing(ElliottScenario::id);\n-    }\n-\n@@ -1502 +1491 @@ public final class ElliottScenarioGenerator {\n-    private record SwingPivotPoint(int index, Num price) {\n+    record SwingPivotPoint(int index, Num price) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\nindex eb8a52ada..786c4a2c5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n@@ -99 +99 @@ final class SwingDetectorSupport {\n-    private static SwingPivot chooseSharedIndexPivot(final List<SwingPivot> normalized, final SwingPivot existing,\n+    private static SwingPivot chooseSharedIndexPivot(final List<SwingPivot> priorPivots, final SwingPivot existing,\n@@ -110 +110 @@ final class SwingDetectorSupport {\n-        final SwingPivot previous = normalized.isEmpty() ? null : normalized.getLast();\n+        final SwingPivot previous = priorPivots.isEmpty() ? null : priorPivots.getLast();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\nindex 190a26b9d..1d8f476eb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n@@ -73 +73,10 @@ public final class WalkForwardEngine<C, P, O> {\n-     * @param maxParallelFolds   maximum number of folds to evaluate concurrently\n+     * @param maxParallelFolds   maximum number of folds to evaluate concurrently.\n+     *                           When {@code maxParallelFolds > 1},\n+     *                           {@link WalkForwardEngine} invokes the shared\n+     *                           {@code predictionProvider} from\n+     *                           {@link #executeFold(BarSeries, Object, WalkForwardConfig, WalkForwardSplit, int, int, AtomicInteger)}\n+     *                           on multiple worker threads while reusing the same\n+     *                           {@code context} instance, so the provider and any\n+     *                           mutable state reachable from the context must be\n+     *                           stateless, thread-safe, or otherwise\n+     *                           thread-confined by the caller\n@@ -110 +119,10 @@ public final class WalkForwardEngine<C, P, O> {\n-     * @param maxParallelFolds   maximum number of folds to evaluate concurrently\n+     * @param maxParallelFolds   maximum number of folds to evaluate concurrently.\n+     *                           When {@code maxParallelFolds > 1},\n+     *                           {@link WalkForwardEngine} invokes the shared\n+     *                           {@code predictionProvider} from\n+     *                           {@link #executeFold(BarSeries, Object, WalkForwardConfig, WalkForwardSplit, int, int, AtomicInteger)}\n+     *                           on multiple worker threads while reusing the same\n+     *                           {@code context} instance, so the provider and any\n+     *                           mutable state reachable from the context must be\n+     *                           stateless, thread-safe, or otherwise\n+     *                           thread-confined by the caller\n@@ -264 +282 @@ public final class WalkForwardEngine<C, P, O> {\n-                    throw new IllegalStateException(\"Walk-forward fold execution failed\", e.getCause());\n+                    rethrowParallelFailure(e.getCause());\n@@ -273,0 +292,10 @@ public final class WalkForwardEngine<C, P, O> {\n+    private static void rethrowParallelFailure(Throwable cause) {\n+        if (cause instanceof Error error) {\n+            throw error;\n+        }\n+        if (cause instanceof RuntimeException runtimeException) {\n+            throw runtimeException;\n+        }\n+        throw new IllegalStateException(\"Walk-forward fold execution failed\", cause);\n+    }\n+"
+}

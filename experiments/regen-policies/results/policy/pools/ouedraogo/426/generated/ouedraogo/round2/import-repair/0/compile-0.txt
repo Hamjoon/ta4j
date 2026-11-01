@@ -1,0 +1,110 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:67: error: cannot find symbol
+        @Override public NumFactory getNumFactory()           { throw new UnsupportedOperationException("NumFactory not needed in tests"); }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:127: error: cannot find symbol
+        @Override public NumFactory numFactory() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:128: error: cannot find symbol
+        @Override public BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BarBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:164: error: cannot find symbol
+        @Override public Bar getFirstBar() { return getBar(0); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:165: error: cannot find symbol
+        @Override public Bar getLastBar() { return getBar(getBarCount() - 1); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:166: error: cannot find symbol
+        @Override public List<Bar> getBarData() { throw new UnsupportedOperationException(); }
+                              ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:175: error: cannot find symbol
+        @Override public void addBar(Bar bar) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:176: error: cannot find symbol
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:33: error: SimpleNum is not abstract and does not override abstract method remainder(Num) in Num
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:140: error: cannot find symbol
+                @Override public ZonedDateTime getEndTime()    { return ZonedDateTime.now(); }
+                                 ^
+  symbol: class ZonedDateTime
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:141: error: cannot find symbol
+                @Override public ZonedDateTime getBeginTime()  { return ZonedDateTime.now(); }
+                                 ^
+  symbol: class ZonedDateTime
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:142: error: cannot find symbol
+                @Override public Duration getTimePeriod()    { return Duration.ofMinutes(1); }
+                                 ^
+  symbol: class Duration
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:143: error: cannot find symbol
+                @Override public double getPrice(PriceComponent component) {
+                                                 ^
+  symbol: class PriceComponent
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:152: error: cannot find symbol
+                @Override public double getVolume(VolumeComponent component) { return 0.0; }
+                                                  ^
+  symbol: class VolumeComponent
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:153: error: method getAmount() is already defined in class <anonymous org.ta4j.core.indicators.ATRIndicatorTest$SimpleBarSeries$1>
+                @Override public double getAmount() { return 0.0; }
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:154: error: method getTrades() is already defined in class <anonymous org.ta4j.core.indicators.ATRIndicatorTest$SimpleBarSeries$1>
+                @Override public double getTrades() { return 0.0; }
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:132: error: <anonymous org.ta4j.core.indicators.ATRIndicatorTest$SimpleBarSeries$1> is not abstract and does not override abstract method addPrice(Num) in Bar
+            return new org.ta4j.core.Bar() {
+                                           ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:139: error: getTrades() in <anonymous org.ta4j.core.indicators.ATRIndicatorTest$SimpleBarSeries$1> cannot implement getTrades() in Bar
+                @Override public Num getTrades()               { return SimpleNum.valueOf(0); }
+                                     ^
+  return type Num is not compatible with long
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:139: error: method does not override or implement a method from a supertype
+                @Override public Num getTrades()               { return SimpleNum.valueOf(0); }
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:140: error: cannot find symbol
+                @Override public ZonedDateTime getEndTime()    { return ZonedDateTime.now(); }
+                                                                        ^
+  symbol: variable ZonedDateTime
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:141: error: cannot find symbol
+                @Override public ZonedDateTime getBeginTime()  { return ZonedDateTime.now(); }
+                                                                        ^
+  symbol: variable ZonedDateTime
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:142: error: cannot find symbol
+                @Override public Duration getTimePeriod()    { return Duration.ofMinutes(1); }
+                                                                      ^
+  symbol: variable Duration
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:143: error: method does not override or implement a method from a supertype
+                @Override public double getPrice(PriceComponent component) {
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:152: error: method does not override or implement a method from a supertype
+                @Override public double getVolume(VolumeComponent component) { return 0.0; }
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:153: error: method does not override or implement a method from a supertype
+                @Override public double getAmount() { return 0.0; }
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:154: error: method does not override or implement a method from a supertype
+                @Override public double getTrades() { return 0.0; }
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:155: error: method does not override or implement a method from a supertype
+                @Override public boolean isTick() { return false; }
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:156: error: method does not override or implement a method from a supertype
+                @Override public boolean isBar() { return true; }
+                ^
+28 errors

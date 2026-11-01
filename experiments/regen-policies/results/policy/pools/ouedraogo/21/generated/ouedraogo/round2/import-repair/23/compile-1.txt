@@ -1,0 +1,39 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:91: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:155: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:172: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:203: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:210: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:244: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:286: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:304: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+8 errors

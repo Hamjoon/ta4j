@@ -1,0 +1,75 @@
+{
+    "group": "ATRIndicator_getTRIndicator",
+    "cases": [
+        {
+            "input": [
+                {
+                    "parameter": "BarSeries",
+                    "value": "BarSeries with 5 bars of dummy data"
+                },
+                {
+                    "parameter": "barCount",
+                    "value": "3"
+                }
+            ],
+            "expected": "Non‑null TRIndicator instance whose BarSeries is the same object as the one supplied to the ATRIndicator constructor",
+            "description": "Verify that getTRIndicator() returns a TRIndicator that wraps the original BarSeries used to create the ATRIndicator."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "BarSeries",
+                    "value": "BarSeries with 10 bars of random prices"
+                },
+                {
+                    "parameter": "barCount",
+                    "value": "5"
+                }
+            ],
+            "expected": "The same TRIndicator instance is returned on successive calls (reference equality)",
+            "description": "Ensure that multiple invocations of getTRIndicator() on the same ATRIndicator object return the identical TRIndicator object, not a new one each time."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "BarSeries",
+                    "value": "null"
+                },
+                {
+                    "parameter": "barCount",
+                    "value": "1"
+                }
+            ],
+            "expected": "IllegalArgumentException (or NullPointerException) thrown by ATRIndicator constructor, therefore getTRIndicator() is never called",
+            "description": "Check that constructing ATRIndicator with a null BarSeries is rejected, confirming that the internal TRIndicator cannot be null."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "BarSeries",
+                    "value": "BarSeries with a single bar (edge case: minimal series length)"
+                },
+                {
+                    "parameter": "barCount",
+                    "value": "1"
+                }
+            ],
+            "expected": "Non‑null TRIndicator instance (no exception) and its BarSeries reference equals the supplied series",
+            "description": "Validate that even with the smallest possible series the getter still returns a proper TRIndicator."
+        },
+        {
+            "input": [
+                {
+                    "parameter": "BarSeries",
+                    "value": "BarSeries with 100 bars of increasing prices"
+                },
+                {
+                    "parameter": "barCount",
+                    "value": "50"
+                }
+            ],
+            "expected": "TRIndicator instance is the same object that ATRIndicator internally created (reference equality)",
+            "description": "Confirm that the ATRIndicator does not recreate the TRIndicator lazily; it is instantiated once during construction and returned unchanged."
+        }
+    ]
+}

@@ -1,0 +1,778 @@
+Imagine three different experts in software testing who are tasked with developing comprehensive JUnit 4 test cases for the following Java class.To comprehensively test all methods in the following class named Position they must following these steps:
+- Extract and list all the public methods including their signatures
+- For each methods, generate a basic JUnit 4 test case that checks the method's functionality
+- Given the source code of the class and the listed methods, identify potential edge cases and exception handling scenarios that should be tested
+- Generate JUnit 4 test cases that specifically test for the identified edge cases and exceptions
+- Merge all the individual test cases into a complete JUnit 4 test file (PositionTest.java) for the given Java class.All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
+The Java class is:
+/*
+ * SPDX-License-Identifier: MIT
+ */
+package org.ta4j.core;
+
+import static org.ta4j.core.num.NaN.NaN;
+
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.Objects;
+
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.Num;
+
+/**
+ * A {@code Position} models either a closed entry/exit pair or an open position
+ * snapshot with only an entry trade.
+ *
+ * <p>
+ * The exit trade has the complement type of the entry trade, i.e.:
+ * <ul>
+ * <li>entry == BUY --> exit == SELL
+ * <li>entry == SELL --> exit == BUY
+ * </ul>
+ *
+ * <p>
+ * Open-position inspection APIs on {@link TradingRecord} also use this type, so
+ * callers can query per-lot and net exposure through one consistent contract.
+ * </p>
+ */
+public class Position implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -5484709075767220358L;
+
+    /** The entry trade */
+    private Trade entry;
+
+    /** The exit trade */
+    private Trade exit;
+
+    /** The type of the entry trade */
+    private final TradeType startingType;
+
+    /** The cost model for transactions of the asset */
+    private final transient CostModel transactionCostModel;
+
+    /** The cost model for holding the asset */
+    private final transient CostModel holdingCostModel;
+
+    /** Constructor with {@link #startingType} = BUY. */
+    public Position() {
+        this(validateDefaultStartingPosition());
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param startingType the starting {@link TradeType trade type} of the position
+     *                     (i.e. type of the entry trade)
+     */
+    public Position(TradeType startingType) {
+        this(validateDefaultStartingPosition(startingType));
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param startingType         the starting {@link TradeType trade type} of the
+     *                             position (i.e. type of the entry trade)
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
+     */
+    public Position(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel) {
+        this(validateStartingPosition(startingType, transactionCostModel, holdingCostModel));
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param entry the entry {@link Trade trade}
+     * @param exit  the exit {@link Trade trade}
+     */
+    public Position(Trade entry, Trade exit) {
+        this(validateClosedPositionWithDefaults(entry, exit));
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param entry                the entry {@link Trade trade}
+     * @param exit                 the exit {@link Trade trade}
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
+     */
+    public Position(Trade entry, Trade exit, CostModel transactionCostModel, CostModel holdingCostModel) {
+        this(validateClosedPosition(entry, exit, transactionCostModel, holdingCostModel));
+    }
+
+    /**
+     * Constructor for an open position.
+     *
+     * @param entry                the entry {@link Trade trade}
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
+     * @since 0.22.2
+     */
+    public Position(Trade entry, CostModel transactionCostModel, CostModel holdingCostModel) {
+        this(validateOpenPosition(entry, transactionCostModel, holdingCostModel));
+    }
+
+    /**
+     * @return the entry {@link Trade trade} of the position
+     */
+    public Trade getEntry() {
+        return entry;
+    }
+
+    /**
+     * @return the exit {@link Trade trade} of the position
+     */
+    public Trade getExit() {
+        return exit;
+    }
+
+    /**
+     * Returns the entry-side direction of this position.
+     *
+     * @return the entry side, or {@code null} when the position has no entry yet
+     * @since 0.22.4
+     */
+    public ExecutionSide side() {
+        if (entry == null) {
+            return null;
+        }
+        return entry.isBuy() ? ExecutionSide.BUY : ExecutionSide.SELL;
+    }
+
+    /**
+     * Returns the entry amount of this position.
+     *
+     * <p>
+     * For aggregated open positions this is the net open amount.
+     * </p>
+     *
+     * @return the entry amount, or {@code null} when the position has no entry yet
+     * @since 0.22.4
+     */
+    public Num amount() {
+        return entry == null ? null : entry.getAmount();
+    }
+
+    /**
+     * Returns the average entry price of this position.
+     *
+     * <p>
+     * For standard positions this is the entry trade price. For aggregated open
+     * positions this is the weighted average entry price of the net exposure.
+     * </p>
+     *
+     * @return the average entry price, or {@code null} when the position has no
+     *         entry yet
+     * @since 0.22.4
+     */
+    public Num averageEntryPrice() {
+        return entry == null ? null : entry.getPricePerAsset();
+    }
+
+    /**
+     * Returns the total entry cost of this position.
+     *
+     * @return the total entry cost, or {@code null} when the position has no entry
+     *         yet
+     * @since 0.22.4
+     */
+    public Num totalEntryCost() {
+        return entry == null ? null : entry.getValue();
+    }
+
+    /**
+     * Returns the entry fees currently carried by this position.
+     *
+     * <p>
+     * For aggregated open positions this reflects the summed remaining entry fees.
+     * </p>
+     *
+     * @return the entry fees, or {@code null} when the position has no entry yet
+     * @since 0.22.4
+     */
+    public Num totalFees() {
+        return entry == null ? null : entry.getCost();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Position p) {
+            return (entry == null ? p.getEntry() == null : entry.equals(p.getEntry()))
+                    && (exit == null ? p.getExit() == null : exit.equals(p.getExit()));
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(entry, exit);
+    }
+
+    /**
+     * Operates the position at the index-th position.
+     *
+     * @param index the bar index
+     * @return the trade
+     * @see #operate(int, Num, Num)
+     */
+    public Trade operate(int index) {
+        return operate(index, NaN, NaN);
+    }
+
+    /**
+     * Operates the position at the index-th position.
+     *
+     * @param index  the bar index
+     * @param price  the price
+     * @param amount the amount
+     * @return the trade
+     * @throws IllegalStateException if {@link #isOpened()} and index {@literal <}
+     *                               entry.index
+     */
+    public Trade operate(int index, Num price, Num amount) {
+        CostModel effectiveTransactionCostModel = getTransactionCostModel();
+        Trade trade = null;
+        if (isNew()) {
+            trade = operate(new BaseTrade(index, startingType, price, amount, effectiveTransactionCostModel));
+        } else if (isOpened()) {
+            if (index < entry.getIndex()) {
+                throw new IllegalStateException("The index i is less than the entryTrade index");
+            }
+            trade = operate(
+                    new BaseTrade(index, startingType.complementType(), price, amount, effectiveTransactionCostModel));
+        }
+        return trade;
+    }
+
+    /**
+     * Operates the position with a pre-built trade.
+     *
+     * @param trade the trade to apply
+     * @return the trade
+     * @since 0.22.4
+     */
+    public Trade operate(Trade trade) {
+        Objects.requireNonNull(trade, "trade");
+        CostModel effectiveTransactionCostModel = getTransactionCostModel();
+        if (!trade.getCostModel().equals(effectiveTransactionCostModel)) {
+            throw new IllegalArgumentException("Trades and the position must incorporate the same trading cost model");
+        }
+        if (isNew()) {
+            if (trade.getType() != startingType) {
+                throw new IllegalArgumentException("The first trade type must match the starting type");
+            }
+            entry = trade;
+            return trade;
+        }
+        if (isOpened()) {
+            if (trade.getType() != startingType.complementType()) {
+                throw new IllegalArgumentException("The exit trade type must complement the entry trade type");
+            }
+            if (trade.getIndex() < entry.getIndex()) {
+                throw new IllegalStateException("The index i is less than the entryTrade index");
+            }
+            exit = trade;
+            return trade;
+        }
+        return null;
+    }
+
+    /**
+     * @return true if the position is closed, false otherwise
+     */
+    public boolean isClosed() {
+        return (entry != null) && (exit != null);
+    }
+
+    /**
+     * @return true if the position is opened, false otherwise
+     */
+    public boolean isOpened() {
+        return (entry != null) && (exit == null);
+    }
+
+    /**
+     * @return true if the position is new, false otherwise
+     */
+    public boolean isNew() {
+        return (entry == null) && (exit == null);
+    }
+
+    /**
+     * @return true if position is closed and {@link #getProfit()} > 0
+     */
+    public boolean hasProfit() {
+        return getProfit().isPositive();
+    }
+
+    /**
+     * @return true if position is closed and {@link #getProfit()} {@literal <} 0
+     */
+    public boolean hasLoss() {
+        return getProfit().isNegative();
+    }
+
+    /**
+     * Calculates the net profit of the position if it is closed. The net profit
+     * includes any trading costs.
+     *
+     * @return the profit or loss of the position
+     */
+    public Num getProfit() {
+        if (isOpened()) {
+            return zero();
+        } else {
+            return getGrossProfit(exit.getPricePerAsset()).minus(getPositionCost());
+        }
+    }
+
+    /**
+     * Calculates the net profit of the position. If it is open, calculates the
+     * profit until the final bar. The net profit includes any trading costs.
+     *
+     * @param finalIndex the index of the final bar to be considered (if position is
+     *                   open)
+     * @param finalPrice the price of the final bar to be considered (if position is
+     *                   open)
+     * @return the profit or loss of the position
+     */
+    public Num getProfit(int finalIndex, Num finalPrice) {
+        Num grossProfit = getGrossProfit(finalPrice);
+        Num tradingCost = getPositionCost(finalIndex);
+        return grossProfit.minus(tradingCost);
+    }
+
+    /**
+     * Calculates the gross profit of the position if it is closed. The gross profit
+     * excludes any trading costs.
+     *
+     * @return the gross profit of the position
+     */
+    public Num getGrossProfit() {
+        if (isOpened()) {
+            return zero();
+        } else {
+            return getGrossProfit(exit.getPricePerAsset());
+        }
+    }
+
+    /**
+     * Calculates the gross profit of the position. The gross profit excludes any
+     * trading costs.
+     *
+     * @param finalPrice the price of the final bar to be considered (if position is
+     *                   open)
+     * @return the profit or loss of the position
+     */
+    public Num getGrossProfit(Num finalPrice) {
+        Num grossProfit;
+        if (isOpened()) {
+            grossProfit = entry.getAmount().multipliedBy(finalPrice).minus(entry.getValue());
+        } else {
+            grossProfit = exit.getValue().minus(entry.getValue());
+        }
+
+        // Profits of long position are losses of short
+        if (entry.isSell()) {
+            grossProfit = grossProfit.negate();
+        }
+        return grossProfit;
+    }
+
+    /**
+     * Calculates the gross return of the position if it is closed. The gross return
+     * excludes any trading costs (and includes the base).
+     *
+     * @return the gross return of the position in percent
+     * @see #getGrossReturn(Num)
+     */
+    public Num getGrossReturn() {
+        if (isOpened()) {
+            return zero();
+        } else {
+            return getGrossReturn(exit.getPricePerAsset());
+        }
+    }
+
+    /**
+     * Calculates the gross return of the position, if it exited at the provided
+     * price. The gross return excludes any trading costs (and includes the base).
+     *
+     * @param finalPrice the price of the final bar to be considered (if position is
+     *                   open)
+     * @return the gross return of the position in percent
+     * @see #getGrossReturn(Num, Num)
+     */
+    public Num getGrossReturn(Num finalPrice) {
+        return getGrossReturn(getEntry().getPricePerAsset(), finalPrice);
+    }
+
+    /**
+     * Calculates the gross return of the position. If either the entry or exit
+     * price is {@code NaN}, the close price from given {@code barSeries} is used.
+     * The gross return excludes any trading costs (and includes the base).
+     *
+     * @param barSeries
+     * @return the gross return in percent with entry and exit prices from the
+     *         barSeries
+     * @see #getGrossReturn(Num, Num)
+     */
+    public Num getGrossReturn(BarSeries barSeries) {
+        Num entryPrice = getEntry().getPricePerAsset(barSeries);
+        Num exitPrice = getExit().getPricePerAsset(barSeries);
+        return getGrossReturn(entryPrice, exitPrice);
+    }
+
+    /**
+     * Calculates the gross return between entry and exit price in percent. Includes
+     * the base.
+     *
+     * <p>
+     * For example:
+     * <ul>
+     * <li>For buy position with a profit of 4%, it returns 1.04 (includes the base)
+     * <li>For sell position with a loss of 4%, it returns 0.96 (includes the base)
+     * </ul>
+     *
+     * @param entryPrice the entry price
+     * @param exitPrice  the exit price
+     * @return the gross return in percent between entryPrice and exitPrice
+     *         (includes the base)
+     */
+    public Num getGrossReturn(Num entryPrice, Num exitPrice) {
+        if (getEntry().isBuy()) {
+            return exitPrice.dividedBy(entryPrice);
+        } else {
+            Num one = entryPrice.getNumFactory().one();
+            return ((exitPrice.dividedBy(entryPrice).minus(one)).negate()).plus(one);
+        }
+    }
+
+    /**
+     * Calculates the total cost of the position.
+     *
+     * @param finalIndex the index of the final bar to be considered (if position is
+     *                   open)
+     * @return the cost of the position
+     */
+    public Num getPositionCost(int finalIndex) {
+        Num transactionCost = transactionCostModel.calculate(this, finalIndex);
+        Num borrowingCost = getHoldingCost(finalIndex);
+        return transactionCost.plus(borrowingCost);
+    }
+
+    /**
+     * Calculates the total cost of the closed position.
+     *
+     * @return the cost of the position
+     */
+    public Num getPositionCost() {
+        Num transactionCost = transactionCostModel.calculate(this);
+        Num borrowingCost = getHoldingCost();
+        return transactionCost.plus(borrowingCost);
+    }
+
+    /**
+     * Calculates the holding cost of the closed position.
+     *
+     * @return the cost of the position
+     */
+    public Num getHoldingCost() {
+        return holdingCostModel.calculate(this);
+    }
+
+    /**
+     * Calculates the holding cost of the position.
+     *
+     * @param finalIndex the index of the final bar to be considered (if position is
+     *                   open)
+     * @return the cost of the position
+     */
+    public Num getHoldingCost(int finalIndex) {
+        return holdingCostModel.calculate(this, finalIndex);
+    }
+
+    /**
+     * @return the transaction cost model, or a zero-cost model after
+     *         deserialization when the model is unset
+     *
+     * @since 0.22.2
+     */
+    public CostModel getTransactionCostModel() {
+        return transactionCostModel == null ? new ZeroCostModel() : transactionCostModel;
+    }
+
+    /**
+     * @return the holding cost model, or a zero-cost model after deserialization
+     *         when the model is unset
+     *
+     * @since 0.22.2
+     */
+    public CostModel getHoldingCostModel() {
+        return holdingCostModel == null ? new ZeroCostModel() : holdingCostModel;
+    }
+
+    /**
+     * @return the {@link #startingType}
+     */
+    public TradeType getStartingType() {
+        return startingType;
+    }
+
+    private Position(ValidatedStartingPosition config) {
+        this.startingType = config.startingType();
+        this.transactionCostModel = config.transactionCostModel();
+        this.holdingCostModel = config.holdingCostModel();
+    }
+
+    private Position(ValidatedClosedPosition config) {
+        this.startingType = config.entry().getType();
+        this.entry = config.entry();
+        this.exit = config.exit();
+        this.transactionCostModel = config.transactionCostModel();
+        this.holdingCostModel = config.holdingCostModel();
+    }
+
+    private Position(ValidatedOpenPosition config) {
+        this.startingType = config.entry().getType();
+        this.entry = config.entry();
+        this.exit = null;
+        this.transactionCostModel = config.transactionCostModel();
+        this.holdingCostModel = config.holdingCostModel();
+    }
+
+    private static ValidatedStartingPosition validateStartingPosition(TradeType startingType,
+            CostModel transactionCostModel, CostModel holdingCostModel) {
+        if (startingType == null) {
+            throw new IllegalArgumentException("Starting type must not be null");
+        }
+        return new ValidatedStartingPosition(startingType, transactionCostModel, holdingCostModel);
+    }
+
+    private static ValidatedStartingPosition validateDefaultStartingPosition() {
+        return validateStartingPosition(TradeType.BUY, new ZeroCostModel(), new ZeroCostModel());
+    }
+
+    private static ValidatedStartingPosition validateDefaultStartingPosition(TradeType startingType) {
+        return validateStartingPosition(startingType, new ZeroCostModel(), new ZeroCostModel());
+    }
+
+    private static CostModel defaultTransactionCostModel(Trade entry) {
+        return Objects.requireNonNull(entry, "entry").getCostModel();
+    }
+
+    private static ValidatedClosedPosition validateClosedPositionWithDefaults(Trade entry, Trade exit) {
+        return validateClosedPosition(entry, exit, defaultTransactionCostModel(entry), new ZeroCostModel());
+    }
+
+    private static ValidatedClosedPosition validateClosedPosition(Trade entry, Trade exit,
+            CostModel transactionCostModel, CostModel holdingCostModel) {
+        Trade validatedEntry = Objects.requireNonNull(entry, "entry");
+        Trade validatedExit = Objects.requireNonNull(exit, "exit");
+
+        if (validatedEntry.getType().equals(validatedExit.getType())) {
+            throw new IllegalArgumentException("Both trades must have different types");
+        }
+        if (!(validatedEntry.getCostModel().equals(transactionCostModel))
+                || !(validatedExit.getCostModel().equals(transactionCostModel))) {
+            throw new IllegalArgumentException("Trades and the position must incorporate the same trading cost model");
+        }
+
+        return new ValidatedClosedPosition(validatedEntry, validatedExit, transactionCostModel, holdingCostModel);
+    }
+
+    private static ValidatedOpenPosition validateOpenPosition(Trade entry, CostModel transactionCostModel,
+            CostModel holdingCostModel) {
+        Trade validatedEntry = Objects.requireNonNull(entry, "entry");
+        if (!(validatedEntry.getCostModel().equals(transactionCostModel))) {
+            throw new IllegalArgumentException("Trades and the position must incorporate the same trading cost model");
+        }
+        return new ValidatedOpenPosition(validatedEntry, transactionCostModel, holdingCostModel);
+    }
+
+    private record ValidatedStartingPosition(TradeType startingType, CostModel transactionCostModel,
+            CostModel holdingCostModel) {
+    }
+
+    private record ValidatedClosedPosition(Trade entry, Trade exit, CostModel transactionCostModel,
+            CostModel holdingCostModel) {
+    }
+
+    private record ValidatedOpenPosition(Trade entry, CostModel transactionCostModel, CostModel holdingCostModel) {
+    }
+
+    /**
+     * @return the Num of 0
+     */
+    private Num zero() {
+        return entry.getNetPrice().getNumFactory().zero();
+    }
+
+    @Override
+    public String toString() {
+        return "Entry: " + entry + " exit: " + exit;
+    }
+}
+
+
+Use only classes, constructors and methods that appear in the class source above or in the dependency signatures below. Do not use APIs from other versions of this library. Construct real objects through the constructors or factory methods shown instead of mocking; do not mock or subclass abstract classes or interfaces of this library.
+
+// public API of org.ta4j.core.Trade.TradeType
+public static enum TradeType {
+  public static final TradeType BUY;
+  public static final TradeType SELL;
+  public abstract TradeType complementType();
+}
+
+// public API of org.ta4j.core.analysis.cost.CostModel
+public interface CostModel {
+   Num calculate(Position position, int finalIndex);
+   Num calculate(Position position);
+   Num calculate(Num price, Num amount);
+   boolean equals(CostModel otherModel);
+}
+
+// public API of org.ta4j.core.Trade
+public interface Trade extends Serializable {
+   TradeType getType();
+   int getIndex();
+   Num getPricePerAsset();
+  default Num getPricePerAsset(BarSeries barSeries);
+   Num getNetPrice();
+   Num getAmount();
+   Num getCost();
+   CostModel getCostModel();
+  default Instant getTime();
+  default String getId();
+  default String getInstrument();
+  default String getOrderId();
+  default String getCorrelationId();
+  default boolean isBuy();
+  default boolean isSell();
+  default Num getValue();
+  default List<TradeFill> getFills();
+  static List<TradeFill> executionFillsOf(Trade trade);
+  static Trade fromFill(TradeFill fill);
+  static Trade fromFill(TradeFill fill, CostModel transactionCostModel);
+  static Trade fromFill(TradeType type, TradeFill fill);
+  static Trade fromFill(TradeType type, TradeFill fill, CostModel transactionCostModel);
+  static Trade fromFills(TradeType type, List<TradeFill> fills);
+  static Trade fromFills(TradeType type, List<TradeFill> fills, CostModel transactionCostModel);
+  static Trade buyAt(int index, BarSeries series);
+  static Trade buyAt(int index, Num price, Num amount, CostModel transactionCostModel);
+  static Trade buyAt(int index, Num price, Num amount);
+  static Trade buyAt(int index, BarSeries series, Num amount);
+  static Trade buyAt(int index, BarSeries series, Num amount, CostModel transactionCostModel);
+  static Trade sellAt(int index, BarSeries series);
+  static Trade sellAt(int index, Num price, Num amount);
+  static Trade sellAt(int index, Num price, Num amount, CostModel transactionCostModel);
+  static Trade sellAt(int index, BarSeries series, Num amount);
+  static Trade sellAt(int index, BarSeries series, Num amount, CostModel transactionCostModel);
+}
+
+// public API of org.ta4j.core.Position.ValidatedStartingPosition
+private record ValidatedStartingPosition(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel) {
+}
+
+// public API of org.ta4j.core.Position.ValidatedClosedPosition
+private record ValidatedClosedPosition(Trade entry, Trade exit, CostModel transactionCostModel, CostModel holdingCostModel) {
+}
+
+// public API of org.ta4j.core.Position.ValidatedOpenPosition
+private record ValidatedOpenPosition(Trade entry, CostModel transactionCostModel, CostModel holdingCostModel) {
+}
+
+// public API of org.ta4j.core.ExecutionSide
+public enum ExecutionSide {
+  public static final ExecutionSide BUY;
+  public static final ExecutionSide SELL;
+  public Trade.TradeType toTradeType();
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+  static boolean isFinite(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+  default void clear();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.analysis.cost.ZeroCostModel
+public class ZeroCostModel extends FixedTransactionCostModel {
+  public ZeroCostModel();
+}
+
+
+At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) JUnit 4 test file (PositionTest.java) for the given Java class. The complete JUnit test file must start with ###Test START## and finish with ###Test END##

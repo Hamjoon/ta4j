@@ -1,0 +1,633 @@
+As a professional software tester who writes Java test methods, consider the following examples:
+//Example Java Class:
+package org.apache.commons.cli;
+
+final class Util {
+
+    static final String[] EMPTY_STRING_ARRAY = {};
+
+    static String stripLeadingAndTrailingQuotes(String str) {
+        final int length = str.length();
+        if (length > 1 && str.startsWith(""") && str.endsWith(""") && str.substring(1, length - 1).indexOf('"') == -1) {
+            str = str.substring(1, length - 1);
+        }
+
+        return str;
+    }
+
+    static String stripLeadingHyphens(final String str) {
+        if (str == null) {
+            return null;
+        }
+        if (str.startsWith("--")) {
+            return str.substring(2);
+        }
+        if (str.startsWith("-")) {
+            return str.substring(1);
+        }
+
+        return str;
+    }
+}
+
+
+//Corresponding JUnit 4 Test Cases:
+package org.apache.commons.cli;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
+import org.junit.Test;
+
+public class UtilTest {
+    @Test
+    public void testStripLeadingAndTrailingQuotes() {
+        assertEquals("foo", Util.stripLeadingAndTrailingQuotes(""foo""));
+        assertEquals("foo "bar"", Util.stripLeadingAndTrailingQuotes("foo "bar""));
+        assertEquals(""foo" bar", Util.stripLeadingAndTrailingQuotes(""foo" bar"));
+        assertEquals(""foo" and "bar"", Util.stripLeadingAndTrailingQuotes(""foo" and "bar""));
+        assertEquals(""", Util.stripLeadingAndTrailingQuotes("""));
+    }
+
+    @Test
+    public void testStripLeadingHyphens() {
+        assertEquals("f", Util.stripLeadingHyphens("-f"));
+        assertEquals("foo", Util.stripLeadingHyphens("--foo"));
+        assertEquals("-foo", Util.stripLeadingHyphens("---foo"));
+        assertNull(Util.stripLeadingHyphens(null));
+    }
+}
+        
+Now, generate JUnit 4 test cases to comprehensively test all methods in the following class named NumericIndicator. Your output file must start with ###Test START## and finish with ###Test END##. Here is the source code:
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2017-2025 Ta4j Organization & respective
+ * authors (see AUTHORS)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+package org.ta4j.core.indicators.numeric;
+
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Indicator;
+import org.ta4j.core.Rule;
+import org.ta4j.core.indicators.averages.EMAIndicator;
+import org.ta4j.core.indicators.averages.SMAIndicator;
+import org.ta4j.core.indicators.helpers.ClosePriceIndicator;
+import org.ta4j.core.indicators.helpers.ConstantIndicator;
+import org.ta4j.core.indicators.helpers.HighestValueIndicator;
+import org.ta4j.core.indicators.helpers.LowestValueIndicator;
+import org.ta4j.core.indicators.helpers.PreviousValueIndicator;
+import org.ta4j.core.indicators.helpers.VolumeIndicator;
+import org.ta4j.core.indicators.statistics.StandardDeviationIndicator;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.rules.CrossedDownIndicatorRule;
+import org.ta4j.core.rules.CrossedUpIndicatorRule;
+import org.ta4j.core.rules.OverIndicatorRule;
+import org.ta4j.core.rules.UnderIndicatorRule;
+
+/**
+ * NumericIndicator is a "fluent decorator" for Indicator<Num>. It provides
+ * methods to create rules and other "lightweight" indicators, using a
+ * (hopefully) natural-looking and expressive series of method calls.
+ *
+ * <p>
+ * Methods like plus(), minus() and sqrt() correspond directly to methods in the
+ * {@code Num} interface. These methods create "lightweight" (not cached)
+ * indicators to add, subtract, etc. Many methods are overloaded to accept
+ * either {@code Indicator<Num>} or {@code Number} arguments.
+ *
+ * <p>
+ * Methods like sma() and ema() simply create the corresponding indicator
+ * objects, (SMAIndicator or EMAIndicator, for example) with "this" as the first
+ * argument. These methods usually instantiate cached objects.
+ *
+ * <p>
+ * Another set of methods, like crossedOver() and isGreaterThan() create Rule
+ * objects. These are also overloaded to accept both {@code Indicator<Num>} and
+ * {@code Number} arguments.
+ */
+public class NumericIndicator implements Indicator<Num> {
+
+    /**
+     * Creates a fluent NumericIndicator wrapped around a "regular" indicator.
+     *
+     * @param delegate an indicator
+     *
+     * @return a fluent NumericIndicator wrapped around the argument
+     */
+    public static NumericIndicator of(Indicator<Num> delegate) {
+        return new NumericIndicator(delegate);
+    }
+
+    /**
+     * Creates a fluent version of the ClosePriceIndicator.
+     *
+     * @return a NumericIndicator wrapped around a ClosePriceIndicator
+     */
+    public static NumericIndicator closePrice(BarSeries bs) {
+        return of(new ClosePriceIndicator(bs));
+    }
+
+    /**
+     * Creates a fluent version of the VolumeIndicator.
+     *
+     * @return a NumericIndicator wrapped around a VolumeIndicator
+     */
+    public static NumericIndicator volume(BarSeries bs) {
+        return of(new VolumeIndicator(bs));
+    }
+
+    protected final Indicator<Num> delegate;
+
+    protected NumericIndicator(Indicator<Num> delegate) {
+        this.delegate = delegate;
+    }
+
+    public Indicator<Num> delegate() {
+        return delegate;
+    }
+
+    /**
+     * @param other the other indicator
+     * @return {@code this + other}, rounded as necessary
+     */
+    public NumericIndicator plus(Indicator<Num> other) {
+        return NumericIndicator.of(BinaryOperationIndicator.sum(this, other));
+    }
+
+    /**
+     * @param n the other number
+     * @return {@code this + n}, rounded as necessary
+     */
+    public NumericIndicator plus(Number n) {
+        return plus(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return {@code this - other}, rounded as necessary
+     */
+    public NumericIndicator minus(Indicator<Num> other) {
+        return NumericIndicator.of(BinaryOperationIndicator.difference(this, other));
+    }
+
+    /**
+     * @param n the other number
+     * @return {@code this - n}, rounded as necessary
+     */
+    public NumericIndicator minus(Number n) {
+        return minus(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return {@code this * other}, rounded as necessary
+     */
+    public NumericIndicator multipliedBy(Indicator<Num> other) {
+        return NumericIndicator.of(BinaryOperationIndicator.product(this, other));
+    }
+
+    /**
+     * @param n the other number
+     * @return {@code this * n}, rounded as necessary
+     */
+    public NumericIndicator multipliedBy(Number n) {
+        return multipliedBy(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return {@code this / other}, rounded as necessary
+     */
+    public NumericIndicator dividedBy(Indicator<Num> other) {
+        return NumericIndicator.of(BinaryOperationIndicator.quotient(this, other));
+    }
+
+    /**
+     * @param n the other number
+     * @return {@code this / n}, rounded as necessary
+     */
+    public NumericIndicator dividedBy(Number n) {
+        return dividedBy(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return the smaller of {@code this} and {@code other}; if they are equal,
+     *         {@code this} is returned.
+     */
+    public NumericIndicator min(Indicator<Num> other) {
+        return NumericIndicator.of(BinaryOperationIndicator.min(this, other));
+    }
+
+    /**
+     * @param n the other number
+     * @return the smaller of {@code this} and {@code n}; if they are equal,
+     *         {@code this} is returned.
+     */
+    public NumericIndicator min(Number n) {
+        return min(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return the greater of {@code this} and {@code other}; if they are equal,
+     *         {@code this} is returned.
+     */
+    public NumericIndicator max(Indicator<Num> other) {
+        return NumericIndicator.of(BinaryOperationIndicator.max(this, other));
+    }
+
+    /**
+     * @param n the other number
+     * @return the greater of {@code this} and {@code n}; if they are equal,
+     *         {@code this} is returned.
+     */
+    public NumericIndicator max(Number n) {
+        return max(createConstant(n));
+    }
+
+    /**
+     * Returns an Indicator whose values are the absolute values of {@code this}.
+     *
+     * @return {@code abs(this)}
+     */
+    public NumericIndicator abs() {
+        return NumericIndicator.of(UnaryOperationIndicator.abs(this));
+    }
+
+    /**
+     * Returns an Indicator whose values are √(this).
+     *
+     * @return {@code √(this)}
+     */
+    public NumericIndicator sqrt() {
+        return NumericIndicator.of(UnaryOperationIndicator.sqrt(this));
+    }
+
+    /**
+     * Returns an Indicator whose values are {@code this * this}.
+     *
+     * @return {@code this * this}
+     */
+    public NumericIndicator squared() {
+        // TODO: implement pow(n); a few others
+        return this.multipliedBy(this);
+    }
+
+    /**
+     * @param barCount the time frame
+     * @return the {@link SMAIndicator} of {@code this}
+     */
+    public NumericIndicator sma(int barCount) {
+        return NumericIndicator.of(new SMAIndicator(this, barCount));
+    }
+
+    /**
+     * @param barCount the time frame
+     * @return the {@link EMAIndicator} of {@code this}
+     */
+    public NumericIndicator ema(int barCount) {
+        return NumericIndicator.of(new EMAIndicator(this, barCount));
+    }
+
+    /**
+     * @param barCount the time frame
+     * @return the {@link StandardDeviationIndicator} of {@code this}
+     */
+    public NumericIndicator stddev(int barCount) {
+        return NumericIndicator.of(new StandardDeviationIndicator(this, barCount));
+    }
+
+    /**
+     * @param barCount the time frame
+     * @return the {@link HighestValueIndicator} of {@code this}
+     */
+    public NumericIndicator highest(int barCount) {
+        return NumericIndicator.of(new HighestValueIndicator(this, barCount));
+    }
+
+    /**
+     * @param barCount the time frame
+     * @return the {@link LowestValueIndicator} of {@code this}
+     */
+    public NumericIndicator lowest(int barCount) {
+        return NumericIndicator.of(new LowestValueIndicator(this, barCount));
+    }
+
+    /**
+     * @param barCount the time frame
+     * @return the {@link PreviousValueIndicator} of {@code this}
+     */
+    public NumericIndicator previous(int barCount) {
+        return NumericIndicator.of(new PreviousValueIndicator(this, barCount));
+    }
+
+    /**
+     * @return the {@link PreviousValueIndicator} of {@code this} with
+     *         {@code barCount=1}
+     */
+    public NumericIndicator previous() {
+        return previous(1);
+    }
+
+    /**
+     * @param other the other indicator
+     * @return the {@link CrossedUpIndicatorRule} of {@code this} and {@code other}
+     */
+    public Rule crossedOver(Indicator<Num> other) {
+        return new CrossedUpIndicatorRule(this, other);
+    }
+
+    /**
+     * @param n the other number
+     * @return the {@link CrossedUpIndicatorRule} of {@code this} and {@code n}
+     */
+    public Rule crossedOver(Number n) {
+        return crossedOver(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return the {@link CrossedDownIndicatorRule} of {@code this} and
+     *         {@code other}
+     */
+    public Rule crossedUnder(Indicator<Num> other) {
+        return new CrossedDownIndicatorRule(this, other);
+    }
+
+    /**
+     * @param n the other number
+     * @return the {@link CrossedDownIndicatorRule} of {@code this} and {@code n}
+     */
+    public Rule crossedUnder(Number n) {
+        return crossedUnder(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return the {@link OverIndicatorRule} of {@code this} and {@code other}
+     */
+    public Rule isGreaterThan(Indicator<Num> other) {
+        return new OverIndicatorRule(this, other);
+    }
+
+    /**
+     * @param n the other number
+     * @return the {@link OverIndicatorRule} of {@code this} and {@code n}
+     */
+    public Rule isGreaterThan(Number n) {
+        return isGreaterThan(createConstant(n));
+    }
+
+    /**
+     * @param other the other indicator
+     * @return the {@link UnderIndicatorRule} of {@code this} and {@code other}
+     */
+    public Rule isLessThan(Indicator<Num> other) {
+        return new UnderIndicatorRule(this, other);
+    }
+
+    /**
+     * @param n the other number
+     * @return the {@link UnderIndicatorRule} of {@code this} and {@code n}
+     */
+    public Rule isLessThan(Number n) {
+        return isLessThan(createConstant(n));
+    }
+
+    private Indicator<Num> createConstant(Number n) {
+        return new ConstantIndicator<>(getBarSeries(), getBarSeries().numFactory().numOf(n));
+    }
+
+    @Override
+    public Num getValue(int index) {
+        return delegate.getValue(index);
+    }
+
+    @Override
+    public int getCountOfUnstableBars() {
+        return 0;
+    }
+
+    @Override
+    public BarSeries getBarSeries() {
+        return delegate.getBarSeries();
+    }
+
+    @Override
+    public String toString() {
+        return delegate.toString();
+    }
+
+}
+
+
+Use only classes, constructors and methods that appear in the class source above or in the dependency signatures below. Do not use APIs from other versions of this library. Construct real objects through the constructors or factory methods shown instead of mocking; do not mock or subclass abstract classes or interfaces of this library.
+
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+  default boolean isStable();
+   int getCountOfUnstableBars();
+   BarSeries getBarSeries();
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+  default String toJson();
+  default ComponentDescriptor toDescriptor();
+  static Indicator<?> fromJson(BarSeries series, String json);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.Rule
+public interface Rule {
+  default String toJson();
+  static Rule fromJson(BarSeries series, String json);
+  default Rule and(Rule rule);
+  default Rule or(Rule rule);
+  default Rule xor(Rule rule);
+  default Rule negation();
+  default boolean isSatisfied(int index);
+   boolean isSatisfied(int index, TradingRecord tradingRecord);
+  default void setName(String name);
+  default String getName();
+}
+
+// public API of org.ta4j.core.indicators.averages.EMAIndicator
+public class EMAIndicator extends AbstractEMAIndicator {
+  public EMAIndicator(Indicator<Num> indicator, int barCount);
+  public int getCountOfUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.averages.SMAIndicator
+public class SMAIndicator extends CachedIndicator<Num> {
+  public SMAIndicator(Indicator<Num> indicator, int barCount);
+  protected Num calculate(int index);
+  public int getCountOfUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.ClosePriceIndicator
+public class ClosePriceIndicator extends AbstractIndicator<Num> {
+  public ClosePriceIndicator(BarSeries series);
+  public Num getValue(int index);
+  public int getCountOfUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.helpers.ConstantIndicator
+public class ConstantIndicator<T> extends AbstractIndicator<T> {
+  public ConstantIndicator(BarSeries series, T t);
+  public T getValue(int index);
+  public int getCountOfUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.HighestValueIndicator
+public class HighestValueIndicator extends CachedIndicator<Num> {
+  public HighestValueIndicator(Indicator<Num> indicator, int barCount);
+  public Num calculate(int index);
+  public int getCountOfUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.LowestValueIndicator
+public class LowestValueIndicator extends CachedIndicator<Num> {
+  public LowestValueIndicator(Indicator<Num> indicator, int barCount);
+  public Num calculate(int index);
+  public int getCountOfUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.PreviousValueIndicator
+public class PreviousValueIndicator extends CachedIndicator<Num> {
+  public PreviousValueIndicator(Indicator<Num> indicator);
+  public PreviousValueIndicator(Indicator<Num> indicator, int n);
+  protected Num calculate(int index);
+  public int getCountOfUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.VolumeIndicator
+public class VolumeIndicator extends CachedIndicator<Num> {
+  public VolumeIndicator(BarSeries series);
+  public VolumeIndicator(BarSeries series, int barCount);
+  protected Num calculate(int index);
+  public int getCountOfUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.statistics.StandardDeviationIndicator
+public class StandardDeviationIndicator extends CachedIndicator<Num> {
+  public StandardDeviationIndicator(Indicator<Num> indicator, int barCount);
+  protected Num calculate(int index);
+  public int getCountOfUnstableBars();
+}
+
+// public API of org.ta4j.core.rules.CrossedDownIndicatorRule
+public class CrossedDownIndicatorRule extends AbstractRule {
+  public CrossedDownIndicatorRule(Indicator<Num> indicator, Number threshold);
+  public CrossedDownIndicatorRule(Indicator<Num> indicator, Num threshold);
+  public CrossedDownIndicatorRule(Indicator<Num> first, Indicator<Num> second);
+  public boolean isSatisfied(int index, TradingRecord tradingRecord);
+  public Indicator<Num> getLow();
+  public Indicator<Num> getUp();
+}
+
+// public API of org.ta4j.core.rules.CrossedUpIndicatorRule
+public class CrossedUpIndicatorRule extends AbstractRule {
+  public CrossedUpIndicatorRule(Indicator<Num> indicator, Number threshold);
+  public CrossedUpIndicatorRule(Indicator<Num> indicator, Num threshold);
+  public CrossedUpIndicatorRule(Indicator<Num> first, Indicator<Num> second);
+  public boolean isSatisfied(int index, TradingRecord tradingRecord);
+  public Indicator<Num> getLow();
+  public Indicator<Num> getUp();
+}
+
+.

@@ -1,0 +1,105 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:265: error: method zero() is already defined in class SimpleNumFactory
+        @Override public Num zero() { return zero(); }
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:266: error: method one() is already defined in class SimpleNumFactory
+        @Override public Num one() { return one(); }
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:65: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.add(((SimpleNum) augend).value), factory);
+                                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:70: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.subtract(((SimpleNum) subtrahend).value), factory);
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:75: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.multiply(((SimpleNum) multiplicand).value), factory);
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:80: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.divide(((SimpleNum) divisor).value, BigDecimal.ROUND_HALF_EVEN), factory);
+                                       ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:85: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.remainder(((SimpleNum) divisor).value), factory);
+                                          ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:90: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.setScale(0, BigDecimal.ROUND_FLOOR), factory);
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:95: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.setScale(0, BigDecimal.ROUND_CEILING), factory);
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:100: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.pow(n), factory);
+                                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:105: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.pow(((SimpleNum) n).value.intValue()), factory);
+                                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:125: error: incompatible types: BigDecimal cannot be converted to double
+            return of(new BigDecimal(Math.sqrt(this.value.doubleValue()), mathContext), factory);
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:130: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.abs(), factory);
+                                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:135: error: incompatible types: BigDecimal cannot be converted to double
+            return of(this.value.negate(), factory);
+                                       ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:245: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:254: error: numOf(Number) in SimpleNumFactory cannot implement numOf(Number) in NumFactory
+        SimpleNum numOf(Number number) {
+                  ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:250: error: one() in SimpleNumFactory cannot implement one() in NumFactory
+        SimpleNum one() {
+                  ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:246: error: zero() in SimpleNumFactory cannot implement zero() in NumFactory
+        SimpleNum zero() {
+                  ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:262: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(double value) { return numOf(Double.valueOf(value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:263: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(int value) { return numOf(Integer.valueOf(value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:264: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(long value) { return numOf(Long.valueOf(value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:316: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:322: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:323: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:340: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:348: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:466: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:470: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+28 errors

@@ -1,0 +1,28 @@
+{
+  "index": 83,
+  "sha": "f22a35ee75c9a77ecc1c48759a17e23085be637a",
+  "parent": "47a08bcd990ae4ff851ac9ce948fc71734efdf5b",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java": [
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java": [
+      57
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java": [
+      49,
+      50,
+      55,
+      65
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java": [
+      49,
+      50,
+      55,
+      65
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\nindex 4a0324107..4a61839a3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\n@@ -30,0 +31 @@ import org.ta4j.core.indicators.adx.PlusDIIndicator;\n+import org.ta4j.core.num.Num;\n@@ -34,0 +36 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n+    private static final double DEFAULT_STRENGTH_THRESHOLD = 25;\n@@ -38,0 +41 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n+    private final Num strengthThreshold;\n@@ -45,0 +49,4 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n+        this(series, unstableBars, DEFAULT_STRENGTH_THRESHOLD);\n+    }\n+\n+    public DownTrendIndicator(final BarSeries series, int unstableBars, double strengthThreshold) {\n@@ -47,0 +55 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n+        this.strengthThreshold = getBarSeries().numFactory().numOf(strengthThreshold);\n@@ -57 +65 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n-        return this.directionStrengthIndicator.getValue(index).isGreaterThan(getBarSeries().numFactory().numOf(25))\n+        return this.directionStrengthIndicator.getValue(index).isGreaterThan(strengthThreshold)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\nindex cba8ad2dc..b258e2763 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\n@@ -30,0 +31 @@ import org.ta4j.core.indicators.adx.PlusDIIndicator;\n+import org.ta4j.core.num.Num;\n@@ -34,0 +36 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n+    private static final double DEFAULT_STRENGTH_THRESHOLD = 25;\n@@ -38,0 +41 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n+    private final Num strengthThreshold;\n@@ -45,0 +49,4 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n+        this(series, unstableBars, DEFAULT_STRENGTH_THRESHOLD);\n+    }\n+\n+    public UpTrendIndicator(final BarSeries series, int unstableBars, double strengthThreshold) {\n@@ -47,0 +55 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n+        this.strengthThreshold = getBarSeries().numFactory().numOf(strengthThreshold);\n@@ -57 +65 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n-        return this.directionStrengthIndicator.getValue(index).isGreaterThan(getBarSeries().numFactory().numOf(25))\n+        return this.directionStrengthIndicator.getValue(index).isGreaterThan(strengthThreshold)"
+}

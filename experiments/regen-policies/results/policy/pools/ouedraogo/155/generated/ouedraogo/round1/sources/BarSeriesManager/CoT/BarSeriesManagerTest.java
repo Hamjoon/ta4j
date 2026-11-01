@@ -1,0 +1,370 @@
+package org.ta4j.core.backtest;
+import org.ta4j.core.serialization.ComponentDescriptor;
+import org.ta4j.core.Trade;
+
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.BaseTradingRecord.Trade;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Position;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.NumFactory;
+
+/**
+ * JUnit‑4 test suite for {@link BarSeriesManager}.
+ *
+ * The tests cover:
+ * <ul>
+ *   <li>All public constructors and getters.</li>
+ *   <li>All overloaded {@code run(...)} methods with normal parameters.</li>
+ *   <li>Edge cases such as out‑of‑range indexes, empty series and {@code null}
+ *       strategy arguments.</li>
+ *   <li>Correct handling of the closing‑position logic that is executed after
+ *       the run end index.</li>
+ * </ul>
+ *
+ * The test uses only concrete classes that exist in the Ta4j library
+ * (e.g. {@link BaseBarSeries}, {@link BaseBar}, {@link ZeroCostModel},
+ * {@link BaseTradingRecord}) and simple in‑line implementations of the
+ * {@link Strategy} and {@link TradeExecutionModel} interfaces.
+ */
+public class BarSeriesManagerTest {
+
+    /* --------------------------------------------------------------------- *
+     *  Helper objects used by many test cases                               *
+     * --------------------------------------------------------------------- */
+
+    private BarSeries series;
+    private NumFactory numFactory;
+
+    /** A very simple {@link Strategy} that always wants to operate. */
+    private static class AlwaysOperateStrategy implements Strategy {
+
+        private final String name = "AlwaysOperate";
+
+        @Override
+        public String getName() {
+            return name;
+        }
+
+        @Override
+        public org.ta4j.core.Rule getEntryRule() {
+            return null;
+        }
+
+        @Override
+        public org.ta4j.core.Rule getExitRule() {
+            return null;
+        }
+
+        @Override
+        public Strategy and(Strategy strategy) {
+            return this;
+        }
+
+        @Override
+        public Strategy or(Strategy strategy) {
+            return this;
+        }
+
+        @Override
+        public Strategy and(String name, Strategy strategy, int unstableBars) {
+            return this;
+        }
+
+        @Override
+        public Strategy or(String name, Strategy strategy, int unstableBars) {
+            return this;
+        }
+
+        @Override
+        public Strategy opposite() {
+            return this;
+        }
+
+        @Override
+        public void setUnstableBars(int unstableBars) {
+        }
+
+        @Override
+        public int getUnstableBars() {
+            return 0;
+        }
+
+        @Override
+        public boolean isUnstableAt(int index) {
+            return false;
+        }
+
+        /**
+         * Overrides the default implementation so that the manager will try to
+         * open/close a position on *every* index.
+         */
+        @Override
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+            return true;
+        }
+
+        @Override
+        public String toJson() {
+            return "{}";
+        }
+
+        @Override
+        public org.ta4j.core.ComponentDescriptor toDescriptor() {
+            return null;
+        }
+    }
+
+    /**
+     * A {@link TradeExecutionModel} that simply alternates between entry and
+     * exit operations. It uses the supplied {@code amount} both as price and as
+     * amount – the exact values are irrelevant for the logic we want to test.
+     */
+    private static class AlternatingExecutionModel implements TradeExecutionModel {
+
+        @Override
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+            // If there is no open position, we enter; otherwise we exit.
+            if (tradingRecord.getCurrentPosition() == null
+                    || tradingRecord.getCurrentPosition().isClosed()) {
+                tradingRecord.enter(index, amount, amount);
+            } else {
+                tradingRecord.exit(index, amount, amount);
+            }
+        }
+    }
+
+    /** Builds a tiny series with three bars (prices 1, 2, 3). */
+    private static BarSeries createThreeBarSeries() {
+        BaseBarSeries series = new BaseBarSeries("test-series");
+        NumFactory nf = series.numFactory();
+        // Bar(time, open, high, low, close, volume)
+        series.addBar(new BaseBar(1, nf.numOf(1), nf.numOf(1), nf.numOf(1), nf.numOf(1), nf.numOf(1)));
+        series.addBar(new BaseBar(2, nf.numOf(2), nf.numOf(2), nf.numOf(2), nf.numOf(2), nf.numOf(2)));
+        series.addBar(new BaseBar(3, nf.numOf(3), nf.numOf(3), nf.numOf(3), nf.numOf(3), nf.numOf(3)));
+        return series;
+    }
+
+    @Before
+    public void setUp() {
+        series = createThreeBarSeries();
+        numFactory = series.numFactory();
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  1️⃣  Public constructor & getter tests                                 *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testConstructorWithDefaults() {
+        BarSeriesManager manager = new BarSeriesManager(series);
+        assertSame(series, manager.getBarSeries());
+        assertTrue(manager.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(manager.getHoldingCostModel() instanceof ZeroCostModel);
+    }
+
+    @Test
+    public void testConstructorWithCustomExecutionModel() {
+        TradeExecutionModel execModel = new AlternatingExecutionModel();
+        BarSeriesManager manager = new BarSeriesManager(series, execModel);
+        assertSame(series, manager.getBarSeries());
+        // cost models should still be the default ZeroCostModel
+        assertTrue(manager.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(manager.getHoldingCostModel() instanceof ZeroCostModel);
+    }
+
+    @Test
+    public void testConstructorWithCostModels() {
+        CostModel tx = new ZeroCostModel();
+        CostModel hold = new ZeroCostModel();
+        BarSeriesManager manager = new BarSeriesManager(series, tx, hold);
+        assertSame(tx, manager.getTransactionCostModel());
+        assertSame(hold, manager.getHoldingCostModel());
+    }
+
+    @Test
+    public void testFullConstructor() {
+        CostModel tx = new ZeroCostModel();
+        CostModel hold = new ZeroCostModel();
+        TradeExecutionModel exec = new AlternatingExecutionModel();
+        BarSeriesManager manager = new BarSeriesManager(series, tx, hold, exec);
+        assertSame(series, manager.getBarSeries());
+        assertSame(tx, manager.getTransactionCostModel());
+        assertSame(hold, manager.getHoldingCostModel());
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  2️⃣  Basic run(...) tests (happy path)                                 *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunWithOnlyStrategy() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        TradingRecord record = manager.run(strategy);
+        // With three bars we expect one entry on index 0 and one exit on index 1,
+        // then a second entry on index 2 (cannot be closed because series ends).
+        List<Position> positions = record.getPositions();
+        assertEquals(2, positions.size());
+
+        // first position should be closed
+        assertTrue(positions.get(0).isClosed());
+
+        // second position should be open (not closed)
+        assertFalse(positions.get(1).isClosed());
+
+        // the record's start/end indexes must match the series bounds
+        assertEquals(Integer.valueOf(series.getBeginIndex()), record.getStartIndex());
+        assertEquals(Integer.valueOf(series.getEndIndex()), record.getEndIndex());
+    }
+
+    @Test
+    public void testRunWithStartAndFinishIndexes() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        // Run only on the middle bar (index 1)
+        TradingRecord record = manager.run(strategy, 1, 1);
+        List<Position> positions = record.getPositions();
+
+        // With a single index we can only open one position, it stays open
+        assertEquals(1, positions.size());
+        assertFalse(positions.get(0).isClosed());
+
+        // start/end indexes must be clamped to the requested range
+        assertEquals(Integer.valueOf(1), record.getStartIndex());
+        assertEquals(Integer.valueOf(1), record.getEndIndex());
+    }
+
+    @Test
+    public void testRunWithCustomTradeTypeAndAmount() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+        Num amount = numFactory.numOf(10);
+
+        TradingRecord record = manager.run(strategy, TradeType.SELL, amount);
+        // Same logical flow as the default test – only the trade type differs.
+        List<Position> positions = record.getPositions();
+        assertEquals(2, positions.size());
+        // First position opened with SELL type
+        assertEquals(TradeType.SELL, positions.get(0).getEntry().getType());
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  3️⃣  Edge‑case & exception tests                                      *
+     * --------------------------------------------------------------------- */
+
+    @Test(expected = NullPointerException.class)
+    public void testRunWithNullStrategyShouldThrow() {
+        BarSeriesManager manager = new BarSeriesManager(series);
+        manager.run(null);
+    }
+
+    @Test
+    public void testRunWhenStartIndexIsBelowSeriesBegin() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        // startIndex = -5 (well before the series) – should be clamped to 0
+        TradingRecord record = manager.run(strategy, -5, series.getEndIndex());
+        assertEquals(Integer.valueOf(series.getBeginIndex()), record.getStartIndex());
+    }
+
+    @Test
+    public void testRunWhenFinishIndexIsAboveSeriesEnd() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        // finishIndex beyond the series size – should be clamped to series.getEndIndex()
+        TradingRecord record = manager.run(strategy, series.getBeginIndex(), 999);
+        assertEquals(Integer.valueOf(series.getEndIndex()), record.getEndIndex());
+    }
+
+    @Test
+    public void testRunWithEmptySeries() {
+        BarSeries emptySeries = new BaseBarSeries("empty");
+        BarSeriesManager manager = new BarSeriesManager(emptySeries, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        TradingRecord record = manager.run(strategy);
+        // No bars → no positions, start/end indexes are null
+        assertTrue(record.getPositions().isEmpty());
+        assertNull(record.getStartIndex());
+        assertNull(record.getEndIndex());
+    }
+
+    @Test
+    public void testRunClosesLastOpenPositionWhenSeriesContinuesBeyondEndIndex() {
+        // Build a series with 5 bars but ask the manager to run only on the first 3.
+        BaseBarSeries longSeries = new BaseBarSeries("long");
+        NumFactory nf = longSeries.numFactory();
+        for (int i = 1; i <= 5; i++) {
+            longSeries.addBar(new BaseBar(i, nf.numOf(i), nf.numOf(i), nf.numOf(i), nf.numOf(i), nf.numOf(i)));
+        }
+
+        BarSeriesManager manager = new BarSeriesManager(longSeries, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        // Run only on indexes 0..2; the execution model will open a position on 0,
+        // close it on 1, open a second one on 2, and then the manager should try
+        // to close that second position on index 3 (first bar after the run).
+        TradingRecord record = manager.run(strategy, TradeType.BUY, longSeries.numFactory().one(), 0, 2);
+        List<Position> positions = record.getPositions();
+
+        // Expect three positions:
+        // 0 – closed, 1 – closed, 2 – closed (closed by the post‑run attempt)
+        assertEquals(3, positions.size());
+        assertTrue(positions.get(0).isClosed());
+        assertTrue(positions.get(1).isClosed());
+        assertTrue(positions.get(2).isClosed());
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  4️⃣  Verification of getter consistency after runs                  *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testGettersAfterRunRemainConsistent() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+
+        manager.run(strategy);
+        // Getters should still return the original objects
+        assertSame(series, manager.getBarSeries());
+        assertTrue(manager.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(manager.getHoldingCostModel() instanceof ZeroCostModel);
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  5️⃣  Verify that the manager respects a custom amount               *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunUsesProvidedAmount() {
+        BarSeriesManager manager = new BarSeriesManager(series, new AlternatingExecutionModel());
+        Strategy strategy = new AlwaysOperateStrategy();
+        Num customAmount = numFactory.numOf(42);
+
+        TradingRecord record = manager.run(strategy, TradeType.BUY, customAmount);
+        Position firstPos = record.getPositions().get(0);
+        // The entry trade amount must be the amount we passed.
+        assertEquals(customAmount, firstPos.getEntry().getAmount());
+    }
+}

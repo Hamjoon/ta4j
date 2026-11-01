@@ -1,0 +1,189 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:14: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:19: error: cannot find symbol
+import org.ta4j.core.BasicTradingRecord;
+                    ^
+  symbol:   class BasicTradingRecord
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:48: error: cannot find symbol
+    private Num one;
+            ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:49: error: cannot find symbol
+    private Num two;
+            ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:50: error: cannot find symbol
+    private Num three;
+            ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:246: error: cannot find symbol
+    private Position createClosedPosition(Integer entryIdx, Integer exitIdx, TradeType type) {
+                                                                             ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:66: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now,
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:71: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.plusDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:76: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.plusDays(2),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:98: error: cannot find symbol
+        Num raw = series.numOf(10);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:99: error: cannot find symbol
+        Num cost = series.numOf(2);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:100: error: cannot find symbol
+        Num result = CashFlow.addCost(raw, cost, true);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:107: error: cannot find symbol
+        Num raw = series.numOf(10);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:108: error: cannot find symbol
+        Num cost = series.numOf(2);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:109: error: cannot find symbol
+        Num result = CashFlow.addCost(raw, cost, false);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:115: error: cannot find symbol
+        Position pos = createClosedPosition(0, 2, TradeType.BUY);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:123: error: cannot find symbol
+        Position pos = createClosedPosition(0, 2, TradeType.SELL);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:131: error: cannot find symbol
+        Position pos = createClosedPosition(0, null, TradeType.BUY); // open position
+                                                     ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:144: error: cannot find symbol
+        Position pos = createClosedPosition(0, 2, TradeType.BUY);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:151: error: cannot find symbol
+        Num expectedIdx1 = one.multipliedBy(series.numOf(110).dividedBy(series.numOf(100)));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:155: error: cannot find symbol
+        Num expectedIdx2 = one.multipliedBy(series.numOf(120).dividedBy(series.numOf(100)));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:162: error: cannot find symbol
+        Position pos = createClosedPosition(0, 2, TradeType.SELL);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:171: error: cannot find symbol
+        Num expectedIdx1 = one.multipliedBy(series.numOf(2).minus(series.numOf(110).dividedBy(series.numOf(100))));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:175: error: cannot find symbol
+        Num expectedIdx2 = one.multipliedBy(series.numOf(2).minus(series.numOf(120).dividedBy(series.numOf(100))));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:182: error: cannot find symbol
+        Position openPos = createClosedPosition(0, null, TradeType.BUY);
+                                                         ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:189: error: cannot find symbol
+        TradingRecord record = new BasicTradingRecord(TradeType.BUY);
+                                   ^
+  symbol:   class BasicTradingRecord
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:189: error: cannot find symbol
+        TradingRecord record = new BasicTradingRecord(TradeType.BUY);
+                                                      ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:206: error: cannot find symbol
+        Num afterClosed = one.multipliedBy(series.numOf(110).dividedBy(series.numOf(100)));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:218: error: cannot find symbol
+        Position pos = createClosedPosition(0, 1, TradeType.BUY);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:227: error: cannot find symbol
+        Position pos = createClosedPosition(0, 1, TradeType.BUY);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:252: error: cannot find symbol
+            TradeType exitType = (type == TradeType.BUY) ? TradeType.SELL : TradeType.BUY;
+            ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:252: error: cannot find symbol
+            TradeType exitType = (type == TradeType.BUY) ? TradeType.SELL : TradeType.BUY;
+                                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:252: error: cannot find symbol
+            TradeType exitType = (type == TradeType.BUY) ? TradeType.SELL : TradeType.BUY;
+                                                           ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:252: error: cannot find symbol
+            TradeType exitType = (type == TradeType.BUY) ? TradeType.SELL : TradeType.BUY;
+                                                                            ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+35 errors

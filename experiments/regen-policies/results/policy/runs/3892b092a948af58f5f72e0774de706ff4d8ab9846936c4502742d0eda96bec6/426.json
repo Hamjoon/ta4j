@@ -1,0 +1,932 @@
+{
+  "index": 426,
+  "sha": "e869f8b50bdb0359d60df3839fbfc400d75284f4",
+  "status": "evaluated",
+  "imported": true,
+  "methods": [
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowSize",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowSize",
+      "body_hash": "cd610f27e407f9cc603e7dd6631bc31aabd07d80e0c734cc96187795a77643c0",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowSize"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowSize",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSize"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "getBarSeriesReturnsDefensiveSnapshots",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#getBarSeriesReturnsDefensiveSnapshots",
+      "body_hash": "d2e47cdff9972f2c4ec850f21907312bc3907b950216f72f2646e43900e4c0e0",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#getBarSeriesReturnsDefensiveSnapshots"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#getBarSeriesReturnsDefensiveSnapshots",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|getBarSeriesReturnsDefensiveSnapshots"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowBuyWithOnlyOnePosition",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyWithOnlyOnePosition",
+      "body_hash": "6be0a1414dd61db5952341eee5ae56c108fcd76abce6685de70711eec91c632b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyWithOnlyOnePosition"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyWithOnlyOnePosition",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowBuyWithOnlyOnePosition"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowRealizedKeepsEntryValueUntilExit",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowRealizedKeepsEntryValueUntilExit",
+      "body_hash": "f64b51c1692bfd5888fd7bfa4ce7bc7c520f3ad62ea3869439c255b9c259f1fc",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowRealizedKeepsEntryValueUntilExit"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowRealizedKeepsEntryValueUntilExit",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowRealizedKeepsEntryValueUntilExit"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowRealizedIgnoresOpenPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowRealizedIgnoresOpenPositions",
+      "body_hash": "7a7a6e2f5df389f08d0155506647b252d37aa060ced80576a2e04bc037cfb203",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowRealizedIgnoresOpenPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowRealizedIgnoresOpenPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowRealizedIgnoresOpenPositions"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowMarkToMarketOpenPositionRespectsFinalIndexAndPadsAfterwards",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketOpenPositionRespectsFinalIndexAndPadsAfterwards",
+      "body_hash": "f1da965aec4a52c46e5180258a6d1067129d589a5923cc298c2a5a232e340606",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketOpenPositionRespectsFinalIndexAndPadsAfterwards"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketOpenPositionRespectsFinalIndexAndPadsAfterwards",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowMarkToMarketOpenPositionRespectsFinalIndexAndPadsAfterwards"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowWindowedMarkToMarketSeedsWindowStartForOpenPosition",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowWindowedMarkToMarketSeedsWindowStartForOpenPosition",
+      "body_hash": "3476cbf350da54b775de998e42609edefafd5d247253fd8bfbb52bc10af0219b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowWindowedMarkToMarketSeedsWindowStartForOpenPosition"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowWindowedMarkToMarketSeedsWindowStartForOpenPosition",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWindowedMarkToMarketSeedsWindowStartForOpenPosition"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowWindowedRealizedKeepsWindowStartFlatForOpenPosition",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowWindowedRealizedKeepsWindowStartFlatForOpenPosition",
+      "body_hash": "fe6473bfd413bab59b3e2d6a817439f6aa1794721b1391f0389ee7ae3bd0c936",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowWindowedRealizedKeepsWindowStartFlatForOpenPosition"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowWindowedRealizedKeepsWindowStartFlatForOpenPosition",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWindowedRealizedKeepsWindowStartFlatForOpenPosition"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowMarkToMarketCanIgnoreOpenPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketCanIgnoreOpenPositions",
+      "body_hash": "9337c88e83f08113a7c240690cabbcd3914f76bcd94dcbd936cb6d416c121724",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketCanIgnoreOpenPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketCanIgnoreOpenPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowMarkToMarketCanIgnoreOpenPositions"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowMarkToMarketIncludesOpenPositionsByDefault",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketIncludesOpenPositionsByDefault",
+      "body_hash": "86f2bc1599e98d96659b7a0f1772f5834293c3e83b5dafca78df37050d24214f",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketIncludesOpenPositionsByDefault"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketIncludesOpenPositionsByDefault",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowMarkToMarketIncludesOpenPositionsByDefault"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowWithSellAndBuyTrades",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowWithSellAndBuyTrades",
+      "body_hash": "c1d8ad044303a5232fd9d8c2be2188253e2fc5b5d888a93eb76a44adbbceb3f5",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowWithSellAndBuyTrades"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowWithSellAndBuyTrades",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWithSellAndBuyTrades"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowSell",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowSell",
+      "body_hash": "f26e4b4bceac158e2bf65d8a5f042bb753a893f389aa217e09c372e65e8a717a",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowSell"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowSell",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowSell"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSell",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSell",
+      "body_hash": "11ca86e1bb8504127654473fb2512a719d7744e10be1628138f366db9b9ccec9",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSell"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSell",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSell"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWith20PercentGain",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentGain",
+      "body_hash": "a64b7afca6219a9a88e3793384950a9bbb5fa16eea01470d9f5cdf5b0cbf1bb1",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentGain"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentGain",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentGain"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWith20PercentLoss",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentLoss",
+      "body_hash": "dcd88e9999371c1c9751eb276bd3448111edea90493efc679fa06c06a48d695a",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentLoss"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith20PercentLoss",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith20PercentLoss"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWith100PercentLoss",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith100PercentLoss",
+      "body_hash": "a9f4498c5866d4a212dfd497953021fa5606a030403a5e8e56c1381a8e9ae00d",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith100PercentLoss"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWith100PercentLoss",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWith100PercentLoss"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellWithOver100PercentLoss",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWithOver100PercentLoss",
+      "body_hash": "080255fbe7523a3e2fd2f39660d3ea6b92ef38468d8820d39996f82dacb00a7f",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWithOver100PercentLoss"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellWithOver100PercentLoss",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellWithOver100PercentLoss"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowShortSellBigLossWithNegativeCashFlow",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellBigLossWithNegativeCashFlow",
+      "body_hash": "29087d8d3aac27ea415a34a19cb41dbe2d0aebcc40df48faaaa7e465132996ac",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellBigLossWithNegativeCashFlow"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowShortSellBigLossWithNegativeCashFlow",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowShortSellBigLossWithNegativeCashFlow"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithOnlyOnePositionAndAGapBefore",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapBefore",
+      "body_hash": "66b186bc1149d044ea69bc3a21e2c1880c548052a71c46ec9d853ca495903599",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapBefore"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapBefore",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapBefore"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithOnlyOnePositionAndAGapAfter",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapAfter",
+      "body_hash": "2757fb2f6385311fe975339abf1e44c91eb03a0e601c8ef52c6ea914f8a31373",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapAfter"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithOnlyOnePositionAndAGapAfter",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithOnlyOnePositionAndAGapAfter"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+      "body_hash": "38d85b0e4a9ee685c707cbfd69981639fe117667f21d698ee0732bd66a039cb0",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithTwoPositionsAndLongTimeWithoutTrades"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValue",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowValue",
+      "body_hash": "e72c428c46c13c393fa35de64432f7c25569c2f34270bac2f032cb7fc16ef0f9",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValue"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowValue",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValue"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowValueWithNoPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithNoPositions",
+      "body_hash": "3bedcc705605155de2ecf57684875931785996570eaa4a23c7ad9038ed345268",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithNoPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowValueWithNoPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowValueWithNoPositions"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowWithZeroCostsProducesConsistentValuesForCompressedSeries",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowWithZeroCostsProducesConsistentValuesForCompressedSeries",
+      "body_hash": "652298281c73e76b8240e9ae4bba5d808cc1181c8586b8f40ec6970b6a205f29",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowWithZeroCostsProducesConsistentValuesForCompressedSeries"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowWithZeroCostsProducesConsistentValuesForCompressedSeries",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowWithZeroCostsProducesConsistentValuesForCompressedSeries"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "reallyLongCashFlow",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#reallyLongCashFlow",
+      "body_hash": "50a53b5ccb8db2d179cc3a5a4a649cf26e223c80a0665fe47442fa86915c79c0",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#reallyLongCashFlow"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#reallyLongCashFlow",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|reallyLongCashFlow"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowBuyExitSameBarShouldNotReturnNaN",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyExitSameBarShouldNotReturnNaN",
+      "body_hash": "8a60a0b1adbcdce3a5c2af3c124a9f808dee8877f01b48c4ed4a7c562aa65c88",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyExitSameBarShouldNotReturnNaN"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowBuyExitSameBarShouldNotReturnNaN",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowBuyExitSameBarShouldNotReturnNaN"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowIgnoresOpenPositionWhenConfigured",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowIgnoresOpenPositionWhenConfigured",
+      "body_hash": "13badfd20e49947dbc14e9e1b730a3d25937578bea8d0376f966ead2db08ce52",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowIgnoresOpenPositionWhenConfigured"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowIgnoresOpenPositionWhenConfigured",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowIgnoresOpenPositionWhenConfigured"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowFromPositionUsesMarkToMarketCurve",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionUsesMarkToMarketCurve",
+      "body_hash": "73805e45a94d419d1174a25cfe90c2293695b28209194cf6b257d218f8774d16",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionUsesMarkToMarketCurve"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionUsesMarkToMarketCurve",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowFromPositionUsesMarkToMarketCurve"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowFromPositionPreservesCostModels",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionPreservesCostModels",
+      "body_hash": "9a53261f7325f49695f538fdd756013ebab20acc79b16dc222b74bd841e7c6ca",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionPreservesCostModels"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionPreservesCostModels",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowFromPositionPreservesCostModels"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowFromPositionUsesRealizedCurve",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionUsesRealizedCurve",
+      "body_hash": "5cb43d7ca8d21c2e8380d46c9850008df61d4bc71e546968e8bd5b0cd960f940",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionUsesRealizedCurve"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowFromPositionUsesRealizedCurve",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowFromPositionUsesRealizedCurve"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowMarkToMarketDoesNotUseFutureExitPriceWhenExitAfterFinalIndex",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketDoesNotUseFutureExitPriceWhenExitAfterFinalIndex",
+      "body_hash": "74294edb67745dcf167205113c162be499e5ef2c9690c51f94cc88f34cb4655f",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketDoesNotUseFutureExitPriceWhenExitAfterFinalIndex"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowMarkToMarketDoesNotUseFutureExitPriceWhenExitAfterFinalIndex",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowMarkToMarketDoesNotUseFutureExitPriceWhenExitAfterFinalIndex"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowIgnoreSkipsPositionsThatAreOpenAtFinalIndex",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowIgnoreSkipsPositionsThatAreOpenAtFinalIndex",
+      "body_hash": "60603e1cd200153a4adda9b401081ce82fa2846ff041d4f70304a4e7bd8ba0b3",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowIgnoreSkipsPositionsThatAreOpenAtFinalIndex"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowIgnoreSkipsPositionsThatAreOpenAtFinalIndex",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowIgnoreSkipsPositionsThatAreOpenAtFinalIndex"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlowTest",
+      "method": "cashFlowIncludesMultipleOpenLotsFromBaseTradingRecord",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java",
+      "id": "org.ta4j.core.analysis.CashFlowTest#cashFlowIncludesMultipleOpenLotsFromBaseTradingRecord",
+      "body_hash": "c999bd843067bfc2d173c1139e3b664da514df9d6944d474b733152ec28a18a5",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "055a6d9e2db1cd3090f92420fd4b59f84d8fa6647981436696af5c519f87c863",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.analysis.CashFlowTest#cashFlowIncludesMultipleOpenLotsFromBaseTradingRecord"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "3892b092a948af58f5f72e0774de706ff4d8ab9846936c4502742d0eda96bec6",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.analysis.CashFlowTest#cashFlowIncludesMultipleOpenLotsFromBaseTradingRecord",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/analysis/CashFlowTest.java|org.ta4j.core.analysis.CashFlowTest|cashFlowIncludesMultipleOpenLotsFromBaseTradingRecord"
+    }
+  ]
+}

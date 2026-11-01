@@ -1,0 +1,49 @@
+{
+  "index": 315,
+  "sha": "5a31ee4315bf3e3c166c7d9b92837f8df64b4bfe",
+  "parent": "e2d0ba08243f1c8abf9a69f41037421f7382e8fd",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      464,
+      589
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      463,
+      464,
+      467,
+      585,
+      594,
+      600,
+      601,
+      602,
+      649,
+      650,
+      651,
+      652,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      662,
+      663,
+      664,
+      665,
+      666,
+      668,
+      669,
+      670,
+      672,
+      673,
+      674,
+      676,
+      1083,
+      1084,
+      1085
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 5acfc66cc..bf617fec9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -462,0 +463,3 @@ public final class ElliottWaveAnalysisRunner {\n+        final MacroPivotGraph macroPivotGraph = buildMacroPivotGraph(series, baseAnalysis);\n+        final List<CanonicalLegCandidate> historicalCanonicalCandidates = buildHistoricalCanonicalLegCandidates(series,\n+                macroPivotGraph);\n@@ -464 +467 @@ public final class ElliottWaveAnalysisRunner {\n-                candidates, baseAnalysis.processedSwings(), endIndex);\n+                candidates, baseAnalysis.processedSwings(), historicalCanonicalCandidates, endIndex);\n@@ -581,0 +585,7 @@ public final class ElliottWaveAnalysisRunner {\n+        return rankCurrentCycleCandidatesWithCanonicalSearch(candidates, processedSwings, List.of(), endIndex);\n+    }\n+\n+    List<ElliottWaveAnalysisResult.CurrentCycleCandidate> rankCurrentCycleCandidatesWithCanonicalSearch(\n+            final List<ElliottWaveAnalysisResult.CurrentCycleCandidate> candidates,\n+            final List<ElliottSwing> processedSwings, final List<CanonicalLegCandidate> historicalCandidates,\n+            final int endIndex) {\n@@ -583,0 +594 @@ public final class ElliottWaveAnalysisRunner {\n+        Objects.requireNonNull(historicalCandidates, \"historicalCandidates\");\n@@ -589 +600,3 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<CanonicalLegCandidate> canonicalCandidates = new ArrayList<>(candidates.size() * 2);\n+        final List<CanonicalLegCandidate> canonicalCandidates = new ArrayList<>(\n+                historicalCandidates.size() + (candidates.size() * 2));\n+        canonicalCandidates.addAll(historicalCandidates);\n@@ -633,0 +647,32 @@ public final class ElliottWaveAnalysisRunner {\n+    private List<CanonicalLegCandidate> buildHistoricalCanonicalLegCandidates(final BarSeries series,\n+            final MacroPivotGraph pivotGraph) {\n+        Objects.requireNonNull(series, \"series\");\n+        Objects.requireNonNull(pivotGraph, \"pivotGraph\");\n+        if (pivotGraph.pivots().size() < 2) {\n+            return List.of();\n+        }\n+\n+        final List<CanonicalLegCandidate> candidates = new ArrayList<>(pivotGraph.pivots().size() - 1);\n+        for (int index = 0; index < pivotGraph.pivots().size() - 1; index++) {\n+            final MacroPivot start = pivotGraph.pivots().get(index);\n+            final MacroPivot end = pivotGraph.pivots().get(index + 1);\n+            if (start.highPivot() == end.highPivot() || end.barIndex() <= start.barIndex()) {\n+                continue;\n+            }\n+            final boolean bullish = !start.highPivot() && end.highPivot();\n+            final Optional<AnchoredWindowSelection> selection = selectAcceptedOrFallbackTerminalLegForWindow(series,\n+                    start.barIndex(), end.barIndex(), bullish, CURRENT_CYCLE_MAX_ANCHOR_DRIFT_BARS, 0.0, 0.0, 0.0, 0.0);\n+            if (selection.isEmpty()) {\n+                continue;\n+            }\n+            final double fitScore = canonicalHistoricalLegScore(selection.orElseThrow());\n+            if (fitScore <= 0.0) {\n+                continue;\n+            }\n+            final String id = \"history-\" + index + \"-\" + start.barIndex() + \"-\" + end.barIndex() + \"-\"\n+                    + (bullish ? \"bull\" : \"bear\");\n+            candidates.add(new CanonicalLegCandidate(id, start.barIndex(), end.barIndex(), bullish, fitScore));\n+        }\n+        return List.copyOf(candidates);\n+    }\n+\n@@ -1036,0 +1082,6 @@ public final class ElliottWaveAnalysisRunner {\n+    private double canonicalHistoricalLegScore(final AnchoredWindowSelection selection) {\n+        final ElliottWaveAnalysisResult.WindowScenarioAssessment assessment = selection.assessment();\n+        final double acceptedBonus = selection.accepted() ? 0.05 : 0.0;\n+        return clamp01((0.70 * assessment.windowFitScore()) + (0.30 * assessment.compositeScore()) + acceptedBonus);\n+    }\n+"
+}

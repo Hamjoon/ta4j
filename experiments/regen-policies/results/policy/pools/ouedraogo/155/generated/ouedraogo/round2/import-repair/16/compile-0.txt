@@ -1,0 +1,41 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:12: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:72: error: cannot find symbol
+    private Num num(double d) {
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:54: error: cannot find symbol
+            Num close = series.numFactory().numOf(i + 1);   // 1,2,3,4,5
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:55: error: cannot find symbol
+            Num volume = series.numFactory().numOf(i + 10); //10,11,12,13,14
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:252: error: cannot find symbol
+        Rule crossedOverRule = close.crossedOver(threshold);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:257: error: cannot find symbol
+        Rule crossedUnderRule = close.crossedUnder(threshold);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:267: error: cannot find symbol
+        Rule greaterThanRule = close.isGreaterThan(five);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:277: error: cannot find symbol
+        Rule lessThanRule = close.isLessThan(five);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+8 errors

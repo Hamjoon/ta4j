@@ -1,0 +1,29 @@
+{
+  "index": 233,
+  "sha": "2e3d50db52bb63ed4a9d6ab6b09bb044f07a4d25",
+  "parent": "2f6f3311ed840f1139e70353d3a5adf226a86646",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      374
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      374,
+      375,
+      376,
+      381,
+      382,
+      384,
+      385,
+      387,
+      388,
+      390,
+      391,
+      393,
+      394,
+      396
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex ce16e26c7..22953dd5a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -352 +352 @@ public final class ElliottWaveAnalysisRunner {\n-    private static double scenarioStructuralPriority(final ElliottScenario scenario,\n+    private double scenarioStructuralPriority(final ElliottScenario scenario,\n@@ -374 +374,23 @@ public final class ElliottWaveAnalysisRunner {\n-        return clamp01((coverageScore + earlyStartScore + completionScore + waveRichnessScore) / 4.0);\n+        final double confidenceCompletenessScore = safeScore(scenario.confidence().completenessScore());\n+        final double patternAlignmentScore = scenarioPatternAlignmentScore(scenario);\n+        return clamp01((coverageScore + earlyStartScore + completionScore + waveRichnessScore\n+                + confidenceCompletenessScore + patternAlignmentScore) / 6.0);\n+    }\n+\n+    private static double scenarioPatternAlignmentScore(final ElliottScenario scenario) {\n+        if (scenario == null) {\n+            return 0.0;\n+        }\n+        if (scenario.type() == ScenarioType.UNKNOWN) {\n+            return 0.35;\n+        }\n+        if (scenario.currentPhase().isImpulse() && scenario.type().isImpulse()) {\n+            return 1.0;\n+        }\n+        if (scenario.currentPhase().isCorrective() && scenario.type().isCorrective()) {\n+            return 1.0;\n+        }\n+        if (scenario.currentPhase() == ElliottPhase.NONE) {\n+            return 0.5;\n+        }\n+        return 0.55;"
+}

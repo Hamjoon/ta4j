@@ -1,0 +1,101 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:22: error: package org.ta4j.core.trading.rules does not exist
+import org.ta4j.core.trading.rules.Rule;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:53: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysSignalStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:58: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysSignalStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:71: error: cannot find symbol
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+                                                ^
+  symbol:   class TradingRecord
+  location: class AlwaysSignalStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:40: error: AlwaysSignalStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysSignalStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:96: error: cannot find symbol
+            return DecimalNum.NaN;
+                             ^
+  symbol:   variable NaN
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:106: error: no suitable constructor found for BaseBar(ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        singleBar = new BaseBar(
+                    ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:150: error: cannot find symbol
+        TradingRecord record = manager.run(strategy);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:163: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.SELL, customAmount);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:173: error: cannot find symbol
+                new BaseTradingRecord(type) {
+                    ^
+  symbol:   class BaseTradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:174: error: method does not override or implement a method from a supertype
+                    @Override
+                    ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:182: error: cannot find symbol
+        TradingRecord record = manager.run(strategy);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:191: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, new FixedOneSizer());
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:193: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, record.getCurrentPosition().amount());
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:221: error: cannot find symbol
+        ExecutionTarget target = (ExecutionTarget) method.invoke(manager, 5);
+        ^
+  symbol:   class ExecutionTarget
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:221: error: cannot find symbol
+        ExecutionTarget target = (ExecutionTarget) method.invoke(manager, 5);
+                                  ^
+  symbol:   class ExecutionTarget
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:236: error: cannot find symbol
+        TradingRecord record = (TradingRecord) method.invoke(manager, TradeType.BUY, -10, 100);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:236: error: cannot find symbol
+        TradingRecord record = (TradingRecord) method.invoke(manager, TradeType.BUY, -10, 100);
+                                ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:246: error: cannot find symbol
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig();
+        ^
+  symbol:   class WalkForwardConfig
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:246: error: cannot find symbol
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig();
+                                   ^
+  symbol:   variable WalkForwardConfig
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:269: error: reference to run is ambiguous
+        manager.run(strategy, TradeType.BUY, null, 0, 0);
+               ^
+  both method run(Strategy,TradeType,Num,int,int) in BarSeriesManager and method run(Strategy,TradeType,PositionSizer,int,int) in BarSeriesManager match
+21 errors

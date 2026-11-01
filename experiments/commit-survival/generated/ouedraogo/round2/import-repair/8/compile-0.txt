@@ -1,0 +1,50 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:99: error: cannot find symbol
+        private final List<Bar> bars = new ArrayList<>();
+                           ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:108: error: cannot find symbol
+        @Override public Bar getBar(int i) { return bars.get(i); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:112: error: cannot find symbol
+        @Override public List<Bar> getBarData() { return Collections.unmodifiableList(bars); }
+                              ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:123: error: cannot find symbol
+        private static class DummyBar implements Bar {
+                                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:144: error: cannot find symbol
+        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class IndexStrategy
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:145: error: cannot find symbol
+        @Override public Rule getExitRule()  { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class IndexStrategy
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:96: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries
+    private static class SimpleBarSeries implements BarSeries {
+                   ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:208: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:209: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:256: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(4), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:257: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(5), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+11 errors

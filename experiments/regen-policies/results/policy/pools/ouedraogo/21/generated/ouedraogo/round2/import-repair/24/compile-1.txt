@@ -1,0 +1,40 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:265: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:266: error: zero() in SimpleNumFactory cannot implement zero() in NumFactory
+        SimpleNum zero() {
+                  ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:328: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:333: error: cannot find symbol
+        Position sellPos = new Position(TradeType.SELL);
+                                        ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:335: error: cannot find symbol
+        assertEquals(TradeType.SELL, sellPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:351: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:417: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:472: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+8 errors

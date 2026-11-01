@@ -1,0 +1,77 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:25: error: package org.ta4j.core.trading.rules does not exist
+import org.ta4j.core.trading.rules.AbstractRule;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:57: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new org.ta4j.core.BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:58: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new org.ta4j.core.BaseBar(
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:67: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new org.ta4j.core.BaseBar(
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:76: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new org.ta4j.core.BaseBar(
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:131: error: tradeExecutionModel has private access in BarSeriesManager
+        assertSame(noopExecutionModel, manager.tradeExecutionModel);
+                                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:151: error: tradeExecutionModel has private access in BarSeriesManager
+        assertSame(noopExecutionModel, manager.tradeExecutionModel);
+                                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:191: error: cannot find symbol
+        TradingRecord record = manager.run(never, TradeType.BUY,
+                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:194: error: reference to assertEquals is ambiguous
+        assertEquals(series.getBeginIndex(), record.getStartIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:195: error: reference to assertEquals is ambiguous
+        assertEquals(series.getEndIndex(), record.getEndIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:229: error: cannot find symbol
+        TradingRecord record = manager.run(always, TradeType.BUY,
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:240: error: cannot find symbol
+        List<Integer> executed = ((BarSeriesManagerTest.recordingExecutionModel) recordingExecutionModel)
+                                                       ^
+  symbol:   class recordingExecutionModel
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:261: error: cannot find symbol
+        TradingRecord record = manager.run(always, TradeType.BUY,
+                                                   ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:264: error: cannot find symbol
+        List<Integer> executed = ((BarSeriesManagerTest.recordingExecutionModel) recordingExecutionModel)
+                                                       ^
+  symbol:   class recordingExecutionModel
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:291: error: cannot find symbol
+        TradingRecord r2 = manager.run(never, TradeType.SELL);
+                                              ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:295: error: cannot find symbol
+        TradingRecord r4 = manager.run(never, TradeType.SELL, 0, series.getEndIndex());
+                                              ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+16 errors

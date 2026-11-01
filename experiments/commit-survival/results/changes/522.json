@@ -1,0 +1,35 @@
+{
+  "index": 522,
+  "sha": "35548b07182afcd16c5822e446360c5723b8dd52",
+  "parent": "f07f29c5970e20a571eabbbae85f9cc858611263",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java": [
+      217,
+      223,
+      239,
+      248,
+      257
+    ],
+    "src/main/java/org/ta4j/core/portfolio/RebalancePolicy.java": [
+      251,
+      254,
+      300,
+      331
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java": [
+      216,
+      217,
+      220,
+      226,
+      242
+    ],
+    "src/main/java/org/ta4j/core/portfolio/RebalancePolicy.java": [
+      250,
+      298,
+      329
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java b/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java\nindex b5089ea79..52cf7e6cb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java\n@@ -5,0 +6 @@ package org.ta4j.core.portfolio;\n+import java.time.Instant;\n@@ -214,0 +216,2 @@ public final class PortfolioSeriesManager {\n+            Num[] prices = new Num[assetCount];\n+            List<Instant> endTimes = series.getEndTimes();\n@@ -217 +220 @@ public final class PortfolioSeriesManager {\n-                Num[] prices = pricesAt(index);\n+                pricesAt(index, prices);\n@@ -223,2 +226,2 @@ public final class PortfolioSeriesManager {\n-                if (rebalancePolicy.shouldRebalance(new RebalancePolicy.Context(series, index, prices, units, cash,\n-                        preTradeValue, targetWeights))) {\n+                if (rebalancePolicy.shouldRebalance(\n+                        new RebalancePolicy.Context(series, index, units, cash, preTradeValue, targetWeights))) {\n@@ -239,2 +242,2 @@ public final class PortfolioSeriesManager {\n-                snapshots.add(new PortfolioSnapshot(index, series.getEndTimes().get(index), toMap(prices), holdings,\n-                        cash, portfolioValue, periodReturn, transactionCost, tradedNotional, turnover, status));\n+                snapshots.add(new PortfolioSnapshot(index, endTimes.get(index), toMap(prices), holdings, cash,\n+                        portfolioValue, periodReturn, transactionCost, tradedNotional, turnover, status));\n@@ -247,2 +250 @@ public final class PortfolioSeriesManager {\n-        private Num[] pricesAt(int index) {\n-            Num[] prices = new Num[assets.size()];\n+        private void pricesAt(int index, Num[] prices) {\n@@ -257 +258,0 @@ public final class PortfolioSeriesManager {\n-            return prices;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/portfolio/RebalancePolicy.java b/ta4j-core/src/main/java/org/ta4j/core/portfolio/RebalancePolicy.java\nindex 050752a72..530a0144d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/portfolio/RebalancePolicy.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/portfolio/RebalancePolicy.java\n@@ -235 +235,2 @@ public interface RebalancePolicy {\n-     * the pre-trade portfolio value and are computed on demand.\n+     * the pre-trade portfolio value and are computed on demand. Each context\n+     * retains its bar's state and may be kept for comparison with later callbacks.\n@@ -243 +243,0 @@ public interface RebalancePolicy {\n-        private final Num[] prices;\n@@ -250,2 +250 @@ public interface RebalancePolicy {\n-        Context(PortfolioSeries series, int index, Num[] prices, Num[] units, Num cash, Num portfolioValue,\n-                Num[] targetWeights) {\n+        Context(PortfolioSeries series, int index, Num[] units, Num cash, Num portfolioValue, Num[] targetWeights) {\n@@ -254 +252,0 @@ public interface RebalancePolicy {\n-            this.prices = prices;\n@@ -300 +298 @@ public interface RebalancePolicy {\n-            return weight(prices[position].multipliedBy(units[position]));\n+            return weight(series.closePrice(position, index).multipliedBy(units[position]));\n@@ -331 +329 @@ public interface RebalancePolicy {\n-                    Num weight = weight(prices[position].multipliedBy(units[position]));\n+                    Num weight = weight(series.closePrice(position, index).multipliedBy(units[position]));"
+}

@@ -1,0 +1,24 @@
+{
+  "index": 504,
+  "sha": "cef8acbf3ad78420fa744fa8795c87a39e98dc94",
+  "parent": "98dd2374c03258279c31b19e8a9e78857fc419b6",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      490,
+      491,
+      497,
+      498,
+      499,
+      500
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      493,
+      494,
+      495,
+      496
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 5cdce8b2e..578fb1d5f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -490,12 +490,7 @@ public final class DecimalNum implements Num {\n-        if (precisionContext.getPrecision() != 0) {\n-            return DecimalNum.valueOf(this.delegate.sqrt(precisionContext), precisionContext);\n-        }\n-\n-        // Unlimited precision: fall back to DEFAULT_PRECISION when the root is\n-        // non-terminating\n-        try {\n-            return DecimalNum.valueOf(this.delegate.sqrt(precisionContext), precisionContext);\n-        } catch (ArithmeticException e) {\n-            final MathContext workingContext = new MathContext(DEFAULT_PRECISION, precisionContext.getRoundingMode());\n-            return DecimalNum.valueOf(this.delegate.sqrt(workingContext), precisionContext);\n-        }\n+        // BigDecimal.sqrt cannot take unlimited precision without proving the root\n+        // terminates, which is unbounded work for large non-squares; use\n+        // DEFAULT_PRECISION instead, as before.\n+        final MathContext workingContext = precisionContext.getPrecision() == 0\n+                ? new MathContext(DEFAULT_PRECISION, precisionContext.getRoundingMode())\n+                : precisionContext;\n+        return DecimalNum.valueOf(this.delegate.sqrt(workingContext), precisionContext);"
+}

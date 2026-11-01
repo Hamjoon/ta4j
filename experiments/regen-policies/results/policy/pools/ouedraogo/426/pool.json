@@ -1,0 +1,782 @@
+[
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testDefaultConstructor_hasBuyStartingType",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testDefaultConstructor_hasBuyStartingType",
+    "body_hash": "a25347ebbff5b0bb015791fd00b464b1ac0561264d9ffd22a4afc811b2e770b5",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testDefaultConstructor_hasBuyStartingType()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testDefaultConstructor_hasBuyStartingType",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testConstructorWithStartingType_sell",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithStartingType_sell",
+    "body_hash": "fddd28b9281e9cdf04c8f8188ce4e817955f3e6119f0f095a91d4b233a296dbf",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testConstructorWithStartingType_sell()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithStartingType_sell",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testSideAndAmountWhenNoEntry",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testSideAndAmountWhenNoEntry",
+    "body_hash": "17a9c59bc37526037b2b0772c6d7583b2ed8a68364b0bf59668a7b648af8fa7d",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testSideAndAmountWhenNoEntry()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testSideAndAmountWhenNoEntry",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testOperateCreatesEntryTrade",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesEntryTrade",
+    "body_hash": "9080ebb1cb60fd1554f43a406fc2ce0e5b8f31490cfd0ea4b6a02c6fa122430a",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testOperateCreatesEntryTrade()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesEntryTrade",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testOperateCreatesExitTrade",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesExitTrade",
+    "body_hash": "db3e96be182d9efcc42bf51e02f27af91efa761cb92633b6a39c37cd5587e3b8",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testOperateCreatesExitTrade()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesExitTrade",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testOperateWithIndexLowerThanEntryThrows",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateWithIndexLowerThanEntryThrows",
+    "body_hash": "973fb88184792f003ab6a7dcd849f9371c7d098185d76437259867fee6ba8b02",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testOperateWithIndexLowerThanEntryThrows()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testOperateWithIndexLowerThanEntryThrows",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testStateTransitions",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testStateTransitions",
+    "body_hash": "8d830ec6fe3fead2a099f3f4ea4355ecf8d9baab93df78ebe44edf20d44dfa40",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testStateTransitions()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testStateTransitions",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testEqualsAndHashCode",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testEqualsAndHashCode",
+    "body_hash": "493e679e995d7564cfe6c372e38baf1d4a8ad9b88a2b7e32f6294872e0f354f3",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testEqualsAndHashCode()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testEqualsAndHashCode",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testProfitForClosedPositionIsNaN",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testProfitForClosedPositionIsNaN",
+    "body_hash": "c74a9b0e1f92b5a524636329ec3c18e55117df6e608bfb6bbf5eac2c006116b5",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testProfitForClosedPositionIsNaN()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testProfitForClosedPositionIsNaN",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testHasProfitAndHasLossWithNaNProfit",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testHasProfitAndHasLossWithNaNProfit",
+    "body_hash": "58e4744a3e4a43ef81264e532c2f13ec251c3d8310aa5f47911af32052c27cd7",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testHasProfitAndHasLossWithNaNProfit()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testHasProfitAndHasLossWithNaNProfit",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testGrossReturnForClosedPositionIsNaN",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGrossReturnForClosedPositionIsNaN",
+    "body_hash": "201c029050edfaf87a4ac0741f980f8a98de79d59ad2cae2be883002d123841a",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testGrossReturnForClosedPositionIsNaN()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGrossReturnForClosedPositionIsNaN",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testGetTransactionCostModelDefaultsToZeroCostModel",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGetTransactionCostModelDefaultsToZeroCostModel",
+    "body_hash": "3e8b914158914dfefc0e577d38bc7c28a39b097c01faa98c2294eb2008d1ac6d",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testGetTransactionCostModelDefaultsToZeroCostModel()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGetTransactionCostModelDefaultsToZeroCostModel",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testGetHoldingCostModelDefaultsToZeroCostModel",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGetHoldingCostModelDefaultsToZeroCostModel",
+    "body_hash": "dc4e91fd917de01c1e33fb6cb27f9e1ff7ec57709aa4dde5c17d19bb4c2db4df",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testGetHoldingCostModelDefaultsToZeroCostModel()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGetHoldingCostModelDefaultsToZeroCostModel",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testToStringShowsEntryAndExit",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testToStringShowsEntryAndExit",
+    "body_hash": "f223476bc66ae02e17b57d42e0060daa29f254190f30106bea8377cd21a2c017",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testToStringShowsEntryAndExit()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testToStringShowsEntryAndExit",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testGettersAfterEntry",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGettersAfterEntry",
+    "body_hash": "b6ca748a3d0cd35a5f0e4c8f54a89708857a049ce16388d684286bb8bafc4143",
+    "round": "round2",
+    "technique": "ToT",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testGettersAfterEntry()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "71456a3e4858d2740501ba22829e1d1bf6dfdf258312099e9382a7ac9c09bcbd",
+    "execution_hash": "4f7f28acd93da9e4fea6810235584eca73ba8d6010cc2a4b66e7ce5ce058ea18",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ToT",
+    "source_tree_hash": "47c9fabf960a6ebdbfc4d6e86fe57d0deb9cb78b9e31913f20fc068c9765afc7",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java|org.ta4j.core.PositionTest|testGettersAfterEntry",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testDefaultConstructor",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testDefaultConstructor",
+    "body_hash": "392e0ab4431a5eb3b3985c8b02b21e4479075220cd2905d7fa1f840e70776ce3",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testDefaultConstructor()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testDefaultConstructor",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testConstructorWithStartingType",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithStartingType",
+    "body_hash": "2defa65823615cb5db6f072edafa6daaad219bf61744acc545f9cee17bef7270",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testConstructorWithStartingType()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithStartingType",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testConstructorWithEntryAndExitTrades",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithEntryAndExitTrades",
+    "body_hash": "c28524cb50a96704ed13a3ee8220810c8d5780191555106aaadd6bb4c15564a4",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testConstructorWithEntryAndExitTrades()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testConstructorWithEntryAndExitTrades",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testOpenPositionConstructor",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOpenPositionConstructor",
+    "body_hash": "1cc2b1f6d710e718206db6550cb26d239aaf00f8180cf42222a653fa1fbfc16b",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testOpenPositionConstructor()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOpenPositionConstructor",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testSideAmountAndPriceAccessors",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testSideAmountAndPriceAccessors",
+    "body_hash": "05704e3f727f068323d1f5e02d3dcbd3688ed66f6892893d01b86eb572334f31",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testSideAmountAndPriceAccessors()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testSideAmountAndPriceAccessors",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testEqualsAndHashCode",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testEqualsAndHashCode",
+    "body_hash": "fcd2530987969ef1683ccd3e4fcb0df4906a5b9dd3387187761fd8b6a300f9e1",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testEqualsAndHashCode()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testEqualsAndHashCode",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testOperateEntryAndExit",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateEntryAndExit",
+    "body_hash": "77bbeb57a80241c3ca48890dffbe88542c61c0e2b4de12866eae9ec87286dad8",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testOperateEntryAndExit()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateEntryAndExit",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testOperateExitWithEarlierIndexThrows",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateExitWithEarlierIndexThrows",
+    "body_hash": "ff83184050e150c10bcb23a737f1bc23897e4b963cdf0a9f5cd210cf8ce004b7",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testOperateExitWithEarlierIndexThrows()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateExitWithEarlierIndexThrows",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testProfitAndLossForLongPosition",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testProfitAndLossForLongPosition",
+    "body_hash": "7cf32d107d3b65d69543b0276ca5d8c99632dac888f72504c04176d0224a039f",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testProfitAndLossForLongPosition()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testProfitAndLossForLongPosition",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testZeroProfitForOpenPosition",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testZeroProfitForOpenPosition",
+    "body_hash": "ca10fabc1f6d3c614c9553a7e7887ae324be92f7a03abf641764ac5f96f995a3",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testZeroProfitForOpenPosition()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testZeroProfitForOpenPosition",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  },
+  {
+    "file": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java",
+    "class": "org.ta4j.core.PositionTest",
+    "method": "testToStringContainsEntryAndExit",
+    "kind": "plain",
+    "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testToStringContainsEntryAndExit",
+    "body_hash": "8e17e4cd41e479fdcc37e1546023138bf3489c5959721eae333e6804ec932c60",
+    "round": "round2",
+    "technique": "ZSL",
+    "state": "pass",
+    "message": "",
+    "flaky": false,
+    "initial_state": "pass",
+    "selector": [
+      "org.ta4j.core.PositionTest#testToStringContainsEntryAndExit()"
+    ],
+    "baseline_states": [
+      "pass",
+      "pass",
+      "pass"
+    ],
+    "file_hash": "3cfbc7d72b6368308daa0fd8466c81d4f0b5cfb9fac091e849d919cb3da41da6",
+    "execution_hash": "4522acd9be18820d8e00c1df9673885df1582f610dabdc31db9567a3fda3e2e4",
+    "source_root": "results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL",
+    "source_tree_hash": "33c35d8c0cd8778ad5636f19fdda0741bb0d27652c02804d28b97bf7a2cd6ac4",
+    "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+    "unit": "org.ta4j.core.Position",
+    "origin_id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testToStringContainsEntryAndExit",
+    "resource_root": "results/policy/pools/ouedraogo/426/dev/src-test-t"
+  }
+]

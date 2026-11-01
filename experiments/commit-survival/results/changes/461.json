@@ -1,0 +1,1106 @@
+{
+  "index": 461,
+  "sha": "73f36de7331e1ba264e56fd7aaf433c710034f0a",
+  "parent": "634ec707d3adbaa6af5eecd4d6627753c3d26b5d",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BaseBar.java": [],
+    "src/main/java/org/ta4j/core/analysis/WeightedValue.java": [
+      129
+    ],
+    "src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java": [],
+    "src/main/java/org/ta4j/core/analysis/frequency/SampleSummary.java": [
+      261,
+      268,
+      280
+    ],
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutionResult.java": [],
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutor.java": [
+      418,
+      425,
+      430,
+      431,
+      434,
+      435,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808,
+      809,
+      811,
+      812,
+      855,
+      857,
+      954,
+      955,
+      956,
+      957,
+      958,
+      959,
+      960,
+      961,
+      963,
+      964,
+      966,
+      979,
+      980,
+      981,
+      991
+    ],
+    "src/main/java/org/ta4j/core/backtest/StopLimitExecutionModel.java": [
+      125,
+      126,
+      137,
+      138,
+      139,
+      141,
+      171,
+      197,
+      203,
+      222,
+      233,
+      241,
+      253,
+      348
+    ],
+    "src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutionResult.java": [],
+    "src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutor.java": [
+      238,
+      240,
+      241,
+      242,
+      244,
+      245,
+      246,
+      247,
+      249,
+      250,
+      255,
+      261
+    ],
+    "src/main/java/org/ta4j/core/criteria/ExpectedShortfallCriterion.java": [
+      65,
+      86,
+      87,
+      89,
+      93,
+      94,
+      97,
+      98,
+      100,
+      101,
+      103,
+      121,
+      122,
+      125
+    ],
+    "src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java": [
+      123
+    ],
+    "src/main/java/org/ta4j/core/criteria/ValueAtRiskCriterion.java": [
+      59,
+      79,
+      81,
+      83,
+      88,
+      89,
+      92,
+      110,
+      111,
+      114
+    ],
+    "src/main/java/org/ta4j/core/criteria/drawdown/ReturnOverMaxDrawdownCriterion.java": [
+      156,
+      158,
+      162,
+      167,
+      170,
+      208,
+      209,
+      210,
+      211,
+      212,
+      214
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java": [
+      38
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java": [
+      67
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicator.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeInsideDownIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeInsideUpIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicator.java": [
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottInvalidationLevelIndicator.java": [
+      93,
+      94,
+      115,
+      116,
+      118,
+      119,
+      120,
+      123,
+      124,
+      125,
+      129,
+      130,
+      133,
+      134,
+      135,
+      139,
+      140,
+      142,
+      145,
+      147,
+      158,
+      159,
+      168,
+      169,
+      172,
+      173,
+      174,
+      178,
+      179,
+      181,
+      186,
+      228
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicator.java": [
+      37,
+      38
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java": [
+      47
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java": [
+      28,
+      35,
+      36,
+      37,
+      39,
+      42,
+      46,
+      47,
+      52,
+      53,
+      57,
+      67,
+      69
+    ],
+    "src/main/java/org/ta4j/core/indicators/renko/RenkoCounter.java": [
+      50,
+      51,
+      52,
+      53,
+      60,
+      69,
+      70,
+      71,
+      72
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java": [
+      95
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java": [
+      40
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java": [
+      42
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java": [
+      52
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java": [
+      75,
+      76
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java": [
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffEventDetector.java": [],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffPhaseIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffStructureTracker.java": [],
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      720
+    ],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": [
+      297
+    ],
+    "src/main/java/org/ta4j/core/rules/AndWithThresholdRule.java": [
+      64,
+      66,
+      67,
+      74,
+      89,
+      90
+    ],
+    "src/main/java/org/ta4j/core/rules/ChainRule.java": [
+      58
+    ],
+    "src/main/java/org/ta4j/core/rules/FixedAmountStopGainRule.java": [],
+    "src/main/java/org/ta4j/core/rules/FixedAmountStopLossRule.java": [],
+    "src/main/java/org/ta4j/core/rules/IsFallingRule.java": [
+      57,
+      58,
+      69,
+      70,
+      71
+    ],
+    "src/main/java/org/ta4j/core/rules/IsRisingRule.java": [
+      56,
+      57,
+      68,
+      69,
+      70
+    ],
+    "src/main/java/org/ta4j/core/rules/OrWithThresholdRule.java": [
+      62,
+      64,
+      65,
+      72,
+      87,
+      88
+    ],
+    "src/main/java/org/ta4j/core/rules/RuleCopies.java": [],
+    "src/main/java/org/ta4j/core/rules/TimeRangeRule.java": [],
+    "src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopGainRule.java": [
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      168,
+      169,
+      170,
+      172,
+      173
+    ],
+    "src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopLossRule.java": [
+      124,
+      125,
+      126,
+      127,
+      128,
+      130,
+      131,
+      132,
+      133,
+      157,
+      158,
+      159,
+      160,
+      162,
+      163,
+      164
+    ],
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [],
+    "src/main/java/org/ta4j/core/serialization/StrategySerialization.java": [
+      758,
+      882,
+      885,
+      888,
+      889,
+      890,
+      902,
+      904,
+      1082,
+      1230,
+      1231
+    ],
+    "src/main/java/org/ta4j/core/strategy/named/NamedStrategy.java": [
+      257,
+      258
+    ],
+    "src/main/java/org/ta4j/core/utils/BarSeriesUtils.java": [
+      32
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardConfig.java": [
+      184
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      203,
+      252,
+      257,
+      260,
+      275,
+      277,
+      282,
+      286,
+      293,
+      294,
+      296,
+      297,
+      299,
+      360,
+      398
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardLeaderboard.java": [],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardMetric.java": [
+      292
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardRunResult.java": [],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java": [
+      127,
+      128,
+      130,
+      131,
+      132,
+      134,
+      137,
+      139,
+      140,
+      141,
+      143,
+      149
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BaseBar.java": [
+      98,
+      99,
+      102,
+      103,
+      105,
+      106,
+      108,
+      109
+    ],
+    "src/main/java/org/ta4j/core/analysis/WeightedValue.java": [
+      147,
+      148,
+      151,
+      154,
+      159,
+      160,
+      161,
+      164,
+      165,
+      168
+    ],
+    "src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java": [
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      53,
+      54,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/analysis/frequency/SampleSummary.java": [
+      276,
+      283,
+      295
+    ],
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutionResult.java": [
+      47,
+      48,
+      59,
+      60,
+      81,
+      82,
+      83,
+      84
+    ],
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutor.java": [
+      43,
+      56,
+      415,
+      422,
+      440,
+      445,
+      446,
+      448,
+      449,
+      454,
+      455,
+      460,
+      461,
+      463,
+      464,
+      465,
+      466,
+      470,
+      472,
+      473,
+      487,
+      488,
+      489,
+      490,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      507,
+      512,
+      513,
+      857,
+      861,
+      883,
+      899,
+      900,
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      912,
+      913,
+      939,
+      941,
+      942,
+      962,
+      963,
+      964,
+      965,
+      966,
+      969,
+      972,
+      973,
+      1071,
+      1086,
+      1088,
+      1098,
+      1099,
+      1106,
+      1107,
+      1108,
+      1114,
+      1125,
+      1126
+    ],
+    "src/main/java/org/ta4j/core/backtest/StopLimitExecutionModel.java": [
+      60,
+      142,
+      143,
+      144,
+      156,
+      157,
+      158,
+      159,
+      161,
+      192,
+      218,
+      224,
+      243,
+      254,
+      262,
+      274,
+      369,
+      370,
+      371,
+      372,
+      375,
+      376,
+      381,
+      382,
+      383,
+      384,
+      387,
+      388,
+      389
+    ],
+    "src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutionResult.java": [
+      56,
+      57,
+      76
+    ],
+    "src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutor.java": [
+      40,
+      242,
+      246,
+      247,
+      250,
+      251,
+      252,
+      254,
+      256,
+      257,
+      259,
+      260,
+      261,
+      262,
+      263,
+      269,
+      274,
+      284,
+      285
+    ],
+    "src/main/java/org/ta4j/core/criteria/ExpectedShortfallCriterion.java": [
+      63,
+      83,
+      85,
+      87,
+      89,
+      92,
+      96,
+      97,
+      99
+    ],
+    "src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java": [
+      123,
+      127
+    ],
+    "src/main/java/org/ta4j/core/criteria/RiskTailSupport.java": [
+      35,
+      36,
+      37,
+      49,
+      50,
+      61,
+      62,
+      65
+    ],
+    "src/main/java/org/ta4j/core/criteria/ValueAtRiskCriterion.java": [
+      57,
+      77,
+      79,
+      81,
+      84,
+      87
+    ],
+    "src/main/java/org/ta4j/core/criteria/drawdown/ReturnOverMaxDrawdownCriterion.java": [
+      156,
+      160,
+      167
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java": [
+      41,
+      42,
+      43,
+      44
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java": [
+      67
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicator.java": [
+      57,
+      58,
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeInsideDownIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeInsideUpIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicator.java": [
+      50,
+      51,
+      64
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottInvalidationLevelIndicator.java": [
+      93,
+      94,
+      129,
+      130,
+      131,
+      155,
+      156,
+      157,
+      181,
+      183,
+      184,
+      186,
+      187,
+      194,
+      195,
+      196,
+      197,
+      220,
+      244,
+      245,
+      247,
+      248,
+      250,
+      251,
+      253,
+      254,
+      257,
+      258,
+      259,
+      260,
+      261,
+      271,
+      315,
+      316,
+      320,
+      336,
+      337,
+      338,
+      339,
+      340
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java": [
+      53,
+      54,
+      61,
+      62,
+      65,
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicator.java": [
+      38
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java": [
+      47
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java": [
+      30,
+      31,
+      32,
+      37,
+      38,
+      39,
+      41,
+      42,
+      44,
+      45,
+      46,
+      47,
+      48,
+      54,
+      55,
+      56,
+      57,
+      58,
+      63,
+      64,
+      65,
+      66,
+      69,
+      73,
+      74,
+      79,
+      80,
+      81,
+      86,
+      87,
+      88,
+      92,
+      99,
+      103,
+      105,
+      106
+    ],
+    "src/main/java/org/ta4j/core/indicators/renko/RenkoCounter.java": [
+      35,
+      60,
+      61,
+      62,
+      64,
+      65,
+      66,
+      67,
+      69,
+      70,
+      72,
+      73,
+      74,
+      77,
+      78,
+      82,
+      83,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      99,
+      108,
+      109,
+      110,
+      111
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java": [
+      95
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java": [
+      40
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java": [
+      42
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java": [
+      52
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java": [
+      78,
+      79,
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java": [
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/RevisionBoundCache.java": [
+      33,
+      34,
+      35,
+      46,
+      47,
+      48,
+      49,
+      51,
+      52,
+      55,
+      56,
+      57,
+      60,
+      61,
+      62,
+      63,
+      67,
+      68,
+      73,
+      74
+    ],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffEventDetector.java": [
+      58,
+      74
+    ],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffPhaseIndicator.java": [
+      107,
+      129,
+      269,
+      288
+    ],
+    "src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffStructureTracker.java": [
+      69,
+      87
+    ],
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      720
+    ],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": [
+      297
+    ],
+    "src/main/java/org/ta4j/core/rules/AndWithThresholdRule.java": [
+      54,
+      69,
+      70,
+      71,
+      73,
+      74,
+      81,
+      96,
+      97
+    ],
+    "src/main/java/org/ta4j/core/rules/ChainRule.java": [
+      41,
+      42,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      57,
+      76
+    ],
+    "src/main/java/org/ta4j/core/rules/FixedAmountStopGainRule.java": [
+      84,
+      85,
+      87
+    ],
+    "src/main/java/org/ta4j/core/rules/FixedAmountStopLossRule.java": [
+      89,
+      90,
+      92
+    ],
+    "src/main/java/org/ta4j/core/rules/IsFallingRule.java": [
+      55,
+      56,
+      58,
+      59,
+      70,
+      71,
+      72
+    ],
+    "src/main/java/org/ta4j/core/rules/IsRisingRule.java": [
+      55,
+      56,
+      58,
+      59,
+      70,
+      71,
+      72
+    ],
+    "src/main/java/org/ta4j/core/rules/OrWithThresholdRule.java": [
+      53,
+      67,
+      68,
+      69,
+      71,
+      72,
+      79,
+      94,
+      95
+    ],
+    "src/main/java/org/ta4j/core/rules/RuleCopies.java": [],
+    "src/main/java/org/ta4j/core/rules/TimeRangeRule.java": [
+      100,
+      101
+    ],
+    "src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopGainRule.java": [
+      125,
+      126,
+      127,
+      129,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      160,
+      161,
+      162,
+      163,
+      165
+    ],
+    "src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopLossRule.java": [
+      120,
+      121,
+      122,
+      123,
+      125,
+      127,
+      128,
+      129,
+      130,
+      153,
+      154,
+      155,
+      156,
+      157,
+      159
+    ],
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      255,
+      256,
+      257,
+      262,
+      263,
+      769,
+      770
+    ],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      1737,
+      1738
+    ],
+    "src/main/java/org/ta4j/core/serialization/StrategySerialization.java": [
+      757,
+      880,
+      882,
+      886,
+      887,
+      888,
+      889,
+      891,
+      892,
+      895,
+      896,
+      897,
+      898,
+      900,
+      901,
+      911,
+      913,
+      915,
+      1082,
+      1091,
+      1093
+    ],
+    "src/main/java/org/ta4j/core/strategy/named/NamedStrategy.java": [
+      257
+    ],
+    "src/main/java/org/ta4j/core/utils/BarSeriesUtils.java": [
+      32
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardConfig.java": [
+      197,
+      202,
+      203,
+      204
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java": [
+      42,
+      209,
+      211,
+      212,
+      260,
+      264,
+      266,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      276,
+      291,
+      292,
+      293,
+      295,
+      300,
+      301,
+      302,
+      304,
+      305,
+      307,
+      311,
+      318,
+      319,
+      320,
+      323,
+      386,
+      387,
+      390,
+      391,
+      392,
+      393,
+      402,
+      403,
+      414,
+      415,
+      416,
+      428,
+      429,
+      430,
+      433,
+      473,
+      474
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardLeaderboard.java": [
+      37,
+      38,
+      51,
+      52
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardMetric.java": [
+      297
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardRunResult.java": [
+      64,
+      65,
+      66,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      87,
+      165,
+      166,
+      167,
+      168,
+      170,
+      171,
+      172
+    ],
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java": [
+      38,
+      127,
+      133,
+      134,
+      136,
+      137,
+      138,
+      139,
+      140,
+      143,
+      144,
+      145,
+      147,
+      150,
+      152,
+      153,
+      154,
+      156,
+      157,
+      158,
+      162,
+      164,
+      165,
+      172
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\nindex 0fab38ba0..9aa59fb10 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n@@ -9,0 +10 @@ import java.util.Objects;\n+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;\n@@ -79 +80,4 @@ public class BaseBar implements Bar {\n-     *                                  match the provided timePeriod\n+     *                                  match the provided timePeriod, if the high\n+     *                                  price is below the low price, if volume or\n+     *                                  amount is negative, or if the number of\n+     *                                  trades is negative\n@@ -80,0 +85,2 @@ public class BaseBar implements Bar {\n+    @SuppressFBWarnings(value = \"CT_CONSTRUCTOR_THROW\", justification = \"Fail-fast validation of bar data is a documented constructor contract: invalid bars \"\n+            + \"are rejected before any partially initialized instance can escape\")\n@@ -87,0 +94,2 @@ public class BaseBar implements Bar {\n+    @SuppressFBWarnings(value = \"CT_CONSTRUCTOR_THROW\", justification = \"Fail-fast validation of bar data is a documented constructor contract: invalid bars \"\n+            + \"are rejected before any partially initialized instance can escape\")\n@@ -89,0 +98,13 @@ public class BaseBar implements Bar {\n+        if (highPrice != null && lowPrice != null && highPrice.isLessThan(lowPrice)) {\n+            throw new IllegalArgumentException(\n+                    \"High price must be greater than or equal to low price, but was \" + highPrice + \" < \" + lowPrice);\n+        }\n+        if (volume != null && volume.isNegative()) {\n+            throw new IllegalArgumentException(\"Volume cannot be negative, but was \" + volume);\n+        }\n+        if (amount != null && amount.isNegative()) {\n+            throw new IllegalArgumentException(\"Amount cannot be negative, but was \" + amount);\n+        }\n+        if (trades < 0) {\n+            throw new IllegalArgumentException(\"Number of trades cannot be negative, but was \" + trades);\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/WeightedValue.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/WeightedValue.java\nindex 17e29ffd2..a09140529 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/WeightedValue.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/WeightedValue.java\n@@ -5,0 +6 @@ package org.ta4j.core.analysis;\n+import java.math.BigDecimal;\n@@ -44,0 +46,8 @@ public record WeightedValue<T>(T value, Num weight) {\n+     * <p>\n+     * Weights are converted to the target numeric factory before normalization.\n+     * Conversion to a BigDecimal-backed factory preserves full precision.\n+     * Conversion to a double-based factory rounds to double precision (the\n+     * primitive boundary), and throws when a finite weight cannot be represented at\n+     * all (overflow to infinity or underflow to zero).\n+     * </p>\n+     *\n@@ -49 +58,3 @@ public record WeightedValue<T>(T value, Num weight) {\n-     * @throws IllegalArgumentException if list is empty or total weight is zero\n+     * @throws IllegalArgumentException if list is empty, total weight is zero, or a\n+     *                                  weight cannot be represented in the target\n+     *                                  numeric factory\n@@ -85 +96,6 @@ public record WeightedValue<T>(T value, Num weight) {\n-     * Entries with missing or NaN resolved values are skipped.\n+     * Entries with missing or NaN resolved values are skipped. Weights and resolved\n+     * values are converted to the target numeric factory first: BigDecimal-backed\n+     * targets preserve full precision, while double-based targets round to double\n+     * precision (the primitive boundary) and throw when a finite value cannot be\n+     * represented (overflow to infinity or underflow to zero) instead of silently\n+     * collapsing it.\n@@ -92,0 +109,2 @@ public record WeightedValue<T>(T value, Num weight) {\n+     * @throws IllegalArgumentException if a weight or resolved value cannot be\n+     *                                  represented in the target numeric factory\n@@ -129 +147,22 @@ public record WeightedValue<T>(T value, Num weight) {\n-        return numFactory.numOf(value.doubleValue());\n+        if (!Num.isFinite(value)) {\n+            throw new IllegalArgumentException(\n+                    \"value \" + value + \" is not finite and cannot be converted to the target Num factory\");\n+        }\n+        if (numFactory.one().getDelegate() instanceof BigDecimal) {\n+            // BigDecimal-backed target: convert via BigDecimal so mantissa digits and\n+            // magnitude are preserved; never round-trip through a primitive double.\n+            return numFactory.numOf(value.bigDecimalValue());\n+        }\n+        // Double-based target: conversion to the primitive double is the unavoidable\n+        // precision boundary. Refuse values the double cannot represent at all\n+        // instead of silently collapsing them.\n+        double converted = value.doubleValue();\n+        if (Double.isInfinite(converted)) {\n+            throw new IllegalArgumentException(\"value \" + value\n+                    + \" overflows the double range of the target Num factory; convert via a BigDecimal-backed factory\");\n+        }\n+        if (converted == 0.0d && !value.isZero()) {\n+            throw new IllegalArgumentException(\"value \" + value\n+                    + \" underflows to zero in the target double-based Num factory; convert via a BigDecimal-backed factory\");\n+        }\n+        return numFactory.numOf(converted);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java\nindex 63fee1eb3..cfc9cd11d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/elliott/swing/SwingDetectorResult.java\n@@ -19,0 +20,9 @@ import org.ta4j.core.indicators.elliott.ElliottSwing;\n+ * <p>\n+ * Pivots and swings are mutually consistent views of the same zigzag: the\n+ * swings must form a contiguous chain in which every swing starts at the\n+ * preceding swing's exact destination, and when both are non-empty, the\n+ * supplied pivots must equal the pivot chain derivable from the supplied swings\n+ * (the derivation used by {@link #fromSwings} and the inverse of\n+ * {@link #fromPivots}). A disconnected chain or mismatched pair is rejected\n+ * with an {@link IllegalArgumentException}.\n+ *\n@@ -21,0 +31,3 @@ import org.ta4j.core.indicators.elliott.ElliottSwing;\n+ * @throws IllegalArgumentException when the swings are not a contiguous chain,\n+ *                                  or when both pivots and swings are non-empty\n+ *                                  and mutually inconsistent\n@@ -28,0 +41,19 @@ public record SwingDetectorResult(List<SwingPivot> pivots, List<ElliottSwing> sw\n+        // The pivot-chain derivation only inspects the first swing's origin and\n+        // each swing's destination, so reject disconnected chains explicitly:\n+        // every swing must start at the preceding swing's exact destination.\n+        for (int i = 1; i < swings.size(); i++) {\n+            final ElliottSwing previous = swings.get(i - 1);\n+            final ElliottSwing current = swings.get(i);\n+            if (current.fromIndex() != previous.toIndex() || !current.fromPrice().equals(previous.toPrice())) {\n+                throw new IllegalArgumentException(\"swings must form a contiguous chain: swing \" + i + \" starts at (\"\n+                        + current.fromIndex() + \", \" + current.fromPrice() + \") but swing \" + (i - 1) + \" ends at (\"\n+                        + previous.toIndex() + \", \" + previous.toPrice() + \")\");\n+            }\n+        }\n+        if (!pivots.isEmpty() && !swings.isEmpty()) {\n+            final List<SwingPivot> derivedPivots = SwingDetectorSupport.pivotsFromSwings(swings);\n+            if (!derivedPivots.equals(pivots)) {\n+                throw new IllegalArgumentException(\"pivots and swings are inconsistent: pivots derived from the \"\n+                        + \"supplied swings \" + derivedPivots + \" do not match the supplied pivots \" + pivots);\n+            }\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SampleSummary.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SampleSummary.java\nindex f2acb4203..8eb861973 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SampleSummary.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SampleSummary.java\n@@ -7,0 +8 @@ import java.util.stream.Stream;\n+import org.ta4j.core.num.NaN;\n@@ -114,0 +116,4 @@ public final class SampleSummary {\n+     * <p>\n+     * The variance is undefined (NaN) when fewer than two samples are available.\n+     * </p>\n+     *\n@@ -116 +121 @@ public final class SampleSummary {\n-     * @return the sample variance (zero when fewer than two samples are available)\n+     * @return the sample variance, or NaN when fewer than two samples are available\n@@ -124,0 +130,5 @@ public final class SampleSummary {\n+     * <p>\n+     * The skewness is undefined (NaN) when fewer than three samples are available\n+     * or when the sample variance is zero.\n+     * </p>\n+     *\n@@ -126,2 +136,2 @@ public final class SampleSummary {\n-     * @return the sample skewness (zero when fewer than three samples or variance\n-     *         is zero)\n+     * @return the sample skewness, or NaN when fewer than three samples are\n+     *         available or the variance is zero\n@@ -135,0 +146,5 @@ public final class SampleSummary {\n+     * <p>\n+     * The kurtosis is undefined (NaN) when fewer than four samples are available or\n+     * when the sample variance is zero.\n+     * </p>\n+     *\n@@ -137,2 +152,2 @@ public final class SampleSummary {\n-     * @return the sample kurtosis (zero when fewer than four samples or variance is\n-     *         zero)\n+     * @return the sample kurtosis, or NaN when fewer than four samples are\n+     *         available or the variance is zero\n@@ -261 +276 @@ public final class SampleSummary {\n-                return f.zero();\n+                return NaN.NaN;\n@@ -268 +283 @@ public final class SampleSummary {\n-                return f.zero();\n+                return NaN.NaN;\n@@ -280 +295 @@ public final class SampleSummary {\n-                return f.zero();\n+                return NaN.NaN;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutionResult.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutionResult.java\nindex df1edb056..d16d02e27 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutionResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutionResult.java\n@@ -9,0 +10 @@ import com.google.gson.JsonParser;\n+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;\n@@ -12,0 +14 @@ import org.ta4j.core.BaseBarSeriesBuilder;\n+import org.ta4j.core.Strategy;\n@@ -28 +30,2 @@ public record BacktestExecutionResult(BarSeries barSeries, List<TradingStatement\n-        BacktestRuntimeReport runtimeReport) implements TradingStatementExecutionResult<BacktestRuntimeReport> {\n+        BacktestRuntimeReport runtimeReport,\n+        List<StrategyFailure> strategyFailures) implements TradingStatementExecutionResult<BacktestRuntimeReport> {\n@@ -31 +34 @@ public record BacktestExecutionResult(BarSeries barSeries, List<TradingStatement\n-     * Ensures properties are non-null.\n+     * Ensures properties are non-null and snapshots mutable input collections.\n@@ -34 +37 @@ public record BacktestExecutionResult(BarSeries barSeries, List<TradingStatement\n-     * @param tradingStatements produced trading statements in the order of the\n+     * @param tradingStatements successful trading statements in the order of the\n@@ -36,0 +40 @@ public record BacktestExecutionResult(BarSeries barSeries, List<TradingStatement\n+     * @param strategyFailures  strategies skipped because execution failed\n@@ -42,0 +47,60 @@ public record BacktestExecutionResult(BarSeries barSeries, List<TradingStatement\n+        strategyFailures = List.copyOf(Objects.requireNonNull(strategyFailures, \"strategyFailures must not be null\"));\n+    }\n+\n+    /**\n+     * Creates a result with no recorded strategy failures.\n+     *\n+     * @param barSeries         the bar series used for backtesting\n+     * @param tradingStatements successful trading statements\n+     * @param runtimeReport     runtime statistics for the execution\n+     */\n+    public BacktestExecutionResult(BarSeries barSeries, List<TradingStatement> tradingStatements,\n+            BacktestRuntimeReport runtimeReport) {\n+        this(barSeries, tradingStatements, runtimeReport, List.of());\n+    }\n+\n+    /**\n+     * Describes a strategy that was skipped because its execution failed.\n+     *\n+     * @param strategy the strategy that failed\n+     * @param cause    the exception thrown while evaluating the strategy\n+     * @since 0.24.2\n+     */\n+    public record StrategyFailure(Strategy strategy, RuntimeException cause) {\n+\n+        /**\n+         * Ensures the failure description is complete.\n+         *\n+         * @param strategy the strategy that failed\n+         * @param cause    the exception thrown while evaluating the strategy\n+         * @since 0.24.2\n+         */\n+        @SuppressFBWarnings(value = \"EI_EXPOSE_REP2\", justification = \"StrategyFailure intentionally captures the \"\n+                + \"original strategy reference and exception for fail-loud backtest diagnostics; the strategy is \"\n+                + \"identified by reference and exceptions are never mutated after capture\")\n+        public StrategyFailure {\n+            Objects.requireNonNull(strategy, \"strategy must not be null\");\n+            Objects.requireNonNull(cause, \"cause must not be null\");\n+        }\n+\n+        /**\n+         * @return the strategy that failed\n+         * @since 0.24.2\n+         */\n+        @Override\n+        @SuppressFBWarnings(value = \"EI_EXPOSE_REP\", justification = \"StrategyFailure intentionally exposes the \"\n+                + \"original strategy reference for fail-loud backtest diagnostics\")\n+        public Strategy strategy() {\n+            return strategy;\n+        }\n+\n+        /**\n+         * @return the exception thrown while evaluating the strategy\n+         * @since 0.24.2\n+         */\n+        @Override\n+        @SuppressFBWarnings(value = \"EI_EXPOSE_REP\", justification = \"StrategyFailure intentionally exposes the \"\n+                + \"original exception for fail-loud backtest diagnostics; exceptions are never mutated after capture\")\n+        public RuntimeException cause() {\n+            return cause;\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\nindex 2f8eb5a94..9e3f3ca7a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\n@@ -16,0 +17,2 @@ import org.ta4j.core.walkforward.WalkForwardConfig;\n+import org.slf4j.Logger;\n+import org.slf4j.LoggerFactory;\n@@ -39,0 +42,3 @@ public class BacktestExecutor {\n+    /** The logger. */\n+    private static final Logger log = LoggerFactory.getLogger(BacktestExecutor.class);\n+\n@@ -42,0 +48,10 @@ public class BacktestExecutor {\n+    /**\n+     * Strategies that failed during the most recent execution. Replaced atomically\n+     * by\n+     * {@link #executeAndKeepTopK(List, AnalysisCriterion, int, Consumer, Function)}\n+     * and\n+     * {@link #executeWithRuntimeReport(List, Trade.TradeType, Consumer, int, Function)}\n+     * so callers can distinguish healthy results from skipped strategies.\n+     */\n+    private volatile List<BacktestExecutionResult.StrategyFailure> latestFailures = List.of();\n+\n@@ -296,0 +312,5 @@ public class BacktestExecutor {\n+     * <p>\n+     * A strategy that throws during evaluation is isolated: its failure is recorded\n+     * and logged at warn level, and the remaining strategies still produce their\n+     * results. The execution only throws when every strategy fails.\n+     * </p>\n@@ -394,0 +415 @@ public class BacktestExecutor {\n+            latestFailures = List.of();\n@@ -400,0 +422 @@ public class BacktestExecutor {\n+        ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> executionFailures = new ConcurrentLinkedQueue<>();\n@@ -416 +438 @@ public class BacktestExecutor {\n-                    effectiveBatchSize);\n+                    effectiveBatchSize, executionFailures);\n@@ -418 +440,2 @@ public class BacktestExecutor {\n-            executeUnbounded(strategyArray, statements, durations, tradingRecordRunner, effectiveCallback);\n+            executeUnbounded(strategyArray, statements, durations, tradingRecordRunner, effectiveCallback,\n+                    executionFailures);\n@@ -421,0 +445,6 @@ public class BacktestExecutor {\n+        publishStrategyFailures(executionFailures);\n+        afterFailureLedgerPublished();\n+\n+        if (executionFailures.size() == strategyCount) {\n+            throw allStrategiesFailed(strategyCount, executionFailures);\n+        }\n@@ -425 +454,3 @@ public class BacktestExecutor {\n-            tradingStatements.add(statement);\n+            if (statement != null) {\n+                tradingStatements.add(statement);\n+            }\n@@ -428,0 +460,2 @@ public class BacktestExecutor {\n+        long[] successfulDurations = new long[strategyCount];\n+        int successfulCount = 0;\n@@ -430,2 +463,5 @@ public class BacktestExecutor {\n-            strategyRuntimes\n-                    .add(new BacktestRuntimeReport.StrategyRuntime(strategyArray[i], Duration.ofNanos(durations[i])));\n+            if (statements[i] != null) {\n+                strategyRuntimes.add(\n+                        new BacktestRuntimeReport.StrategyRuntime(strategyArray[i], Duration.ofNanos(durations[i])));\n+                successfulDurations[successfulCount++] = durations[i];\n+            }\n@@ -434,2 +470,55 @@ public class BacktestExecutor {\n-        BacktestRuntimeReport runtimeReport = buildRuntimeReport(durations, overallRuntime, strategyRuntimes);\n-        return new BacktestExecutionResult(seriesManager.getBarSeries(), tradingStatements, runtimeReport);\n+        BacktestRuntimeReport runtimeReport = buildRuntimeReport(Arrays.copyOf(successfulDurations, successfulCount),\n+                overallRuntime, strategyRuntimes);\n+        return new BacktestExecutionResult(seriesManager.getBarSeries(), tradingStatements, runtimeReport,\n+                executionFailures.stream().toList());\n+    }\n+\n+    /**\n+     * Builds the exception thrown when every strategy in an execution failed and no\n+     * result could be produced. The first recorded failure is attached as the cause\n+     * and the remaining failures are suppressed so callers keep the original stack\n+     * traces.\n+     *\n+     * @param strategyCount number of strategies in the execution\n+     * @return exception describing the total failure\n+     */\n+    private IllegalStateException allStrategiesFailed(int strategyCount,\n+            ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> executionFailures) {\n+        BacktestExecutionResult.StrategyFailure firstFailure = executionFailures.peek();\n+        String firstMessage = firstFailure == null ? \"\"\n+                : \" First failure: \" + firstFailure.strategy().getName() + \" - \" + firstFailure.cause().getMessage();\n+        IllegalStateException exception = new IllegalStateException(\n+                \"All \" + strategyCount + \" strategies failed during backtest execution.\" + firstMessage,\n+                firstFailure == null ? null : firstFailure.cause());\n+        executionFailures.stream()\n+                .skip(1)\n+                .map(BacktestExecutionResult.StrategyFailure::cause)\n+                .forEach(exception::addSuppressed);\n+        return exception;\n+    }\n+\n+    /**\n+     * Returns the strategies that failed during the most recent execution.\n+     *\n+     * @return immutable snapshot of the recorded failures, in the order they were\n+     *         recorded\n+     */\n+    List<BacktestExecutionResult.StrategyFailure> getStrategyFailures() {\n+        return latestFailures;\n+    }\n+\n+    private void publishStrategyFailures(\n+            ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> executionFailures) {\n+        latestFailures = List.copyOf(executionFailures);\n+    }\n+\n+    /**\n+     * Hook invoked after the failure ledger has been published and before the\n+     * execution result is assembled. Package-private so concurrency tests can\n+     * deterministically overlap a ledger clear with result assembly; the default\n+     * implementation does nothing.\n+     *\n+     * @since 0.24.2\n+     */\n+    void afterFailureLedgerPublished() {\n+        // no-op\n@@ -706,0 +796,5 @@ public class BacktestExecutor {\n+     * <p>\n+     * A strategy that throws during evaluation is isolated: its failure is recorded\n+     * and logged at warn level, and the remaining strategies still compete for the\n+     * top K. The execution only throws when every strategy fails.\n+     * </p>\n@@ -762 +855,0 @@ public class BacktestExecutor {\n-\n@@ -763,0 +857 @@ public class BacktestExecutor {\n+            latestFailures = List.of();\n@@ -767 +861 @@ public class BacktestExecutor {\n-\n+        ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> executionFailures = new ConcurrentLinkedQueue<>();\n@@ -788,0 +883 @@ public class BacktestExecutor {\n+        boolean[] successFlags = new boolean[strategyCount];\n@@ -803,10 +898,17 @@ public class BacktestExecutor {\n-                TradingRecord tradingRecord = tradingRecordRunner.apply(strategy);\n-                TradingStatement statement = tradingStatementGenerator.generate(strategy, tradingRecord,\n-                        seriesManager.getBarSeries());\n-                long duration = System.nanoTime() - strategyStart;\n-                durationNanos[globalIndex] = duration;\n-                Num criterionValue = criterion.calculate(seriesManager.getBarSeries(), statement.getTradingRecord());\n-                batchResults.add(new StrategyEvaluation(statement, criterionValue, globalIndex));\n-\n-                if (progressTracker != null) {\n-                    progressTracker.reportCompletion();\n+                try {\n+                    TradingRecord tradingRecord = tradingRecordRunner.apply(strategy);\n+                    TradingStatement statement = tradingStatementGenerator.generate(strategy, tradingRecord,\n+                            seriesManager.getBarSeries());\n+                    long duration = System.nanoTime() - strategyStart;\n+                    durationNanos[globalIndex] = duration;\n+                    Num criterionValue = criterion.calculate(seriesManager.getBarSeries(),\n+                            statement.getTradingRecord());\n+                    batchResults.add(new StrategyEvaluation(statement, criterionValue, globalIndex));\n+                    successFlags[globalIndex] = true;\n+                } catch (RuntimeException e) {\n+                    durationNanos[globalIndex] = System.nanoTime() - strategyStart;\n+                    recordStrategyFailure(strategy, e, executionFailures);\n+                } finally {\n+                    if (progressTracker != null) {\n+                        progressTracker.reportCompletion();\n+                    }\n@@ -836,0 +939,5 @@ public class BacktestExecutor {\n+        publishStrategyFailures(executionFailures);\n+\n+        if (executionFailures.size() == strategyCount) {\n+            throw allStrategiesFailed(strategyCount, executionFailures);\n+        }\n@@ -854,2 +961,10 @@ public class BacktestExecutor {\n-        // Calculate summary statistics from saved durations\n-        BacktestRuntimeReport runtimeReport = buildRuntimeReport(durationNanos, overallRuntime, strategyRuntimes);\n+        // Calculate summary statistics from successful durations only\n+        long[] successfulDurations = new long[strategyCount];\n+        int successfulCount = 0;\n+        for (int i = 0; i < strategyCount; i++) {\n+            if (successFlags[i]) {\n+                successfulDurations[successfulCount++] = durationNanos[i];\n+            }\n+        }\n+        BacktestRuntimeReport runtimeReport = buildRuntimeReport(Arrays.copyOf(successfulDurations, successfulCount),\n+                overallRuntime, strategyRuntimes);\n@@ -857 +972,2 @@ public class BacktestExecutor {\n-        return new BacktestExecutionResult(seriesManager.getBarSeries(), resultStatements, runtimeReport);\n+        return new BacktestExecutionResult(seriesManager.getBarSeries(), resultStatements, runtimeReport,\n+                executionFailures.stream().toList());\n@@ -945 +1061,2 @@ public class BacktestExecutor {\n-            Function<Strategy, TradingRecord> tradingRecordRunner, Consumer<Integer> progressCallback) {\n+            Function<Strategy, TradingRecord> tradingRecordRunner, Consumer<Integer> progressCallback,\n+            ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> failureLedger) {\n@@ -954,13 +1071,2 @@ public class BacktestExecutor {\n-        indexStream.forEach(index -> {\n-            Strategy strategy = strategyArray[index];\n-            long strategyStart = System.nanoTime();\n-            TradingRecord tradingRecord = tradingRecordRunner.apply(strategy);\n-            TradingStatement statement = tradingStatementGenerator.generate(strategy, tradingRecord,\n-                    seriesManager.getBarSeries());\n-            statements[index] = statement;\n-            durations[index] = System.nanoTime() - strategyStart;\n-\n-            if (progressTracker != null) {\n-                progressTracker.reportCompletion();\n-            }\n-        });\n+        indexStream.forEach(index -> executeSingleStrategy(index, strategyArray, statements, durations,\n+                tradingRecordRunner, progressTracker, failureLedger));\n@@ -975 +1081,2 @@ public class BacktestExecutor {\n-            Function<Strategy, TradingRecord> tradingRecordRunner, Consumer<Integer> progressCallback, int batchSize) {\n+            Function<Strategy, TradingRecord> tradingRecordRunner, Consumer<Integer> progressCallback, int batchSize,\n+            ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> failureLedger) {\n@@ -979,3 +1086,15 @@ public class BacktestExecutor {\n-        forEachBatchIndex(strategyCount, batchSize, index -> {\n-            Strategy strategy = strategyArray[index];\n-            long strategyStart = System.nanoTime();\n+        forEachBatchIndex(strategyCount, batchSize, index -> executeSingleStrategy(index, strategyArray, statements,\n+                durations, tradingRecordRunner, progressTracker, failureLedger));\n+    }\n+\n+    /**\n+     * Executes one strategy in isolation: a throwing strategy records a failure\n+     * entry and is skipped, while healthy strategies keep their results. Progress\n+     * is always reported so parallel batches cannot deadlock on a failed strategy.\n+     */\n+    private void executeSingleStrategy(int index, Strategy[] strategyArray, TradingStatement[] statements,\n+            long[] durations, Function<Strategy, TradingRecord> tradingRecordRunner, ProgressTracker progressTracker,\n+            ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> failureLedger) {\n+        Strategy strategy = strategyArray[index];\n+        long strategyStart = System.nanoTime();\n+        try {\n@@ -987 +1106,4 @@ public class BacktestExecutor {\n-\n+        } catch (RuntimeException e) {\n+            durations[index] = System.nanoTime() - strategyStart;\n+            recordStrategyFailure(strategy, e, failureLedger);\n+        } finally {\n@@ -991 +1113,15 @@ public class BacktestExecutor {\n-        });\n+        }\n+    }\n+\n+    /**\n+     * Records one failed strategy with a warn log. The strategy's slot is left null\n+     * and the batch continues with the remaining strategies.\n+     *\n+     * @param strategy the strategy that failed\n+     * @param failure  the exception thrown while evaluating the strategy\n+     */\n+    private void recordStrategyFailure(Strategy strategy, RuntimeException failure,\n+            ConcurrentLinkedQueue<BacktestExecutionResult.StrategyFailure> failureLedger) {\n+        failureLedger.add(new BacktestExecutionResult.StrategyFailure(strategy, failure));\n+        log.warn(\"Strategy [{}] failed during backtest execution: {}\", strategy.getName(), failure.getMessage(),\n+                failure);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/StopLimitExecutionModel.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/StopLimitExecutionModel.java\nindex 0d8ca2503..a481d32f0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/StopLimitExecutionModel.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/StopLimitExecutionModel.java\n@@ -34,0 +35,10 @@ import org.ta4j.core.num.Num;\n+ * <p>\n+ * This model is safe for concurrent use with distinct trading records: all\n+ * access to the internal pending/rejected order maps is synchronized, so\n+ * parallel strategy batches (e.g. {@link BacktestExecutor}) can share one model\n+ * instance without losing or corrupting orders. Weak-key semantics are\n+ * preserved: orders are removed on fill or expiry and stale keys are reclaimed\n+ * once their trading records become unreachable. A single trading record must\n+ * still be driven from one thread at a time.\n+ * </p>\n+ *\n@@ -44,0 +55,7 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n+    /**\n+     * Guards {@link #pendingOrders} and {@link #rejectedOrders}:\n+     * {@link WeakHashMap} is not thread-safe, so every structural map access is\n+     * synchronized on this lock.\n+     */\n+    private final Object stateLock = new Object();\n+\n@@ -125,2 +142,4 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        List<RejectedOrder> rejected = rejectedOrders.get(tradingRecord);\n-        return rejected == null ? List.of() : List.copyOf(rejected);\n+        synchronized (stateLock) {\n+            List<RejectedOrder> rejected = rejectedOrders.get(tradingRecord);\n+            return rejected == null ? List.of() : List.copyOf(rejected);\n+        }\n@@ -137,3 +156,6 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        PendingOrder order = pendingOrders.get(tradingRecord);\n-        if (order == null) {\n-            return Optional.empty();\n+        synchronized (stateLock) {\n+            PendingOrder order = pendingOrders.get(tradingRecord);\n+            if (order == null) {\n+                return Optional.empty();\n+            }\n+            return Optional.of(order.snapshot());\n@@ -141 +162,0 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        return Optional.of(order.snapshot());\n@@ -171 +192 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        PendingOrder pendingOrder = pendingOrders.get(tradingRecord);\n+        PendingOrder pendingOrder = pendingOrderOf(tradingRecord);\n@@ -197 +218 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        pendingOrders.put(tradingRecord, new PendingOrder(index, activationIndex, tradeType, requestedAmount, stopPrice,\n+        putPendingOrder(tradingRecord, new PendingOrder(index, activationIndex, tradeType, requestedAmount, stopPrice,\n@@ -203 +224 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        PendingOrder order = pendingOrders.get(tradingRecord);\n+        PendingOrder order = pendingOrderOf(tradingRecord);\n@@ -222 +243 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-            pendingOrders.remove(tradingRecord);\n+            removePendingOrder(tradingRecord);\n@@ -233 +254 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        PendingOrder order = pendingOrders.get(tradingRecord);\n+        PendingOrder order = pendingOrderOf(tradingRecord);\n@@ -241 +262 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        PendingOrder order = pendingOrders.get(tradingRecord);\n+        PendingOrder order = pendingOrderOf(tradingRecord);\n@@ -253 +274 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        pendingOrders.remove(tradingRecord);\n+        removePendingOrder(tradingRecord);\n@@ -348 +369,21 @@ public class StopLimitExecutionModel implements TradeExecutionModel {\n-        rejectedOrders.computeIfAbsent(tradingRecord, ignored -> new ArrayList<>()).add(rejection);\n+        synchronized (stateLock) {\n+            rejectedOrders.computeIfAbsent(tradingRecord, ignored -> new ArrayList<>()).add(rejection);\n+        }\n+    }\n+\n+    private PendingOrder pendingOrderOf(TradingRecord tradingRecord) {\n+        synchronized (stateLock) {\n+            return pendingOrders.get(tradingRecord);\n+        }\n+    }\n+\n+    private void putPendingOrder(TradingRecord tradingRecord, PendingOrder order) {\n+        synchronized (stateLock) {\n+            pendingOrders.put(tradingRecord, order);\n+        }\n+    }\n+\n+    private void removePendingOrder(TradingRecord tradingRecord) {\n+        synchronized (stateLock) {\n+            pendingOrders.remove(tradingRecord);\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutionResult.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutionResult.java\nindex af3bd6a3a..51b660b86 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutionResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutionResult.java\n@@ -21,0 +22 @@ import org.ta4j.core.walkforward.WalkForwardConfig;\n+import org.ta4j.core.walkforward.WalkForwardRunResult;\n@@ -32,0 +34,2 @@ import org.ta4j.core.walkforward.WalkForwardSplit;\n+ * @param foldFailures  per-fold execution failures encountered during the run;\n+ *                      healthy folds remain fully represented in {@code folds}\n@@ -36,2 +39,19 @@ public record StrategyWalkForwardExecutionResult(BarSeries barSeries, Strategy s\n-        List<FoldResult> folds,\n-        WalkForwardRuntimeReport runtimeReport) implements TradingStatementExecutionResult<WalkForwardRuntimeReport> {\n+        List<FoldResult> folds, WalkForwardRuntimeReport runtimeReport,\n+        List<WalkForwardRunResult.FoldFailure> foldFailures)\n+        implements\n+            TradingStatementExecutionResult<WalkForwardRuntimeReport> {\n+\n+    /**\n+     * Creates a validated result with no recorded fold failures.\n+     *\n+     * @param barSeries     series used for execution\n+     * @param strategy      evaluated strategy\n+     * @param config        walk-forward configuration\n+     * @param folds         fold-level execution results\n+     * @param runtimeReport aggregate runtime report across folds\n+     * @since 0.22.4\n+     */\n+    public StrategyWalkForwardExecutionResult(BarSeries barSeries, Strategy strategy, WalkForwardConfig config,\n+            List<FoldResult> folds, WalkForwardRuntimeReport runtimeReport) {\n+        this(barSeries, strategy, config, folds, runtimeReport, List.of());\n+    }\n@@ -46,0 +67 @@ public record StrategyWalkForwardExecutionResult(BarSeries barSeries, Strategy s\n+     * @param foldFailures  per-fold execution failures encountered during the run\n@@ -54,0 +76 @@ public record StrategyWalkForwardExecutionResult(BarSeries barSeries, Strategy s\n+        foldFailures = foldFailures == null ? List.of() : List.copyOf(foldFailures);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutor.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutor.java\nindex 934b89cfb..65cb2d2f0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/StrategyWalkForwardExecutor.java\n@@ -14,0 +15,2 @@ import java.util.function.Function;\n+import org.slf4j.Logger;\n+import org.slf4j.LoggerFactory;\n@@ -25,0 +28 @@ import org.ta4j.core.walkforward.WalkForwardConfig;\n+import org.ta4j.core.walkforward.WalkForwardRunResult;\n@@ -36,0 +40,2 @@ public class StrategyWalkForwardExecutor {\n+    private static final Logger log = LoggerFactory.getLogger(StrategyWalkForwardExecutor.class);\n+\n@@ -185 +190,2 @@ public class StrategyWalkForwardExecutor {\n-     * @param progressCallback optional callback receiving completed fold count\n+     * @param progressCallback optional callback receiving the processed fold count\n+     *                         (successful and failed folds)\n@@ -207 +213,2 @@ public class StrategyWalkForwardExecutor {\n-     * @param progressCallback optional callback receiving completed fold count\n+     * @param progressCallback optional callback receiving the processed fold count\n+     *                         (successful and failed folds)\n@@ -234,0 +242 @@ public class StrategyWalkForwardExecutor {\n+        List<WalkForwardRunResult.FoldFailure> foldFailures = new ArrayList<>();\n@@ -238 +246,2 @@ public class StrategyWalkForwardExecutor {\n-        for (WalkForwardSplit split : splits) {\n+        for (int splitIndex = 0; splitIndex < splits.size(); splitIndex++) {\n+            WalkForwardSplit split = splits.get(splitIndex);\n@@ -240,3 +249,4 @@ public class StrategyWalkForwardExecutor {\n-            TradingRecord foldRecord = foldRecordRunner.apply(split);\n-            TradingStatement statement = tradingStatementGenerator.generate(strategy, foldRecord, series);\n-            Duration foldRuntime = Duration.ofNanos(System.nanoTime() - foldStart);\n+            try {\n+                TradingRecord foldRecord = foldRecordRunner.apply(split);\n+                TradingStatement statement = tradingStatementGenerator.generate(strategy, foldRecord, series);\n+                Duration foldRuntime = Duration.ofNanos(System.nanoTime() - foldStart);\n@@ -244,4 +254,4 @@ public class StrategyWalkForwardExecutor {\n-            foldResults\n-                    .add(new StrategyWalkForwardExecutionResult.FoldResult(split, foldRecord, statement, foldRuntime));\n-            foldRuntimes\n-                    .add(new WalkForwardRuntimeReport.FoldRuntime(split.foldId(), foldRuntime, split.testBarCount()));\n+                foldResults.add(\n+                        new StrategyWalkForwardExecutionResult.FoldResult(split, foldRecord, statement, foldRuntime));\n+                foldRuntimes.add(\n+                        new WalkForwardRuntimeReport.FoldRuntime(split.foldId(), foldRuntime, split.testBarCount()));\n@@ -249,2 +259,11 @@ public class StrategyWalkForwardExecutor {\n-            completed++;\n-            effectiveCallback.accept(completed);\n+            } catch (RuntimeException e) {\n+                String message = \"Walk-forward fold \" + split.foldId() + \" failed\";\n+                log.warn(message + \": {}\", e.toString());\n+                foldFailures.add(new WalkForwardRunResult.FoldFailure(split.foldId(), splitIndex, message, e));\n+            }\n+            // Progress callback failures belong to the caller, not the fold: a\n+            // throwing callback must not classify an otherwise successful fold as\n+            // failed, so the callback runs outside the fold-isolation block.\n+            // Failed folds still report progress so the final count always\n+            // reaches the split total.\n+            effectiveCallback.accept(++completed);\n@@ -255 +274,2 @@ public class StrategyWalkForwardExecutor {\n-        return new StrategyWalkForwardExecutionResult(series, strategy, config, foldResults, runtimeReport);\n+        return new StrategyWalkForwardExecutionResult(series, strategy, config, foldResults, runtimeReport,\n+                foldFailures);\n@@ -261 +281,5 @@ public class StrategyWalkForwardExecutor {\n-            return WalkForwardRuntimeReport.empty();\n+            // No fold completed (for example when every fold failed), but the run\n+            // still consumed wall-clock time: retain the measured overall runtime\n+            // while leaving the fold summary fields at zero.\n+            return new WalkForwardRuntimeReport(overallRuntime, Duration.ZERO, Duration.ZERO, Duration.ZERO,\n+                    Duration.ZERO, List.of());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/ExpectedShortfallCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/ExpectedShortfallCriterion.java\nindex 566fdfb57..729df511c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/ExpectedShortfallCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/ExpectedShortfallCriterion.java\n@@ -6,2 +5,0 @@ package org.ta4j.core.criteria;\n-import java.util.ArrayList;\n-import java.util.Collections;\n@@ -65 +63 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-            return getNeutralValue(series.numFactory());\n+            return RiskTailSupport.neutralValue(series.numFactory(), returnRepresentation);\n@@ -85,3 +83,3 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-        // select non-NaN returns (use raw values for statistical calculations)\n-        List<Num> returnRates = new ArrayList<>(returns.getRawValues().subList(1, returns.getSize() + 1));\n-        Num zero = returns.getBarSeries().numFactory().zero();\n+        NumFactory numFactory = returns.getBarSeries().numFactory();\n+        // raw return rates excluding the initial placeholder, sorted ascending\n+        List<Num> returnRates = RiskTailSupport.sortedRates(returns);\n@@ -89 +87 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-            return getNeutralValue(returns.getBarSeries().numFactory());\n+            return RiskTailSupport.neutralValue(numFactory, returnRepresentation);\n@@ -90,0 +89 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n+        Num zero = numFactory.zero();\n@@ -93,2 +92 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-        int nInBody = (int) (returns.getSize() * confidence);\n-        int nInTail = returns.getSize() - nInBody;\n+        int nInTail = RiskTailSupport.nInTail(returns.getSize(), confidence);\n@@ -97,2 +94,0 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-        Collections.sort(returnRates);\n-        List<Num> tailEvents = returnRates.subList(0, nInTail);\n@@ -100,2 +96,2 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-        for (int i = 0; i < nInTail; i++) {\n-            sum = sum.plus(tailEvents.get(i));\n+        for (Num tailEvent : returnRates.subList(0, nInTail)) {\n+            sum = sum.plus(tailEvent);\n@@ -103 +99 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-        expectedShortfall = sum.dividedBy(returns.getBarSeries().numFactory().numOf(nInTail));\n+        expectedShortfall = sum.dividedBy(numFactory.numOf(nInTail));\n@@ -114,14 +109,0 @@ public class ExpectedShortfallCriterion extends AbstractAnalysisCriterion {\n-    /**\n-     * Returns the neutral value (no return) in the target representation format.\n-     *\n-     * @param numFactory the number factory\n-     * @return the neutral value in the target representation\n-     */\n-    private Num getNeutralValue(NumFactory numFactory) {\n-        if (returnRepresentation == ReturnRepresentation.MULTIPLICATIVE) {\n-            return numFactory.one();\n-        }\n-        // DECIMAL, PERCENTAGE, and LOG all use 0.0 as neutral\n-        return numFactory.zero();\n-    }\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java\nindex 5266f70a8..3f10ada4e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/PositionsRatioCriterion.java\n@@ -123 +123,5 @@ public class PositionsRatioCriterion extends AbstractAnalysisCriterion {\n-        return numberOfPositionsCriterion.calculate(series, position);\n+        Num count = numberOfPositionsCriterion.calculate(series, position);\n+        // The per-position count is the rate of return over the single-position\n+        // denominator; convert it so position-level and record-level results are\n+        // consistent with the configured representation.\n+        return returnRepresentation.toRepresentationFromRateOfReturn(count);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/RiskTailSupport.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/RiskTailSupport.java\nnew file mode 100644\nindex 000000000..c8a58223e\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/RiskTailSupport.java\n@@ -0,0 +1,67 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.criteria;\n+\n+import java.util.ArrayList;\n+import java.util.Collections;\n+import java.util.List;\n+\n+import org.ta4j.core.analysis.Returns;\n+import org.ta4j.core.num.Num;\n+import org.ta4j.core.num.NumFactory;\n+\n+/**\n+ * Shared tail-selection support for {@link ValueAtRiskCriterion} and\n+ * {@link ExpectedShortfallCriterion}.\n+ * <p>\n+ * Both risk criteria operate on the same view of a return series: the raw\n+ * returns excluding the initial placeholder value at index 0, sorted ascending,\n+ * with the tail size derived from the confidence level.\n+ */\n+final class RiskTailSupport {\n+\n+    private RiskTailSupport() {\n+    }\n+\n+    /**\n+     * Returns the raw return rates of the given series, excluding the initial\n+     * placeholder value at index 0, sorted ascending.\n+     *\n+     * @param returns the return series\n+     * @return the sorted raw return rates\n+     */\n+    static List<Num> sortedRates(Returns returns) {\n+        List<Num> returnRates = new ArrayList<>(returns.getRawValues().subList(1, returns.getSize() + 1));\n+        Collections.sort(returnRates);\n+        return returnRates;\n+    }\n+\n+    /**\n+     * Returns the number of returns in the distribution tail for the given\n+     * confidence level (F(x_var) &gt;= alpha, where alpha = 1 - confidence).\n+     *\n+     * @param size       the size of the return series\n+     * @param confidence the confidence level\n+     * @return the number of tail returns\n+     */\n+    static int nInTail(int size, double confidence) {\n+        int nInBody = (int) (size * confidence);\n+        return size - nInBody;\n+    }\n+\n+    /**\n+     * Returns the neutral value (no return) in the target representation format.\n+     *\n+     * @param numFactory           the number factory\n+     * @param returnRepresentation the return representation\n+     * @return the neutral value in the target representation\n+     */\n+    static Num neutralValue(NumFactory numFactory, ReturnRepresentation returnRepresentation) {\n+        if (returnRepresentation == ReturnRepresentation.MULTIPLICATIVE) {\n+            return numFactory.one();\n+        }\n+        // DECIMAL, PERCENTAGE, and LOG all use 0.0 as neutral\n+        return numFactory.zero();\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/ValueAtRiskCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/ValueAtRiskCriterion.java\nindex ccf1a9e2a..8d57094b9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/ValueAtRiskCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/ValueAtRiskCriterion.java\n@@ -13,2 +12,0 @@ import org.ta4j.core.num.NumFactory;\n-import java.util.ArrayList;\n-import java.util.Collections;\n@@ -59 +57 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n-            return getNeutralValue(series.numFactory());\n+            return RiskTailSupport.neutralValue(series.numFactory(), returnRepresentation);\n@@ -79,3 +77,3 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n-        Num zero = returns.getBarSeries().numFactory().zero();\n-        // select non-NaN returns (use raw values for statistical calculations)\n-        List<Num> returnRates = new ArrayList<>(returns.getRawValues().subList(1, returns.getSize() + 1));\n+        NumFactory numFactory = returns.getBarSeries().numFactory();\n+        // raw return rates excluding the initial placeholder, sorted ascending\n+        List<Num> returnRates = RiskTailSupport.sortedRates(returns);\n@@ -83 +81 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n-            return getNeutralValue(returns.getBarSeries().numFactory());\n+            return RiskTailSupport.neutralValue(numFactory, returnRepresentation);\n@@ -85,0 +84 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n+        Num zero = numFactory.zero();\n@@ -88,2 +87 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n-        int nInBody = (int) (returns.getSize() * confidence);\n-        int nInTail = returns.getSize() - nInBody;\n+        int nInTail = RiskTailSupport.nInTail(returns.getSize(), confidence);\n@@ -92 +89,0 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n-        Collections.sort(returnRates);\n@@ -103,14 +99,0 @@ public class ValueAtRiskCriterion extends AbstractAnalysisCriterion {\n-    /**\n-     * Returns the neutral value (no return) in the target representation format.\n-     *\n-     * @param numFactory the number factory\n-     * @return the neutral value in the target representation\n-     */\n-    private Num getNeutralValue(NumFactory numFactory) {\n-        if (returnRepresentation == ReturnRepresentation.MULTIPLICATIVE) {\n-            return numFactory.one();\n-        }\n-        // DECIMAL, PERCENTAGE, and LOG all use 0.0 as neutral\n-        return numFactory.zero();\n-    }\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/ReturnOverMaxDrawdownCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/ReturnOverMaxDrawdownCriterion.java\nindex e424cc8e5..1eb6ea5a2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/ReturnOverMaxDrawdownCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/drawdown/ReturnOverMaxDrawdownCriterion.java\n@@ -19 +18,0 @@ import org.ta4j.core.num.Num;\n-import org.ta4j.core.num.NumFactory;\n@@ -156 +154,0 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-        NumFactory numFactory = series.numFactory();\n@@ -158 +156 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-            return numFactory.zero();\n+            return series.numFactory().zero();\n@@ -162 +160 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-        return toRepresentation(netReturn, maxDrawdown, numFactory);\n+        return toRepresentation(netReturn, maxDrawdown);\n@@ -167 +164,0 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-        NumFactory numFactory = series.numFactory();\n@@ -170 +167 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-        return toRepresentation(netReturn, maxDrawdown, numFactory);\n+        return toRepresentation(netReturn, maxDrawdown);\n@@ -203 +200 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-    private Num toRepresentation(Num netReturn, Num maxDrawdown, NumFactory numFactory) {\n+    private Num toRepresentation(Num netReturn, Num maxDrawdown) {\n@@ -208,8 +204,0 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractEquityCurveSettingsC\n-        if (returnRepresentation == ReturnRepresentation.MULTIPLICATIVE) {\n-            Num one = numFactory.one();\n-            Num zero = numFactory.zero();\n-            if (rawRatio.isGreaterThanOrEqual(zero)) {\n-                return rawRatio.plus(one);\n-            }\n-            return rawRatio;\n-        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java\nindex f797eb264..0a233cf39 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java\n@@ -38 +38,7 @@ public class SMAIndicator extends CachedIndicator<Num> {\n-        final int realBarCount = Math.min(barCount, index + 1);\n+        // The denominator must mirror RunningTotalIndicator's window exactly:\n+        // below beginIndex the series clamps reads to the first remaining bar,\n+        // at/above beginIndex the window is anchored at beginIndex.\n+        final int beginIndex = getBarSeries().getBeginIndex();\n+        final int firstInWindow = index < beginIndex ? Math.max(0, index - barCount + 1)\n+                : Math.max(Math.max(0, beginIndex), index - barCount + 1);\n+        final int realBarCount = index - firstInWindow + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java\nindex 9373ec577..b9b12ad60 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishKickerIndicator.java\n@@ -66 +66 @@ public class BearishKickerIndicator extends CachedIndicator<Boolean> {\n-        return 1;\n+        return Math.max(1, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java\nindex f159ee4f0..f4521d7f3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishKickerIndicator.java\n@@ -67 +67 @@ public class BullishKickerIndicator extends CachedIndicator<Boolean> {\n-        return 1;\n+        return Math.max(1, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\nindex 21ae194dd..4daa91201 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\n@@ -71 +71 @@ public class DarkCloudIndicator extends CachedIndicator<Boolean> {\n-        return 1;\n+        return Math.max(1, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java\nindex 6589701e5..a7640380c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/EveningStarIndicator.java\n@@ -79 +79 @@ public class EveningStarIndicator extends CachedIndicator<Boolean> {\n-        return 2;\n+        return Math.max(2, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java\nindex b130d1ff9..032578847 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/MorningStarIndicator.java\n@@ -79 +79 @@ public class MorningStarIndicator extends CachedIndicator<Boolean> {\n-        return 2;\n+        return Math.max(2, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\nindex 872c9d94a..b19e0e96a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\n@@ -71 +71 @@ public class PiercingIndicator extends CachedIndicator<Boolean> {\n-        return 1;\n+        return Math.max(1, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicator.java\nindex afb8b9a91..500ade7d1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeBlackCrowsIndicator.java\n@@ -56,0 +57,3 @@ public class ThreeBlackCrowsIndicator extends CachedIndicator<Boolean> {\n+        if (index < getCountOfUnstableBars()) {\n+            return false;\n+        }\n@@ -68 +71 @@ public class ThreeBlackCrowsIndicator extends CachedIndicator<Boolean> {\n-        return 4;\n+        return Math.max(4, barCount + 2);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideDownIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideDownIndicator.java\nindex 7063230fd..2a6337c67 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideDownIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideDownIndicator.java\n@@ -48 +48 @@ public class ThreeInsideDownIndicator extends CachedIndicator<Boolean> {\n-        return 2;\n+        return Math.max(2, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideUpIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideUpIndicator.java\nindex 89734de11..f8c2a24f4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideUpIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeInsideUpIndicator.java\n@@ -48 +48 @@ public class ThreeInsideUpIndicator extends CachedIndicator<Boolean> {\n-        return 2;\n+        return Math.max(2, trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicator.java\nindex 5671cd689..1b968a9e6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ThreeWhiteSoldiersIndicator.java\n@@ -49,0 +50,3 @@ public class ThreeWhiteSoldiersIndicator extends CachedIndicator<Boolean> {\n+        if (index < getCountOfUnstableBars()) {\n+            return false;\n+        }\n@@ -61 +64 @@ public class ThreeWhiteSoldiersIndicator extends CachedIndicator<Boolean> {\n-        return 4;\n+        return Math.max(4, barCount + 2);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottInvalidationLevelIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottInvalidationLevelIndicator.java\nindex 99bf9926b..cb7ac5168 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottInvalidationLevelIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottInvalidationLevelIndicator.java\n@@ -93,2 +93,2 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-        case CONSERVATIVE -> calculateConservativeInvalidation(scenarioSet);\n-        case AGGRESSIVE -> calculateAggressiveInvalidation(scenarioSet);\n+        case CONSERVATIVE -> calculateConservativeInvalidation(scenarioSet, index);\n+        case AGGRESSIVE -> calculateAggressiveInvalidation(scenarioSet, index);\n@@ -107,3 +107,17 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-    private Num calculateConservativeInvalidation(final ElliottScenarioSet scenarioSet) {\n-        // Use the most conservative (tightest) invalidation across all high-confidence\n-        // scenarios\n+    /**\n+     * Computes the conservative (tightest) invalidation level across all\n+     * high-confidence scenarios.\n+     *\n+     * <p>\n+     * Bullish and bearish scenarios are folded independently (bullish: highest\n+     * invalidation; bearish: lowest), then the aggregate closest to the close price\n+     * at {@code index} is selected. When only one direction is present, its\n+     * aggregate is returned directly.\n+     *\n+     * @param scenarioSet scenarios to fold\n+     * @param index       bar index providing the close-price reference\n+     * @return the tightest invalidation level, or NaN when no scenario has a usable\n+     *         invalidation\n+     * @since 0.24.2\n+     */\n+    Num calculateConservativeInvalidation(final ElliottScenarioSet scenarioSet, final int index) {\n@@ -115,33 +129,3 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-        Num conservative = null;\n-        Boolean bullish = null;\n-\n-        for (final ElliottScenario scenario : scenarios) {\n-            if (!scenario.isHighConfidence()) {\n-                continue;\n-            }\n-\n-            final Num invalidation = scenario.invalidationPrice();\n-            if (Num.isNaNOrNull(invalidation)) {\n-                continue;\n-            }\n-\n-            // Skip scenarios without a known direction\n-            if (!scenario.hasKnownDirection()) {\n-                continue;\n-            }\n-\n-            if (conservative == null) {\n-                conservative = invalidation;\n-                bullish = scenario.isBullish();\n-            } else {\n-                // For bullish, conservative = highest invalidation (tightest stop)\n-                // For bearish, conservative = lowest invalidation (tightest stop)\n-                if (bullish != null && bullish) {\n-                    conservative = conservative.max(invalidation);\n-                } else {\n-                    conservative = conservative.min(invalidation);\n-                }\n-            }\n-        }\n-\n-        return conservative != null ? conservative : NaN;\n+        final Num reference = getBarSeries().getBar(index).getClosePrice();\n+        return selectAcrossDirections(foldDirectionalInvalidations(scenarios, true, true),\n+                foldDirectionalInvalidations(scenarios, false, true), reference, false);\n@@ -150,3 +134,16 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-    private Num calculateAggressiveInvalidation(final ElliottScenarioSet scenarioSet) {\n-        // Use the most aggressive (widest) invalidation - only invalidate if ALL\n-        // scenarios would be invalid\n+    /**\n+     * Computes the aggressive (widest) invalidation level across all scenarios.\n+     *\n+     * <p>\n+     * Bullish and bearish scenarios are folded independently (bullish: lowest\n+     * invalidation; bearish: highest), then the aggregate farthest from the close\n+     * price at {@code index} is selected. When only one direction is present, its\n+     * aggregate is returned directly.\n+     *\n+     * @param scenarioSet scenarios to fold\n+     * @param index       bar index providing the close-price reference\n+     * @return the widest invalidation level, or NaN when no scenario has a usable\n+     *         invalidation\n+     * @since 0.24.2\n+     */\n+    Num calculateAggressiveInvalidation(final ElliottScenarioSet scenarioSet, final int index) {\n@@ -158,2 +155,4 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-        Num aggressive = null;\n-        Boolean bullish = null;\n+        final Num reference = getBarSeries().getBar(index).getClosePrice();\n+        return selectAcrossDirections(foldDirectionalInvalidations(scenarios, true, false),\n+                foldDirectionalInvalidations(scenarios, false, false), reference, true);\n+    }\n@@ -160,0 +160,22 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n+    /**\n+     * Folds the invalidation levels of scenarios in one direction.\n+     *\n+     * <p>\n+     * For a conservative fold the returned level is the tightest stop for that\n+     * direction (bullish: highest invalidation, bearish: lowest); for an aggressive\n+     * fold it is the widest (bullish: lowest, bearish: highest). Conservative folds\n+     * additionally require high-confidence scenarios. Scenarios without a known\n+     * direction or with a NaN invalidation are skipped.\n+     *\n+     * @param scenarios        scenarios to fold\n+     * @param bullishDirection {@code true} to fold bullish scenarios, {@code false}\n+     *                         for bearish\n+     * @param conservative     {@code true} for a conservative (tightest) fold,\n+     *                         {@code false} for an aggressive (widest) fold\n+     * @return the folded invalidation level, or {@code null} when no scenario\n+     *         matched\n+     * @since 0.24.2\n+     */\n+    static Num foldDirectionalInvalidations(final List<ElliottScenario> scenarios, final boolean bullishDirection,\n+            final boolean conservative) {\n+        Num folded = null;\n@@ -161,0 +183,6 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n+            if (conservative && !scenario.isHighConfidence()) {\n+                continue;\n+            }\n+            if (!scenario.hasKnownDirection() || scenario.isBullish() != bullishDirection) {\n+                continue;\n+            }\n@@ -167,4 +194,5 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-            // Skip scenarios without a known direction\n-            if (!scenario.hasKnownDirection()) {\n-                continue;\n-            }\n+            final boolean takeMax = bullishDirection == conservative;\n+            folded = folded == null ? invalidation : takeMax ? folded.max(invalidation) : folded.min(invalidation);\n+        }\n+        return folded;\n+    }\n@@ -172,12 +200,46 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-            if (aggressive == null) {\n-                aggressive = invalidation;\n-                bullish = scenario.isBullish();\n-            } else {\n-                // For bullish, aggressive = lowest invalidation (widest stop)\n-                // For bearish, aggressive = highest invalidation (widest stop)\n-                if (bullish != null && bullish) {\n-                    aggressive = aggressive.min(invalidation);\n-                } else {\n-                    aggressive = aggressive.max(invalidation);\n-                }\n-            }\n+    /**\n+     * Selects one of two directional invalidation levels using the distance to a\n+     * price reference.\n+     *\n+     * <p>\n+     * When both levels are present, the level closest to the reference is returned\n+     * for tightest selection and the farthest for widest selection. Equal\n+     * distances, or an unusable (NaN/null) reference, resolve to the bullish level\n+     * for deterministic behavior.\n+     *\n+     * @param bullish      bullish invalidation level, may be {@code null}\n+     * @param bearish      bearish invalidation level, may be {@code null}\n+     * @param reference    price used to rank distances\n+     * @param preferWidest {@code true} to prefer the farthest level, {@code false}\n+     *                     for the closest\n+     * @return the selected level, or NaN when both levels are {@code null}\n+     * @since 0.24.2\n+     */\n+    static Num selectAcrossDirections(final Num bullish, final Num bearish, final Num reference,\n+            final boolean preferWidest) {\n+        return selectDirectionalAcrossDirections(bullish, bearish, reference, preferWidest).level();\n+    }\n+\n+    /**\n+     * Selects one of two directional invalidation levels and reports which side the\n+     * level was folded from.\n+     *\n+     * <p>\n+     * Selection follows the same rules as {@link #selectAcrossDirections}; the\n+     * returned side lets {@link #distanceToInvalidation} keep the sign convention\n+     * of the originating direction, so a crossed boundary reports a negative\n+     * distance instead of being re-read through the opposite side.\n+     *\n+     * @param bullish      bullish invalidation level, may be {@code null}\n+     * @param bearish      bearish invalidation level, may be {@code null}\n+     * @param reference    price used to rank distances\n+     * @param preferWidest {@code true} to prefer the farthest level, {@code false}\n+     *                     for the closest\n+     * @return the selected level with its originating side; when both levels are\n+     *         {@code null} the level is NaN and the side defaults to bullish\n+     * @since 0.24.2\n+     */\n+    static DirectionalSelection selectDirectionalAcrossDirections(final Num bullish, final Num bearish,\n+            final Num reference, final boolean preferWidest) {\n+        if (bullish == null && bearish == null) {\n+            return new DirectionalSelection(NaN, true);\n@@ -184,0 +247,16 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n+        if (bullish == null) {\n+            return new DirectionalSelection(bearish, false);\n+        }\n+        if (bearish == null) {\n+            return new DirectionalSelection(bullish, true);\n+        }\n+        if (Num.isNaNOrNull(reference)) {\n+            return new DirectionalSelection(bullish, true);\n+        }\n+\n+        final Num bullishDistance = bullish.minus(reference).abs();\n+        final Num bearishDistance = bearish.minus(reference).abs();\n+        final boolean takeBearish = preferWidest ? bearishDistance.isGreaterThan(bullishDistance)\n+                : bullishDistance.isGreaterThan(bearishDistance);\n+        return takeBearish ? new DirectionalSelection(bearish, false) : new DirectionalSelection(bullish, true);\n+    }\n@@ -186 +264,8 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-        return aggressive != null ? aggressive : NaN;\n+    /**\n+     * A folded invalidation level together with the side it was folded from.\n+     *\n+     * @param level   selected invalidation level\n+     * @param bullish {@code true} when the level came from the bullish fold\n+     * @since 0.24.2\n+     */\n+    record DirectionalSelection(Num level, boolean bullish) {\n@@ -225,0 +311,7 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n+        // Primary mode follows the primary scenario's direction. The folded modes\n+        // follow the direction of the side the selected level was folded from, so\n+        // a crossed boundary reports a negative distance instead of flipping the\n+        // sign through the opposite side.\n+        final boolean bullish = mode == InvalidationMode.PRIMARY ? primary.get().isBullish()\n+                : selectedSideBullish(index);\n+\n@@ -228 +320 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n-        if (primary.get().isBullish()) {\n+        if (bullish) {\n@@ -234,0 +327,16 @@ public class ElliottInvalidationLevelIndicator extends CachedIndicator<Num> {\n+    /**\n+     * Determines the side whose fold produced the invalidation level at\n+     * {@code index} for the non-primary modes, using the same close-price reference\n+     * as the level selection.\n+     *\n+     * @param index bar index\n+     * @return {@code true} when the selected level came from the bullish fold\n+     */\n+    private boolean selectedSideBullish(final int index) {\n+        final List<ElliottScenario> scenarios = scenarioIndicator.getValue(index).all();\n+        final boolean conservative = mode == InvalidationMode.CONSERVATIVE;\n+        final Num reference = getBarSeries().getBar(index).getClosePrice();\n+        return selectDirectionalAcrossDirections(foldDirectionalInvalidations(scenarios, true, conservative),\n+                foldDirectionalInvalidations(scenarios, false, conservative), reference, !conservative).bullish();\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java\nindex caa999513..572c637d6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java\n@@ -7,0 +8 @@ import org.ta4j.core.indicators.CachedIndicator;\n+import org.ta4j.core.indicators.IndicatorUtils;\n@@ -11,0 +13 @@ import java.util.List;\n+import java.util.Objects;\n@@ -50,0 +53,3 @@ public class AverageIndicator extends CachedIndicator<Num> {\n+        if (indicators == null) {\n+            throw new IllegalArgumentException(\"At least one indicator must be provided\");\n+        }\n@@ -55,0 +61,3 @@ public class AverageIndicator extends CachedIndicator<Num> {\n+        if (indicators.stream().anyMatch(Objects::isNull)) {\n+            throw new IllegalArgumentException(\"indicator must not be null\");\n+        }\n@@ -56,0 +65,3 @@ public class AverageIndicator extends CachedIndicator<Num> {\n+        for (int i = 1; i < indicatorSnapshot.size(); i++) {\n+            IndicatorUtils.requireSameSeries(indicatorSnapshot.get(0), indicatorSnapshot.get(i));\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicator.java\nindex 9f326ec1d..cc3225170 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CloseLocationValueIndicator.java\n@@ -8,0 +9 @@ import org.ta4j.core.indicators.CachedIndicator;\n+import org.ta4j.core.num.NaN;\n@@ -37,2 +38 @@ public class CloseLocationValueIndicator extends CachedIndicator<Num> {\n-        return diffHighLow.isNaN() ? getBarSeries().numFactory().zero()\n-                : ((close.minus(low)).minus(high.minus(close))).dividedBy(diffHighLow);\n+        return diffHighLow.isNaN() ? NaN.NaN : ((close.minus(low)).minus(high.minus(close))).dividedBy(diffHighLow);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java\nindex d7b7a694c..a6f282e03 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java\n@@ -47 +47 @@ public class DifferenceIndicator extends CachedIndicator<Num> {\n-        if (index < getCountOfUnstableBars()) {\n+        if (index - getBarSeries().getBeginIndex() < getCountOfUnstableBars()) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java\nindex 473f790ba..f553952da 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java\n@@ -60 +60 @@ public class PreviousValueIndicator extends CachedIndicator<Num> {\n-        return previousIndex < 0 ? NaN.NaN : indicator.getValue(previousIndex);\n+        return previousIndex < getBarSeries().getBeginIndex() ? NaN.NaN : indicator.getValue(previousIndex);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\nindex 14c628d5c..4bc64829f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\n@@ -5,0 +6 @@ package org.ta4j.core.indicators.helpers;\n+import org.ta4j.core.BarSeries;\n@@ -22,0 +24 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+    private transient BarSeries.BarSeriesChangeSnapshot previousSnapshot;\n@@ -28 +30,3 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        this.previousSum = indicator.getBarSeries().numFactory().zero();\n+        final BarSeries series = indicator.getBarSeries();\n+        this.previousSum = series.numFactory().zero();\n+        this.previousSnapshot = series.getBarSeriesChangeSnapshot(-1L);\n@@ -32,0 +37,22 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+        final BarSeries series = getBarSeries();\n+        BarSeries.BarSeriesChangeSnapshot previous = previousSnapshot;\n+        if (previous == null) {\n+            // transient field lost after deserialization: re-initialize\n+            previous = series.getBarSeriesChangeSnapshot(-1L);\n+            previousSnapshot = previous;\n+        }\n+        final BarSeries.BarSeriesChangeSnapshot snapshot = series.getBarSeriesChangeSnapshot(previous.revision());\n+        final boolean appendOnly = snapshot.endIndex() == previous.endIndex() + 1\n+                && snapshot.earliestChangedIndex() == snapshot.endIndex()\n+                && snapshot.removedThroughIndex() == previous.removedThroughIndex()\n+                && snapshot.maximumBarCount() == previous.maximumBarCount();\n+        // Revision equality alone does not capture window eviction: a constrained\n+        // series can advance removedThroughIndex/beginIndex without bumping the\n+        // history revision, which would keep a partial sum that still includes\n+        // the evicted bar. Treat the sum as unchanged only when the complete\n+        // snapshot state matches.\n+        final boolean unchanged = snapshot.revision() == previous.revision()\n+                && snapshot.endIndex() == previous.endIndex()\n+                && snapshot.earliestChangedIndex() == previous.earliestChangedIndex()\n+                && snapshot.removedThroughIndex() == previous.removedThroughIndex()\n+                && snapshot.maximumBarCount() == previous.maximumBarCount();\n@@ -34,6 +60,7 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        // which saves a lot of CPU work for very long barCounts\n-        if (previousIndex != -1 && previousIndex == index - 1) {\n-            if (!Num.isFinite(previousSum)) {\n-                return slowPath(index);\n-            }\n-            return fastPath(index);\n+        // which saves a lot of CPU work for very long barCounts.\n+        // A partial sum remains valid as long as the series is unchanged or has\n+        // only been appended to, because neither change alters previous values.\n+        final boolean partialSumUsable = previousIndex != -1 && previousIndex == index - 1\n+                && previousIndex >= Math.max(0, series.getBeginIndex()) && (unchanged || appendOnly);\n+        if (partialSumUsable && Num.isFinite(previousSum)) {\n+            return fastPath(index, snapshot);\n@@ -42 +69 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        return slowPath(index);\n+        return slowPath(index, snapshot);\n@@ -45,3 +72,3 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-    private Num fastPath(final int index) {\n-        var newSum = partialSum(index);\n-        updatePartialSum(index, newSum);\n+    private Num fastPath(final int index, final BarSeries.BarSeriesChangeSnapshot snapshot) {\n+        Num newSum = partialSum(index);\n+        updatePartialSum(index, newSum, snapshot);\n@@ -51,3 +78,11 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-    private Num slowPath(final int index) {\n-        Num sum = getBarSeries().numFactory().zero();\n-        for (int i = Math.max(0, index - barCount + 1); i <= index; i++) {\n+    private Num slowPath(final int index, final BarSeries.BarSeriesChangeSnapshot snapshot) {\n+        final BarSeries series = getBarSeries();\n+        Num sum = series.numFactory().zero();\n+        final int beginIndex = series.getBeginIndex();\n+        // Below beginIndex the series clamps reads to the first remaining bar,\n+        // so the legacy 0-anchored window is preserved (existing contract).\n+        // At/above beginIndex the window is anchored at beginIndex so that\n+        // getValue(beginIndex) equals the front bar's value, not barCount times it.\n+        final int firstInWindow = index < beginIndex ? Math.max(0, index - barCount + 1)\n+                : Math.max(Math.max(0, beginIndex), index - barCount + 1);\n+        for (int i = firstInWindow; i <= index; i++) {\n@@ -57 +92 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        updatePartialSum(index, sum);\n+        updatePartialSum(index, sum, snapshot);\n@@ -61 +96 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-    private void updatePartialSum(final int index, final Num sum) {\n+    private void updatePartialSum(final int index, final Num sum, final BarSeries.BarSeriesChangeSnapshot snapshot) {\n@@ -63,0 +99 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+        previousSnapshot = snapshot;\n@@ -67 +103 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        var sum = this.previousSum.plus(indicator.getValue(index));\n+        Num sum = this.previousSum.plus(indicator.getValue(index));\n@@ -69 +105,2 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        if (index >= barCount) {\n+        final int firstInWindow = index - barCount + 1;\n+        if (firstInWindow > Math.max(0, getBarSeries().getBeginIndex())) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/renko/RenkoCounter.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/renko/RenkoCounter.java\nindex 1e975bbb0..17004372c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/renko/RenkoCounter.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/renko/RenkoCounter.java\n@@ -9,0 +10 @@ import java.util.Objects;\n+import org.ta4j.core.BarSeries;\n@@ -22,0 +24 @@ final class RenkoCounter {\n+    private transient BarSeries.BarSeriesChangeSnapshot observedSnapshot;\n@@ -32,0 +35 @@ final class RenkoCounter {\n+        reconcileCache();\n@@ -48,0 +52,34 @@ final class RenkoCounter {\n+    /**\n+     * Evicts stale cached states when the series revision, retained window, or\n+     * capacity changed since the last observation. Removed bars invalidate the\n+     * brick ancestry of every cached state, so all entries are cleared and the next\n+     * computation re-anchors at the retained begin index; otherwise only entries at\n+     * or after the earliest changed index are stale.\n+     */\n+    private void reconcileCache() {\n+        final BarSeries series = priceIndicator.getBarSeries();\n+        if (series == null) {\n+            return;\n+        }\n+        final BarSeries.BarSeriesChangeSnapshot snapshot = series\n+                .getBarSeriesChangeSnapshot(observedSnapshot == null ? -1L : observedSnapshot.revision());\n+        if (observedSnapshot != null && sameSeriesState(snapshot, observedSnapshot)) {\n+            return;\n+        }\n+        if (observedSnapshot != null && snapshot.removedThroughIndex() != observedSnapshot.removedThroughIndex()) {\n+            cache.clear();\n+        } else {\n+            final int invalidateFrom = snapshot.earliestChangedIndex();\n+            if (invalidateFrom >= 0) {\n+                cache.keySet().removeIf(key -> key >= invalidateFrom);\n+            }\n+        }\n+        observedSnapshot = snapshot;\n+    }\n+\n+    private static boolean sameSeriesState(BarSeries.BarSeriesChangeSnapshot left,\n+            BarSeries.BarSeriesChangeSnapshot right) {\n+        return left.revision() == right.revision() && left.removedThroughIndex() == right.removedThroughIndex()\n+                && left.maximumBarCount() == right.maximumBarCount() && left.endIndex() == right.endIndex();\n+    }\n+\n@@ -50,4 +87,6 @@ final class RenkoCounter {\n-        if (index == 0) {\n-            var initial = new RenkoState(priceIndicator.getValue(0), 0, 0);\n-            if (!isFormingBar(0)) {\n-                cache.put(0, initial);\n+        final BarSeries series = priceIndicator.getBarSeries();\n+        final int firstIndex = series == null ? 0 : series.getBeginIndex();\n+        if (index <= firstIndex) {\n+            var initial = new RenkoState(priceIndicator.getValue(index), 0, 0);\n+            if (!isFormingBar(index)) {\n+                cache.put(index, initial);\n@@ -60 +99 @@ final class RenkoCounter {\n-        for (int i = index - 1; i >= 0; i--) {\n+        for (int i = index - 1; i >= firstIndex; i--) {\n@@ -69,4 +108,4 @@ final class RenkoCounter {\n-            startIndex = 0;\n-            state = new RenkoState(priceIndicator.getValue(0), 0, 0);\n-            if (!isFormingBar(0)) {\n-                cache.put(0, state);\n+            startIndex = firstIndex;\n+            state = new RenkoState(priceIndicator.getValue(firstIndex), 0, 0);\n+            if (!isFormingBar(firstIndex)) {\n+                cache.put(firstIndex, state);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\nindex 14328f7a2..9d88cb714 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\n@@ -95 +95 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n-            final int startIndex = Math.max(0, index - barCount + 1);\n+            final int startIndex = Math.max(Math.max(0, getBarSeries().getBeginIndex()), index - barCount + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java\nindex 58b24567d..018235e31 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java\n@@ -40 +40 @@ public class CovarianceIndicator extends CachedIndicator<Num> {\n-        final int startIndex = Math.max(0, index - barCount + 1);\n+        final int startIndex = Math.max(Math.max(0, getBarSeries().getBeginIndex()), index - barCount + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java\nindex c56d83829..38bfd6d19 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java\n@@ -42 +42 @@ public class MeanDeviationIndicator extends CachedIndicator<Num> {\n-        final int startIndex = Math.max(0, index - barCount + 1);\n+        final int startIndex = Math.max(Math.max(0, getBarSeries().getBeginIndex()), index - barCount + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java\nindex 2ec03f0b0..1f985517a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java\n@@ -52 +52 @@ public class PearsonCorrelationIndicator extends RecursiveCachedIndicator<Num> {\n-        for (int i = Math.max(getBarSeries().getBeginIndex(), index - barCount + 1); i <= index; i++) {\n+        for (int i = Math.max(Math.max(0, getBarSeries().getBeginIndex()), index - barCount + 1); i <= index; i++) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java\nindex 193ddbd1f..01fa27d1a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java\n@@ -66 +66 @@ public class SimpleLinearRegressionIndicator extends CachedIndicator<Num> {\n-        final int startIndex = Math.max(0, index - barCount + 1);\n+        final int startIndex = Math.max(Math.max(0, getBarSeries().getBeginIndex()), index - barCount + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\nindex a21ff123a..355ac3ba6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\n@@ -75,2 +75,6 @@ public class StandardErrorIndicator extends CachedIndicator<Num> {\n-        final int startIndex = Math.max(0, index - this.barCount + 1);\n-        final int numberOfObservations = index - startIndex + 1;\n+        // CachedIndicator services evicted indices via calculate(0) with reads\n+        // clamped to the first retained bar; clamp the effective end index as\n+        // well so the observation count never turns zero or negative.\n+        final int endIndex = Math.max(index, getBarSeries().getBeginIndex());\n+        final int startIndex = Math.max(Math.max(0, getBarSeries().getBeginIndex()), endIndex - this.barCount + 1);\n+        final int numberOfObservations = endIndex - startIndex + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\nindex a2f16ea3c..8c039e942 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\n@@ -80 +80 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n-        final int startIndex = Math.max(0, index - barCount + 1);\n+        final int startIndex = Math.max(Math.max(0, getBarSeries().getBeginIndex()), index - barCount + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/RevisionBoundCache.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/RevisionBoundCache.java\nnew file mode 100644\nindex 000000000..5c484d0a4\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/RevisionBoundCache.java\n@@ -0,0 +1,76 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.indicators.wyckoff;\n+\n+import java.util.Map;\n+import java.util.Objects;\n+\n+import org.ta4j.core.BarSeries;\n+\n+/**\n+ * Binds index-keyed indicator caches to the {@link BarSeries} revision journal.\n+ *\n+ * <p>\n+ * Indicator values cached by absolute bar index become stale after any series\n+ * mutation that alters or shifts bars (historical replacement, removal, or\n+ * rolling-window expiry). On each {@link #reconcile(Map[])} call the current\n+ * change snapshot is compared against the last observed one; stale entries are\n+ * evicted from the supplied caches so that callers recompute them on demand.\n+ *\n+ * @since 0.24.2\n+ */\n+final class RevisionBoundCache {\n+\n+    private final BarSeries series;\n+    private BarSeries.BarSeriesChangeSnapshot observed;\n+\n+    /**\n+     * Creates a reconciler for the provided series.\n+     *\n+     * @param series underlying bar series, must not be null\n+     */\n+    RevisionBoundCache(BarSeries series) {\n+        this.series = Objects.requireNonNull(series, \"series\");\n+    }\n+\n+    /**\n+     * Evicts stale entries from the provided caches when the series revision,\n+     * retained window, or capacity changed since the last observation.\n+     *\n+     * @param caches index-keyed caches to reconcile\n+     * @return {@code true} when at least one entry was evicted\n+     */\n+    @SafeVarargs\n+    final synchronized boolean reconcile(Map<Integer, ?>... caches) {\n+        final BarSeries.BarSeriesChangeSnapshot snapshot = series\n+                .getBarSeriesChangeSnapshot(observed == null ? -1L : observed.revision());\n+        if (observed != null && sameSeriesState(snapshot, observed)) {\n+            return false;\n+        }\n+        boolean evicted = false;\n+        if (observed != null && snapshot.removedThroughIndex() != observed.removedThroughIndex()) {\n+            // Removed bars shift the meaning of every surviving index, so all\n+            // index-keyed entries are stale.\n+            for (Map<Integer, ?> cache : caches) {\n+                evicted |= !cache.isEmpty();\n+                cache.clear();\n+            }\n+        } else {\n+            final int invalidateFrom = snapshot.earliestChangedIndex();\n+            if (invalidateFrom >= 0) {\n+                for (Map<Integer, ?> cache : caches) {\n+                    evicted |= cache.keySet().removeIf(key -> key >= invalidateFrom);\n+                }\n+            }\n+        }\n+        observed = snapshot;\n+        return evicted;\n+    }\n+\n+    private static boolean sameSeriesState(BarSeries.BarSeriesChangeSnapshot left,\n+            BarSeries.BarSeriesChangeSnapshot right) {\n+        return left.revision() == right.revision() && left.removedThroughIndex() == right.removedThroughIndex()\n+                && left.maximumBarCount() == right.maximumBarCount() && left.endIndex() == right.endIndex();\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffEventDetector.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffEventDetector.java\nindex d097f6b51..c086ff622 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffEventDetector.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffEventDetector.java\n@@ -36,0 +37 @@ public final class WyckoffEventDetector {\n+    private final transient RevisionBoundCache revisionBoundCache;\n@@ -56,0 +58 @@ public final class WyckoffEventDetector {\n+        this.revisionBoundCache = new RevisionBoundCache(series);\n@@ -71,0 +74 @@ public final class WyckoffEventDetector {\n+        revisionBoundCache.reconcile(lowestLowCache, highestHighCache);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffPhaseIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffPhaseIndicator.java\nindex 9db6788ca..a5a397877 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffPhaseIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffPhaseIndicator.java\n@@ -45,0 +46 @@ public final class WyckoffPhaseIndicator extends CachedIndicator<WyckoffPhase> {\n+    private final transient RevisionBoundCache revisionBoundCache;\n@@ -105,0 +107 @@ public final class WyckoffPhaseIndicator extends CachedIndicator<WyckoffPhase> {\n+        this.revisionBoundCache = new RevisionBoundCache(series);\n@@ -126,0 +129 @@ public final class WyckoffPhaseIndicator extends CachedIndicator<WyckoffPhase> {\n+        revisionBoundCache.reconcile(structureSnapshots, lastTransitionIndices);\n@@ -265,0 +269 @@ public final class WyckoffPhaseIndicator extends CachedIndicator<WyckoffPhase> {\n+        revisionBoundCache.reconcile(structureSnapshots, lastTransitionIndices);\n@@ -283,0 +288 @@ public final class WyckoffPhaseIndicator extends CachedIndicator<WyckoffPhase> {\n+        revisionBoundCache.reconcile(structureSnapshots, lastTransitionIndices);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffStructureTracker.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffStructureTracker.java\nindex b107c9a62..fda4d5be6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffStructureTracker.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/wyckoff/WyckoffStructureTracker.java\n@@ -39,0 +40 @@ public final class WyckoffStructureTracker {\n+    private final transient RevisionBoundCache revisionBoundCache;\n@@ -67,0 +69 @@ public final class WyckoffStructureTracker {\n+        this.revisionBoundCache = new RevisionBoundCache(series);\n@@ -84,0 +87 @@ public final class WyckoffStructureTracker {\n+        revisionBoundCache.reconcile(snapshotCache);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 0db90f28f..9660e1dfa 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -720 +720 @@ public final class DecimalNum implements Num {\n-        return Objects.hash(this.delegate);\n+        return this.delegate.stripTrailingZeros().hashCode();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\nindex b54436455..bf93cc14d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n@@ -297 +297 @@ public class DoubleNum implements Num {\n-        return Math.abs(this.delegate - doubleNumObj.delegate) < EPS;\n+        return Double.doubleToLongBits(this.delegate) == Double.doubleToLongBits(doubleNumObj.delegate);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AndWithThresholdRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AndWithThresholdRule.java\nindex 233f929d1..321d285dc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AndWithThresholdRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AndWithThresholdRule.java\n@@ -7,0 +8 @@ import java.util.Objects;\n+import org.ta4j.core.BarSeries;\n@@ -33,0 +35,3 @@ public class AndWithThresholdRule extends AbstractRule {\n+    /** The backing series, or {@code null} when neither rule exposes one. */\n+    private final BarSeries series;\n+\n@@ -49,0 +54 @@ public class AndWithThresholdRule extends AbstractRule {\n+        this.series = RuleCopies.findBarSeries(rule1).or(() -> RuleCopies.findBarSeries(rule2)).orElse(null);\n@@ -64 +69,3 @@ public class AndWithThresholdRule extends AbstractRule {\n-        if (index - this.threshold + 1 < 0) {\n+        int beginIndex = series == null ? 0 : series.getBeginIndex();\n+        int windowStart = index - this.threshold + 1;\n+        if (windowStart < beginIndex) {\n@@ -66,2 +73,2 @@ public class AndWithThresholdRule extends AbstractRule {\n-                traceIsSatisfied(index, false, traceContext(\"threshold\", threshold, \"windowStart\", 0, \"windowEnd\",\n-                        index, \"reason\", \"insufficientBars\"));\n+                traceIsSatisfied(index, false, traceContext(\"threshold\", threshold, \"windowStart\",\n+                        Math.max(beginIndex, windowStart), \"windowEnd\", index, \"reason\", \"insufficientBars\"));\n@@ -74 +81 @@ public class AndWithThresholdRule extends AbstractRule {\n-        for (int i = index - this.threshold + 1; i <= index; i++) {\n+        for (int i = windowStart; i <= index; i++) {\n@@ -89,2 +96,2 @@ public class AndWithThresholdRule extends AbstractRule {\n-                    traceContext(\"threshold\", threshold, \"windowStart\", index - this.threshold + 1, \"windowEnd\", index,\n-                            \"rule1\", isFirstSatisfied, \"rule2\", isSecondSatisfied, \"reason\",\n+                    traceContext(\"threshold\", threshold, \"windowStart\", windowStart, \"windowEnd\", index, \"rule1\",\n+                            isFirstSatisfied, \"rule2\", isSecondSatisfied, \"reason\",\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/ChainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/ChainRule.java\nindex 12b4edb69..a3c00c166 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/ChainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/ChainRule.java\n@@ -7,0 +8 @@ import java.util.Objects;\n+import java.util.Optional;\n@@ -8,0 +10 @@ import java.util.Objects;\n+import org.ta4j.core.BarSeries;\n@@ -23,0 +26,3 @@ public class ChainRule extends AbstractRule {\n+    /** The backing series used to resolve the live begin index, or {@code null}. */\n+    private final BarSeries series;\n+\n@@ -35,0 +41,10 @@ public class ChainRule extends AbstractRule {\n+        this.series = findBarSeries(initialRule, rulesInChain);\n+    }\n+\n+    private static BarSeries findBarSeries(Rule initialRule, LinkedList<ChainLink> rulesInChain) {\n+        return RuleCopies.findBarSeries(initialRule)\n+                .or(() -> rulesInChain.stream()\n+                        .map(chainLink -> RuleCopies.findBarSeries(chainLink.getRule()))\n+                        .flatMap(Optional::stream)\n+                        .findFirst())\n+                .orElse(null);\n@@ -39,0 +55,3 @@ public class ChainRule extends AbstractRule {\n+        // Resolve the retained begin index at evaluation time: on a rolling\n+        // series the constructor-time value goes stale as bars are evicted.\n+        final int beginIndex = series == null ? 0 : series.getBeginIndex();\n@@ -58 +76 @@ public class ChainRule extends AbstractRule {\n-                if (resultingIndex < 0) {\n+                if (resultingIndex < beginIndex) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopGainRule.java\nindex a8708f360..0e4e26d69 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopGainRule.java\n@@ -83,0 +84,5 @@ public class FixedAmountStopGainRule extends AbstractRule implements StopGainPri\n+        if (Num.isNaNOrNull(entryPrice) || Num.isNaNOrNull(currentPrice)) {\n+            StopRuleTrace.traceDecision(this, index, false, buy, currentPrice, entryPrice, null, \"gainAmount\",\n+                    gainAmount, \"priceUnavailable\");\n+            return false;\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopLossRule.java\nindex 45409d66f..1c2ca9c89 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/FixedAmountStopLossRule.java\n@@ -88,0 +89,5 @@ public class FixedAmountStopLossRule extends AbstractRule implements StopLossPri\n+        if (Num.isNaNOrNull(entryPrice) || Num.isNaNOrNull(currentPrice)) {\n+            StopRuleTrace.traceDecision(this, index, false, buy, currentPrice, entryPrice, null, \"lossAmount\",\n+                    lossAmount, \"priceUnavailable\");\n+            return false;\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/IsFallingRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/IsFallingRule.java\nindex d62a03136..3e556898d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/IsFallingRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/IsFallingRule.java\n@@ -55 +55,2 @@ public class IsFallingRule extends AbstractRule {\n-\n+        int beginIndex = Math.max(0, ref.getBarSeries().getBeginIndex());\n+        int start = Math.max(beginIndex, index - barCount + 1);\n@@ -57,2 +58,2 @@ public class IsFallingRule extends AbstractRule {\n-        for (int i = Math.max(0, index - barCount + 1); i <= index; i++) {\n-            if (ref.getValue(i).isLessThan(ref.getValue(Math.max(0, i - 1)))) {\n+        for (int i = start; i <= index; i++) {\n+            if (ref.getValue(i).isLessThan(ref.getValue(Math.max(beginIndex, i - 1)))) {\n@@ -69,3 +70,3 @@ public class IsFallingRule extends AbstractRule {\n-                            ref.getValue(Math.max(0, index - 1)), \"fallingCount\", count, \"barCount\", barCount, \"ratio\",\n-                            ratio, \"minStrength\", minStrength, \"windowStart\", Math.max(0, index - barCount + 1),\n-                            \"windowEnd\", index, \"reason\", satisfied ? \"fallingStrengthMet\" : \"fallingStrengthTooWeak\"));\n+                            ref.getValue(Math.max(beginIndex, index - 1)), \"fallingCount\", count, \"barCount\", barCount,\n+                            \"ratio\", ratio, \"minStrength\", minStrength, \"windowStart\", start, \"windowEnd\", index,\n+                            \"reason\", satisfied ? \"fallingStrengthMet\" : \"fallingStrengthTooWeak\"));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/IsRisingRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/IsRisingRule.java\nindex 677cf16d8..2df11bfb7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/IsRisingRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/IsRisingRule.java\n@@ -54,0 +55,2 @@ public class IsRisingRule extends AbstractRule {\n+        int beginIndex = Math.max(0, ref.getBarSeries().getBeginIndex());\n+        int start = Math.max(beginIndex, index - barCount + 1);\n@@ -56,2 +58,2 @@ public class IsRisingRule extends AbstractRule {\n-        for (int i = Math.max(0, index - barCount + 1); i <= index; i++) {\n-            if (ref.getValue(i).isGreaterThan(ref.getValue(Math.max(0, i - 1)))) {\n+        for (int i = start; i <= index; i++) {\n+            if (ref.getValue(i).isGreaterThan(ref.getValue(Math.max(beginIndex, i - 1)))) {\n@@ -68,3 +70,3 @@ public class IsRisingRule extends AbstractRule {\n-                            ref.getValue(Math.max(0, index - 1)), \"risingCount\", count, \"barCount\", barCount, \"ratio\",\n-                            ratio, \"minStrength\", minStrength, \"windowStart\", Math.max(0, index - barCount + 1),\n-                            \"windowEnd\", index, \"reason\", satisfied ? \"risingStrengthMet\" : \"risingStrengthTooWeak\"));\n+                            ref.getValue(Math.max(beginIndex, index - 1)), \"risingCount\", count, \"barCount\", barCount,\n+                            \"ratio\", ratio, \"minStrength\", minStrength, \"windowStart\", start, \"windowEnd\", index,\n+                            \"reason\", satisfied ? \"risingStrengthMet\" : \"risingStrengthTooWeak\"));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/OrWithThresholdRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/OrWithThresholdRule.java\nindex 4f9258489..12f85ca75 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/OrWithThresholdRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/OrWithThresholdRule.java\n@@ -7,0 +8 @@ import java.util.Objects;\n+import org.ta4j.core.BarSeries;\n@@ -32,0 +34,3 @@ public class OrWithThresholdRule extends AbstractRule {\n+    /** The backing series, or {@code null} when neither rule exposes one. */\n+    private final BarSeries series;\n+\n@@ -48,0 +53 @@ public class OrWithThresholdRule extends AbstractRule {\n+        this.series = RuleCopies.findBarSeries(rule1).or(() -> RuleCopies.findBarSeries(rule2)).orElse(null);\n@@ -62 +67,3 @@ public class OrWithThresholdRule extends AbstractRule {\n-        if (index - this.threshold + 1 < 0) {\n+        int beginIndex = series == null ? 0 : series.getBeginIndex();\n+        int windowStart = index - this.threshold + 1;\n+        if (windowStart < beginIndex) {\n@@ -64,2 +71,2 @@ public class OrWithThresholdRule extends AbstractRule {\n-                traceIsSatisfied(index, false, traceContext(\"threshold\", threshold, \"windowStart\", 0, \"windowEnd\",\n-                        index, \"reason\", \"insufficientBars\"));\n+                traceIsSatisfied(index, false, traceContext(\"threshold\", threshold, \"windowStart\",\n+                        Math.max(beginIndex, windowStart), \"windowEnd\", index, \"reason\", \"insufficientBars\"));\n@@ -72 +79 @@ public class OrWithThresholdRule extends AbstractRule {\n-        for (int i = index - this.threshold + 1; i <= index; i++) {\n+        for (int i = windowStart; i <= index; i++) {\n@@ -87,2 +94,2 @@ public class OrWithThresholdRule extends AbstractRule {\n-                    traceContext(\"threshold\", threshold, \"windowStart\", index - this.threshold + 1, \"windowEnd\", index,\n-                            \"rule1\", isFirstSatisfied, \"rule2\", isSecondSatisfied, \"reason\",\n+                    traceContext(\"threshold\", threshold, \"windowStart\", windowStart, \"windowEnd\", index, \"rule1\",\n+                            isFirstSatisfied, \"rule2\", isSecondSatisfied, \"reason\",\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java b/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java\nindex 3db180923..3f2be38b3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/RuleCopies.java\n@@ -56 +56,11 @@ public final class RuleCopies {\n-    private static Optional<BarSeries> findBarSeries(Object value) {\n+    /**\n+     * Returns the first {@link BarSeries} reachable from {@code value}, if any.\n+     *\n+     * <p>\n+     * Composite rules use this to anchor evaluation windows at the series'\n+     * {@link BarSeries#getBeginIndex()} instead of literal zero.\n+     *\n+     * @param value the value to scan for a bar series\n+     * @return the first reachable bar series, or empty if none is reachable\n+     */\n+    static Optional<BarSeries> findBarSeries(Object value) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/TimeRangeRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/TimeRangeRule.java\nindex 8e4385746..195527398 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/TimeRangeRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/TimeRangeRule.java\n@@ -27,0 +28,6 @@ import org.ta4j.core.indicators.helpers.DateTimeIndicator;\n+ * Each {@link TimeRange} must have a {@code from} that is not after its\n+ * {@code to}; inverted windows (e.g. 22:00 to 02:00) are rejected at\n+ * construction time. Overnight sessions spanning midnight are not supported and\n+ * must be modeled as two ranges.\n+ *\n+ * <p>\n@@ -31,0 +38,6 @@ public class TimeRangeRule extends AbstractRule {\n+    /**\n+     * A time-of-day window.\n+     *\n+     * @param from the inclusive window start\n+     * @param to   the inclusive window end\n+     */\n@@ -87,0 +100,4 @@ public class TimeRangeRule extends AbstractRule {\n+            if (from.isAfter(to)) {\n+                throw new IllegalArgumentException(\n+                        \"Time range 'from' must not be after 'to' but was \" + from + \" > \" + to);\n+            }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopGainRule.java\nindex 17acbf2db..2c06b2fcf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopGainRule.java\n@@ -125,20 +125,5 @@ public class TrailingFixedAmountStopGainRule extends AbstractRule implements Sto\n-        Num extremePrice;\n-        Num activationPrice;\n-        Num stopPrice;\n-        boolean activationReached;\n-        boolean satisfied;\n-        String extremeField;\n-        if (buy) {\n-            extremePrice = highestClosePrice(index, lookback);\n-            activationPrice = StopGainRule.stopGainPriceFromDistance(entryPrice, gainAmount, true);\n-            activationReached = !extremePrice.isLessThan(activationPrice);\n-            stopPrice = StopGainRule.trailingStopGainPriceFromDistance(extremePrice, gainAmount, true);\n-            satisfied = activationReached && currentPrice.isLessThanOrEqual(stopPrice);\n-            extremeField = \"highestPrice\";\n-        } else {\n-            extremePrice = lowestClosePrice(index, lookback);\n-            activationPrice = StopGainRule.stopGainPriceFromDistance(entryPrice, gainAmount, false);\n-            activationReached = !extremePrice.isGreaterThan(activationPrice);\n-            stopPrice = StopGainRule.trailingStopGainPriceFromDistance(extremePrice, gainAmount, false);\n-            satisfied = activationReached && currentPrice.isGreaterThanOrEqual(stopPrice);\n-            extremeField = \"lowestPrice\";\n+        Num extremePrice = buy ? highestClosePrice(index, lookback) : lowestClosePrice(index, lookback);\n+        if (Num.isNaNOrNull(entryPrice) || Num.isNaNOrNull(currentPrice) || Num.isNaNOrNull(extremePrice)) {\n+            StopRuleTrace.traceDecision(this, index, false, buy, currentPrice, entryPrice, null, \"gainAmount\",\n+                    gainAmount, \"priceUnavailable\");\n+            return false;\n@@ -145,0 +131,7 @@ public class TrailingFixedAmountStopGainRule extends AbstractRule implements Sto\n+        Num activationPrice = StopGainRule.stopGainPriceFromDistance(entryPrice, gainAmount, buy);\n+        boolean activationReached = buy ? !extremePrice.isLessThan(activationPrice)\n+                : !extremePrice.isGreaterThan(activationPrice);\n+        Num stopPrice = StopGainRule.trailingStopGainPriceFromDistance(extremePrice, gainAmount, buy);\n+        boolean satisfied = buy ? activationReached && currentPrice.isLessThanOrEqual(stopPrice)\n+                : activationReached && currentPrice.isGreaterThanOrEqual(stopPrice);\n+        String extremeField = buy ? \"highestPrice\" : \"lowestPrice\";\n@@ -168,3 +160,4 @@ public class TrailingFixedAmountStopGainRule extends AbstractRule implements Sto\n-        if (position.getEntry().isBuy()) {\n-            Num highestCloseNum = highestClosePrice(entryIndex, lookback);\n-            return StopGainRule.trailingStopGainPriceFromDistance(highestCloseNum, gainAmount, true);\n+        Num extremePrice = position.getEntry().isBuy() ? highestClosePrice(entryIndex, lookback)\n+                : lowestClosePrice(entryIndex, lookback);\n+        if (Num.isNaNOrNull(extremePrice)) {\n+            return null;\n@@ -172,2 +165 @@ public class TrailingFixedAmountStopGainRule extends AbstractRule implements Sto\n-        Num lowestCloseNum = lowestClosePrice(entryIndex, lookback);\n-        return StopGainRule.trailingStopGainPriceFromDistance(lowestCloseNum, gainAmount, false);\n+        return StopGainRule.trailingStopGainPriceFromDistance(extremePrice, gainAmount, position.getEntry().isBuy());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopLossRule.java\nindex 94b041386..64898b286 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/TrailingFixedAmountStopLossRule.java\n@@ -120,14 +120,6 @@ public class TrailingFixedAmountStopLossRule extends AbstractRule implements Sto\n-        Num extremePrice;\n-        Num stopPrice;\n-        boolean satisfied;\n-        String extremeField;\n-        if (buy) {\n-            extremePrice = new HighestValueIndicator(priceIndicator, lookback).getValue(index);\n-            stopPrice = StopLossRule.stopLossPriceFromDistance(extremePrice, lossAmount, true);\n-            satisfied = currentPrice.isLessThanOrEqual(stopPrice);\n-            extremeField = \"highestPrice\";\n-        } else {\n-            extremePrice = new LowestValueIndicator(priceIndicator, lookback).getValue(index);\n-            stopPrice = StopLossRule.stopLossPriceFromDistance(extremePrice, lossAmount, false);\n-            satisfied = currentPrice.isGreaterThanOrEqual(stopPrice);\n-            extremeField = \"lowestPrice\";\n+        Num extremePrice = buy ? new HighestValueIndicator(priceIndicator, lookback).getValue(index)\n+                : new LowestValueIndicator(priceIndicator, lookback).getValue(index);\n+        if (Num.isNaNOrNull(entryPrice) || Num.isNaNOrNull(currentPrice) || Num.isNaNOrNull(extremePrice)) {\n+            StopRuleTrace.traceDecision(this, index, false, buy, currentPrice, entryPrice, null, \"lossAmount\",\n+                    lossAmount, \"priceUnavailable\");\n+            return false;\n@@ -134,0 +127,4 @@ public class TrailingFixedAmountStopLossRule extends AbstractRule implements Sto\n+        Num stopPrice = StopLossRule.stopLossPriceFromDistance(extremePrice, lossAmount, buy);\n+        boolean satisfied = buy ? currentPrice.isLessThanOrEqual(stopPrice)\n+                : currentPrice.isGreaterThanOrEqual(stopPrice);\n+        String extremeField = buy ? \"highestPrice\" : \"lowestPrice\";\n@@ -157,4 +153,5 @@ public class TrailingFixedAmountStopLossRule extends AbstractRule implements Sto\n-        if (position.getEntry().isBuy()) {\n-            HighestValueIndicator highest = new HighestValueIndicator(priceIndicator, lookback);\n-            Num highestCloseNum = highest.getValue(entryIndex);\n-            return StopLossRule.stopLossPriceFromDistance(highestCloseNum, lossAmount, true);\n+        Num extremePrice = position.getEntry().isBuy()\n+                ? new HighestValueIndicator(priceIndicator, lookback).getValue(entryIndex)\n+                : new LowestValueIndicator(priceIndicator, lookback).getValue(entryIndex);\n+        if (Num.isNaNOrNull(extremePrice)) {\n+            return null;\n@@ -162,3 +159 @@ public class TrailingFixedAmountStopLossRule extends AbstractRule implements Sto\n-        LowestValueIndicator lowest = new LowestValueIndicator(priceIndicator, lookback);\n-        Num lowestCloseNum = lowest.getValue(entryIndex);\n-        return StopLossRule.stopLossPriceFromDistance(lowestCloseNum, lossAmount, false);\n+        return StopLossRule.stopLossPriceFromDistance(extremePrice, lossAmount, position.getEntry().isBuy());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\nindex ac0bb71f5..bb32362bc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n@@ -251,0 +252,14 @@ public final class IndicatorSerialization {\n+        // Symmetric gate: fail on write if the read side could never resolve this\n+        // type (first-party indicators outside org.ta4j.core.indicators, third-party\n+        // or anonymous indicator classes)\n+        Class<?> resolvedType = resolveIndicatorClass(type);\n+        if (resolvedType == null) {\n+            throw new IndicatorSerializationException(\"Unknown indicator type: \" + type);\n+        }\n+        // A third-party class whose simple name collides with a built-in type\n+        // would be written under the built-in name and deserialized as the wrong\n+        // indicator: fail on write instead.\n+        if (!resolvedType.equals(indicator.getClass())) {\n+            throw new IndicatorSerializationException(\"Indicator type \" + indicator.getClass().getName()\n+                    + \" collides with the built-in simple name: \" + type);\n+        }\n@@ -754,0 +769,3 @@ public final class IndicatorSerialization {\n+            if (Num.isNaNOrNull(num) || !Num.isFinite(num)) {\n+                throw new IndicatorSerializationException(\"Non-finite numeric parameter cannot be serialized: \" + num);\n+            }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\nindex 4d89e32c8..f5772bf9e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n@@ -1736,0 +1737,3 @@ public final class RuleSerialization {\n+                if (value instanceof Num num && (Num.isNaNOrNull(num) || !Num.isFinite(num))) {\n+                    throw new IllegalArgumentException(\"Non-finite numeric parameter cannot be serialized: \" + name);\n+                }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java\nindex 6b15554df..9ef8f3df0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java\n@@ -720,7 +720,3 @@ public final class StrategySerialization {\n-     * If the specified strategy type cannot be instantiated (e.g., no matching\n-     * constructor is found), this method will silently fall back to creating a\n-     * {@link BaseStrategy} instance with the same entry/exit rules and parameters.\n-     * This fallback behavior may mask configuration issues where a specific\n-     * strategy type was expected but could not be constructed. Callers should\n-     * verify the returned strategy type matches expectations if strict type\n-     * checking is required.\n+     * If the specified strategy type cannot be resolved or instantiated, an\n+     * exception is thrown naming the requested type; no silent {@link BaseStrategy}\n+     * substitution is performed.\n@@ -730,2 +726,4 @@ public final class StrategySerialization {\n-     * @return reconstructed strategy (may be a {@link BaseStrategy} fallback if the\n-     *         specified type could not be instantiated)\n+     * @return reconstructed strategy\n+     * @throws IllegalArgumentException if the descriptor type cannot be resolved\n+     * @throws IllegalStateException    if the resolved type has no suitable\n+     *                                  constructor\n@@ -758 +755,0 @@ public final class StrategySerialization {\n-        int unstableBars = extractUnstableBars(descriptor.getParameters().get(UNSTABLE_BARS_KEY));\n@@ -759,0 +757 @@ public final class StrategySerialization {\n+        int unstableBars = extractUnstableBars(descriptor.getParameters().get(UNSTABLE_BARS_KEY));\n@@ -882 +880 @@ public final class StrategySerialization {\n-            return 0;\n+            throw new IllegalArgumentException(\"Missing integer value at \" + UNSTABLE_BARS_KEY);\n@@ -883,0 +882,2 @@ public final class StrategySerialization {\n+        String text = String.valueOf(value).trim();\n+        final int unstableBars;\n@@ -885,6 +885,14 @@ public final class StrategySerialization {\n-            return ((Number) value).intValue();\n-        }\n-        try {\n-            return Integer.parseInt(String.valueOf(value));\n-        } catch (NumberFormatException e) {\n-            return 0;\n+            try {\n+                unstableBars = new BigDecimal(text).intValueExact();\n+            } catch (NumberFormatException | ArithmeticException ex) {\n+                throw new IllegalArgumentException(\"Expected integer value at \" + UNSTABLE_BARS_KEY + \": \" + text, ex);\n+            }\n+        } else {\n+            if (!isIntegerLiteral(text)) {\n+                throw new IllegalArgumentException(\"Expected integer value at \" + UNSTABLE_BARS_KEY + \": \" + text);\n+            }\n+            try {\n+                unstableBars = Integer.parseInt(text);\n+            } catch (NumberFormatException ex) {\n+                throw new IllegalArgumentException(\"Expected integer value at \" + UNSTABLE_BARS_KEY + \": \" + text, ex);\n+            }\n@@ -891,0 +900,2 @@ public final class StrategySerialization {\n+        requireNonNegativeInt(unstableBars, UNSTABLE_BARS_KEY);\n+        return unstableBars;\n@@ -900,0 +911 @@ public final class StrategySerialization {\n+        String text = String.valueOf(value).trim();\n@@ -902 +913 @@ public final class StrategySerialization {\n-            return TradeType.valueOf(String.valueOf(value).trim().toUpperCase(Locale.ROOT));\n+            return TradeType.valueOf(text.toUpperCase(Locale.ROOT));\n@@ -904 +915 @@ public final class StrategySerialization {\n-            return TradeType.BUY;\n+            throw new IllegalArgumentException(\"Unsupported starting type at \" + STARTING_TYPE_KEY + \": \" + text, ex);\n@@ -1070,0 +1082 @@ public final class StrategySerialization {\n+            throw new IllegalArgumentException(\"Descriptor type does not implement Strategy: \" + type);\n@@ -1078,0 +1091 @@ public final class StrategySerialization {\n+            throw new IllegalArgumentException(\"Descriptor type does not implement Strategy: \" + type);\n@@ -1080 +1093 @@ public final class StrategySerialization {\n-            // ignore and fall back to BaseStrategy\n+            throw new IllegalArgumentException(\"Unknown strategy type: \" + type, ex);\n@@ -1082 +1094,0 @@ public final class StrategySerialization {\n-        return BaseStrategy.class;\n@@ -1104,0 +1117,4 @@ public final class StrategySerialization {\n+     * <strong>Failure Behavior:</strong> If none of the above constructors are\n+     * found, an {@link IllegalStateException} is thrown naming the requested type,\n+     * instead of silently substituting a {@link BaseStrategy} whose type and\n+     * type-specific behavior differ from the declared strategy.\n@@ -1106,10 +1121,0 @@ public final class StrategySerialization {\n-     * <strong>Fallback Behavior:</strong> If none of the above constructors are\n-     * found and the requested type is not {@link BaseStrategy}, this method will\n-     * silently create a {@link BaseStrategy} instance instead. This fallback\n-     * provides resilience but may mask configuration issues where a specific\n-     * strategy type was expected. The returned instance will have the same entry\n-     * rule, exit rule, name, and unstableBars value, but will be of type\n-     * {@code BaseStrategy} rather than the requested type.\n-     * <p>\n-     * If the requested type is already {@code BaseStrategy} and no suitable\n-     * constructor is found, an {@link IllegalStateException} is thrown.\n@@ -1123,4 +1129,3 @@ public final class StrategySerialization {\n-     * @return instantiated strategy (may be a {@link BaseStrategy} fallback if the\n-     *         requested type could not be instantiated)\n-     * @throws IllegalStateException if the requested type is {@code BaseStrategy}\n-     *                               and no suitable constructor is found\n+     * @return instantiated strategy\n+     * @throws IllegalStateException if no suitable constructor is found for the\n+     *                               requested type\n@@ -1226,7 +1231,2 @@ public final class StrategySerialization {\n-        // Fallback: If the requested strategy type cannot be instantiated, create a\n-        // BaseStrategy instead. This provides resilience but may mask configuration\n-        // issues where a specific strategy type was expected. The fallback preserves\n-        // the entry/exit rules and parameters but changes the strategy type.\n-        if (!strategyType.equals(BaseStrategy.class)) {\n-            return new BaseStrategy(name, entryRule, exitRule, unstableBars, startingType);\n-        }\n+        // Fail loud: silently substituting BaseStrategy for the declared type\n+        // would change the strategy's type and type-specific behavior\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/strategy/named/NamedStrategy.java b/ta4j-core/src/main/java/org/ta4j/core/strategy/named/NamedStrategy.java\nindex 0a01adf65..fc0ababd3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/strategy/named/NamedStrategy.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/strategy/named/NamedStrategy.java\n@@ -257,2 +257 @@ public abstract class NamedStrategy extends BaseStrategy {\n-        Class<? extends NamedStrategy> removed = REGISTRY.remove(key);\n-        return removed != null && removed == type;\n+        return REGISTRY.remove(key, type);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java b/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java\nindex c7a392a1a..796a8b81c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java\n@@ -32 +32 @@ public final class BarSeriesUtils {\n-    public static final Comparator<Bar> sortBarsByTime = (b1, b2) -> b1.getEndTime().isAfter(b2.getEndTime()) ? 1 : -1;\n+    public static final Comparator<Bar> sortBarsByTime = (b1, b2) -> b1.getEndTime().compareTo(b2.getEndTime());\n@@ -233,0 +234 @@ public final class BarSeriesUtils {\n+     * @since 0.22.2\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardConfig.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardConfig.java\nindex 691511785..940d614cf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardConfig.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardConfig.java\n@@ -5,0 +6,3 @@ package org.ta4j.core.walkforward;\n+import java.nio.charset.StandardCharsets;\n+import java.security.MessageDigest;\n+import java.security.NoSuchAlgorithmException;\n@@ -6,0 +10 @@ import java.util.ArrayList;\n+import java.util.HexFormat;\n@@ -175 +179,10 @@ public record WalkForwardConfig(int minTrainBars, int testBars, int stepBars, in\n-     * Creates a deterministic configuration hash useful for manifests.\n+     * Creates a deterministic, collision-safe configuration hash useful for\n+     * manifests.\n+     *\n+     * <p>\n+     * The hash is the lowercase hexadecimal encoding (64 characters) of the SHA-256\n+     * digest over the canonical configuration serialization, so semantically-equal\n+     * configurations produce equal hashes while distinct configurations are\n+     * effectively collision-free. Previously this method returned the 32-bit\n+     * {@link String#hashCode()} value truncated to 8 hex characters; callers that\n+     * persisted the old format must regenerate their stored identity keys.\n@@ -184 +197,9 @@ public record WalkForwardConfig(int minTrainBars, int testBars, int stepBars, in\n-        return Integer.toHexString(canonical.hashCode());\n+        return HexFormat.of().formatHex(digest(canonical));\n+    }\n+\n+    private static byte[] digest(String canonical) {\n+        try {\n+            return MessageDigest.getInstance(\"SHA-256\").digest(canonical.getBytes(StandardCharsets.UTF_8));\n+        } catch (NoSuchAlgorithmException e) {\n+            throw new IllegalStateException(\"SHA-256 digest unavailable\", e);\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\nindex b9a931aaa..1b073b511 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardEngine.java\n@@ -21,0 +22,2 @@ import java.util.function.Consumer;\n+import org.slf4j.Logger;\n+import org.slf4j.LoggerFactory;\n@@ -39,0 +42,2 @@ public final class WalkForwardEngine<C, P, O> {\n+    private static final Logger log = LoggerFactory.getLogger(WalkForwardEngine.class);\n+\n@@ -203 +207,3 @@ public final class WalkForwardEngine<C, P, O> {\n-        List<FoldExecution<P, O>> foldExecutions = executeFolds(series, context, config, splits, maxPredictions,\n+        List<FoldExecution<P, O>> foldExecutions;\n+        List<WalkForwardRunResult.FoldFailure> foldFailures;\n+        WalkForwardFoldResults<P, O> foldResults = executeFolds(series, context, config, splits, maxPredictions,\n@@ -204,0 +211,2 @@ public final class WalkForwardEngine<C, P, O> {\n+        foldExecutions = foldResults.executions();\n+        foldFailures = foldResults.failures();\n@@ -234 +242 @@ public final class WalkForwardEngine<C, P, O> {\n-                runtimeReport, manifest);\n+                runtimeReport, manifest, foldFailures);\n@@ -249 +257 @@ public final class WalkForwardEngine<C, P, O> {\n-    private List<FoldExecution<P, O>> executeFolds(BarSeries series, C context, WalkForwardConfig config,\n+    private WalkForwardFoldResults<P, O> executeFolds(BarSeries series, C context, WalkForwardConfig config,\n@@ -252 +260 @@ public final class WalkForwardEngine<C, P, O> {\n-            return List.of();\n+            return new WalkForwardFoldResults<>(List.of(), List.of());\n@@ -255,0 +264 @@ public final class WalkForwardEngine<C, P, O> {\n+            List<WalkForwardRunResult.FoldFailure> failures = new ArrayList<>();\n@@ -257,2 +266,9 @@ public final class WalkForwardEngine<C, P, O> {\n-                executions.add(executeFold(series, context, config, splits.get(splitIndex), splitIndex, maxPredictions,\n-                        progressCounter));\n+                WalkForwardSplit split = splits.get(splitIndex);\n+                try {\n+                    executions.add(\n+                            executeFold(series, context, config, split, splitIndex, maxPredictions, progressCounter));\n+                } catch (ProgressCallbackException e) {\n+                    throw markProgressCallbackFailure(e);\n+                } catch (RuntimeException e) {\n+                    failures.add(recordFoldFailure(split, splitIndex, e));\n+                }\n@@ -260 +276 @@ public final class WalkForwardEngine<C, P, O> {\n-            return executions;\n+            return new WalkForwardFoldResults<>(executions, failures);\n@@ -275 +291,3 @@ public final class WalkForwardEngine<C, P, O> {\n-            for (Future<FoldExecution<P, O>> future : futures) {\n+            List<WalkForwardRunResult.FoldFailure> failures = new ArrayList<>();\n+            for (int splitIndex = 0; splitIndex < futures.size(); splitIndex++) {\n+                WalkForwardSplit split = splits.get(splitIndex);\n@@ -277 +295 @@ public final class WalkForwardEngine<C, P, O> {\n-                    executions.add(future.get());\n+                    executions.add(futures.get(splitIndex).get());\n@@ -282 +300,8 @@ public final class WalkForwardEngine<C, P, O> {\n-                    rethrowParallelFailure(e.getCause());\n+                    Throwable cause = e.getCause();\n+                    if (cause instanceof Error error) {\n+                        throw error;\n+                    }\n+                    if (cause instanceof ProgressCallbackException progressFailure) {\n+                        throw markProgressCallbackFailure(progressFailure);\n+                    }\n+                    failures.add(recordFoldFailure(split, splitIndex, cause));\n@@ -286 +311 @@ public final class WalkForwardEngine<C, P, O> {\n-            return executions;\n+            return new WalkForwardFoldResults<>(executions, failures);\n@@ -292,8 +317,8 @@ public final class WalkForwardEngine<C, P, O> {\n-    private static void rethrowParallelFailure(Throwable cause) {\n-        if (cause instanceof Error error) {\n-            throw error;\n-        }\n-        if (cause instanceof RuntimeException runtimeException) {\n-            throw runtimeException;\n-        }\n-        throw new IllegalStateException(\"Walk-forward fold execution failed\", cause);\n+    private WalkForwardRunResult.FoldFailure recordFoldFailure(WalkForwardSplit split, int foldOrder, Throwable cause) {\n+        String message = \"Walk-forward fold \" + split.foldId() + \" failed\";\n+        log.warn(message + \": {}\", cause == null ? \"null\" : cause.toString());\n+        return new WalkForwardRunResult.FoldFailure(split.foldId(), foldOrder, message, cause);\n+    }\n+\n+    private record WalkForwardFoldResults<P, O>(List<FoldExecution<P, O>> executions,\n+            List<WalkForwardRunResult.FoldFailure> failures) {\n@@ -360 +385,47 @@ public final class WalkForwardEngine<C, P, O> {\n-            progressCallback.accept(progressCounter.incrementAndGet());\n+            try {\n+                progressCallback.accept(progressCounter.incrementAndGet());\n+            } catch (RuntimeException e) {\n+                // Callback failures belong to the caller; mark them so fold\n+                // isolation never records them as fold failures.\n+                throw new ProgressCallbackException(e);\n+            }\n+        }\n+    }\n+\n+    /**\n+     * Marker for progress-callback failures. Never classified as a fold failure;\n+     * the originating callback exception is rethrown to the caller.\n+     */\n+    private static final class ProgressCallbackException extends RuntimeException {\n+\n+        private ProgressCallbackException(Throwable cause) {\n+            super(cause);\n+        }\n+    }\n+\n+    /**\n+     * Unwraps the originating callback exception and attaches the marker as a\n+     * suppressed exception, so callers that isolate candidate or fold failures (for\n+     * example {@link WalkForwardTuner}) can still distinguish a callback failure\n+     * from a genuine evaluation failure via\n+     * {@link #isProgressCallbackFailure(RuntimeException)}.\n+     */\n+    private static RuntimeException markProgressCallbackFailure(ProgressCallbackException failure) {\n+        RuntimeException original = (RuntimeException) failure.getCause();\n+        original.addSuppressed(failure);\n+        return original;\n+    }\n+\n+    /**\n+     * Returns whether an exception propagated from {@code run} originated from the\n+     * progress callback rather than from candidate evaluation.\n+     *\n+     * @param exception exception rethrown by this engine\n+     * @return {@code true} when the exception was raised by the progress callback\n+     * @since 0.24.2\n+     */\n+    static boolean isProgressCallbackFailure(RuntimeException exception) {\n+        for (Throwable suppressed : exception.getSuppressed()) {\n+            if (suppressed instanceof ProgressCallbackException) {\n+                return true;\n+            }\n@@ -361,0 +433 @@ public final class WalkForwardEngine<C, P, O> {\n+        return false;\n@@ -398 +470,5 @@ public final class WalkForwardEngine<C, P, O> {\n-            return WalkForwardRuntimeReport.empty();\n+            // No fold completed (for example when every fold failed), but the run\n+            // still consumed wall-clock time: retain the measured overall runtime\n+            // while leaving the fold summary fields at zero.\n+            return new WalkForwardRuntimeReport(overallRuntime, Duration.ZERO, Duration.ZERO, Duration.ZERO,\n+                    Duration.ZERO, List.of());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardLeaderboard.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardLeaderboard.java\nindex c9713e536..90970f2e5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardLeaderboard.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardLeaderboard.java\n@@ -17 +17 @@ import org.ta4j.core.num.Num;\n- * @param evaluatedCount     total candidates evaluated\n+ * @param evaluatedCount     total candidates evaluated successfully\n@@ -19,0 +20,2 @@ import org.ta4j.core.num.Num;\n+ * @param failedCount        number of candidates whose evaluation failed and\n+ *                           were excluded from the ranking\n@@ -23 +25,14 @@ public record WalkForwardLeaderboard<C>(List<Entry<C>> entries, int evaluatedCou\n-        int primaryHorizonBars) {\n+        int primaryHorizonBars, int failedCount) {\n+\n+    /**\n+     * Creates a validated leaderboard with no failed candidates.\n+     *\n+     * @param entries            ranked entries\n+     * @param evaluatedCount     total candidates evaluated\n+     * @param keptCount          number of entries retained in ranking output\n+     * @param primaryHorizonBars optimization horizon used for ranking\n+     * @since 0.22.4\n+     */\n+    public WalkForwardLeaderboard(List<Entry<C>> entries, int evaluatedCount, int keptCount, int primaryHorizonBars) {\n+        this(entries, evaluatedCount, keptCount, primaryHorizonBars, 0);\n+    }\n@@ -35,0 +51,3 @@ public record WalkForwardLeaderboard<C>(List<Entry<C>> entries, int evaluatedCou\n+        if (failedCount < 0) {\n+            throw new IllegalArgumentException(\"failedCount must be >= 0\");\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardMetric.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardMetric.java\nindex 4a2d22937..6785bf2ca 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardMetric.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardMetric.java\n@@ -74,2 +74,7 @@ public interface WalkForwardMetric<P, O> extends NamedScoreFunction<List<WalkFor\n-     * Clamps the provided value to {@code [0,1]} and maps NaN/null values to\n-     * {@code 0}.\n+     * Clamps the provided value to {@code [0,1]}.\n+     *\n+     * <p>\n+     * NaN and {@code null} values are returned as {@link NaN#NaN} unchanged\n+     * (matching the walk-forward family's convention that undefined values must\n+     * never be coerced into a valid-looking zero). To coerce NaN/null to {@code 0}\n+     * instead, use {@link #normalizeAndClamp01(Num, NumFactory)}.\n@@ -78 +83 @@ public interface WalkForwardMetric<P, O> extends NamedScoreFunction<List<WalkFor\n-     * @return clamped value\n+     * @return clamped value, or {@link NaN#NaN} when {@code value} is NaN or null\n@@ -292 +297 @@ public interface WalkForwardMetric<P, O> extends NamedScoreFunction<List<WalkFor\n-                    return factory.zero();\n+                    return NaN.NaN;\n@@ -297,0 +303,2 @@ public interface WalkForwardMetric<P, O> extends NamedScoreFunction<List<WalkFor\n+                    // No true positives while precision and recall are both\n+                    // defined: F1 is a defined zero, not an undefined metric.\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRunResult.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRunResult.java\nindex 6d1cf28b8..3331b2476 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRunResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardRunResult.java\n@@ -5,0 +6 @@ package org.ta4j.core.walkforward;\n+import java.util.HashSet;\n@@ -9,0 +11 @@ import java.util.Optional;\n+import java.util.Set;\n@@ -11,0 +14 @@ import org.ta4j.core.num.Num;\n+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;\n@@ -27,0 +31,3 @@ import org.ta4j.core.num.Num;\n+ * @param foldFailures           per-fold execution failures encountered during\n+ *                               the run; healthy folds remain fully represented\n+ *                               in the other components\n@@ -34 +40,27 @@ public record WalkForwardRunResult<P, O>(WalkForwardConfig config, List<WalkForw\n-        WalkForwardRuntimeReport runtimeReport, WalkForwardExperimentManifest manifest) {\n+        WalkForwardRuntimeReport runtimeReport, WalkForwardExperimentManifest manifest,\n+        List<FoldFailure> foldFailures) {\n+\n+    /**\n+     * Creates a validated run result with no recorded fold failures.\n+     *\n+     * @param config                 run configuration\n+     * @param splits                 fold definitions\n+     * @param snapshots              captured prediction snapshots\n+     * @param observationsByHorizon  observations grouped by horizon\n+     * @param globalMetricsByHorizon metric map grouped by horizon then metric name\n+     * @param foldMetricsByHorizon   metric map grouped by horizon, fold id, and\n+     *                               metric name\n+     * @param leakageAudit           leakage audit traces\n+     * @param runtimeReport          runtime summary\n+     * @param manifest               reproducibility manifest\n+     * @since 0.22.4\n+     */\n+    public WalkForwardRunResult(WalkForwardConfig config, List<WalkForwardSplit> splits,\n+            List<PredictionSnapshot<P>> snapshots,\n+            Map<Integer, List<WalkForwardObservation<P, O>>> observationsByHorizon,\n+            Map<Integer, Map<String, Num>> globalMetricsByHorizon,\n+            Map<Integer, Map<String, Map<String, Num>>> foldMetricsByHorizon, List<LeakageAudit> leakageAudit,\n+            WalkForwardRuntimeReport runtimeReport, WalkForwardExperimentManifest manifest) {\n+        this(config, splits, snapshots, observationsByHorizon, globalMetricsByHorizon, foldMetricsByHorizon,\n+                leakageAudit, runtimeReport, manifest, List.of());\n+    }\n@@ -46,0 +79,9 @@ public record WalkForwardRunResult<P, O>(WalkForwardConfig config, List<WalkForw\n+        foldFailures = foldFailures == null ? List.of() : List.copyOf(foldFailures);\n+        Set<Integer> failureOrders = new HashSet<>();\n+        for (FoldFailure failure : foldFailures) {\n+            if (failure.foldOrder() >= splits.size()\n+                    || !splits.get(failure.foldOrder()).foldId().equals(failure.foldId())\n+                    || !failureOrders.add(failure.foldOrder())) {\n+                throw new IllegalArgumentException(\"foldFailure must identify a unique split by foldOrder and foldId\");\n+            }\n+        }\n@@ -101,0 +143,45 @@ public record WalkForwardRunResult<P, O>(WalkForwardConfig config, List<WalkForw\n+\n+    /**\n+     * Records one fold whose execution failed while other independent folds\n+     * completed successfully. Failed folds are isolated: their absence never\n+     * invalidates the healthy folds' snapshots, observations, metrics, or runtime\n+     * details carried in the same result.\n+     *\n+     * @param foldId    fold identifier\n+     * @param foldOrder zero-based fold order in split iteration order\n+     * @param message   human-readable failure description\n+     * @param cause     underlying failure cause\n+     * @since 0.24.2\n+     */\n+    public record FoldFailure(String foldId, int foldOrder, String message, Throwable cause) {\n+\n+        /**\n+         * Creates a validated fold failure record.\n+         *\n+         * @since 0.24.2\n+         */\n+        @SuppressFBWarnings(value = \"EI_EXPOSE_REP2\", justification = \"FoldFailure intentionally captures the original exception for fail-loud \"\n+                + \"walk-forward diagnostics; exceptions are never mutated after capture\")\n+        public FoldFailure {\n+            Objects.requireNonNull(foldId, \"foldId\");\n+            if (foldOrder < 0) {\n+                throw new IllegalArgumentException(\"foldOrder must be >= 0\");\n+            }\n+            Objects.requireNonNull(message, \"message\");\n+            Objects.requireNonNull(cause, \"cause\");\n+        }\n+\n+        /**\n+         * Exposes the captured failure cause for diagnostics.\n+         *\n+         * @return the captured failure cause\n+         * @since 0.24.2\n+         */\n+        @Override\n+        @SuppressFBWarnings(value = \"EI_EXPOSE_REP\", justification = \"FoldFailure intentionally exposes the original exception for fail-loud \"\n+                + \"walk-forward diagnostics; exceptions are never mutated after capture\")\n+        public Throwable cause() {\n+            return cause;\n+        }\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java\nindex f22c99324..b6ce705e5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java\n@@ -14,0 +15,2 @@ import java.util.function.Function;\n+import org.slf4j.Logger;\n+import org.slf4j.LoggerFactory;\n@@ -35,0 +38,2 @@ public final class WalkForwardTuner<C, P, O> {\n+    private static final Logger log = LoggerFactory.getLogger(WalkForwardTuner.class);\n+\n@@ -122,0 +127 @@ public final class WalkForwardTuner<C, P, O> {\n+        int failed = 0;\n@@ -127,15 +132,34 @@ public final class WalkForwardTuner<C, P, O> {\n-                WalkForwardRunResult<P, O> runResult = engine.run(series, candidate.context(), config, candidate.id(),\n-                        Map.of(\"batchIndex\", String.valueOf(batchStart / batchSize)));\n-\n-                MetricBundle metricBundle = selectMetrics(runResult, config.primaryHorizonBars());\n-                CalibrationSelection calibrationSelection = applyCalibrationIfEnabled(runResult,\n-                        config.primaryHorizonBars(), metricBundle.globalMetrics, metricBundle.foldMetrics);\n-\n-                WalkForwardObjective.Score objectiveScore = objective.evaluate(metricBundle.globalMetrics,\n-                        metricBundle.foldMetrics);\n-\n-                WalkForwardLeaderboard.Entry<C> entry = new WalkForwardLeaderboard.Entry<>(candidate, objectiveScore,\n-                        metricBundle.globalMetrics, calibrationSelection, runResult);\n-                topEntries.offer(entry);\n-                if (topEntries.size() > keepTopK) {\n-                    topEntries.poll();\n+                try {\n+                    WalkForwardRunResult<P, O> runResult = engine.run(series, candidate.context(), config,\n+                            candidate.id(), Map.of(\"batchIndex\", String.valueOf(batchStart / batchSize)));\n+\n+                    if (!runResult.splits().isEmpty() && runResult.foldFailures().size() == runResult.splits().size()) {\n+                        log.warn(\"Candidate {} failed during walk-forward tuning: all {} folds failed\", candidate.id(),\n+                                runResult.splits().size());\n+                        failed++;\n+                        continue;\n+                    }\n+\n+                    MetricBundle metricBundle = selectMetrics(runResult, config.primaryHorizonBars());\n+                    CalibrationSelection calibrationSelection = applyCalibrationIfEnabled(runResult,\n+                            config.primaryHorizonBars(), metricBundle.globalMetrics, metricBundle.foldMetrics);\n+\n+                    WalkForwardObjective.Score objectiveScore = objective.evaluate(metricBundle.globalMetrics,\n+                            metricBundle.foldMetrics);\n+\n+                    WalkForwardLeaderboard.Entry<C> entry = new WalkForwardLeaderboard.Entry<>(candidate,\n+                            objectiveScore, metricBundle.globalMetrics, calibrationSelection, runResult);\n+                    topEntries.offer(entry);\n+                    if (topEntries.size() > keepTopK) {\n+                        topEntries.poll();\n+                    }\n+                    evaluated++;\n+                } catch (RuntimeException e) {\n+                    if (WalkForwardEngine.isProgressCallbackFailure(e)) {\n+                        // Progress callback failures belong to the caller: rethrow\n+                        // instead of classifying them as candidate failures, which\n+                        // would silently truncate the leaderboard.\n+                        throw e;\n+                    }\n+                    log.warn(\"Candidate {} failed during walk-forward tuning: {}\", candidate.id(), e.toString());\n+                    failed++;\n@@ -143 +166,0 @@ public final class WalkForwardTuner<C, P, O> {\n-                evaluated++;\n@@ -149 +172 @@ public final class WalkForwardTuner<C, P, O> {\n-        return new WalkForwardLeaderboard<>(ranked, evaluated, ranked.size(), config.primaryHorizonBars());\n+        return new WalkForwardLeaderboard<>(ranked, evaluated, ranked.size(), config.primaryHorizonBars(), failed);"
+}

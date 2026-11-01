@@ -1,0 +1,85 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:52: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:56: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        bars.add(new BaseBar(Duration.ofDays(1), ZonedDateTime.now(),
+                 ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    Duration,ZonedDateTime,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:59: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        bars.add(new BaseBar(Duration.ofDays(1), ZonedDateTime.now().plusDays(1),
+                 ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    Duration,ZonedDateTime,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:62: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        bars.add(new BaseBar(Duration.ofDays(1), ZonedDateTime.now().plusDays(2),
+                 ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    Duration,ZonedDateTime,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:94: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:103: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        TradeType entryType = isLong ? TradeType.BUY : TradeType.SELL;
+        ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        TradeType entryType = isLong ? TradeType.BUY : TradeType.SELL;
+                                       ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        TradeType entryType = isLong ? TradeType.BUY : TradeType.SELL;
+                                                       ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:207: error: cannot find symbol
+        TradeType exitType = isLong ? TradeType.SELL : TradeType.BUY;
+        ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:207: error: cannot find symbol
+        TradeType exitType = isLong ? TradeType.SELL : TradeType.BUY;
+                                      ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:207: error: cannot find symbol
+        TradeType exitType = isLong ? TradeType.SELL : TradeType.BUY;
+                                                       ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:223: error: cannot find symbol
+        TradeType entryType = isLong ? TradeType.BUY : TradeType.SELL;
+        ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:223: error: cannot find symbol
+        TradeType entryType = isLong ? TradeType.BUY : TradeType.SELL;
+                                       ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:223: error: cannot find symbol
+        TradeType entryType = isLong ? TradeType.BUY : TradeType.SELL;
+                                                       ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:226: error: incompatible types: Trade cannot be converted to TradeType
+        return new Position(entry); // constructor creates a position with only entry
+                            ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+17 errors

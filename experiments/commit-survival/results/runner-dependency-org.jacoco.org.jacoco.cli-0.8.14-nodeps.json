@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.jacoco:org.jacoco.cli:0.8.14:jar:nodeps",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.jacoco:org.jacoco.cli:0.8.14:jar:nodeps",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.069,
+      "log": "results/runner-dependency-org.jacoco.org.jacoco.cli-0.8.14-nodeps-1.txt",
+      "coordinate": "org.jacoco:org.jacoco.cli:0.8.14:jar:nodeps",
+      "expected_sha256": "811c7f8c6b358c5d68a8973cfa867f6892be7a671b697a4b13c4b447e6daf75c",
+      "rejected_sha256": null,
+      "downloaded_sha256": "811c7f8c6b358c5d68a8973cfa867f6892be7a671b697a4b13c4b447e6daf75c"
+    }
+  ]
+}

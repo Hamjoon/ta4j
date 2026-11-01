@@ -1,0 +1,100 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:59: error: cannot find symbol
+            Num volume = DecimalNum.ONE;
+                                   ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:67: error: cannot find symbol
+                    DecimalNum.ZERO      // amount (price * volume)
+                              ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:107: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, vi.getValue(0));
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:127: error: cannot find symbol
+        assertEquals(DecimalNum.ZERO, diff.getValue(0));
+                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:128: error: cannot find symbol
+        assertEquals(DecimalNum.ZERO, diff.getValue(1));
+                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:155: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, div.getValue(0));
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:156: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, div.getValue(1));
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:168: error: cannot find symbol
+        NumericIndicator other = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(15)));
+                                                         ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:184: error: cannot find symbol
+        NumericIndicator other = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(15)));
+                                                         ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:200: error: cannot find symbol
+        NumericIndicator negative = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(-5)));
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:245: error: cannot find symbol
+                .dividedBy(DecimalNum.ONE); // sample size = 1 (n-1)
+                                     ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:283: error: cannot find symbol
+        NumericIndicator low = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(5)));
+                                                       ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:289: error: cannot find symbol
+        NumericIndicator dynamicLow = NumericIndicator.of(new Indicator<Num>() {
+                                                              ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:290: error: method does not override or implement a method from a supertype
+            @Override public Num getValue(int index) {
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:295: error: method does not override or implement a method from a supertype
+            @Override public BarSeries getBarSeries() { return series; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:296: error: method does not override or implement a method from a supertype
+            @Override public int getCountOfUnstableBars() { return 0; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:312: error: cannot find symbol
+        NumericIndicator constFive = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(5)));
+                                                             ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:338: error: cannot find symbol
+        NumericIndicator zero = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.ZERO));
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:338: error: cannot find symbol
+        NumericIndicator zero = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.ZERO));
+                                                                                              ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:346: error: cannot find symbol
+        NumericIndicator negative = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(-4)));
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:353: error: cannot find symbol
+        NumericIndicator same = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.valueOf(10)));
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+21 errors

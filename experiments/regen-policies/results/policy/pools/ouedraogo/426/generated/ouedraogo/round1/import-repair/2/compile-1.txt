@@ -1,0 +1,32 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:260: error: method floor() is already defined in class SimpleNum
+    @Override public Num floor() { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:261: error: method ceil() is already defined in class SimpleNum
+    @Override public Num ceil() { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:262: error: method pow(Num) is already defined in class SimpleNum
+    @Override public Num pow(Num n) { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:263: error: method log() is already defined in class SimpleNum
+    @Override public Num log() { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:264: error: method exp() is already defined in class SimpleNum
+    @Override public Num exp() { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:265: error: method sqrt() is already defined in class SimpleNum
+    @Override public Num sqrt() { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:266: error: method sqrt(MathContext) is already defined in class SimpleNum
+    @Override public Num sqrt(java.math.MathContext mc) { throw new UnsupportedOperationException(); }
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:56: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+final class SimpleNum implements Num {
+      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:309: error: DummyBarSeries is not abstract and does not override abstract method addPrice(Num) in BarSeries
+final class DummyBarSeries implements BarSeries {
+      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:417: error: reference to ATRIndicator is ambiguous
+        new ATRIndicator(null, 5);
+        ^
+  both constructor ATRIndicator(BarSeries,int) in ATRIndicator and constructor ATRIndicator(TRIndicator,int) in ATRIndicator match
+10 errors

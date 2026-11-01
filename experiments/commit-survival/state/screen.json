@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "config_hash": "4aab91ca9820e975b8ef26ea473c4cd4c3c70e1564a76add9ebed796080fb5ea",
+  "started": "2026-10-25T13:31:44.862800+00:00",
+  "finished": "2026-10-25T13:33:12.233761+00:00",
+  "notes": "Frozen denominators: dev=643, dev-scope=67, ktester=14, ouedraogo=98"
+}

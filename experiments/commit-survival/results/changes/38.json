@@ -1,0 +1,58 @@
+{
+  "index": 38,
+  "sha": "7aea96a31536e69885be7567ab2dac6f403e6eb7",
+  "parent": "ccaee65ff838acb79a397a76cfda98d078cd0ca9",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java": [
+      66,
+      68,
+      70,
+      71,
+      72,
+      74,
+      81,
+      84,
+      85,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      100,
+      101,
+      104,
+      105,
+      115
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java": [
+      73,
+      77,
+      78,
+      79,
+      80,
+      82,
+      83,
+      84,
+      85,
+      86,
+      88,
+      89,
+      90,
+      91,
+      94,
+      97,
+      98,
+      100,
+      101,
+      104,
+      105,
+      107,
+      117
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java\nindex b3a0a1983..4cf27c039 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java\n@@ -28 +27,0 @@ import org.ta4j.core.indicators.CachedIndicator;\n-import org.ta4j.core.indicators.helpers.RunningTotalIndicator;\n@@ -44 +43,6 @@ import org.ta4j.core.num.NumFactory;\n- * The offset parameter projects the regression line forward or backward.\n+ * slope = (N * ∑(X * Y) - ∑(X) * ∑(Y)) / (N * ∑(X^2) - (∑(X))^2)\n+ *\n+ * intercept = (∑(Y) - slope * ∑(X)) / N\n+ *\n+ * lsma = slope * x + intercept\n+ *\n@@ -50 +53,0 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-    private final int offset;\n@@ -52,2 +54,0 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-    private final Num avgTime;\n-    private final RunningTotalIndicator sumPriceIndicator;\n@@ -62 +63 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-    public LSMAIndicator(Indicator<Num> indicator, int barCount, int offset) {\n+    public LSMAIndicator(Indicator<Num> indicator, int barCount) {\n@@ -66 +66,0 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        this.offset = offset;\n@@ -68,8 +67,0 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        this.sumPriceIndicator = new RunningTotalIndicator(indicator, barCount);\n-\n-        Num sumTime = numFactory.zero();\n-        for (int i = 1; i <= barCount; i++) {\n-            sumTime = sumTime.plus(numFactory.numOf(i));\n-        }\n-        this.avgTime = sumTime.dividedBy(numFactory.numOf(barCount));\n-\n@@ -81 +73 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-            return indicator.getValue(index);\n+            return indicator.getValue(index); // Not enough data points\n@@ -84,4 +75,0 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        Num sumPrice = sumPriceIndicator.getValue(index);\n-        Num avgPrice = sumPrice.dividedBy(numFactory.numOf(barCount));\n-\n-        // Calculate sx and sy\n@@ -89,5 +77,22 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        Num sx = zero;\n-        Num sy = zero;\n-        for (int i = 1; i <= barCount; i++) {\n-            Num timeDeviation = numFactory.numOf(i).minus(avgTime);\n-            Num priceDeviation = indicator.getValue(index - (i - 1)).minus(avgPrice);\n+        Num sumX = zero;\n+        Num sumY = zero;\n+        Num sumXY = zero;\n+        Num sumX2 = zero;\n+\n+        int startIdx = index - barCount + 1;\n+        for (int i = 0; i < barCount; i++) {\n+            int currentIndex = startIdx + i;\n+            Num x = numFactory.numOf(i + 1); // 1-based index for X\n+            Num y = indicator.getValue(currentIndex); // Y values are prices\n+\n+            sumX = sumX.plus(x);\n+            sumY = sumY.plus(y);\n+            sumXY = sumXY.plus(x.multipliedBy(y));\n+            sumX2 = sumX2.plus(x.multipliedBy(x));\n+        }\n+\n+        Num numBarCount = numFactory.numOf(barCount);\n+\n+        // Calculate slope\n+        Num numerator = numBarCount.multipliedBy(sumXY).minus(sumX.multipliedBy(sumY));\n+        Num denominator = numBarCount.multipliedBy(sumX2).minus(sumX.multipliedBy(sumX));\n@@ -95,2 +100,2 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-            sx = sx.plus(timeDeviation.multipliedBy(priceDeviation));\n-            sy = sy.plus(timeDeviation.multipliedBy(timeDeviation));\n+        if (denominator.isZero()) {\n+            return zero;\n@@ -99,3 +104,2 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        // Step 4: Calculate slope (m) and intercept (b)\n-        Num slope = sx.dividedBy(sy);\n-        Num intercept = avgPrice.minus(slope.multipliedBy(avgTime));\n+        Num slope = numerator.dividedBy(denominator);\n+        Num intercept = sumY.minus(slope.multipliedBy(sumX)).dividedBy(numBarCount);\n@@ -103,3 +107 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        // Step 5: Calculate LSMA (current bar or projected)\n-        Num x = numFactory.numOf(barCount + 1);\n-        return slope.multipliedBy(x).plus(intercept);\n+        return slope.multipliedBy(numBarCount).plus(intercept);\n@@ -115 +117 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        return getClass().getSimpleName() + \" barCount: \" + barCount + \" offset: \" + offset;\n+        return getClass().getSimpleName() + \" barCount: \" + barCount;"
+}

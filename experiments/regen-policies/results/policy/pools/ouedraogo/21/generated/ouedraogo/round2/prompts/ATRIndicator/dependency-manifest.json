@@ -1,0 +1,34 @@
+{
+  "class_name": "org.ta4j.core.indicators.ATRIndicator",
+  "ordered_types": [
+    "org.ta4j.core.indicators.AbstractIndicator",
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.indicators.helpers.TRIndicator",
+    "org.ta4j.core.indicators.MMAIndicator"
+  ],
+  "included": [
+    "org.ta4j.core.indicators.AbstractIndicator",
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.indicators.helpers.TRIndicator",
+    "org.ta4j.core.indicators.MMAIndicator"
+  ],
+  "omitted": [],
+  "reasons": {
+    "org.ta4j.core.indicators.AbstractIndicator": "superclass/interface chain",
+    "org.ta4j.core.Indicator": "superclass/interface chain",
+    "org.ta4j.core.num.Num": "superclass/interface chain",
+    "org.ta4j.core.BarSeries": "constructor",
+    "org.ta4j.core.indicators.helpers.TRIndicator": "constructor",
+    "org.ta4j.core.indicators.MMAIndicator": "field"
+  },
+  "types": 6,
+  "lines": 97,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

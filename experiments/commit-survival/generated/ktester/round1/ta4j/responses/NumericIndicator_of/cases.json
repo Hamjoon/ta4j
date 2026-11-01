@@ -1,0 +1,17 @@
+[
+  {
+    "group": "testOf_NullDelegate",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "delegate",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Calling NumericIndicator.of with a null Indicator should throw NullPointerException because the constructor requires a non\u2011null delegate."
+      }
+    ]
+  }
+]

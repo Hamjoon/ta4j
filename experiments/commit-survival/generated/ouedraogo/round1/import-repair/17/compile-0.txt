@@ -1,0 +1,94 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:17: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:20: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.TradingRecord;
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:47: error: cannot find symbol
+    private Num numOf(Number n) {
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:510: error: cannot find symbol
+    private void assertNumEquals(double expected, Num actual) {
+                                                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:75: error: cannot find symbol
+        Indicator<Num> constInd = new ConstantIndicator<>(series, numOf(5));
+                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:75: error: cannot find symbol
+        Indicator<Num> constInd = new ConstantIndicator<>(series, numOf(5));
+                                      ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:199: error: cannot find symbol
+        NumericIndicator zero = NumericIndicator.of(new ConstantIndicator<>(series, numOf(0)));
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:210: error: cannot find symbol
+        NumericIndicator constTwo = NumericIndicator.of(new ConstantIndicator<>(series, numOf(2)));
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:228: error: cannot find symbol
+        NumericIndicator constTwo = NumericIndicator.of(new ConstantIndicator<>(series, numOf(2)));
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:248: error: cannot find symbol
+                new ConstantIndicator<>(series, numOf(-1)).minus(close));
+                    ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:267: error: cannot find symbol
+                new ConstantIndicator<>(series, numOf(-1)).minus(close)); // -1-1 = -2, etc.
+                    ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:358: error: cannot find symbol
+        Indicator<Num> prev = close.previous(); // barCount = 1
+                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:372: error: cannot find symbol
+        NumericIndicator zero = NumericIndicator.of(new ConstantIndicator<>(series, numOf(0)));
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:382: error: cannot find symbol
+        series2.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(3),
+                                                          ^
+  symbol:   variable now
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:384: error: cannot find symbol
+        series2.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(2),
+                                                          ^
+  symbol:   variable now
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:387: error: cannot find symbol
+        NumericIndicator thresh = NumericIndicator.of(new ConstantIndicator<>(series2, numOf(1.5)));
+                                                          ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:407: error: cannot find symbol
+        NumericIndicator high = NumericIndicator.of(new ConstantIndicator<>(series, numOf(10)));
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:430: error: cannot find symbol
+        NumericIndicator constOne = NumericIndicator.of(new ConstantIndicator<>(series, numOf(1)));
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:449: error: cannot find symbol
+        NumericIndicator constTwo = NumericIndicator.of(new ConstantIndicator<>(series, numOf(2)));
+                                                            ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+19 errors

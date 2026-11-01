@@ -1,0 +1,207 @@
+[
+  {
+    "group": "Gross Return \u2013 Normal Scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesPositive"
+          }
+        ],
+        "expected": "Num value 0.5 (i.e., 50% profit)",
+        "description": "Entry price 100, exit price 150 \u2192 gross return = (150\u2011100)/100 = 0.5"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesNegative"
+          }
+        ],
+        "expected": "Num value -0.5 (i.e., 50% loss)",
+        "description": "Entry price 200, exit price 100 \u2192 gross return = (100\u2011200)/200 = -0.5"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesZero"
+          }
+        ],
+        "expected": "Num value 0",
+        "description": "Entry price equals exit price (both 120) \u2192 gross return = 0"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 Edge Cases with NaN",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesEntryNaN"
+          }
+        ],
+        "expected": "Num NaN",
+        "description": "Entry price is NaN, exit price is 150 \u2192 gross return should propagate NaN"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesExitNaN"
+          }
+        ],
+        "expected": "Num NaN",
+        "description": "Exit price is NaN, entry price is 100 \u2192 gross return should propagate NaN"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 Null / Illegal State Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null BarSeries should cause a NullPointerException when the method tries to retrieve prices"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesNoEntry"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Position has a null entry trade; calling getGrossReturn should raise an IllegalStateException (or NPE) because entry price cannot be obtained"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesNoExit"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Position has a null exit trade; calling getGrossReturn should raise an IllegalStateException (or NPE) because exit price cannot be obtained"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 Division by Zero",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesEntryZeroExitPositive"
+          }
+        ],
+        "expected": "ArithmeticException (division by zero)",
+        "description": "Entry price is zero, exit price is 100 \u2192 gross return calculation attempts division by zero and should throw an ArithmeticException"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesEntryZeroExitZero"
+          }
+        ],
+        "expected": "Num NaN",
+        "description": "Both entry and exit prices are zero \u2192 (0\u20110)/0 results in NaN, which should be propagated as a Num NaN"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 Extreme Values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesTinyEntryHugeExit"
+          }
+        ],
+        "expected": "Num value 9_999_900 (\u2248 (1000\u20110.0001)/0.0001)",
+        "description": "Entry price is extremely small (0.0001) and exit price is very large (1000) \u2192 gross return should be a huge positive number, testing numeric stability"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 Null Price Per Asset Handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesEntryPriceNull"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Entry trade's getPricePerAsset returns null while exit price is valid \u2192 method should throw NPE when trying to use the null entry price"
+      },
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesExitPriceNull"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Exit trade's getPricePerAsset returns null while entry price is valid \u2192 method should throw NPE when trying to use the null exit price"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 BarSeries Throws RuntimeException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesThrowsOnPrice"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "BarSeries implementation throws a RuntimeException when price per asset is requested \u2192 getGrossReturn should propagate the exception"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 Empty BarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockEmptyBarSeries"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException",
+        "description": "BarSeries contains no bars; getEntry().getPricePerAsset(barSeries) attempts to access a non\u2011existent index and should throw IndexOutOfBoundsException"
+      }
+    ]
+  },
+  {
+    "group": "Gross Return \u2013 getPricePerAsset IllegalArgumentException",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": "mockBarSeriesThrowsIllegalArgument"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The BarSeries implementation validates the requested index and throws IllegalArgumentException; getGrossReturn should propagate this exception"
+      }
+    ]
+  }
+]

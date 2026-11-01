@@ -1,0 +1,22 @@
+{
+  "index": 27,
+  "sha": "42d93197fb6851fe23fbd863c1843fdb9844f47e",
+  "parent": "3df6c700973be0361be690bc39b71e1c2061ab16",
+  "pre_image": {},
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/KRIIndicator.java": [
+      44,
+      45,
+      48,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      59,
+      64
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\nnew file mode 100644\nindex 000000000..a559c9e60\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\n@@ -0,0 +1,66 @@\n+/*\n+ * The MIT License (MIT)\n+ *\n+ * Copyright (c) 2017-2024 Ta4j Organization & respective\n+ * authors (see AUTHORS)\n+ *\n+ * Permission is hereby granted, free of charge, to any person obtaining a copy of\n+ * this software and associated documentation files (the \"Software\"), to deal in\n+ * the Software without restriction, including without limitation the rights to\n+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\n+ * the Software, and to permit persons to whom the Software is furnished to do so,\n+ * subject to the following conditions:\n+ *\n+ * The above copyright notice and this permission notice shall be included in all\n+ * copies or substantial portions of the Software.\n+ *\n+ * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\n+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\n+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\n+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n+ */\n+package org.ta4j.core.indicators;\n+\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.Indicator;\n+import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n+import org.ta4j.core.indicators.helpers.CombineIndicator;\n+import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.num.Num;\n+\n+/**\n+ * Kairi Relative Index (KRI) indicator by LazyBear.\n+ *\n+ * @see <a href=\n+ *      \"https://www.tradingview.com/script/xzRPAboO-Indicator-Kairi-Relative-Index-KRI/\">TradingView</a>\n+ */\n+public class KRIIndicator extends AbstractIndicator<Num> {\n+    private final Indicator<Num> kriIndicator;\n+    private final int barCount;\n+\n+    public KRIIndicator(BarSeries series, int barCount) {\n+        this(new ClosePriceIndicator(series), barCount);\n+    }\n+\n+    public KRIIndicator(Indicator<Num> indicator, int barCount) {\n+        super(indicator.getBarSeries());\n+\n+        Indicator<Num> smaIndicator = new SMAIndicator(indicator, barCount);\n+        Indicator<Num> difference = CombineIndicator.minus(indicator, smaIndicator);\n+        Indicator<Num> quotient = CombineIndicator.divide(difference, smaIndicator);\n+        this.kriIndicator = TransformIndicator.multiply(quotient, 100);\n+        this.barCount = barCount;\n+    }\n+\n+    @Override\n+    public Num getValue(int index) {\n+        return kriIndicator.getValue(index);\n+    }\n+\n+    @Override\n+    public int getUnstableBars() {\n+        return barCount;\n+    }\n+}"
+}

@@ -1,0 +1,27 @@
+{
+  "index": 407,
+  "sha": "9b7b1f52f658edd7cb9936c04d8bc830e3228583",
+  "parent": "3eb0ad58dc40c23f5c441d2bdf7843d39bb6664a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/CCIIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/DPOIndicator.java": [
+      55,
+      56,
+      57,
+      58
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/CCIIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/DPOIndicator.java": [
+      57,
+      58,
+      59,
+      65,
+      66,
+      67,
+      69
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java\nindex 16312f0a0..403484c25 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java\n@@ -21,4 +21,4 @@ public class CCIIndicator extends CachedIndicator<Num> {\n-    private final Num factor;\n-    private final TypicalPriceIndicator typicalPriceInd;\n-    private final SMAIndicator smaInd;\n-    private final MeanDeviationIndicator meanDeviationInd;\n+    private final transient Num factor;\n+    private final transient TypicalPriceIndicator typicalPriceInd;\n+    private final transient SMAIndicator smaInd;\n+    private final transient MeanDeviationIndicator meanDeviationInd;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\nindex 8e30fe68f..6ef3d4157 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\n@@ -10 +9,0 @@ import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.numeric.BinaryOperationIndicator;\n@@ -11,0 +11 @@ import org.ta4j.core.indicators.helpers.PreviousValueIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperationIndicator;\n@@ -34 +34,3 @@ public class DPOIndicator extends CachedIndicator<Num> {\n-    private final BinaryOperationIndicator indicatorMinusPreviousSMAIndicator;\n+    private final Indicator<Num> price;\n+    private final int barCount;\n+    private final transient BinaryOperationIndicator indicatorMinusPreviousSMAIndicator;\n@@ -55,5 +57,3 @@ public class DPOIndicator extends CachedIndicator<Num> {\n-        final int timeFrame = barCount / 2 + 1;\n-        final var simpleMovingAverage = new SMAIndicator(price, barCount);\n-        final var previousSimpleMovingAverage = new PreviousValueIndicator(simpleMovingAverage, timeFrame);\n-        this.indicatorMinusPreviousSMAIndicator = BinaryOperationIndicator.difference(price,\n-                previousSimpleMovingAverage);\n+        this.price = price;\n+        this.barCount = barCount;\n+        this.indicatorMinusPreviousSMAIndicator = createIndicatorMinusPreviousSMAIndicator(price, barCount);\n@@ -62,0 +63,9 @@ public class DPOIndicator extends CachedIndicator<Num> {\n+    private static BinaryOperationIndicator createIndicatorMinusPreviousSMAIndicator(Indicator<Num> price,\n+            int barCount) {\n+        final int timeFrame = barCount / 2 + 1;\n+        final SMAIndicator simpleMovingAverage = new SMAIndicator(price, barCount);\n+        final PreviousValueIndicator previousSimpleMovingAverage = new PreviousValueIndicator(simpleMovingAverage,\n+                timeFrame);\n+        return BinaryOperationIndicator.difference(price, previousSimpleMovingAverage);\n+    }\n+"
+}

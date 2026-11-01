@@ -1,0 +1,305 @@
+package org.ta4j.core;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link Position}.
+ *
+ * The suite covers:
+ *   • all public methods (happy path)
+ *   • edge‑cases and exception handling
+ *   • typical usage scenarios (new → opened → closed)
+ *
+ * No external mocking frameworks are used – all objects are built with the
+ * public API of the library.
+ */
+public class PositionTest {
+
+    /* -------------------------------------------------
+     *  1‑9  – basic state & navigation methods
+     * ------------------------------------------------- */
+
+    @Test
+    public void testGetEntry_newPosition_returnsNull() {
+        Position p = new Position();
+        assertNull(p.getEntry());
+    }
+
+    @Test
+    public void testGetExit_newPosition_returnsNull() {
+        Position p = new Position();
+        assertNull(p.getExit());
+    }
+
+    @Test
+    public void testEquals_sameEntryExit_true() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(12), DecimalNum.valueOf(1), new ZeroCostModel());
+        Position p1 = new Position(entry, exit);
+        Position p2 = new Position(entry, exit);
+        assertTrue(p1.equals(p2));
+    }
+
+    @Test
+    public void testHashCode_consistentWithEquals() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(12), DecimalNum.valueOf(1), new ZeroCostModel());
+        Position p1 = new Position(entry, exit);
+        Position p2 = new Position(entry, exit);
+        assertEquals(p1.hashCode(), p2.hashCode());
+    }
+
+    @Test
+    public void testOperate_createsEntryWhenNew() {
+        Position p = new Position(TradeType.BUY);
+        Trade t = p.operate(0);
+        assertNotNull(t);
+        assertEquals(TradeType.BUY, t.getType());
+        assertEquals(t, p.getEntry());
+        assertTrue(p.isOpened());
+    }
+
+    @Test
+    public void testOperate_createsExitWhenOpened() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0); // entry
+        Trade exit = p.operate(5, DecimalNum.valueOf(15), DecimalNum.valueOf(1));
+        assertNotNull(exit);
+        assertEquals(TradeType.SELL, exit.getType());
+        assertEquals(exit, p.getExit());
+        assertTrue(p.isClosed());
+    }
+
+    @Test
+    public void testIsClosed_closedPosition_true() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        assertTrue(p.isClosed());
+    }
+
+    @Test
+    public void testIsOpened_openedPosition_true() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        assertTrue(p.isOpened());
+    }
+
+    @Test
+    public void testIsNew_newPosition_true() {
+        Position p = new Position();
+        assertTrue(p.isNew());
+    }
+
+    /* -------------------------------------------------
+     * 10‑13 – profit / loss helpers
+     * ------------------------------------------------- */
+
+    @Test
+    public void testHasProfit_positiveProfit_true() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(15), DecimalNum.valueOf(1), new ZeroCostModel());
+        Position p = new Position(entry, exit);
+        assertTrue(p.hasProfit());
+    }
+
+    @Test
+    public void testHasLoss_negativeProfit_true() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(15), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Position p = new Position(entry, exit);
+        assertTrue(p.hasLoss());
+    }
+
+    @Test
+    public void testGetProfit_closedPosition_correctValue() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(13), DecimalNum.valueOf(1), new ZeroCostModel());
+        Position p = new Position(entry, exit);
+        Num profit = p.getProfit();
+        assertEquals(DecimalNum.valueOf(3), profit);
+    }
+
+    @Test
+    public void testGetProfit_openPosition_usingFinalValues() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1)); // entry
+        Num profit = p.getProfit(5, DecimalNum.valueOf(12));
+        assertEquals(DecimalNum.valueOf(2), profit);
+    }
+
+    /* -------------------------------------------------
+     * 14‑19 – gross profit / return
+     * ------------------------------------------------- */
+
+    @Test
+    public void testGetGrossProfit_closedPosition() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(20), DecimalNum.valueOf(2), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(25), DecimalNum.valueOf(2), new ZeroCostModel());
+        Position p = new Position(entry, exit);
+        assertEquals(DecimalNum.valueOf(10), p.getGrossProfit());
+    }
+
+    @Test
+    public void testGetGrossProfit_openPosition_usingFinalPrice() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0, DecimalNum.valueOf(5), DecimalNum.valueOf(3)); // entry
+        assertEquals(DecimalNum.valueOf(9), p.getGrossProfit(DecimalNum.valueOf(8)));
+    }
+
+    @Test
+    public void testGetGrossReturn_closedPosition() {
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(12), DecimalNum.valueOf(1), new ZeroCostModel());
+        Position p = new Position(entry, exit);
+        assertEquals(DecimalNum.valueOf(1.2), p.getGrossReturn());
+    }
+
+    @Test
+    public void testGetGrossReturn_withFinalPrice() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1));
+        assertEquals(DecimalNum.valueOf(1.5), p.getGrossReturn(DecimalNum.valueOf(15)));
+    }
+
+    @Test
+    public void testGetGrossReturn_entryAndExitPrices_longBuy() {
+        Position p = new Position(TradeType.BUY);
+        // entry 10, exit 12 → 12/10 = 1.2
+        assertEquals(DecimalNum.valueOf(1.2), p.getGrossReturn(DecimalNum.valueOf(10), DecimalNum.valueOf(12)));
+    }
+
+    @Test
+    public void testGetGrossReturn_entryAndExitPrices_shortSell() {
+        Position p = new Position(TradeType.SELL);
+        // short: entry 20, exit 15 → ((15/20‑1) * -1) + 1 = 0.75
+        assertEquals(DecimalNum.valueOf(0.75), p.getGrossReturn(DecimalNum.valueOf(20), DecimalNum.valueOf(15)));
+    }
+
+    /* -------------------------------------------------
+     * 20‑23 – cost calculations (zero‑cost model)
+     * ------------------------------------------------- */
+
+    @Test
+    public void testGetPositionCost_zeroCostModel() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        assertEquals(DecimalNum.ZERO, p.getPositionCost(1));
+    }
+
+    @Test
+    public void testGetPositionCost_closedZeroCost() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        assertEquals(DecimalNum.ZERO, p.getPositionCost());
+    }
+
+    @Test
+    public void testGetHoldingCost_zeroCostModel() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        assertEquals(DecimalNum.ZERO, p.getHoldingCost());
+    }
+
+    @Test
+    public void testGetHoldingCost_openPosition_zero() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        assertEquals(DecimalNum.ZERO, p.getHoldingCost(5));
+    }
+
+    /* -------------------------------------------------
+     * 24‑25 – accessor & toString
+     * ------------------------------------------------- */
+
+    @Test
+    public void testGetStartingType_matchesConstructor() {
+        Position p = new Position(TradeType.SELL);
+        assertEquals(TradeType.SELL, p.getStartingType());
+    }
+
+    @Test
+    public void testToString_containsEntryAndExit() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        String txt = p.toString();
+        assertTrue(txt.contains("Entry"));
+        assertTrue(txt.contains("exit"));
+    }
+
+    /* -------------------------------------------------
+     *  Edge‑case & exception tests (step 3)
+     * ------------------------------------------------- */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructor_nullStartingType_throws() {
+        new Position(null);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructor_sameTypeTrades_throws() {
+        Trade buy1 = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), new ZeroCostModel());
+        Trade buy2 = Trade.buyAt(1, DecimalNum.valueOf(12), DecimalNum.valueOf(1), new ZeroCostModel());
+        new Position(buy1, buy2);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructor_mismatchingCostModel_throws() {
+        CostModel zero = new ZeroCostModel();
+        // a different (non‑zero) cost model – using a simple FixedTransactionCostModel
+        CostModel other = new FixedTransactionCostModel(DecimalNum.valueOf(0.01));
+        Trade entry = Trade.buyAt(0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), zero);
+        Trade exit  = Trade.sellAt(1, DecimalNum.valueOf(12), DecimalNum.valueOf(1), zero);
+        new Position(entry, exit, other, new ZeroCostModel());
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testOperate_indexBeforeEntry_throws() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(5); // entry at index 5
+        p.operate(3, DecimalNum.valueOf(12), DecimalNum.valueOf(1)); // illegal
+    }
+
+    @Test
+    public void testOperate_afterClosed_returnsNull() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        assertNull(p.operate(2));
+    }
+
+    @Test
+    public void testHasProfitLoss_onOpenPosition_false() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        assertFalse(p.hasProfit());
+        assertFalse(p.hasLoss());
+    }
+
+    @Test
+    public void testGrossReturn_NaNValues_noException() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        Num nan = NaN;
+        // This call must not throw; the returned Num may be NaN.
+        Num result = p.getGrossReturn(nan, nan);
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testGetPositionCost_negativeIndex_zero() {
+        Position p = new Position(TradeType.BUY);
+        p.operate(0);
+        p.operate(1);
+        assertEquals(DecimalNum.ZERO, p.getPositionCost(-5));
+    }
+}

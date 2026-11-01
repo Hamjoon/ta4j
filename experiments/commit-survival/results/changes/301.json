@@ -1,0 +1,64 @@
+{
+  "index": 301,
+  "sha": "0d1ba3b0006b45185fa94ec89408b0e385f7e6ce",
+  "parent": "d4a397041850a7a077cdc6e25f020d4162a098b5",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java": [
+      119
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      507,
+      534,
+      552
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java": [
+      121,
+      122,
+      124,
+      125,
+      127,
+      134,
+      142,
+      150,
+      151,
+      159,
+      160,
+      168
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      142,
+      143,
+      157,
+      166,
+      192,
+      253,
+      501,
+      516,
+      518,
+      530,
+      545,
+      547,
+      559,
+      567,
+      569,
+      576,
+      577,
+      579,
+      580,
+      584,
+      585,
+      587,
+      588,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      597
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java\nindex b3de25036..3f5b8bb4d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java\n@@ -85,6 +85,14 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n-     * @param candidateScenarioCountBeforePrune  scenarios produced before pruning\n-     * @param retainedScenarioCount              scenarios retained after pruning\n-     * @param impulseDecompositionBranchCount    impulse decomposition leaf branches\n-     *                                           explored\n-     * @param correctiveDecompositionBranchCount corrective decomposition leaf\n-     *                                           branches explored\n+     * @param candidateScenarioCountBeforePrune        scenarios produced before\n+     *                                                 pruning\n+     * @param retainedScenarioCount                    scenarios retained after\n+     *                                                 pruning\n+     * @param impulseDecompositionBranchCount          impulse decomposition leaf\n+     *                                                 branches explored\n+     * @param correctiveDecompositionBranchCount       corrective decomposition leaf\n+     *                                                 branches explored\n+     * @param impulseDecompositionPrunedBranchCount    impulse decomposition leaf\n+     *                                                 branches pruned before full\n+     *                                                 scoring\n+     * @param correctiveDecompositionPrunedBranchCount corrective decomposition leaf\n+     *                                                 branches pruned before full\n+     *                                                 scoring\n@@ -94 +102,2 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n-            int impulseDecompositionBranchCount, int correctiveDecompositionBranchCount) {\n+            int impulseDecompositionBranchCount, int correctiveDecompositionBranchCount,\n+            int impulseDecompositionPrunedBranchCount, int correctiveDecompositionPrunedBranchCount) {\n@@ -111,0 +121,40 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n+            if (impulseDecompositionPrunedBranchCount < 0) {\n+                throw new IllegalArgumentException(\"impulseDecompositionPrunedBranchCount must be >= 0\");\n+            }\n+            if (correctiveDecompositionPrunedBranchCount < 0) {\n+                throw new IllegalArgumentException(\"correctiveDecompositionPrunedBranchCount must be >= 0\");\n+            }\n+        }\n+\n+        /**\n+         * @return impulse decomposition leaf branches considered before pruning\n+         * @since 0.22.4\n+         */\n+        public int totalImpulseDecompositionBranchCount() {\n+            return impulseDecompositionBranchCount + impulseDecompositionPrunedBranchCount;\n+        }\n+\n+        /**\n+         * @return corrective decomposition leaf branches considered before pruning\n+         * @since 0.22.4\n+         */\n+        public int totalCorrectiveDecompositionBranchCount() {\n+            return correctiveDecompositionBranchCount + correctiveDecompositionPrunedBranchCount;\n+        }\n+\n+        /**\n+         * @return impulse decomposition prune hit rate in `[0,1]`\n+         * @since 0.22.4\n+         */\n+        public double impulsePruningHitRate() {\n+            int total = totalImpulseDecompositionBranchCount();\n+            return total == 0 ? 0.0 : impulseDecompositionPrunedBranchCount / (double) total;\n+        }\n+\n+        /**\n+         * @return corrective decomposition prune hit rate in `[0,1]`\n+         * @since 0.22.4\n+         */\n+        public double correctivePruningHitRate() {\n+            int total = totalCorrectiveDecompositionBranchCount();\n+            return total == 0 ? 0.0 : correctiveDecompositionPrunedBranchCount / (double) total;\n@@ -119 +168 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n-            return new AnalysisDiagnostics(0, 0, 0, 0);\n+            return new AnalysisDiagnostics(0, 0, 0, 0, 0, 0);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex 2af5c6061..919028554 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -59,0 +60,2 @@ public final class ElliottScenarioGenerator {\n+    private int lastImpulsePrunedBranchCount;\n+    private int lastCorrectivePrunedBranchCount;\n@@ -139,0 +142,2 @@ public final class ElliottScenarioGenerator {\n+        int impulsePrunedBranchCount = 0;\n+        int correctivePrunedBranchCount = 0;\n@@ -152,0 +157 @@ public final class ElliottScenarioGenerator {\n+                impulsePrunedBranchCount += lastImpulsePrunedBranchCount;\n@@ -160,0 +166 @@ public final class ElliottScenarioGenerator {\n+                correctivePrunedBranchCount += lastCorrectivePrunedBranchCount;\n@@ -167 +173 @@ public final class ElliottScenarioGenerator {\n-                impulseBranchCount, correctiveBranchCount);\n+                impulseBranchCount, correctiveBranchCount, impulsePrunedBranchCount, correctivePrunedBranchCount);\n@@ -185,0 +192 @@ public final class ElliottScenarioGenerator {\n+        lastImpulsePrunedBranchCount = 0;\n@@ -245,0 +253 @@ public final class ElliottScenarioGenerator {\n+        lastCorrectivePrunedBranchCount = 0;\n@@ -492,0 +501 @@ public final class ElliottScenarioGenerator {\n+        final AtomicInteger prunedBranches = new AtomicInteger();\n@@ -507 +516 @@ public final class ElliottScenarioGenerator {\n-        });\n+        }, prunedBranches);\n@@ -508,0 +518 @@ public final class ElliottScenarioGenerator {\n+        lastImpulsePrunedBranchCount += prunedBranches.get();\n@@ -519,0 +530 @@ public final class ElliottScenarioGenerator {\n+        final AtomicInteger prunedBranches = new AtomicInteger();\n@@ -534 +545 @@ public final class ElliottScenarioGenerator {\n-        });\n+        }, prunedBranches);\n@@ -535,0 +547 @@ public final class ElliottScenarioGenerator {\n+        lastCorrectivePrunedBranchCount += prunedBranches.get();\n@@ -540 +552,2 @@ public final class ElliottScenarioGenerator {\n-            final List<Integer> chosenCuts, final java.util.function.Consumer<List<Integer>> consumer) {\n+            final List<Integer> chosenCuts, final java.util.function.Consumer<List<Integer>> consumer,\n+            final AtomicInteger prunedBranches) {\n@@ -544,0 +558,2 @@ public final class ElliottScenarioGenerator {\n+            } else {\n+                prunedBranches.incrementAndGet();\n@@ -552 +567,3 @@ public final class ElliottScenarioGenerator {\n-                searchDecompositionCuts(pivots, cutsNeeded - 1, pivotIndex + 1, chosenCuts, consumer);\n+                searchDecompositionCuts(pivots, cutsNeeded - 1, pivotIndex + 1, chosenCuts, consumer, prunedBranches);\n+            } else {\n+                prunedBranches.addAndGet(countRemainingCutCombinations(pivotCount, cutsNeeded - 1, pivotIndex + 1));\n@@ -557,0 +575,25 @@ public final class ElliottScenarioGenerator {\n+    private int countRemainingCutCombinations(final int pivotCount, final int cutsNeeded, final int nextPivot) {\n+        if (cutsNeeded == 0) {\n+            return 1;\n+        }\n+        final int availableInternalPivots = pivotCount - 1 - nextPivot;\n+        return combinationCount(availableInternalPivots, cutsNeeded);\n+    }\n+\n+    private int combinationCount(final int n, final int k) {\n+        if (k < 0 || k > n) {\n+            return 0;\n+        }\n+        if (k == 0 || k == n) {\n+            return 1;\n+        }\n+        long numerator = 1L;\n+        long denominator = 1L;\n+        int effectiveK = Math.min(k, n - k);\n+        for (int i = 1; i <= effectiveK; i++) {\n+            numerator *= (n - effectiveK + i);\n+            denominator *= i;\n+        }\n+        return Math.toIntExact(numerator / denominator);\n+    }\n+"
+}

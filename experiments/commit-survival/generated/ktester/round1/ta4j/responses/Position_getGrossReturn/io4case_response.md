@@ -1,0 +1,64 @@
+{
+    "testCases": [
+        {
+            "group": "Position#getGrossReturn() - closed position with positive return",
+            "cases": [
+                {
+                    "input": [],
+                    "expected": "Num value equal to (exitPrice - entryPrice) / entryPrice = 0.10",
+                    "description": "A position is opened with an entry trade at price 100 and later closed with an exit trade at price 110. Since the position is closed (isOpened() returns false), getGrossReturn() should delegate to getGrossReturn(exitPrice) and return a 10% gross return."
+                }
+            ]
+        },
+        {
+            "group": "Position#getGrossReturn() - closed position with negative return",
+            "cases": [
+                {
+                    "input": [],
+                    "expected": "Num value equal to (exitPrice - entryPrice) / entryPrice = -0.10",
+                    "description": "A position is opened with an entry trade at price 100 and later closed with an exit trade at price 90. The method should return a -10% gross return."
+                }
+            ]
+        },
+        {
+            "group": "Position#getGrossReturn() - closed position with zero return",
+            "cases": [
+                {
+                    "input": [],
+                    "expected": "Num value equal to 0",
+                    "description": "A position is opened and closed at the same price (entry 100, exit 100). The gross return must be zero."
+                }
+            ]
+        },
+        {
+            "group": "Position#getGrossReturn() - closed position where exit price is zero",
+            "cases": [
+                {
+                    "input": [],
+                    "expected": "Num.NaN (or appropriate representation of undefined return)",
+                    "description": "A position is opened at price 100 and closed with an exit price of 0. Division by zero should lead to NaN (as defined by the library's Num implementation). The method must propagate this result."
+                }
+            ]
+        },
+        {
+            "group": "Position#getGrossReturn() - closed position where entry price is zero",
+            "cases": [
+                {
+                    "input": [],
+                    "expected": "Num.NaN (or appropriate representation of undefined return)",
+                    "description": "A position is opened with an entry price of 0 and closed at any non‑zero price (e.g., 50). Since the denominator in the gross‑return formula is zero, the result should be NaN."
+                }
+            ]
+        },
+        {
+            "group": "Position#getGrossReturn() - closed position with fractional prices",
+            "cases": [
+                {
+                    "input": [],
+                    "expected": "Num value equal to (1.2345 - 1.0000) / 1.0000 = 0.2345",
+                    "description": "Tests that the method works correctly with non‑integer (fractional) prices, returning the precise fractional gross return."
+                }
+            ]
+        }
+    ]
+}

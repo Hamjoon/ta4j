@@ -1,0 +1,207 @@
+[
+  {
+    "group": "NumericIndicator.isLessThan(Number)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "10"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for any index where the underlying NumericIndicator value is less than 10, and false otherwise.",
+        "description": "Standard case: a positive integer constant. The method should create a ConstantIndicator with value 10 and return an UnderIndicatorRule that correctly evaluates the '<' relationship."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true when the underlying NumericIndicator value is negative, false when it is zero or positive.",
+        "description": "Boundary case with zero. Verifies that the rule treats zero as the threshold and respects the strict less\u2011than semantics."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-5"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true only when the underlying NumericIndicator value is less than -5 (i.e., more negative), false otherwise.",
+        "description": "Negative constant: ensures that the method works correctly with negative numbers and does not mistakenly invert the comparison."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "3.14159"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for values < 3.14159, false for values \u2265 3.14159.",
+        "description": "Floating\u2011point constant (Double). Checks that the method correctly handles non\u2011integral Number implementations."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException (or IllegalArgumentException) thrown by createConstant when the argument is null.",
+        "description": "Null argument: verifies that the method validates its input and fails fast when a null Number is supplied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "new java.math.BigDecimal(\"100\")"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for values < 100, false otherwise.",
+        "description": "BigDecimal constant: tests that the method works with arbitrary\u2011precision Number subclasses."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan(Number) - additional cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Long.MAX_VALUE"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for every index where the underlying NumericIndicator value is a finite number (i.e., all typical values), because no realistic value can be greater than or equal to Long.MAX_VALUE.",
+        "description": "Very large positive constant (Long.MAX_VALUE) \u2013 verifies that the rule works correctly when the threshold is far beyond any possible indicator value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.MIN_VALUE"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for indices whose value is negative or exactly zero, and false for any positive value \u2265 Double.MIN_VALUE.",
+        "description": "Smallest positive non\u2011zero double \u2013 tests the strict\u2011less\u2011than semantics around the zero boundary."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Float.valueOf(5.5f)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true when the underlying value < 5.5f, false otherwise.",
+        "description": "Float constant \u2013 ensures that the method correctly handles Float Number implementations."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Short.valueOf((short)2)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for values < 2 (as a short), false otherwise.",
+        "description": "Short constant \u2013 verifies handling of smaller integral Number types."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Byte.valueOf((byte)-1)"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for values < -1, false for -1 and greater.",
+        "description": "Byte constant \u2013 tests the method with the smallest integral wrapper type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) always returns false (the rule never satisfies) because any comparison with NaN is defined as false.",
+        "description": "NaN constant \u2013 checks that the rule fails fast for an undefined numeric threshold."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for every finite underlying value (including negative, zero, and positive numbers), and false only when the underlying value is NaN.",
+        "description": "Positive infinity \u2013 validates that the rule treats infinity as an upper bound that all finite numbers are less than."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NEGATIVE_INFINITY"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) always returns false because no numeric value (including -Infinity itself) is less than negative infinity.",
+        "description": "Negative infinity \u2013 ensures the rule never satisfies when the threshold is the lowest possible double."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "new java.math.BigInteger(\"12345678901234567890\")"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true for underlying values < 12345678901234567890, false otherwise.",
+        "description": "BigInteger constant \u2013 tests compatibility with another arbitrary\u2011precision Number subclass."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0.0"
+          }
+        ],
+        "expected": "Rule.isSatisfied(index) returns true when the underlying value is negative, false when it is zero or positive.",
+        "description": "Zero as a Double \u2013 confirms that the method behaves identically for zero expressed as a floating\u2011point Number."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isLessThan(Number) - exception scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "10"
+          }
+        ],
+        "expected": "NullPointerException thrown because the NumericIndicator instance was created with a null delegate (e.g., NumericIndicator.of(null)). The method attempts to create a ConstantIndicator and then build an UnderIndicatorRule, which dereferences the null delegate.",
+        "description": "NumericIndicator without an underlying delegate. Verifies that isLessThan fails fast when the instance is improperly initialized."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "new FaultyNumber()"
+          }
+        ],
+        "expected": "RuntimeException (or subclass) propagated from the FaultyNumber.doubleValue() call during constant creation.",
+        "description": "Custom Number implementation whose doubleValue() throws an exception. Ensures that isLessThan does not swallow unexpected runtime errors from the Number argument."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException (or IllegalArgumentException) thrown by createConstant when the argument is null.",
+        "description": "Null argument: verifies that the method validates its input and fails fast when a null Number is supplied."
+      }
+    ]
+  }
+]

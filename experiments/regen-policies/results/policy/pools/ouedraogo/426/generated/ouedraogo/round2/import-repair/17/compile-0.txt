@@ -1,0 +1,57 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:28: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:54: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("testSeries");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:58: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num,Num)
+            BaseBar bar = new BaseBar(
+                          ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:273: error: cannot find symbol
+        Rule rule = close.crossedOver(constant2);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:282: error: cannot find symbol
+        Rule rule = close.crossedOver(3);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:292: error: cannot find symbol
+        Rule rule = close.crossedUnder(constant4);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:301: error: cannot find symbol
+        Rule rule = close.crossedUnder(2);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:310: error: cannot find symbol
+        Rule rule = close.isGreaterThan(constant3);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:318: error: cannot find symbol
+        Rule rule = close.isGreaterThan(4);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:327: error: cannot find symbol
+        Rule rule = close.isLessThan(constant3);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:336: error: cannot find symbol
+        Rule rule = close.isLessThan(2);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+11 errors

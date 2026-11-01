@@ -1,0 +1,57 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:21: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:22: error: package org.ta4j.core.trading.rules does not exist
+import org.ta4j.core.trading.rules.BasicRule;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:57: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:93: error: cannot find symbol
+        Rule entry = new BooleanRule(true);   // always true
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:94: error: cannot find symbol
+        Rule exit = new BooleanRule(true);    // always true
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:101: error: cannot find symbol
+        Rule entry = new UnderIndicatorRule(new ConstantIndicator<>(series, one.plus(series.numFactory().numOf(0.1))), series.numFactory().numOf(1.5));
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:103: error: cannot find symbol
+        Rule exit = new OverIndicatorRule(new ConstantIndicator<>(series, three), series.numFactory().numOf(2));
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:174: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(1), first.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:216: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(0), position.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:217: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), position.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:230: error: cannot find symbol
+        Rule entry = new BooleanRule(true);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:231: error: cannot find symbol
+        Rule neverExit = new BooleanRule(false);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+12 errors

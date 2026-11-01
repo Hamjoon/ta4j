@@ -1,0 +1,49 @@
+{
+  "index": 328,
+  "sha": "7cd83b89b21da7869a6558ffca07927d32b8111f",
+  "parent": "6277f01fa83f44bbe5924a19a3a641a94c537156",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      732,
+      736,
+      739,
+      741
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      733,
+      737,
+      740,
+      742,
+      743,
+      758,
+      759,
+      761,
+      762,
+      765,
+      766,
+      767,
+      771,
+      772,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780,
+      781,
+      782,
+      783,
+      784,
+      787,
+      788,
+      790,
+      791,
+      795
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex 24939c5d5..18146a390 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -838,2 +838,3 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-     * @param legs   ordered completed macro legs\n-     * @param cycles ordered completed bullish/bearish macro cycles\n+     * @param legs   ordered accepted completed legs discovered by the canonical\n+     *               search, including lower-degree subordinate legs\n+     * @param cycles ordered promoted top-level bullish/bearish macro cycles\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex cd6fb4a5b..166ee69bf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -109,0 +110 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final double HISTORICAL_CYCLE_PROMOTION_MIN_GAP_RATIO = 0.20;\n@@ -732 +733 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> cycles = new ArrayList<>();\n+        final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> rawCycles = new ArrayList<>();\n@@ -736 +737 @@ public final class ElliottWaveAnalysisRunner {\n-            if (!bullishLeg.bullish() || bearishLeg.bullish()) {\n+            if (!bullishLeg.bullish() || bearishLeg.bullish() || !bullishLeg.accepted() || !bearishLeg.accepted()) {\n@@ -739 +740 @@ public final class ElliottWaveAnalysisRunner {\n-            cycles.add(new ElliottWaveAnalysisResult.HistoricalCycleAssessment(bullishLeg, bearishLeg));\n+            rawCycles.add(new ElliottWaveAnalysisResult.HistoricalCycleAssessment(bullishLeg, bearishLeg));\n@@ -741 +742,2 @@ public final class ElliottWaveAnalysisRunner {\n-        return new ElliottWaveAnalysisResult.HistoricalStructureAssessment(legs, cycles);\n+        return new ElliottWaveAnalysisResult.HistoricalStructureAssessment(legs,\n+                promoteHistoricalMacroCycles(rawCycles));\n@@ -753,0 +756,42 @@ public final class ElliottWaveAnalysisRunner {\n+    private List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> promoteHistoricalMacroCycles(\n+            final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> rawCycles) {\n+        if (rawCycles.isEmpty()) {\n+            return List.of();\n+        }\n+        if (rawCycles.size() == 1) {\n+            return List.copyOf(rawCycles);\n+        }\n+\n+        final List<Integer> orderedSpans = rawCycles.stream().map(this::historicalCycleSpan).sorted().toList();\n+        final int promotionThreshold = historicalCyclePromotionThreshold(orderedSpans);\n+        return rawCycles.stream().filter(cycle -> historicalCycleSpan(cycle) >= promotionThreshold).toList();\n+    }\n+\n+    private int historicalCyclePromotionThreshold(final List<Integer> orderedSpans) {\n+        if (orderedSpans.size() <= 1) {\n+            return orderedSpans.getFirst().intValue();\n+        }\n+\n+        final int maxSpan = orderedSpans.getLast().intValue();\n+        int largestGap = 0;\n+        int threshold = orderedSpans.getFirst().intValue();\n+        for (int index = 1; index < orderedSpans.size(); index++) {\n+            final int previous = orderedSpans.get(index - 1).intValue();\n+            final int current = orderedSpans.get(index).intValue();\n+            final int gap = current - previous;\n+            if (gap > largestGap) {\n+                largestGap = gap;\n+                threshold = current;\n+            }\n+        }\n+        if (largestGap <= 0) {\n+            return orderedSpans.getFirst().intValue();\n+        }\n+        final double gapRatio = largestGap / (double) Math.max(1, maxSpan);\n+        return gapRatio >= HISTORICAL_CYCLE_PROMOTION_MIN_GAP_RATIO ? threshold : orderedSpans.getFirst().intValue();\n+    }\n+\n+    private int historicalCycleSpan(final ElliottWaveAnalysisResult.HistoricalCycleAssessment cycle) {\n+        return cycle.bearishLeg().endIndex() - cycle.bullishLeg().startIndex();\n+    }\n+"
+}

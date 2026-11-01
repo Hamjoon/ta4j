@@ -1,0 +1,26 @@
+{
+  "index": 265,
+  "sha": "babe0c371d6cbdee931d79f53cf27759eb1ebb22",
+  "parent": "310948315053e770077350ed198488af766a2aeb",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [
+      873,
+      874,
+      876,
+      877,
+      878,
+      879,
+      880,
+      881,
+      883,
+      884,
+      885,
+      887,
+      888
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex b7ec177f1..30e8557eb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -8,0 +9 @@ import java.util.Comparator;\n+import java.util.HashSet;\n@@ -11,0 +13 @@ import java.util.Optional;\n+import java.util.Set;\n@@ -855,0 +858,32 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n+\n+        /**\n+         * Returns the ranked current-cycle candidates collapsed to distinct\n+         * scenarios, preserving the first occurrence of each scenario id.\n+         *\n+         * <p>\n+         * This keeps the legacy preset display behavior in core so wrappers can ask\n+         * for \"base case plus distinct alternatives\" without re-implementing\n+         * candidate de-duplication.\n+         *\n+         * @param maxCandidates maximum number of distinct candidates to return\n+         * @return immutable distinct candidate list in ranked order\n+         * @since 0.22.4\n+         */\n+        public List<CurrentCycleCandidate> distinctCandidates(final int maxCandidates) {\n+            if (candidates.isEmpty() || maxCandidates <= 0) {\n+                return List.of();\n+            }\n+            final List<CurrentCycleCandidate> selected = new ArrayList<>(Math.min(maxCandidates, candidates.size()));\n+            final Set<String> seenScenarioIds = new HashSet<>();\n+            for (final CurrentCycleCandidate candidate : candidates) {\n+                final String scenarioId = candidate.fit().scenario().id();\n+                if (!seenScenarioIds.add(scenarioId)) {\n+                    continue;\n+                }\n+                selected.add(candidate);\n+                if (selected.size() == maxCandidates) {\n+                    break;\n+                }\n+            }\n+            return List.copyOf(selected);\n+        }"
+}

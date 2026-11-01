@@ -1,0 +1,36 @@
+{
+  "index": 10,
+  "sha": "7e296def2d4cf923e9af8aa3054d89871b5dc943",
+  "parent": "f72ba167c397042a83670606e1f4a335312c400e",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java": [],
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      328
+    ],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": [
+      156
+    ],
+    "src/main/java/org/ta4j/core/num/NaN.java": [],
+    "src/main/java/org/ta4j/core/num/Num.java": [
+      327
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java": [],
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      309,
+      333
+    ],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": [
+      152,
+      162
+    ],
+    "src/main/java/org/ta4j/core/num/NaN.java": [
+      97
+    ],
+    "src/main/java/org/ta4j/core/num/Num.java": [
+      354
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java\nindex f954ec0d5..ab3b1c4bc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java\n@@ -25,0 +26,2 @@ package org.ta4j.core.indicators.volume;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -29 +30,0 @@ import org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicator;\n-import org.ta4j.core.indicators.helpers.VolumeIndicator;\n@@ -32,2 +32,0 @@ import org.ta4j.core.num.Num;\n-import static org.ta4j.core.num.NaN.NaN;\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 0a681e72d..f474557b2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -306,0 +307,5 @@ public final class DecimalNum implements Num {\n+    @Override\n+    public String getName() {\n+        return this.getClass().getSimpleName();\n+    }\n+\n@@ -327,2 +332,2 @@ public final class DecimalNum implements Num {\n-    public String getName() {\n-        return this.getClass().getSimpleName();\n+    public BigDecimal bigDecimalValue() {\n+        return delegate;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\nindex 0413ea4a3..d36ae0b6d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n@@ -27,0 +28 @@ import static org.ta4j.core.num.NaN.NaN;\n+import java.math.BigDecimal;\n@@ -148,0 +150,5 @@ public class DoubleNum implements Num {\n+    @Override\n+    public String getName() {\n+        return this.getClass().getSimpleName();\n+    }\n+\n@@ -155,2 +161,2 @@ public class DoubleNum implements Num {\n-    public String getName() {\n-        return this.getClass().getSimpleName();\n+    public BigDecimal bigDecimalValue() {\n+        return Double.isNaN(delegate) || Double.isInfinite(delegate) ? null : BigDecimal.valueOf(delegate);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/NaN.java b/ta4j-core/src/main/java/org/ta4j/core/num/NaN.java\nindex e7806ba65..17d5ad0bd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/NaN.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/NaN.java\n@@ -25,0 +26 @@ package org.ta4j.core.num;\n+import java.math.BigDecimal;\n@@ -93,0 +95,5 @@ public class NaN implements Num {\n+    @Override\n+    public BigDecimal bigDecimalValue() {\n+        return null;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/Num.java b/ta4j-core/src/main/java/org/ta4j/core/num/Num.java\nindex b8ef30d68..4ced4996a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/Num.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/Num.java\n@@ -321,9 +320,0 @@ public interface Num extends Comparable<Num>, Serializable {\n-    /**\n-     * Converts this {@code Num} to a {@code double}.\n-     *\n-     * @return this {@code Num} converted to a {@code double}\n-     */\n-    default double doubleValue() {\n-        return getDelegate().doubleValue();\n-    }\n-\n@@ -356,0 +348,16 @@ public interface Num extends Comparable<Num>, Serializable {\n+    /**\n+     * Converts this {@code Num} to a {@code double}.\n+     *\n+     * @return this {@code Num} converted to a {@code double}\n+     */\n+    default double doubleValue() {\n+        return getDelegate().doubleValue();\n+    }\n+\n+    /**\n+     * Converts this {@code Num} to a {@code BigDecimal}.\n+     *\n+     * @return this {@code Num} converted to a {@code BigDecimal}\n+     */\n+    BigDecimal bigDecimalValue();\n+"
+}

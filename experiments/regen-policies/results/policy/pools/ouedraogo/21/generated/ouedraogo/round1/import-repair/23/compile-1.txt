@@ -1,0 +1,64 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:39: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:47: error: cannot find symbol
+        Position longPos = new Position(TradeType.BUY);
+                                        ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:48: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:49: error: cannot find symbol
+        assertEquals(TradeType.BUY, longPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:50: error: cannot find symbol
+        assertEquals(TradeType.SELL, shortPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:63: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:113: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:128: error: package TradeType does not exist
+        assertEquals(TradeType.BUY.complementType(), exit.getType());
+                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:133: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:141: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:189: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:213: error: cannot find symbol
+        Position p = new Position(TradeType.BUY, zeroCostModel, zeroCostModel);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:224: error: cannot find symbol
+        Position p = new Position(TradeType.SELL, zeroCostModel, zeroCostModel);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+13 errors

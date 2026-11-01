@@ -1,0 +1,267 @@
+[
+  {
+    "group": "getProfit - basic profit calculations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 10
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "100.0"
+          }
+        ],
+        "expected": "Positive profit value equal to (grossProfit - tradingCost). For example, if gross profit = 150.0 and trading cost = 5.0, expected profit = 145.0",
+        "description": "Standard case where the position is closed at index 10 with a final price that yields a positive gross profit. Verifies that getProfit correctly subtracts the position cost from the gross profit."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 5
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "50.0"
+          }
+        ],
+        "expected": "Zero profit value (0.0). For example, if gross profit = 20.0 and trading cost = 20.0, expected profit = 0.0",
+        "description": "Edge case where gross profit exactly equals the trading cost, resulting in a break\u2011even (zero) profit. Ensures subtraction does not produce rounding errors."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 3
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "30.0"
+          }
+        ],
+        "expected": "Negative profit value (loss). For example, if gross profit = 10.0 and trading cost = 25.0, expected profit = -15.0",
+        "description": "Loss scenario where the trading cost exceeds the gross profit. Confirms that getProfit returns a negative number representing a loss."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - exceptional / boundary conditions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finalPrice",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null Num for finalPrice should cause a NullPointerException because getGrossProfit(finalPrice) dereferences the argument."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -1
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "100.0"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException (or IllegalArgumentException depending on implementation)",
+        "description": "Using a negative finalIndex is invalid for getPositionCost(int). The method should propagate the exception thrown by the underlying cost calculation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 999999
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "100.0"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException (or IllegalArgumentException)",
+        "description": "Using an index far beyond the series length should trigger an exception from getPositionCost(int). This verifies that getProfit does not swallow such errors."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - zero trading cost",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 8
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "120.0"
+          }
+        ],
+        "expected": "Profit equals gross profit because trading cost is zero. For a position entered at 90.0 and exited at 120.0 with amount 1, expected profit = 30.0",
+        "description": "The Position is built with a ZeroCostModel (no commission, spread or holding cost). The test verifies that getProfit simply returns the gross profit when the cost model contributes zero."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - break\u2011even when finalIndex equals entry index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 2
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "50.0"
+          }
+        ],
+        "expected": "0.0",
+        "description": "The position is closed at the same index where it was opened and the final price equals the entry price. Both gross profit and trading cost are zero, so profit must be exactly zero."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - NaN final price handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 7
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "NaN"
+          }
+        ],
+        "expected": "NaN",
+        "description": "When the supplied finalPrice is NaN, getGrossProfit(finalPrice) should propagate NaN and the final profit must also be NaN. This checks that the method does not mask NaN values."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - open position profit calculation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 15
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "200.0"
+          }
+        ],
+        "expected": "Profit equals (finalPrice - entryPrice) * amount minus holding cost up to finalIndex. For entry price 150.0, amount 1, holding cost 2.5, expected profit = 47.5",
+        "description": "The Position has not been closed (no exit trade). getProfit must compute gross profit using the supplied finalPrice and subtract the holding cost returned by getHoldingCost(finalIndex). This test validates the calculation for an open position."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - high precision final price",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 12
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "123.456789"
+          }
+        ],
+        "expected": "Profit equals gross profit (123.456789 - 100.0) * 1 minus trading cost 0.5, i.e. 22.956789",
+        "description": "Ensures that getProfit correctly handles Num values with many decimal places and does not lose precision during subtraction of the trading cost."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - unopened position exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 5
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "100.0"
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "Calling getProfit on a Position that has never been opened (no entry trade) should throw IllegalStateException because gross profit cannot be computed without an entry price."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - negative final price exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 10
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "-50.0"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Supplying a negative finalPrice should be rejected by getGrossProfit(finalPrice) and result in IllegalArgumentException (price must be non\u2011negative)."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - null cost model exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 8
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "120.0"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "The Position is constructed with a null CostModel. When getProfit invokes getPositionCost(finalIndex), the underlying null reference causes a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "getProfit - finalIndex before entry index exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 2
+          },
+          {
+            "parameter": "finalPrice",
+            "value": "100.0"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "finalIndex is earlier than the index at which the Position was entered. getPositionCost should detect the invalid range and throw IllegalArgumentException."
+      }
+    ]
+  }
+]

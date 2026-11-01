@@ -1,0 +1,30 @@
+{
+  "index": 515,
+  "sha": "546abcd15bd8e6b8ced5c7b04df8009579bcf107",
+  "parent": "a95de61e4899f783d995348b1d43290c936f9b56",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/AGENTS.md": [],
+    "src/main/java/org/ta4j/core/indicators/SchaffTrendCycleIndicator.java": [
+      61,
+      80,
+      81,
+      82,
+      83,
+      138,
+      143
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/AGENTS.md": [],
+    "src/main/java/org/ta4j/core/indicators/SchaffTrendCycleIndicator.java": [
+      70,
+      89,
+      90,
+      91,
+      92,
+      129,
+      134
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/AGENTS.md b/ta4j-core/src/main/java/org/ta4j/core/indicators/AGENTS.md\nindex d9d7b78f0..5c0845442 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/AGENTS.md\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/AGENTS.md\n@@ -102 +102,3 @@ Applies to this package unless a deeper `AGENTS.md` overrides it.\n-  long flat stretches iteratively after the eviction.\n+  long flat stretches iteratively after the eviction. The private stochastic\n+  stages in `SchaffTrendCycleIndicator` instead continue their flat-range carry\n+  with the MACD and smoothing chain; standalone stochastic semantics are unchanged.\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/SchaffTrendCycleIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/SchaffTrendCycleIndicator.java\nindex b043c5bcd..155bda56e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/SchaffTrendCycleIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/SchaffTrendCycleIndicator.java\n@@ -18,0 +19,9 @@ import org.ta4j.core.num.Num;\n+ * <p>\n+ * When read on every appended bar of a bounded series with sufficient retained\n+ * history for the cycle and warm-up, the complete chain continues across head\n+ * advances. Retained results include previously observed history, including the\n+ * stochastic stages' last non-flat value. At fixed periods, normal append/read\n+ * work is independent of the retention capacity. A fresh instance or a chain\n+ * invalidated by an explicitly resetting source instead seeds from available\n+ * history; removed bars are never reconstructed.\n+ *\n@@ -61 +70 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-        super(config.indicator());\n+        super(config.stcSmoothed());\n@@ -80,4 +89,4 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-        StochasticIndicator macdStochastic = new StochasticIndicator(macd, cycleLength);\n-        EMAIndicator macdStochasticSmoothed = new EvictingEmaIndicator(macdStochastic, smoothingPeriod);\n-        StochasticIndicator cycleStochastic = new StochasticIndicator(macdStochasticSmoothed, cycleLength);\n-        EMAIndicator stcSmoothed = new EvictingEmaIndicator(cycleStochastic, smoothingPeriod);\n+        StochasticIndicator macdStochastic = new ContinuedStochasticIndicator(macd, cycleLength);\n+        EMAIndicator macdStochasticSmoothed = new EMAIndicator(macdStochastic, smoothingPeriod);\n+        StochasticIndicator cycleStochastic = new ContinuedStochasticIndicator(macdStochasticSmoothed, cycleLength);\n+        EMAIndicator stcSmoothed = new EMAIndicator(cycleStochastic, smoothingPeriod);\n@@ -104,11 +112,0 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-    /**\n-     * Discards every cached value after the series head advanced.\n-     *\n-     * <p>\n-     * STC values are always recomputable from the retained window, and both the\n-     * stochastic stages and the smoothing {@link EvictingEmaIndicator}s discard\n-     * their caches on a head advance: keeping any band here would preserve results\n-     * derived from bars that no longer exist.\n-     *\n-     * @return {@code true} to evict the whole cache\n-     */\n@@ -116 +114 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-    protected boolean requiresFullCacheInvalidationAfterHeadAdvance() {\n+    protected boolean hasRecursiveDependencies() {\n@@ -125,9 +123,2 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-     * An {@link EMAIndicator} that discards its whole cache when the series head\n-     * advances.\n-     *\n-     * <p>\n-     * EMA values depend on the entire retained history of their input. The\n-     * stochastic stage of this indicator rebaselines after a head advance, so any\n-     * surviving EMA value would mix fresh and stale stochastic inputs; discarding\n-     * the cache makes post-advance reads recurse through freshly recomputed\n-     * stochastic values.\n+     * Keeps the stochastic flat-range carry within this continued composition.\n+     * Standalone stochastic indicators retain their retained-window reset policy.\n@@ -135 +126 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-    private static final class EvictingEmaIndicator extends EMAIndicator {\n+    private static final class ContinuedStochasticIndicator extends StochasticIndicator {\n@@ -137,2 +128,2 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-        private EvictingEmaIndicator(final Indicator<Num> indicator, final int barCount) {\n-            super(indicator, barCount);\n+        private ContinuedStochasticIndicator(Indicator<Num> indicator, int lookback) {\n+            super(indicator, lookback);\n@@ -143 +134 @@ public class SchaffTrendCycleIndicator extends CachedIndicator<Num> {\n-            return true;\n+            return false;"
+}

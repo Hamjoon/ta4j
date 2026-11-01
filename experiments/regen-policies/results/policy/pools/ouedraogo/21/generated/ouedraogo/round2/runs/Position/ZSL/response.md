@@ -1,0 +1,521 @@
+###Test START##
+package org.ta4j.core;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+import java.util.Objects;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link Position}.
+ *
+ * <p>
+ * The test creates a tiny in‑memory {@link Num} implementation ( {@code SimpleNum}
+ * ) together with a matching {@code SimpleNumFactory}. This is sufficient for all
+ * arithmetic performed by {@link Position} and avoids any external library
+ * dependencies.
+ *
+ * <p>
+ * The tests cover:
+ * <ul>
+ *   <li>All constructors (including validation of illegal arguments)</li>
+ *   <li>State predicates {@code isNew()}, {@code isOpened()}, {@code isClosed()}</li>
+ *   <li>Operation flow via {@code operate(...)} and the expected
+ *       {@link IllegalStateException}</li>
+ *   <li>Profit / loss calculations (gross & net) for both BUY and SELL
+ *       positions, including the {@code hasProfit()} / {@code hasLoss()}
+ *       shortcuts</li>
+ *   <li>Gross return for long and short positions</li>
+ *   <li>Cost handling (uses {@code ZeroCostModel} which always returns zero)</li>
+ *   <li>Equality, hash‑code and {@code toString()}</li>
+ * </ul>
+ *
+ * All tests rely only on the public API shown in the prompt.
+ */
+public class PositionTest {
+
+    /** Simple {@link Num} implementation used only for tests. */
+    private static final class SimpleNum implements Num {
+
+        private final BigDecimal value;
+        private final SimpleNumFactory factory;
+
+        SimpleNum(BigDecimal value, SimpleNumFactory factory) {
+            this.value = value;
+            this.factory = factory;
+        }
+
+        SimpleNum(double d, SimpleNumFactory factory) {
+            this(BigDecimal.valueOf(d), factory);
+        }
+
+        @Override
+        public Number getDelegate() {
+            return value;
+        }
+
+        @Override
+        public NumFactory getNumFactory() {
+            // The real library returns a NumFactory; we return our own.
+            return factory;
+        }
+
+        @Override
+        public String getName() {
+            return "SimpleNum";
+        }
+
+        private SimpleNum op(java.util.function.BinaryOperator<BigDecimal> operator, Num other) {
+            return new SimpleNum(operator.apply(this.value, ((SimpleNum) other).value), factory);
+        }
+
+        @Override
+        public Num plus(Num augend) {
+            return op(BigDecimal::add, augend);
+        }
+
+        @Override
+        public Num minus(Num subtrahend) {
+            return op(BigDecimal::subtract, subtrahend);
+        }
+
+        @Override
+        public Num multipliedBy(Num multiplicand) {
+            return op(BigDecimal::multiply, multiplicand);
+        }
+
+        @Override
+        public Num dividedBy(Num divisor) {
+            return new SimpleNum(this.value.divide(((SimpleNum) divisor).value, 10, BigDecimal.ROUND_HALF_UP), factory);
+        }
+
+        @Override
+        public Num remainder(Num divisor) {
+            return new SimpleNum(this.value.remainder(((SimpleNum) divisor).value), factory);
+        }
+
+        @Override
+        public Num floor() {
+            return new SimpleNum(this.value.setScale(0, BigDecimal.ROUND_FLOOR), factory);
+        }
+
+        @Override
+        public Num ceil() {
+            return new SimpleNum(this.value.setScale(0, BigDecimal.ROUND_CEILING), factory);
+        }
+
+        @Override
+        public Num pow(int n) {
+            return new SimpleNum(this.value.pow(n), factory);
+        }
+
+        @Override
+        public Num pow(Num n) {
+            double exp = ((SimpleNum) n).value.doubleValue();
+            return new SimpleNum(Math.pow(this.value.doubleValue(), exp), factory);
+        }
+
+        @Override
+        public Num log() {
+            return new SimpleNum(Math.log(this.value.doubleValue()), factory);
+        }
+
+        @Override
+        public Num sqrt() {
+            return new SimpleNum(Math.sqrt(this.value.doubleValue()), factory);
+        }
+
+        @Override
+        public Num sqrt(int precision) {
+            return sqrt(); // precision not needed for tests
+        }
+
+        @Override
+        public Num abs() {
+            return new SimpleNum(this.value.abs(), factory);
+        }
+
+        @Override
+        public Num negate() {
+            return new SimpleNum(this.value.negate(), factory);
+        }
+
+        @Override
+        public boolean isZero() {
+            return value.compareTo(BigDecimal.ZERO) == 0;
+        }
+
+        @Override
+        public boolean isPositive() {
+            return value.compareTo(BigDecimal.ZERO) > 0;
+        }
+
+        @Override
+        public boolean isPositiveOrZero() {
+            return value.compareTo(BigDecimal.ZERO) >= 0;
+        }
+
+        @Override
+        public boolean isNegative() {
+            return value.compareTo(BigDecimal.ZERO) < 0;
+        }
+
+        @Override
+        public boolean isNegativeOrZero() {
+            return value.compareTo(BigDecimal.ZERO) <= 0;
+        }
+
+        @Override
+        public boolean isEqual(Num other) {
+            return value.compareTo(((SimpleNum) other).value) == 0;
+        }
+
+        @Override
+        public boolean isGreaterThan(Num other) {
+            return value.compareTo(((SimpleNum) other).value) > 0;
+        }
+
+        @Override
+        public boolean isGreaterThanOrEqual(Num other) {
+            return value.compareTo(((SimpleNum) other).value) >= 0;
+        }
+
+        @Override
+        public boolean isLessThan(Num other) {
+            return value.compareTo(((SimpleNum) other).value) < 0;
+        }
+
+        @Override
+        public boolean isLessThanOrEqual(Num other) {
+            return value.compareTo(((SimpleNum) other).value) <= 0;
+        }
+
+        @Override
+        public Num min(Num other) {
+            return value.compareTo(((SimpleNum) other).value) <= 0 ? this : (SimpleNum) other;
+        }
+
+        @Override
+        public Num max(Num other) {
+            return value.compareTo(((SimpleNum) other).value) >= 0 ? this : (SimpleNum) other;
+        }
+
+        @Override
+        public boolean isNaN() {
+            return false;
+        }
+
+        @Override
+        public int intValue() {
+            return value.intValue();
+        }
+
+        @Override
+        public long longValue() {
+            return value.longValue();
+        }
+
+        @Override
+        public float floatValue() {
+            return value.floatValue();
+        }
+
+        @Override
+        public double doubleValue() {
+            return value.doubleValue();
+        }
+
+        @Override
+        public BigDecimal bigDecimalValue() {
+            return value;
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(value);
+        }
+
+        @Override
+        public String toString() {
+            return value.toPlainString();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj instanceof SimpleNum) {
+                SimpleNum other = (SimpleNum) obj;
+                return this.value.compareTo(other.value) == 0;
+            }
+            return false;
+        }
+
+        @Override
+        public int compareTo(Num o) {
+            return this.value.compareTo(((SimpleNum) o).value);
+        }
+    }
+
+    /** Minimal factory exposing only the {@code zero()} method required by {@link Position}. */
+    private static final class SimpleNumFactory implements NumFactory {
+        SimpleNum zero() {
+            return new SimpleNum(BigDecimal.ZERO, this);
+        }
+
+        SimpleNum valueOf(double d) {
+            return new SimpleNum(d, this);
+        }
+    }
+
+    /** Minimal {@link BarSeries} stub – only required for the overload that accepts a series. */
+    private static final class DummyBarSeries implements BarSeries {
+        private final SimpleNumFactory factory = new SimpleNumFactory();
+
+        @Override
+        public NumFactory numFactory() {
+            return factory;
+        }
+
+        // The remaining methods are not used by the tests; they return default values.
+        @Override public BaseBarConvertibleBuilder barBuilder() { return null; }
+        @Override public String getName() { return "dummy"; }
+        @Override public Bar getBar(int i) { return null; }
+        @Override public int getBarCount() { return 0; }
+        @Override public java.util.List<Bar> getBarData() { return java.util.Collections.emptyList(); }
+        @Override public int getBeginIndex() { return 0; }
+        @Override public int getEndIndex() { return 0; }
+        @Override public int getMaximumBarCount() { return 0; }
+        @Override public void setMaximumBarCount(int maximumBarCount) {}
+        @Override public int getRemovedBarsCount() { return 0; }
+        @Override public void addBar(Bar bar) {}
+        @Override public void addBar(Bar bar, boolean replace) {}
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) {}
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) {}
+        @Override public void addPrice(Num price) {}
+        @Override public void addPrice(Number price) {}
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { return this; }
+    }
+
+    private SimpleNumFactory numFactory;
+
+    @Before
+    public void setUp() {
+        numFactory = new SimpleNumFactory();
+    }
+
+    /** Helper to create a BUY trade. */
+    private Trade buy(int index, double price, double amount) {
+        return Trade.buyAt(index, numFactory.valueOf(price), numFactory.valueOf(amount));
+    }
+
+    /** Helper to create a SELL trade. */
+    private Trade sell(int index, double price, double amount) {
+        return Trade.sellAt(index, numFactory.valueOf(price), numFactory.valueOf(amount));
+    }
+
+    /* -------------------------------------------------------------
+     * Constructor & basic state tests
+     * ------------------------------------------------------------- */
+    @Test
+    public void testDefaultConstructorCreatesBuyPosition() {
+        Position pos = new Position(); // default BUY
+        assertTrue(pos.isNew());
+        assertEquals(TradeType.BUY, pos.getStartingType());
+    }
+
+    @Test
+    public void testConstructorWithStartingType() {
+        Position sellPos = new Position(TradeType.SELL);
+        assertTrue(sellPos.isNew());
+        assertEquals(TradeType.SELL, sellPos.getStartingType());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorRejectsNullStartingType() {
+        new Position(null);
+    }
+
+    @Test
+    public void testPositionFromTwoTrades() {
+        Trade entry = buy(0, 10, 2);
+        Trade exit = sell(5, 12, 2);
+        Position pos = new Position(entry, exit);
+        assertTrue(pos.isClosed());
+        assertEquals(entry, pos.getEntry());
+        assertEquals(exit, pos.getExit());
+        assertEquals(TradeType.BUY, pos.getStartingType());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testPositionFromTwoTradesSameTypeFails() {
+        Trade entry = buy(0, 10, 1);
+        Trade exit = buy(5, 12, 1);
+        new Position(entry, exit);
+    }
+
+    /* -------------------------------------------------------------
+     * State predicate tests
+     * ------------------------------------------------------------- */
+    @Test
+    public void testStateTransitions() {
+        Position pos = new Position();
+        assertTrue(pos.isNew());
+        assertFalse(pos.isOpened());
+        assertFalse(pos.isClosed());
+
+        // first operate – creates entry
+        Trade entry = pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(1));
+        assertNotNull(entry);
+        assertTrue(pos.isOpened());
+        assertFalse(pos.isClosed());
+
+        // second operate – creates exit
+        Trade exit = pos.operate(5, numFactory.valueOf(12), numFactory.valueOf(1));
+        assertNotNull(exit);
+        assertTrue(pos.isClosed());
+        assertFalse(pos.isOpened());
+    }
+
+    @Test
+    public void testOperateThrowsWhenIndexBeforeEntry() {
+        Position pos = new Position();
+        pos.operate(3, numFactory.valueOf(10), numFactory.valueOf(1));
+        try {
+            pos.operate(2, numFactory.valueOf(11), numFactory.valueOf(1));
+            fail("Expected IllegalStateException when operating with index < entry index");
+        } catch (IllegalStateException e) {
+            assertEquals("The index i is less than the entryTrade index", e.getMessage());
+        }
+    }
+
+    /* -------------------------------------------------------------
+     * Profit / loss calculations
+     * ------------------------------------------------------------- */
+    @Test
+    public void testProfitForClosedLongPosition() {
+        Position pos = new Position();
+        pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(2)); // entry BUY 10 * 2 = 20
+        pos.operate(4, numFactory.valueOf(15), numFactory.valueOf(2)); // exit SELL 15 * 2 = 30
+
+        // Gross profit = 30 - 20 = 10
+        Num expectedGross = numFactory.valueOf(10);
+        assertEquals(expectedGross, pos.getGrossProfit());
+
+        // ZeroCostModel => net profit = gross profit
+        assertEquals(expectedGross, pos.getProfit());
+        assertTrue(pos.hasProfit());
+        assertFalse(pos.hasLoss());
+    }
+
+    @Test
+    public void testProfitForClosedShortPosition() {
+        Position pos = new Position(TradeType.SELL);
+        pos.operate(0, numFactory.valueOf(20), numFactory.valueOf(3)); // entry SELL (short) 20*3 = 60
+        pos.operate(3, numFactory.valueOf(15), numFactory.valueOf(3)); // exit BUY 15*3 = 45
+
+        // For short, gross profit = -(45 - 60) = 15
+        Num expectedGross = numFactory.valueOf(15);
+        assertEquals(expectedGross, pos.getGrossProfit());
+
+        // Net profit = gross (ZeroCostModel)
+        assertEquals(expectedGross, pos.getProfit());
+        assertTrue(pos.hasProfit());
+    }
+
+    @Test
+    public void testLossDetection() {
+        Position pos = new Position();
+        pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(1));
+        pos.operate(2, numFactory.valueOf(8), numFactory.valueOf(1)); // price drops
+
+        Num profit = pos.getProfit();
+        assertTrue(profit.isNegative());
+        assertTrue(pos.hasLoss());
+        assertFalse(pos.hasProfit());
+    }
+
+    @Test
+    public void testProfitWhenPositionIsOpen() {
+        Position pos = new Position();
+        pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(2)); // entry
+        // open – profit should be zero until a final price is supplied
+        assertEquals(numFactory.zero(), pos.getGrossProfit());
+        assertEquals(numFactory.zero(), pos.getProfit());
+
+        // Simulate profit if the position were closed at price 13
+        Num profitIfClosed = pos.getProfit(10, numFactory.valueOf(13));
+        Num expected = numFactory.valueOf(6); // (13*2)-20 = 6
+        assertEquals(expected, profitIfClosed);
+    }
+
+    /* -------------------------------------------------------------
+     * Gross return tests
+     * ------------------------------------------------------------- */
+    @Test
+    public void testGrossReturnLong() {
+        Position pos = new Position();
+        pos.operate(0, numFactory.valueOf(100), numFactory.valueOf(1));
+        pos.operate(5, numFactory.valueOf(110), numFactory.valueOf(1));
+
+        // Expected return = 110 / 100 = 1.1
+        Num expected = numFactory.valueOf(1.1);
+        assertEquals(expected, pos.getGrossReturn());
+    }
+
+    @Test
+    public void testGrossReturnShort() {
+        Position pos = new Position(TradeType.SELL);
+        pos.operate(0, numFactory.valueOf(200), numFactory.valueOf(1)); // short entry
+        pos.operate(3, numFactory.valueOf(180), numFactory.valueOf(1)); // covering buy
+
+        // For short: ((180/200) - 1) = -0.1, negated => 0.1, + 1 => 1.1
+        Num expected = numFactory.valueOf(1.1);
+        assertEquals(expected, pos.getGrossReturn());
+    }
+
+    /* -------------------------------------------------------------
+     * Cost related tests (ZeroCostModel returns zero)
+     * ------------------------------------------------------------- */
+    @Test
+    public void testPositionCostIsZeroWithZeroCostModel() {
+        Position pos = new Position();
+        pos.operate(0, numFactory.valueOf(5), numFactory.valueOf(10));
+        pos.operate(2, numFactory.valueOf(7), numFactory.valueOf(10));
+
+        assertEquals(numFactory.zero(), pos.getPositionCost());
+        assertEquals(numFactory.zero(), pos.getHoldingCost());
+    }
+
+    /* -------------------------------------------------------------
+     * Equality, hashCode and toString
+     * ------------------------------------------------------------- */
+    @Test
+    public void testEqualsAndHashCode() {
+        Trade e1 = buy(0, 10, 1);
+        Trade x1 = sell(2, 12, 1);
+        Position p1 = new Position(e1, x1);
+        Position p2 = new Position(e1, x1);
+        Position p3 = new Position(); // different
+
+        assertEquals(p1, p2);
+        assertEquals(p1.hashCode(), p2.hashCode());
+        assertNotEquals(p1, p3);
+    }
+
+    @Test
+    public void testToStringContainsEntryAndExit() {
+        Position pos = new Position();
+        pos.operate(0, numFactory.valueOf(1), numFactory.valueOf(1));
+        pos.operate(1, numFactory.valueOf(2), numFactory.valueOf(1));
+
+        String s = pos.toString();
+        assertTrue(s.contains("Entry:"));
+        assertTrue(s.contains("exit:"));
+        assertTrue(s.contains(pos.getEntry().toString()));
+        assertTrue(s.contains(pos.getExit().toString()));
+    }
+}
+###Test END##

@@ -1,0 +1,39 @@
+{
+  "index": 304,
+  "sha": "7c986d8295bffec6fe5e647aeb03e8903c670e68",
+  "parent": "d55b0c90be0e6b8e832fe2d47ca244deee9f1863",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      516,
+      545,
+      566,
+      567
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      516,
+      545,
+      567,
+      568,
+      569,
+      635,
+      636,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      646,
+      647,
+      649,
+      650,
+      653,
+      654,
+      657,
+      658
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex 919028554..f81a24fc6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -516 +516 @@ public final class ElliottScenarioGenerator {\n-        }, prunedBranches);\n+        }, cutPoints -> partialImpulseDecompositionRemainsViable(pivots, cutPoints), prunedBranches);\n@@ -545 +545 @@ public final class ElliottScenarioGenerator {\n-        }, prunedBranches);\n+        }, cutPoints -> true, prunedBranches);\n@@ -552,0 +553 @@ public final class ElliottScenarioGenerator {\n+            final java.util.function.Predicate<List<Integer>> partialBranchValidator,\n@@ -566,2 +567,4 @@ public final class ElliottScenarioGenerator {\n-            if (decompositionAlternatesDirection(pivots, chosenCuts, false)) {\n-                searchDecompositionCuts(pivots, cutsNeeded - 1, pivotIndex + 1, chosenCuts, consumer, prunedBranches);\n+            if (decompositionAlternatesDirection(pivots, chosenCuts, false)\n+                    && partialBranchValidator.test(chosenCuts)) {\n+                searchDecompositionCuts(pivots, cutsNeeded - 1, pivotIndex + 1, chosenCuts, consumer,\n+                        partialBranchValidator, prunedBranches);\n@@ -629,0 +633,28 @@ public final class ElliottScenarioGenerator {\n+    private boolean partialImpulseDecompositionRemainsViable(final List<SwingPivotPoint> pivots,\n+            final List<Integer> cutPoints) {\n+        if (cutPoints.size() < 2) {\n+            return true;\n+        }\n+\n+        final double wave1Start = pivots.getFirst().price().doubleValue();\n+        final double wave1End = pivots.get(cutPoints.getFirst()).price().doubleValue();\n+        final double wave2End = pivots.get(cutPoints.get(1)).price().doubleValue();\n+        final int wave1Direction = Double.compare(wave1End, wave1Start);\n+        if (wave1Direction == 0) {\n+            return false;\n+        }\n+        if (wave1Direction > 0 && wave2End < wave1Start) {\n+            return false;\n+        }\n+        if (wave1Direction < 0 && wave2End > wave1Start) {\n+            return false;\n+        }\n+\n+        if (cutPoints.size() < 4) {\n+            return true;\n+        }\n+\n+        final double wave4End = pivots.get(cutPoints.get(3)).price().doubleValue();\n+        return wave1Direction > 0 ? wave4End >= wave1End : wave4End <= wave1End;\n+    }\n+"
+}

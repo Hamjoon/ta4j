@@ -1,0 +1,998 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:339: error: cannot find symbol
+    private static final class SimpleBarSeries implements BarSeries {
+                                                          ^
+  symbol:   class BarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:42: error: cannot find symbol
+    private static final class SimpleNum implements Num {
+                                                    ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:567: error: cannot find symbol
+    private Position closedLongPosition() {
+            ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:574: error: cannot find symbol
+    private Position openShortPosition() {
+            ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:68: error: cannot find symbol
+        public NumFactory getNumFactory() {
+               ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:78: error: cannot find symbol
+        public Num plus(Num augend) {
+                        ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:78: error: cannot find symbol
+        public Num plus(Num augend) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:83: error: cannot find symbol
+        public Num minus(Num subtrahend) {
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:83: error: cannot find symbol
+        public Num minus(Num subtrahend) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:88: error: cannot find symbol
+        public Num multipliedBy(Num multiplicand) {
+                                ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:88: error: cannot find symbol
+        public Num multipliedBy(Num multiplicand) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:93: error: cannot find symbol
+        public Num dividedBy(Num divisor) {
+                             ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:93: error: cannot find symbol
+        public Num dividedBy(Num divisor) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:98: error: cannot find symbol
+        public Num remainder(Num divisor) {
+                             ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:98: error: cannot find symbol
+        public Num remainder(Num divisor) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:103: error: cannot find symbol
+        public Num floor() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:108: error: cannot find symbol
+        public Num ceil() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:113: error: cannot find symbol
+        public Num pow(int n) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:118: error: cannot find symbol
+        public Num pow(Num n) {
+                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:118: error: cannot find symbol
+        public Num pow(Num n) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:123: error: cannot find symbol
+        public Num log() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:128: error: cannot find symbol
+        public Num exp() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:133: error: cannot find symbol
+        public Num sqrt() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:138: error: cannot find symbol
+        public Num sqrt(java.math.MathContext mathContext) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:143: error: cannot find symbol
+        public Num abs() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:148: error: cannot find symbol
+        public Num negate() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:178: error: cannot find symbol
+        public boolean isEqual(Num other) {
+                               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:183: error: cannot find symbol
+        public boolean isGreaterThan(Num other) {
+                                     ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:188: error: cannot find symbol
+        public boolean isGreaterThanOrEqual(Num other) {
+                                            ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:193: error: cannot find symbol
+        public boolean isLessThan(Num other) {
+                                  ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:198: error: cannot find symbol
+        public boolean isLessThanOrEqual(Num other) {
+                                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        public Num min(Num other) {
+                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        public Num min(Num other) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:208: error: cannot find symbol
+        public Num max(Num other) {
+                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:208: error: cannot find symbol
+        public Num max(Num other) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:261: error: cannot find symbol
+        public int compareTo(Num o) {
+                             ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:303: error: cannot find symbol
+    private static final class SimpleBar implements Bar {
+                                                    ^
+  symbol:   class Bar
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:348: error: cannot find symbol
+        public NumFactory numFactory() {
+               ^
+  symbol:   class NumFactory
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:353: error: cannot find symbol
+        public BarBuilder barBuilder() {
+               ^
+  symbol:   class BarBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:363: error: cannot find symbol
+        public Bar getBar(int i) {
+               ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:373: error: cannot find symbol
+        public List<Bar> getBarData() {
+                    ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:407: error: cannot find symbol
+        @Override public void addBar(Bar bar) { throw uoe(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:408: error: cannot find symbol
+        @Override public void addBar(Bar bar, boolean replace) { throw uoe(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:410: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { throw uoe(); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:410: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { throw uoe(); }
+                                                        ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:411: error: cannot find symbol
+        @Override public void addPrice(Num price) { throw uoe(); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:413: error: cannot find symbol
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw uoe(); }
+                         ^
+  symbol:   class BarSeries
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:267: error: cannot find symbol
+    private static final class SimpleNumFactory implements NumFactory {
+                                                           ^
+  symbol:   class NumFactory
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:274: error: cannot find symbol
+        public Num zero() {
+               ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:279: error: cannot find symbol
+        public Num one() {
+               ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:284: error: cannot find symbol
+        public Num numOf(long value) {
+               ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:289: error: cannot find symbol
+        public Num numOf(double value) {
+               ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:294: error: cannot find symbol
+        public Num numOf(BigDecimal value) {
+               ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:419: error: cannot find symbol
+    private static final class SimpleTrade implements Trade {
+                                                      ^
+  symbol:   class Trade
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:421: error: cannot find symbol
+        private final TradeType type;
+                      ^
+  symbol:   class TradeType
+  location: class SimpleTrade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:425: error: cannot find symbol
+        SimpleTrade(TradeType type, SimpleNum netPrice, int index) {
+                    ^
+  symbol:   class TradeType
+  location: class SimpleTrade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:432: error: cannot find symbol
+        public TradeType getTradeType() {
+               ^
+  symbol:   class TradeType
+  location: class SimpleTrade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:463: error: cannot find symbol
+    private static final class ZeroCostModel implements CostModel {
+                                                        ^
+  symbol:   class CostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:465: error: cannot find symbol
+        public Num calculate(Trade trade, BarSeries series) {
+                             ^
+  symbol:   class Trade
+  location: class ZeroCostModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:465: error: cannot find symbol
+        public Num calculate(Trade trade, BarSeries series) {
+                                          ^
+  symbol:   class BarSeries
+  location: class ZeroCostModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:465: error: cannot find symbol
+        public Num calculate(Trade trade, BarSeries series) {
+               ^
+  symbol:   class Num
+  location: class ZeroCostModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:471: error: cannot find symbol
+    private static final class SimpleTradingRecord implements TradingRecord {
+                                                              ^
+  symbol:   class TradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:473: error: cannot find symbol
+        private final List<Position> positions;
+                           ^
+  symbol:   class Position
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:474: error: cannot find symbol
+        private final Position currentPosition;
+                      ^
+  symbol:   class Position
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:476: error: cannot find symbol
+        SimpleTradingRecord(List<Position> positions, Position currentPosition) {
+                                 ^
+  symbol:   class Position
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:476: error: cannot find symbol
+        SimpleTradingRecord(List<Position> positions, Position currentPosition) {
+                                                      ^
+  symbol:   class Position
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:482: error: cannot find symbol
+        public TradeType getStartingType() {
+               ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:492: error: cannot find symbol
+        public List<Position> getPositions() {
+                    ^
+  symbol:   class Position
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:497: error: cannot find symbol
+        public Position getCurrentPosition() {
+               ^
+  symbol:   class Position
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:502: error: cannot find symbol
+        public int getEndIndex(BarSeries series) {
+                               ^
+  symbol:   class BarSeries
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:512: error: cannot find symbol
+        @Override public CostModel getTransactionCostModel() { throw uoe(); }
+                         ^
+  symbol:   class CostModel
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:513: error: cannot find symbol
+        @Override public CostModel getHoldingCostModel() { throw uoe(); }
+                         ^
+  symbol:   class CostModel
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:514: error: cannot find symbol
+        @Override public List<Trade> getTrades() { throw uoe(); }
+                              ^
+  symbol:   class Trade
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:515: error: cannot find symbol
+        @Override public Trade getLastTrade() { throw uoe(); }
+                         ^
+  symbol:   class Trade
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:516: error: cannot find symbol
+        @Override public Trade getLastTrade(TradeType tradeType) { throw uoe(); }
+                                            ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:516: error: cannot find symbol
+        @Override public Trade getLastTrade(TradeType tradeType) { throw uoe(); }
+                         ^
+  symbol:   class Trade
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:517: error: cannot find symbol
+        @Override public Trade getLastEntry() { throw uoe(); }
+                         ^
+  symbol:   class Trade
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:518: error: cannot find symbol
+        @Override public Trade getLastExit() { throw uoe(); }
+                         ^
+  symbol:   class Trade
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:521: error: cannot find symbol
+        @Override public int getStartIndex(BarSeries series) { throw uoe(); }
+                                           ^
+  symbol:   class BarSeries
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:523: error: cannot find symbol
+        @Override public void operate(int index, Num price, Num amount) { throw uoe(); }
+                                                 ^
+  symbol:   class Num
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:523: error: cannot find symbol
+        @Override public void operate(int index, Num price, Num amount) { throw uoe(); }
+                                                            ^
+  symbol:   class Num
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:525: error: cannot find symbol
+        @Override public boolean enter(int index, Num price, Num amount) { throw uoe(); }
+                                                  ^
+  symbol:   class Num
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:525: error: cannot find symbol
+        @Override public boolean enter(int index, Num price, Num amount) { throw uoe(); }
+                                                             ^
+  symbol:   class Num
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:527: error: cannot find symbol
+        @Override public boolean exit(int index, Num price, Num amount) { throw uoe(); }
+                                                 ^
+  symbol:   class Num
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:527: error: cannot find symbol
+        @Override public boolean exit(int index, Num price, Num amount) { throw uoe(); }
+                                                            ^
+  symbol:   class Num
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:534: error: cannot find symbol
+        public static int determineEndIndex(Position position, int finalIndex, int seriesEnd) {
+                                            ^
+  symbol:   class Position
+  location: class AnalysisUtils
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:539: error: cannot find symbol
+        public static Num addCost(Num price, Num avgCost, boolean isLong) {
+                                  ^
+  symbol:   class Num
+  location: class AnalysisUtils
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:539: error: cannot find symbol
+        public static Num addCost(Num price, Num avgCost, boolean isLong) {
+                                             ^
+  symbol:   class Num
+  location: class AnalysisUtils
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:539: error: cannot find symbol
+        public static Num addCost(Num price, Num avgCost, boolean isLong) {
+                      ^
+  symbol:   class Num
+  location: class AnalysisUtils
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:62: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:67: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:72: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:77: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:82: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:87: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:92: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:97: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:102: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:107: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:112: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:117: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:122: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:124: error: no suitable constructor found for SimpleNum(double)
+            return new SimpleNum(Math.log(this.doubleValue()));
+                   ^
+    constructor SimpleNum.SimpleNum(BigDecimal) is not applicable
+      (argument mismatch; double cannot be converted to BigDecimal)
+    constructor SimpleNum.SimpleNum(long) is not applicable
+      (argument mismatch; possible lossy conversion from double to long)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:127: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:129: error: no suitable constructor found for SimpleNum(double)
+            return new SimpleNum(Math.exp(this.doubleValue()));
+                   ^
+    constructor SimpleNum.SimpleNum(BigDecimal) is not applicable
+      (argument mismatch; double cannot be converted to BigDecimal)
+    constructor SimpleNum.SimpleNum(long) is not applicable
+      (argument mismatch; possible lossy conversion from double to long)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:132: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:134: error: no suitable constructor found for SimpleNum(double)
+            return new SimpleNum(Math.sqrt(this.doubleValue()));
+                   ^
+    constructor SimpleNum.SimpleNum(BigDecimal) is not applicable
+      (argument mismatch; double cannot be converted to BigDecimal)
+    constructor SimpleNum.SimpleNum(long) is not applicable
+      (argument mismatch; possible lossy conversion from double to long)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:137: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:142: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:147: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:152: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:157: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:162: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:167: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:172: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:177: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:182: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:187: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:192: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:197: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:202: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:207: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:212: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:217: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:222: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:227: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:232: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:237: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:260: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:273: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:278: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:283: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:288: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:293: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:313: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:318: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:328: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getOpenPrice() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:329: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getHighPrice() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:330: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getLowPrice()  { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:331: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getVolume()    { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:332: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getAmount()    { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:333: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getTrades()    { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:334: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getTimestamp() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:335: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getTimePeriod() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:347: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:352: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:357: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:362: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:367: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:372: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:377: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:382: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:387: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:392: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:397: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:407: error: method does not override or implement a method from a supertype
+        @Override public void addBar(Bar bar) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:408: error: method does not override or implement a method from a supertype
+        @Override public void addBar(Bar bar, boolean replace) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:409: error: method does not override or implement a method from a supertype
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:410: error: method does not override or implement a method from a supertype
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:411: error: method does not override or implement a method from a supertype
+        @Override public void addPrice(Num price) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:412: error: method does not override or implement a method from a supertype
+        @Override public void addPrice(Number price) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:413: error: method does not override or implement a method from a supertype
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:414: error: method does not override or implement a method from a supertype
+        @Override public String getSeriesPeriodDescription() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:415: error: method does not override or implement a method from a supertype
+        @Override public String getSeriesPeriodDescriptionInSystemTimeZone() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:431: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:436: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:441: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:451: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getPrice() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:452: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getAmount() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:453: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCost() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:454: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getValue() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:455: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCommission() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:456: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getFee() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:457: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCurrencyAmount() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:458: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCurrencyCost() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:459: error: method does not override or implement a method from a supertype
+        @Override public SimpleNum getCurrencyValue() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:464: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:481: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:483: error: cannot find symbol
+            return TradeType.BUY;
+                   ^
+  symbol:   variable TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:486: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:491: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:496: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:501: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:512: error: method does not override or implement a method from a supertype
+        @Override public CostModel getTransactionCostModel() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:513: error: method does not override or implement a method from a supertype
+        @Override public CostModel getHoldingCostModel() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:514: error: method does not override or implement a method from a supertype
+        @Override public List<Trade> getTrades() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:515: error: method does not override or implement a method from a supertype
+        @Override public Trade getLastTrade() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:516: error: method does not override or implement a method from a supertype
+        @Override public Trade getLastTrade(TradeType tradeType) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:517: error: method does not override or implement a method from a supertype
+        @Override public Trade getLastEntry() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:518: error: method does not override or implement a method from a supertype
+        @Override public Trade getLastExit() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:519: error: method does not override or implement a method from a supertype
+        @Override public Integer getStartIndex() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:520: error: method does not override or implement a method from a supertype
+        @Override public Integer getEndIndex() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:521: error: method does not override or implement a method from a supertype
+        @Override public int getStartIndex(BarSeries series) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:522: error: method does not override or implement a method from a supertype
+        @Override public void operate(int index) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:523: error: method does not override or implement a method from a supertype
+        @Override public void operate(int index, Num price, Num amount) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:524: error: method does not override or implement a method from a supertype
+        @Override public boolean enter(int index) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:525: error: method does not override or implement a method from a supertype
+        @Override public boolean enter(int index, Num price, Num amount) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:526: error: method does not override or implement a method from a supertype
+        @Override public boolean exit(int index) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:527: error: method does not override or implement a method from a supertype
+        @Override public boolean exit(int index, Num price, Num amount) { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:528: error: method does not override or implement a method from a supertype
+        @Override public boolean isClosed() { throw uoe(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:568: error: cannot find symbol
+        SimpleTrade entry = new SimpleTrade(TradeType.BUY, price100, 0);
+                                            ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:569: error: cannot find symbol
+        SimpleTrade exit  = new SimpleTrade(TradeType.SELL, price120, 2);
+                                            ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:570: error: cannot find symbol
+        return new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                   ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:575: error: cannot find symbol
+        SimpleTrade entry = new SimpleTrade(TradeType.SELL, price110, 1);
+                                            ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:577: error: cannot find symbol
+        return new Position(entry, null, new ZeroCostModel(), new ZeroCostModel());
+                   ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:585: error: cannot find symbol
+        Position pos = closedLongPosition();
+        ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:592: error: cannot find symbol
+        Num one = series.numFactory().one();
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:596: error: cannot find symbol
+        Num expected = one.multipliedBy(price120.dividedBy(price100));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:609: error: cannot find symbol
+        Position closed = closedLongPosition();
+        ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:610: error: cannot find symbol
+        Position open   = openShortPosition();
+        ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:612: error: cannot find symbol
+        List<Position> positions = Collections.singletonList(closed);
+             ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:616: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        CashFlow cf = new CashFlow(series, record, series.getEndIndex());
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:619: error: cannot find symbol
+        Num one = series.numFactory().one();
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:621: error: cannot find symbol
+        Num longRatio = price120.dividedBy(price100);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:628: error: cannot find symbol
+        Num shortRatioIdx1 = series.numFactory().numOf(2).minus(price110.dividedBy(price110));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:629: error: cannot find symbol
+        Num shortRatioIdx2 = series.numFactory().numOf(2).minus(price120.dividedBy(price110));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:632: error: cannot find symbol
+        Num baseAtEntry = one.multipliedBy(longRatio); // cash‑flow after the closed long trade
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:633: error: cannot find symbol
+        Num expectedIdx1 = baseAtEntry.multipliedBy(shortRatioIdx1);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:634: error: cannot find symbol
+        Num expectedIdx2 = baseAtEntry.multipliedBy(shortRatioIdx2);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:646: error: cannot find symbol
+                new Position()));
+                    ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:645: error: no suitable constructor found for CashFlow(SimpleBarSeries,SimpleTradingRecord)
+        CashFlow cf = new CashFlow(series, new SimpleTradingRecord(Collections.emptyList(),
+                      ^
+    constructor CashFlow.CashFlow(BarSeries,Position) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+    constructor CashFlow.CashFlow(BarSeries,TradingRecord) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:660: error: cannot find symbol
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+                                                       ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:660: error: cannot find symbol
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+                                                                  ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:663: error: cannot find symbol
+        Num entry = price100;
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:664: error: cannot find symbol
+        Num exit  = price120;
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:666: error: cannot find symbol
+        Num ratio = (Num) method.invoke(null, true, entry, exit);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:666: error: cannot find symbol
+        Num ratio = (Num) method.invoke(null, true, entry, exit);
+                     ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:667: error: cannot find symbol
+        Num expected = exit.dividedBy(entry);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:674: error: cannot find symbol
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+                                                       ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:674: error: cannot find symbol
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+                                                                  ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:677: error: cannot find symbol
+        Num entry = price110;
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:678: error: cannot find symbol
+        Num exit  = price120;
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:680: error: cannot find symbol
+        Num ratio = (Num) method.invoke(null, false, entry, exit);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:680: error: cannot find symbol
+        Num ratio = (Num) method.invoke(null, false, entry, exit);
+                     ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:681: error: cannot find symbol
+        Num two = series.numFactory().numOf(2);
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:682: error: cannot find symbol
+        Num expected = two.minus(exit.dividedBy(entry));
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:694: error: cannot find symbol
+                new Position()));
+                    ^
+  symbol:   class Position
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:693: error: no suitable constructor found for CashFlow(SimpleBarSeries,SimpleTradingRecord)
+        CashFlow cf = new CashFlow(series, new SimpleTradingRecord(Collections.emptyList(),
+                      ^
+    constructor CashFlow.CashFlow(BarSeries,Position) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+    constructor CashFlow.CashFlow(BarSeries,TradingRecord) is not applicable
+      (argument mismatch; SimpleBarSeries cannot be converted to BarSeries)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:708: error: cannot find symbol
+        Num one = series.numFactory().one();
+        ^
+  symbol:   class Num
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java:718: error: cannot find symbol
+        Position open = openShortPosition(); // entry only, no exit
+        ^
+  symbol:   class Position
+  location: class CashFlowTest
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/ToT/CashFlowTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+240 errors

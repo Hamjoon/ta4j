@@ -1,0 +1,62 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:247: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:263: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:277: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries
+    private static final class SimpleBarSeries implements BarSeries {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:472: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:473: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(3), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:487: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:488: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(4), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:496: error: cannot find symbol
+        TradingRecord rec = mgr.run(strat, TradeType.SELL, customAmount);
+                                           ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:499: error: cannot find symbol
+        assertEquals(TradeType.SELL, rec.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:503: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(0), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:504: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:512: error: cannot find symbol
+        TradingRecord rec = mgr.run(strat, TradeType.BUY, SimpleNum.of(1.0), -5, 100);
+                                           ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:516: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(0), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:517: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(4), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:529: error: cannot find symbol
+        TradingRecord rec = mgr.run(strat, TradeType.BUY, SimpleNum.of(1.0), 4, 2);
+                                           ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+15 errors

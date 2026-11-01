@@ -1,0 +1,22 @@
+{
+  "index": 151,
+  "sha": "e04eff012741474c414b658ead318585cf69225d",
+  "parent": "40ec357b49c51f9989512ebe2956eb2b20a9a017",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BarSeries.java": [],
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [],
+    "src/main/java/org/ta4j/core/utils/BarSeriesUtils.java": [
+      233
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BarSeries.java": [],
+    "src/main/java/org/ta4j/core/BaseBarSeries.java": [
+      150
+    ],
+    "src/main/java/org/ta4j/core/utils/BarSeriesUtils.java": [
+      233
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java\nindex f27ff4dd7..efed2da48 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BarSeries.java\n@@ -168 +168 @@ public interface BarSeries extends Serializable {\n-     *\n+     * <p>\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\nindex 4dc023f14..8cad5c182 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeries.java\n@@ -149,0 +150 @@ public class BaseBarSeries implements BarSeries {\n+                    .withMaxBarCount(this.maximumBarCount)\n@@ -153 +153,0 @@ public class BaseBarSeries implements BarSeries {\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java b/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java\nindex 7b2e65dd7..75dec6a7f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/utils/BarSeriesUtils.java\n@@ -233 +233 @@ public final class BarSeriesUtils {\n-            Collections.sort(bars, BarSeriesUtils.sortBarsByTime);\n+            bars.sort(BarSeriesUtils.sortBarsByTime);"
+}

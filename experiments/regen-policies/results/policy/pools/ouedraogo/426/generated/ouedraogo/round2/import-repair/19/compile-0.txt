@@ -1,0 +1,43 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:86: error: cannot find symbol
+        @Override public NumFactory getNumFactory() { return null; }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:184: error: cannot find symbol
+        @Override public List<Bar> getBarData() { throw new UnsupportedOperationException(); }
+                              ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:186: error: cannot find symbol
+        @Override public Bar getBar(int i) { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:188: error: cannot find symbol
+        @Override public BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BarBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:199: error: cannot find symbol
+        @Override public void addBar(Bar bar) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:200: error: cannot find symbol
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:155: error: SimpleBarSeries is not abstract and does not override abstract method numFactory() in BarSeries
+    private static class SimpleBarSeries implements BarSeries {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:166: error: numFactory() in SimpleBarSeries cannot implement numFactory() in BarSeries
+        @Override public SimpleNumFactory numFactory() { return factory; }
+                                          ^
+  return type SimpleNumFactory is not compatible with NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:166: error: method does not override or implement a method from a supertype
+        @Override public SimpleNumFactory numFactory() { return factory; }
+        ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+9 errors

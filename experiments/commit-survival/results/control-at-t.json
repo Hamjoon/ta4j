@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "requested": 643,
+    "passed": 643,
+    "failures": []
+  },
+  "dev-scope": {
+    "requested": 67,
+    "passed": 67,
+    "failures": []
+  },
+  "ktester": {
+    "requested": 14,
+    "passed": 14,
+    "failures": []
+  },
+  "ouedraogo": {
+    "requested": 98,
+    "passed": 98,
+    "failures": []
+  }
+}

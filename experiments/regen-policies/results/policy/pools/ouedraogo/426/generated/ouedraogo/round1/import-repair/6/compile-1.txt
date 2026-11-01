@@ -1,0 +1,53 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:23: error: cannot find symbol
+import org.ta4j.core.num.PrecisionNum;
+                        ^
+  symbol:   class PrecisionNum
+  location: package org.ta4j.core.num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:24: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:57: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:62: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:43: error: AlwaysOperateStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysOperateStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:149: error: cannot find symbol
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(1)));
+                                         ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:150: error: cannot find symbol
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(2)));
+                                         ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:151: error: cannot find symbol
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(3)));
+                                         ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:167: error: DEFAULT_TRADING_RECORD_FACTORY has private access in BarSeriesManager
+                BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:173: error: DEFAULT_TRADING_RECORD_FACTORY has private access in BarSeriesManager
+                BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:179: error: DEFAULT_TRADING_RECORD_FACTORY has private access in BarSeriesManager
+                null, BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:203: error: cannot find symbol
+        snapshot.addBar(snapshot.barBuilder().newBar(DecimalNum.valueOf(99)));
+                                             ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+12 errors

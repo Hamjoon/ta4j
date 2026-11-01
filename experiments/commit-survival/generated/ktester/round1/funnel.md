@@ -1,0 +1,27 @@
+# Generation funnel
+
+```json
+{
+  "group": "ktester",
+  "round": "round1",
+  "files": 84,
+  "compiled": 44,
+  "methods": 507,
+  "stable_3_of_3": 14,
+  "duplicates": 0,
+  "kept_this_round": 14,
+  "total_kept": 14,
+  "developer_denominator": 643,
+  "ratio_to_dev": 0.02177293934681182,
+  "per_prompt": {
+    "KTester": {
+      "files": 84,
+      "compiled": 44,
+      "methods": 507,
+      "stable": 14,
+      "duplicates": 0,
+      "kept": 14
+    }
+  }
+}
+```

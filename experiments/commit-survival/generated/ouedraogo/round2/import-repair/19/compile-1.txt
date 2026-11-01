@@ -1,0 +1,6 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:16: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+1 error

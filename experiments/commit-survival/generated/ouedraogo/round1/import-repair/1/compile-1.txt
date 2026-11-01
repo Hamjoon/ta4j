@@ -1,0 +1,23 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:253: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+class SimpleBar implements org.ta4j.core.Bar {
+^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:277: error: getTrades() in SimpleBar cannot implement getTrades() in Bar
+    @Override public SimpleNum getTrades() { return null; }
+                               ^
+  return type SimpleNum is not compatible with long
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:277: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getTrades() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:278: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getBidVolume() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:279: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getAskVolume() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:280: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getBidPrice() { return null; }
+    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:281: error: method does not override or implement a method from a supertype
+    @Override public SimpleNum getAskPrice() { return null; }
+    ^
+7 errors

@@ -1,0 +1,102 @@
+[
+  {
+    "group": "Position#getGrossReturn() - branch when position is opened",
+    "cases": [
+      {
+        "input": [],
+        "expected": "zero()",
+        "description": "When the position is still opened (isOpened() returns true), getGrossReturn() should return the result of the private zero() method, which represents a Num value of zero."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position with positive return",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to (exitPrice - entryPrice) / entryPrice = 0.10",
+        "description": "A position is opened with an entry trade at price 100 and later closed with an exit trade at price 110. Since the position is closed (isOpened() returns false), getGrossReturn() should delegate to getGrossReturn(exitPrice) and return a 10% gross return."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position with negative return",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to (exitPrice - entryPrice) / entryPrice = -0.10",
+        "description": "A position is opened with an entry trade at price 100 and later closed with an exit trade at price 90. The method should return a -10% gross return."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position with zero return",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to 0",
+        "description": "A position is opened and closed at the same price (entry 100, exit 100). The gross return must be zero."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position where exit price is zero",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num.NaN (or appropriate representation of undefined return)",
+        "description": "A position is opened at price 100 and closed with an exit price of 0. Division by zero should lead to NaN (as defined by the library's Num implementation). The method must propagate this result."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position where entry price is zero",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num.NaN (or appropriate representation of undefined return)",
+        "description": "A position is opened with an entry price of 0 and closed at any non\u2011zero price (e.g., 50). Since the denominator in the gross\u2011return formula is zero, the result should be NaN."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position with fractional prices",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to (1.2345 - 1.0000) / 1.0000 = 0.2345",
+        "description": "Tests that the method works correctly with non\u2011integer (fractional) prices, returning the precise fractional gross return."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position with null exit trade",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "A Position is created with an entry trade but never assigned an exit trade. isOpened() returns false, so getGrossReturn() attempts to call exit.getPricePerAsset() on a null exit, resulting in a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position with null exit price",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "A Position is closed with an exit Trade whose pricePerAsset field is null. The method calls exit.getPricePerAsset() which returns null, and the subsequent call to getGrossReturn(null) throws a NullPointerException (or IllegalArgumentException depending on implementation). The test expects a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Position#getGrossReturn() - closed position where getGrossReturn(Num) receives null argument",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IllegalArgumentException",
+        "description": "A Position is closed and the exit trade's getPricePerAsset() method is stubbed to return null. The private overload getGrossReturn(Num finalPrice) validates its argument and throws IllegalArgumentException when finalPrice is null. The test verifies that this exception is thrown."
+      }
+    ]
+  }
+]

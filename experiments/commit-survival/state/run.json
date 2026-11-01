@@ -1,0 +1,10 @@
+{
+  "pid": 72651,
+  "identity": "darwin:1792935374:711787",
+  "run_id": "b58c7d3ef0574c7fbaa54f6f3fce512e",
+  "log": "/Users/donggi/_projects/experiment-projects/ta4j/experiments/commit-survival/state/log.txt",
+  "status": "completed",
+  "started": "2026-10-25T13:36:14.864444+00:00",
+  "finished": "2026-10-25T20:25:39.154035+00:00",
+  "notes": "stopped by user"
+}

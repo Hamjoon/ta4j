@@ -1,0 +1,21 @@
+{
+  "index": 501,
+  "sha": "f77110709fb7690ae9f40295ef7e1e590ba3f6ed",
+  "parent": "60569fb9b9bc9bfc0ba2f50a78700f09c5b82df6",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      649,
+      650
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      648,
+      649,
+      650,
+      651,
+      654
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\nindex bb32362bc..6a7611410 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n@@ -648,3 +648,7 @@ public final class IndicatorSerialization {\n-            @SuppressWarnings({ \"unchecked\", \"rawtypes\" })\n-            Class<? extends Enum> enumClass = (Class<? extends Enum>) targetType;\n-            return Enum.valueOf(enumClass, value.toString());\n+            String name = value.toString();\n+            for (Object constant : targetType.getEnumConstants()) {\n+                if (((Enum<?>) constant).name().equals(name)) {\n+                    return constant;\n+                }\n+            }\n+            throw new IllegalArgumentException(\"No enum constant \" + targetType.getCanonicalName() + \".\" + name);"
+}

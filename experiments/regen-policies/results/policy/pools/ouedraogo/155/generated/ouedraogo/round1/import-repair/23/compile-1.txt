@@ -1,0 +1,38 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:61: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:128: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:131: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:136: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType()); // complement of BUY
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:145: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:190: error: zero() has private access in Position
+        assertEquals(p.zero(), p.getProfit());
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:197: error: zero() has private access in Position
+        assertEquals(p.zero(), p.getGrossProfit());
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:204: error: zero() has private access in Position
+        assertEquals(p.zero(), p.getGrossReturn());
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:214: error: zero() has private access in Position
+        assertEquals(p.zero(), profit);
+                      ^
+9 errors

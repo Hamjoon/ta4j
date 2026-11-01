@@ -1,0 +1,275 @@
+package org.ta4j.core.backtest;
+import org.ta4j.core.rules.BooleanRule;
+import org.ta4j.core.TradingRecord;
+
+
+import static org.junit.Assert.*;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Consumer;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.backtest.PositionSizer;
+import org.ta4j.core.backtest.PositionSizer.Context;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.NumFactory;
+import org.ta4j.core.trading.TradingRecord;
+import org.ta4j.core.trading.rules.BooleanRule;
+import org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory;
+import org.ta4j.core.backtest.StrategyWalkForwardExecutionResult;
+import org.ta4j.core.walkforward.WalkForwardConfig;
+
+/**
+ * JUnit‑4 test suite for {@link BarSeriesManager}.
+ *
+ * The test class covers:
+ * <ul>
+ *   <li>All public methods (signatures are listed in the first test).</li>
+ *   <li>Basic happy‑path behaviour.</li>
+ *   <li>Edge‑cases such as {@code null} arguments, illegal factories and
+ *       invalid amounts supplied by a {@link PositionSizer}.</li>
+ * </ul>
+ *
+ * No mocking framework is used – all objects are created via the public
+ * constructors / factory methods that belong to the TA4J library.
+ */
+public class BarSeriesManagerTest {
+
+    /** a minimal non‑empty series (one bar) used by most tests */
+    private BarSeries series;
+
+    /** a dummy strategy that never triggers any operation */
+    private Strategy noOpStrategy;
+
+    /** a simple {@link TradeExecutionModel} that does nothing */
+    private TradeExecutionModel noopExecutionModel;
+
+    @Before
+    public void setUp() {
+        // Build a series with a single bar (price = 100).  The concrete Bar class is
+        // created internally by the builder; we only need the series itself.
+        series = new BaseBarSeriesBuilder()
+                .withName("test-series")
+                .withNumFactory(NumFactory::numOf) // use default factory
+                .build();
+
+        // Add a single bar so that begin/end indexes are defined (index 0).
+        // The builder creates an empty series; we add a bar with price 100.
+        // The concrete Bar implementation is hidden – the builder offers a
+        // convenience method to add a bar via the series itself.
+        // We use the series' addBar method with a minimal bar created by the
+        // builder’s default BarBuilder (the details are not important for the
+        // tests).
+        series.addBar(series.barBuilder().build());
+
+        // Dummy strategy – entry/exit rules are always false → shouldOperate is false
+        noOpStrategy = new Strategy() {
+            @Override
+            public String getName() {
+                return "no-op";
+            }
+
+            @Override
+            public org.ta4j.core.Rule getEntryRule() {
+                return new BooleanRule(false);
+            }
+
+            @Override
+            public org.ta4j.core.Rule getExitRule() {
+                return new BooleanRule(false);
+            }
+
+            @Override
+            public TradeType getStartingType() {
+                return TradeType.BUY;
+            }
+        };
+
+        // Execution model that does nothing – we only need the callbacks to be
+        // present; the default implementation already does nothing, so we can
+        // reuse it.
+        noopExecutionModel = new TradeOnNextOpenModel();
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 1. LIST OF PUBLIC METHODS (signatures)                               */
+    /* ---------------------------------------------------------------------- */
+    @Test
+    public void testPublicMethodSignatures() {
+        // The purpose of this test is purely documentary – it asserts that the
+        // methods exist and are publicly visible.  If a signature changes the
+        // compilation will fail.
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        // getters
+        assertNotNull(mgr.getBarSeries());
+        assertNotNull(mgr.getTransactionCostModel());
+        assertNotNull(mgr.getHoldingCostModel());
+
+        // run overloads – we only verify that they compile and return a
+        // non‑null TradingRecord (the implementation may be empty because the
+        // strategy never trades).
+        assertNotNull(mgr.run(noOpStrategy));
+        assertNotNull(mgr.run(noOpStrategy, TradeType.SELL));
+        assertNotNull(mgr.run(noOpStrategy, TradeType.SELL, 0, 0));
+        assertNotNull(mgr.run(noOpStrategy, TradeType.SELL, series.numFactory().one()));
+        assertNotNull(mgr.run(noOpStrategy, TradeType.SELL, series.numFactory().one(), 0, 0));
+        assertNotNull(mgr.run(noOpStrategy, TradeType.SELL,
+                PositionSizer.fixed(series.numFactory().one())));
+
+        // walk‑forward overloads – we use the default config for a minimal series.
+        WalkForwardConfig cfg = WalkForwardConfig.defaultConfig(series);
+        assertNotNull(mgr.runWalkForward(noOpStrategy, cfg));
+        assertNotNull(mgr.runWalkForward(noOpStrategy, TradeType.SELL, cfg));
+        assertNotNull(mgr.runWalkForward(noOpStrategy, TradeType.SELL,
+                series.numFactory().one(), cfg));
+        assertNotNull(mgr.runWalkForward(noOpStrategy,
+                PositionSizer.fixed(series.numFactory().one()), cfg));
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 2. BASIC FUNCTIONALITY TESTS                                          */
+    /* ---------------------------------------------------------------------- */
+    @Test
+    public void testGettersReturnProvidedInstances() {
+        CostModel txCost = new ZeroCostModel();
+        CostModel holdCost = new ZeroCostModel();
+        BarSeriesManager mgr = new BarSeriesManager(series, txCost, holdCost, noopExecutionModel);
+        assertSame(txCost, mgr.getTransactionCostModel());
+        assertSame(holdCost, mgr.getHoldingCostModel());
+
+        // The returned series must be a snapshot – i.e. a different instance but
+        // with the same data.
+        BarSeries snapshot = mgr.getBarSeries();
+        assertNotSame(series, snapshot);
+        assertEquals(series.getName(), snapshot.getName());
+        assertEquals(series.getBarCount(), snapshot.getBarCount());
+    }
+
+    @Test
+    public void testRunCreatesTradingRecord() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        TradingRecord record = mgr.run(noOpStrategy);
+        // Because the strategy never operates, the record should be empty but
+        // not null.
+        assertNotNull(record);
+        assertTrue(record.getPositions().isEmpty());
+        assertTrue(record.isClosed()); // no open position → closed
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 3. EDGE‑CASE / EXCEPTION TESTS                                        */
+    /* ---------------------------------------------------------------------- */
+    @Test(expected = NullPointerException.class)
+    public void constructorRejectsNullBarSeries() {
+        new BarSeriesManager(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructorRejectsNullTransactionCostModel() {
+        new BarSeriesManager(series, null, new ZeroCostModel(),
+                noopExecutionModel);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructorRejectsNullHoldingCostModel() {
+        new BarSeriesManager(series, new ZeroCostModel(), null,
+                noopExecutionModel);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructorRejectsNullExecutionModel() {
+        new BarSeriesManager(series, new ZeroCostModel(),
+                new ZeroCostModel(), null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void constructorRejectsNullTradingRecordFactory() {
+        new BarSeriesManager(series, new ZeroCostModel(),
+                new ZeroCostModel(), noopExecutionModel, null);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void createDefaultTradingRecordFailsWhenFactoryReturnsNull() {
+        // Custom factory that deliberately returns null.
+        TradingRecordFactory nullFactory = (type, start, end, tx, hold) -> null;
+        BarSeriesManager mgr = new BarSeriesManager(series,
+                new ZeroCostModel(),
+                new ZeroCostModel(),
+                noopExecutionModel,
+                nullFactory);
+        // The public run method eventually calls createDefaultTradingRecord.
+        mgr.run(noOpStrategy, TradeType.BUY, series.numFactory().one(),
+                series.getBeginIndex(), series.getEndIndex());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void runWithPositionSizerRejectsNegativeAmount() {
+        // PositionSizer.fixed returns the same amount for every call.
+        Num negative = series.numFactory().numOf(-10);
+        PositionSizer sizer = PositionSizer.fixed(negative);
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        // The strategy never trades – the only place where the amount is examined
+        // is inside amountForIndex which validates the amount.
+        mgr.run(noOpStrategy, TradeType.BUY, sizer);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void runWithPositionSizerRejectsNaNAmount() {
+        // Build a NaN Num – the default NumFactory does not provide a direct
+        // method, but we can obtain it via division by zero.
+        Num nan = series.numFactory().one().dividedBy(series.numFactory().zero());
+        PositionSizer sizer = PositionSizer.fixed(nan);
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        mgr.run(noOpStrategy, TradeType.BUY, sizer);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void runRejectsNullStrategy() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        mgr.run(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void runWithPositionSizerRejectsNullStrategy() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        mgr.run(null, PositionSizer.fixed(series.numFactory().one()));
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void runWithPositionSizerRejectsNullSizer() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        mgr.run(noOpStrategy, (PositionSizer) null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void runWalkForwardRejectsNullStrategy() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        WalkForwardConfig cfg = WalkForwardConfig.defaultConfig(series);
+        mgr.runWalkForward(null, cfg);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void runWalkForwardRejectsNullConfig() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        mgr.runWalkForward(noOpStrategy, (WalkForwardConfig) null);
+    }
+
+    @Test
+    public void runWalkForwardReturnsResult() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        WalkForwardConfig cfg = WalkForwardConfig.defaultConfig(series);
+        StrategyWalkForwardExecutionResult result = mgr.runWalkForward(noOpStrategy, cfg);
+        assertNotNull(result);
+        assertEquals(series, result.barSeries());
+        assertEquals(noOpStrategy, result.strategy());
+        assertEquals(cfg, result.config());
+    }
+}

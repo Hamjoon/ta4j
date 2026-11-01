@@ -1,0 +1,102 @@
+[
+  {
+    "group": "hasProfit scenarios",
+    "cases": [
+      {
+        "input": [],
+        "expected": true,
+        "description": "Position with a positive profit (exit price > entry price for a BUY trade). getProfit() returns a positive Num, so hasProfit() should return true."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Position with zero profit (exit price equals entry price). getProfit() returns Num zero, isPositive() is false, so hasProfit() should return false."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Position with a negative profit (exit price < entry price for a BUY trade). getProfit() returns a negative Num, isPositive() is false, so hasProfit() should return false."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Position where profit is NaN (e.g., price data missing). getProfit() returns NaN, isPositive() is defined to be false, so hasProfit() should return false."
+      }
+    ]
+  },
+  {
+    "group": "hasProfit short position scenarios",
+    "cases": [
+      {
+        "input": [],
+        "expected": true,
+        "description": "Short (SELL) position with a positive profit: entry price 100, exit price 80 (exit lower than entry). getProfit() is positive, so hasProfit() should return true."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Short (SELL) position with zero profit: entry price 100, exit price 100. getProfit() is zero, isPositive() is false, so hasProfit() should return false."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Short (SELL) position with a negative profit: entry price 100, exit price 120 (exit higher than entry). getProfit() is negative, so hasProfit() should return false."
+      }
+    ]
+  },
+  {
+    "group": "hasProfit open position scenarios",
+    "cases": [
+      {
+        "input": [],
+        "expected": false,
+        "description": "Position that is still open (no exit trade). getProfit() returns zero (or NaN) for an open position, therefore hasProfit() should return false."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Open BUY position where the current market price is unavailable (price data missing). getProfit() yields NaN, isPositive() is false, so hasProfit() should return false."
+      }
+    ]
+  },
+  {
+    "group": "hasProfit extreme profit values",
+    "cases": [
+      {
+        "input": [],
+        "expected": true,
+        "description": "BUY position with an extremely large positive profit (entry price 1, exit price 1,000,000,000). getProfit() is positive, so hasProfit() should return true."
+      },
+      {
+        "input": [],
+        "expected": true,
+        "description": "BUY position with a very small positive profit (entry price 99.9999, exit price 100). getProfit() is positive albeit tiny, so hasProfit() should return true."
+      }
+    ]
+  },
+  {
+    "group": "hasProfit exception scenarios",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "Position has never been entered (entry trade is null). When hasProfit() calls getProfit(), a NullPointerException is thrown because getProfit() attempts to access the entry trade."
+      },
+      {
+        "input": [],
+        "expected": "IllegalStateException",
+        "description": "Open position (entry trade present, exit trade null) and the underlying BarSeries is not set. getProfit() cannot determine the current price and throws IllegalStateException, which propagates through hasProfit()."
+      },
+      {
+        "input": [],
+        "expected": "ArithmeticException",
+        "description": "Position where the profit calculation overflows the numeric type used by the Num implementation (e.g., extremely large entry and exit prices causing arithmetic overflow). getProfit() throws ArithmeticException, which is not caught by hasProfit()."
+      },
+      {
+        "input": [],
+        "expected": "IllegalArgumentException",
+        "description": "Position with a null CostModel (if a custom cost model is injected and later used in profit calculation). getProfit() validates the cost model and throws IllegalArgumentException, which propagates to hasProfit()."
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "index": 487,
+  "sha": "56753172e1954e7d81cffbd60026b52417348a29",
+  "parent": "19a9e454517e2b2704d1d8af7ef419d51aae6afe",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java": [
+      127
+    ],
+    "src/main/java/org/ta4j/core/indicators/forecast/KinematicKalmanForecastStateIndicator.java": [
+      207
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java": [
+      133
+    ],
+    "src/main/java/org/ta4j/core/indicators/forecast/KinematicKalmanForecastStateIndicator.java": [
+      212
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java\nindex 34fce425c..437778f4b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/KalmanFilterIndicator.java\n@@ -18,0 +19,5 @@ import org.ta4j.core.num.Num;\n+ * <p>\n+ * The filter initializes at the first index with a finite measurement and\n+ * usable process and measurement noise. Earlier unavailable inputs do not\n+ * contribute a zero-valued observation. After initialization, unavailable\n+ * inputs preserve the last usable state for later recovery.\n@@ -127 +132,2 @@ public class KalmanFilterIndicator extends CachedIndicator<Num> {\n-        return new KalmanState(estimate, getBarSeries().numFactory().one(), true, validMeasurement);\n+        // A placeholder is not an initialized estimate; seed on the first usable bar.\n+        return new KalmanState(estimate, getBarSeries().numFactory().one(), validMeasurement, validMeasurement);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/forecast/KinematicKalmanForecastStateIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/forecast/KinematicKalmanForecastStateIndicator.java\nindex 11344f253..5202cef91 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/forecast/KinematicKalmanForecastStateIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/forecast/KinematicKalmanForecastStateIndicator.java\n@@ -26,0 +27,4 @@ import org.ta4j.core.num.NumFactory;\n+ * Before the first usable observation, the state remains uninitialized. The\n+ * first usable observation seeds position at the measurement and velocity at\n+ * zero, using the normal initial covariance update even after an unavailable\n+ * prefix.\n@@ -205,0 +210 @@ public final class KinematicKalmanForecastStateIndicator extends CachedIndicator\n+                // No observation has initialized this placeholder yet.\n@@ -207 +212 @@ public final class KinematicKalmanForecastStateIndicator extends CachedIndicator\n-                        numFactory.one(), processNoise, measurementNoise, 0, true, false);\n+                        numFactory.one(), processNoise, measurementNoise, 0, false, false);"
+}

@@ -1,0 +1,34 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:86: error: cannot find symbol
+    @Override public Function<Number, Num> function() {
+                     ^
+  symbol:   class Function
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:122: error: cannot find symbol
+    private final List<Bar> bars = new ArrayList<>();
+                       ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:132: error: cannot find symbol
+    @Override public Bar getBar(int i) { return bars.get(i); }
+                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:133: error: cannot find symbol
+    @Override public List<Bar> getBarData() { return Collections.unmodifiableList(bars); }
+                          ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:142: error: cannot find symbol
+    @Override public void addBar(Bar bar) { bars.add(bar); }
+                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:143: error: cannot find symbol
+    @Override public void addBar(Bar bar, boolean replace) { bars.add(bar); }
+                                 ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:113: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+class SimpleBar implements org.ta4j.core.Bar {
+^
+7 errors

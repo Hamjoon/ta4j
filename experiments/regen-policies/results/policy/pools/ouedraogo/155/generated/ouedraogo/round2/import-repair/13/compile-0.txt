@@ -1,0 +1,256 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:31: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:35: error: package org.ta4j.core.cost does not exist
+import org.ta4j.core.cost.ZeroCostModel;
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:63: error: cannot find symbol
+    private Trade tradeAt(int index, TradeType type, Num price) {
+                                     ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:54: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        return new BaseBar(
+               ^
+  required: Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,Num,Num,Num,Num,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:65: error: cannot find symbol
+        return new Trade(type, index, price, DecimalNum.ONE);
+                                                       ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:72: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:98: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:108: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:120: error: cannot find symbol
+        Trade entry = tradeAt(1, TradeType.BUY, two);
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:122: error: cannot find symbol
+        Trade exit = tradeAt(4, TradeType.SELL, five);
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:123: error: cannot find symbol
+        Position position = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                                                          ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:123: error: cannot find symbol
+        Position position = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                                                                               ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:154: error: cannot find symbol
+        Trade entry = tradeAt(0, TradeType.SELL, one);
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:156: error: cannot find symbol
+        Trade exit = tradeAt(3, TradeType.BUY, series.numFactory().numOf(4));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:157: error: cannot find symbol
+        Position position = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                                                          ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:157: error: cannot find symbol
+        Position position = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                                                                               ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:181: error: cannot find symbol
+        Trade entry = tradeAt(2, TradeType.BUY, three);
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:182: error: cannot find symbol
+        Position openPos = new Position(entry, null, new ZeroCostModel(), new ZeroCostModel());
+                                                         ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:182: error: cannot find symbol
+        Position openPos = new Position(entry, null, new ZeroCostModel(), new ZeroCostModel());
+                                                                              ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:196: error: cannot find symbol
+        Trade e1 = tradeAt(1, TradeType.BUY, two);
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:197: error: cannot find symbol
+        Trade x1 = tradeAt(4, TradeType.SELL, five);
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:198: error: cannot find symbol
+        Position p1 = new Position(e1, x1, new ZeroCostModel(), new ZeroCostModel());
+                                               ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:198: error: cannot find symbol
+        Position p1 = new Position(e1, x1, new ZeroCostModel(), new ZeroCostModel());
+                                                                    ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:201: error: cannot find symbol
+        Trade e2 = tradeAt(5, TradeType.BUY, series.numFactory().numOf(6));
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:202: error: cannot find symbol
+        Trade x2 = tradeAt(5, TradeType.SELL, series.numFactory().numOf(6));
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        Position p2 = new Position(e2, x2, new ZeroCostModel(), new ZeroCostModel());
+                                               ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:203: error: cannot find symbol
+        Position p2 = new Position(e2, x2, new ZeroCostModel(), new ZeroCostModel());
+                                                                    ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:207: error: cannot find symbol
+        record.operate(e1.getIndex(), e1.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:207: error: cannot find symbol
+        record.operate(e1.getIndex(), e1.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable e1 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:208: error: cannot find symbol
+        record.operate(x1.getIndex(), x1.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:208: error: cannot find symbol
+        record.operate(x1.getIndex(), x1.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable x1 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:209: error: cannot find symbol
+        record.operate(e2.getIndex(), e2.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:209: error: cannot find symbol
+        record.operate(e2.getIndex(), e2.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable e2 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:210: error: cannot find symbol
+        record.operate(x2.getIndex(), x2.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:210: error: cannot find symbol
+        record.operate(x2.getIndex(), x2.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable x2 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:239: error: cannot find symbol
+        Trade e1 = tradeAt(1, TradeType.BUY, two);
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:240: error: cannot find symbol
+        Trade x1 = tradeAt(3, TradeType.SELL, series.numFactory().numOf(4));
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:241: error: cannot find symbol
+        Position closed = new Position(e1, x1, new ZeroCostModel(), new ZeroCostModel());
+                                                   ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:241: error: cannot find symbol
+        Position closed = new Position(e1, x1, new ZeroCostModel(), new ZeroCostModel());
+                                                                        ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:244: error: cannot find symbol
+        Trade e2 = tradeAt(4, TradeType.BUY, five);
+                              ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:245: error: cannot find symbol
+        Position open = new Position(e2, null, new ZeroCostModel(), new ZeroCostModel());
+                                                   ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:245: error: cannot find symbol
+        Position open = new Position(e2, null, new ZeroCostModel(), new ZeroCostModel());
+                                                                        ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:249: error: cannot find symbol
+        record.operate(e1.getIndex(), e1.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:249: error: cannot find symbol
+        record.operate(e1.getIndex(), e1.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable e1 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:250: error: cannot find symbol
+        record.operate(x1.getIndex(), x1.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:250: error: cannot find symbol
+        record.operate(x1.getIndex(), x1.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable x1 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:251: error: cannot find symbol
+        record.operate(e2.getIndex(), e2.getPrice(), DecimalNum.ONE);
+                                                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:251: error: cannot find symbol
+        record.operate(e2.getIndex(), e2.getPrice(), DecimalNum.ONE);
+                                        ^
+  symbol:   method getPrice()
+  location: variable e2 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:298: error: cannot find symbol
+        Trade entry = tradeAt(0, TradeType.BUY, one);
+                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:299: error: cannot find symbol
+        Trade exit = tradeAt(2, TradeType.SELL, three);
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:300: error: cannot find symbol
+        Position pos = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                                                     ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:300: error: cannot find symbol
+        Position pos = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+                                                                          ^
+  symbol:   class ZeroCostModel
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+52 errors

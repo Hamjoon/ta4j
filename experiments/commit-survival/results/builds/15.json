@@ -1,0 +1,68 @@
+{
+  "index": 15,
+  "sha": "38fbb04425bec4fefe208d8c4c69892d846569e1",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/15/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.315,
+      "log": "results/builds/logs/15-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/15/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.53,
+      "log": "results/builds/logs/15-2.txt"
+    }
+  ],
+  "input_sha256": "93db723b78cf19859e8de562b4de7712e17ff95c5203fb05a733de7fa9ff842d",
+  "pom_sha256": "1dd0933e8221ce2a43fa2904f820181e0626c2eb3f8c818f357bd81f7191e090",
+  "classpath": "work/classpaths/1dd0933e8221ce2a43fa2904f820181e0626c2eb3f8c818f357bd81f7191e090.txt",
+  "classpath_attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/1dd0933e8221ce2a43fa2904f820181e0626c2eb3f8c818f357bd81f7191e090.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/15/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.023,
+      "log": "results/builds/logs/classpath-15-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/1dd0933e8221ce2a43fa2904f820181e0626c2eb3f8c818f357bd81f7191e090.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/15/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 7.395,
+      "log": "results/builds/logs/classpath-15-2.txt"
+    }
+  ]
+}

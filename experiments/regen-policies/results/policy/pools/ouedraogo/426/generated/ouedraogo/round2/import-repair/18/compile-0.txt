@@ -1,0 +1,92 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:14: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:62: error: cannot find symbol
+    private NumFactory numFactory;
+            ^
+  symbol:   class NumFactory
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:96: error: cannot find symbol
+    private void assertNumEquals(double expected, Num actual) {
+                                                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:66: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("test-series");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:70: error: cannot find symbol
+            Num price = series.numFactory().numOf(i + 1);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:172: error: incompatible types: String cannot be converted to Config
+        BarSeries negSeries = new BaseBarSeries("neg");
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:174: error: cannot find symbol
+            Num price = negSeries.numFactory().numOf(-(i + 1));
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:202: error: incompatible types: String cannot be converted to Config
+        BarSeries negSeries = new BaseBarSeries("neg2");
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:204: error: cannot find symbol
+            Num price = negSeries.numFactory().numOf(-(i + 1));
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:386: error: cannot find symbol
+        Rule rule = close.crossedOver(constant);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:397: error: cannot find symbol
+        Rule rule = close.crossedUnder(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:402: error: cannot find symbol
+        Rule rule2 = close.crossedUnder(8);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:408: error: incompatible types: String cannot be converted to Config
+        BarSeries decSeries = new BaseBarSeries("dec");
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:410: error: cannot find symbol
+            Num price = decSeries.numFactory().numOf(i);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:419: error: cannot find symbol
+        Rule decRule = decClose.crossedUnder(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:429: error: cannot find symbol
+        Rule rule = close.isGreaterThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:441: error: cannot find symbol
+        Rule rule = close.isLessThan(constant);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:454: error: cannot find symbol
+        Indicator<Num> delegate = new ClosePriceIndicator(series);
+        ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:454: error: cannot find symbol
+        Indicator<Num> delegate = new ClosePriceIndicator(series);
+                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:492: error: incompatible types: String cannot be converted to Config
+        BarSeries empty = new BaseBarSeries("empty");
+                                            ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+20 errors

@@ -1,0 +1,62 @@
+{
+  "index": 423,
+  "sha": "402658b11f756dbae77fdf9062dde1b829d74723",
+  "parent": "f96b50e77a3cd1093a2562d94c4d17ad7cc8ad3a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutor.java": [
+      412,
+      413,
+      414,
+      940,
+      941,
+      942,
+      944,
+      945,
+      946,
+      947,
+      948,
+      949,
+      950,
+      951,
+      952,
+      954,
+      955,
+      957
+    ],
+    "src/main/java/org/ta4j/core/rules/DayOfWeekRule.java": [
+      54,
+      58
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/backtest/BacktestExecutor.java": [
+      413,
+      414,
+      445,
+      456,
+      457,
+      468,
+      469,
+      471,
+      472,
+      473,
+      475,
+      979,
+      980,
+      981,
+      982,
+      983,
+      984,
+      985,
+      986,
+      988,
+      989,
+      991
+    ],
+    "src/main/java/org/ta4j/core/rules/DayOfWeekRule.java": [
+      55,
+      59
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\nindex 22ad30c0e..2f8eb5a94 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/backtest/BacktestExecutor.java\n@@ -24,0 +25 @@ import java.util.function.Function;\n+import java.util.function.IntConsumer;\n@@ -412,3 +413,2 @@ public class BacktestExecutor {\n-        if (strategyCount > PARALLEL_THRESHOLD) {\n-            int effectiveBatchSize = strategyCount > LARGE_COUNT_THRESHOLD ? Math.min(batchSize, SMALL_BATCH_SIZE)\n-                    : batchSize;\n+        if (usesBatchedExecution(strategyCount)) {\n+            int effectiveBatchSize = effectiveBatchSize(strategyCount, batchSize);\n@@ -437,0 +438,39 @@ public class BacktestExecutor {\n+    /**\n+     * Determines whether an execution should use bounded batches.\n+     *\n+     * @param strategyCount number of strategies in the execution\n+     * @return {@code true} when bounded batching is required\n+     */\n+    static boolean usesBatchedExecution(int strategyCount) {\n+        return strategyCount > PARALLEL_THRESHOLD;\n+    }\n+\n+    /**\n+     * Selects the requested batch size, capped for exceptionally large workloads.\n+     *\n+     * @param strategyCount      number of strategies in the execution\n+     * @param requestedBatchSize caller-provided batch size\n+     * @return effective batch size for the execution\n+     */\n+    static int effectiveBatchSize(int strategyCount, int requestedBatchSize) {\n+        return strategyCount > LARGE_COUNT_THRESHOLD ? Math.min(requestedBatchSize, SMALL_BATCH_SIZE)\n+                : requestedBatchSize;\n+    }\n+\n+    /**\n+     * Visits every item index in bounded parallel batches.\n+     *\n+     * @param itemCount number of item indexes to visit\n+     * @param batchSize maximum number of indexes processed in one batch\n+     * @param action    action invoked once for every index\n+     */\n+    static void forEachBatchIndex(int itemCount, int batchSize, IntConsumer action) {\n+        if (batchSize <= 0) {\n+            throw new IllegalArgumentException(\"batchSize must be positive\");\n+        }\n+        for (int batchStart = 0; batchStart < itemCount; batchStart += batchSize) {\n+            int batchEnd = Math.min(batchStart + batchSize, itemCount);\n+            IntStream.range(batchStart, batchEnd).parallel().forEach(action);\n+        }\n+    }\n+\n@@ -940,13 +979,8 @@ public class BacktestExecutor {\n-        for (int batchStart = 0; batchStart < strategyCount; batchStart += batchSize) {\n-            int batchEnd = Math.min(batchStart + batchSize, strategyCount);\n-            final int batchStartFinal = batchStart;\n-\n-            IntStream.range(0, batchEnd - batchStart).parallel().forEach(localIndex -> {\n-                int globalIndex = batchStartFinal + localIndex;\n-                Strategy strategy = strategyArray[globalIndex];\n-                long strategyStart = System.nanoTime();\n-                TradingRecord tradingRecord = tradingRecordRunner.apply(strategy);\n-                TradingStatement statement = tradingStatementGenerator.generate(strategy, tradingRecord,\n-                        seriesManager.getBarSeries());\n-                statements[globalIndex] = statement;\n-                durations[globalIndex] = System.nanoTime() - strategyStart;\n+        forEachBatchIndex(strategyCount, batchSize, index -> {\n+            Strategy strategy = strategyArray[index];\n+            long strategyStart = System.nanoTime();\n+            TradingRecord tradingRecord = tradingRecordRunner.apply(strategy);\n+            TradingStatement statement = tradingStatementGenerator.generate(strategy, tradingRecord,\n+                    seriesManager.getBarSeries());\n+            statements[index] = statement;\n+            durations[index] = System.nanoTime() - strategyStart;\n@@ -954,5 +988,4 @@ public class BacktestExecutor {\n-                if (progressTracker != null) {\n-                    progressTracker.reportCompletion();\n-                }\n-            });\n-        }\n+            if (progressTracker != null) {\n+                progressTracker.reportCompletion();\n+            }\n+        });\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/DayOfWeekRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/DayOfWeekRule.java\nindex 584855b30..1bb444572 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/DayOfWeekRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/DayOfWeekRule.java\n@@ -10 +10,2 @@ import java.util.Arrays;\n-import java.util.HashSet;\n+import java.util.Collections;\n+import java.util.EnumSet;\n@@ -54 +55 @@ public class DayOfWeekRule extends AbstractRule {\n-        Set<DayOfWeek> copiedDaySet = new HashSet<>(copiedDays.length);\n+        Set<DayOfWeek> copiedDaySet = EnumSet.noneOf(DayOfWeek.class);\n@@ -58 +59 @@ public class DayOfWeekRule extends AbstractRule {\n-        return new Config(validatedTimeIndicator, Set.copyOf(copiedDaySet));\n+        return new Config(validatedTimeIndicator, Collections.unmodifiableSet(copiedDaySet));"
+}

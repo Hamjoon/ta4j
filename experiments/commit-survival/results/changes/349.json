@@ -1,0 +1,20 @@
+{
+  "index": 349,
+  "sha": "2165ce5fdbc74fe0299b207e25a9489dad964f1c",
+  "parent": "f7f8bf619fa051c544556f88e9df6e710b2fe90c",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      825
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      825,
+      826,
+      833,
+      835,
+      836
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex ab2085ed6..89ca7462a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -825,2 +825,2 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> promotedCycles = promoteHistoricalMacroCyclesFromLegs(\n-                series, legs);\n+        final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> promotedCycles = promoteHistoricalMacroCycles(\n+                path.legs());\n@@ -832,0 +833,5 @@ public final class ElliottWaveAnalysisRunner {\n+        final List<ElliottWaveAnalysisResult.HistoricalCycleAssessment> fallbackCycles = promoteHistoricalMacroCyclesFromLegs(\n+                series, legs);\n+        if (!fallbackCycles.isEmpty()) {\n+            return new ElliottWaveAnalysisResult.HistoricalStructureAssessment(legs, fallbackCycles);\n+        }"
+}

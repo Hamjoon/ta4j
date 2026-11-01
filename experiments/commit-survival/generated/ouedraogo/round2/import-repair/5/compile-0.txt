@@ -1,0 +1,18 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:293: error: cannot find symbol
+        public Bar getBar(int i) {
+               ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:344: error: cannot find symbol
+        @Override public void addBar(Bar bar) {}
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:345: error: cannot find symbol
+        @Override public void addBar(Bar bar, boolean replace) {}
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+Note: /repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 errors

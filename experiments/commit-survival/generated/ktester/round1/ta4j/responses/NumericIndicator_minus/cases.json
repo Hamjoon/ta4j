@@ -1,0 +1,72 @@
+[
+  {
+    "group": "minus_withConstantIndicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "[5, 15, 25]",
+        "description": "Subtract a constant indicator (value 5) from the close\u2011price indicator of a series with close prices [10,20,30]. The resulting indicator should yield [10\u20115, 20\u20115, 30\u20115] = [5,15,25]."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(-3)"
+          }
+        ],
+        "expected": "[13, 23, 33]",
+        "description": "Subtract a negative constant (-3) from the same close\u2011price indicator. Expected values are [10\u2011(-3), 20\u2011(-3), 30\u2011(-3)] = [13,23,33]."
+      }
+    ]
+  },
+  {
+    "group": "minus_nullOther",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Calling minus(null) should throw NullPointerException because the method does not accept a null Indicator."
+      }
+    ]
+  },
+  {
+    "group": "minus_differentBarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ClosePriceIndicator(seriesB)"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Subtracting an indicator that belongs to a different BarSeries than the current NumericIndicator should raise IllegalArgumentException (series mismatch)."
+      }
+    ]
+  },
+  {
+    "group": "minus_indicatorReturningNull",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "CustomIndicatorReturningNull()"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "If the supplied Indicator returns null for a value at a given index, the resulting NumericIndicator will attempt to perform a subtraction on a null Num, leading to NullPointerException when the value is accessed."
+      }
+    ]
+  }
+]

@@ -1,0 +1,203 @@
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+   int getUnstableBars();
+   BarSeries getBarSeries();
+  default Num zero();
+  default Num one();
+  default Num hundred();
+  default Num numOf(Number number);
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+  default Num zero();
+  default Num one();
+  default Num hundred();
+   Number getDelegate();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num sqrt();
+   Num sqrt(int precision);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+   Function<Number, Num> function();
+  default Num numOf(Number value);
+  default Num numOf(String value, int precision);
+  default boolean isNaN();
+  default double doubleValue();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   String getName();
+   Num num();
+  default Function<Number, Num> function();
+  default Num zero();
+  default Num one();
+  default Num hundred();
+  default Num numOf(Number number);
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+   void addBar(Duration timePeriod, ZonedDateTime endTime);
+  default void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice);
+  default void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume);
+  default void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount);
+  default void addBar(Duration timePeriod, ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume);
+  default void addBar(Duration timePeriod, ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount);
+  default void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice);
+  default void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice, String volume);
+  default void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice, String volume, String amount);
+  default void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume);
+   void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount);
+   void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume);
+   void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+  default void addTrade(String tradeVolume, String tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(String price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.Rule
+public interface Rule {
+  default Rule and(Rule rule);
+  default Rule or(Rule rule);
+  default Rule xor(Rule rule);
+  default Rule negation();
+  default boolean isSatisfied(int index);
+   boolean isSatisfied(int index, TradingRecord tradingRecord);
+}
+
+// public API of org.ta4j.core.indicators.EMAIndicator
+public class EMAIndicator extends AbstractEMAIndicator {
+  public EMAIndicator(Indicator<Num> indicator, int barCount);
+  public int getUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.SMAIndicator
+public class SMAIndicator extends CachedIndicator<Num> {
+  public SMAIndicator(Indicator<Num> indicator, int barCount);
+  protected Num calculate(int index);
+  public int getUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.ClosePriceIndicator
+public class ClosePriceIndicator extends AbstractIndicator<Num> {
+  public ClosePriceIndicator(BarSeries series);
+  public Num getValue(int index);
+  public int getUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.helpers.ConstantIndicator
+public class ConstantIndicator<T> extends AbstractIndicator<T> {
+  public ConstantIndicator(BarSeries series, T t);
+  public T getValue(int index);
+  public int getUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.HighestValueIndicator
+public class HighestValueIndicator extends CachedIndicator<Num> {
+  public HighestValueIndicator(Indicator<Num> indicator, int barCount);
+  protected Num calculate(int index);
+  public int getUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.LowestValueIndicator
+public class LowestValueIndicator extends CachedIndicator<Num> {
+  public LowestValueIndicator(Indicator<Num> indicator, int barCount);
+  protected Num calculate(int index);
+  public int getUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.PreviousValueIndicator
+public class PreviousValueIndicator extends CachedIndicator<Num> {
+  public PreviousValueIndicator(Indicator<Num> indicator);
+  public PreviousValueIndicator(Indicator<Num> indicator, int n);
+  protected Num calculate(int index);
+  public int getUnstableBars();
+  public String toString();
+}
+
+// public API of org.ta4j.core.indicators.helpers.VolumeIndicator
+public class VolumeIndicator extends CachedIndicator<Num> {
+  public VolumeIndicator(BarSeries series);
+  public VolumeIndicator(BarSeries series, int barCount);
+  protected Num calculate(int index);
+  public int getUnstableBars();
+}
+
+// public API of org.ta4j.core.indicators.statistics.StandardDeviationIndicator
+public class StandardDeviationIndicator extends CachedIndicator<Num> {
+  public StandardDeviationIndicator(Indicator<Num> indicator, int barCount);
+  protected Num calculate(int index);
+  public int getUnstableBars();
+}
+
+// public API of org.ta4j.core.rules.CrossedDownIndicatorRule
+public class CrossedDownIndicatorRule extends AbstractRule {
+  public CrossedDownIndicatorRule(Indicator<Num> indicator, Number threshold);
+  public CrossedDownIndicatorRule(Indicator<Num> indicator, Num threshold);
+  public CrossedDownIndicatorRule(Indicator<Num> first, Indicator<Num> second);
+  public boolean isSatisfied(int index, TradingRecord tradingRecord);
+  public Indicator<Num> getLow();
+  public Indicator<Num> getUp();
+}
+
+// public API of org.ta4j.core.rules.CrossedUpIndicatorRule
+public class CrossedUpIndicatorRule extends AbstractRule {
+  public CrossedUpIndicatorRule(Indicator<Num> indicator, Number threshold);
+  public CrossedUpIndicatorRule(Indicator<Num> indicator, Num threshold);
+  public CrossedUpIndicatorRule(Indicator<Num> first, Indicator<Num> second);
+  public boolean isSatisfied(int index, TradingRecord tradingRecord);
+  public Indicator<Num> getLow();
+  public Indicator<Num> getUp();
+}
+

@@ -1,0 +1,41 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:102: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:107: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:66: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:70: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now().plusDays(1),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:74: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now().plusDays(2),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:88: error: AlwaysOperateStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static final class AlwaysOperateStrategy implements Strategy {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:276: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+            longerSeries.addBar(new BaseBar(ZonedDateTime.now().plusDays(i),
+                                ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:293: error: int cannot be dereferenced
+        assertEquals(3, record.getLastTrade().getIndex().intValue());
+                                                        ^
+8 errors

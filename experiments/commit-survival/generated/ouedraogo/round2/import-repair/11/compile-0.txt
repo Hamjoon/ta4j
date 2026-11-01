@@ -1,0 +1,103 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:15: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:85: error: cannot find symbol
+                new Trade(TradeType.BUY, 0, series.numOf(100)),
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:86: error: cannot find symbol
+                new Trade(TradeType.SELL, 2, series.numOf(120)));
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:92: error: cannot find symbol
+        Position openedPos = new Position(new Trade(TradeType.BUY, 0, series.numOf(100)));
+                                                    ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:106: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:107: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, 2, series.numOf(120));
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:129: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:130: error: incompatible types: Trade cannot be converted to TradeType
+        Position openedPos = new Position(entry); // no exit => opened
+                                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:134: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openedPos, series.getEndIndex());
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:152: error: cannot find symbol
+        Trade e1 = new Trade(TradeType.BUY, 0, series.numOf(100));
+                             ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:153: error: cannot find symbol
+        Trade x1 = new Trade(TradeType.SELL, 1, series.numOf(110));
+                             ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:157: error: cannot find symbol
+        Trade e2 = new Trade(TradeType.BUY, 2, series.numOf(120));
+                             ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:158: error: cannot find symbol
+        Trade x2 = new Trade(TradeType.SELL, 3, series.numOf(130));
+                             ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:162: error: incompatible types: Trade cannot be converted to int
+        record.enter(e1);
+                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:163: error: incompatible types: Trade cannot be converted to int
+        record.exit(x1);
+                    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:164: error: incompatible types: Trade cannot be converted to int
+        record.enter(e2);
+                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:165: error: incompatible types: Trade cannot be converted to int
+        record.exit(x2);
+                    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:186: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:187: error: incompatible types: Trade cannot be converted to TradeType
+        Position openedPos = new Position(entry);
+                                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:202: error: cannot find symbol
+                new Trade(TradeType.BUY, 0, series.numOf(100)),
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:203: error: cannot find symbol
+                new Trade(TradeType.SELL, 1, series.numOf(110)));
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:223: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, 0, series.numOf(100));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:224: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, 1, series.numOf(110));
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+23 errors

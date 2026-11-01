@@ -1,0 +1,83 @@
+{
+  "index": 520,
+  "sha": "1abf7be9df63094ebd9b6ed08a67173e60c70953",
+  "parent": "d644c1164a1a08d95fef70047dc7696e542796d6",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/serialization/AnalysisCriterionSerialization.java": [
+      101,
+      465
+    ],
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      234
+    ],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      267,
+      268,
+      303,
+      873,
+      874,
+      875
+    ],
+    "src/main/java/org/ta4j/core/serialization/StrategySerialization.java": [
+      736,
+      737,
+      738,
+      741,
+      742,
+      743,
+      752,
+      753,
+      755,
+      756,
+      757,
+      759,
+      760,
+      761
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/serialization/AnalysisCriterionSerialization.java": [
+      104,
+      105,
+      106,
+      471
+    ],
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      234
+    ],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      280,
+      281,
+      315,
+      869,
+      870,
+      871,
+      872,
+      875,
+      900,
+      903,
+      904,
+      970,
+      971
+    ],
+    "src/main/java/org/ta4j/core/serialization/StrategySerialization.java": [
+      737,
+      738,
+      739,
+      742,
+      743,
+      744,
+      753,
+      754,
+      756,
+      757,
+      758,
+      760,
+      762,
+      763,
+      764,
+      765
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/AnalysisCriterionSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/AnalysisCriterionSerialization.java\nindex bfb5d4714..3c6018a94 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/AnalysisCriterionSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/AnalysisCriterionSerialization.java\n@@ -95,0 +96,2 @@ public final class AnalysisCriterionSerialization {\n+     * @throws IllegalStateException if a resolved criterion has an unavailable\n+     *                               dependency\n@@ -101 +103,5 @@ public final class AnalysisCriterionSerialization {\n-        return instantiate(criterionType, descriptor);\n+        try {\n+            return instantiate(criterionType, descriptor);\n+        } catch (LinkageError ex) {\n+            throw new IllegalStateException(\"Failed to construct analysis criterion: \" + criterionType.getName(), ex);\n+        }\n@@ -465 +471 @@ public final class AnalysisCriterionSerialization {\n-        } catch (ClassNotFoundException ex) {\n+        } catch (ClassNotFoundException | LinkageError ex) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\nindex 15b158651..135064a86 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n@@ -234 +234 @@ public final class IndicatorSerialization {\n-        } catch (RuntimeException e) {\n+        } catch (RuntimeException | LinkageError e) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\nindex 4b35a6010..02256572e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n@@ -231,4 +231,10 @@ public final class RuleSerialization {\n-     * @throws RuleSerializationException if the rule type does not support\n-     *                                    deserialization (e.g., no matching\n-     *                                    constructor can be found)\n-     * @throws NullPointerException       if series or descriptor is null\n+     * @throws RuleSerializationException      if the rule type does not support\n+     *                                         deserialization (e.g., no matching\n+     *                                         constructor can be found)\n+     * @throws IllegalStateException           if construction fails, including an\n+     *                                         unavailable dependency of the\n+     *                                         resolved type or of a nested rule\n+     * @throws IndicatorSerializationException if a nested indicator cannot be\n+     *                                         reconstructed because one of its\n+     *                                         dependencies is unavailable\n+     * @throws NullPointerException            if series or descriptor is null\n@@ -249,4 +255,10 @@ public final class RuleSerialization {\n-     * @throws RuleSerializationException if the rule type does not support\n-     *                                    deserialization (e.g., no matching\n-     *                                    constructor can be found)\n-     * @throws NullPointerException       if series or descriptor is null\n+     * @throws RuleSerializationException      if the rule type does not support\n+     *                                         deserialization (e.g., no matching\n+     *                                         constructor can be found)\n+     * @throws IllegalStateException           if construction fails, including an\n+     *                                         unavailable dependency of the\n+     *                                         resolved type or of a nested rule\n+     * @throws IndicatorSerializationException if a nested indicator cannot be\n+     *                                         reconstructed because one of its\n+     *                                         dependencies is unavailable\n+     * @throws NullPointerException            if series or descriptor is null\n@@ -266,4 +277,0 @@ public final class RuleSerialization {\n-        // Infer constructor signature from children and parameters\n-        ReconstructionContext context = new ReconstructionContext(series, descriptor, parentContext);\n-        DeserializationMatch match = inferConstructor(ruleType, descriptor, context);\n-\n@@ -270,0 +279,4 @@ public final class RuleSerialization {\n+            // Infer constructor signature from children and parameters.\n+            ReconstructionContext context = new ReconstructionContext(series, descriptor, parentContext);\n+            DeserializationMatch match = inferConstructor(ruleType, descriptor, context);\n+\n@@ -303 +315 @@ public final class RuleSerialization {\n-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException ex) {\n+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | LinkageError ex) {\n@@ -849,0 +862,16 @@ public final class RuleSerialization {\n+    /**\n+     * Tells whether a failure stems from a dependency of the component being\n+     * reconstructed that cannot be linked. Unlike a constructor mismatch, no other\n+     * constructor can recover from it, and swallowing it would replace the cause\n+     * with a misleading \"no compatible constructor\" error.\n+     */\n+    private static boolean isLinkageFailure(Throwable failure) {\n+        Set<Throwable> visited = Collections.newSetFromMap(new IdentityHashMap<>());\n+        for (Throwable cause = failure; cause != null && visited.add(cause); cause = cause.getCause()) {\n+            if (cause instanceof LinkageError) {\n+                return true;\n+            }\n+        }\n+        return false;\n+    }\n+\n@@ -872,5 +900 @@ public final class RuleSerialization {\n-                try {\n-                    return RuleSerialization.fromDescriptor(context.series, component, context);\n-                } catch (Exception e) {\n-                    return null; // Can't resolve, try next match\n-                }\n+                return RuleSerialization.fromDescriptor(context.series, component, context);\n@@ -878,0 +903,3 @@ public final class RuleSerialization {\n+            if (isLinkageFailure(e)) {\n+                throw e;\n+            }\n@@ -942,0 +970,3 @@ public final class RuleSerialization {\n+            if (isLinkageFailure(e)) {\n+                throw e;\n+            }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java\nindex 53070c198..6f2656ec3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/StrategySerialization.java\n@@ -729 +729 @@ public final class StrategySerialization {\n-     *                                  constructor\n+     *                                  constructor or an unavailable dependency\n@@ -736,18 +736,5 @@ public final class StrategySerialization {\n-        if (NamedStrategy.SERIALIZED_TYPE.equals(descriptorType)\n-                || NamedStrategy.class.getName().equals(descriptorType)) {\n-            return instantiateNamedStrategy(series, descriptor, null);\n-        }\n-\n-        Class<? extends Strategy> strategyType = resolveStrategyClass(descriptorType);\n-        if (NamedStrategy.class.isAssignableFrom(strategyType)) {\n-            return instantiateNamedStrategy(series, descriptor, strategyType);\n-        }\n-\n-        // Create a Strategy-level context that contains all Strategy components\n-        // This allows rule deserialization to resolve Strategy-level indicators and\n-        // rules\n-        // For now, pass null as parent context - rule components contain all their\n-        // dependencies\n-        // and don't need Strategy-level resolution during constructor matching\n-        Rule entryRule = instantiateRule(series, extractChild(descriptor, ENTRY_LABEL), null);\n-        Rule exitRule = instantiateRule(series, extractChild(descriptor, EXIT_LABEL), null);\n+        try {\n+            if (NamedStrategy.SERIALIZED_TYPE.equals(descriptorType)\n+                    || NamedStrategy.class.getName().equals(descriptorType)) {\n+                return instantiateNamedStrategy(series, descriptor, null);\n+            }\n@@ -755,3 +742,4 @@ public final class StrategySerialization {\n-        String name = descriptor.getLabel();\n-        TradeType startingType = extractStartingType(descriptor.getParameters().get(STARTING_TYPE_KEY));\n-        int unstableBars = extractUnstableBars(descriptor.getParameters().get(UNSTABLE_BARS_KEY));\n+            Class<? extends Strategy> strategyType = resolveStrategyClass(descriptorType);\n+            if (NamedStrategy.class.isAssignableFrom(strategyType)) {\n+                return instantiateNamedStrategy(series, descriptor, strategyType);\n+            }\n@@ -759,3 +747,20 @@ public final class StrategySerialization {\n-        Strategy strategy = instantiateStrategy(strategyType, name, entryRule, exitRule, unstableBars, startingType);\n-        strategy.setUnstableBars(unstableBars);\n-        return strategy;\n+            // Create a Strategy-level context that contains all Strategy components\n+            // This allows rule deserialization to resolve Strategy-level indicators and\n+            // rules\n+            // For now, pass null as parent context - rule components contain all their\n+            // dependencies\n+            // and don't need Strategy-level resolution during constructor matching\n+            Rule entryRule = instantiateRule(series, extractChild(descriptor, ENTRY_LABEL), null);\n+            Rule exitRule = instantiateRule(series, extractChild(descriptor, EXIT_LABEL), null);\n+\n+            String name = descriptor.getLabel();\n+            TradeType startingType = extractStartingType(descriptor.getParameters().get(STARTING_TYPE_KEY));\n+            int unstableBars = extractUnstableBars(descriptor.getParameters().get(UNSTABLE_BARS_KEY));\n+\n+            Strategy strategy = instantiateStrategy(strategyType, name, entryRule, exitRule, unstableBars,\n+                    startingType);\n+            strategy.setUnstableBars(unstableBars);\n+            return strategy;\n+        } catch (LinkageError ex) {\n+            throw new IllegalStateException(\"Failed to construct strategy: \" + descriptorType, ex);\n+        }"
+}

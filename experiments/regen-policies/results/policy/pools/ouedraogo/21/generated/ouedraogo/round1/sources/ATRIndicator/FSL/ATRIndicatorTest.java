@@ -1,0 +1,247 @@
+package org.ta4j.core.indicators;
+import org.ta4j.core.num.NumFactory;
+
+
+import static org.junit.Assert.*;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.indicators.helpers.TRIndicator;
+import org.ta4j.core.indicators.MMAIndicator;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.BaseBarSeries;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link ATRIndicator}.
+ *
+ * <p>
+ * The tests cover:
+ * <ul>
+ *   <li>Both public constructors (series‑based and TRIndicator‑based)</li>
+ *   <li>Correct delegation to the internal {@link MMAIndicator}</li>
+ *   <li>Returned bar‑count, unstable‑bars and {@link TRIndicator} reference</li>
+ *   <li>String representation</li>
+ *   <li>Behaviour on a minimal series (single bar) and a normal series</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * The test uses the real library implementations {@link BaseBarSeries},
+ * {@link Bar} (via the builder returned by {@code BarSeries.barBuilder()}) and
+ * the {@link Num} implementation {@link DecimalNum}. No mocking or custom
+ * subclasses of library types are introduced, satisfying the requirement to
+ * create “real objects through the constructors or factory methods shown”.
+ * </p>
+ */
+public class ATRIndicatorTest {
+
+    private BarSeries series;
+    private TRIndicator trIndicator;
+    private final int BAR_COUNT = 3; // typical ATR period used in the tests
+
+    /**
+     * Builds a small {@link BarSeries} with deterministic price data.
+     *
+     * <p>
+     * The series contains five bars with the following OHLC values (all
+     * expressed as {@link Num}):
+     * <pre>
+     * index | open | high | low  | close
+     * ------------------------------------
+     *   0   | 10   | 12   | 9    | 11
+     *   1   | 11   | 13   | 10   | 12
+     *   2   | 12   | 14   | 11   | 13
+     *   3   | 13   | 15   | 12   | 14
+     *   4   | 14   | 16   | 13   | 15
+     * </pre>
+     * </p>
+     *
+     * The data are chosen so that the true‑range (TR) for each bar can be
+     * calculated manually and the MMA (modified moving average) can be verified
+     * against the {@link ATRIndicator} value.
+     */
+    @Before
+    public void setUp() {
+        // Use the concrete implementation supplied by the library.
+        series = new BaseBarSeries("test-series");
+
+        // Helper to create Num instances.
+        NumFactory numFactory = series.numFactory();
+
+        // Helper lambda to add a bar.
+        BarAdder adder = (open, high, low, close) -> {
+            Bar bar = series.barBuilder()
+                    .timePeriod(Duration.ofDays(1))
+                    .openPrice(numFactory.numOf(open))
+                    .highPrice(numFactory.numOf(high))
+                    .lowPrice(numFactory.numOf(low))
+                    .closePrice(numFactory.numOf(close))
+                    .volume(numFactory.numOf(1000)) // volume is irrelevant for TR
+                    .build();
+            series.addBar(bar);
+        };
+
+        // Populate the series.
+        adder.add(10, 12, 9, 11);
+        adder.add(11, 13, 10, 12);
+        adder.add(12, 14, 11, 13);
+        adder.add(13, 15, 12, 14);
+        adder.add(14, 16, 13, 15);
+
+        // Initialise the TR indicator that will be reused in the tests.
+        trIndicator = new TRIndicator(series);
+    }
+
+    /** Functional interface used to keep the {@code @Before} method tidy. */
+    @FunctionalInterface
+    private interface BarAdder {
+        void add(double open, double high, double low, double close);
+    }
+
+    /** Helper that asserts two {@link Num} objects are equal using {@code isEqual}. */
+    private void assertNumEquals(Num expected, Num actual) {
+        assertTrue(
+                "Expected " + expected + " but got " + actual,
+                expected.isEqual(actual)
+        );
+    }
+
+    /** --------------------------------------------------------------------- */
+    /** Test the constructor that receives a {@link BarSeries} directly. */
+    @Test
+    public void testConstructorWithSeries() {
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+
+        // The internal TRIndicator must be created from the same series.
+        assertNotNull(atr.getTRIndicator());
+        assertSame(series, atr.getTRIndicator().getBarSeries());
+
+        // Bar count must be the one supplied to the constructor.
+        assertEquals(BAR_COUNT, atr.getBarCount());
+
+        // Unstable bars are defined as the bar count in this indicator.
+        assertEquals(BAR_COUNT, atr.getUnstableBars());
+
+        // String representation must contain the class name and barCount.
+        String expectedString = "ATRIndicator barCount: " + BAR_COUNT;
+        assertEquals(expectedString, atr.toString());
+    }
+
+    /** --------------------------------------------------------------------- */
+    /** Test the constructor that receives a pre‑built {@link TRIndicator}. */
+    @Test
+    public void testConstructorWithTRIndicator() {
+        ATRIndicator atr = new ATRIndicator(trIndicator, BAR_COUNT);
+
+        // The ATRIndicator must keep the exact TRIndicator instance that was passed.
+        assertSame(trIndicator, atr.getTRIndicator());
+
+        // Other behaviours are identical to the series‑based constructor.
+        assertEquals(BAR_COUNT, atr.getBarCount());
+        assertEquals(BAR_COUNT, atr.getUnstableBars());
+
+        String expectedString = "ATRIndicator barCount: " + BAR_COUNT;
+        assertEquals(expectedString, atr.toString());
+    }
+
+    /** --------------------------------------------------------------------- */
+    /** Verify that {@code getValue} delegates to the internal {@link MMAIndicator}. */
+    @Test
+    public void testGetValueDelegatesToMMAIndicator() {
+        // ATR built via the TR‑based constructor.
+        ATRIndicator atr = new ATRIndicator(trIndicator, BAR_COUNT);
+
+        // Independent MMAIndicator built with the same TRIndicator and barCount.
+        MMAIndicator expectedMMA = new MMAIndicator(trIndicator, BAR_COUNT);
+
+        // Compare every value that can be produced by the series.
+        for (int i = series.getBeginIndex(); i <= series.getEndIndex(); i++) {
+            Num atrValue = atr.getValue(i);
+            Num mmaValue = expectedMMA.getValue(i);
+            assertNumEquals(mmaValue, atrValue);
+        }
+    }
+
+    /** --------------------------------------------------------------------- */
+    /** Edge case: a series that contains only a single bar. */
+    @Test
+    public void testSingleBarSeries() {
+        // Build a minimal series with a single bar.
+        BarSeries singleBarSeries = new BaseBarSeries("single");
+        NumFactory nf = singleBarSeries.numFactory();
+
+        Bar bar = singleBarSeries.barBuilder()
+                .timePeriod(Duration.ofDays(1))
+                .openPrice(nf.numOf(100))
+                .highPrice(nf.numOf(105))
+                .lowPrice(nf.numOf(95))
+                .closePrice(nf.numOf(102))
+                .volume(nf.numOf(500))
+                .build();
+
+        singleBarSeries.addBar(bar);
+
+        // Use a barCount larger than the series length – the indicator must still work.
+        int largeBarCount = 10;
+        ATRIndicator atr = new ATRIndicator(singleBarSeries, largeBarCount);
+        MMAIndicator mma = new MMAIndicator(new TRIndicator(singleBarSeries), largeBarCount);
+
+        // Both indicators should return the same (initial) value.
+        Num atrValue = atr.getValue(0);
+        Num mmaValue = mma.getValue(0);
+        assertNumEquals(mmaValue, atrValue);
+
+        // Bar count getter must return the value supplied to the constructor.
+        assertEquals(largeBarCount, atr.getBarCount());
+
+        // Unstable bars must be equal to the barCount.
+        assertEquals(largeBarCount, atr.getUnstableBars());
+    }
+
+    /** --------------------------------------------------------------------- */
+    /** Verify that the internal {@link TRIndicator} produces expected true‑range
+     *  values for the deterministic series built in {@code setUp()}.
+     *
+     *  The true‑range for a bar {@code i} is:
+     *  <pre>
+     *      max( high_i - low_i,
+     *           |high_i - close_{i-1}|,
+     *           |low_i  - close_{i-1}| )
+     *  </pre>
+     *  Using the data from {@code setUp()}, the expected TR values are:
+     *  <pre>
+     *      index 0 : 3   (high - low)
+     *      index 1 : 3   (high - low) = max(3, |13‑11|=2, |10‑11|=1)
+     *      index 2 : 3   (high - low)
+     *      index 3 : 3   (high - low)
+     *      index 4 : 3   (high - low)
+     *  </pre>
+     */
+    @Test
+    public void testTRIndicatorValues() {
+        NumFactory nf = series.numFactory();
+        Num three = nf.numOf(3);
+
+        for (int i = series.getBeginIndex(); i <= series.getEndIndex(); i++) {
+            Num tr = trIndicator.getValue(i);
+            assertNumEquals(three, tr);
+        }
+    }
+
+    /** --------------------------------------------------------------------- */
+    /** Confirm that the string representation follows the exact format
+     *  required by {@link ATRIndicator#toString()}.
+     */
+    @Test
+    public void testToStringFormat() {
+        ATRIndicator atr = new ATRIndicator(series, 5);
+        String expected = "ATRIndicator barCount: 5";
+        assertEquals(expected, atr.toString());
+    }
+}

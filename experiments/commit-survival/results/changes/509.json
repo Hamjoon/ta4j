@@ -1,0 +1,20 @@
+{
+  "index": 509,
+  "sha": "17b7f5f4849099a726bd42170e1504be7d1dc9ba",
+  "parent": "61886ac7d7f649b034b95691dbb02acfa1d64801",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/analysis/OffsetNumBuffer.java": [],
+    "src/main/java/org/ta4j/core/analysis/Returns.java": [
+      353
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/analysis/OffsetNumBuffer.java": [
+      159
+    ],
+    "src/main/java/org/ta4j/core/analysis/Returns.java": [
+      353
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/OffsetNumBuffer.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/OffsetNumBuffer.java\nindex c2bb1acc1..7b85a63d9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/OffsetNumBuffer.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/OffsetNumBuffer.java\n@@ -152,0 +153,9 @@ final class OffsetNumBuffer {\n+    /**\n+     * Checks whether the buffer is empty.\n+     *\n+     * @return {@code true} if the buffer contains no elements\n+     */\n+    boolean isEmpty() {\n+        return values.isEmpty();\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/Returns.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/Returns.java\nindex 3babec405..7a43ab477 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/Returns.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/Returns.java\n@@ -353 +353 @@ public class Returns implements PerformanceIndicator {\n-        if (returnFactors.size() == 0) {\n+        if (returnFactors.isEmpty()) {"
+}

@@ -1,0 +1,49 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:33: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries series = new BaseBarSeries("sample");
+                           ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:58: error: cannot find symbol
+            @Override public Rule getEntryRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:59: error: cannot find symbol
+            @Override public Rule getExitRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:78: error: cannot find symbol
+            @Override public Rule getEntryRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:79: error: cannot find symbol
+            @Override public Rule getExitRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:217: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries series = new BaseBarSeries("extended");
+                           ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:234: error: cannot find symbol
+            @Override public Rule getEntryRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:235: error: cannot find symbol
+            @Override public Rule getExitRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:269: error: reference to assertEquals is ambiguous
+        assertEquals("Exit index must be 3", Integer.valueOf(3), pos.getExit().getIndex());
+        ^
+  both method assertEquals(String,long,long) in Assert and method assertEquals(String,Object,Object) in Assert match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:282: error: cannot find symbol
+            @Override public Rule getEntryRule() { return null; }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:283: error: cannot find symbol
+            @Override public Rule getExitRule() { return null; }
+                             ^
+  symbol: class Rule
+11 errors

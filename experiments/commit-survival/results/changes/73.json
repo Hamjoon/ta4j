@@ -1,0 +1,17 @@
+{
+  "index": 73,
+  "sha": "f0d643b0b3c98510e8ba18a809d9daf5522d770c",
+  "parent": "bcbe570c6b42084f407b483d454e8a3cfcb6525f",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java": [
+      68
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java": [
+      52,
+      70
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java\nindex 77e4e53b9..6ee38c3b8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMAIndicator.java\n@@ -40 +40,2 @@ public class SMAIndicator extends CachedIndicator<Num> {\n-    private RunningTotalIndicator previousSum;\n+    private final Indicator<Num> indicator;\n+    private final RunningTotalIndicator previousSum;\n@@ -50,0 +52 @@ public class SMAIndicator extends CachedIndicator<Num> {\n+        this.indicator = indicator;\n@@ -68 +70 @@ public class SMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;"
+}

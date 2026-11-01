@@ -1,0 +1,336 @@
+[
+  {
+    "group": "Valid scenarios \u2013 normal delegation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 10
+          }
+        ],
+        "expected": "returns the TradingRecord produced by the overloaded run(strategy, tradeType, amount, startIndex, finishIndex) call",
+        "description": "Ensures that with a typical non\u2011null strategy, BUY trade type and a valid index range, the method delegates correctly to the 5\u2011argument overload and returns its result."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 5
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 15
+          }
+        ],
+        "expected": "returns the TradingRecord produced by the delegated overload",
+        "description": "Same as above but with SELL trade type to verify that the trade type is passed unchanged."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 3
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 3
+          }
+        ],
+        "expected": "returns the TradingRecord produced by the delegated overload",
+        "description": "Edge case where startIndex equals finishIndex (single bar). The method should still delegate and return a TradingRecord."
+      }
+    ]
+  },
+  {
+    "group": "Invalid index arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": -1
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 5
+          }
+        ],
+        "expected": "throws IllegalArgumentException",
+        "description": "Negative startIndex should be rejected; the method is expected to validate indices and throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 8
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 7
+          }
+        ],
+        "expected": "throws IllegalArgumentException",
+        "description": "When startIndex is greater than finishIndex the method should detect the invalid range and throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 1000
+          }
+        ],
+        "expected": "throws IllegalArgumentException",
+        "description": "finishIndex beyond the size of the underlying BarSeries should cause an IllegalArgumentException (assuming bounds checking)."
+      }
+    ]
+  },
+  {
+    "group": "Null argument handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": null
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 5
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "A null strategy is not allowed; the method should throw NullPointerException before delegating."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": null
+          },
+          {
+            "parameter": "startIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 5
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "A null tradeType should cause a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Amount handling \u2013 barSeries.one() is passed correctly",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "strategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 2
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 5
+          }
+        ],
+        "expected": "the overloaded run(Strategy, TradeType, Num, int, int) receives Num amount equal to barSeries.one() (e.g., Num.valueOf(123.45)) and returns the TradingRecord supplied by that overload",
+        "description": "Overrides the 5\u2011argument run method to capture the Num argument. The test builds a BarSeries whose one() returns a known Num (123.45). After invoking run(strategy, BUY, 2, 5) the captured amount must equal 123.45, proving that the delegating method forwards the correct amount."
+      }
+    ]
+  },
+  {
+    "group": "Null BarSeries handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barSeries",
+            "value": null
+          },
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 5
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "When the BarSeriesManager is constructed with a null BarSeries, the call to barSeries.one() inside run(...) triggers a NullPointerException before any delegation occurs."
+      }
+    ]
+  },
+  {
+    "group": "Invalid finishIndex arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.SELL"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 0
+          },
+          {
+            "parameter": "finishIndex",
+            "value": -2
+          }
+        ],
+        "expected": "throws IllegalArgumentException",
+        "description": "A negative finishIndex is illegal; the method should validate the range and throw IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Start index beyond series size",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 50
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 55
+          }
+        ],
+        "expected": "throws IllegalArgumentException",
+        "description": "If startIndex is greater than or equal to barSeries.getBarCount() (e.g., series size is 30), the method must reject the request with IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "Amount (Num) returned by barSeries.one() is null",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "validStrategyMock"
+          },
+          {
+            "parameter": "tradeType",
+            "value": "TradeType.BUY"
+          },
+          {
+            "parameter": "startIndex",
+            "value": 1
+          },
+          {
+            "parameter": "finishIndex",
+            "value": 4
+          },
+          {
+            "parameter": "barSeries.one()",
+            "value": null
+          }
+        ],
+        "expected": "throws NullPointerException",
+        "description": "When barSeries.one() returns null, the delegating run method passes a null Num to the 5\u2011argument overload, which is expected to throw NullPointerException (or propagate it)."
+      }
+    ]
+  }
+]

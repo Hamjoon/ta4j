@@ -1,0 +1,7 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:257: error: valueEndIndex has private access in CashFlow
+        assertEquals(2, cf.valueEndIndex - cf.valueStartIndex + 1);
+                          ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:257: error: valueStartIndex has private access in CashFlow
+        assertEquals(2, cf.valueEndIndex - cf.valueStartIndex + 1);
+                                             ^
+2 errors

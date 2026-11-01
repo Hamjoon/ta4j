@@ -1,0 +1,12 @@
+{
+  "index": 252,
+  "sha": "635cfdae478d8e18b4f734a6ab6328c9157b32e5",
+  "parent": "b3af0b89bc63cce433ac201b182ee571945268c3",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\nindex e47a1df64..0e69d62dc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\n@@ -108 +108 @@ import static org.ta4j.core.num.NaN.NaN;\n-public class NetMomentumIndicator extends CachedIndicator<Num> {\n+public class NetMomentumIndicator extends RecursiveCachedIndicator<Num> {"
+}

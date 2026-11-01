@@ -1,0 +1,76 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:31: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.Position;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:32: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.Trade;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:33: error: package org.ta4j.core.trading.Trade does not exist
+import org.ta4j.core.trading.Trade.TradeType;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:35: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:134: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)   // DecimalNum implements NumFactory
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:150: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:176: error: NoOpStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class NoOpStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:188: error: AlwaysOnStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysOnStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:354: error: reference to run is ambiguous
+        manager.run(new NoOpStrategy(), TradeType.BUY, null);
+               ^
+  both method run(Strategy,TradeType,Num) in BarSeriesManager and method run(Strategy,TradeType,PositionSizer) in BarSeriesManager match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:360: error: cannot find symbol
+        Num nan = DecimalNum.NaN;
+                            ^
+  symbol:   variable NaN
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:439: error: BaseBarBuilder is not abstract and does not override abstract method add() in BarBuilder
+    private static class BaseBarBuilder implements BarBuilder {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:474: error: volume(Num) in BaseBarBuilder cannot implement volume(Num) in BarBuilder
+        BaseBarBuilder volume(Num vol) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:469: error: closePrice(Num) in BaseBarBuilder cannot implement closePrice(Num) in BarBuilder
+        BaseBarBuilder closePrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:464: error: lowPrice(Num) in BaseBarBuilder cannot implement lowPrice(Num) in BarBuilder
+        BaseBarBuilder lowPrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:459: error: highPrice(Num) in BaseBarBuilder cannot implement highPrice(Num) in BarBuilder
+        BaseBarBuilder highPrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:454: error: openPrice(Num) in BaseBarBuilder cannot implement openPrice(Num) in BarBuilder
+        BaseBarBuilder openPrice(Num price) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:444: error: timePeriod(Duration) in BaseBarBuilder cannot implement timePeriod(Duration) in BarBuilder
+        BaseBarBuilder timePeriod(java.time.Duration period) {
+                       ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:489: error: BaseBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class BaseBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:511: error: getEndTime() in BaseBar cannot implement getEndTime() in Bar
+        @Override public java.time.ZonedDateTime getEndTime() { return endTime; }
+                                                 ^
+  return type ZonedDateTime is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:511: error: method does not override or implement a method from a supertype
+        @Override public java.time.ZonedDateTime getEndTime() { return endTime; }
+        ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+20 errors

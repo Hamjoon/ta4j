@@ -1,0 +1,23 @@
+{
+  "index": 82,
+  "sha": "47a08bcd990ae4ff851ac9ce948fc71734efdf5b",
+  "parent": "54d3e2f91ecf271db5f08b4f239a4bc489a094eb",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java": [
+      86,
+      94,
+      95
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java": [
+      102,
+      103,
+      104,
+      113,
+      114,
+      115
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\nindex f4785f3d2..7d468ebe2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\n@@ -40 +40,17 @@ import org.ta4j.core.num.Num;\n- * value of an {@link EnterAndHoldCriterion}.\n+ * value of an {@link EnterAndHoldCriterion} by using the following formula:\n+ *\n+ * <pre>\n+ * xVersusEnterAndHold = (x - enterAndHold) / (abs(enterAndHold)\n+ * </pre>\n+ *\n+ * <p>\n+ * It can be used for absolute or percentage criteria values, for example:\n+ *\n+ * <ul>\n+ * <lI>ProfitVsEnterAndHold = (400$ - 500$) / abs(500$) = -0.2 (i.e., the\n+ * trading profit is 20% worse than the profit that would be made by simply\n+ * entering and holding)\n+ * <li>ProfitLossPercentageVsEnterAndHold = (0.9 - (-0.3)) / abs(-0.3) = +4\n+ * (i.e., the trading profit is 400% better than the profit that would be made\n+ * by simply entering and holding)\n+ * </ul>\n@@ -86 +102,3 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        return criterion.calculate(series, position).dividedBy(enterAndHoldCriterion.calculate(series, position));\n+        var x = criterion.calculate(series, position);\n+        var enterAndHold = enterAndHoldCriterion.calculate(series, position);\n+        return (x.minus(enterAndHold)).dividedBy(enterAndHold.abs());\n@@ -94,2 +112,4 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        return criterion.calculate(series, tradingRecord)\n-                .dividedBy(enterAndHoldCriterion.calculate(series, tradingRecord));\n+\n+        var x = criterion.calculate(series, tradingRecord);\n+        var enterAndHold = enterAndHoldCriterion.calculate(series, tradingRecord);\n+        return (x.minus(enterAndHold)).dividedBy(enterAndHold.abs());"
+}

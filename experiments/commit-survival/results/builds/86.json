@@ -1,0 +1,68 @@
+{
+  "index": 86,
+  "sha": "8cb1d5b4adb73e0833266d2ebebedc715a2e245a",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/86/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.22,
+      "log": "results/builds/logs/86-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/86/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.492,
+      "log": "results/builds/logs/86-2.txt"
+    }
+  ],
+  "input_sha256": "d5f6d35bfd96f3d093f30257ba5c3f18b899fcd9eb22d28dd6c0cb9657ccfecb",
+  "pom_sha256": "bce7cd554ce4d842a28666f0eb549eedbe18770fdb31c1592261b7814ed40c2a",
+  "classpath": "work/classpaths/bce7cd554ce4d842a28666f0eb549eedbe18770fdb31c1592261b7814ed40c2a.txt",
+  "classpath_attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/bce7cd554ce4d842a28666f0eb549eedbe18770fdb31c1592261b7814ed40c2a.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/86/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.152,
+      "log": "results/builds/logs/classpath-86-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/bce7cd554ce4d842a28666f0eb549eedbe18770fdb31c1592261b7814ed40c2a.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/86/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 9.282,
+      "log": "results/builds/logs/classpath-86-2.txt"
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+###Test START##
+```java
+package org.ta4j.core.indicators.numeric;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Indicator;
+import org.ta4j.core.Rule;
+import org.ta4j.core.indicators.averages.EMAIndicator;
+import org.ta4j.core.indicators.averages.SMAIndicator;
+import org.ta4j.core.indicators.helpers.ConstantIndicator;
+import org.ta4j.core.indicators.helpers.HighestValueIndicator;
+import org.ta4j.core.indicators.helpers.LowestValueIndicator;
+import org.ta4j.core.indicators.helpers.PreviousValueIndicator;
+import org.ta4j.core.indicators.statistics.StandardDeviationIndicator;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link NumericIndicator}.
+ *
+ * <p>
+ * The tests purposefully avoid any external library code that is not listed in
+ * the supplied API.  Simple in‑house implementations of {@link Num},
+ * {@link NumFactory} and {@link BarSeries} are provided so that the
+ * {@code NumericIndicator} can be exercised without resorting to mocks or
+ * reflection.
+ * </p>
+ */
+public class NumericIndicatorTest {
+
+    /** Minimal {@link Num} implementation based on {@code double}. */
+    private static class SimpleNum implements Num {
+
+        private final double value;
+
+        SimpleNum(double value) {
+            this.value = value;
+        }
+
+        /** Factory method to avoid repeated “new SimpleNum” in tests. */
+        static SimpleNum of(double v) {
+            return new SimpleNum(v);
+        }
+
+        @Override public Number getDelegate() { return value; }
+        @Override public NumFactory getNumFactory() { return SimpleNumFactory.INSTANCE; }
+        @Override public String getName() { return Double.toString(value); }
+
+        @Override public Num plus(Num augend) { return of(this.value + augend.doubleValue()); }
+        @Override public Num minus(Num subtrahend) { return of(this.value - subtrahend.doubleValue()); }
+        @Override public Num multipliedBy(Num multiplicand) { return of(this.value * multiplicand.doubleValue()); }
+        @Override public Num dividedBy(Num divisor) { return of(this.value / divisor.doubleValue()); }
+        @Override public Num remainder(Num divisor) { return of(this.value % divisor.doubleValue()); }
+        @Override public Num floor() { return of(Math.floor(this.value)); }
+        @Override public Num ceil() { return of(Math.ceil(this.value)); }
+        @Override public Num pow(int n) { return of(Math.pow(this.value, n)); }
+        @Override public Num pow(Num n) { return of(Math.pow(this.value, n.doubleValue())); }
+        @Override public Num log() { return of(Math.log(this.value)); }
+        @Override public Num exp() { return of(Math.exp(this.value)); }
+        @Override public Num sqrt() { return of(Math.sqrt(this.value)); }
+        @Override public Num sqrt(MathContext mc) { return of(Math.sqrt(this.value), mc); }
+        @Override public Num abs() { return of(Math.abs(this.value)); }
+        @Override public Num negate() { return of(-this.value); }
+        @Override public boolean isZero() { return this.value == 0.0; }
+        @Override public boolean isPositive() { return this.value > 0.0; }
+        @Override public boolean isPositiveOrZero() { return this.value >= 0.0; }
+        @Override public boolean isNegative() { return this.value < 0.0; }
+        @Override public boolean isNegativeOrZero() { return this.value <= 0.0; }
+        @Override public boolean isEqual(Num other) { return Double.compare(this.value, other.doubleValue()) == 0; }
+        @Override public boolean isGreaterThan(Num other) { return this.value > other.doubleValue(); }
+        @Override public boolean isGreaterThanOrEqual(Num other) { return this.value >= other.doubleValue(); }
+        @Override public boolean isLessThan(Num other) { return this.value < other.doubleValue(); }
+        @Override public boolean isLessThanOrEqual(Num other) { return this.value <= other.doubleValue(); }
+        @Override public Num min(Num other) { return of(Math.min(this.value, other.doubleValue())); }
+        @Override public Num max(Num other) { return of(Math.max(this.value, other.doubleValue())); }
+        @Override public boolean isNaN() { return Double.isNaN(this.value); }
+        @Override public int intValue() { return (int) this.value; }
+        @Override public long longValue() { return (long) this.value; }
+        @Override public float floatValue() { return (float) this.value; }
+        @Override public double doubleValue() { return this.value; }
+        @Override public BigDecimal bigDecimalValue() { return BigDecimal.valueOf(this.value); }
+
+        // Unused methods for this test suite – delegate to default implementations
+        @Override public boolean equals(Object obj) {
+            return (obj instanceof SimpleNum) && isEqual(((SimpleNum) obj));
+        }
+        @Override public int hashCode() { return Double.hashCode(value); }
+        @Override public String toString() { return Double.toString(value); }
+    }
+
+    /** Minimal {@link NumFactory} that creates {@link SimpleNum}. */
+    private static class SimpleNumFactory implements org.ta4j.core.num.NumFactory {
+        static final SimpleNumFactory INSTANCE = new SimpleNumFactory();
+
+        private SimpleNumFactory() {}
+
+        @Override public Num numOf(Number number) {
+            return SimpleNum.of(number.doubleValue());
+        }
+
+        @Override public Num numOf(String s) {
+            return SimpleNum.of(Double.parseDouble(s));
+        }
+
+        @Override public Num numOf(double d) {
+            return SimpleNum.of(d);
+        }
+
+        @Override public Num zero() { return SimpleNum.of(0.0); }
+        @Override public Num one() { return SimpleNum.of(1.0); }
+    }
+
+    /** Very small {@link BarSeries} implementation – only the methods used by
+     *  {@link NumericIndicator#createConstant(Number)} are required. */
+    private static class SimpleBarSeries implements BarSeries {
+
+        private final NumFactory factory = SimpleNumFactory.INSTANCE;
+
+        @Override public NumFactory numFactory() { return factory; }
+
+        // The remaining methods are not needed for the current test suite.
+        @Override public org.ta4j.core.BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+        @Override public String getName() { return "SimpleSeries"; }
+        @Override public org.ta4j.core.Bar getBar(int i) { throw new UnsupportedOperationException(); }
+        @Override public int getBarCount() { return 0; }
+        @Override public List<org.ta4j.core.Bar> getBarData() { return Collections.emptyList(); }
+        @Override public int getBeginIndex() { return 0; }
+        @Override public int getEndIndex() { return -1; }
+        @Override public String getSeriesPeriodDescription() { return ""; }
+        @Override public String getSeriesPeriodDescriptionInSystemTimeZone() { return ""; }
+        @Override public int getMaximumBarCount() { return 0; }
+        @Override public void setMaximumBarCount(int maximumBarCount) {}
+        @Override public int getRemovedBarsCount() { return 0; }
+        @Override public void addBar(org.ta4j.core.Bar bar) {}
+        @Override public void addBar(org.ta4j.core.Bar bar, boolean replace) {}
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) {}
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) {}
+        @Override public void addPrice(Num price) {}
+        @Override public void addPrice(Number price) {}
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw new UnsupportedOperationException(); }
+    }
+
+    /** Simple {@link Indicator} that returns a pre‑defined array of values. */
+    private static class ArrayIndicator implements Indicator<Num> {
+
+        private final Num[] values;
+        private final BarSeries series;
+
+        ArrayIndicator(double[] doubles, BarSeries series) {
+            this.values = new Num[doubles.length];
+            for (int i = 0; i < doubles.length; i++) {
+                this.values[i] = SimpleNum.of(doubles[i]);
+            }
+            this.series = series;
+        }
+
+        @Override public Num getValue(int index) {
+            if (index < 0 || index >= values.length) {
+                throw new IndexOutOfBoundsException("index " + index);
+            }
+            return values[index];
+        }
+
+        @Override public int getCountOfUnstableBars() { return 0; }
+
+        @Override public BarSeries getBarSeries() { return series; }
+
+        @Override public String toString() { return "ArrayIndicator"; }
+    }
+
+    private SimpleBarSeries series;
+
+    @Before
+    public void setUp() {
+        series = new SimpleBarSeries();
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  Arithmetic operations – indicator vs indicator and indicator vs number
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testPlusIndicator() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{1, 2, 3}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{4, 5, 6}, series);
+        NumericIndicator na = NumericIndicator.of(a);
+        NumericIndicator nb = NumericIndicator.of(b);
+
+        NumericIndicator result = na.plus(nb);
+        assertEquals(5.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(7.0, result.getValue(1).doubleValue(), 0.000001);
+        assertEquals(9.0, result.getValue(2).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testPlusNumber() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{10, 20}, series);
+        NumericIndicator na = NumericIndicator.of(a);
+        NumericIndicator result = na.plus(5); // 10+5, 20+5
+        assertEquals(15.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(25.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMinusIndicator() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{5, 8}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{2, 3}, series);
+        NumericIndicator result = NumericIndicator.of(a).minus(b);
+        assertEquals(3.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(5.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMinusNumber() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{7, 9}, series);
+        NumericIndicator result = NumericIndicator.of(a).minus(2);
+        assertEquals(5.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(7.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMultipliedByIndicator() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{2, 3}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{4, 5}, series);
+        NumericIndicator result = NumericIndicator.of(a).multipliedBy(b);
+        assertEquals(8.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(15.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMultipliedByNumber() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{3, 6}, series);
+        NumericIndicator result = NumericIndicator.of(a).multipliedBy(2);
+        assertEquals(6.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(12.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testDividedByIndicator() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{8, 9}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{2, 3}, series);
+        NumericIndicator result = NumericIndicator.of(a).dividedBy(b);
+        assertEquals(4.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(3.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testDividedByNumber() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{10, 20}, series);
+        NumericIndicator result = NumericIndicator.of(a).dividedBy(2);
+        assertEquals(5.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(10.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivisionByZeroThrows() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{1}, series);
+        Indicator<Num> zero = new ArrayIndicator(new double[]{0}, series);
+        NumericIndicator.of(a).dividedBy(zero).getValue(0);
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  Min / Max
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testMinIndicator() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{1, 5}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{3, 2}, series);
+        NumericIndicator result = NumericIndicator.of(a).min(b);
+        assertEquals(1.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(2.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMinNumber() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{4, 7}, series);
+        NumericIndicator result = NumericIndicator.of(a).min(5);
+        assertEquals(4.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(5.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMaxIndicator() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{1, 5}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{3, 2}, series);
+        NumericIndicator result = NumericIndicator.of(a).max(b);
+        assertEquals(3.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(5.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testMaxNumber() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{4, 7}, series);
+        NumericIndicator result = NumericIndicator.of(a).max(5);
+        assertEquals(5.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(7.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  Unary operations
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testAbs() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{-3, 4}, series);
+        NumericIndicator result = NumericIndicator.of(a).abs();
+        assertEquals(3.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(4.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testSqrt() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{4, 9}, series);
+        NumericIndicator result = NumericIndicator.of(a).sqrt();
+        assertEquals(2.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(3.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    @Test
+    public void testSqrtOfNegativeProducesNaN() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{-1}, series);
+        NumericIndicator result = NumericIndicator.of(a).sqrt();
+        assertTrue(Double.isNaN(result.getValue(0).doubleValue()));
+    }
+
+    @Test
+    public void testSquared() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{2, -3}, series);
+        NumericIndicator result = NumericIndicator.of(a).squared();
+        assertEquals(4.0, result.getValue(0).doubleValue(), 0.000001);
+        assertEquals(9.0, result.getValue(1).doubleValue(), 0.000001);
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  Cached indicators (SMA, EMA, StdDev, Highest, Lowest, Previous)
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testSmaConstantSeries() {
+        Indicator<Num> constInd = new ConstantIndicator<>(series, SimpleNum.of(2.0));
+        NumericIndicator sma = NumericIndicator.of(constInd).sma(3);
+        // All values should be 2.0 irrespective of the index
+        for (int i = 0; i < 5; i++) {
+            assertEquals(2.0, sma.getValue(i).doubleValue(), 0.000001);
+        }
+        assertTrue(sma.delegate() instanceof SMAIndicator);
+    }
+
+    @Test
+    public void testEmaConstantSeries() {
+        Indicator<Num> constInd = new ConstantIndicator<>(series, SimpleNum.of(5.0));
+        NumericIndicator ema = NumericIndicator.of(constInd).ema(2);
+        // With a constant source EMA converges to the same constant value
+        for (int i = 0; i < 5; i++) {
+            assertEquals(5.0, ema.getValue(i).doubleValue(), 0.000001);
+        }
+        assertTrue(ema.delegate() instanceof EMAIndicator);
+    }
+
+    @Test
+    public void testStdDevConstantSeries() {
+        Indicator<Num> constInd = new ConstantIndicator<>(series, SimpleNum.of(7.0));
+        NumericIndicator stddev = NumericIndicator.of(constInd).stddev(3);
+        for (int i = 0; i < 5; i++) {
+            assertEquals(0.0, stddev.getValue(i).doubleValue(), 0.000001);
+        }
+        assertTrue(stddev.delegate() instanceof StandardDeviationIndicator);
+    }
+
+    @Test
+    public void testHighestAndLowest() {
+        Indicator<Num> inc = new ArrayIndicator(new double[]{1, 3, 2, 5, 4}, series);
+        NumericIndicator highest = NumericIndicator.of(inc).highest(3);
+        NumericIndicator lowest = NumericIndicator.of(inc).lowest(3);
+
+        // Highest over window size 3
+        assertEquals(3.0, highest.getValue(2).doubleValue(), 0.000001); // max(1,3,2)
+        assertEquals(5.0, highest.getValue(4).doubleValue(), 0.000001); // max(2,5,4)
+
+        // Lowest over window size 3
+        assertEquals(1.0, lowest.getValue(2).doubleValue(), 0.000001); // min(1,3,2)
+        assertEquals(2.0, lowest.getValue(4).doubleValue(), 0.000001); // min(2,5,4)
+
+        assertTrue(highest.delegate() instanceof HighestValueIndicator);
+        assertTrue(lowest.delegate() instanceof LowestValueIndicator);
+    }
+
+    @Test
+    public void testPrevious() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{10, 20, 30}, series);
+        NumericIndicator prev = NumericIndicator.of(a).previous();
+        // previous(1) returns the value at index-1, for index 0 it returns NaN (unstable)
+        assertTrue(Double.isNaN(prev.getValue(0).doubleValue()));
+        assertEquals(10.0, prev.getValue(1).doubleValue(), 0.000001);
+        assertEquals(20.0, prev.getValue(2).doubleValue(), 0.000001);
+        assertTrue(prev.delegate() instanceof PreviousValueIndicator);
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  Rules – crossedOver / crossedUnder / isGreaterThan / isLessThan
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testCrossedOverRule() {
+        // A: 1, 3   B: 2, 2   -> crossing up occurs at index 1
+        Indicator<Num> a = new ArrayIndicator(new double[]{1, 3}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{2, 2}, series);
+        Rule rule = NumericIndicator.of(a).crossedOver(b);
+        assertFalse(rule.isSatisfied(0));
+        assertTrue(rule.isSatisfied(1));
+    }
+
+    @Test
+    public void testCrossedUnderRule() {
+        // A: 4, 1   B: 2, 2   -> crossing down occurs at index 1
+        Indicator<Num> a = new ArrayIndicator(new double[]{4, 1}, series);
+        Indicator<Num> b = new ArrayIndicator(new double[]{2, 2}, series);
+        Rule rule = NumericIndicator.of(a).crossedUnder(b);
+        assertFalse(rule.isSatisfied(0));
+        assertTrue(rule.isSatisfied(1));
+    }
+
+    @Test
+    public void testIsGreaterThanRule() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{5, 1}, series);
+        Rule rule = NumericIndicator.of(a).isGreaterThan(3);
+        assertTrue(rule.isSatisfied(0));
+        assertFalse(rule.isSatisfied(1));
+    }
+
+    @Test
+    public void testIsLessThanRule() {
+        Indicator<Num> a = new ArrayIndicator(new double[]{2, 6}, series);
+        Rule rule = NumericIndicator.of(a).isLessThan(5);
+        assertTrue(rule.isSatisfied(0));
+        assertFalse(rule.isSatisfied(1));
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  Delegation & toString
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testDelegateAndToString() {
+        Indicator<Num> constInd = new ConstantIndicator<>(series, SimpleNum.of(9.0));
+        NumericIndicator ni = NumericIndicator.of(constInd);
+        assertSame(constInd, ni.delegate());
+        assertEquals(constInd.toString(), ni.toString());
+    }
+}
+```
+###Test END##

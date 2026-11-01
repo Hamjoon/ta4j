@@ -1,0 +1,45 @@
+{
+  "index": 2,
+  "sha": "ad120c0355974c7034517970bc26f0cbc7ab2bc5",
+  "parent": "109596ec1989b7bb5c78ad31abe21e729148926c",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/SMAIndicator.java": [
+      48,
+      54,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java": [
+      49,
+      57
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/SMAIndicator.java": [
+      49,
+      56,
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java": [
+      39,
+      42,
+      54,
+      55,
+      58,
+      62,
+      63,
+      64,
+      69,
+      73,
+      78,
+      79,
+      80,
+      83,
+      85,
+      86,
+      89,
+      99
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/SMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/SMAIndicator.java\nindex 704647da4..abbcc89ea 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/SMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/SMAIndicator.java\n@@ -26,0 +27 @@ import org.ta4j.core.Indicator;\n+import org.ta4j.core.indicators.helpers.RunningTotalIndicator;\n@@ -37 +37,0 @@ public class SMAIndicator extends CachedIndicator<Num> {\n-    private final Indicator<Num> indicator;\n@@ -38,0 +39 @@ public class SMAIndicator extends CachedIndicator<Num> {\n+    private RunningTotalIndicator previousSum;\n@@ -48 +49 @@ public class SMAIndicator extends CachedIndicator<Num> {\n-        this.indicator = indicator;\n+        this.previousSum = new RunningTotalIndicator(indicator, barCount);\n@@ -54,5 +54,0 @@ public class SMAIndicator extends CachedIndicator<Num> {\n-        Num sum = zero();\n-        for (int i = Math.max(0, index - barCount + 1); i <= index; i++) {\n-            sum = sum.plus(indicator.getValue(i));\n-        }\n-\n@@ -59,0 +56 @@ public class SMAIndicator extends CachedIndicator<Num> {\n+        final var sum = partialSum(index);\n@@ -62,0 +60,4 @@ public class SMAIndicator extends CachedIndicator<Num> {\n+    private Num partialSum(int index) {\n+        return this.previousSum.getValue(index);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\nindex d36cfb535..7dcc4c40f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\n@@ -38,0 +39,4 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+    private Num previousSum = zero();\n+\n+    // serial access detection\n+    private int previousIndex = -1;\n@@ -47,0 +52,16 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+        // serial access can benefit from previous partial sums\n+        // which saves a lot of CPU work for very long barCounts\n+        if (previousIndex != -1 && previousIndex == index - 1) {\n+            return fastPath(index);\n+        }\n+\n+        return slowPath(index);\n+    }\n+\n+    private Num fastPath(final int index) {\n+        var newSum = partialSum(index);\n+        updatePartialSum(index, newSum);\n+        return newSum;\n+    }\n+\n+    private Num slowPath(final int index) {\n@@ -49 +69 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        for (int i = Math.max(getBarSeries().getBeginIndex(), index - barCount + 1); i <= index; i++) {\n+        for (int i = Math.max(0, index - barCount + 1); i <= index; i++) {\n@@ -51,0 +72,2 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+\n+        updatePartialSum(index, sum);\n@@ -55,3 +77,13 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-    @Override\n-    public int getUnstableBars() {\n-        return 0;\n+    private void updatePartialSum(final int index, final Num sum) {\n+        previousIndex = index;\n+        previousSum = sum;\n+    }\n+\n+    private Num partialSum(int index) {\n+        var sum = this.previousSum.plus(indicator.getValue(index));\n+\n+        if (index >= barCount) {\n+            return sum.minus(indicator.getValue(index - barCount));\n+        }\n+\n+        return sum;\n@@ -63,0 +96,5 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n+\n+    @Override\n+    public int getUnstableBars() {\n+        return barCount;\n+    }"
+}

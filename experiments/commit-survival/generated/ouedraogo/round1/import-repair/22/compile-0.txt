@@ -1,0 +1,60 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:111: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:117: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:118: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:129: error: cannot find symbol
+        Position p = new Position(TradeType.BUY, zeroCostModel(), zeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:130: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:155: error: cannot find symbol
+        CostModel other = new ZeroCostModel(); // still zero but a different instance
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:225: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:352: error: reference to getGrossReturn is ambiguous
+            p.getGrossReturn(null);
+             ^
+  both method getGrossReturn(Num) in Position and method getGrossReturn(BarSeries) in Position match
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:393: error: cannot find symbol
+        Position pBuy = new Position(TradeType.BUY);
+                                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:394: error: cannot find symbol
+        Position pSell = new Position(TradeType.SELL);
+                                      ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:395: error: cannot find symbol
+        assertEquals(TradeType.BUY, pBuy.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:396: error: cannot find symbol
+        assertEquals(TradeType.SELL, pSell.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+12 errors

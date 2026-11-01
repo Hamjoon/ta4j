@@ -1,0 +1,187 @@
+package org.ta4j.core.backtest;
+
+import static org.junit.Assert.*;
+
+import java.time.ZonedDateTime;
+import java.util.List;
+
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.BaseStrategy;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Position;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.rules.BooleanRule;
+import org.ta4j.core.rules.Rule;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link BarSeriesManager}.
+ *
+ * The tests cover:
+ * <ul>
+ *   <li>All constructors and the corresponding getter methods.</li>
+ *   <li>Correct handling of start / finish indexes (clipping to series bounds).</li>
+ *   <li>Execution of a strategy that always signals a trade – the record must be closed.</li>
+ *   <li>Behaviour when the last position is still open at the end of the run.</li>
+ * </ul>
+ *
+ * The test uses real TA4J objects (no mocks) as required.
+ */
+public class BarSeriesManagerTest {
+
+    /**
+     * Helper method that creates a tiny {@link BarSeries} with three bars.
+     * Prices are 1,2,3 – the exact values are not important, only that the series
+     * has a beginning index of 0 and an ending index of 2.
+     */
+    private BarSeries createThreeBarSeries() {
+        BarSeries series = new BaseBarSeries("test-series");
+        // simple bars: open, high, low, close, volume = 1
+        for (int i = 0; i < 3; i++) {
+            Num price = series.numFactory().numOf(i + 1);
+            Bar bar = new BaseBar(
+                    ZonedDateTime.now().plusDays(i),
+                    price,               // open
+                    price.plus(series.numFactory().numOf(0.5)), // high
+                    price.minus(series.numFactory().numOf(0.5)), // low
+                    price,               // close
+                    series.numFactory().numOf(1)   // volume
+            );
+            series.addBar(bar);
+        }
+        return series;
+    }
+
+    /**
+     * Creates a {@link Strategy} that always returns {@code true} for both entry
+     * and exit rules. The {@link BaseStrategy} implementation delegates the
+     * decision to the supplied {@link Rule}s, therefore the strategy will try to
+     * open a position on the first bar and close it on the next one, repeatedly.
+     */
+    private Strategy alwaysTrueStrategy() {
+        Rule entry = new BooleanRule(() -> true);
+        Rule exit = new BooleanRule(() -> true);
+        return new BaseStrategy(entry, exit);
+    }
+
+    @Test
+    public void testAllConstructorsAndGetters() {
+        BarSeries series = createThreeBarSeries();
+
+        CostModel transactionCost = new ZeroCostModel();
+        CostModel holdingCost = new ZeroCostModel();
+        TradeExecutionModel executionModel = new TradeOnNextOpenModel();
+
+        // 1) default constructor (uses ZeroCostModel + TradeOnNextOpenModel)
+        BarSeriesManager defaultMgr = new BarSeriesManager(series);
+        assertSame(series, defaultMgr.getBarSeries());
+        assertTrue(defaultMgr.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(defaultMgr.getHoldingCostModel() instanceof ZeroCostModel);
+        // execution model is internal – we cannot retrieve it, just ensure no NPE
+
+        // 2) constructor with custom execution model
+        BarSeriesManager execMgr = new BarSeriesManager(series, executionModel);
+        assertSame(series, execMgr.getBarSeries());
+        assertTrue(execMgr.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(execMgr.getHoldingCostModel() instanceof ZeroCostModel);
+
+        // 3) constructor with custom cost models (execution model defaults)
+        BarSeriesManager costMgr = new BarSeriesManager(series, transactionCost, holdingCost);
+        assertSame(series, costMgr.getBarSeries());
+        assertSame(transactionCost, costMgr.getTransactionCostModel());
+        assertSame(holdingCost, costMgr.getHoldingCostModel());
+
+        // 4) full constructor
+        BarSeriesManager fullMgr = new BarSeriesManager(series, transactionCost, holdingCost, executionModel);
+        assertSame(series, fullMgr.getBarSeries());
+        assertSame(transactionCost, fullMgr.getTransactionCostModel());
+        assertSame(holdingCost, fullMgr.getHoldingCostModel());
+    }
+
+    @Test
+    public void testRunWithClippedIndexes() {
+        BarSeries series = createThreeBarSeries(); // indexes 0‑2
+        BarSeriesManager manager = new BarSeriesManager(series);
+
+        // ask for a range that exceeds the series bounds
+        int start = -5;
+        int finish = 10;
+
+        TradingRecord record = manager.run(alwaysTrueStrategy(),
+                TradeType.BUY, series.numFactory().one(), start, finish);
+
+        // The manager must clip the indexes to the series limits
+        assertEquals(Integer.valueOf(0), record.getStartIndex());
+        assertEquals(Integer.valueOf(2), record.getEndIndex());
+
+        // Because the strategy always signals, the record must contain at least one closed position
+        List<Position> positions = record.getPositions();
+        assertFalse(positions.isEmpty());
+        assertTrue(record.isClosed());
+    }
+
+    @Test
+    public void testRunAlwaysTrueStrategyClosesAllPositions() {
+        BarSeries series = createThreeBarSeries(); // 0,1,2
+        BarSeriesManager manager = new BarSeriesManager(series);
+
+        TradingRecord record = manager.run(alwaysTrueStrategy());
+
+        // With a strategy that is always true, the TradeOnNextOpenModel will
+        // alternately enter and exit on each bar, ending with a closed position.
+        assertTrue("The trading record must be closed", record.isClosed());
+
+        // There should be exactly three trades (enter‑exit‑enter‑exit‑enter‑exit) = 3 positions
+        assertEquals(3, record.getPositionCount());
+
+        // Verify that each position has a non‑null entry and exit trade
+        for (Position p : record.getPositions()) {
+            assertNotNull(p.getEntry());
+            assertNotNull(p.getExit());
+        }
+    }
+
+    @Test
+    public void testRunLeavesOpenPositionAndIsClosedByPostRunLoop() {
+        // Build a series with 4 bars so that we can stop the run before the last bar.
+        BarSeries series = new BaseBarSeries("post‑run‑test");
+        for (int i = 0; i < 4; i++) {
+            Num price = series.numFactory().numOf(i + 1);
+            Bar bar = new BaseBar(
+                    ZonedDateTime.now().plusDays(i),
+                    price,
+                    price.plus(series.numFactory().numOf(0.5)),
+                    price.minus(series.numFactory().numOf(0.5)),
+                    price,
+                    series.numFactory().numOf(1)
+            );
+            series.addBar(bar);
+        }
+
+        BarSeriesManager manager = new BarSeriesManager(series);
+
+        // Run only on the first two bars (indexes 0‑1). The always‑true strategy will
+        // open a position on index 0, but the corresponding exit will be attempted
+        // on index 2 (next open), which lies *outside* the requested run range.
+        TradingRecord record = manager.run(alwaysTrueStrategy(),
+                TradeType.BUY, series.numFactory().one(), 0, 1);
+
+        // After the normal loop the position is still open; the post‑run loop
+        // should close it using the next available bar (index 2).
+        assertTrue("The record must be closed after the post‑run processing", record.isClosed());
+
+        // There must be exactly one completed position (entry at 0, exit at 2)
+        assertEquals(1, record.getPositionCount());
+
+        Position pos = record.getPositions().get(0);
+        assertNotNull(pos.getEntry());
+        assertNotNull(pos.getExit());
+    }
+}

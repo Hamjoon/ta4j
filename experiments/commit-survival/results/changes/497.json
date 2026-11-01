@@ -1,0 +1,50 @@
+{
+  "index": 497,
+  "sha": "c7adb77bc076ea21f3f3893409030b9f2b8ecab7",
+  "parent": "e810fbcdde468df4c6b9e0bd08c13025481fdf9b",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      514,
+      515,
+      517,
+      518,
+      519,
+      520,
+      533,
+      535,
+      539
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      493,
+      494,
+      495,
+      498,
+      499,
+      500,
+      502,
+      515,
+      517,
+      521
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 63281ffbf..eb7136275 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -493,28 +493,10 @@ public final class DecimalNum implements Num {\n-        // Direct implementation of the example in:\n-        // https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method\n-        BigDecimal estimate = new BigDecimal(this.delegate.toString(), precisionContext);\n-        final String string = String.format(Locale.ROOT, \"%1.1e\", estimate);\n-        log.trace(\"scientific notation {}\", string);\n-        if (string.contains(\"e\")) {\n-            final String[] parts = string.split(\"e\");\n-            BigDecimal mantissa = new BigDecimal(parts[0]);\n-            BigDecimal exponent = new BigDecimal(parts[1]);\n-            if (exponent.remainder(new BigDecimal(2)).compareTo(BigDecimal.ZERO) > 0) {\n-                exponent = exponent.subtract(BigDecimal.ONE);\n-                mantissa = mantissa.multiply(BigDecimal.TEN);\n-                log.trace(\"modified notatation {}e{}\", mantissa, exponent);\n-            }\n-            final BigDecimal estimatedMantissa = mantissa.compareTo(BigDecimal.TEN) < 0 ? new BigDecimal(2)\n-                    : new BigDecimal(6);\n-            final BigDecimal estimatedExponent = exponent.divide(new BigDecimal(2));\n-            final String estimateString = String.format(\"%sE%s\", estimatedMantissa, estimatedExponent);\n-            if (log.isTraceEnabled()) {\n-                log.trace(\"x[0] =~ sqrt({}...*10^{}) =~ {}\", mantissa, exponent, estimateString);\n-            }\n-            final DecimalFormat format = new DecimalFormat();\n-            format.setParseBigDecimal(true);\n-            try {\n-                estimate = (BigDecimal) format.parse(estimateString);\n-            } catch (final ParseException e) {\n-                log.error(\"PrecicionNum ParseException:\", e);\n-            }\n+        final MathContext workingContext = precisionContext.getPrecision() == 0\n+                ? new MathContext(DEFAULT_PRECISION, precisionContext.getRoundingMode())\n+                : precisionContext;\n+\n+        BigDecimal estimate;\n+        final double doubleVal = this.delegate.doubleValue();\n+        if (Double.isFinite(doubleVal) && doubleVal >= Double.MIN_NORMAL) {\n+            estimate = BigDecimal.valueOf(Math.sqrt(doubleVal));\n+        } else {\n+            estimate = this.delegate.sqrt(workingContext);\n@@ -533 +515 @@ public final class DecimalNum implements Num {\n-            test = this.delegate.divide(estimate, precisionContext);\n+            test = this.delegate.divide(estimate, workingContext);\n@@ -535 +517 @@ public final class DecimalNum implements Num {\n-            newEstimate = sum.divide(two, precisionContext);\n+            newEstimate = sum.divide(two, workingContext);\n@@ -539 +521 @@ public final class DecimalNum implements Num {\n-                estimateString = String.format(\"%1.\" + precisionContext.getPrecision() + \"e\", estimate);\n+                estimateString = String.format(\"%1.\" + workingContext.getPrecision() + \"e\", estimate);"
+}

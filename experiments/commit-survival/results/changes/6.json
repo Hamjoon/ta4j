@@ -1,0 +1,18 @@
+{
+  "index": 6,
+  "sha": "6b24a6dcd4b15a551a44d0d261bab932fd04de31",
+  "parent": "69fd473d678e4fdf937f2c704cd8db5653759fa6",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BaseTradingRecord.java": [],
+    "src/main/java/org/ta4j/core/TradingRecord.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BaseTradingRecord.java": [
+      235,
+      240,
+      250
+    ],
+    "src/main/java/org/ta4j/core/TradingRecord.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseTradingRecord.java b/ta4j-core/src/main/java/org/ta4j/core/BaseTradingRecord.java\nindex 12f147802..29304cc1e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseTradingRecord.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseTradingRecord.java\n@@ -232,0 +233,10 @@ public class BaseTradingRecord implements TradingRecord {\n+    @Override\n+    public CostModel getTransactionCostModel() {\n+        return transactionCostModel;\n+    }\n+\n+    @Override\n+    public CostModel getHoldingCostModel() {\n+        return holdingCostModel;\n+    }\n+\n@@ -237,0 +248,5 @@ public class BaseTradingRecord implements TradingRecord {\n+    @Override\n+    public List<Trade> getTrades() {\n+        return trades;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java b/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java\nindex 7b2326297..5fe12b7db 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/TradingRecord.java\n@@ -31,0 +32 @@ import org.ta4j.core.Trade.TradeType;\n+import org.ta4j.core.analysis.cost.CostModel;\n@@ -121,0 +123,10 @@ public interface TradingRecord extends Serializable {\n+    /**\n+     * @return the transaction cost model\n+     */\n+    CostModel getTransactionCostModel();\n+\n+    /**\n+     * @return holding cost model\n+     */\n+    CostModel getHoldingCostModel();\n+\n@@ -149,0 +161,5 @@ public interface TradingRecord extends Serializable {\n+    /**\n+     * @return the trades recorded\n+     */\n+    List<Trade> getTrades();\n+"
+}

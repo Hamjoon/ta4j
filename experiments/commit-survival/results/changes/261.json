@@ -1,0 +1,33 @@
+{
+  "index": 261,
+  "sha": "81696ad11dde04a1f7ec3f9303ec203db227f4df",
+  "parent": "192c86603a66c0243a362a07444db4d576db6fad",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      692
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [
+      728
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      690,
+      691,
+      694,
+      699,
+      700,
+      702,
+      703,
+      704,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex 686409fb6..f29ba5967 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -706,2 +706,3 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-     * score, the anchored cycle start price, and the invalidation price together so\n-     * callers can render charts or summaries without reconstructing those details.\n+     * score, the anchored cycle start price, and both the structural and\n+     * phase-specific invalidation prices together so callers can render charts or\n+     * summaries without reconstructing those details.\n@@ -714 +715,2 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-     * @param invalidationPrice invalidation price for the fit\n+     * @param invalidationPrice      structural invalidation price for the fit\n+     * @param phaseInvalidationPrice phase-specific invalidation price for the fit\n@@ -718 +720,2 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-            Num startPrice, String countLabel, Num invalidationPrice) implements Comparable<CurrentPhaseAssessment> {\n+            Num startPrice, String countLabel, Num invalidationPrice, Num phaseInvalidationPrice)\n+            implements Comparable<CurrentPhaseAssessment> {\n@@ -724,0 +728 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n+            Objects.requireNonNull(phaseInvalidationPrice, \"phaseInvalidationPrice\");\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 47c1990a9..2ba3ca2ab 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -689,0 +690,2 @@ public final class ElliottWaveAnalysisRunner {\n+        final Num structuralInvalidation = normalizedScenario.invalidationPrice();\n+        final Num phaseInvalidation = currentPhaseInvalidation(normalizedScenario, currentPhase);\n@@ -692 +694,19 @@ public final class ElliottWaveAnalysisRunner {\n-                bullishCountLabel(currentPhase.isImpulse() ? scenario.waveCount() : 0), scenario.invalidationPrice()));\n+                bullishCountLabel(currentPhase.isImpulse() ? scenario.waveCount() : 0), structuralInvalidation,\n+                phaseInvalidation));\n+    }\n+\n+    private Num currentPhaseInvalidation(final ElliottScenario scenario, final ElliottPhase currentPhase) {\n+        if (scenario == null || currentPhase == null) {\n+            return null;\n+        }\n+        final Num structuralInvalidation = scenario.invalidationPrice();\n+        if (!currentPhase.isImpulse() || scenario.swings().isEmpty()) {\n+            return structuralInvalidation;\n+        }\n+        final List<ElliottSwing> swings = scenario.swings();\n+        return switch (currentPhase) {\n+        case WAVE3 -> swings.size() >= 2 ? swings.get(1).toPrice() : structuralInvalidation;\n+        case WAVE4 -> swings.size() >= 1 ? swings.get(0).toPrice() : structuralInvalidation;\n+        case WAVE5 -> swings.size() >= 4 ? swings.get(3).toPrice() : structuralInvalidation;\n+        default -> structuralInvalidation;\n+        };"
+}

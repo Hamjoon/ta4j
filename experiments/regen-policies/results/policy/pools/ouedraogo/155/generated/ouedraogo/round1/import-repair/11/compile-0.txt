@@ -1,0 +1,88 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:42: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:52: error: cannot find symbol
+                    .volume(DecimalNum.ONE)
+                                      ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:68: error: cannot find symbol
+                DecimalNum.ONE);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:71: error: cannot find symbol
+                DecimalNum.ONE);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:82: error: cannot find symbol
+                DecimalNum.ONE);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:85: error: cannot find symbol
+                DecimalNum.ONE);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:176: error: cannot find symbol
+        record.operate(0, series.getBar(0).getClosePrice(), DecimalNum.ONE); // BUY
+                                                                      ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:177: error: cannot find symbol
+        record.operate(2, series.getBar(2).getClosePrice(), DecimalNum.ONE); // SELL
+                                                                      ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:180: error: cannot find symbol
+        record.operate(3, series.getBar(3).getClosePrice(), DecimalNum.ONE); // BUY
+                                                                      ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:256: error: cannot find symbol
+                DecimalNum.ONE);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:285: error: cannot find symbol
+        CostModel constantHoldingCost = new CostModel() {
+        ^
+  symbol:   class CostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:285: error: cannot find symbol
+        CostModel constantHoldingCost = new CostModel() {
+                                            ^
+  symbol:   class CostModel
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:286: error: method does not override or implement a method from a supertype
+            @Override
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:291: error: method does not override or implement a method from a supertype
+            @Override
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:293: error: cannot find symbol
+                return DecimalNum.ZERO;
+                                 ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:299: error: cannot find symbol
+                DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                  ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:302: error: cannot find symbol
+                DecimalNum.valueOf(14), DecimalNum.ONE);
+                                                  ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:305: error: cannot find symbol
+                CostModel.ZERO_COST_MODEL, // transaction cost – zero
+                ^
+  symbol:   variable CostModel
+  location: class CashFlowTest
+18 errors

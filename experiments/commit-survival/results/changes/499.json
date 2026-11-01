@@ -1,0 +1,17 @@
+{
+  "index": 499,
+  "sha": "85c72a4e9d12aab6fa4cf979310b5d5e52917e73",
+  "parent": "bbc25869341d828863ab09d0b8fd25c26473c077",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java": [
+      193
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java": [
+      194,
+      196
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java b/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java\nindex 17404c7d9..b5089ea79 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSeriesManager.java\n@@ -8,0 +9 @@ import java.util.Comparator;\n+import java.util.HashSet;\n@@ -12,0 +14 @@ import java.util.Objects;\n+import java.util.Set;\n@@ -191,0 +194 @@ public final class PortfolioSeriesManager {\n+            Set<String> assetSet = new HashSet<>(assets);\n@@ -193 +196 @@ public final class PortfolioSeriesManager {\n-                if (!assets.contains(asset)) {\n+                if (!assetSet.contains(asset)) {"
+}

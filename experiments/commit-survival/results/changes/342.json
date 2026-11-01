@@ -1,0 +1,51 @@
+{
+  "index": 342,
+  "sha": "49079983680d75055d4bc10bc57f731f8f2ee2ab",
+  "parent": "54b6a43f41d9d5eed75f1267aa67ef03e718e920",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      955,
+      956,
+      957,
+      958,
+      959,
+      960,
+      962,
+      963,
+      964,
+      965,
+      966,
+      970,
+      971,
+      972
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      950,
+      956,
+      997,
+      998,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1010,
+      1011,
+      1014,
+      1015,
+      1017,
+      1022,
+      1023,
+      1025,
+      1026,
+      1027,
+      1031
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 3a2db9f1a..a601ffdf5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -949,0 +950 @@ public final class ElliottWaveAnalysisRunner {\n+                .filter(this::eligibleHistoricalMacroBottom)\n@@ -955,20 +956,2 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<ElliottWaveAnalysisResult.HistoricalLegAssessment> macroBottoms = new ArrayList<>();\n-        for (int index = 0; index < bearishLegs.size(); index++) {\n-            final ElliottWaveAnalysisResult.HistoricalLegAssessment candidate = bearishLegs.get(index);\n-            if (index == bearishLegs.size() - 1) {\n-                macroBottoms.add(candidate);\n-                continue;\n-            }\n-            final double candidateLow = lowPrice(series, candidate.endIndex());\n-            final double nextLow = lowPrice(series, bearishLegs.get(index + 1).endIndex());\n-            if (index == 0) {\n-                if (bearishLegs.size() == 2 || candidateLow <= nextLow) {\n-                    macroBottoms.add(candidate);\n-                }\n-                continue;\n-            }\n-            final double previousLow = lowPrice(series, bearishLegs.get(index - 1).endIndex());\n-            if (candidateLow <= previousLow && candidateLow <= nextLow) {\n-                macroBottoms.add(candidate);\n-            }\n-        }\n+        final List<ElliottWaveAnalysisResult.HistoricalLegAssessment> macroBottoms = selectHistoricalMacroBottoms(\n+                series, bearishLegs);\n@@ -1011,0 +995,39 @@ public final class ElliottWaveAnalysisRunner {\n+    private List<ElliottWaveAnalysisResult.HistoricalLegAssessment> selectHistoricalMacroBottoms(final BarSeries series,\n+            final List<ElliottWaveAnalysisResult.HistoricalLegAssessment> bearishLegs) {\n+        if (bearishLegs.size() < 2) {\n+            return List.of();\n+        }\n+\n+        final List<ElliottWaveAnalysisResult.HistoricalLegAssessment> macroBottoms = new ArrayList<>();\n+        ElliottWaveAnalysisResult.HistoricalLegAssessment pending = bearishLegs.getFirst();\n+        for (int index = 1; index < bearishLegs.size(); index++) {\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment next = bearishLegs.get(index);\n+            if (historicalMacroBottomConfirmed(series, pending, next.startIndex())) {\n+                macroBottoms.add(pending);\n+                pending = next;\n+                continue;\n+            }\n+            if (lowPrice(series, next.endIndex()) <= lowPrice(series, pending.endIndex())) {\n+                pending = next;\n+            }\n+        }\n+        if (historicalMacroBottomConfirmed(series, pending, series.getEndIndex())) {\n+            macroBottoms.add(pending);\n+        }\n+        return List.copyOf(macroBottoms);\n+    }\n+\n+    private boolean historicalMacroBottomConfirmed(final BarSeries series,\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment candidate, final int recoveryEndIndex) {\n+        if (recoveryEndIndex <= candidate.endIndex()) {\n+            return false;\n+        }\n+        final int boundedRecoveryEndIndex = Math.min(series.getEndIndex(), recoveryEndIndex);\n+        return highestHigh(series, candidate.endIndex(), boundedRecoveryEndIndex) > highPrice(series,\n+                candidate.startIndex());\n+    }\n+\n+    private boolean eligibleHistoricalMacroBottom(final ElliottWaveAnalysisResult.HistoricalLegAssessment leg) {\n+        return leg.accepted();\n+    }\n+"
+}

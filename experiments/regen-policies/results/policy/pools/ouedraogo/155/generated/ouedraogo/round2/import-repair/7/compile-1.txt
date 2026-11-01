@@ -1,0 +1,14 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:148: error: cannot find symbol
+        @Override public Rule getEntryRule()                  { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:149: error: cannot find symbol
+        @Override public Rule getExitRule()                   { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:102: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+3 errors

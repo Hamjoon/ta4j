@@ -1,0 +1,31 @@
+{
+  "index": 498,
+  "sha": "bbc25869341d828863ab09d0b8fd25c26473c077",
+  "parent": "c7adb77bc076ea21f3f3893409030b9f2b8ecab7",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/portfolio/PortfolioSnapshot.java": [
+      220,
+      221,
+      222
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/portfolio/PortfolioSnapshot.java": [
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSnapshot.java b/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSnapshot.java\nindex 3e6f4306a..c901cebc3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSnapshot.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/portfolio/PortfolioSnapshot.java\n@@ -220,3 +220,14 @@ public final class PortfolioSnapshot {\n-        Map<String, Num> weights = new LinkedHashMap<>();\n-        for (String asset : holdings.keySet()) {\n-            weights.put(asset, getAssetWeight(asset));\n+        Map<String, Num> weights = new LinkedHashMap<>((int) Math.ceil(holdings.size() / 0.75f));\n+        if (portfolioValue.isZero()) {\n+            Num zero = portfolioValue.getNumFactory().zero();\n+            for (String asset : holdings.keySet()) {\n+                weights.put(asset, zero);\n+            }\n+        } else {\n+            for (Map.Entry<String, Num> entry : holdings.entrySet()) {\n+                String asset = entry.getKey();\n+                Num holding = entry.getValue();\n+                Num price = prices.get(asset);\n+                Num assetValue = price.multipliedBy(holding);\n+                weights.put(asset, assetValue.dividedBy(portfolioValue));\n+            }"
+}

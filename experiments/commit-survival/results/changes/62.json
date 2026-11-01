@@ -1,0 +1,17 @@
+{
+  "index": 62,
+  "sha": "31ef93b298bf78134baaab3636b35abf6fe9ac5e",
+  "parent": "7c82c4c0755ffc4c979c455809b8cb52d88c5000",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/Position.java": [
+      149,
+      150
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/Position.java": [
+      149
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/Position.java b/ta4j-core/src/main/java/org/ta4j/core/Position.java\nindex 1b894ce31..0fe9ad1e6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/Position.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/Position.java\n@@ -149,2 +149 @@ public class Position implements Serializable {\n-        if (obj instanceof Position) {\n-            Position p = (Position) obj;\n+        if (obj instanceof Position p) {"
+}

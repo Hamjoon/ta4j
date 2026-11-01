@@ -1,0 +1,44 @@
+{
+  "index": 503,
+  "sha": "98dd2374c03258279c31b19e8a9e78857fc419b6",
+  "parent": "6448f810d933cd882ee03a806eeb5ff084e667ff",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      493,
+      494,
+      495,
+      498,
+      499,
+      500,
+      502,
+      508,
+      513,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      529,
+      530
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      490,
+      491,
+      497,
+      498,
+      499,
+      500
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 4ab8af159..5cdce8b2e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -12,3 +11,0 @@ import java.math.RoundingMode;\n-import java.text.DecimalFormat;\n-import java.text.ParseException;\n-import java.util.Locale;\n@@ -493,3 +490,3 @@ public final class DecimalNum implements Num {\n-        final MathContext workingContext = precisionContext.getPrecision() == 0\n-                ? new MathContext(DEFAULT_PRECISION, precisionContext.getRoundingMode())\n-                : precisionContext;\n+        if (precisionContext.getPrecision() != 0) {\n+            return DecimalNum.valueOf(this.delegate.sqrt(precisionContext), precisionContext);\n+        }\n@@ -497,6 +494,7 @@ public final class DecimalNum implements Num {\n-        BigDecimal estimate;\n-        final double doubleVal = this.delegate.doubleValue();\n-        if (Double.isFinite(doubleVal) && doubleVal >= Double.MIN_NORMAL) {\n-            estimate = BigDecimal.valueOf(Math.sqrt(doubleVal));\n-        } else {\n-            estimate = this.delegate.sqrt(workingContext);\n+        // Unlimited precision: fall back to DEFAULT_PRECISION when the root is\n+        // non-terminating\n+        try {\n+            return DecimalNum.valueOf(this.delegate.sqrt(precisionContext), precisionContext);\n+        } catch (ArithmeticException e) {\n+            final MathContext workingContext = new MathContext(DEFAULT_PRECISION, precisionContext.getRoundingMode());\n+            return DecimalNum.valueOf(this.delegate.sqrt(workingContext), precisionContext);\n@@ -504,27 +501,0 @@ public final class DecimalNum implements Num {\n-        BigDecimal delta;\n-        BigDecimal test;\n-        BigDecimal sum;\n-        BigDecimal newEstimate;\n-        final BigDecimal two = BigDecimal.TWO;\n-        String estimateString;\n-        int endIndex;\n-        int frontEndIndex;\n-        int backStartIndex;\n-        int i = 1;\n-        do {\n-            test = this.delegate.divide(estimate, workingContext);\n-            sum = estimate.add(test);\n-            newEstimate = sum.divide(two, workingContext);\n-            delta = newEstimate.subtract(estimate).abs();\n-            estimate = newEstimate;\n-            if (log.isTraceEnabled()) {\n-                estimateString = String.format(\"%1.\" + workingContext.getPrecision() + \"e\", estimate);\n-                endIndex = estimateString.length();\n-                frontEndIndex = 20 > endIndex ? endIndex : 20;\n-                backStartIndex = 20 > endIndex ? 0 : endIndex - 20;\n-                log.trace(\"x[{}] = {}..{}, delta = {}\", i, estimateString.substring(0, frontEndIndex),\n-                        estimateString.substring(backStartIndex, endIndex), String.format(\"%1.1e\", delta));\n-                i++;\n-            }\n-        } while (delta.compareTo(BigDecimal.ZERO) > 0);\n-        return DecimalNum.valueOf(estimate, precisionContext);"
+}

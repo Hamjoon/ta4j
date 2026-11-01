@@ -1,0 +1,81 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:12: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:54: error: cannot find symbol
+    private Num n(Number value) {
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:76: error: cannot find symbol
+        ConstantIndicator<Num> five = new ConstantIndicator<>(series, n(5));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:90: error: cannot find symbol
+        ConstantIndicator<Num> three = new ConstantIndicator<>(series, n(3));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:104: error: cannot find symbol
+        ConstantIndicator<Num> two = new ConstantIndicator<>(series, n(2));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:118: error: cannot find symbol
+        ConstantIndicator<Num> two = new ConstantIndicator<>(series, n(2));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:130: error: cannot find symbol
+            Num expected = (i + 1) < 3 ? n(i + 1) : n(3);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:137: error: cannot find symbol
+            Num expected = (i + 1) > 3 ? n(i + 1) : n(3);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:142: error: cannot find symbol
+        ConstantIndicator<Num> four = new ConstantIndicator<>(series, n(4));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:145: error: cannot find symbol
+            Num expected = (i + 1) < 4 ? n(i + 1) : n(4);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:150: error: cannot find symbol
+        ConstantIndicator<Num> two = new ConstantIndicator<>(series, n(2));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:153: error: cannot find symbol
+            Num expected = (i + 1) > 2 ? n(i + 1) : n(2);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:161: error: cannot find symbol
+        ConstantIndicator<Num> negOne = new ConstantIndicator<>(series, n(-1));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:193: error: cannot find symbol
+        Num[] expectedSma = {
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:223: error: cannot find symbol
+        Num[] expectedHighest = {
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:236: error: cannot find symbol
+        Num[] expectedLowest = {
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+16 errors

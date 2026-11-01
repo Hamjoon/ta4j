@@ -1,0 +1,26 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:110: error: incompatible types: possible lossy conversion from double to long
+            return newNum(BigDecimal.valueOf(Math.pow(this.value.doubleValue(), exponent), MC));
+                                                     ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:115: error: incompatible types: possible lossy conversion from double to long
+            return newNum(BigDecimal.valueOf(Math.log(value.doubleValue()), MC));
+                                                     ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:120: error: incompatible types: possible lossy conversion from double to long
+            return newNum(BigDecimal.valueOf(Math.exp(value.doubleValue()), MC));
+                                                     ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:125: error: incompatible types: possible lossy conversion from double to long
+            return newNum(BigDecimal.valueOf(Math.sqrt(value.doubleValue()), MC));
+                                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:130: error: incompatible types: possible lossy conversion from double to long
+            return newNum(BigDecimal.valueOf(Math.sqrt(value.doubleValue()), mathContext));
+                                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:253: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:269: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:274: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+8 errors

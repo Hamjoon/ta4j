@@ -1,0 +1,43 @@
+{
+  "class_name": "org.ta4j.core.backtest.BarSeriesManager",
+  "ordered_types": [
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.backtest.TradeExecutionModel",
+    "org.ta4j.core.analysis.cost.CostModel",
+    "org.ta4j.core.Strategy",
+    "org.ta4j.core.TradingRecord",
+    "org.ta4j.core.Trade.TradeType",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BaseTradingRecord",
+    "org.ta4j.core.analysis.cost.ZeroCostModel"
+  ],
+  "included": [
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.backtest.TradeExecutionModel",
+    "org.ta4j.core.analysis.cost.CostModel",
+    "org.ta4j.core.Strategy",
+    "org.ta4j.core.TradingRecord",
+    "org.ta4j.core.Trade.TradeType",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BaseTradingRecord",
+    "org.ta4j.core.analysis.cost.ZeroCostModel"
+  ],
+  "omitted": [],
+  "reasons": {
+    "org.ta4j.core.BarSeries": "constructor",
+    "org.ta4j.core.backtest.TradeExecutionModel": "constructor",
+    "org.ta4j.core.analysis.cost.CostModel": "constructor",
+    "org.ta4j.core.Strategy": "method",
+    "org.ta4j.core.TradingRecord": "method",
+    "org.ta4j.core.Trade.TradeType": "method",
+    "org.ta4j.core.num.Num": "method",
+    "org.ta4j.core.BaseTradingRecord": "import",
+    "org.ta4j.core.analysis.cost.ZeroCostModel": "import"
+  },
+  "types": 9,
+  "lines": 170,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

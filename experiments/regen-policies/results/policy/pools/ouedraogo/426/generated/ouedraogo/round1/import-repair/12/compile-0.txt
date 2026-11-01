@@ -1,0 +1,17 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:109: error: reference to CashFlow is ambiguous
+        new CashFlow(createTwoBarSeries(), null);
+        ^
+  both constructor CashFlow(BarSeries,Position) in CashFlow and constructor CashFlow(BarSeries,TradingRecord) in CashFlow match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:286: error: no suitable constructor found for Position(Trade)
+        Position openPos = new Position(entry);
+                           ^
+    constructor Position.Position(TradeType) is not applicable
+      (argument mismatch; Trade cannot be converted to TradeType)
+    constructor Position.Position(ValidatedStartingPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedStartingPosition)
+    constructor Position.Position(ValidatedClosedPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedClosedPosition)
+    constructor Position.Position(ValidatedOpenPosition) is not applicable
+      (argument mismatch; Trade cannot be converted to ValidatedOpenPosition)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2 errors

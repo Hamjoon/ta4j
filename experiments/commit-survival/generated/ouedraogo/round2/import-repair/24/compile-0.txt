@@ -1,0 +1,132 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:61: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:67: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:68: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:84: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:93: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:192: error: cannot find symbol
+        Position sellPos = new Position(TradeType.SELL);
+                                        ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:211: error: cannot find symbol
+            @Override public List<Bar> getBarData() { return null; }
+                             ^
+  symbol: class List
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:219: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime) {}
+                                         ^
+  symbol: class Duration
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:219: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime) {}
+                                                              ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:220: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:222: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:224: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:226: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                         ^
+  symbol: class Duration
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:226: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                                              ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:229: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                         ^
+  symbol: class Duration
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:229: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                                              ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:232: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, String openPrice, String highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:234: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, String openPrice, String highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:236: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, String openPrice, String highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:238: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:240: error: cannot find symbol
+            @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice,
+                                         ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:242: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                         ^
+  symbol: class Duration
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:242: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                                              ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:245: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                         ^
+  symbol: class Duration
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:245: error: cannot find symbol
+            @Override public void addBar(Duration timePeriod, ZonedDateTime endTime,
+                                                              ^
+  symbol: class ZonedDateTime
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:218: error: name clash: class  has two methods with the same erasure, yet neither overrides the other
+            @Override public void addBar(Bar bar, boolean replace) {}
+                                  ^
+  first method:  addBar(Duration,ZonedDateTime) in <anonymous org.ta4j.core.PositionTest$2>
+  second method: addBar(Duration,ZonedDateTime) in BarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:224: error: name clash: class  has two methods with the same erasure, yet neither overrides the other
+            @Override public void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice,
+                                  ^
+  first method:  addBar(Duration,ZonedDateTime,Number,Number,Number,Number,Number) in <anonymous org.ta4j.core.PositionTest$2>
+  second method: addBar(Duration,ZonedDateTime,Number,Number,Number,Number,Number) in BarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:240: error: name clash: class  has two methods with the same erasure, yet neither overrides the other
+            @Override public void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice,
+                                  ^
+  first method:  addBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num) in <anonymous org.ta4j.core.PositionTest$2>
+  second method: addBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num) in BarSeries
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:274: error: cannot find symbol
+        Position p = new Position(TradeType.BUY, customCost, zeroCost);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:320: error: cannot find symbol
+        Position p = new Position(TradeType.BUY, new ZeroCostModel(), holding);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+30 errors

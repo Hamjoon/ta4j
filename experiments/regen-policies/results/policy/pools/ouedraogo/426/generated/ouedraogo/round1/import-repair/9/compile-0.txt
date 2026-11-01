@@ -1,0 +1,189 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:23: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:150: error: cannot find symbol
+    private static class AlwaysTrueRule implements Rule {
+                                                   ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:152: error: cannot find symbol
+        @Override public Rule and(Rule rule) { return this; }
+                                  ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:152: error: cannot find symbol
+        @Override public Rule and(Rule rule) { return this; }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:153: error: cannot find symbol
+        @Override public Rule or(Rule rule) { return this; }
+                                 ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:153: error: cannot find symbol
+        @Override public Rule or(Rule rule) { return this; }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:154: error: cannot find symbol
+        @Override public Rule not() { return this; }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:155: error: cannot find symbol
+        @Override public Rule xor(Rule rule) { return this; }
+                                  ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:155: error: cannot find symbol
+        @Override public Rule xor(Rule rule) { return this; }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:157: error: cannot find symbol
+        @Override public Rule withLabel(String label) { return this; }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:158: error: cannot find symbol
+        @Override public Rule reverse() { return this; }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysTrueRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:168: error: cannot find symbol
+        private final Rule entryRule;
+                      ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:169: error: cannot find symbol
+        private final Rule exitRule;
+                      ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:172: error: cannot find symbol
+        SimpleStrategy(Trade.TradeType startingType, Rule entryRule, Rule exitRule, String name) {
+                                                     ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:172: error: cannot find symbol
+        SimpleStrategy(Trade.TradeType startingType, Rule entryRule, Rule exitRule, String name) {
+                                                                     ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:180: error: cannot find symbol
+        @Override public Rule getEntryRule() { return entryRule; }
+                         ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:181: error: cannot find symbol
+        @Override public Rule getExitRule() { return exitRule; }
+                         ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:56: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:70: error: method does not override or implement a method from a supertype
+        @Override public Num getMaxPrice() { return getClosePrice(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:71: error: method does not override or implement a method from a supertype
+        @Override public Num getMinPrice() { return getClosePrice(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:73: error: method does not override or implement a method from a supertype
+        @Override public int getBeginIndex() { return index; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:74: error: method does not override or implement a method from a supertype
+        @Override public int getEndIndex() { return index; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:75: error: method does not override or implement a method from a supertype
+        @Override public BarSeries getSeries() { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:101: error: incompatible types: possible lossy conversion from double to long
+        @Override public Num sqrt(java.math.MathContext mc) { return new SimpleNum(java.math.BigDecimal.valueOf(Math.sqrt(value.doubleValue()), mc)); }
+                                                                                                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:129: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private enum SimpleNumFactory implements NumFactory {
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:140: error: method does not override or implement a method from a supertype
+        @Override public Num four() { return numOf(4); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:141: error: method does not override or implement a method from a supertype
+        @Override public Num five() { return numOf(5); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:142: error: method does not override or implement a method from a supertype
+        @Override public Num six() { return numOf(6); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:143: error: method does not override or implement a method from a supertype
+        @Override public Num seven() { return numOf(7); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:144: error: method does not override or implement a method from a supertype
+        @Override public Num eight() { return numOf(8); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:145: error: method does not override or implement a method from a supertype
+        @Override public Num nine() { return numOf(9); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:146: error: method does not override or implement a method from a supertype
+        @Override public Num ten() { return numOf(10); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:151: error: method does not override or implement a method from a supertype
+        @Override public boolean isSatisfied(int index, BarSeries series) { return true; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:152: error: method does not override or implement a method from a supertype
+        @Override public Rule and(Rule rule) { return this; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:153: error: method does not override or implement a method from a supertype
+        @Override public Rule or(Rule rule) { return this; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:154: error: method does not override or implement a method from a supertype
+        @Override public Rule not() { return this; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:155: error: method does not override or implement a method from a supertype
+        @Override public Rule xor(Rule rule) { return this; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:156: error: method does not override or implement a method from a supertype
+        @Override public String getLabel() { return "alwaysTrue"; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:157: error: method does not override or implement a method from a supertype
+        @Override public Rule withLabel(String label) { return this; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:158: error: method does not override or implement a method from a supertype
+        @Override public Rule reverse() { return this; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:159: error: method does not override or implement a method from a supertype
+        @Override public int getUnstableBars() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:160: error: method does not override or implement a method from a supertype
+        @Override public void setUnstableBars(int unstableBars) {}
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:161: error: method does not override or implement a method from a supertype
+        @Override public boolean isUnstableAt(int index) { return false; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:166: error: SimpleStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class SimpleStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:266: error: cannot find symbol
+            @Override public Rule getEntryRule() { return new AlwaysTrueRule(); }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:267: error: cannot find symbol
+            @Override public Rule getExitRule() { return new AlwaysTrueRule(); }
+                             ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:264: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$1> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+        Strategy neverOperate = new Strategy() {
+                                               ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:344: error: cannot find symbol
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig();
+        ^
+  symbol:   class WalkForwardConfig
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:344: error: cannot find symbol
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig();
+                                   ^
+  symbol:   variable WalkForwardConfig
+  location: class BarSeriesManagerTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+49 errors

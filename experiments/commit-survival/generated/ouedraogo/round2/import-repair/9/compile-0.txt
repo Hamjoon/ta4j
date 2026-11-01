@@ -1,0 +1,73 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:203: error: cannot find symbol
+        public Function<Number, Num> function() {
+               ^
+  symbol:   class Function
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:55: error: hundred() in SimpleNum cannot implement hundred() in Num
+        static SimpleNum hundred() {
+                         ^
+  overriding method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:51: error: one() in SimpleNum cannot implement one() in Num
+        static SimpleNum one() {
+                         ^
+  overriding method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:47: error: zero() in SimpleNum cannot implement zero() in Num
+        static SimpleNum zero() {
+                         ^
+  overriding method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:266: error: DummyBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static final class DummyBar implements Bar {
+                         ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:288: error: cannot inherit from final SimpleNum
+            return new SimpleNum(0) {
+                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:290: error: zero() in <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$DummyBarSeries$1> cannot override zero() in SimpleNum
+                public Num zero() {
+                           ^
+  overridden method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:295: error: one() in <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$DummyBarSeries$1> cannot override one() in SimpleNum
+                public Num one() {
+                           ^
+  overridden method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:300: error: hundred() in <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$DummyBarSeries$1> cannot override hundred() in SimpleNum
+                public Num hundred() {
+                           ^
+  overridden method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:562: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:573: error: cannot find symbol
+        assertEquals("Starting trade type must be BUY", TradeType.BUY, record.getStartingType());
+                                                        ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:583: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.SELL, amount);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:590: error: cannot find symbol
+        assertEquals(TradeType.SELL, record.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:600: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount, 1, 2);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:617: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:635: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount, 0, 1);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+Note: /repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+16 errors

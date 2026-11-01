@@ -1,0 +1,285 @@
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+  default void clear();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.backtest.TradeExecutionModel
+public interface TradeExecutionModel {
+  default void onBar(int index, TradingRecord tradingRecord, BarSeries barSeries);
+  default void onRunEnd(int lastProcessedIndex, TradingRecord tradingRecord);
+  default ExecutionTarget estimateEntryTarget(int signalIndex, BarSeries barSeries, TradeType tradeType);
+   void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount);
+}
+
+// public API of org.ta4j.core.analysis.cost.CostModel
+public interface CostModel {
+   Num calculate(Position position, int finalIndex);
+   Num calculate(Position position);
+   Num calculate(Num price, Num amount);
+   boolean equals(CostModel otherModel);
+}
+
+// public API of org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory
+public interface TradingRecordFactory {
+   TradingRecord create(TradeType tradeType, int startIndex, int endIndex, CostModel transactionCostModel, CostModel holdingCostModel);
+}
+
+// public API of org.ta4j.core.Strategy
+public interface Strategy {
+   String getName();
+   Rule getEntryRule();
+  default TradeType getStartingType();
+   Rule getExitRule();
+   Strategy and(Strategy strategy);
+   Strategy or(Strategy strategy);
+   Strategy and(String name, Strategy strategy, int unstableBars);
+   Strategy or(String name, Strategy strategy, int unstableBars);
+   Strategy opposite();
+   void setUnstableBars(int unstableBars);
+   int getUnstableBars();
+   boolean isUnstableAt(int index);
+  default boolean shouldOperate(int index, TradingRecord tradingRecord);
+  default boolean shouldEnter(int index);
+  default boolean shouldEnter(int index, TradingRecord tradingRecord);
+  default boolean shouldEnterWithTraceMode(int index, Rule.TraceMode traceMode);
+  default boolean shouldEnterWithTraceMode(int index, TradingRecord tradingRecord, Rule.TraceMode traceMode);
+  default boolean shouldExit(int index);
+  default boolean shouldExit(int index, TradingRecord tradingRecord);
+  default boolean shouldExitWithTraceMode(int index, Rule.TraceMode traceMode);
+  default boolean shouldExitWithTraceMode(int index, TradingRecord tradingRecord, Rule.TraceMode traceMode);
+  default String toJson();
+  default ComponentDescriptor toDescriptor();
+  static Strategy fromJson(BarSeries series, String json);
+}
+
+// public API of org.ta4j.core.TradingRecord
+public interface TradingRecord extends Serializable {
+   TradeType getStartingType();
+   String getName();
+  default void operate(int index);
+   void operate(int index, Num price, Num amount);
+  default void operate(TradeFill fill);
+  default void operate(Trade trade);
+  default boolean enter(int index);
+   boolean enter(int index, Num price, Num amount);
+  default boolean enter(Trade trade);
+  default boolean exit(int index);
+   boolean exit(int index, Num price, Num amount);
+  default boolean exit(Trade trade);
+  default boolean isClosed();
+   CostModel getTransactionCostModel();
+   CostModel getHoldingCostModel();
+   List<Position> getPositions();
+  default int getPositionCount();
+   Position getCurrentPosition();
+  default Num getRecordedTotalFees();
+  default List<Position> getOpenPositions();
+  default Position getNetOpenPosition();
+  default Position getLastPosition();
+   List<Trade> getTrades();
+  default Trade getLastTrade();
+  default Trade getLastTrade(TradeType tradeType);
+  default Trade getLastEntry();
+  default Trade getLastExit();
+   Integer getStartIndex();
+   Integer getEndIndex();
+  default int getStartIndex(BarSeries series);
+  default int getEndIndex(BarSeries series);
+}
+
+// public API of org.ta4j.core.Trade.TradeType
+public static enum TradeType {
+  public static final TradeType BUY;
+  public static final TradeType SELL;
+  public abstract TradeType complementType();
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+  static boolean isFinite(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.backtest.PositionSizer
+public interface PositionSizer {
+   Num amount(Context context);
+  static PositionSizer fixed();
+  static PositionSizer fixed(Number amount);
+  static PositionSizer fixed(Num amount);
+  static PositionSizer balance(Number principal);
+  static PositionSizer balance(Number principal, BalanceRule rule);
+  static PositionSizer kelly(Number principal, Number winProbability, Number payoffRatio);
+  static PositionSizer kelly(Number principal, Number winProbability, Number payoffRatio, Number coefficient);
+  private static void validatePositiveNumber(Number value, String name);
+  private static Number snapshotNumber(Number value, String name);
+  private static void validateProbability(Number value, String name);
+  private static void validatePositiveKellyFraction(Number winProbability, Number payoffRatio, Number coefficient);
+  private static void validatePositiveNum(Num value, String name);
+  private static void validateFiniteNum(Num value, String name);
+}
+
+// public API of org.ta4j.core.walkforward.WalkForwardConfig
+public record WalkForwardConfig(int minTrainBars, int testBars, int stepBars, int purgeBars, int embargoBars, int holdoutBars, int primaryHorizonBars, List<Integer> reportingHorizons, int optimizationTopK, List<Integer> reportingTopKs, long seed) {
+  public WalkForwardConfig(int minTrainBars, int testBars, int stepBars, int purgeBars, int embargoBars, int holdoutBars, int primaryHorizonBars, List<Integer> reportingHorizons, int optimizationTopK, List<Integer> reportingTopKs, long seed);
+  public List<Integer> reportingHorizons();
+  public List<Integer> reportingTopKs();
+  public WalkForwardConfig(BarSeries series);
+  public static WalkForwardConfig defaultConfig();
+  public static WalkForwardConfig defaultConfig(BarSeries series);
+  public List<Integer> allHorizons();
+  public List<Integer> allTopKs();
+  public String configHash();
+}
+
+// public API of org.ta4j.core.backtest.StrategyWalkForwardExecutionResult
+public record StrategyWalkForwardExecutionResult(BarSeries barSeries, Strategy strategy, WalkForwardConfig config, List<FoldResult> folds, WalkForwardRuntimeReport runtimeReport) implements TradingStatementExecutionResult<WalkForwardRuntimeReport> {
+  public StrategyWalkForwardExecutionResult(BarSeries barSeries, Strategy strategy, WalkForwardConfig config, List<FoldResult> folds, WalkForwardRuntimeReport runtimeReport);
+  public BarSeries barSeries();
+  public Strategy strategy();
+  public Optional<FoldResult> holdoutFold();
+  public List<FoldResult> inSampleFolds();
+  public List<FoldResult> outOfSampleFolds();
+  public List<TradingStatement> tradingStatements();
+  public List<TradingRecord> tradingRecords();
+  public List<Num> criterionValues(AnalysisCriterion criterion);
+  public List<Num> inSampleCriterionValues(AnalysisCriterion criterion);
+  public List<Num> outOfSampleCriterionValues(AnalysisCriterion criterion);
+  public Optional<Num> holdoutCriterionValue(AnalysisCriterion criterion);
+  public Map<String, Num> criterionValuesByFold(AnalysisCriterion criterion);
+}
+
+// public API of org.ta4j.core.backtest.PositionSizer.Context
+public static record Context(int signalIndex, int entryIndex, Num entryPrice, Strategy strategy, BarSeries barSeries, TradeType tradeType, TradingRecord tradingRecord, CostModel transactionCostModel, CostModel holdingCostModel) {
+  public Context(int signalIndex, int entryIndex, Num entryPrice, Strategy strategy, BarSeries barSeries, TradeType tradeType, TradingRecord tradingRecord, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BarSeries barSeries();
+  public Strategy strategy();
+  public NumFactory numFactory();
+  public Num numOf(Number number);
+  public Num currentBalance(Number principal);
+  public Num currentBalance(Num principal);
+  public Num entryCost(Num amount);
+  public Num maxAffordableAmount(Num budget);
+}
+
+// public API of org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget
+public static record ExecutionTarget(int index, Num price) {
+}
+
+// public API of org.ta4j.core.BaseBarSeriesBuilder
+public class BaseBarSeriesBuilder implements BarSeriesBuilder {
+  public BaseBarSeriesBuilder();
+  public BaseBarSeries build();
+  public BaseBarSeriesBuilder setConstrained(boolean constrained);
+  public BaseBarSeriesBuilder withNumFactory(NumFactory numFactory);
+  public BaseBarSeriesBuilder withName(String name);
+  public BaseBarSeriesBuilder withBars(List<Bar> bars);
+  public BaseBarSeriesBuilder withBeginIndex(int beginIndex);
+  public BaseBarSeriesBuilder withMaxBarCount(int maxBarCount);
+  public BaseBarSeriesBuilder withBarBuilderFactory(BarBuilderFactory barBuilderFactory);
+}
+
+// public API of org.ta4j.core.BaseTradingRecord
+public class BaseTradingRecord implements TradingRecord {
+  public BaseTradingRecord();
+  public BaseTradingRecord(String name);
+  public BaseTradingRecord(String name, TradeType tradeType);
+  public BaseTradingRecord(TradeType startingType);
+  public BaseTradingRecord(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BaseTradingRecord(TradeType startingType, Integer startIndex, Integer endIndex, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BaseTradingRecord(TradeType startingType, ExecutionMatchPolicy matchPolicy, CostModel transactionCostModel, CostModel holdingCostModel, Integer startIndex, Integer endIndex);
+  public BaseTradingRecord(Trade... trades);
+  public BaseTradingRecord(Position position);
+  public BaseTradingRecord(List<Position> positions);
+  public BaseTradingRecord(CostModel transactionCostModel, CostModel holdingCostModel, Trade... trades);
+  public TradeType getStartingType();
+  public ExecutionMatchPolicy getMatchPolicy();
+  public String getName();
+  public void setName(String name);
+  public void recordFill(Trade trade);
+  public void recordFill(int index, Trade trade);
+  public void recordExecutionFill(TradeFill fill);
+  public void operate(Trade trade);
+  public void operate(int index, Num price, Num amount);
+  public boolean enter(int index, Num price, Num amount);
+  public boolean exit(int index, Num price, Num amount);
+  public CostModel getTransactionCostModel();
+  public CostModel getHoldingCostModel();
+  public List<Position> getPositions();
+  public Position getCurrentPosition();
+  public List<Trade> getTrades();
+  public Trade getLastEntry();
+  public Trade getLastExit();
+  public Integer getStartIndex();
+  public Integer getEndIndex();
+  public List<Position> getOpenPositions();
+  public Position getNetOpenPosition();
+  public Num getTotalFees();
+  public Num getRecordedTotalFees();
+  public String toString();
+  public void rehydrate(CostModel holdingCostModel);
+  public void rehydrate(CostModel transactionCostModel, CostModel holdingCostModel);
+}
+

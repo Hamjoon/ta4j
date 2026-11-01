@@ -1,0 +1,30 @@
+{
+  "index": 60,
+  "sha": "a5eb46ffdfcfa78a11906bb3d66b509c4918b421",
+  "parent": "b929c4112cf1b6861d25df97230347c833984e28",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java": [
+      51,
+      53,
+      54,
+      62,
+      64,
+      65
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java": [
+      49,
+      50,
+      53,
+      55,
+      57,
+      62,
+      63,
+      66,
+      68,
+      70
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\nindex 483c2b9bf..a44476e8b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\n@@ -48,0 +49,3 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n+        if (position.isOpened()) {\n+            return series.numFactory().zero();\n+        }\n@@ -49,0 +53 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n+        var netReturn = netReturnCriterion.calculate(series, position);\n@@ -51,4 +55 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n-            return NaN.NaN;\n-        } else {\n-            var totalProfit = netReturnCriterion.calculate(series, position);\n-            return totalProfit.dividedBy(maxDrawdown);\n+            return netReturn;\n@@ -55,0 +57 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n+        return netReturn.dividedBy(maxDrawdown);\n@@ -59,0 +62,3 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n+        if (tradingRecord.getPositions().isEmpty()) {\n+            return series.numFactory().zero(); // penalise no-trade strategies\n+        }\n@@ -60,0 +66 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n+        var netReturn = netReturnCriterion.calculate(series, tradingRecord);\n@@ -62,4 +68 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n-            return NaN.NaN;\n-        } else {\n-            var totalProfit = netReturnCriterion.calculate(series, tradingRecord);\n-            return totalProfit.dividedBy(maxDrawdown);\n+            return netReturn; // perfect equity curve\n@@ -66,0 +70 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n+        return netReturn.dividedBy(maxDrawdown); // regular RoMaD"
+}

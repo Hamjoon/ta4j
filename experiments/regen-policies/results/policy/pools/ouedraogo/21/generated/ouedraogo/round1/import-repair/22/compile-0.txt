@@ -1,0 +1,36 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:63: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:69: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:70: error: cannot find symbol
+        assertEquals(TradeType.SELL, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:149: error: cannot find symbol
+        assertEquals(TradeType.BUY, t.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:162: error: cannot find symbol
+        assertEquals(TradeType.SELL, t.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:179: error: cannot find symbol
+        assertEquals(TradeType.BUY, t.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:305: error: cannot find symbol
+        Num nan = DecimalNum.NaN; // assuming DecimalNum provides NaN constant
+                            ^
+  symbol:   variable NaN
+  location: class DecimalNum
+7 errors

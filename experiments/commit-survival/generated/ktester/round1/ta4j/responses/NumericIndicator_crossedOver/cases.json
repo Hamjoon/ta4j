@@ -1,0 +1,217 @@
+[
+  {
+    "group": "crossedOver(Indicator<Num>) - basic functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null Indicator should cause the method to throw a NullPointerException (the CrossedUpIndicatorRule constructor validates its arguments)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(0) == false",
+        "description": "When the other indicator is a constant 5 and the NumericIndicator under test is also constant 5, there is no upward crossing at index 0, so the returned rule must be a CrossedUpIndicatorRule and evaluate to false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(3)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(1) == true",
+        "description": "Create a NumericIndicator that yields values [2, 4] (e.g., using a ConstantIndicator for 2 and then a custom Indicator that returns 4 at index 1). The other indicator is constant 3. At index 1 the NumericIndicator moves from below 3 to above 3, so the CrossedUpIndicatorRule should be satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(7)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(2) == false",
+        "description": "NumericIndicator values are [6, 5, 4]; the other indicator is constant 7. The NumericIndicator never crosses upward over 7, therefore the rule must evaluate to false at any index (here index 2 is tested)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator that mirrors the same series"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(any index) == false",
+        "description": "When the 'other' indicator is the same instance as the NumericIndicator itself, a crossing cannot occur; the rule should always return false."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - multiple upward crossings",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(4)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(1) == true",
+        "description": "NumericIndicator yields values [3, 5, 2, 6] (e.g., via a custom Indicator). The series crosses upward over 4 at index\u202f1 (3\u21925) and again at index\u202f3 (2\u21926). The rule must report a satisfied crossing at index\u202f1."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(4)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(2) == false",
+        "description": "Using the same series as above, at index\u202f2 the NumericIndicator moves from 5 (above 4) to 2 (below 4); no upward crossing occurs, so the rule must be unsatisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(4)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(3) == true",
+        "description": "Continuing the same series, at index\u202f3 the value rises from 2 (below 4) to 6 (above 4); the rule must be satisfied again."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator decreasing while this stays constant",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "CustomIndicator(values=[6,5,4])"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(0) == false",
+        "description": "NumericIndicator is a constant 5 (via ConstantIndicator). The other indicator decreases from 6 to 4, never falling below 5, therefore no upward crossing can happen at any index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "CustomIndicator(values=[6,5,4])"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(2) == false",
+        "description": "Even at the last index (2) where the other value is 4 (below 5), the crossing condition requires the NumericIndicator to move from below to above the other; since NumericIndicator never moves, the rule stays unsatisfied."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator contains NaN (invalid numeric value)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(NaN)"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Passing an indicator that returns Num.NaN should cause the CrossedUpIndicatorRule constructor (or its evaluation) to reject the input and throw an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator with same delegate but distinct instance",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(originalDelegate)"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(any index) == false",
+        "description": "Both NumericIndicator instances wrap the same underlying delegate (e.g., ClosePriceIndicator). Since they produce identical values at every index, no upward crossing can occur; the rule must always be unsatisfied."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator lagging by one bar (offset series)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ShiftedIndicator(shift=1, base=ConstantIndicator(2))"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(0) == true",
+        "description": "NumericIndicator yields values [1,2,3] (via ConstantIndicator(1) then plus 1 each bar). The other indicator is the same series shifted right by one bar, so at index\u202f0 the other returns null/undefined (treated as below). The NumericIndicator moves from undefined to 1, which is considered an upward crossing, so the rule should be satisfied at index\u202f0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ShiftedIndicator(shift=1, base=ConstantIndicator(2))"
+          }
+        ],
+        "expected": "instanceof CrossedUpIndicatorRule and rule.isSatisfied(1) == false",
+        "description": "At index\u202f1 both series have the same value (2). Since there is no transition from below to above, the rule must be unsatisfied."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator with mismatched BarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5) built on a different BarSeries than the NumericIndicator under test"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The CrossedUpIndicatorRule requires both indicators to belong to the same BarSeries. Supplying an indicator that references a different series should cause the rule construction to throw an IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator throws on getValue",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ThrowingIndicator (custom Indicator whose getValue(int) throws RuntimeException(\"test\"))"
+          }
+        ],
+        "expected": "RuntimeException with message \"test\"",
+        "description": "When the rule evaluates isSatisfied(index), it calls getValue on the supplied indicator. If that indicator throws an exception, the same exception should propagate to the caller."
+      }
+    ]
+  },
+  {
+    "group": "crossedOver(Indicator<Num>) - other indicator returns null Num",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NullValueIndicator (custom Indicator that returns null for any index)"
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "A Num value of null is not valid for numeric comparisons. The CrossedUpIndicatorRule should detect the null value during evaluation and throw an IllegalArgumentException."
+      }
+    ]
+  }
+]

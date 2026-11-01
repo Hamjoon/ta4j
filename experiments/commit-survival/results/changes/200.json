@@ -1,0 +1,12 @@
+{
+  "index": 200,
+  "sha": "b9dad6ad36078267ef2fda8dddd22d11c4ac52a0",
+  "parent": "2e9f9e58ad22adfcf8d040f3d50de8d137ebe7d0",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/serialization/AGENTS.md": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/serialization/AGENTS.md": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/AGENTS.md b/ta4j-core/src/main/java/org/ta4j/core/serialization/AGENTS.md\nindex 87747f05d..5280d9996 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/AGENTS.md\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/AGENTS.md\n@@ -28 +28 @@ Apply this guide when changing component descriptor schemas, JSON serialization,\n-- `ReconstructionContext` should cache labeled descriptors for strategy-level cross references and use parent-context lookup for nested rules.\n+- `ReconstructionContext` should cache labeled descriptors for strategy-level cross-references and use parent-context lookup for nested rules."
+}

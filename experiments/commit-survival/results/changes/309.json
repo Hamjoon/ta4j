@@ -1,0 +1,18 @@
+{
+  "index": 309,
+  "sha": "daca2fcdf400b6bd61f54599eba8ade661a954a8",
+  "parent": "eaf3db91f2741d923172bf35e11ae2e2940de1cf",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      422,
+      446
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      422,
+      446
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 3812d060a..a40d7c133 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -422 +422 @@ public final class ElliottWaveAnalysisRunner {\n-                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitCurrentPhaseForWindow(series,\n+                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitPartialLegForWindow(series,\n@@ -446 +446 @@ public final class ElliottWaveAnalysisRunner {\n-                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitCurrentPhaseForWindow(series,\n+                final Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fit = fitPartialLegForWindow(series,\n@@ -745 +745,20 @@ public final class ElliottWaveAnalysisRunner {\n-    Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fitCurrentPhaseForWindow(final BarSeries series,\n+    /**\n+     * Fits a partial local leg inside an anchored window.\n+     *\n+     * <p>\n+     * Bullish phases map to impulse progressions {@code 1..5}. Bearish phases map\n+     * to corrective progressions {@code A..C}. This keeps partial-window scoring on\n+     * the same core fitter path used by live current-cycle inference.\n+     *\n+     * @param series     root series\n+     * @param analysis   precomputed anchored-window analysis\n+     * @param startIndex inclusive window start index in the root series\n+     * @param endIndex   inclusive window end index in the root series\n+     * @param bullish    {@code true} for bullish impulse progressions,\n+     *                   {@code false} for bearish corrective progressions\n+     * @param phase      bullish phase {@code 1..5} or bearish corrective phase\n+     *                   {@code 1..3}\n+     * @return normalized partial-leg assessment, if the requested family fits the\n+     *         window\n+     */\n+    Optional<ElliottWaveAnalysisResult.CurrentPhaseAssessment> fitPartialLegForWindow(final BarSeries series,"
+}

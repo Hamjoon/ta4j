@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-29T15:47:59.527475+00:00",
+  "latency": 66.752,
+  "status": "ok",
+  "http_status": 200,
+  "finish_reason": "stop",
+  "provider": "AkashML",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "request_id": "gen-1793288879-pTl2a6igk0oENMRcVVR7",
+  "usage": {
+    "prompt_tokens": 4004,
+    "completion_tokens": 4311,
+    "total_tokens": 8315,
+    "cost": 0.000926277,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.000926277,
+      "upstream_inference_prompt_cost": 0.00012012,
+      "upstream_inference_completions_cost": 0.000806157
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1866,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "error_type": null,
+  "prompt_sha256": "9c5e961dd807d0c7896b067b37ae4805ef955b96f13860369d901edad0df53d8",
+  "response_sha256": "a9befee0ea2ccbf2eab23dacef8f6f9f9a5254a0100acc3807e2f1a5dedb7771"
+}

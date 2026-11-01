@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "config_hash": "643228f7fd8efaf35f3e7e06bd9b6fc5486c19b14dc638395c132c6e3995a249",
+  "started": "2026-10-29T22:12:29.641001+00:00",
+  "pid": 1532,
+  "outputs": [
+    "results/policy/coverage/17.json"
+  ],
+  "finished": "2026-10-29T22:12:55.645879+00:00",
+  "error": "/Users/donggi/_projects/experiment-projects/ta4j/experiments/regen-policies/state/policy-coverage-17-error.txt"
+}

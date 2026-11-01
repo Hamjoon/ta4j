@@ -1,0 +1,105 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:247: error: cannot find symbol
+    private static final class SimpleNumFactory implements Num.NumFactory {
+                                                              ^
+  symbol:   class NumFactory
+  location: interface Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:30: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:49: error: incompatible types: SimpleNumFactory cannot be converted to NumFactory
+            return SimpleNumFactory.INSTANCE;
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:253: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:258: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:401: error: cannot find symbol
+        return new SimpleTrade(TradeType.BUY, idx, n(price), n(amount), new ZeroCostModel(), n(0));
+                               ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:405: error: cannot find symbol
+        return new SimpleTrade(TradeType.SELL, idx, n(price), n(amount), new ZeroCostModel(), n(0));
+                               ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:415: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:421: error: cannot find symbol
+        Position pBuy = new Position(TradeType.BUY);
+                                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:422: error: cannot find symbol
+        Position pSell = new Position(TradeType.SELL);
+                                      ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:423: error: cannot find symbol
+        assertEquals(TradeType.BUY, pBuy.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:424: error: cannot find symbol
+        assertEquals(TradeType.SELL, pSell.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:487: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:490: error: cannot find symbol
+        assertEquals(TradeType.BUY, t.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:502: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:518: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:519: error: cannot find symbol
+        SimpleTrade trade = new SimpleTrade(TradeType.BUY, 0, n(10), n(1), new ZeroCostModel(), n(0));
+                                            ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:524: error: cannot find symbol
+        SimpleTrade exit = new SimpleTrade(TradeType.SELL, 2, n(12), n(1), new ZeroCostModel(), n(0));
+                                           ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:533: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:534: error: cannot find symbol
+        SimpleTrade wrong = new SimpleTrade(TradeType.BUY, 0, n(10), n(1), new ZeroCostModel(), n(0));
+                                            ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:540: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:549: error: cannot find symbol
+        SimpleTrade trade = new SimpleTrade(TradeType.BUY, 0, n(10), n(1), dummy, n(0));
+                                            ^
+  symbol:   variable TradeType
+  location: class PositionTest
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+22 errors

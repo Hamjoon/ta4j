@@ -1,0 +1,28 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:21: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.TradingRecord;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:22: error: package org.ta4j.core.trading.rules does not exist
+import org.ta4j.core.trading.rules.BooleanRule;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:58: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(NumFactory::numOf) // use default factory
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:71: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$1> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+        noOpStrategy = new Strategy() {
+                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:79: error: cannot find symbol
+                return new BooleanRule(false);
+                           ^
+  symbol: class BooleanRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:84: error: cannot find symbol
+                return new BooleanRule(false);
+                           ^
+  symbol: class BooleanRule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:156: error: cannot find symbol
+        TradingRecord record = mgr.run(noOpStrategy);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+7 errors

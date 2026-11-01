@@ -1,0 +1,127 @@
+[
+  {
+    "group": "NumericIndicator.min(Number) - basic functionality",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "5"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields value 5 at any index because the constant (5) is lower than the delegate's values (10, 12, 15).",
+        "description": "Constant is smaller than all delegate values \u2013 the min operation should always return the constant."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "20"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields the delegate values (10, 12, 15) at indexes 0,1,2 because the constant (20) is higher than each delegate value.",
+        "description": "Constant is larger than all delegate values \u2013 the min operation should return the delegate's original values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "12"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields values [10, 12, 12] at indexes 0,1,2 respectively (min of delegate and constant 12).",
+        "description": "Constant equals one of the delegate values \u2013 verify that the min operation correctly picks the smaller of the two at each index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-3"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields -3 at every index because the constant (-3) is lower than any positive delegate values.",
+        "description": "Negative constant with positive delegate values \u2013 ensures min works with negative numbers."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields values [0, 0, 0] at indexes 0,1,2 because 0 is lower than delegate values (10,12,15).",
+        "description": "Zero constant, testing boundary where constant is neither positive nor negative."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.min(Number) - mixed delegate values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "13"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields values [10, 12, 13] at indexes 0, 1, 2 respectively (min of delegate values 10, 12, 15 and constant 13).",
+        "description": "Constant lies between the delegate's minimum and maximum \u2013 the min operation should return the delegate value when it is lower and the constant when it is lower than the delegate at that index."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "-2"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields values [-5, -2, -2] at indexes 0, 1, 2 respectively (delegate values are -5, -2, 3).",
+        "description": "Delegate contains negative and positive numbers; constant -2 is higher than the most negative value but lower than the positive value, verifying correct element\u2011wise min selection."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "0"
+          }
+        ],
+        "expected": "Returned NumericIndicator yields values [-5, -2, 0] at indexes 0, 1, 2 respectively (delegate values are -5, -2, 3).",
+        "description": "Zero constant with a delegate that has both negative and positive values \u2013 ensures zero is chosen only when it is the smaller of the two."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.min(Number) - exception handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException (or IllegalArgumentException) thrown because the Number argument is null",
+        "description": "Passing a null Number should cause the method to reject the argument and raise an exception before any indicator is created."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.NaN"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown because NaN is not a valid numeric constant for a ConstantIndicator",
+        "description": "The library does not accept NaN as a constant; the method should validate the value and throw an exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "n",
+            "value": "Double.POSITIVE_INFINITY"
+          }
+        ],
+        "expected": "IllegalArgumentException thrown because infinite values are not allowed for a ConstantIndicator",
+        "description": "Providing an infinite numeric value should be rejected by the constant\u2011creation logic, resulting in an exception."
+      }
+    ]
+  }
+]

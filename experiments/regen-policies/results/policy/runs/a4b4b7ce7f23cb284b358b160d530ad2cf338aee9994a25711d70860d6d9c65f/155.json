@@ -1,0 +1,400 @@
+{
+  "index": 155,
+  "sha": "0af7c7176793823733b7bc4f01fbda0899debf73",
+  "status": "evaluated",
+  "imported": true,
+  "methods": [
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "plus",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#plus",
+      "body_hash": "8f7bb82abf33f54b48c884116b2b907ac6a255ded9ffc74f8a387e2f7d78e4c3",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#plus"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#plus",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|plus"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "minus",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#minus",
+      "body_hash": "bd382549f4f3b51a72c6aeb8c1fd2390bfc28359b3b67bf308805caf35c619d1",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#minus"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#minus",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|minus"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "multipliedBy",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#multipliedBy",
+      "body_hash": "acd0a2d200d9c59c9691bde91c6218b6274fd7c9a9742fe07a8aeb422126038a",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#multipliedBy"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#multipliedBy",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|multipliedBy"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "dividedBy",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#dividedBy",
+      "body_hash": "e088ee142ab89f2b80a907245936e43bd7fc623448c458898b47bfc70c4623c7",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#dividedBy"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#dividedBy",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|dividedBy"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "max",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#max",
+      "body_hash": "2201e8f8f37c1e67acf23317bb7e5517f47fc03ac68ea71ac57d5cc0d4108625",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#max"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#max",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|max"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "min",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#min",
+      "body_hash": "435fc300489c2bdd2529e372db84d773445300ad9525fdacb8334e55aa228283",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#min"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#min",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|min"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "sqrt",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#sqrt",
+      "body_hash": "3b76c843d86ca08069148a06ad6faa7edf8a2806beae1bf34245064d222bfa63",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#sqrt"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#sqrt",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|sqrt"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "abs",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#abs",
+      "body_hash": "d67f37446cdb80d2aea04d129024ddd28005b95cac60eddc215652f33ec235ef",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#abs"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#abs",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|abs"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "squared",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#squared",
+      "body_hash": "389ae4abab30e4a13fc09f61f2aeaae637401cdcdebdc7cd21152912ec747733",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#squared"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#squared",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|squared"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "indicators",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#indicators",
+      "body_hash": "788a6615ce9a20da738a09cb325bf02e9679f8369c9688f44af3ab2fb9986003",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#indicators"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#indicators",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|indicators"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "rules",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#rules",
+      "body_hash": "8b65d846bbb8b24b8523e426f11b2c2806ab8fe850c526ca5e51f70e9767df53",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#rules"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#rules",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|rules"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "previous",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#previous",
+      "body_hash": "c7162564e059db0ea71eafb1a0420d809443727070c6266e5b39a78121534530",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#previous"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#previous",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|previous"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "getValue",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#getValue",
+      "body_hash": "9b692e34c5bdea87d5aee6880549dcfe3329af7ed1051640e66a9c0534e4d8ad",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#getValue"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#getValue",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|getValue"
+    },
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+      "method": "barSeries",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#barSeries",
+      "body_hash": "67f77def56df72ac7489032b2eed5d1ddf591a1ce08db61128b1be217df9a269",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "8c090f33118af94412ebae556df75264e4310a3689f71da784685051c96ab0b7",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicatorTest#barSeries"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "a4b4b7ce7f23cb284b358b160d530ad2cf338aee9994a25711d70860d6d9c65f",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.indicators.numeric.NumericIndicatorTest#barSeries",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/numeric/NumericIndicatorTest.java|org.ta4j.core.indicators.numeric.NumericIndicatorTest|barSeries"
+    }
+  ]
+}

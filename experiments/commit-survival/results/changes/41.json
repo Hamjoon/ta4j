@@ -1,0 +1,26 @@
+{
+  "index": 41,
+  "sha": "64896b0d621e2b3d9aa4e161560df45ec8d7dedc",
+  "parent": "6cc3a55af537c7f5212d5e298214cf6546f86a92",
+  "pre_image": {},
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java": [
+      42,
+      43,
+      46,
+      48,
+      49,
+      50,
+      61,
+      62,
+      64,
+      69,
+      71,
+      72,
+      73,
+      75,
+      80
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java\nnew file mode 100644\nindex 000000000..f27c8b4ac\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/AverageIndicator.java\n@@ -0,0 +1,82 @@\n+/*\n+ * The MIT License (MIT)\n+ *\n+ * Copyright (c) 2017-2024 Ta4j Organization & respective\n+ * authors (see AUTHORS)\n+ *\n+ * Permission is hereby granted, free of charge, to any person obtaining a copy of\n+ * this software and associated documentation files (the \"Software\"), to deal in\n+ * the Software without restriction, including without limitation the rights to\n+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\n+ * the Software, and to permit persons to whom the Software is furnished to do so,\n+ * subject to the following conditions:\n+ *\n+ * The above copyright notice and this permission notice shall be included in all\n+ * copies or substantial portions of the Software.\n+ *\n+ * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\n+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\n+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\n+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n+ */\n+package org.ta4j.core.indicators.helpers;\n+\n+import org.ta4j.core.Indicator;\n+import org.ta4j.core.indicators.CachedIndicator;\n+import org.ta4j.core.num.Num;\n+\n+import java.util.Arrays;\n+import java.util.List;\n+\n+/**\n+ * Indicator to calculate the average of a list of other indicators.\n+ */\n+public class AverageIndicator extends CachedIndicator<Num> {\n+    private final List<Indicator<Num>> indicators;\n+    private final int unstableBars;\n+\n+    @SafeVarargs\n+    public AverageIndicator(Indicator<Num>... indicators) {\n+        this(Arrays.asList(indicators));\n+    }\n+\n+    public AverageIndicator(List<Indicator<Num>> indicators) {\n+        super(validateAndGetFirst(indicators));\n+\n+        this.indicators = indicators;\n+        this.unstableBars = indicators.stream().mapToInt(Indicator::getCountOfUnstableBars).max().orElse(0);\n+    }\n+\n+    /**\n+     * Validates that the given list of indicators is not null or empty and returns\n+     * the first indicator.\n+     *\n+     * @param indicators the list of indicators to validate\n+     * @return the first indicator in the list\n+     * @throws IllegalArgumentException if the list is null or empty\n+     */\n+    private static Indicator<Num> validateAndGetFirst(List<Indicator<Num>> indicators) {\n+        if (indicators == null || indicators.isEmpty()) {\n+            throw new IllegalArgumentException(\"At least one indicator must be provided\");\n+        }\n+        return indicators.getFirst();\n+    }\n+\n+    @Override\n+    protected Num calculate(int index) {\n+        Num value = getBarSeries().numFactory().zero();\n+\n+        for (Indicator<Num> indicator : indicators) {\n+            value = value.plus(indicator.getValue(index));\n+        }\n+\n+        return value.dividedBy(getBarSeries().numFactory().numOf(indicators.size()));\n+    }\n+\n+    @Override\n+    public int getCountOfUnstableBars() {\n+        return unstableBars;\n+    }\n+}"
+}

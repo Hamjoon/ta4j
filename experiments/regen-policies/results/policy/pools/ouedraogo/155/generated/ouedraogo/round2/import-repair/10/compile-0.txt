@@ -1,0 +1,152 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:18: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.BaseBarSeries;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:19: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.BasePosition;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:20: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.BaseTradingRecord;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:21: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.Trade;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:22: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.TradeType;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:23: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.BaseTrade;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:47: error: cannot find symbol
+        BaseBarSeries bs = new BaseBarSeries("test-series");
+        ^
+  symbol:   class BaseBarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:47: error: cannot find symbol
+        BaseBarSeries bs = new BaseBarSeries("test-series");
+                               ^
+  symbol:   class BaseBarSeries
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:51: error: cannot find symbol
+            Bar bar = new Bar(time, n, n, n, n, DecimalNum.ZERO);
+                                                          ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:51: error: Bar is abstract; cannot be instantiated
+            Bar bar = new Bar(time, n, n, n, n, DecimalNum.ZERO);
+                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:125: error: cannot find symbol
+        TradingRecord tr = new BaseTradingRecord(TradeType.BUY);
+                               ^
+  symbol:   class BaseTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:125: error: cannot find symbol
+        TradingRecord tr = new BaseTradingRecord(TradeType.BUY);
+                                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:127: error: cannot find symbol
+        tr.operate(0, DecimalNum.valueOf(1), DecimalNum.ONE);
+                                                       ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:128: error: cannot find symbol
+        tr.operate(2, DecimalNum.valueOf(3), DecimalNum.ONE);
+                                                       ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:130: error: cannot find symbol
+        tr.operate(3, DecimalNum.valueOf(4), DecimalNum.ONE);
+                                                       ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:131: error: cannot find symbol
+        tr.operate(4, DecimalNum.valueOf(5), DecimalNum.ONE);
+                                                       ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:150: error: cannot find symbol
+        TradingRecord tr = new BaseTradingRecord(TradeType.BUY);
+                               ^
+  symbol:   class BaseTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:150: error: cannot find symbol
+        TradingRecord tr = new BaseTradingRecord(TradeType.BUY);
+                                                 ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:152: error: cannot find symbol
+        tr.operate(1, DecimalNum.valueOf(2), DecimalNum.ONE);
+                                                       ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:178: error: cannot find symbol
+        Position openPos = new BasePosition(TradeType.BUY);
+                               ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:178: error: cannot find symbol
+        Position openPos = new BasePosition(TradeType.BUY);
+                                            ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:180: error: cannot find symbol
+        openPos.operate(0, DecimalNum.valueOf(1), DecimalNum.ONE);
+                                                            ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:211: error: cannot find symbol
+        TradingRecord emptyRecord = new BaseTradingRecord(TradeType.BUY);
+                                        ^
+  symbol:   class BaseTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:211: error: cannot find symbol
+        TradingRecord emptyRecord = new BaseTradingRecord(TradeType.BUY);
+                                                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:230: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+        ^
+  symbol:   class Trade
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:230: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:230: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                                    ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:231: error: cannot find symbol
+                DecimalNum.ONE, entryIdx);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:233: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.getBar(exitIdx).getClosePrice(),
+        ^
+  symbol:   class Trade
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:233: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.getBar(exitIdx).getClosePrice(),
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:233: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.getBar(exitIdx).getClosePrice(),
+                                   ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:234: error: cannot find symbol
+                DecimalNum.ONE, exitIdx);
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:236: error: cannot find symbol
+        return new BasePosition(entry, exit);
+                   ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+33 errors

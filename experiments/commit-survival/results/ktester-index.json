@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "seconds": 6.997,
+  "UNREACHABLE_TARGETS": 2604,
+  "counts": {
+    "source": {
+      "classes": 268,
+      "methods": 1157,
+      "constructors": 374
+    },
+    "test": {
+      "classes": 230,
+      "methods": 867,
+      "constructors": 194
+    }
+  }
+}

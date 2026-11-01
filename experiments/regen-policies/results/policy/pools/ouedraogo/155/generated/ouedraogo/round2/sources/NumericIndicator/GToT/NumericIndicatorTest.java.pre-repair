@@ -1,0 +1,524 @@
+package org.ta4j.core.indicators.numeric;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Indicator;
+import org.ta4j.core.Rule;
+import org.ta4j.core.indicators.helpers.ConstantIndicator;
+import org.ta4j.core.num.Num;
+
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.util.Collections;
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link NumericIndicator}.
+ *
+ * <p>
+ * The test suite follows the steps requested:
+ *
+ * <ol>
+ *   <li>List of public methods (see {@link #listPublicMethods()}).</li>
+ *   <li>Basic test for each method checking the normal behaviour.</li>
+ *   <li>Identification of edge‑cases / exceptional situations.</li>
+ *   <li>Specific tests for those edge‑cases.</li>
+ *   <li>All tests merged into this single file.</li>
+ * </ol>
+ *
+ * <p>
+ * Because the original library does not expose concrete implementations of
+ * {@link BarSeries} or {@link Num}, lightweight test doubles are provided
+ * inside this file:
+ *
+ * <ul>
+ *   <li>{@link SimpleNum} – a minimal {@link Num} implementation based on
+ *       {@link BigDecimal}.</li>
+ *   <li>{@link SimpleNumFactory} – creates {@link SimpleNum} instances.</li>
+ *   <li>{@link SimpleBarSeries} – a very small {@link BarSeries}
+ *       implementation that only supplies a {@link SimpleNumFactory} and a
+ *       configurable bar count.</li>
+ * </ul>
+ *
+ * These doubles are sufficient for the indicators used in the tests because
+ * they only depend on the numeric values, not on real market data.
+ */
+public class NumericIndicatorTest {
+
+    /* ---------------------------------------------------------------------- */
+    /*  Helper classes (light‑weight test doubles)                             */
+    /* ---------------------------------------------------------------------- */
+
+    /** Minimal {@link Num} implementation based on {@link BigDecimal}. */
+    private static final class SimpleNum implements Num {
+
+        private final BigDecimal value;
+
+        SimpleNum(BigDecimal v) {
+            this.value = v;
+        }
+
+        SimpleNum(Number n) {
+            this.value = new BigDecimal(n.toString());
+        }
+
+        @Override public Number getDelegate() { return value; }
+        @Override public NumFactory getNumFactory() { return new SimpleNumFactory(); }
+        @Override public String getName() { return value.toPlainString(); }
+
+        /* ---- arithmetic --------------------------------------------------- */
+        @Override public Num plus(Num augend) { return new SimpleNum(value.add(((SimpleNum) augend).value)); }
+        @Override public Num minus(Num subtrahend) { return new SimpleNum(value.subtract(((SimpleNum) subtrahend).value)); }
+        @Override public Num multipliedBy(Num multiplicand) { return new SimpleNum(value.multiply(((SimpleNum) multiplicand).value)); }
+        @Override public Num dividedBy(Num divisor) {
+            if (divisor.isZero()) {
+                throw new ArithmeticException("Division by zero");
+            }
+            return new SimpleNum(value.divide(((SimpleNum) divisor).value, MathContext.DECIMAL128));
+        }
+        @Override public Num remainder(Num divisor) { return new SimpleNum(value.remainder(((SimpleNum) divisor).value)); }
+        @Override public Num floor() { return new SimpleNum(value.setScale(0, BigDecimal.ROUND_FLOOR)); }
+        @Override public Num ceil() { return new SimpleNum(value.setScale(0, BigDecimal.ROUND_CEILING)); }
+        @Override public Num pow(int n) { return new SimpleNum(value.pow(n)); }
+        @Override public Num pow(Num n) { return new SimpleNum(value.pow(((SimpleNum) n).value.intValue())); }
+        @Override public Num log() { return new SimpleNum(BigDecimal.valueOf(Math.log(value.doubleValue()))); }
+        @Override public Num exp() { return new SimpleNum(BigDecimal.valueOf(Math.exp(value.doubleValue()))); }
+        @Override public Num sqrt() { return sqrt(MathContext.DECIMAL128); }
+        @Override public Num sqrt(MathContext mc) {
+            if (value.compareTo(BigDecimal.ZERO) < 0) {
+                // According to ta4j’s Num contract, sqrt of a negative number yields NaN
+                return new SimpleNum(Double.NaN);
+            }
+            return new SimpleNum(new BigDecimal(Math.sqrt(value.doubleValue()), mc));
+        }
+        @Override public Num abs() { return new SimpleNum(value.abs()); }
+        @Override public Num negate() { return new SimpleNum(value.negate()); }
+
+        /* ---- comparisons -------------------------------------------------- */
+        @Override public boolean isZero() { return value.compareTo(BigDecimal.ZERO) == 0; }
+        @Override public boolean isPositive() { return value.compareTo(BigDecimal.ZERO) > 0; }
+        @Override public boolean isPositiveOrZero() { return value.compareTo(BigDecimal.ZERO) >= 0; }
+        @Override public boolean isNegative() { return value.compareTo(BigDecimal.ZERO) < 0; }
+        @Override public boolean isNegativeOrZero() { return value.compareTo(BigDecimal.ZERO) <= 0; }
+        @Override public boolean isEqual(Num other) { return value.compareTo(((SimpleNum) other).value) == 0; }
+        @Override public boolean isGreaterThan(Num other) { return value.compareTo(((SimpleNum) other).value) > 0; }
+        @Override public boolean isGreaterThanOrEqual(Num other) { return value.compareTo(((SimpleNum) other).value) >= 0; }
+        @Override public boolean isLessThan(Num other) { return value.compareTo(((SimpleNum) other).value) < 0; }
+        @Override public boolean isLessThanOrEqual(Num other) { return value.compareTo(((SimpleNum) other).value) <= 0; }
+        @Override public Num min(Num other) { return isLessThan(other) ? this : other; }
+        @Override public Num max(Num other) { return isGreaterThan(other) ? this : other; }
+
+        /* ---- misc ---------------------------------------------------------- */
+        @Override public boolean isNaN() { return Double.isNaN(value.doubleValue()); }
+        @Override public int intValue() { return value.intValue(); }
+        @Override public long longValue() { return value.longValue(); }
+        @Override public float floatValue() { return value.floatValue(); }
+        @Override public double doubleValue() { return value.doubleValue(); }
+        @Override public BigDecimal bigDecimalValue() { return value; }
+
+        @Override public int hashCode() { return value.hashCode(); }
+        @Override public String toString() { return value.toPlainString(); }
+        @Override public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (!(obj instanceof SimpleNum)) return false;
+            return value.compareTo(((SimpleNum) obj).value) == 0;
+        }
+
+        /* ---- required by the interface but not needed for the tests -------- */
+        @Override public int compareTo(Num o) { return value.compareTo(((SimpleNum) o).value); }
+    }
+
+    /** Factory used by {@link SimpleBarSeries}. */
+    private static final class SimpleNumFactory {
+        SimpleNum numOf(Number n) { return new SimpleNum(n); }
+    }
+
+    /** Very small {@link BarSeries} implementation – only the methods used by
+     *  the indicators under test are provided. */
+    private static final class SimpleBarSeries implements BarSeries {
+
+        private final SimpleNumFactory numFactory = new SimpleNumFactory();
+        private final int barCount;
+
+        SimpleBarSeries(int barCount) {
+            this.barCount = barCount;
+        }
+
+        @Override public SimpleNumFactory numFactory() { return numFactory; }
+
+        /* The remaining methods are either not used by the test suite or
+         * return harmless defaults. */
+        @Override public org.ta4j.core.BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+        @Override public String getName() { return "simple-series"; }
+        @Override public org.ta4j.core.Bar getBar(int i) { throw new UnsupportedOperationException(); }
+        @Override public int getBarCount() { return barCount; }
+        @Override public List<org.ta4j.core.Bar> getBarData() { return Collections.emptyList(); }
+        @Override public int getBeginIndex() { return 0; }
+        @Override public int getEndIndex() { return barCount - 1; }
+        @Override public int getMaximumBarCount() { return Integer.MAX_VALUE; }
+        @Override public void setMaximumBarCount(int maximumBarCount) { /* no‑op */ }
+        @Override public int getRemovedBarsCount() { return 0; }
+        @Override public void addBar(org.ta4j.core.Bar bar) { throw new UnsupportedOperationException(); }
+        @Override public void addBar(org.ta4j.core.Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) { throw new UnsupportedOperationException(); }
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { throw new UnsupportedOperationException(); }
+        @Override public void addPrice(Num price) { throw new UnsupportedOperationException(); }
+        @Override public void addPrice(Number price) { throw new UnsupportedOperationException(); }
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw new UnsupportedOperationException(); }
+        @Override public String getSeriesPeriodDescription() { return ""; }
+        @Override public String getSeriesPeriodDescriptionInSystemTimeZone() { return ""; }
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  Re‑usable constants                                                   */
+    /* ---------------------------------------------------------------------- */
+
+    private NumericIndicator five;
+    private NumericIndicator three;
+    private NumericIndicator minusTwo;
+    private BarSeries dummySeries;   // used only for static factories
+
+    @Before
+    public void setUp() {
+        dummySeries = new SimpleBarSeries(10);
+        five = NumericIndicator.of(new ConstantIndicator<>(dummySeries, new SimpleNum(5)));
+        three = NumericIndicator.of(new ConstantIndicator<>(dummySeries, new SimpleNum(3)));
+        minusTwo = NumericIndicator.of(new ConstantIndicator<>(dummySeries, new SimpleNum(-2)));
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  1.  List of public methods (for documentation)                        */
+    /* ---------------------------------------------------------------------- */
+
+    /**
+     * Returns a string representation of all public methods of
+     * {@link NumericIndicator}.  The method is not used in the test execution;
+     * it merely documents the API that is exercised.
+     */
+    @SuppressWarnings("unused")
+    private String listPublicMethods() {
+        return ""
+                + "static NumericIndicator of(Indicator<Num> delegate)\n"
+                + "static NumericIndicator closePrice(BarSeries bs)\n"
+                + "static NumericIndicator volume(BarSeries bs)\n"
+                + "Indicator<Num> delegate()\n"
+                + "NumericIndicator plus(Indicator<Num> other)\n"
+                + "NumericIndicator plus(Number n)\n"
+                + "NumericIndicator minus(Indicator<Num> other)\n"
+                + "NumericIndicator minus(Number n)\n"
+                + "NumericIndicator multipliedBy(Indicator<Num> other)\n"
+                + "NumericIndicator multipliedBy(Number n)\n"
+                + "NumericIndicator dividedBy(Indicator<Num> other)\n"
+                + "NumericIndicator dividedBy(Number n)\n"
+                + "NumericIndicator min(Indicator<Num> other)\n"
+                + "NumericIndicator min(Number n)\n"
+                + "NumericIndicator max(Indicator<Num> other)\n"
+                + "NumericIndicator max(Number n)\n"
+                + "NumericIndicator abs()\n"
+                + "NumericIndicator sqrt()\n"
+                + "NumericIndicator squared()\n"
+                + "NumericIndicator sma(int barCount)\n"
+                + "NumericIndicator ema(int barCount)\n"
+                + "NumericIndicator stddev(int barCount)\n"
+                + "NumericIndicator highest(int barCount)\n"
+                + "NumericIndicator lowest(int barCount)\n"
+                + "NumericIndicator previous(int barCount)\n"
+                + "NumericIndicator previous()\n"
+                + "Rule crossedOver(Indicator<Num> other)\n"
+                + "Rule crossedOver(Number n)\n"
+                + "Rule crossedUnder(Indicator<Num> other)\n"
+                + "Rule crossedUnder(Number n)\n"
+                + "Rule isGreaterThan(Indicator<Num> other)\n"
+                + "Rule isGreaterThan(Number n)\n"
+                + "Rule isLessThan(Indicator<Num> other)\n"
+                + "Rule isLessThan(Number n)\n"
+                + "Num getValue(int index)\n"
+                + "int getCountOfUnstableBars()\n"
+                + "BarSeries getBarSeries()\n"
+                + "String toString()\n";
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  2.  Basic functionality tests                                         */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testOfFactory() {
+        Indicator<Num> delegate = new ConstantIndicator<>(dummySeries, new SimpleNum(10));
+        NumericIndicator ni = NumericIndicator.of(delegate);
+        assertNotNull(ni);
+        assertSame(delegate, ni.delegate());
+    }
+
+    @Test
+    public void testClosePriceFactory() {
+        NumericIndicator ci = NumericIndicator.closePrice(dummySeries);
+        assertNotNull(ci);
+        assertTrue(ci.delegate() instanceof org.ta4j.core.indicators.helpers.ClosePriceIndicator);
+    }
+
+    @Test
+    public void testVolumeFactory() {
+        NumericIndicator vi = NumericIndicator.volume(dummySeries);
+        assertNotNull(vi);
+        assertTrue(vi.delegate() instanceof org.ta4j.core.indicators.helpers.VolumeIndicator);
+    }
+
+    @Test
+    public void testPlusIndicator() {
+        NumericIndicator result = five.plus(three);
+        assertEquals(new SimpleNum(8), result.getValue(0));
+    }
+
+    @Test
+    public void testPlusNumber() {
+        NumericIndicator result = five.plus(2);
+        assertEquals(new SimpleNum(7), result.getValue(0));
+    }
+
+    @Test
+    public void testMinusIndicator() {
+        NumericIndicator result = five.minus(three);
+        assertEquals(new SimpleNum(2), result.getValue(0));
+    }
+
+    @Test
+    public void testMinusNumber() {
+        NumericIndicator result = five.minus(2);
+        assertEquals(new SimpleNum(3), result.getValue(0));
+    }
+
+    @Test
+    public void testMultipliedByIndicator() {
+        NumericIndicator result = five.multipliedBy(three);
+        assertEquals(new SimpleNum(15), result.getValue(0));
+    }
+
+    @Test
+    public void testMultipliedByNumber() {
+        NumericIndicator result = five.multipliedBy(2);
+        assertEquals(new SimpleNum(10), result.getValue(0));
+    }
+
+    @Test
+    public void testDividedByIndicator() {
+        NumericIndicator result = five.dividedBy(three);
+        // 5 / 3 = 1.666..., rounded by Decimal128 => approx 1.6666666666666667
+        assertEquals(new SimpleNum(5).dividedBy(new SimpleNum(3)), result.getValue(0));
+    }
+
+    @Test
+    public void testDividedByNumber() {
+        NumericIndicator result = five.dividedBy(2);
+        assertEquals(new SimpleNum(2.5), result.getValue(0));
+    }
+
+    @Test
+    public void testMinIndicator() {
+        NumericIndicator result = five.min(three);
+        assertEquals(new SimpleNum(3), result.getValue(0));
+    }
+
+    @Test
+    public void testMinNumber() {
+        NumericIndicator result = five.min(4);
+        assertEquals(new SimpleNum(4), result.getValue(0));
+    }
+
+    @Test
+    public void testMaxIndicator() {
+        NumericIndicator result = five.max(three);
+        assertEquals(new SimpleNum(5), result.getValue(0));
+    }
+
+    @Test
+    public void testMaxNumber() {
+        NumericIndicator result = five.max(7);
+        assertEquals(new SimpleNum(7), result.getValue(0));
+    }
+
+    @Test
+    public void testAbs() {
+        NumericIndicator result = minusTwo.abs();
+        assertEquals(new SimpleNum(2), result.getValue(0));
+    }
+
+    @Test
+    public void testSqrt() {
+        NumericIndicator result = five.sqrt();
+        assertEquals(new SimpleNum(Math.sqrt(5)), result.getValue(0));
+    }
+
+    @Test
+    public void testSquared() {
+        NumericIndicator result = five.squared();
+        assertEquals(new SimpleNum(25), result.getValue(0));
+    }
+
+    @Test
+    public void testSmaConstant() {
+        // SMA of a constant series must equal the constant
+        NumericIndicator sma = five.sma(3);
+        assertEquals(new SimpleNum(5), sma.getValue(0));
+    }
+
+    @Test
+    public void testEmaConstant() {
+        NumericIndicator ema = five.ema(3);
+        assertEquals(new SimpleNum(5), ema.getValue(0));
+    }
+
+    @Test
+    public void testStdDevConstant() {
+        // Standard deviation of a constant series is 0
+        NumericIndicator std = five.stddev(3);
+        assertEquals(new SimpleNum(0), std.getValue(0));
+    }
+
+    @Test
+    public void testHighestConstant() {
+        NumericIndicator hi = five.highest(3);
+        assertEquals(new SimpleNum(5), hi.getValue(0));
+    }
+
+    @Test
+    public void testLowestConstant() {
+        NumericIndicator lo = five.lowest(3);
+        assertEquals(new SimpleNum(5), lo.getValue(0));
+    }
+
+    @Test
+    public void testPreviousDefault() {
+        NumericIndicator prev = five.previous();
+        // previous(1) of a constant indicator returns the same constant
+        assertEquals(new SimpleNum(5), prev.getValue(0));
+    }
+
+    @Test
+    public void testPreviousWithBarCount() {
+        NumericIndicator prev = five.previous(2);
+        assertEquals(new SimpleNum(5), prev.getValue(0));
+    }
+
+    @Test
+    public void testCrossedOverIndicator() {
+        Rule rule = five.crossedOver(three);
+        assertNotNull(rule);
+        assertTrue(rule instanceof org.ta4j.core.rules.CrossedUpIndicatorRule);
+    }
+
+    @Test
+    public void testCrossedOverNumber() {
+        Rule rule = five.crossedOver(3);
+        assertNotNull(rule);
+        assertTrue(rule instanceof org.ta4j.core.rules.CrossedUpIndicatorRule);
+    }
+
+    @Test
+    public void testCrossedUnderIndicator() {
+        Rule rule = five.crossedUnder(three);
+        assertNotNull(rule);
+        assertTrue(rule instanceof org.ta4j.core.rules.CrossedDownIndicatorRule);
+    }
+
+    @Test
+    public void testCrossedUnderNumber() {
+        Rule rule = five.crossedUnder(3);
+        assertNotNull(rule);
+        assertTrue(rule instanceof org.ta4j.core.rules.CrossedDownIndicatorRule);
+    }
+
+    @Test
+    public void testIsGreaterThanIndicator() {
+        Rule rule = five.isGreaterThan(three);
+        assertTrue(rule.isSatisfied(0));
+    }
+
+    @Test
+    public void testIsGreaterThanNumber() {
+        Rule rule = five.isGreaterThan(3);
+        assertTrue(rule.isSatisfied(0));
+    }
+
+    @Test
+    public void testIsLessThanIndicator() {
+        Rule rule = three.isLessThan(five);
+        assertTrue(rule.isSatisfied(0));
+    }
+
+    @Test
+    public void testIsLessThanNumber() {
+        Rule rule = three.isLessThan(5);
+        assertTrue(rule.isSatisfied(0));
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  3.  Edge‑case & exception identification                               */
+    /* ---------------------------------------------------------------------- */
+
+    /**
+     * Division by zero should raise an {@link ArithmeticException}
+     * (the behaviour of {@link SimpleNum} mirrors the contract of the
+     * real {@code Num} implementation used by ta4j).
+     */
+    @Test(expected = ArithmeticException.class)
+    public void testDividedByZeroNumber() {
+        five.dividedBy(0);
+    }
+
+    /**
+     * Square‑root of a negative value should produce a NaN {@link Num}
+     * according to the Num contract.
+     */
+    @Test
+    public void testSqrtNegativeNumber() {
+        NumericIndicator result = minusTwo.sqrt();
+        assertTrue(result.getValue(0).isNaN());
+    }
+
+    /**
+     * Adding a {@code null} indicator must result in a {@link NullPointerException}
+     * because the implementation does not guard against it.
+     */
+    @Test(expected = NullPointerException.class)
+    public void testPlusNullIndicator() {
+        five.plus((Indicator<Num>) null);
+    }
+
+    /**
+     * SMA with a bar count larger than the series length should still compute
+     * a value (ta4j returns the average of the available points).  The test
+     * ensures no exception is thrown.
+     */
+    @Test
+    public void testSmaBarCountLargerThanSeries() {
+        NumericIndicator sma = five.sma(20); // series has only 10 bars
+        assertNotNull(sma.getValue(0));
+        // For a constant series the result must still be the constant value.
+        assertEquals(new SimpleNum(5), sma.getValue(0));
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  4.  Additional sanity checks (toString, getBarSeries, etc.)          */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testToStringDelegates() {
+        String s = five.toString();
+        assertEquals(five.delegate().toString(), s);
+    }
+
+    @Test
+    public void testGetBarSeries() {
+        assertSame(dummySeries, five.getBarSeries());
+    }
+
+    @Test
+    public void testGetCountOfUnstableBars() {
+        // The wrapper itself never adds instability
+        assertEquals(0, five.getCountOfUnstableBars());
+    }
+}

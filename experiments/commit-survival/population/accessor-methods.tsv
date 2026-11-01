@@ -1,0 +1,904 @@
+class	method	line	accessor	body
+org.ta4j.core.BaseBar	builder	301	false	
+org.ta4j.core.BaseBar	builder	313	false	
+org.ta4j.core.BaseBar	builder	326	false	
+org.ta4j.core.BaseBar	getTimePeriod	334	true	{ return timePeriod; }
+org.ta4j.core.BaseBar	getBeginTime	343	true	{ return beginTime; }
+org.ta4j.core.BaseBar	getEndTime	348	true	{ return endTime; }
+org.ta4j.core.BaseBar	getOpenPrice	353	true	{ return openPrice; }
+org.ta4j.core.BaseBar	getHighPrice	358	true	{ return highPrice; }
+org.ta4j.core.BaseBar	getLowPrice	363	true	{ return lowPrice; }
+org.ta4j.core.BaseBar	getClosePrice	368	true	{ return closePrice; }
+org.ta4j.core.BaseBar	getVolume	373	true	{ return volume; }
+org.ta4j.core.BaseBar	getAmount	378	true	{ return amount; }
+org.ta4j.core.BaseBar	getTrades	383	true	{ return trades; }
+org.ta4j.core.BaseBar	addTrade	388	false	
+org.ta4j.core.BaseBar	addPrice	397	false	
+org.ta4j.core.BaseBar	toString	411	false	
+org.ta4j.core.BaseBar	hashCode	429	true	{ return Objects.hash(beginTime, endTime, timePeriod, openPrice, highPrice, lowPrice, closePrice, volume, amount, trades); }
+org.ta4j.core.BaseBar	equals	435	false	
+org.ta4j.core.BaseBarBuilder	timePeriod	54	false	
+org.ta4j.core.BaseBarBuilder	endTime	63	false	
+org.ta4j.core.BaseBarBuilder	openPrice	72	false	
+org.ta4j.core.BaseBarBuilder	highPrice	81	false	
+org.ta4j.core.BaseBarBuilder	lowPrice	90	false	
+org.ta4j.core.BaseBarBuilder	closePrice	99	false	
+org.ta4j.core.BaseBarBuilder	volume	108	false	
+org.ta4j.core.BaseBarBuilder	amount	117	false	
+org.ta4j.core.BaseBarBuilder	trades	126	false	
+org.ta4j.core.BaseBarBuilder	build	131	false	
+org.ta4j.core.BaseBarConvertibleBuilder	timePeriod	56	false	
+org.ta4j.core.BaseBarConvertibleBuilder	endTime	62	false	
+org.ta4j.core.BaseBarConvertibleBuilder	trades	68	false	
+org.ta4j.core.BaseBarConvertibleBuilder	openPrice	78	false	
+org.ta4j.core.BaseBarConvertibleBuilder	highPrice	87	false	
+org.ta4j.core.BaseBarConvertibleBuilder	lowPrice	96	false	
+org.ta4j.core.BaseBarConvertibleBuilder	closePrice	105	false	
+org.ta4j.core.BaseBarConvertibleBuilder	volume	114	false	
+org.ta4j.core.BaseBarConvertibleBuilder	amount	123	false	
+org.ta4j.core.BaseBarSeries	getSubSeries	221	false	
+org.ta4j.core.BaseBarSeries	num	239	false	
+org.ta4j.core.BaseBarSeries	getName	280	true	{ return name; }
+org.ta4j.core.BaseBarSeries	getBar	285	false	
+org.ta4j.core.BaseBarSeries	getBarCount	308	false	
+org.ta4j.core.BaseBarSeries	getBarData	317	true	{ return bars; }
+org.ta4j.core.BaseBarSeries	getBeginIndex	322	true	{ return seriesBeginIndex; }
+org.ta4j.core.BaseBarSeries	getEndIndex	327	true	{ return seriesEndIndex; }
+org.ta4j.core.BaseBarSeries	getMaximumBarCount	332	true	{ return maximumBarCount; }
+org.ta4j.core.BaseBarSeries	setMaximumBarCount	337	false	
+org.ta4j.core.BaseBarSeries	getRemovedBarsCount	349	true	{ return removedBarsCount; }
+org.ta4j.core.BaseBarSeries	addBar	359	false	
+org.ta4j.core.BaseBarSeries	addBar	390	false	
+org.ta4j.core.BaseBarSeries	addBar	395	false	
+org.ta4j.core.BaseBarSeries	addBar	401	false	
+org.ta4j.core.BaseBarSeries	addBar	408	false	
+org.ta4j.core.BaseBarSeries	addBar	414	false	
+org.ta4j.core.BaseBarSeries	addTrade	420	false	
+org.ta4j.core.BaseBarSeries	addTrade	425	false	
+org.ta4j.core.BaseBarSeries	addTrade	430	false	
+org.ta4j.core.BaseBarSeries	addPrice	435	false	
+org.ta4j.core.BaseBarSeriesBuilder	setDefaultNum	57	true	{ BaseBarSeriesBuilder.defaultNum = defaultNum; }
+org.ta4j.core.BaseBarSeriesBuilder	setDefaultNum	66	true	{ BaseBarSeriesBuilder.defaultNum = defaultFunction.apply(0); }
+org.ta4j.core.BaseBarSeriesBuilder	build	78	false	
+org.ta4j.core.BaseBarSeriesBuilder	setConstrained	96	true	{ this.constrained = constrained; return this; }
+org.ta4j.core.BaseBarSeriesBuilder	withName	105	false	
+org.ta4j.core.BaseBarSeriesBuilder	withBars	114	false	
+org.ta4j.core.BaseBarSeriesBuilder	withMaxBarCount	123	false	
+org.ta4j.core.BaseBarSeriesBuilder	withNumTypeOf	133	false	
+org.ta4j.core.BaseBarSeriesBuilder	withNumTypeOf	143	false	
+org.ta4j.core.BaseBarSeriesBuilder	withNumTypeOf	154	false	
+org.ta4j.core.BaseStrategy	getName	112	true	{ return name; }
+org.ta4j.core.BaseStrategy	getEntryRule	117	true	{ return entryRule; }
+org.ta4j.core.BaseStrategy	getExitRule	122	true	{ return exitRule; }
+org.ta4j.core.BaseStrategy	getUnstableBars	127	true	{ return unstableBars; }
+org.ta4j.core.BaseStrategy	setUnstableBars	132	true	{ this.unstableBars = unstableBars; }
+org.ta4j.core.BaseStrategy	isUnstableAt	137	true	{ return index < unstableBars; }
+org.ta4j.core.BaseStrategy	shouldEnter	142	false	
+org.ta4j.core.BaseStrategy	shouldExit	149	false	
+org.ta4j.core.BaseStrategy	and	156	false	
+org.ta4j.core.BaseStrategy	or	163	false	
+org.ta4j.core.BaseStrategy	opposite	170	false	
+org.ta4j.core.BaseStrategy	and	175	false	
+org.ta4j.core.BaseStrategy	or	181	false	
+org.ta4j.core.BaseStrategy	traceShouldEnter	193	false	
+org.ta4j.core.BaseStrategy	traceShouldExit	205	false	
+org.ta4j.core.BaseTradingRecord	getName	189	true	{ return name; }
+org.ta4j.core.BaseTradingRecord	getStartingType	194	true	{ return startingType; }
+org.ta4j.core.BaseTradingRecord	getCurrentPosition	199	true	{ return currentPosition; }
+org.ta4j.core.BaseTradingRecord	operate	204	false	
+org.ta4j.core.BaseTradingRecord	enter	215	false	
+org.ta4j.core.BaseTradingRecord	exit	224	false	
+org.ta4j.core.BaseTradingRecord	getPositions	233	true	{ return positions; }
+org.ta4j.core.BaseTradingRecord	getLastTrade	238	false	
+org.ta4j.core.BaseTradingRecord	getLastTrade	246	false	
+org.ta4j.core.BaseTradingRecord	getLastEntry	256	false	
+org.ta4j.core.BaseTradingRecord	getLastExit	264	false	
+org.ta4j.core.BaseTradingRecord	getStartIndex	272	true	{ return startIndex; }
+org.ta4j.core.BaseTradingRecord	getEndIndex	277	true	{ return endIndex; }
+org.ta4j.core.BaseTradingRecord	toString	316	false	
+org.ta4j.core.Position	getEntry	136	true	{ return entry; }
+org.ta4j.core.Position	getExit	143	true	{ return exit; }
+org.ta4j.core.Position	equals	147	false	
+org.ta4j.core.Position	hashCode	157	true	{ return Objects.hash(entry, exit); }
+org.ta4j.core.Position	operate	169	false	
+org.ta4j.core.Position	operate	182	false	
+org.ta4j.core.Position	isClosed	200	true	{ return (entry != null) && (exit != null); }
+org.ta4j.core.Position	isOpened	207	true	{ return (entry != null) && (exit == null); }
+org.ta4j.core.Position	isNew	214	true	{ return (entry == null) && (exit == null); }
+org.ta4j.core.Position	hasProfit	221	true	{ return getProfit().isPositive(); }
+org.ta4j.core.Position	hasLoss	228	true	{ return getProfit().isNegative(); }
+org.ta4j.core.Position	getProfit	238	false	
+org.ta4j.core.Position	getProfit	256	false	
+org.ta4j.core.Position	getGrossProfit	268	false	
+org.ta4j.core.Position	getGrossProfit	284	false	
+org.ta4j.core.Position	getGrossReturn	306	false	
+org.ta4j.core.Position	getGrossReturn	323	true	{ return getGrossReturn(getEntry().getPricePerAsset(), finalPrice); }
+org.ta4j.core.Position	getGrossReturn	337	false	
+org.ta4j.core.Position	getGrossReturn	359	false	
+org.ta4j.core.Position	getPositionCost	375	false	
+org.ta4j.core.Position	getPositionCost	386	false	
+org.ta4j.core.Position	getHoldingCost	397	true	{ return holdingCostModel.calculate(this); }
+org.ta4j.core.Position	getHoldingCost	408	true	{ return holdingCostModel.calculate(this, finalIndex); }
+org.ta4j.core.Position	getStartingType	415	true	{ return startingType; }
+org.ta4j.core.Position	toString	426	false	
+org.ta4j.core.Trade	getType	181	true	{ return type; }
+org.ta4j.core.Trade	getCost	188	true	{ return cost; }
+org.ta4j.core.Trade	getIndex	195	true	{ return index; }
+org.ta4j.core.Trade	getPricePerAsset	202	true	{ return pricePerAsset; }
+org.ta4j.core.Trade	getPricePerAsset	210	false	
+org.ta4j.core.Trade	getNetPrice	221	true	{ return netPrice; }
+org.ta4j.core.Trade	getAmount	228	true	{ return amount; }
+org.ta4j.core.Trade	getCostModel	235	true	{ return costModel; }
+org.ta4j.core.Trade	isBuy	263	true	{ return type == TradeType.BUY; }
+org.ta4j.core.Trade	isSell	270	true	{ return type == TradeType.SELL; }
+org.ta4j.core.Trade	hashCode	274	true	{ return Objects.hash(type, index, pricePerAsset, amount); }
+org.ta4j.core.Trade	equals	279	false	
+org.ta4j.core.Trade	toString	290	false	
+org.ta4j.core.Trade	buyAt	300	false	
+org.ta4j.core.Trade	buyAt	311	false	
+org.ta4j.core.Trade	buyAt	321	false	
+org.ta4j.core.Trade	buyAt	331	false	
+org.ta4j.core.Trade	buyAt	342	false	
+org.ta4j.core.Trade	sellAt	351	false	
+org.ta4j.core.Trade	sellAt	361	false	
+org.ta4j.core.Trade	sellAt	372	false	
+org.ta4j.core.Trade	sellAt	382	false	
+org.ta4j.core.Trade	sellAt	393	false	
+org.ta4j.core.Trade	getValue	400	true	{ return pricePerAsset.multipliedBy(amount); }
+org.ta4j.core.aggregator.BaseBarSeriesAggregator	aggregate	49	false	
+org.ta4j.core.aggregator.DurationBarAggregator	aggregate	76	false	
+org.ta4j.core.analysis.CashFlow	getValue	92	true	{ return values.get(index); }
+org.ta4j.core.analysis.CashFlow	getUnstableBars	97	true	{ return 0; }
+org.ta4j.core.analysis.CashFlow	getBarSeries	102	true	{ return barSeries; }
+org.ta4j.core.analysis.CashFlow	numOf	107	false	
+org.ta4j.core.analysis.CashFlow	getSize	115	true	{ return barSeries.getBarCount(); }
+org.ta4j.core.analysis.CashFlow	addCost	228	false	
+org.ta4j.core.analysis.CashFlow	determineEndIndex	257	false	
+org.ta4j.core.analysis.Returns	getValues	114	true	{ return values; }
+org.ta4j.core.analysis.Returns	getValue	122	true	{ return values.get(index); }
+org.ta4j.core.analysis.Returns	getUnstableBars	127	true	{ return 0; }
+org.ta4j.core.analysis.Returns	getBarSeries	132	true	{ return barSeries; }
+org.ta4j.core.analysis.Returns	numOf	137	false	
+org.ta4j.core.analysis.Returns	getSize	145	true	{ return barSeries.getBarCount() - 1; }
+org.ta4j.core.analysis.Returns	calculate	157	false	
+org.ta4j.core.analysis.cost.FixedTransactionCostModel	calculate	59	false	
+org.ta4j.core.analysis.cost.FixedTransactionCostModel	calculate	72	false	
+org.ta4j.core.analysis.cost.FixedTransactionCostModel	calculate	83	false	
+org.ta4j.core.analysis.cost.FixedTransactionCostModel	equals	88	false	
+org.ta4j.core.analysis.cost.LinearBorrowingCostModel	calculate	51	false	
+org.ta4j.core.analysis.cost.LinearBorrowingCostModel	calculate	60	false	
+org.ta4j.core.analysis.cost.LinearBorrowingCostModel	calculate	72	false	
+org.ta4j.core.analysis.cost.LinearBorrowingCostModel	equals	101	false	
+org.ta4j.core.analysis.cost.LinearTransactionCostModel	calculate	55	false	
+org.ta4j.core.analysis.cost.LinearTransactionCostModel	calculate	60	false	
+org.ta4j.core.analysis.cost.LinearTransactionCostModel	calculate	74	false	
+org.ta4j.core.analysis.cost.LinearTransactionCostModel	equals	79	false	
+org.ta4j.core.backtest.BacktestExecutor	execute	98	false	
+org.ta4j.core.backtest.BacktestExecutor	execute	111	false	
+org.ta4j.core.backtest.BarSeriesManager	getBarSeries	109	true	{ return barSeries; }
+org.ta4j.core.backtest.BarSeriesManager	getTransactionCostModel	116	true	{ return transactionCostModel; }
+org.ta4j.core.backtest.BarSeriesManager	getHoldingCostModel	123	true	{ return holdingCostModel; }
+org.ta4j.core.backtest.BarSeriesManager	run	134	false	
+org.ta4j.core.backtest.BarSeriesManager	run	149	false	
+org.ta4j.core.backtest.BarSeriesManager	run	162	false	
+org.ta4j.core.backtest.BarSeriesManager	run	178	false	
+org.ta4j.core.backtest.BarSeriesManager	run	190	false	
+org.ta4j.core.backtest.BarSeriesManager	run	205	false	
+org.ta4j.core.backtest.TradeOnCurrentCloseModel	execute	41	false	
+org.ta4j.core.backtest.TradeOnNextOpenModel	execute	41	false	
+org.ta4j.core.criteria.AbstractAnalysisCriterion	toString	33	false	
+org.ta4j.core.criteria.AverageReturnPerBarCriterion	calculate	48	false	
+org.ta4j.core.criteria.AverageReturnPerBarCriterion	calculate	57	false	
+org.ta4j.core.criteria.AverageReturnPerBarCriterion	betterThan	65	false	
+org.ta4j.core.criteria.EnterAndHoldReturnCriterion	calculate	71	false	
+org.ta4j.core.criteria.EnterAndHoldReturnCriterion	calculate	78	false	
+org.ta4j.core.criteria.EnterAndHoldReturnCriterion	betterThan	89	false	
+org.ta4j.core.criteria.ExpectancyCriterion	calculate	50	false	
+org.ta4j.core.criteria.ExpectancyCriterion	calculate	58	false	
+org.ta4j.core.criteria.ExpectancyCriterion	betterThan	67	false	
+org.ta4j.core.criteria.ExpectedShortfallCriterion	calculate	59	false	
+org.ta4j.core.criteria.ExpectedShortfallCriterion	calculate	68	false	
+org.ta4j.core.criteria.ExpectedShortfallCriterion	betterThan	111	false	
+org.ta4j.core.criteria.LinearTransactionCostCriterion	calculate	76	false	
+org.ta4j.core.criteria.LinearTransactionCostCriterion	calculate	81	false	
+org.ta4j.core.criteria.LinearTransactionCostCriterion	betterThan	108	false	
+org.ta4j.core.criteria.MaximumDrawdownCriterion	calculate	45	false	
+org.ta4j.core.criteria.MaximumDrawdownCriterion	calculate	54	false	
+org.ta4j.core.criteria.MaximumDrawdownCriterion	betterThan	61	false	
+org.ta4j.core.criteria.NumberOfBarsCriterion	calculate	39	false	
+org.ta4j.core.criteria.NumberOfBarsCriterion	calculate	49	false	
+org.ta4j.core.criteria.NumberOfBarsCriterion	betterThan	59	false	
+org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterion	calculate	36	false	
+org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterion	calculate	41	false	
+org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterion	betterThan	56	false	
+org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterion	calculate	47	false	
+org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterion	calculate	52	false	
+org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterion	betterThan	83	false	
+org.ta4j.core.criteria.NumberOfLosingPositionsCriterion	calculate	36	false	
+org.ta4j.core.criteria.NumberOfLosingPositionsCriterion	calculate	41	false	
+org.ta4j.core.criteria.NumberOfLosingPositionsCriterion	betterThan	48	false	
+org.ta4j.core.criteria.NumberOfPositionsCriterion	calculate	59	false	
+org.ta4j.core.criteria.NumberOfPositionsCriterion	calculate	64	false	
+org.ta4j.core.criteria.NumberOfPositionsCriterion	betterThan	73	false	
+org.ta4j.core.criteria.NumberOfWinningPositionsCriterion	calculate	36	false	
+org.ta4j.core.criteria.NumberOfWinningPositionsCriterion	calculate	41	false	
+org.ta4j.core.criteria.NumberOfWinningPositionsCriterion	betterThan	48	false	
+org.ta4j.core.criteria.PositionsRatioCriterion	WinningPositionsRatioCriterion	51	false	
+org.ta4j.core.criteria.PositionsRatioCriterion	LosingPositionsRatioCriterion	58	false	
+org.ta4j.core.criteria.PositionsRatioCriterion	calculate	77	false	
+org.ta4j.core.criteria.PositionsRatioCriterion	calculate	82	false	
+org.ta4j.core.criteria.PositionsRatioCriterion	betterThan	96	false	
+org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterion	calculate	47	false	
+org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterion	calculate	58	false	
+org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterion	betterThan	70	false	
+org.ta4j.core.criteria.SqnCriterion	calculate	84	false	
+org.ta4j.core.criteria.SqnCriterion	calculate	97	false	
+org.ta4j.core.criteria.SqnCriterion	betterThan	118	false	
+org.ta4j.core.criteria.ValueAtRiskCriterion	calculate	55	false	
+org.ta4j.core.criteria.ValueAtRiskCriterion	calculate	64	false	
+org.ta4j.core.criteria.ValueAtRiskCriterion	betterThan	103	false	
+org.ta4j.core.criteria.VersusEnterAndHoldCriterion	calculate	73	false	
+org.ta4j.core.criteria.VersusEnterAndHoldCriterion	calculate	81	false	
+org.ta4j.core.criteria.VersusEnterAndHoldCriterion	betterThan	90	false	
+org.ta4j.core.criteria.helpers.AverageCriterion	calculate	74	false	
+org.ta4j.core.criteria.helpers.AverageCriterion	calculate	80	false	
+org.ta4j.core.criteria.helpers.AverageCriterion	betterThan	93	false	
+org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterion	calculate	80	false	
+org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterion	calculate	86	false	
+org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterion	betterThan	99	false	
+org.ta4j.core.criteria.helpers.StandardDeviationCriterion	calculate	73	false	
+org.ta4j.core.criteria.helpers.StandardDeviationCriterion	calculate	78	false	
+org.ta4j.core.criteria.helpers.StandardDeviationCriterion	betterThan	90	false	
+org.ta4j.core.criteria.helpers.StandardErrorCriterion	calculate	75	false	
+org.ta4j.core.criteria.helpers.StandardErrorCriterion	calculate	81	false	
+org.ta4j.core.criteria.helpers.StandardErrorCriterion	betterThan	94	false	
+org.ta4j.core.criteria.helpers.VarianceCriterion	calculate	73	false	
+org.ta4j.core.criteria.helpers.VarianceCriterion	calculate	86	false	
+org.ta4j.core.criteria.helpers.VarianceCriterion	betterThan	109	false	
+org.ta4j.core.criteria.pnl.AverageLossCriterion	calculate	41	false	
+org.ta4j.core.criteria.pnl.AverageLossCriterion	calculate	54	false	
+org.ta4j.core.criteria.pnl.AverageLossCriterion	betterThan	68	false	
+org.ta4j.core.criteria.pnl.AverageProfitCriterion	calculate	41	false	
+org.ta4j.core.criteria.pnl.AverageProfitCriterion	calculate	54	false	
+org.ta4j.core.criteria.pnl.AverageProfitCriterion	betterThan	68	false	
+org.ta4j.core.criteria.pnl.LossCriterion	calculate	59	false	
+org.ta4j.core.criteria.pnl.LossCriterion	calculate	69	false	
+org.ta4j.core.criteria.pnl.LossCriterion	betterThan	79	false	
+org.ta4j.core.criteria.pnl.ProfitCriterion	calculate	60	false	
+org.ta4j.core.criteria.pnl.ProfitCriterion	calculate	69	false	
+org.ta4j.core.criteria.pnl.ProfitCriterion	betterThan	79	false	
+org.ta4j.core.criteria.pnl.ProfitLossCriterion	calculate	40	false	
+org.ta4j.core.criteria.pnl.ProfitLossCriterion	calculate	45	false	
+org.ta4j.core.criteria.pnl.ProfitLossCriterion	betterThan	55	false	
+org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterion	calculate	43	false	
+org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterion	calculate	52	false	
+org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterion	betterThan	62	false	
+org.ta4j.core.criteria.pnl.ProfitLossRatioCriterion	calculate	42	false	
+org.ta4j.core.criteria.pnl.ProfitLossRatioCriterion	calculate	57	false	
+org.ta4j.core.criteria.pnl.ProfitLossRatioCriterion	betterThan	73	false	
+org.ta4j.core.criteria.pnl.ReturnCriterion	calculate	64	false	
+org.ta4j.core.criteria.pnl.ReturnCriterion	calculate	69	false	
+org.ta4j.core.criteria.pnl.ReturnCriterion	betterThan	79	false	
+org.ta4j.core.indicators.ATRIndicator	getValue	60	true	{ return averageTrueRangeIndicator.getValue(index); }
+org.ta4j.core.indicators.ATRIndicator	getUnstableBars	65	true	{ return getBarCount(); }
+org.ta4j.core.indicators.ATRIndicator	getTRIndicator	71	true	{ return trIndicator; }
+org.ta4j.core.indicators.ATRIndicator	getBarCount	76	true	{ return averageTrueRangeIndicator.getBarCount(); }
+org.ta4j.core.indicators.ATRIndicator	toString	80	false	
+org.ta4j.core.indicators.AbstractEMAIndicator	calculate	52	false	
+org.ta4j.core.indicators.AbstractEMAIndicator	toString	61	false	
+org.ta4j.core.indicators.AbstractEMAIndicator	getBarCount	66	true	{ return barCount; }
+org.ta4j.core.indicators.AbstractIndicator	getBarSeries	50	true	{ return series; }
+org.ta4j.core.indicators.AbstractIndicator	toString	55	false	
+org.ta4j.core.indicators.AccelerationDecelerationIndicator	calculate	60	false	
+org.ta4j.core.indicators.AccelerationDecelerationIndicator	getUnstableBars	65	true	{ return 0; }
+org.ta4j.core.indicators.AwesomeOscillatorIndicator	calculate	83	false	
+org.ta4j.core.indicators.AwesomeOscillatorIndicator	getUnstableBars	88	true	{ return 0; }
+org.ta4j.core.indicators.CCIIndicator	calculate	61	false	
+org.ta4j.core.indicators.CCIIndicator	getUnstableBars	72	true	{ return barCount; }
+org.ta4j.core.indicators.CCIIndicator	toString	77	false	
+org.ta4j.core.indicators.CMOIndicator	calculate	62	false	
+org.ta4j.core.indicators.CMOIndicator	getUnstableBars	74	true	{ return barCount; }
+org.ta4j.core.indicators.CachedIndicator	getValue	81	false	
+org.ta4j.core.indicators.ChandelierExitLongIndicator	calculate	72	false	
+org.ta4j.core.indicators.ChandelierExitLongIndicator	getUnstableBars	77	true	{ return 0; }
+org.ta4j.core.indicators.ChandelierExitShortIndicator	calculate	72	false	
+org.ta4j.core.indicators.ChandelierExitShortIndicator	getUnstableBars	77	true	{ return 0; }
+org.ta4j.core.indicators.ChopIndicator	calculate	82	false	
+org.ta4j.core.indicators.ChopIndicator	getUnstableBars	93	true	{ return timeFrame; }
+org.ta4j.core.indicators.CoppockCurveIndicator	calculate	71	false	
+org.ta4j.core.indicators.CoppockCurveIndicator	getUnstableBars	76	true	{ return 0; }
+org.ta4j.core.indicators.DPOIndicator	calculate	82	false	
+org.ta4j.core.indicators.DPOIndicator	getUnstableBars	87	true	{ return 0; }
+org.ta4j.core.indicators.DPOIndicator	toString	92	false	
+org.ta4j.core.indicators.DistanceFromMAIndicator	calculate	69	false	
+org.ta4j.core.indicators.DistanceFromMAIndicator	getUnstableBars	77	true	{ return 0; }
+org.ta4j.core.indicators.DoubleEMAIndicator	calculate	57	false	
+org.ta4j.core.indicators.DoubleEMAIndicator	getUnstableBars	62	true	{ return barCount; }
+org.ta4j.core.indicators.DoubleEMAIndicator	toString	67	false	
+org.ta4j.core.indicators.EMAIndicator	getUnstableBars	47	true	{ return getBarCount(); }
+org.ta4j.core.indicators.FisherIndicator	calculate	182	false	
+org.ta4j.core.indicators.FisherIndicator	getUnstableBars	202	true	{ return 0; }
+org.ta4j.core.indicators.HMAIndicator	calculate	59	false	
+org.ta4j.core.indicators.HMAIndicator	getUnstableBars	64	true	{ return barCount; }
+org.ta4j.core.indicators.HMAIndicator	toString	69	false	
+org.ta4j.core.indicators.IntraDayMomentumIndexIndicator	calculate	71	false	
+org.ta4j.core.indicators.IntraDayMomentumIndexIndicator	getUnstableBars	86	true	{ return this.barCount; }
+org.ta4j.core.indicators.KAMAIndicator	calculate	75	false	
+org.ta4j.core.indicators.KAMAIndicator	getUnstableBars	106	true	{ return 0; }
+org.ta4j.core.indicators.KSTIndicator	calculate	100	false	
+org.ta4j.core.indicators.KSTIndicator	getUnstableBars	108	true	{ return 0; }
+org.ta4j.core.indicators.LWMAIndicator	calculate	54	false	
+org.ta4j.core.indicators.LWMAIndicator	getUnstableBars	73	true	{ return 0; }
+org.ta4j.core.indicators.LWMAIndicator	toString	78	false	
+org.ta4j.core.indicators.MACDIndicator	getShortTermEma	75	true	{ return shortTermEma; }
+org.ta4j.core.indicators.MACDIndicator	getLongTermEma	82	true	{ return longTermEma; }
+org.ta4j.core.indicators.MACDIndicator	calculate	86	false	
+org.ta4j.core.indicators.MACDIndicator	getUnstableBars	91	true	{ return 0; }
+org.ta4j.core.indicators.MMAIndicator	getUnstableBars	48	true	{ return getBarCount(); }
+org.ta4j.core.indicators.MassIndexIndicator	calculate	62	false	
+org.ta4j.core.indicators.MassIndexIndicator	getUnstableBars	73	true	{ return 0; }
+org.ta4j.core.indicators.PPOIndicator	calculate	71	false	
+org.ta4j.core.indicators.PPOIndicator	getUnstableBars	78	true	{ return 0; }
+org.ta4j.core.indicators.ParabolicSarIndicator	calculate	108	false	
+org.ta4j.core.indicators.ParabolicSarIndicator	getUnstableBars	223	true	{ return 0; }
+org.ta4j.core.indicators.RAVIIndicator	calculate	53	false	
+org.ta4j.core.indicators.RAVIIndicator	getUnstableBars	60	true	{ return 0; }
+org.ta4j.core.indicators.ROCIndicator	calculate	56	false	
+org.ta4j.core.indicators.ROCIndicator	getUnstableBars	64	true	{ return barCount; }
+org.ta4j.core.indicators.ROCIndicator	toString	69	false	
+org.ta4j.core.indicators.RSIIndicator	calculate	54	false	
+org.ta4j.core.indicators.RSIIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.RWIHighIndicator	calculate	52	false	
+org.ta4j.core.indicators.RWIHighIndicator	getUnstableBars	66	true	{ return barCount; }
+org.ta4j.core.indicators.RWIHighIndicator	toString	81	false	
+org.ta4j.core.indicators.RWILowIndicator	calculate	52	false	
+org.ta4j.core.indicators.RWILowIndicator	getUnstableBars	66	true	{ return barCount; }
+org.ta4j.core.indicators.RWILowIndicator	toString	81	false	
+org.ta4j.core.indicators.RecursiveCachedIndicator	getValue	70	false	
+org.ta4j.core.indicators.SMAIndicator	calculate	52	false	
+org.ta4j.core.indicators.SMAIndicator	getUnstableBars	64	true	{ return barCount; }
+org.ta4j.core.indicators.SMAIndicator	toString	69	false	
+org.ta4j.core.indicators.StochasticOscillatorDIndicator	calculate	55	false	
+org.ta4j.core.indicators.StochasticOscillatorDIndicator	getUnstableBars	60	true	{ return 0; }
+org.ta4j.core.indicators.StochasticOscillatorDIndicator	toString	65	false	
+org.ta4j.core.indicators.StochasticOscillatorKIndicator	calculate	79	false	
+org.ta4j.core.indicators.StochasticOscillatorKIndicator	getUnstableBars	93	true	{ return barCount; }
+org.ta4j.core.indicators.StochasticOscillatorKIndicator	toString	98	false	
+org.ta4j.core.indicators.StochasticRSIIndicator	calculate	83	false	
+org.ta4j.core.indicators.StochasticRSIIndicator	getUnstableBars	89	true	{ return 0; }
+org.ta4j.core.indicators.TripleEMAIndicator	calculate	62	false	
+org.ta4j.core.indicators.TripleEMAIndicator	getUnstableBars	68	true	{ return barCount; }
+org.ta4j.core.indicators.TripleEMAIndicator	toString	73	false	
+org.ta4j.core.indicators.UlcerIndexIndicator	calculate	60	false	
+org.ta4j.core.indicators.UlcerIndexIndicator	getUnstableBars	78	true	{ return barCount; }
+org.ta4j.core.indicators.UlcerIndexIndicator	toString	83	false	
+org.ta4j.core.indicators.WMAIndicator	calculate	49	false	
+org.ta4j.core.indicators.WMAIndicator	getUnstableBars	66	true	{ return barCount; }
+org.ta4j.core.indicators.WMAIndicator	toString	71	false	
+org.ta4j.core.indicators.WilliamsRIndicator	calculate	79	false	
+org.ta4j.core.indicators.WilliamsRIndicator	getUnstableBars	91	true	{ return barCount; }
+org.ta4j.core.indicators.WilliamsRIndicator	toString	96	false	
+org.ta4j.core.indicators.ZLEMAIndicator	calculate	59	false	
+org.ta4j.core.indicators.ZLEMAIndicator	getUnstableBars	74	true	{ return barCount; }
+org.ta4j.core.indicators.ZLEMAIndicator	toString	79	false	
+org.ta4j.core.indicators.adx.ADXIndicator	calculate	71	false	
+org.ta4j.core.indicators.adx.ADXIndicator	getUnstableBars	76	true	{ return Math.max(diBarCount, adxBarCount); }
+org.ta4j.core.indicators.adx.ADXIndicator	toString	81	false	
+org.ta4j.core.indicators.adx.DXIndicator	calculate	56	false	
+org.ta4j.core.indicators.adx.DXIndicator	getUnstableBars	66	true	{ return barCount; }
+org.ta4j.core.indicators.adx.DXIndicator	toString	71	false	
+org.ta4j.core.indicators.adx.MinusDIIndicator	calculate	64	false	
+org.ta4j.core.indicators.adx.MinusDIIndicator	getUnstableBars	69	true	{ return barCount; }
+org.ta4j.core.indicators.adx.MinusDIIndicator	toString	74	false	
+org.ta4j.core.indicators.adx.MinusDMIndicator	calculate	48	false	
+org.ta4j.core.indicators.adx.MinusDMIndicator	getUnstableBars	65	true	{ return 0; }
+org.ta4j.core.indicators.adx.PlusDIIndicator	calculate	64	false	
+org.ta4j.core.indicators.adx.PlusDIIndicator	getUnstableBars	69	true	{ return barCount; }
+org.ta4j.core.indicators.adx.PlusDIIndicator	toString	74	false	
+org.ta4j.core.indicators.adx.PlusDMIndicator	calculate	48	false	
+org.ta4j.core.indicators.adx.PlusDMIndicator	getUnstableBars	65	true	{ return 0; }
+org.ta4j.core.indicators.aroon.AroonDownIndicator	calculate	77	false	
+org.ta4j.core.indicators.aroon.AroonDownIndicator	getUnstableBars	95	true	{ return barCount; }
+org.ta4j.core.indicators.aroon.AroonDownIndicator	toString	100	false	
+org.ta4j.core.indicators.aroon.AroonFacade	up	58	false	
+org.ta4j.core.indicators.aroon.AroonFacade	down	67	false	
+org.ta4j.core.indicators.aroon.AroonFacade	oscillator	77	false	
+org.ta4j.core.indicators.aroon.AroonOscillatorIndicator	calculate	56	false	
+org.ta4j.core.indicators.aroon.AroonOscillatorIndicator	getUnstableBars	61	true	{ return barCount; }
+org.ta4j.core.indicators.aroon.AroonOscillatorIndicator	toString	66	false	
+org.ta4j.core.indicators.aroon.AroonOscillatorIndicator	getAroonUpIndicator	72	true	{ return aroonUpIndicator; }
+org.ta4j.core.indicators.aroon.AroonOscillatorIndicator	getAroonDownIndicator	77	true	{ return aroonDownIndicator; }
+org.ta4j.core.indicators.aroon.AroonUpIndicator	calculate	77	false	
+org.ta4j.core.indicators.aroon.AroonUpIndicator	getUnstableBars	95	true	{ return barCount; }
+org.ta4j.core.indicators.aroon.AroonUpIndicator	toString	100	false	
+org.ta4j.core.indicators.bollinger.BollingerBandFacade	middle	85	false	
+org.ta4j.core.indicators.bollinger.BollingerBandFacade	upper	95	false	
+org.ta4j.core.indicators.bollinger.BollingerBandFacade	lower	105	false	
+org.ta4j.core.indicators.bollinger.BollingerBandFacade	bandwidth	115	false	
+org.ta4j.core.indicators.bollinger.BollingerBandFacade	percentB	124	false	
+org.ta4j.core.indicators.bollinger.BollingerBandWidthIndicator	calculate	60	false	
+org.ta4j.core.indicators.bollinger.BollingerBandWidthIndicator	getUnstableBars	65	true	{ return 0; }
+org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicator	calculate	73	false	
+org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicator	getUnstableBars	78	true	{ return 0; }
+org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicator	getK	84	true	{ return k; }
+org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicator	toString	88	false	
+org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicator	calculate	52	false	
+org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicator	getUnstableBars	57	true	{ return 0; }
+org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicator	getIndicator	62	true	{ return indicator; }
+org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicator	toString	66	false	
+org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicator	calculate	73	false	
+org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicator	getUnstableBars	78	true	{ return 0; }
+org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicator	getK	84	true	{ return k; }
+org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicator	toString	88	false	
+org.ta4j.core.indicators.bollinger.PercentBIndicator	calculate	61	false	
+org.ta4j.core.indicators.bollinger.PercentBIndicator	getUnstableBars	69	true	{ return 0; }
+org.ta4j.core.indicators.candles.BearishEngulfingIndicator	calculate	48	false	
+org.ta4j.core.indicators.candles.BearishEngulfingIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.candles.BearishHaramiIndicator	calculate	48	false	
+org.ta4j.core.indicators.candles.BearishHaramiIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.candles.BullishEngulfingIndicator	calculate	49	false	
+org.ta4j.core.indicators.candles.BullishEngulfingIndicator	getUnstableBars	68	true	{ return 0; }
+org.ta4j.core.indicators.candles.BullishHaramiIndicator	calculate	48	false	
+org.ta4j.core.indicators.candles.BullishHaramiIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.candles.DojiIndicator	calculate	70	false	
+org.ta4j.core.indicators.candles.DojiIndicator	getUnstableBars	82	true	{ return 0; }
+org.ta4j.core.indicators.candles.LowerShadowIndicator	calculate	53	false	
+org.ta4j.core.indicators.candles.LowerShadowIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.candles.RealBodyIndicator	calculate	53	false	
+org.ta4j.core.indicators.candles.RealBodyIndicator	getUnstableBars	59	true	{ return 0; }
+org.ta4j.core.indicators.candles.ThreeBlackCrowsIndicator	calculate	64	false	
+org.ta4j.core.indicators.candles.ThreeBlackCrowsIndicator	getUnstableBars	75	true	{ return 4; }
+org.ta4j.core.indicators.candles.ThreeWhiteSoldiersIndicator	calculate	64	false	
+org.ta4j.core.indicators.candles.ThreeWhiteSoldiersIndicator	getUnstableBars	75	true	{ return 4; }
+org.ta4j.core.indicators.candles.UpperShadowIndicator	calculate	53	false	
+org.ta4j.core.indicators.candles.UpperShadowIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicator	calculate	54	false	
+org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicator	getUnstableBars	59	true	{ return barCount; }
+org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicator	toString	64	false	
+org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicator	calculate	52	false	
+org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicator	getUnstableBars	57	true	{ return barCount; }
+org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicator	toString	62	false	
+org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicator	calculate	54	false	
+org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicator	getUnstableBars	59	true	{ return barCount; }
+org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicator	toString	64	false	
+org.ta4j.core.indicators.helpers.AmountIndicator	calculate	47	false	
+org.ta4j.core.indicators.helpers.AmountIndicator	getUnstableBars	53	true	{ return 0; }
+org.ta4j.core.indicators.helpers.BooleanTransformIndicator	calculate	149	false	
+org.ta4j.core.indicators.helpers.BooleanTransformIndicator	getUnstableBars	194	true	{ return 0; }
+org.ta4j.core.indicators.helpers.BooleanTransformIndicator	toString	199	false	
+org.ta4j.core.indicators.helpers.CloseLocationValueIndicator	calculate	51	false	
+org.ta4j.core.indicators.helpers.CloseLocationValueIndicator	getUnstableBars	64	true	{ return 0; }
+org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicator	calculate	55	false	
+org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicator	getUnstableBars	68	true	{ return 1; }
+org.ta4j.core.indicators.helpers.ClosePriceIndicator	getValue	47	true	{ return getBarSeries().getBar(index).getClosePrice(); }
+org.ta4j.core.indicators.helpers.ClosePriceIndicator	getUnstableBars	53	true	{ return 0; }
+org.ta4j.core.indicators.helpers.ClosePriceRatioIndicator	calculate	54	false	
+org.ta4j.core.indicators.helpers.ClosePriceRatioIndicator	getUnstableBars	67	true	{ return 1; }
+org.ta4j.core.indicators.helpers.CombineIndicator	calculate	63	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	getUnstableBars	69	true	{ return 0; }
+org.ta4j.core.indicators.helpers.CombineIndicator	plus	77	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	minus	84	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	divide	91	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	multiply	99	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	max	106	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	min	113	false	
+org.ta4j.core.indicators.helpers.CombineIndicator	toString	117	false	
+org.ta4j.core.indicators.helpers.ConstantIndicator	getValue	50	true	{ return value; }
+org.ta4j.core.indicators.helpers.ConstantIndicator	getUnstableBars	56	true	{ return 0; }
+org.ta4j.core.indicators.helpers.ConstantIndicator	toString	61	false	
+org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicator	calculate	218	false	
+org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicator	getUnstableBars	259	true	{ return barCount; }
+org.ta4j.core.indicators.helpers.CrossIndicator	calculate	57	false	
+org.ta4j.core.indicators.helpers.CrossIndicator	getUnstableBars	72	true	{ return 0; }
+org.ta4j.core.indicators.helpers.CrossIndicator	getLow	78	true	{ return low; }
+org.ta4j.core.indicators.helpers.CrossIndicator	getUp	83	true	{ return up; }
+org.ta4j.core.indicators.helpers.CrossIndicator	toString	87	false	
+org.ta4j.core.indicators.helpers.DateTimeIndicator	calculate	63	false	
+org.ta4j.core.indicators.helpers.DateTimeIndicator	getUnstableBars	70	true	{ return 0; }
+org.ta4j.core.indicators.helpers.DifferencePercentageIndicator	calculate	79	false	
+org.ta4j.core.indicators.helpers.DifferencePercentageIndicator	setLastNotification	105	false	
+org.ta4j.core.indicators.helpers.DifferencePercentageIndicator	getUnstableBars	122	true	{ return 1; }
+org.ta4j.core.indicators.helpers.FixedIndicator	addValue	62	false	
+org.ta4j.core.indicators.helpers.FixedIndicator	getValue	66	true	{ return values.get(index); }
+org.ta4j.core.indicators.helpers.FixedIndicator	getUnstableBars	72	true	{ return 0; }
+org.ta4j.core.indicators.helpers.GainIndicator	calculate	52	false	
+org.ta4j.core.indicators.helpers.GainIndicator	getUnstableBars	63	true	{ return 1; }
+org.ta4j.core.indicators.helpers.HighPriceIndicator	getValue	47	true	{ return getBarSeries().getBar(index).getHighPrice(); }
+org.ta4j.core.indicators.helpers.HighPriceIndicator	getUnstableBars	53	true	{ return 0; }
+org.ta4j.core.indicators.helpers.HighestValueIndicator	calculate	53	false	
+org.ta4j.core.indicators.helpers.HighestValueIndicator	getUnstableBars	69	true	{ return barCount; }
+org.ta4j.core.indicators.helpers.HighestValueIndicator	toString	74	false	
+org.ta4j.core.indicators.helpers.LossIndicator	calculate	52	false	
+org.ta4j.core.indicators.helpers.LossIndicator	getUnstableBars	63	true	{ return 1; }
+org.ta4j.core.indicators.helpers.LowPriceIndicator	getValue	47	true	{ return getBarSeries().getBar(index).getLowPrice(); }
+org.ta4j.core.indicators.helpers.LowPriceIndicator	getUnstableBars	53	true	{ return 0; }
+org.ta4j.core.indicators.helpers.LowestValueIndicator	calculate	53	false	
+org.ta4j.core.indicators.helpers.LowestValueIndicator	getUnstableBars	69	true	{ return barCount; }
+org.ta4j.core.indicators.helpers.LowestValueIndicator	toString	74	false	
+org.ta4j.core.indicators.helpers.MedianPriceIndicator	calculate	52	false	
+org.ta4j.core.indicators.helpers.MedianPriceIndicator	getUnstableBars	59	true	{ return 0; }
+org.ta4j.core.indicators.helpers.NumIndicator	calculate	63	false	
+org.ta4j.core.indicators.helpers.NumIndicator	getUnstableBars	70	true	{ return 0; }
+org.ta4j.core.indicators.helpers.OpenPriceIndicator	getValue	47	true	{ return getBarSeries().getBar(index).getOpenPrice(); }
+org.ta4j.core.indicators.helpers.OpenPriceIndicator	getUnstableBars	53	true	{ return 0; }
+org.ta4j.core.indicators.helpers.PreviousValueIndicator	calculate	66	false	
+org.ta4j.core.indicators.helpers.PreviousValueIndicator	getUnstableBars	73	true	{ return n; }
+org.ta4j.core.indicators.helpers.PreviousValueIndicator	toString	78	false	
+org.ta4j.core.indicators.helpers.RunningTotalIndicator	calculate	46	false	
+org.ta4j.core.indicators.helpers.RunningTotalIndicator	getUnstableBars	55	true	{ return 0; }
+org.ta4j.core.indicators.helpers.RunningTotalIndicator	toString	60	false	
+org.ta4j.core.indicators.helpers.SumIndicator	calculate	53	false	
+org.ta4j.core.indicators.helpers.SumIndicator	getUnstableBars	62	true	{ return 0; }
+org.ta4j.core.indicators.helpers.TRIndicator	calculate	49	false	
+org.ta4j.core.indicators.helpers.TRIndicator	getUnstableBars	68	true	{ return 1; }
+org.ta4j.core.indicators.helpers.TradeCountIndicator	calculate	46	false	
+org.ta4j.core.indicators.helpers.TradeCountIndicator	getUnstableBars	52	true	{ return 0; }
+org.ta4j.core.indicators.helpers.TransformIndicator	calculate	60	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	getUnstableBars	65	true	{ return 0; }
+org.ta4j.core.indicators.helpers.TransformIndicator	plus	73	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	minus	81	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	divide	89	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	multiply	97	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	max	105	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	min	113	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	abs	121	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	pow	128	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	sqrt	136	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	log	146	false	
+org.ta4j.core.indicators.helpers.TransformIndicator	toString	150	false	
+org.ta4j.core.indicators.helpers.TypicalPriceIndicator	calculate	52	false	
+org.ta4j.core.indicators.helpers.TypicalPriceIndicator	getUnstableBars	62	true	{ return 0; }
+org.ta4j.core.indicators.helpers.UnstableIndicator	calculate	51	false	
+org.ta4j.core.indicators.helpers.UnstableIndicator	getUnstableBars	60	true	{ return unstableBars; }
+org.ta4j.core.indicators.helpers.VolumeIndicator	calculate	61	false	
+org.ta4j.core.indicators.helpers.VolumeIndicator	getUnstableBars	72	true	{ return barCount; }
+org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicator	calculate	68	false	
+org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicator	getUnstableBars	78	true	{ return 0; }
+org.ta4j.core.indicators.ichimoku.IchimokuLineIndicator	calculate	62	false	
+org.ta4j.core.indicators.ichimoku.IchimokuLineIndicator	getUnstableBars	67	true	{ return 0; }
+org.ta4j.core.indicators.ichimoku.IchimokuSenkouSpanAIndicator	calculate	87	false	
+org.ta4j.core.indicators.ichimoku.IchimokuSenkouSpanAIndicator	getUnstableBars	98	true	{ return 0; }
+org.ta4j.core.indicators.ichimoku.IchimokuSenkouSpanBIndicator	calculate	78	false	
+org.ta4j.core.indicators.ichimoku.IchimokuSenkouSpanBIndicator	getUnstableBars	88	true	{ return 0; }
+org.ta4j.core.indicators.keltner.KeltnerChannelFacade	middle	64	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelFacade	upper	69	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelFacade	lower	74	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicator	calculate	68	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicator	getUnstableBars	74	true	{ return getBarCount(); }
+org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicator	getBarCount	80	true	{ return keltnerMiddleIndicator.getBarCount(); }
+org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicator	toString	84	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicator	getValue	65	true	{ return emaIndicator.getValue(index); }
+org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicator	getUnstableBars	70	true	{ return getBarCount(); }
+org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicator	getBarCount	76	true	{ return emaIndicator.getBarCount(); }
+org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicator	toString	80	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicator	calculate	68	false	
+org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicator	getUnstableBars	74	true	{ return getBarCount(); }
+org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicator	getBarCount	80	true	{ return keltnerMiddleIndicator.getBarCount(); }
+org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicator	toString	84	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	sum	50	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	difference	62	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	product	74	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	quotient	86	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	min	100	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	max	114	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	getValue	128	false	
+org.ta4j.core.indicators.numeric.BinaryOperation	getUnstableBars	135	true	{ return 0; }
+org.ta4j.core.indicators.numeric.BinaryOperation	getBarSeries	140	true	{ return left.getBarSeries(); }
+org.ta4j.core.indicators.numeric.NumericIndicator	of	74	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	closePrice	83	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	volume	92	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	delegate	102	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	plus	110	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	plus	118	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	minus	126	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	minus	134	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	multipliedBy	142	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	multipliedBy	150	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	dividedBy	158	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	dividedBy	166	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	min	175	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	min	184	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	max	193	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	max	202	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	abs	211	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	sqrt	220	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	squared	229	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	sma	238	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	ema	246	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	stddev	254	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	highest	262	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	lowest	270	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	previous	278	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	previous	286	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	crossedOver	294	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	crossedOver	302	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	crossedUnder	311	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	crossedUnder	319	false	
+org.ta4j.core.indicators.numeric.NumericIndicator	isGreaterThan	327	true	{ return new OverIndicatorRule(this, other); }
+org.ta4j.core.indicators.numeric.NumericIndicator	isGreaterThan	335	true	{ return isGreaterThan(createConstant(n)); }
+org.ta4j.core.indicators.numeric.NumericIndicator	isLessThan	343	true	{ return new UnderIndicatorRule(this, other); }
+org.ta4j.core.indicators.numeric.NumericIndicator	isLessThan	351	true	{ return isLessThan(createConstant(n)); }
+org.ta4j.core.indicators.numeric.NumericIndicator	getValue	359	true	{ return delegate.getValue(index); }
+org.ta4j.core.indicators.numeric.NumericIndicator	getUnstableBars	364	true	{ return 0; }
+org.ta4j.core.indicators.numeric.NumericIndicator	getBarSeries	369	true	{ return delegate.getBarSeries(); }
+org.ta4j.core.indicators.numeric.NumericIndicator	toString	374	false	
+org.ta4j.core.indicators.numeric.UnaryOperation	sqrt	46	false	
+org.ta4j.core.indicators.numeric.UnaryOperation	abs	58	false	
+org.ta4j.core.indicators.numeric.UnaryOperation	getValue	70	false	
+org.ta4j.core.indicators.numeric.UnaryOperation	getUnstableBars	76	true	{ return 0; }
+org.ta4j.core.indicators.numeric.UnaryOperation	getBarSeries	81	true	{ return operand.getBarSeries(); }
+org.ta4j.core.indicators.pivotpoints.DeMarkPivotPointIndicator	calculate	88	false	
+org.ta4j.core.indicators.pivotpoints.DeMarkPivotPointIndicator	getUnstableBars	93	true	{ return 0; }
+org.ta4j.core.indicators.pivotpoints.DeMarkPivotPointIndicator	getBarsOfPreviousPeriod	131	false	
+org.ta4j.core.indicators.pivotpoints.DeMarkReversalIndicator	calculate	68	false	
+org.ta4j.core.indicators.pivotpoints.DeMarkReversalIndicator	getUnstableBars	82	true	{ return 0; }
+org.ta4j.core.indicators.pivotpoints.FibonacciReversalIndicator	calculate	103	false	
+org.ta4j.core.indicators.pivotpoints.FibonacciReversalIndicator	getUnstableBars	124	true	{ return 0; }
+org.ta4j.core.indicators.pivotpoints.PivotPointIndicator	calculate	83	false	
+org.ta4j.core.indicators.pivotpoints.PivotPointIndicator	getUnstableBars	88	true	{ return 0; }
+org.ta4j.core.indicators.pivotpoints.PivotPointIndicator	getBarsOfPreviousPeriod	114	false	
+org.ta4j.core.indicators.pivotpoints.StandardReversalIndicator	calculate	62	false	
+org.ta4j.core.indicators.pivotpoints.StandardReversalIndicator	getUnstableBars	86	true	{ return 0; }
+org.ta4j.core.indicators.statistics.CorrelationCoefficientIndicator	calculate	57	false	
+org.ta4j.core.indicators.statistics.CorrelationCoefficientIndicator	getUnstableBars	66	true	{ return 0; }
+org.ta4j.core.indicators.statistics.CovarianceIndicator	calculate	58	false	
+org.ta4j.core.indicators.statistics.CovarianceIndicator	getUnstableBars	73	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.CovarianceIndicator	toString	78	false	
+org.ta4j.core.indicators.statistics.MeanDeviationIndicator	calculate	57	false	
+org.ta4j.core.indicators.statistics.MeanDeviationIndicator	getUnstableBars	72	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.MeanDeviationIndicator	toString	77	false	
+org.ta4j.core.indicators.statistics.PearsonCorrelationIndicator	calculate	59	false	
+org.ta4j.core.indicators.statistics.PearsonCorrelationIndicator	getUnstableBars	96	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicator	getTotalReturn	94	false	
+org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicator	calculate	113	false	
+org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicator	getUnstableBars	142	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.SigmaIndicator	calculate	58	false	
+org.ta4j.core.indicators.statistics.SigmaIndicator	getUnstableBars	64	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.SigmaIndicator	toString	69	false	
+org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicator	calculate	83	false	
+org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicator	getUnstableBars	103	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.StandardDeviationIndicator	calculate	52	false	
+org.ta4j.core.indicators.statistics.StandardDeviationIndicator	getUnstableBars	57	true	{ return 0; }
+org.ta4j.core.indicators.statistics.StandardErrorIndicator	calculate	50	false	
+org.ta4j.core.indicators.statistics.StandardErrorIndicator	getUnstableBars	57	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.VarianceIndicator	calculate	53	false	
+org.ta4j.core.indicators.statistics.VarianceIndicator	getUnstableBars	67	true	{ return barCount; }
+org.ta4j.core.indicators.statistics.VarianceIndicator	toString	72	false	
+org.ta4j.core.indicators.supertrend.SuperTrendIndicator	calculate	66	false	
+org.ta4j.core.indicators.supertrend.SuperTrendIndicator	getUnstableBars	97	true	{ return 0; }
+org.ta4j.core.indicators.supertrend.SuperTrendIndicator	getSuperTrendLowerBandIndicator	103	true	{ return superTrendLowerBandIndicator; }
+org.ta4j.core.indicators.supertrend.SuperTrendIndicator	getSuperTrendUpperBandIndicator	108	true	{ return superTrendUpperBandIndicator; }
+org.ta4j.core.indicators.supertrend.SuperTrendLowerBandIndicator	calculate	66	false	
+org.ta4j.core.indicators.supertrend.SuperTrendLowerBandIndicator	getUnstableBars	80	true	{ return 0; }
+org.ta4j.core.indicators.supertrend.SuperTrendUpperBandIndicator	calculate	66	false	
+org.ta4j.core.indicators.supertrend.SuperTrendUpperBandIndicator	getUnstableBars	80	true	{ return 0; }
+org.ta4j.core.indicators.volume.AccumulationDistributionIndicator	calculate	48	false	
+org.ta4j.core.indicators.volume.AccumulationDistributionIndicator	getUnstableBars	63	true	{ return 0; }
+org.ta4j.core.indicators.volume.ChaikinMoneyFlowIndicator	calculate	61	false	
+org.ta4j.core.indicators.volume.ChaikinMoneyFlowIndicator	getUnstableBars	73	true	{ return barCount; }
+org.ta4j.core.indicators.volume.ChaikinMoneyFlowIndicator	toString	86	false	
+org.ta4j.core.indicators.volume.ChaikinOscillatorIndicator	calculate	65	false	
+org.ta4j.core.indicators.volume.ChaikinOscillatorIndicator	getUnstableBars	70	true	{ return 0; }
+org.ta4j.core.indicators.volume.IIIIndicator	calculate	62	false	
+org.ta4j.core.indicators.volume.IIIIndicator	getUnstableBars	77	true	{ return 0; }
+org.ta4j.core.indicators.volume.MVWAPIndicator	calculate	53	false	
+org.ta4j.core.indicators.volume.MVWAPIndicator	getUnstableBars	58	true	{ return 0; }
+org.ta4j.core.indicators.volume.MoneyFlowIndexIndicator	calculate	67	false	
+org.ta4j.core.indicators.volume.MoneyFlowIndexIndicator	getUnstableBars	103	true	{ return barCount; }
+org.ta4j.core.indicators.volume.MoneyFlowIndexIndicator	toString	108	false	
+org.ta4j.core.indicators.volume.NVIIndicator	calculate	54	false	
+org.ta4j.core.indicators.volume.NVIIndicator	getUnstableBars	73	true	{ return 0; }
+org.ta4j.core.indicators.volume.OnBalanceVolumeIndicator	calculate	47	false	
+org.ta4j.core.indicators.volume.OnBalanceVolumeIndicator	getUnstableBars	65	true	{ return 0; }
+org.ta4j.core.indicators.volume.PVIIndicator	calculate	51	false	
+org.ta4j.core.indicators.volume.PVIIndicator	getUnstableBars	70	true	{ return 0; }
+org.ta4j.core.indicators.volume.ROCVIndicator	calculate	55	false	
+org.ta4j.core.indicators.volume.ROCVIndicator	getUnstableBars	63	true	{ return barCount; }
+org.ta4j.core.indicators.volume.ROCVIndicator	toString	68	false	
+org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicator	calculate	72	false	
+org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicator	getUnstableBars	85	true	{ return barCount; }
+org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicator	toString	90	false	
+org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicator	calculate	65	false	
+org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicator	getUnstableBars	86	true	{ return barCount; }
+org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicator	toString	91	false	
+org.ta4j.core.indicators.volume.VWAPIndicator	calculate	66	false	
+org.ta4j.core.indicators.volume.VWAPIndicator	getUnstableBars	82	true	{ return barCount; }
+org.ta4j.core.indicators.volume.VWAPIndicator	toString	87	false	
+org.ta4j.core.num.DecimalNum	valueOf	138	false	
+org.ta4j.core.num.DecimalNum	valueOf	154	false	
+org.ta4j.core.num.DecimalNum	valueOf	174	false	
+org.ta4j.core.num.DecimalNum	valueOf	191	false	
+org.ta4j.core.num.DecimalNum	valueOf	201	false	
+org.ta4j.core.num.DecimalNum	valueOf	211	false	
+org.ta4j.core.num.DecimalNum	valueOf	221	false	
+org.ta4j.core.num.DecimalNum	valueOf	236	false	
+org.ta4j.core.num.DecimalNum	valueOf	254	false	
+org.ta4j.core.num.DecimalNum	valueOf	271	false	
+org.ta4j.core.num.DecimalNum	valueOf	283	false	
+org.ta4j.core.num.DecimalNum	zero	287	false	
+org.ta4j.core.num.DecimalNum	one	292	false	
+org.ta4j.core.num.DecimalNum	hundred	297	false	
+org.ta4j.core.num.DecimalNum	function	302	false	
+org.ta4j.core.num.DecimalNum	getDelegate	312	true	{ return delegate; }
+org.ta4j.core.num.DecimalNum	getMathContext	322	true	{ return mathContext; }
+org.ta4j.core.num.DecimalNum	getName	326	true	{ return this.getClass().getSimpleName(); }
+org.ta4j.core.num.DecimalNum	plus	331	false	
+org.ta4j.core.num.DecimalNum	minus	348	false	
+org.ta4j.core.num.DecimalNum	multipliedBy	365	false	
+org.ta4j.core.num.DecimalNum	dividedBy	382	false	
+org.ta4j.core.num.DecimalNum	remainder	399	false	
+org.ta4j.core.num.DecimalNum	floor	410	false	
+org.ta4j.core.num.DecimalNum	ceil	416	false	
+org.ta4j.core.num.DecimalNum	pow	425	false	
+org.ta4j.core.num.DecimalNum	sqrt	438	false	
+org.ta4j.core.num.DecimalNum	sqrt	443	false	
+org.ta4j.core.num.DecimalNum	log	513	false	
+org.ta4j.core.num.DecimalNum	abs	544	false	
+org.ta4j.core.num.DecimalNum	negate	549	false	
+org.ta4j.core.num.DecimalNum	isZero	554	true	{ return delegate.signum() == 0; }
+org.ta4j.core.num.DecimalNum	isPositive	559	true	{ return delegate.signum() > 0; }
+org.ta4j.core.num.DecimalNum	isPositiveOrZero	564	true	{ return delegate.signum() >= 0; }
+org.ta4j.core.num.DecimalNum	isNegative	569	true	{ return delegate.signum() < 0; }
+org.ta4j.core.num.DecimalNum	isNegativeOrZero	574	true	{ return delegate.signum() <= 0; }
+org.ta4j.core.num.DecimalNum	isEqual	579	true	{ return !other.isNaN() && compareTo(other) == 0; }
+org.ta4j.core.num.DecimalNum	matches	592	false	
+org.ta4j.core.num.DecimalNum	matches	613	false	
+org.ta4j.core.num.DecimalNum	isGreaterThan	625	true	{ return !other.isNaN() && compareTo(other) > 0; }
+org.ta4j.core.num.DecimalNum	isGreaterThanOrEqual	630	true	{ return !other.isNaN() && compareTo(other) > -1; }
+org.ta4j.core.num.DecimalNum	isLessThan	635	true	{ return !other.isNaN() && compareTo(other) < 0; }
+org.ta4j.core.num.DecimalNum	isLessThanOrEqual	640	true	{ return !other.isNaN() && delegate.compareTo(((DecimalNum)other).delegate) < 1; }
+org.ta4j.core.num.DecimalNum	compareTo	645	false	
+org.ta4j.core.num.DecimalNum	min	655	false	
+org.ta4j.core.num.DecimalNum	max	665	false	
+org.ta4j.core.num.DecimalNum	hashCode	670	true	{ return Objects.hash(delegate); }
+org.ta4j.core.num.DecimalNum	equals	683	false	
+org.ta4j.core.num.DecimalNum	toString	691	false	
+org.ta4j.core.num.DecimalNum	pow	696	false	
+org.ta4j.core.num.DoubleNum	valueOf	57	false	
+org.ta4j.core.num.DoubleNum	valueOf	67	false	
+org.ta4j.core.num.DoubleNum	valueOf	81	false	
+org.ta4j.core.num.DoubleNum	valueOf	91	false	
+org.ta4j.core.num.DoubleNum	valueOf	101	false	
+org.ta4j.core.num.DoubleNum	valueOf	111	false	
+org.ta4j.core.num.DoubleNum	valueOf	125	false	
+org.ta4j.core.num.DoubleNum	zero	129	false	
+org.ta4j.core.num.DoubleNum	one	134	false	
+org.ta4j.core.num.DoubleNum	hundred	139	false	
+org.ta4j.core.num.DoubleNum	function	144	false	
+org.ta4j.core.num.DoubleNum	getDelegate	149	true	{ return delegate; }
+org.ta4j.core.num.DoubleNum	getName	154	true	{ return this.getClass().getSimpleName(); }
+org.ta4j.core.num.DoubleNum	plus	159	false	
+org.ta4j.core.num.DoubleNum	minus	164	false	
+org.ta4j.core.num.DoubleNum	multipliedBy	169	false	
+org.ta4j.core.num.DoubleNum	dividedBy	174	false	
+org.ta4j.core.num.DoubleNum	remainder	183	false	
+org.ta4j.core.num.DoubleNum	floor	188	false	
+org.ta4j.core.num.DoubleNum	ceil	193	false	
+org.ta4j.core.num.DoubleNum	pow	198	false	
+org.ta4j.core.num.DoubleNum	pow	203	false	
+org.ta4j.core.num.DoubleNum	sqrt	208	false	
+org.ta4j.core.num.DoubleNum	sqrt	216	false	
+org.ta4j.core.num.DoubleNum	abs	221	false	
+org.ta4j.core.num.DoubleNum	negate	226	false	
+org.ta4j.core.num.DoubleNum	isZero	231	true	{ return delegate == 0; }
+org.ta4j.core.num.DoubleNum	isPositive	236	true	{ return delegate > 0; }
+org.ta4j.core.num.DoubleNum	isPositiveOrZero	241	true	{ return delegate >= 0; }
+org.ta4j.core.num.DoubleNum	isNegative	246	true	{ return delegate < 0; }
+org.ta4j.core.num.DoubleNum	isNegativeOrZero	251	true	{ return delegate <= 0; }
+org.ta4j.core.num.DoubleNum	isEqual	256	true	{ return !other.isNaN() && delegate == ((DoubleNum)other).delegate; }
+org.ta4j.core.num.DoubleNum	log	261	false	
+org.ta4j.core.num.DoubleNum	isGreaterThan	269	true	{ return !other.isNaN() && compareTo(other) > 0; }
+org.ta4j.core.num.DoubleNum	isGreaterThanOrEqual	274	true	{ return !other.isNaN() && compareTo(other) > -1; }
+org.ta4j.core.num.DoubleNum	isLessThan	279	true	{ return !other.isNaN() && compareTo(other) < 0; }
+org.ta4j.core.num.DoubleNum	isLessThanOrEqual	284	true	{ return !other.isNaN() && compareTo(other) < 1; }
+org.ta4j.core.num.DoubleNum	min	289	false	
+org.ta4j.core.num.DoubleNum	max	294	false	
+org.ta4j.core.num.DoubleNum	hashCode	299	true	{ return ((Double)(delegate)).hashCode(); }
+org.ta4j.core.num.DoubleNum	toString	304	false	
+org.ta4j.core.num.DoubleNum	equals	309	false	
+org.ta4j.core.num.DoubleNum	compareTo	319	false	
+org.ta4j.core.num.NaN	valueOf	65	false	
+org.ta4j.core.num.NaN	compareTo	69	false	
+org.ta4j.core.num.NaN	intValue	74	false	
+org.ta4j.core.num.NaN	longValue	79	false	
+org.ta4j.core.num.NaN	floatValue	84	false	
+org.ta4j.core.num.NaN	doubleValue	89	false	
+org.ta4j.core.num.NaN	getDelegate	94	true	{ return null; }
+org.ta4j.core.num.NaN	getName	99	true	{ return toString(); }
+org.ta4j.core.num.NaN	toString	104	false	
+org.ta4j.core.num.NaN	plus	109	false	
+org.ta4j.core.num.NaN	minus	114	false	
+org.ta4j.core.num.NaN	multipliedBy	119	false	
+org.ta4j.core.num.NaN	dividedBy	124	false	
+org.ta4j.core.num.NaN	remainder	129	false	
+org.ta4j.core.num.NaN	floor	134	false	
+org.ta4j.core.num.NaN	ceil	139	false	
+org.ta4j.core.num.NaN	pow	144	false	
+org.ta4j.core.num.NaN	pow	149	false	
+org.ta4j.core.num.NaN	log	154	false	
+org.ta4j.core.num.NaN	sqrt	159	false	
+org.ta4j.core.num.NaN	sqrt	164	false	
+org.ta4j.core.num.NaN	abs	169	false	
+org.ta4j.core.num.NaN	negate	174	false	
+org.ta4j.core.num.NaN	isZero	179	true	{ return false; }
+org.ta4j.core.num.NaN	isPositive	184	true	{ return false; }
+org.ta4j.core.num.NaN	isPositiveOrZero	189	true	{ return false; }
+org.ta4j.core.num.NaN	isNegative	194	true	{ return false; }
+org.ta4j.core.num.NaN	isNegativeOrZero	199	true	{ return false; }
+org.ta4j.core.num.NaN	isEqual	211	true	{ return other != null && other.equals(NaN); }
+org.ta4j.core.num.NaN	isGreaterThan	216	true	{ return false; }
+org.ta4j.core.num.NaN	isGreaterThanOrEqual	221	true	{ return false; }
+org.ta4j.core.num.NaN	isLessThan	226	true	{ return false; }
+org.ta4j.core.num.NaN	isLessThanOrEqual	231	true	{ return false; }
+org.ta4j.core.num.NaN	min	236	false	
+org.ta4j.core.num.NaN	max	241	false	
+org.ta4j.core.num.NaN	function	246	false	
+org.ta4j.core.num.NaN	isNaN	251	true	{ return true; }
+org.ta4j.core.reports.PerformanceReport	getTotalProfitLoss	61	true	{ return totalProfitLoss; }
+org.ta4j.core.reports.PerformanceReport	getTotalProfitLossPercentage	66	true	{ return totalProfitLossPercentage; }
+org.ta4j.core.reports.PerformanceReport	getTotalProfit	71	true	{ return totalProfit; }
+org.ta4j.core.reports.PerformanceReport	getTotalLoss	76	true	{ return totalLoss; }
+org.ta4j.core.reports.PerformanceReportGenerator	generate	41	false	
+org.ta4j.core.reports.PositionStatsReport	getProfitCount	56	true	{ return profitCount; }
+org.ta4j.core.reports.PositionStatsReport	getLossCount	61	true	{ return lossCount; }
+org.ta4j.core.reports.PositionStatsReport	getBreakEvenCount	66	true	{ return breakEvenCount; }
+org.ta4j.core.reports.PositionStatsReportGenerator	generate	40	false	
+org.ta4j.core.reports.TradingStatement	getStrategy	53	true	{ return strategy; }
+org.ta4j.core.reports.TradingStatement	getPositionStatsReport	58	true	{ return positionStatsReport; }
+org.ta4j.core.reports.TradingStatement	getPerformanceReport	63	true	{ return performanceReport; }
+org.ta4j.core.reports.TradingStatementGenerator	generate	59	false	
+org.ta4j.core.rules.AbstractRule	traceIsSatisfied	47	false	
+org.ta4j.core.rules.AndRule	isSatisfied	55	false	
+org.ta4j.core.rules.AndRule	getRule1	63	true	{ return rule1; }
+org.ta4j.core.rules.AndRule	getRule2	68	true	{ return rule2; }
+org.ta4j.core.rules.BooleanIndicatorRule	isSatisfied	47	false	
+org.ta4j.core.rules.BooleanRule	isSatisfied	52	false	
+org.ta4j.core.rules.ChainRule	isSatisfied	55	false	
+org.ta4j.core.rules.CrossedDownIndicatorRule	isSatisfied	72	false	
+org.ta4j.core.rules.CrossedDownIndicatorRule	getLow	80	true	{ return cross.getLow(); }
+org.ta4j.core.rules.CrossedDownIndicatorRule	getUp	85	true	{ return cross.getUp(); }
+org.ta4j.core.rules.CrossedUpIndicatorRule	isSatisfied	72	false	
+org.ta4j.core.rules.CrossedUpIndicatorRule	getLow	80	true	{ return cross.getLow(); }
+org.ta4j.core.rules.CrossedUpIndicatorRule	getUp	85	true	{ return cross.getUp(); }
+org.ta4j.core.rules.DayOfWeekRule	isSatisfied	56	false	
+org.ta4j.core.rules.FixedRule	isSatisfied	48	false	
+org.ta4j.core.rules.InPipeRule	isSatisfied	83	false	
+org.ta4j.core.rules.InSlopeRule	isSatisfied	109	false	
+org.ta4j.core.rules.IsEqualRule	isSatisfied	75	false	
+org.ta4j.core.rules.IsFallingRule	isSatisfied	70	false	
+org.ta4j.core.rules.IsHighestRule	isSatisfied	55	false	
+org.ta4j.core.rules.IsLowestRule	isSatisfied	55	false	
+org.ta4j.core.rules.IsRisingRule	isSatisfied	70	false	
+org.ta4j.core.rules.JustOnceRule	isSatisfied	63	false	
+org.ta4j.core.rules.NotRule	isSatisfied	51	false	
+org.ta4j.core.rules.NotRule	getRuleToNegate	59	true	{ return ruleToNegate; }
+org.ta4j.core.rules.OpenedPositionMinimumBarCountRule	isSatisfied	61	false	
+org.ta4j.core.rules.OpenedPositionMinimumBarCountRule	getBarCount	72	true	{ return barCount; }
+org.ta4j.core.rules.OrRule	isSatisfied	55	false	
+org.ta4j.core.rules.OrRule	getRule1	63	true	{ return rule1; }
+org.ta4j.core.rules.OrRule	getRule2	68	true	{ return rule2; }
+org.ta4j.core.rules.OverIndicatorRule	isSatisfied	78	false	
+org.ta4j.core.rules.StopGainRule	isSatisfied	71	false	
+org.ta4j.core.rules.StopLossRule	isSatisfied	71	false	
+org.ta4j.core.rules.TimeRangeRule	isSatisfied	54	false	
+org.ta4j.core.rules.TrailingStopLossRule	isSatisfied	74	false	
+org.ta4j.core.rules.TrailingStopLossRule	traceIsSatisfied	117	false	
+org.ta4j.core.rules.UnderIndicatorRule	isSatisfied	78	false	
+org.ta4j.core.rules.WaitForRule	isSatisfied	58	false	
+org.ta4j.core.rules.XorRule	isSatisfied	52	false	
+org.ta4j.core.rules.XorRule	getRule1	60	true	{ return rule1; }
+org.ta4j.core.rules.XorRule	getRule2	65	true	{ return rule2; }
+org.ta4j.core.rules.helper.ChainLink	getRule	67	true	{ return rule; }
+org.ta4j.core.rules.helper.ChainLink	setRule	74	true	{ this.rule = rule; }
+org.ta4j.core.rules.helper.ChainLink	getThreshold	81	true	{ return threshold; }
+org.ta4j.core.rules.helper.ChainLink	setThreshold	88	true	{ this.threshold = threshold; }
+org.ta4j.core.rules.helper.ChainLink	equals	92	false	
+org.ta4j.core.rules.helper.ChainLink	hashCode	102	true	{ return Objects.hash(getRule(), getThreshold()); }
+org.ta4j.core.rules.helper.ChainLink	toString	107	false	
+org.ta4j.core.utils.BarSeriesUtils	aggregateBars	68	false	
+org.ta4j.core.utils.BarSeriesUtils	replaceBarIfChanged	88	false	
+org.ta4j.core.utils.BarSeriesUtils	findMissingBars	116	false	
+org.ta4j.core.utils.BarSeriesUtils	convertBarSeries	154	false	
+org.ta4j.core.utils.BarSeriesUtils	findOverlappingBars	189	false	
+org.ta4j.core.utils.BarSeriesUtils	addBars	214	false	
+org.ta4j.core.utils.BarSeriesUtils	sortBars	232	false	

@@ -1,0 +1,58 @@
+{
+  "class_name": "NumericIndicator",
+  "technique": "ToT",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-29T16:58:18.337260+00:00",
+      "latency": 51.391,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "Sail Research",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1793293098-49xYQbi8p2rWBTfZXZdl",
+      "usage": {
+        "prompt_tokens": 4489,
+        "completion_tokens": 6454,
+        "total_tokens": 10943,
+        "cost": 0.0027163,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 4488,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0027163,
+          "upstream_inference_prompt_cost": 0.0001347,
+          "upstream_inference_completions_cost": 0.0025816
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1442,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "c60f4e21c5e43ee807ae6dd7c932afd6ceab9b6c9c0852216e7f3674dac04aa7",
+      "response_sha256": "59f2cd8e62754419142154095b8a20ae4cd276e6fd7246de94f15a62c1f0af72"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "NumericIndicatorTest",
+    "package": "org.ta4j.core.indicators.numeric",
+    "fqcn": "org.ta4j.core.indicators.numeric.NumericIndicatorTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java"
+}

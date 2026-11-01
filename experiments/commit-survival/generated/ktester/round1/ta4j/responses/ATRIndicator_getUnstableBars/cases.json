@@ -1,0 +1,158 @@
+[
+  {
+    "group": "ATRIndicator.getUnstableBars()",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 0
+          }
+        ],
+        "expected": 0,
+        "description": "When the ATRIndicator is constructed with an empty BarSeries (0 bars), getUnstableBars() should return 0, indicating no unstable bars."
+      },
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 5
+          }
+        ],
+        "expected": 5,
+        "description": "When the ATRIndicator is constructed with a BarSeries containing 5 bars, getUnstableBars() should return 5, matching the bar count."
+      },
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 42
+          }
+        ],
+        "expected": 42,
+        "description": "When the ATRIndicator is constructed with a BarSeries containing 42 bars, getUnstableBars() should return 42, verifying correct propagation of the bar count."
+      },
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 1000
+          }
+        ],
+        "expected": 1000,
+        "description": "When the ATRIndicator is constructed with a large BarSeries (1000 bars), getUnstableBars() should return 1000, ensuring the method works for high counts."
+      },
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": -1
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "If the underlying BarSeries reports a negative bar count (which is invalid), getUnstableBars() should propagate the error, typically by throwing an IllegalArgumentException or similar. This case verifies defensive handling of corrupt state."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getUnstableBars() - dynamic series growth",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 3
+          },
+          {
+            "parameter": "addedBars",
+            "value": 2
+          }
+        ],
+        "expected": 5,
+        "description": "Create an ATRIndicator with a BarSeries of 3 bars, then add 2 more bars to the series. getUnstableBars() should reflect the updated total (3 + 2 = 5)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 0
+          },
+          {
+            "parameter": "addedBars",
+            "value": 7
+          }
+        ],
+        "expected": 7,
+        "description": "Start with an empty BarSeries, add 7 bars after the indicator is constructed. The method must return the current bar count (7)."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getUnstableBars() - series replacement",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 8
+          },
+          {
+            "parameter": "newBarCount",
+            "value": 4
+          }
+        ],
+        "expected": 4,
+        "description": "Construct the indicator with a series of 8 bars, then replace its underlying BarSeries with a new series containing 4 bars. getUnstableBars() should now return 4, proving that the method always queries the current series."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getUnstableBars() - null series handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Pass a null BarSeries to the ATRIndicator constructor. Subsequent call to getUnstableBars() should throw NullPointerException (or the constructor itself should)."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getUnstableBars() - mocked negative count after construction",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 5
+          },
+          {
+            "parameter": "mockedBarCount",
+            "value": -3
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Create the indicator with a valid series (5 bars) then, using a mock or test double, force getBarCount() to return -3. getUnstableBars() must propagate an IllegalArgumentException, confirming defensive checks for corrupted state."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getUnstableBars() - maximum integer count",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "initialBarCount",
+            "value": 2147483647
+          }
+        ],
+        "expected": 2147483647,
+        "description": "Construct the indicator with a BarSeries whose size equals Integer.MAX_VALUE. getUnstableBars() should correctly return this maximum value without overflow."
+      }
+    ]
+  }
+]

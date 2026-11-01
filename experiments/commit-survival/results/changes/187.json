@@ -1,0 +1,902 @@
+{
+  "index": 187,
+  "sha": "d0ef59e7c0072e972c9f24607d349e20e61dc6cb",
+  "parent": "b112d34b0c676cebf966b70c674501f4e8795c31",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/ATRIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/AccelerationDecelerationIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/AwesomeOscillatorIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/CCIIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/CMOIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChopIndicator.java": [
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/CoppockCurveIndicator.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/DPOIndicator.java": [
+      70
+    ],
+    "src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java": [
+      88
+    ],
+    "src/main/java/org/ta4j/core/indicators/FisherIndicator.java": [
+      158,
+      186
+    ],
+    "src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/KRIIndicator.java": [
+      44
+    ],
+    "src/main/java/org/ta4j/core/indicators/KSTIndicator.java": [
+      91
+    ],
+    "src/main/java/org/ta4j/core/indicators/MACDIndicator.java": [
+      91
+    ],
+    "src/main/java/org/ta4j/core/indicators/MACDVIndicator.java": [
+      157
+    ],
+    "src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java": [
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java": [
+      218,
+      219,
+      227,
+      233,
+      234,
+      246,
+      247
+    ],
+    "src/main/java/org/ta4j/core/indicators/PPOIndicator.java": [
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java": [
+      209
+    ],
+    "src/main/java/org/ta4j/core/indicators/RAVIIndicator.java": [
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/ROCIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/RSIIndicator.java": [
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/SqueezeProIndicator.java": [
+      206
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticIndicator.java": [
+      85
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticOscillatorDIndicator.java": [
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/UlcerIndexIndicator.java": [
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/WilliamsRIndicator.java": [
+      73
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java": [
+      37,
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java": [
+      41,
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/MinusDMIndicator.java": [
+      47
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java": [
+      41,
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/PlusDMIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/aroon/AroonDownIndicator.java": [
+      77
+    ],
+    "src/main/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicator.java": [
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/aroon/AroonUpIndicator.java": [
+      76
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/DMAIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java": [
+      45
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java": [
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/JMAIndicator.java": [
+      128
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/KAMAIndicator.java": [
+      91
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/KiJunV2Indicator.java": [
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java": [
+      51,
+      52,
+      91
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/LWMAIndicator.java": [
+      41,
+      42,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/MCGinleyMAIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/SGMAIndicator.java": [
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/SMMAIndicator.java": [
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/TMAIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java": [
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VIDYAIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/WMAIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java": [
+      85
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/ZLEMAIndicator.java": [
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicator.java": [
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/PercentBIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishHaramiIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishHaramiIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java": [
+      64
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java": [
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicator.java": [
+      41
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicator.java": [
+      41
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicator.java": [
+      98
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CombineIndicator.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java": [
+      234
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java": [
+      41,
+      47,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java": [
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicator.java": [
+      129
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/GainIndicator.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/HighestValueIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/LossIndicator.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/LowestValueIndicator.java": [
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java": [
+      289
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java": [
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java": [
+      74
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/SumIndicator.java": [
+      44
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java": [
+      42
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/VolumeIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuLineIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanAIndicator.java": [
+      82
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanBIndicator.java": [
+      70
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java": [
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java": [
+      346
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/UnaryOperationIndicator.java": [
+      193
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java": [
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java": [
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicator.java": [
+      126
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java": [
+      86
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java": [
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java": [
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java": [
+      34,
+      52
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java": [
+      34,
+      52
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicator.java": [
+      32,
+      33,
+      52
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/MVWAPIndicator.java": [
+      40
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicator.java": [
+      87
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicator.java": [
+      67
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/VWAPIndicator.java": [
+      63
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/ATRIndicator.java": [
+      47,
+      48,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/AccelerationDecelerationIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/AwesomeOscillatorIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/CCIIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/CMOIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java": [
+      56,
+      57,
+      64
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java": [
+      56,
+      57,
+      64
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChopIndicator.java": [
+      75,
+      76,
+      77
+    ],
+    "src/main/java/org/ta4j/core/indicators/CoppockCurveIndicator.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/DPOIndicator.java": [
+      70
+    ],
+    "src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java": [
+      88
+    ],
+    "src/main/java/org/ta4j/core/indicators/FisherIndicator.java": [
+      158,
+      186
+    ],
+    "src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/KRIIndicator.java": [
+      44
+    ],
+    "src/main/java/org/ta4j/core/indicators/KSTIndicator.java": [
+      91,
+      92,
+      93
+    ],
+    "src/main/java/org/ta4j/core/indicators/MACDIndicator.java": [
+      51,
+      93,
+      94
+    ],
+    "src/main/java/org/ta4j/core/indicators/MACDVIndicator.java": [
+      96,
+      159
+    ],
+    "src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java": [
+      57,
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java": [
+      182,
+      183,
+      184,
+      185,
+      224,
+      225,
+      229,
+      230,
+      238,
+      244,
+      245,
+      246,
+      247,
+      259
+    ],
+    "src/main/java/org/ta4j/core/indicators/PPOIndicator.java": [
+      49,
+      65,
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java": [
+      209
+    ],
+    "src/main/java/org/ta4j/core/indicators/RAVIIndicator.java": [
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/ROCIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/RSIIndicator.java": [
+      36,
+      40,
+      51,
+      52,
+      65
+    ],
+    "src/main/java/org/ta4j/core/indicators/SqueezeProIndicator.java": [
+      206,
+      207,
+      208
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticIndicator.java": [
+      85
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticOscillatorDIndicator.java": [
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java": [
+      71,
+      72,
+      73
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/UlcerIndexIndicator.java": [
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/WilliamsRIndicator.java": [
+      73,
+      74,
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java": [
+      38,
+      39,
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java": [
+      42,
+      43,
+      60,
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/MinusDMIndicator.java": [
+      47
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java": [
+      42,
+      43,
+      60,
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/PlusDMIndicator.java": [
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/aroon/AroonDownIndicator.java": [
+      77
+    ],
+    "src/main/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicator.java": [
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/aroon/AroonUpIndicator.java": [
+      76
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java": [
+      47,
+      48,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/DMAIndicator.java": [
+      40,
+      45,
+      46,
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java": [
+      38,
+      41,
+      46,
+      47,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java": [
+      47,
+      54,
+      55,
+      59,
+      60,
+      72
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java": [
+      45,
+      46,
+      53
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/JMAIndicator.java": [
+      64,
+      130
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/KAMAIndicator.java": [
+      42,
+      93
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/KiJunV2Indicator.java": [
+      52,
+      53,
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java": [
+      53,
+      54,
+      93
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/LWMAIndicator.java": [
+      39,
+      40,
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/MCGinleyMAIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/SGMAIndicator.java": [
+      67,
+      68,
+      85
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/SMMAIndicator.java": [
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/TMAIndicator.java": [
+      45,
+      46,
+      53
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java": [
+      42,
+      46,
+      51,
+      52,
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VIDYAIndicator.java": [
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java": [
+      65,
+      66,
+      79,
+      80,
+      87,
+      88,
+      89
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/WMAIndicator.java": [
+      34,
+      35,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java": [
+      85
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/ZLEMAIndicator.java": [
+      57
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicator.java": [
+      48,
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicator.java": [
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/bollinger/PercentBIndicator.java": [
+      51,
+      52
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BearishHaramiIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/BullishHaramiIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java": [
+      64
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java": [
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicator.java": [
+      41
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicator.java": [
+      41
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicator.java": [
+      98
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CombineIndicator.java": [
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java": [
+      157,
+      191,
+      237,
+      241,
+      242,
+      243,
+      244
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java": [
+      39,
+      42,
+      48,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java": [
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicator.java": [
+      129
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/GainIndicator.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/HighestValueIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/LossIndicator.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/LowestValueIndicator.java": [
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java": [
+      289,
+      290,
+      291,
+      292
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java": [
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java": [
+      52,
+      53,
+      60,
+      61,
+      69,
+      70,
+      83
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/SumIndicator.java": [
+      44,
+      45,
+      46,
+      48
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java": [
+      36,
+      37,
+      46,
+      47,
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java": [
+      42
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/VolumeIndicator.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicator.java": [
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuLineIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanAIndicator.java": [
+      82,
+      83
+    ],
+    "src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanBIndicator.java": [
+      70
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java": [
+      54,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java": [
+      53,
+      54,
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java": [
+      54,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java": [
+      346
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/UnaryOperationIndicator.java": [
+      193
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java": [
+      48,
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java": [
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java": [
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java": [
+      79,
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicator.java": [
+      126
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java": [
+      86
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java": [
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java": [
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java": [
+      41,
+      42,
+      54,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java": [
+      41,
+      42,
+      54,
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicator.java": [
+      55,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicator.java": [
+      33,
+      34,
+      35,
+      54,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/MVWAPIndicator.java": [
+      40
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicator.java": [
+      87
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicator.java": [
+      67
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java": [
+      68
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/VWAPIndicator.java": [
+      63,
+      64
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\nindex 4488dda81..f94f41ba8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\n@@ -10,0 +11,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -44,0 +47,3 @@ public class ATRIndicator extends AbstractIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -50 +55 @@ public class ATRIndicator extends AbstractIndicator<Num> {\n-        return getBarCount();\n+        return trIndicator.getCountOfUnstableBars() + getBarCount();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/AccelerationDecelerationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/AccelerationDecelerationIndicator.java\nindex 0713628ac..b8c3a413b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/AccelerationDecelerationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/AccelerationDecelerationIndicator.java\n@@ -48 +48 @@ public class AccelerationDecelerationIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(awesome.getCountOfUnstableBars(), sma.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/AwesomeOscillatorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/AwesomeOscillatorIndicator.java\nindex b9fe80304..35cd39de8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/AwesomeOscillatorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/AwesomeOscillatorIndicator.java\n@@ -71 +71 @@ public class AwesomeOscillatorIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(sma5.getCountOfUnstableBars(), sma34.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java\nindex f6a555839..16312f0a0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CCIIndicator.java\n@@ -55 +55 @@ public class CCIIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(smaInd.getCountOfUnstableBars(), meanDeviationInd.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CMOIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CMOIndicator.java\nindex 30fcbf840..8a0cd8997 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CMOIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CMOIndicator.java\n@@ -55 +55 @@ public class CMOIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return gainIndicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java\nindex f639b0bc4..f00d08907 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java\n@@ -10,0 +11,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -53,0 +56,3 @@ public class ChandelierExitLongIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -59 +64 @@ public class ChandelierExitLongIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(high.getCountOfUnstableBars(), atr.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java\nindex aa09e2b97..4a0344aa8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java\n@@ -10,0 +11,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -53,0 +56,3 @@ public class ChandelierExitShortIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -59 +64 @@ public class ChandelierExitShortIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(low.getCountOfUnstableBars(), atr.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChopIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChopIndicator.java\nindex 8a82b635b..7ca196186 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChopIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChopIndicator.java\n@@ -75 +75,3 @@ public class ChopIndicator extends CachedIndicator<Num> {\n-        return timeFrame;\n+        int atrUnstableBars = atrIndicator.getCountOfUnstableBars() + timeFrame - 1;\n+        int highLowUnstableBars = Math.max(hvi.getCountOfUnstableBars(), lvi.getCountOfUnstableBars());\n+        return Math.max(atrUnstableBars, highLowUnstableBars);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CoppockCurveIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CoppockCurveIndicator.java\nindex b5c7c4f34..ec69b7920 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CoppockCurveIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CoppockCurveIndicator.java\n@@ -59 +59 @@ public class CoppockCurveIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return wma.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\nindex 29243169a..8e30fe68f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\n@@ -70 +70 @@ public class DPOIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return indicatorMinusPreviousSMAIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java\nindex 71c3feda2..59ab829d7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java\n@@ -88 +88 @@ public class DistanceFromMAIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return movingAverage.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/FisherIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/FisherIndicator.java\nindex 39068ddc4..796f4ed7d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/FisherIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/FisherIndicator.java\n@@ -158 +158 @@ public class FisherIndicator extends RecursiveCachedIndicator<Num> {\n-                return 0;\n+                return Math.max(periodHigh.getCountOfUnstableBars(), periodLow.getCountOfUnstableBars());\n@@ -186 +186 @@ public class FisherIndicator extends RecursiveCachedIndicator<Num> {\n-        return 0;\n+        return intermediateValue.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java\nindex 4464752ac..3ec6785e2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java\n@@ -71 +71 @@ public class IntraDayMomentumIndexIndicator extends CachedIndicator<Num> {\n-        return this.barCount;\n+        return Math.max(averageCloseOpenDiff.getCountOfUnstableBars(), averageOpenCloseDiff.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\nindex 43d6ef373..673fcc028 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\n@@ -44 +44 @@ public class KRIIndicator extends AbstractIndicator<Num> {\n-        return barCount;\n+        return kriIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/KSTIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/KSTIndicator.java\nindex 1bac765f5..34ceeaa26 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/KSTIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/KSTIndicator.java\n@@ -91 +91,3 @@ public class KSTIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int firstPair = Math.max(RCMA1.getCountOfUnstableBars(), RCMA2.getCountOfUnstableBars());\n+        int secondPair = Math.max(RCMA3.getCountOfUnstableBars(), RCMA4.getCountOfUnstableBars());\n+        return Math.max(firstPair, secondPair);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java\nindex a52065af9..2f88f5692 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java\n@@ -21,2 +21,3 @@ public class MACDIndicator extends CachedIndicator<Num> {\n-    private final EMAIndicator shortTermEma;\n-    private final EMAIndicator longTermEma;\n+    private final Indicator<Num> indicator;\n+    private final transient EMAIndicator shortTermEma;\n+    private final transient EMAIndicator longTermEma;\n@@ -49,0 +51 @@ public class MACDIndicator extends CachedIndicator<Num> {\n+        this.indicator = indicator;\n@@ -91 +93,2 @@ public class MACDIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int emaUnstableBars = Math.max(shortTermEma.getCountOfUnstableBars(), longTermEma.getCountOfUnstableBars());\n+        return indicator.getCountOfUnstableBars() + emaUnstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDVIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDVIndicator.java\nindex a827119d2..a2d911bf5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDVIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDVIndicator.java\n@@ -36,2 +36,3 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n-    private final VWMAIndicator shortTermVwema;\n-    private final VWMAIndicator longTermVwema;\n+    private final Indicator<Num> priceIndicator;\n+    private final transient VWMAIndicator shortTermVwema;\n+    private final transient VWMAIndicator longTermVwema;\n@@ -94,0 +96 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n+        this.priceIndicator = priceIndicator;\n@@ -157 +159 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(shortTermVwema.getCountOfUnstableBars(), longTermVwema.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\nindex 0465dae5c..c9b26baad 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\n@@ -57 +57,2 @@ public class MassIndexIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int emaUnstableBars = singleEma.getCountOfUnstableBars() + doubleEma.getCountOfUnstableBars();\n+        return emaUnstableBars + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\nindex 72a12bef9..5a0f7ddde 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/NetMomentumIndicator.java\n@@ -12,0 +13,2 @@ import java.util.Objects;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -117,0 +120 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n+    private final int unstableBars;\n@@ -178,0 +182,4 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n+        int smoothingUnstable = Math.max(oscillatingIndicator.getCountOfUnstableBars(),\n+                smoothedIndicator.getCountOfUnstableBars());\n+        int windowUnstable = Math.max(0, timeFrame - 1);\n+        this.unstableBars = smoothingUnstable + windowUnstable;\n@@ -216,0 +224,4 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n+\n@@ -218,2 +229,2 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n-        if (delta.isNaN()) {\n-            delta = zero;\n+        if (Num.isNaNOrNull(delta)) {\n+            return NaN;\n@@ -227 +238 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n-        if (previousValue.isNaN()) {\n+        if (Num.isNaNOrNull(previousValue)) {\n@@ -233,2 +244,4 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n-            Num expiredContribution = deltaFromNeutralIndicator.getValue(index - timeFrame);\n-            if (expiredContribution.isNaN()) {\n+            int expiredIndex = index - timeFrame;\n+            Num expiredContribution = expiredIndex < getCountOfUnstableBars() ? zero\n+                    : deltaFromNeutralIndicator.getValue(expiredIndex);\n+            if (Num.isNaNOrNull(expiredContribution)) {\n@@ -246,2 +259 @@ public class NetMomentumIndicator extends CachedIndicator<Num> {\n-        return Math.max(timeFrame,\n-                Math.max(oscillatingIndicator.getCountOfUnstableBars(), smoothedIndicator.getCountOfUnstableBars()));\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/PPOIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/PPOIndicator.java\nindex 53f0eaf2a..61f3bb8f1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/PPOIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/PPOIndicator.java\n@@ -19,2 +19,3 @@ public class PPOIndicator extends CachedIndicator<Num> {\n-    private final EMAIndicator shortTermEma;\n-    private final EMAIndicator longTermEma;\n+    private final Indicator<Num> indicator;\n+    private final transient EMAIndicator shortTermEma;\n+    private final transient EMAIndicator longTermEma;\n@@ -47,0 +49 @@ public class PPOIndicator extends CachedIndicator<Num> {\n+        this.indicator = indicator;\n@@ -63 +65,2 @@ public class PPOIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int emaUnstableBars = Math.max(shortTermEma.getCountOfUnstableBars(), longTermEma.getCountOfUnstableBars());\n+        return indicator.getCountOfUnstableBars() + emaUnstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java\nindex 13af1ddd1..f358a4848 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java\n@@ -209 +209 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-        return 0;\n+        return Math.max(lowestValueIndicator.getCountOfUnstableBars(), highestValueIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RAVIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RAVIIndicator.java\nindex 405f38a48..42a4dd942 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RAVIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RAVIIndicator.java\n@@ -43 +43 @@ public class RAVIIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(shortSma.getCountOfUnstableBars(), longSma.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ROCIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ROCIndicator.java\nindex 45352f4aa..369d914d1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ROCIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ROCIndicator.java\n@@ -48 +48 @@ public class ROCIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\nindex 57274a238..6a8839c7a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\n@@ -22,2 +22,3 @@ public class RSIIndicator extends CachedIndicator<Num> {\n-    private final MMAIndicator averageGainIndicator;\n-    private final MMAIndicator averageLossIndicator;\n+    private final Indicator<Num> indicator;\n+    private final transient MMAIndicator averageGainIndicator;\n+    private final transient MMAIndicator averageLossIndicator;\n@@ -24,0 +26 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+    private final int unstableBars;\n@@ -33,0 +36 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+        this.indicator = indicator;\n@@ -36,0 +40 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+        this.unstableBars = barCount + indicator.getCountOfUnstableBars();\n@@ -46,0 +51,3 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+        if (Num.isNaNOrNull(averageGain) || Num.isNaNOrNull(averageLoss)) {\n+            return NaN;\n+        }\n@@ -58 +65 @@ public class RSIIndicator extends CachedIndicator<Num> {\n-        return this.barCount;\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/SqueezeProIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/SqueezeProIndicator.java\nindex e1c764692..49ffb4b10 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/SqueezeProIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/SqueezeProIndicator.java\n@@ -206 +206,3 @@ public class SqueezeProIndicator extends CachedIndicator<Num> {\n-        return Math.max(0, barCount - 1);\n+        int unstableBars = Math.max(priceSma.getCountOfUnstableBars(), priceStdDev.getCountOfUnstableBars());\n+        unstableBars = Math.max(unstableBars, trueRangeSma.getCountOfUnstableBars());\n+        return Math.max(unstableBars, momentum.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticIndicator.java\nindex 0d137c0dc..574c2ac23 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticIndicator.java\n@@ -85 +85 @@ public class StochasticIndicator extends CachedIndicator<Num> {\n-        return lookback;\n+        return Math.max(highest.getCountOfUnstableBars(), lowest.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorDIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorDIndicator.java\nindex 822bfeaf8..f2396a1c2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorDIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorDIndicator.java\n@@ -43 +43 @@ public class StochasticOscillatorDIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return indicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java\nindex 573727491..d01f56f76 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java\n@@ -71 +71,3 @@ public class StochasticOscillatorKIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int baseUnstable = Math.max(indicator.getCountOfUnstableBars(),\n+                Math.max(highPriceIndicator.getCountOfUnstableBars(), lowPriceIndicator.getCountOfUnstableBars()));\n+        return baseUnstable + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\nindex 7d55db6d0..c77d598e1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\n@@ -71 +71 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-        return this.barCount;\n+        return this.stochasticIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/UlcerIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/UlcerIndexIndicator.java\nindex 19e095ff8..853663fb6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/UlcerIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/UlcerIndexIndicator.java\n@@ -58 +58 @@ public class UlcerIndexIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/WilliamsRIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/WilliamsRIndicator.java\nindex eefd03ec3..e92f431cd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/WilliamsRIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/WilliamsRIndicator.java\n@@ -73 +73,3 @@ public class WilliamsRIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int baseUnstable = Math.max(closePriceIndicator.getCountOfUnstableBars(),\n+                Math.max(highPriceIndicator.getCountOfUnstableBars(), lowPriceIndicator.getCountOfUnstableBars()));\n+        return baseUnstable + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java\nindex 9091a6c59..9919b1055 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java\n@@ -23,0 +24 @@ public class ADXIndicator extends CachedIndicator<Num> {\n+    private final DXIndicator dxIndicator;\n@@ -37 +38,2 @@ public class ADXIndicator extends CachedIndicator<Num> {\n-        this.averageDXIndicator = new MMAIndicator(new DXIndicator(series, diBarCount), adxBarCount);\n+        this.dxIndicator = new DXIndicator(series, diBarCount);\n+        this.averageDXIndicator = new MMAIndicator(dxIndicator, adxBarCount);\n@@ -58 +60 @@ public class ADXIndicator extends CachedIndicator<Num> {\n-        return Math.max(diBarCount, adxBarCount);\n+        return dxIndicator.getCountOfUnstableBars() + averageDXIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java\nindex c74352ee2..645cecf2c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java\n@@ -49 +49 @@ public class DXIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(plusDIIndicator.getCountOfUnstableBars(), minusDIIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java\nindex 77cd76197..e64bf30b5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java\n@@ -27,0 +28 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n+    private final MinusDMIndicator minusDMIndicator;\n@@ -41 +42,2 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n-        this.avgMinusDMIndicator = new MMAIndicator(new MinusDMIndicator(series), barCount);\n+        this.minusDMIndicator = new MinusDMIndicator(series);\n+        this.avgMinusDMIndicator = new MMAIndicator(minusDMIndicator, barCount);\n@@ -58 +60,2 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int dmUnstableBars = minusDMIndicator.getCountOfUnstableBars() + avgMinusDMIndicator.getCountOfUnstableBars();\n+        return Math.max(atrIndicator.getCountOfUnstableBars(), dmUnstableBars);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDMIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDMIndicator.java\nindex 93d934b1a..7b315219d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDMIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDMIndicator.java\n@@ -47 +47 @@ public class MinusDMIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java\nindex f61a195c0..b651e7a94 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java\n@@ -27,0 +28 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n+    private final PlusDMIndicator plusDMIndicator;\n@@ -41 +42,2 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n-        this.avgPlusDMIndicator = new MMAIndicator(new PlusDMIndicator(series), barCount);\n+        this.plusDMIndicator = new PlusDMIndicator(series);\n+        this.avgPlusDMIndicator = new MMAIndicator(plusDMIndicator, barCount);\n@@ -58 +60,2 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int dmUnstableBars = plusDMIndicator.getCountOfUnstableBars() + avgPlusDMIndicator.getCountOfUnstableBars();\n+        return Math.max(atrIndicator.getCountOfUnstableBars(), dmUnstableBars);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDMIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDMIndicator.java\nindex c87ac8b07..4c67a3144 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDMIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDMIndicator.java\n@@ -48 +48 @@ public class PlusDMIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonDownIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonDownIndicator.java\nindex dd1a6763a..2851c8e4d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonDownIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonDownIndicator.java\n@@ -77 +77 @@ public class AroonDownIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return lowestLowPriceIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicator.java\nindex d818f1de3..0bb143d71 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonOscillatorIndicator.java\n@@ -43 +43 @@ public class AroonOscillatorIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(aroonUpIndicator.getCountOfUnstableBars(), aroonDownIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonUpIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonUpIndicator.java\nindex a52a0d7b2..548eb607a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonUpIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/aroon/AroonUpIndicator.java\n@@ -76 +76 @@ public class AroonUpIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return highestHighPriceIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java\nindex b7252637d..fafb5e042 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -45 +47,3 @@ public class ATMAIndicator extends CachedIndicator<Num> {\n-\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -51 +55 @@ public class ATMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return smaSma.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DMAIndicator.java\nindex ef6e56017..1d773d8a5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DMAIndicator.java\n@@ -8,0 +9,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -23,0 +26 @@ public class DMAIndicator extends SMAIndicator {\n+    private final int unstableBars;\n@@ -36,0 +40 @@ public class DMAIndicator extends SMAIndicator {\n+        this.unstableBars = Math.max(0, super.getCountOfUnstableBars() + displacement);\n@@ -40,0 +45,3 @@ public class DMAIndicator extends SMAIndicator {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -55 +62 @@ public class DMAIndicator extends SMAIndicator {\n-        return barCount * 2;\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java\nindex 387acc604..2a0c63544 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -21,2 +23,4 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n-    private final EMAIndicator ema;\n-    private final EMAIndicator emaEma;\n+    private final Indicator<Num> indicator;\n+    private final transient EMAIndicator ema;\n+    private final transient EMAIndicator emaEma;\n+    private final int unstableBars;\n@@ -33,0 +38 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n+        this.indicator = indicator;\n@@ -35,0 +41 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n+        this.unstableBars = indicator.getCountOfUnstableBars() + (barCount * 2);\n@@ -39,0 +46,3 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -45 +54 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java\nindex 7c2f213d4..67aaec66b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java\n@@ -13,0 +14,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -29,0 +32,2 @@ public class EDMAIndicator extends AbstractIndicator<Num> {\n+    private final Indicator<Num> indicator;\n+    private final int unstableBars;\n@@ -42,0 +47 @@ public class EDMAIndicator extends AbstractIndicator<Num> {\n+        this.indicator = indicator;\n@@ -48,0 +54,2 @@ public class EDMAIndicator extends AbstractIndicator<Num> {\n+        int emaUnstableBars = indicator.getCountOfUnstableBars() + barCount;\n+        this.unstableBars = Math.max(0, emaUnstableBars + displacement);\n@@ -51,0 +59,3 @@ public class EDMAIndicator extends AbstractIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -62 +72 @@ public class EDMAIndicator extends AbstractIndicator<Num> {\n-        return barCount;\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java\nindex 3de2b737c..86eeeec91 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java\n@@ -10,0 +11,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -42,0 +45,3 @@ public class HMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -48 +53 @@ public class HMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return sqrtWma.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/JMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/JMAIndicator.java\nindex 3a620752e..4b5ec6794 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/JMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/JMAIndicator.java\n@@ -34,0 +35 @@ public class JMAIndicator extends CachedIndicator<Num> {\n+    private final int unstableBars;\n@@ -62,0 +64 @@ public class JMAIndicator extends CachedIndicator<Num> {\n+        this.unstableBars = indicator.getCountOfUnstableBars() + barCount;\n@@ -128 +130 @@ public class JMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return unstableBars;\n@@ -135 +137 @@ public class JMAIndicator extends CachedIndicator<Num> {\n-}\n\\ No newline at end of file\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KAMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KAMAIndicator.java\nindex 2d9189b34..ffbb7141f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KAMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KAMAIndicator.java\n@@ -22,0 +23 @@ public class KAMAIndicator extends RecursiveCachedIndicator<Num> {\n+    private final int unstableBars;\n@@ -40,0 +42 @@ public class KAMAIndicator extends RecursiveCachedIndicator<Num> {\n+        this.unstableBars = price.getCountOfUnstableBars() + barCountEffectiveRatio;\n@@ -91 +93 @@ public class KAMAIndicator extends RecursiveCachedIndicator<Num> {\n-        return 0;\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KiJunV2Indicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KiJunV2Indicator.java\nindex 6273475f5..ee05ecbc2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KiJunV2Indicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/KiJunV2Indicator.java\n@@ -14,0 +15,2 @@ import org.ta4j.core.num.NumFactory;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -49,0 +52,3 @@ public class KiJunV2Indicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -61 +66 @@ public class KiJunV2Indicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(highestValue.getCountOfUnstableBars(), lowestValue.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java\nindex bc73d4578..c86ccdbc2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LSMAIndicator.java\n@@ -10,0 +11,2 @@ import org.ta4j.core.num.NumFactory;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -51,2 +53,2 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        if (index < barCount - 1) {\n-            return indicator.getValue(index); // Not enough data points\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n@@ -91 +93 @@ public class LSMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LWMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LWMAIndicator.java\nindex 6fa3852fe..7bdbe39ff 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LWMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/LWMAIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -36,0 +39,3 @@ public class LWMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -41,4 +45,0 @@ public class LWMAIndicator extends CachedIndicator<Num> {\n-        if ((index + 1) < barCount) {\n-            return numFactory.zero();\n-        }\n-\n@@ -56 +57 @@ public class LWMAIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/MCGinleyMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/MCGinleyMAIndicator.java\nindex 2c21e4645..e5ceeb4b1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/MCGinleyMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/MCGinleyMAIndicator.java\n@@ -66 +66 @@ public class MCGinleyMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SGMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SGMAIndicator.java\nindex 2304890e5..829ed55e6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SGMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SGMAIndicator.java\n@@ -13,0 +14,2 @@ import org.ta4j.core.num.NumFactory;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -64,0 +67,3 @@ public class SGMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -80 +85 @@ public class SGMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMMAIndicator.java\nindex 5fbfd4451..ef9967221 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/SMMAIndicator.java\n@@ -62 +62 @@ public class SMMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TMAIndicator.java\nindex 740abb8b4..3b6025157 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TMAIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -43 +45,3 @@ public class TMAIndicator extends CachedIndicator<Num> {\n-\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -49 +53 @@ public class TMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return smaSma.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java\nindex 9f18ae174..489d7b3e3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -25,3 +27,5 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n-    private final EMAIndicator ema;\n-    private final EMAIndicator emaEma;\n-    private final EMAIndicator emaEmaEma;\n+    private final Indicator<Num> indicator;\n+    private final transient EMAIndicator ema;\n+    private final transient EMAIndicator emaEma;\n+    private final transient EMAIndicator emaEmaEma;\n+    private final int unstableBars;\n@@ -37,0 +42 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n+        this.indicator = indicator;\n@@ -40,0 +46 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n+        this.unstableBars = indicator.getCountOfUnstableBars() + (barCount * 3);\n@@ -44,0 +51,3 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -54 +63 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VIDYAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VIDYAIndicator.java\nindex 7bee54707..55c8b3056 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VIDYAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VIDYAIndicator.java\n@@ -66 +66 @@ public class VIDYAIndicator extends CachedIndicator<Num> {\n-        return cmoPeriod;\n+        return cmoIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\nindex e7afa5e74..ea1144a2f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\n@@ -14,0 +15,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -29,0 +32,2 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n+    private final Indicator<Num> priceIndicator;\n+    private final Indicator<Num> volumeIndicator;\n@@ -60,0 +65,2 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n+        this.priceIndicator = priceIndicator;\n+        this.volumeIndicator = volumeIndicator;\n@@ -72,0 +79,3 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -78 +87,3 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int baseUnstableBars = Math.max(priceIndicator.getCountOfUnstableBars(),\n+                volumeIndicator.getCountOfUnstableBars());\n+        return Math.max(baseUnstableBars, volumeWeightedIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WMAIndicator.java\nindex d9ef16efe..7393941eb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WMAIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -31,0 +34,3 @@ public class WMAIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -50 +55 @@ public class WMAIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java\nindex 301fa45c4..236876b35 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/WildersMAIndicator.java\n@@ -85 +85 @@ public class WildersMAIndicator extends CachedIndicator<Num> {\n-        return barCount * 2;\n+        return indicator.getCountOfUnstableBars() + (barCount * 2);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ZLEMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ZLEMAIndicator.java\nindex 87f0193f8..ba36619ca 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ZLEMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ZLEMAIndicator.java\n@@ -57 +57 @@ public class ZLEMAIndicator extends RecursiveCachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicator.java\nindex 4d810fc8e..f2a563bec 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandWidthIndicator.java\n@@ -48 +48,2 @@ public class BollingerBandWidthIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int unstableBars = Math.max(bbu.getCountOfUnstableBars(), bbm.getCountOfUnstableBars());\n+        return Math.max(unstableBars, bbl.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicator.java\nindex 2c0588cc7..2e3af8c01 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsLowerIndicator.java\n@@ -60 +60 @@ public class BollingerBandsLowerIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(bbm.getCountOfUnstableBars(), indicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicator.java\nindex 6ed270f71..c5d383735 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsMiddleIndicator.java\n@@ -39 +39 @@ public class BollingerBandsMiddleIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return indicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicator.java\nindex 5cad0d88c..d9a5cd331 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/BollingerBandsUpperIndicator.java\n@@ -60 +60 @@ public class BollingerBandsUpperIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(bbm.getCountOfUnstableBars(), deviation.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/PercentBIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/PercentBIndicator.java\nindex c9000dfe9..04c7052f2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/PercentBIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/bollinger/PercentBIndicator.java\n@@ -51 +51,2 @@ public class PercentBIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int unstableBars = Math.max(indicator.getCountOfUnstableBars(), bbu.getCountOfUnstableBars());\n+        return Math.max(unstableBars, bbl.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicator.java\nindex 2b82e851c..40d689c4b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishEngulfingIndicator.java\n@@ -49 +49 @@ public class BearishEngulfingIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishHaramiIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishHaramiIndicator.java\nindex 55362b9b8..a0cdb9fd4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishHaramiIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BearishHaramiIndicator.java\n@@ -49 +49 @@ public class BearishHaramiIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicator.java\nindex b924f6e69..c51771cbb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishEngulfingIndicator.java\n@@ -50 +50 @@ public class BullishEngulfingIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishHaramiIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishHaramiIndicator.java\nindex 1f0eb3446..f2ba3d9d6 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishHaramiIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/BullishHaramiIndicator.java\n@@ -49 +49 @@ public class BullishHaramiIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\nindex 53a2bced2..a00f15787 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\n@@ -64 +64 @@ public class DojiIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return averageBodyHeightInd.getCountOfUnstableBars() + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java\nindex 13e068a81..811f1c053 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HammerIndicator.java\n@@ -78 +78 @@ public class HammerIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java\nindex 3b9c78be5..5b9649163 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/HangingManIndicator.java\n@@ -78 +78 @@ public class HangingManIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java\nindex a936c7bd4..7c78b5e35 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/InvertedHammerIndicator.java\n@@ -75 +75 @@ public class InvertedHammerIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java\nindex a550576c6..bab016326 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/ShootingStarIndicator.java\n@@ -78 +78 @@ public class ShootingStarIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        return Math.max(realBodyIndicator.getCountOfUnstableBars(), trendIndicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicator.java\nindex d84c97011..e9e456ea4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelLowerIndicator.java\n@@ -41 +41 @@ public class DonchianChannelLowerIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return lowestPrice.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java\nindex 641338071..8761a7aab 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelMiddleIndicator.java\n@@ -49 +49 @@ public class DonchianChannelMiddleIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(lower.getCountOfUnstableBars(), upper.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicator.java\nindex 738c0d0d7..a5c8cff15 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/donchian/DonchianChannelUpperIndicator.java\n@@ -41 +41 @@ public class DonchianChannelUpperIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return highestPrice.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicator.java\nindex 6108d9234..95dbfabad 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/BooleanTransformIndicator.java\n@@ -98 +98 @@ public class BooleanTransformIndicator<T> extends CachedIndicator<Boolean> {\n-        return 0;\n+        return indicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CombineIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CombineIndicator.java\nindex bc7cd6201..1c32772af 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CombineIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CombineIndicator.java\n@@ -59 +59 @@ public class CombineIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(indicatorLeft.getCountOfUnstableBars(), indicatorRight.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java\nindex 31581bc80..b43e990cd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java\n@@ -116,0 +117 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n+    private final int unstableBars;\n@@ -155,0 +157 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n+        this.unstableBars = computeUnstableBars(ref, other, barCount);\n@@ -188,0 +191 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n+        this.unstableBars = computeUnstableBars(ref, other, barCount);\n@@ -234 +237,8 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-        return barCount;\n+        return unstableBars;\n+    }\n+\n+    private static int computeUnstableBars(Indicator<Num> ref, Indicator<Num> other, int barCount) {\n+        int baseUnstable = Math.max(ref.getCountOfUnstableBars(), other.getCountOfUnstableBars());\n+        int correlationUnstable = new CorrelationCoefficientIndicator(ref, other, barCount).getCountOfUnstableBars();\n+        int slopeUnstable = new SimpleLinearRegressionIndicator(ref, barCount).getCountOfUnstableBars();\n+        return Math.max(baseUnstable, Math.max(correlationUnstable, slopeUnstable));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\nindex d701625f4..115f2ee5e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\n@@ -38,0 +39 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n+        int unstableBoundary = Math.max(up.getCountOfUnstableBars(), low.getCountOfUnstableBars());\n@@ -41 +42 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n-        if (i == 0 || up.getValue(i).isGreaterThanOrEqual(low.getValue(i))) {\n+        if (i <= unstableBoundary || up.getValue(i).isGreaterThanOrEqual(low.getValue(i))) {\n@@ -47 +48 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n-        } while (i > 0 && up.getValue(i).isEqual(low.getValue(i)));\n+        } while (i > unstableBoundary && up.getValue(i).isEqual(low.getValue(i)));\n@@ -54 +55,2 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n-        return 0;\n+        int unstableBoundary = Math.max(up.getCountOfUnstableBars(), low.getCountOfUnstableBars());\n+        return unstableBoundary + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java\nindex ec20bb344..d7b7a694c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferenceIndicator.java\n@@ -63 +63 @@ public class DifferenceIndicator extends CachedIndicator<Num> {\n-        return 1;\n+        return indicator.getCountOfUnstableBars() + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicator.java\nindex 48d5b0f61..b22061484 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/DifferencePercentageIndicator.java\n@@ -129 +129 @@ public class DifferencePercentageIndicator extends CachedIndicator<Num> {\n-        return 1;\n+        return indicator.getCountOfUnstableBars() + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/GainIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/GainIndicator.java\nindex 1e180e41b..a69e71d37 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/GainIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/GainIndicator.java\n@@ -46 +46 @@ public class GainIndicator extends CachedIndicator<Num> {\n-        return 1;\n+        return indicator.getCountOfUnstableBars() + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/HighestValueIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/HighestValueIndicator.java\nindex 4ad6a925d..41b696241 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/HighestValueIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/HighestValueIndicator.java\n@@ -51 +51 @@ public class HighestValueIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LossIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LossIndicator.java\nindex 2317cf48e..c5d0c3797 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LossIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LossIndicator.java\n@@ -46 +46 @@ public class LossIndicator extends CachedIndicator<Num> {\n-        return 1;\n+        return indicator.getCountOfUnstableBars() + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LowestValueIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LowestValueIndicator.java\nindex 48de0f53f..39b1be523 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LowestValueIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LowestValueIndicator.java\n@@ -54 +54 @@ public class LowestValueIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java\nindex c5be774f6..61e075b83 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java\n@@ -289 +289,4 @@ public class PercentageChangeIndicator extends CachedIndicator<Num> {\n-        return 1;\n+        int indicatorUnstableBars = indicator.getCountOfUnstableBars();\n+        int previousUnstableBars = previousIndicator == null ? indicatorUnstableBars\n+                : previousIndicator.getCountOfUnstableBars();\n+        return Math.max(indicatorUnstableBars, previousUnstableBars + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java\nindex af3b60adf..795e0cf7a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PreviousValueIndicator.java\n@@ -55 +55 @@ public class PreviousValueIndicator extends CachedIndicator<Num> {\n-        return n;\n+        return indicator.getCountOfUnstableBars() + n;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\nindex 646bc96c8..9ef7691e0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/RunningTotalIndicator.java\n@@ -80 +80 @@ public class RunningTotalIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java\nindex 1d9c996fe..4bef62037 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java\n@@ -51,0 +52,3 @@ public class StreakIndicator extends RecursiveCachedIndicator<Num> {\n+        if (Num.isNaNOrNull(current)) {\n+            return NaN;\n+        }\n@@ -56,0 +60,3 @@ public class StreakIndicator extends RecursiveCachedIndicator<Num> {\n+        if (Num.isNaNOrNull(previousPrice)) {\n+            return NaN;\n+        }\n@@ -62,0 +69,3 @@ public class StreakIndicator extends RecursiveCachedIndicator<Num> {\n+        if (Num.isNaNOrNull(previousStreak)) {\n+            previousStreak = getBarSeries().numFactory().zero();\n+        }\n@@ -74 +83 @@ public class StreakIndicator extends RecursiveCachedIndicator<Num> {\n-        return 1;\n+        return indicator.getCountOfUnstableBars() + 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/SumIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/SumIndicator.java\nindex a09e5e9d3..b8f787946 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/SumIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/SumIndicator.java\n@@ -44 +44,5 @@ public class SumIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int unstableBars = 0;\n+        for (Indicator<Num> summand : summands) {\n+            unstableBars = Math.max(unstableBars, summand.getCountOfUnstableBars());\n+        }\n+        return unstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java\nindex 1f29a198c..24d7a2207 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java\n@@ -10,0 +11,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -33,0 +36,3 @@ public class TRIndicator extends CachedIndicator<Num> {\n+        if (Num.isNaNOrNull(high) || Num.isNaNOrNull(low)) {\n+            return NaN;\n+        }\n@@ -40,0 +46,3 @@ public class TRIndicator extends CachedIndicator<Num> {\n+        if (Num.isNaNOrNull(previousClose)) {\n+            return NaN;\n+        }\n@@ -47 +55 @@ public class TRIndicator extends CachedIndicator<Num> {\n-    /** @return {@code 1} */\n+    /** @return {@code 0} */\n@@ -50 +58 @@ public class TRIndicator extends CachedIndicator<Num> {\n-        return 1;\n+        return 0;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java\nindex 7cc4acca3..5b7ef5022 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java\n@@ -42 +42 @@ public class UnstableIndicator extends CachedIndicator<Num> {\n-        return unstableBars;\n+        return Math.max(unstableBars, indicator.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/VolumeIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/VolumeIndicator.java\nindex 8f91e7052..e8d657a20 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/VolumeIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/VolumeIndicator.java\n@@ -55 +55 @@ public class VolumeIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(0, barCount - 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicator.java\nindex 56d6bec55..48243bb9b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuChikouSpanIndicator.java\n@@ -60 +60 @@ public class IchimokuChikouSpanIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return closePriceIndicator.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuLineIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuLineIndicator.java\nindex 052f295a0..1aa8476a5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuLineIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuLineIndicator.java\n@@ -51 +51 @@ public class IchimokuLineIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return Math.max(periodHigh.getCountOfUnstableBars(), periodLow.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanAIndicator.java\nindex 8c560be6a..3b589f867 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanAIndicator.java\n@@ -82 +82,2 @@ public class IchimokuSenkouSpanAIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int baseUnstableBars = Math.max(conversionLine.getCountOfUnstableBars(), baseLine.getCountOfUnstableBars());\n+        return baseUnstableBars + offset - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanBIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanBIndicator.java\nindex ee8158978..a7670cf90 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanBIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ichimoku/IchimokuSenkouSpanBIndicator.java\n@@ -70 +70 @@ public class IchimokuSenkouSpanBIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return lineIndicator.getCountOfUnstableBars() + offset - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java\nindex 089206397..ca9c00d1f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -51,0 +54,3 @@ public class KeltnerChannelLowerIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java\nindex 203fe7560..63548f79b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java\n@@ -12,0 +13,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -50,0 +53,3 @@ public class KeltnerChannelMiddleIndicator extends AbstractIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -56 +61 @@ public class KeltnerChannelMiddleIndicator extends AbstractIndicator<Num> {\n-        return getBarCount();\n+        return indicator.getCountOfUnstableBars() + getBarCount();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java\nindex 224051461..0a4d526dd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java\n@@ -9,0 +10,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -51,0 +54,3 @@ public class KeltnerChannelUpperIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\nindex 984efa3fa..1f391cdfc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\n@@ -346 +346 @@ public class NumericIndicator implements Indicator<Num> {\n-        return 0;\n+        return delegate.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperationIndicator.java\nindex a88057057..d30409d9a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperationIndicator.java\n@@ -193 +193 @@ public class UnaryOperationIndicator implements Indicator<Num> {\n-        return 0;\n+        return operand.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\nindex 6a7b8bb23..1a43934ba 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CorrelationCoefficientIndicator.java\n@@ -48 +48,2 @@ public class CorrelationCoefficientIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int unstableBars = Math.max(variance1.getCountOfUnstableBars(), variance2.getCountOfUnstableBars());\n+        return Math.max(unstableBars, covariance.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java\nindex ed5dc8134..57e51715c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/CovarianceIndicator.java\n@@ -55 +55,2 @@ public class CovarianceIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int baseUnstableBars = Math.max(indicator1.getCountOfUnstableBars(), indicator2.getCountOfUnstableBars());\n+        return baseUnstableBars + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java\nindex c60159f19..c56d83829 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/MeanDeviationIndicator.java\n@@ -54 +54 @@ public class MeanDeviationIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java\nindex 5c40976d3..2ec03f0b0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PearsonCorrelationIndicator.java\n@@ -79 +79,2 @@ public class PearsonCorrelationIndicator extends RecursiveCachedIndicator<Num> {\n-        return barCount;\n+        int baseUnstableBars = Math.max(indicator1.getCountOfUnstableBars(), indicator2.getCountOfUnstableBars());\n+        return baseUnstableBars + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicator.java\nindex f79271331..da13af55a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/PeriodicalGrowthRateIndicator.java\n@@ -126 +126 @@ public class PeriodicalGrowthRateIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java\nindex 3833f4172..ccfa566ba 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SigmaIndicator.java\n@@ -46 +46 @@ public class SigmaIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return Math.max(mean.getCountOfUnstableBars(), sd.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java\nindex e4ca410a9..193ddbd1f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/SimpleLinearRegressionIndicator.java\n@@ -86 +86 @@ public class SimpleLinearRegressionIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + Math.max(1, barCount - 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java\nindex 95783ff55..b1459fa4c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardDeviationIndicator.java\n@@ -39 +39 @@ public class StandardDeviationIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return variance.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\nindex 9bfd821e9..2d9357b36 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/StandardErrorIndicator.java\n@@ -39 +39 @@ public class StandardErrorIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return sdev.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\nindex 3129ee236..f11996b4a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/statistics/VarianceIndicator.java\n@@ -50 +50 @@ public class VarianceIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return indicator.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\nindex e08ba184e..c8d8c4ec4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\n@@ -22 +21,0 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n-    private final int unstableBars;\n@@ -34 +32,0 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n-        this.unstableBars = unstableBars;\n@@ -42,0 +41,4 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n+        if (index < getCountOfUnstableBars()) {\n+            return false;\n+        }\n+\n@@ -52 +54,3 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n-        return unstableBars;\n+        int diUnstableBars = Math.max(minusDIIndicator.getCountOfUnstableBars(),\n+                plusDIIndicator.getCountOfUnstableBars());\n+        return Math.max(directionStrengthIndicator.getCountOfUnstableBars(), diUnstableBars + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\nindex 92a375e0c..567bc3f6e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\n@@ -22 +21,0 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n-    private final int unstableBars;\n@@ -34 +32,0 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n-        this.unstableBars = unstableBars;\n@@ -42,0 +41,4 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n+        if (index < getCountOfUnstableBars()) {\n+            return false;\n+        }\n+\n@@ -52 +54,3 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n-        return unstableBars;\n+        int diUnstableBars = Math.max(minusDIIndicator.getCountOfUnstableBars(),\n+                plusDIIndicator.getCountOfUnstableBars());\n+        return Math.max(directionStrengthIndicator.getCountOfUnstableBars(), diUnstableBars + 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicator.java\nindex b3806140e..d3712403b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinMoneyFlowIndicator.java\n@@ -55 +55,2 @@ public class ChaikinMoneyFlowIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int clvUnstableBars = clvIndicator.getCountOfUnstableBars() + barCount - 1;\n+        return Math.max(volumeIndicator.getCountOfUnstableBars(), clvUnstableBars);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicator.java\nindex c7fcd9c5e..f6dd08ad5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ChaikinOscillatorIndicator.java\n@@ -19,0 +20 @@ public class ChaikinOscillatorIndicator extends CachedIndicator<Num> {\n+    private final AccumulationDistributionIndicator accumulationDistributionIndicator;\n@@ -32,2 +33,3 @@ public class ChaikinOscillatorIndicator extends CachedIndicator<Num> {\n-        this.emaShort = new EMAIndicator(new AccumulationDistributionIndicator(series), shortBarCount);\n-        this.emaLong = new EMAIndicator(new AccumulationDistributionIndicator(series), longBarCount);\n+        this.accumulationDistributionIndicator = new AccumulationDistributionIndicator(series);\n+        this.emaShort = new EMAIndicator(accumulationDistributionIndicator, shortBarCount);\n+        this.emaLong = new EMAIndicator(accumulationDistributionIndicator, longBarCount);\n@@ -52 +54,2 @@ public class ChaikinOscillatorIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        int emaUnstableBars = Math.max(emaShort.getCountOfUnstableBars(), emaLong.getCountOfUnstableBars());\n+        return accumulationDistributionIndicator.getCountOfUnstableBars() + emaUnstableBars;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MVWAPIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MVWAPIndicator.java\nindex 43befe491..133bf05e8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MVWAPIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MVWAPIndicator.java\n@@ -40 +40 @@ public class MVWAPIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return sma.getCountOfUnstableBars();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicator.java\nindex 5f19a6236..f1e15f407 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/MoneyFlowIndexIndicator.java\n@@ -87 +87 @@ public class MoneyFlowIndexIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return previousTypicalPrice.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicator.java\nindex d17c701cc..e42d53628 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/RelativeVolumeStandardDeviationIndicator.java\n@@ -67 +67 @@ public class RelativeVolumeStandardDeviationIndicator extends CachedIndicator<Nu\n-        return barCount;\n+        return Math.max(averageVolume.getCountOfUnstableBars(), volumeStandardDeviation.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java\nindex 616deb209..44bd70efb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/TimeSegmentedVolumeIndicator.java\n@@ -68 +68 @@ public class TimeSegmentedVolumeIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        return closePriceDifference.getCountOfUnstableBars() + barCount - 1;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/VWAPIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/VWAPIndicator.java\nindex 4c726789b..132084069 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/VWAPIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/VWAPIndicator.java\n@@ -63 +63,2 @@ public class VWAPIndicator extends CachedIndicator<Num> {\n-        return barCount;\n+        int baseUnstableBars = Math.max(typicalPrice.getCountOfUnstableBars(), volume.getCountOfUnstableBars());\n+        return baseUnstableBars + barCount - 1;"
+}

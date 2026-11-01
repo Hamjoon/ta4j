@@ -1,0 +1,49 @@
+{
+  "index": 155,
+  "sha": "0af7c7176793823733b7bc4f01fbda0899debf73",
+  "parent": "bf315addb68e670164903d4e2ed2ea41440643b5",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/Bar.java": [],
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      71,
+      72,
+      73,
+      74
+    ],
+    "src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java": [
+      83,
+      94
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/Bar.java": [
+      233,
+      234,
+      235,
+      237,
+      238,
+      239,
+      241,
+      242,
+      243,
+      245,
+      246,
+      247,
+      249,
+      250,
+      251,
+      253,
+      254,
+      255,
+      257
+    ],
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java": [
+      83,
+      94
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/Bar.java b/ta4j-core/src/main/java/org/ta4j/core/Bar.java\nindex ac122b1ed..2c5d64700 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/Bar.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/Bar.java\n@@ -36,0 +37 @@ import org.ta4j.core.num.Num;\n+import org.ta4j.core.num.NumFactory;\n@@ -219,0 +221,39 @@ public interface Bar extends Serializable {\n+\n+    /**\n+     * Returns the {@link NumFactory} associated with the first available price\n+     * field on the bar.\n+     *\n+     * @return the {@link NumFactory} derived from the bar's numeric values\n+     * @throws IllegalArgumentException if no price fields are available to\n+     *                                  determine a factory\n+     *\n+     * @since 0.22.1\n+     */\n+    default NumFactory numFactory() {\n+        var open = getOpenPrice();\n+        if (open != null) {\n+            return open.getNumFactory();\n+        }\n+        var close = getClosePrice();\n+        if (close != null) {\n+            return close.getNumFactory();\n+        }\n+        var high = getHighPrice();\n+        if (high != null) {\n+            return high.getNumFactory();\n+        }\n+        var low = getLowPrice();\n+        if (low != null) {\n+            return low.getNumFactory();\n+        }\n+        var volume = getVolume();\n+        if (volume != null) {\n+            return volume.getNumFactory();\n+        }\n+        var amount = getAmount();\n+        if (amount != null) {\n+            return amount.getNumFactory();\n+        }\n+        throw new IllegalArgumentException(\"Cannot select a NumFactory: no price fields are available on the bar.\");\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\nindex 337ad9fd2..e88f4af99 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n@@ -71,5 +71 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-                var closePrice = bars.get(0).getClosePrice();\n-                if (closePrice != null) {\n-                    var derivedNumFactory = closePrice.getNumFactory();\n-                    numFactory = derivedNumFactory;\n-                }\n+                numFactory = bars.getFirst().numFactory();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java b/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java\nindex 91ff5e480..7384a502d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java\n@@ -83 +83 @@ public class DurationBarAggregator implements BarAggregator {\n-        final Bar firstBar = bars.get(0);\n+        final Bar firstBar = bars.getFirst();\n@@ -94 +94 @@ public class DurationBarAggregator implements BarAggregator {\n-        final Num zero = firstBar.getOpenPrice().getNumFactory().zero();\n+        final Num zero = firstBar.numFactory().zero();"
+}

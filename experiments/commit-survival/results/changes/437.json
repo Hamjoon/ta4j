@@ -1,0 +1,138 @@
+{
+  "index": 437,
+  "sha": "cc6c4ec959f91daf953bb7e2cb1a16083e845148",
+  "parent": "fec626175c286e5ef1726b51ee10ee4d0b820cff",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java": [
+      60,
+      87
+    ],
+    "src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequency.java": [
+      12
+    ],
+    "src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequencyIndexes.java": [],
+    "src/main/java/org/ta4j/core/criteria/SharpeRatioCriterion.java": [
+      212,
+      213,
+      233,
+      234,
+      235,
+      236,
+      237,
+      242,
+      243,
+      261,
+      262,
+      263,
+      264
+    ],
+    "src/main/java/org/ta4j/core/criteria/SortinoRatioCriterion.java": [
+      187,
+      188,
+      206,
+      207,
+      208,
+      209,
+      210,
+      216,
+      217,
+      258,
+      259,
+      260,
+      261
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java": [
+      29,
+      36,
+      43,
+      50,
+      66,
+      67,
+      76,
+      78,
+      111,
+      124,
+      125,
+      126,
+      127,
+      146,
+      147
+    ],
+    "src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequency.java": [
+      17,
+      31
+    ],
+    "src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequencyIndexes.java": [
+      51,
+      52,
+      107
+    ],
+    "src/main/java/org/ta4j/core/criteria/RatioSampleSupport.java": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      39,
+      44,
+      45,
+      46,
+      47,
+      49,
+      50,
+      55,
+      56,
+      57,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      69,
+      70,
+      71,
+      75,
+      76,
+      77,
+      79,
+      80,
+      81,
+      83,
+      87,
+      88,
+      90,
+      91,
+      92,
+      94,
+      95,
+      96,
+      97,
+      98,
+      100,
+      101,
+      103,
+      107,
+      108,
+      109,
+      110
+    ],
+    "src/main/java/org/ta4j/core/criteria/SharpeRatioCriterion.java": [
+      215,
+      235,
+      239,
+      258
+    ],
+    "src/main/java/org/ta4j/core/criteria/SortinoRatioCriterion.java": [
+      191,
+      212,
+      213
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java\nindex 158e6bb18..ad7824e7f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/cost/LinearBorrowingCostModel.java\n@@ -5,0 +6 @@ package org.ta4j.core.analysis.cost;\n+import java.util.Objects;\n@@ -7 +7,0 @@ import org.ta4j.core.Position;\n-import org.ta4j.core.Trade.TradeType;\n@@ -8,0 +9 @@ import org.ta4j.core.Trade;\n+import org.ta4j.core.Trade.TradeType;\n@@ -12,2 +13,8 @@ import org.ta4j.core.num.Num;\n- * With this cost model, the trading costs for borrowing a position (i.e.\n- * selling a position short) accrue linearly.\n+ * With this cost model, the trading costs for borrowing a position accrue\n+ * linearly.\n+ *\n+ * <p>\n+ * By default borrowing costs apply to short positions only, preserving the\n+ * historical behavior. Use\n+ * {@link #LinearBorrowingCostModel(double, Applicability)} to apply borrowing\n+ * costs to long positions, or to both long and short positions.\n@@ -16,0 +24,29 @@ public class LinearBorrowingCostModel implements CostModel {\n+    /**\n+     * Defines which entry sides incur borrowing costs.\n+     *\n+     * @since 0.23.1\n+     */\n+    public enum Applicability {\n+\n+        /**\n+         * Borrowing costs apply to short positions only.\n+         *\n+         * @since 0.23.1\n+         */\n+        SHORT_ONLY,\n+\n+        /**\n+         * Borrowing costs apply to long positions only.\n+         *\n+         * @since 0.23.1\n+         */\n+        LONG_ONLY,\n+\n+        /**\n+         * Borrowing costs apply to long and short positions.\n+         *\n+         * @since 0.23.1\n+         */\n+        BOTH\n+    }\n+\n@@ -19,0 +56,3 @@ public class LinearBorrowingCostModel implements CostModel {\n+    /** Which position sides incur borrowing costs. */\n+    private final Applicability applicability;\n+\n@@ -21 +60,2 @@ public class LinearBorrowingCostModel implements CostModel {\n-     * Constructor with {@code feePerPeriod * nPeriod}.\n+     * Constructor with {@code feePerPeriod * nPeriod}. Borrowing costs apply to\n+     * short positions only.\n@@ -25,0 +66,11 @@ public class LinearBorrowingCostModel implements CostModel {\n+        this(feePerPeriod, Applicability.SHORT_ONLY);\n+    }\n+\n+    /**\n+     * Constructor with {@code feePerPeriod * nPeriod}.\n+     *\n+     * @param feePerPeriod  the coefficient (e.g. 0.0001 for 1bp per period)\n+     * @param applicability which position sides incur borrowing costs\n+     * @since 0.23.1\n+     */\n+    public LinearBorrowingCostModel(double feePerPeriod, Applicability applicability) {\n@@ -26,0 +78 @@ public class LinearBorrowingCostModel implements CostModel {\n+        this.applicability = Objects.requireNonNull(applicability, \"applicability must not be null\");\n@@ -59,2 +111 @@ public class LinearBorrowingCostModel implements CostModel {\n-        // Borrowing costs only apply to short positions.\n-        if (entryTrade != null && entryTrade.getType().equals(TradeType.SELL) && entryTrade.getAmount() != null) {\n+        if (entryTrade != null && entryTrade.getAmount() != null && appliesTo(entryTrade.getType())) {\n@@ -71,0 +123,8 @@ public class LinearBorrowingCostModel implements CostModel {\n+    private boolean appliesTo(TradeType tradeType) {\n+        return switch (applicability) {\n+        case BOTH -> true;\n+        case LONG_ONLY -> tradeType == TradeType.BUY;\n+        case SHORT_ONLY -> tradeType == TradeType.SELL;\n+        };\n+    }\n+\n@@ -87 +146,2 @@ public class LinearBorrowingCostModel implements CostModel {\n-            equality = ((LinearBorrowingCostModel) otherModel).feePerPeriod == this.feePerPeriod;\n+            LinearBorrowingCostModel other = (LinearBorrowingCostModel) otherModel;\n+            equality = other.feePerPeriod == this.feePerPeriod && other.applicability == this.applicability;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequency.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequency.java\nindex db1b45774..eb700e30d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequency.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequency.java\n@@ -7 +7,6 @@ package org.ta4j.core.analysis.frequency;\n- * Supported sampling granularities.\n+ * Supported return sampling granularities.\n+ *\n+ * <p>\n+ * Bar and time-based values can be resolved from a\n+ * {@link org.ta4j.core.BarSeries} alone. {@link #TRADE} requires an API that\n+ * also receives a {@link org.ta4j.core.TradingRecord}.\n@@ -12,2 +17,16 @@ public enum SamplingFrequency {\n-    BAR, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH\n-}\n\\ No newline at end of file\n+    BAR, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH,\n+\n+    /**\n+     * Samples one return per included position interval.\n+     *\n+     * <p>\n+     * Use this with criteria that can inspect positions, such as\n+     * {@link org.ta4j.core.criteria.SharpeRatioCriterion} and\n+     * {@link org.ta4j.core.criteria.SortinoRatioCriterion}. Helpers that only group\n+     * bar indices, such as {@link SamplingFrequencyIndexes}, reject this value\n+     * because they cannot see the trading record.\n+     *\n+     * @since 0.23.1\n+     */\n+    TRADE\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequencyIndexes.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequencyIndexes.java\nindex 82836b1d1..e0f3de79a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequencyIndexes.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/frequency/SamplingFrequencyIndexes.java\n@@ -32,0 +33,2 @@ public final class SamplingFrequencyIndexes {\n+    private static final String TRADE_REQUIRES_TRADING_RECORD = \"SamplingFrequency.TRADE requires a trading record; \"\n+            + \"use a TradingRecord-aware sampling API\";\n@@ -41,0 +44,3 @@ public final class SamplingFrequencyIndexes {\n+     * @throws IllegalArgumentException if {@code samplingFrequency} is\n+     *                                  {@link SamplingFrequency#TRADE}, because\n+     *                                  trade sampling requires a trading record\n@@ -45,0 +51,3 @@ public final class SamplingFrequencyIndexes {\n+        if (this.samplingFrequency == SamplingFrequency.TRADE) {\n+            throw new IllegalArgumentException(TRADE_REQUIRES_TRADING_RECORD);\n+        }\n@@ -98,0 +107 @@ public final class SamplingFrequencyIndexes {\n+        case TRADE -> throw new IllegalStateException(TRADE_REQUIRES_TRADING_RECORD);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/RatioSampleSupport.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/RatioSampleSupport.java\nnew file mode 100644\nindex 000000000..57217161a\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/RatioSampleSupport.java\n@@ -0,0 +1,112 @@\n+/*\n+ * SPDX-License-Identifier: MIT\n+ */\n+package org.ta4j.core.criteria;\n+\n+import java.time.ZoneId;\n+import java.util.List;\n+import java.util.Objects;\n+import java.util.stream.Stream;\n+import org.ta4j.core.BarSeries;\n+import org.ta4j.core.Position;\n+import org.ta4j.core.Trade;\n+import org.ta4j.core.TradingRecord;\n+import org.ta4j.core.analysis.ExcessReturns;\n+import org.ta4j.core.analysis.OpenPositionHandling;\n+import org.ta4j.core.analysis.frequency.IndexPair;\n+import org.ta4j.core.analysis.frequency.Sample;\n+import org.ta4j.core.analysis.frequency.SamplingFrequency;\n+import org.ta4j.core.analysis.frequency.SamplingFrequencyIndexes;\n+import org.ta4j.core.utils.BarSeriesUtils;\n+\n+final class RatioSampleSupport {\n+\n+    private RatioSampleSupport() {\n+    }\n+\n+    static Stream<Sample> samples(BarSeries series, TradingRecord tradingRecord, SamplingFrequency samplingFrequency,\n+            ZoneId groupingZoneId, ExcessReturns excessReturns, OpenPositionHandling openPositionHandling) {\n+        Objects.requireNonNull(series, \"series must not be null\");\n+        Objects.requireNonNull(tradingRecord, \"tradingRecord must not be null\");\n+        Objects.requireNonNull(samplingFrequency, \"samplingFrequency must not be null\");\n+        Objects.requireNonNull(groupingZoneId, \"groupingZoneId must not be null\");\n+        Objects.requireNonNull(excessReturns, \"excessReturns must not be null\");\n+        Objects.requireNonNull(openPositionHandling, \"openPositionHandling must not be null\");\n+\n+        if (samplingFrequency == SamplingFrequency.TRADE) {\n+            return tradeSamples(series, tradingRecord, excessReturns, openPositionHandling);\n+        }\n+        return timeBasedSamples(series, samplingFrequency, groupingZoneId, excessReturns);\n+    }\n+\n+    private static Stream<Sample> timeBasedSamples(BarSeries series, SamplingFrequency samplingFrequency,\n+            ZoneId groupingZoneId, ExcessReturns excessReturns) {\n+        int beginIndex = series.getBeginIndex();\n+        int startIndex = beginIndex + 1;\n+        int endIndex = series.getEndIndex();\n+        SamplingFrequencyIndexes samplingFrequencyIndexes = new SamplingFrequencyIndexes(samplingFrequency,\n+                groupingZoneId);\n+        return samplingFrequencyIndexes.sample(series, beginIndex, startIndex, endIndex)\n+                .map(indexPair -> toSample(series, indexPair, excessReturns));\n+    }\n+\n+    private static Stream<Sample> tradeSamples(BarSeries series, TradingRecord tradingRecord,\n+            ExcessReturns excessReturns, OpenPositionHandling openPositionHandling) {\n+        int finalIndex = series.getEndIndex();\n+        return tradePairs(tradingRecord, finalIndex, openPositionHandling)\n+                .map(indexPair -> toSample(series, indexPair, excessReturns));\n+    }\n+\n+    private static Stream<IndexPair> tradePairs(TradingRecord tradingRecord, int finalIndex,\n+            OpenPositionHandling openPositionHandling) {\n+        Stream<IndexPair> closedPairs = tradingRecord.getPositions()\n+                .stream()\n+                .map(position -> toTradePair(position, finalIndex))\n+                .filter(Objects::nonNull);\n+        if (openPositionHandling == OpenPositionHandling.IGNORE) {\n+            return closedPairs;\n+        }\n+        Stream<Position> openPositions = openPositions(tradingRecord).stream();\n+        return Stream.concat(closedPairs,\n+                openPositions.map(position -> toTradePair(position, finalIndex)).filter(Objects::nonNull));\n+    }\n+\n+    private static List<Position> openPositions(TradingRecord tradingRecord) {\n+        List<Position> openPositions = tradingRecord.getOpenPositions();\n+        if (!openPositions.isEmpty()) {\n+            return openPositions;\n+        }\n+        Position currentPosition = tradingRecord.getCurrentPosition();\n+        if (currentPosition != null && currentPosition.isOpened()) {\n+            return List.of(currentPosition);\n+        }\n+        return List.of();\n+    }\n+\n+    private static IndexPair toTradePair(Position position, int finalIndex) {\n+        if (position == null) {\n+            return null;\n+        }\n+        Trade entry = position.getEntry();\n+        if (entry == null || entry.getIndex() > finalIndex) {\n+            return null;\n+        }\n+        int entryIndex = entry.getIndex();\n+        int currentIndex = finalIndex;\n+        Trade exit = position.getExit();\n+        if (exit != null) {\n+            currentIndex = Math.min(exit.getIndex(), finalIndex);\n+        }\n+        if (currentIndex < entryIndex) {\n+            return null;\n+        }\n+        return new IndexPair(entryIndex, currentIndex);\n+    }\n+\n+    private static Sample toSample(BarSeries series, IndexPair indexPair, ExcessReturns excessReturns) {\n+        int previousIndex = indexPair.previousIndex();\n+        int currentIndex = indexPair.currentIndex();\n+        return new Sample(excessReturns.excessReturn(previousIndex, currentIndex),\n+                BarSeriesUtils.deltaYears(series, previousIndex, currentIndex));\n+    }\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/SharpeRatioCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/SharpeRatioCriterion.java\nindex ed82e69a8..11aab173f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/SharpeRatioCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/SharpeRatioCriterion.java\n@@ -19 +18,0 @@ import org.ta4j.core.analysis.OpenPositionHandling;\n-import org.ta4j.core.analysis.frequency.IndexPair;\n@@ -23,2 +21,0 @@ import org.ta4j.core.analysis.frequency.SamplingFrequency;\n-import org.ta4j.core.analysis.frequency.SamplingFrequencyIndexes;\n-import org.ta4j.core.num.NumFactory;\n@@ -27 +23,0 @@ import org.ta4j.core.num.NumFactory;\n-import org.ta4j.core.utils.BarSeriesUtils;\n@@ -55 +51,6 @@ import org.ta4j.core.utils.BarSeriesUtils;\n- * boundaries follow ISO week semantics for {@code WEEKLY}.</li>\n+ * boundaries follow ISO week semantics for {@code WEEK}.</li>\n+ * <li>{@link SamplingFrequency#TRADE}: one return per included position\n+ * interval. Open positions are included only when\n+ * {@link OpenPositionHandling#MARK_TO_MARKET} is effective; the\n+ * {@link #groupingZoneId} is not used because entry and exit indices define the\n+ * sample boundaries.</li>\n@@ -57,6 +58,8 @@ import org.ta4j.core.utils.BarSeriesUtils;\n- * The first sampled return is anchored at the series begin index, even when\n- * evaluating a single {@link Position}, so the first period return spans from\n- * the series start to the first period end. Pre-entry intervals are handled by\n- * {@link CashReturnPolicy}: {@link CashReturnPolicy#CASH_EARNS_RISK_FREE} keeps\n- * flat pre-entry equity neutral, while {@link CashReturnPolicy#CASH_EARNS_ZERO}\n- * treats flat pre-entry equity as underperforming cash.\n+ * For time-based sampling, the first sampled return is anchored at the series\n+ * begin index, even when evaluating a single {@link Position}, so the first\n+ * period return spans from the series start to the first period end. Trade\n+ * sampling uses each included position interval directly. Pre-entry intervals\n+ * are handled by {@link CashReturnPolicy}:\n+ * {@link CashReturnPolicy#CASH_EARNS_RISK_FREE} keeps flat pre-entry equity\n+ * neutral, while {@link CashReturnPolicy#CASH_EARNS_ZERO} treats flat pre-entry\n+ * equity as underperforming cash.\n@@ -105 +108 @@ public class SharpeRatioCriterion extends AbstractAnalysisCriterion {\n-    private final SamplingFrequencyIndexes samplingFrequencyIndexes;\n+    private final SamplingFrequency samplingFrequency;\n@@ -212,2 +215 @@ public class SharpeRatioCriterion extends AbstractAnalysisCriterion {\n-        Objects.requireNonNull(samplingFrequency, \"samplingFrequency must not be null\");\n-        this.samplingFrequencyIndexes = new SamplingFrequencyIndexes(samplingFrequency, this.groupingZoneId);\n+        this.samplingFrequency = Objects.requireNonNull(samplingFrequency, \"samplingFrequency must not be null\");\n@@ -233,6 +235 @@ public class SharpeRatioCriterion extends AbstractAnalysisCriterion {\n-        int beginIndex = series.getBeginIndex();\n-        int start = beginIndex + 1;\n-        int end = series.getEndIndex();\n-        if (end - start + 1 < 2) {\n-            return zero;\n-        }\n+        OpenPositionHandling effectiveOpenPositionHandling = effectiveOpenPositionHandling();\n@@ -241,3 +238,3 @@ public class SharpeRatioCriterion extends AbstractAnalysisCriterion {\n-                equityCurveMode, openPositionHandling);\n-        Stream<Sample> samples = samplingFrequencyIndexes.sample(series, beginIndex, start, end)\n-                .map(pair -> getSample(series, pair, excessReturns));\n+                equityCurveMode, effectiveOpenPositionHandling);\n+        Stream<Sample> samples = RatioSampleSupport.samples(series, tradingRecord, samplingFrequency, groupingZoneId,\n+                excessReturns, effectiveOpenPositionHandling);\n@@ -260,5 +257,2 @@ public class SharpeRatioCriterion extends AbstractAnalysisCriterion {\n-    private Sample getSample(BarSeries series, IndexPair pair, ExcessReturns excessReturns) {\n-        int previousIndex = pair.previousIndex();\n-        Num excessReturn = excessReturns.excessReturn(previousIndex, pair.currentIndex());\n-        Num deltaYears = BarSeriesUtils.deltaYears(series, previousIndex, pair.currentIndex());\n-        return new Sample(excessReturn, deltaYears);\n+    private OpenPositionHandling effectiveOpenPositionHandling() {\n+        return equityCurveMode == EquityCurveMode.REALIZED ? OpenPositionHandling.IGNORE : openPositionHandling;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/SortinoRatioCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/SortinoRatioCriterion.java\nindex fff6d5cd0..245db0baf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/SortinoRatioCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/SortinoRatioCriterion.java\n@@ -18 +17,0 @@ import org.ta4j.core.analysis.OpenPositionHandling;\n-import org.ta4j.core.analysis.frequency.IndexPair;\n@@ -22 +20,0 @@ import org.ta4j.core.analysis.frequency.SamplingFrequency;\n-import org.ta4j.core.analysis.frequency.SamplingFrequencyIndexes;\n@@ -26 +23,0 @@ import org.ta4j.core.num.NumFactory;\n-import org.ta4j.core.utils.BarSeriesUtils;\n@@ -56 +53,6 @@ import org.ta4j.core.utils.BarSeriesUtils;\n- * boundaries follow ISO week semantics for {@code WEEKLY}.</li>\n+ * boundaries follow ISO week semantics for {@code WEEK}.</li>\n+ * <li>{@link SamplingFrequency#TRADE}: one return per included position\n+ * interval. Open positions are included only when\n+ * {@link OpenPositionHandling#MARK_TO_MARKET} is effective; the\n+ * {@link #groupingZoneId} is not used because entry and exit indices define the\n+ * sample boundaries.</li>\n@@ -58,6 +60,8 @@ import org.ta4j.core.utils.BarSeriesUtils;\n- * The first sampled return is anchored at the series begin index, even when\n- * evaluating a single {@link Position}, so the first period return spans from\n- * the series start to the first period end. Pre-entry intervals are handled by\n- * {@link CashReturnPolicy}: {@link CashReturnPolicy#CASH_EARNS_RISK_FREE} keeps\n- * flat pre-entry equity neutral, while {@link CashReturnPolicy#CASH_EARNS_ZERO}\n- * treats flat pre-entry equity as underperforming cash.\n+ * For time-based sampling, the first sampled return is anchored at the series\n+ * begin index, even when evaluating a single {@link Position}, so the first\n+ * period return spans from the series start to the first period end. Trade\n+ * sampling uses each included position interval directly. Pre-entry intervals\n+ * are handled by {@link CashReturnPolicy}:\n+ * {@link CashReturnPolicy#CASH_EARNS_RISK_FREE} keeps flat pre-entry equity\n+ * neutral, while {@link CashReturnPolicy#CASH_EARNS_ZERO} treats flat pre-entry\n+ * equity as underperforming cash.\n@@ -103 +107 @@ public class SortinoRatioCriterion extends AbstractAnalysisCriterion {\n-    private final SamplingFrequencyIndexes samplingFrequencyIndexes;\n+    private final SamplingFrequency samplingFrequency;\n@@ -187,2 +191 @@ public class SortinoRatioCriterion extends AbstractAnalysisCriterion {\n-        Objects.requireNonNull(samplingFrequency, \"samplingFrequency must not be null\");\n-        this.samplingFrequencyIndexes = new SamplingFrequencyIndexes(samplingFrequency, this.groupingZoneId);\n+        this.samplingFrequency = Objects.requireNonNull(samplingFrequency, \"samplingFrequency must not be null\");\n@@ -206,7 +208,0 @@ public class SortinoRatioCriterion extends AbstractAnalysisCriterion {\n-        int beginIndex = series.getBeginIndex();\n-        int start = beginIndex + 1;\n-        int end = series.getEndIndex();\n-        if (end - start + 1 < 2) {\n-            return zero;\n-        }\n-\n@@ -216,2 +212,2 @@ public class SortinoRatioCriterion extends AbstractAnalysisCriterion {\n-        List<Sample> samples = samplingFrequencyIndexes.sample(series, beginIndex, start, end)\n-                .map(pair -> getSample(series, pair, excessReturns))\n+        List<Sample> samples = RatioSampleSupport\n+                .samples(series, tradingRecord, samplingFrequency, groupingZoneId, excessReturns, openPositionHandling)\n@@ -257,7 +252,0 @@ public class SortinoRatioCriterion extends AbstractAnalysisCriterion {\n-    private Sample getSample(BarSeries series, IndexPair pair, ExcessReturns excessReturns) {\n-        int previousIndex = pair.previousIndex();\n-        Num excessReturn = excessReturns.excessReturn(previousIndex, pair.currentIndex());\n-        Num deltaYears = BarSeriesUtils.deltaYears(series, previousIndex, pair.currentIndex());\n-        return new Sample(excessReturn, deltaYears);\n-    }\n-"
+}

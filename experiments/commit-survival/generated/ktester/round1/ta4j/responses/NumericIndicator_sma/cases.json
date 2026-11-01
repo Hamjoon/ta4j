@@ -1,0 +1,202 @@
+[
+  {
+    "group": "sma() - valid barCount",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 5
+          }
+        ],
+        "expected": "NumericIndicator instance whose delegate is an SMAIndicator with barCount=5. Calling getValue(i) on the returned object yields the simple moving average of the original NumericIndicator over the last 5 bars (or fewer for i < 4).",
+        "description": "Verify that sma(5) creates a NumericIndicator wrapping an SMAIndicator with the requested period and that the SMA values are correctly computed."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 1
+          }
+        ],
+        "expected": "NumericIndicator instance whose delegate is an SMAIndicator with barCount=1. For any index i, getValue(i) must be equal to the original NumericIndicator's getValue(i).",
+        "description": "When the period is 1, SMA should return the original series unchanged. This test confirms that the shortcut works."
+      }
+    ]
+  },
+  {
+    "group": "sma() - edge / error cases",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 0
+          }
+        ],
+        "expected": "IllegalArgumentException (or any RuntimeException) thrown because SMAIndicator requires a positive barCount.",
+        "description": "SMAIndicator does not accept a period of 0; the method should propagate the exception."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": -3
+          }
+        ],
+        "expected": "IllegalArgumentException (or any RuntimeException) thrown because SMAIndicator requires a positive barCount.",
+        "description": "Negative barCount is invalid; verify that the method fails fast with an appropriate exception."
+      }
+    ]
+  },
+  {
+    "group": "sma() - delegate integrity",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 10
+          }
+        ],
+        "expected": "The returned NumericIndicator's delegate() method returns an instance of SMAIndicator and not the original delegate. The delegate's getBarSeries() must be the same BarSeries as the original NumericIndicator.",
+        "description": "Ensure that the wrapper correctly forwards the series reference while substituting the calculation logic with SMA."
+      }
+    ]
+  },
+  {
+    "group": "sma() - barCount larger than series length",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 10
+          }
+        ],
+        "expected": "NumericIndicator instance whose delegate is an SMAIndicator with barCount=10. For a BarSeries containing the values [10, 20, 30, 40] the SMA values must be: index0 \u2192 10, index1 \u2192 15, index2 \u2192 20, index3 \u2192 25 (average of all available values up to the current index).",
+        "description": "When the requested period exceeds the number of available bars, SMAIndicator should compute the average over the existing subset (i+1 values). This test verifies correct handling of oversized barCount."
+      }
+    ]
+  },
+  {
+    "group": "sma() - barCount equal to series length",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 4
+          }
+        ],
+        "expected": "NumericIndicator instance whose delegate is an SMAIndicator with barCount=4. Using the same series [10, 20, 30, 40] the SMA values are: index0 \u2192 10, index1 \u2192 15, index2 \u2192 20, index3 \u2192 25 (full\u2011period average at the last index).",
+        "description": "Ensures that a barCount exactly matching the series length yields the same progressive averages as the \u2018larger than length\u2019 case, and that the final SMA equals the overall mean."
+      }
+    ]
+  },
+  {
+    "group": "sma() - multiple independent invocations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "Two successive calls to sma(3) on the same NumericIndicator must return two distinct NumericIndicator objects (different identity) but both delegating to separate SMAIndicator instances that produce identical SMA values for every index.",
+        "description": "Verifies that sma() does not cache or reuse the same wrapper, guaranteeing independence of each call."
+      }
+    ]
+  },
+  {
+    "group": "sma() - original indicator immutability",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "After invoking sma(3) the original NumericIndicator\u2019s getValue(i) must continue to return the original series values (10, 20, 30, 40) unchanged, i.e., the SMA wrapper does not mutate the source indicator.",
+        "description": "Confirms that the sma() method is non\u2011destructive and the source indicator remains intact."
+      }
+    ]
+  },
+  {
+    "group": "sma() - toString representation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 5
+          }
+        ],
+        "expected": "The toString() of the returned NumericIndicator contains the substring \"SMAIndicator\" and the period value (5), e.g., \"NumericIndicator{delegate=SMAIndicator[5]}\".",
+        "description": "Checks that the wrapper\u2019s string representation reflects the underlying SMAIndicator, aiding debugging."
+      }
+    ]
+  },
+  {
+    "group": "sma() - nested SMA composition",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 2
+          }
+        ],
+        "expected": "When a NumericIndicator first creates sma(3) and then on the resulting indicator calls sma(2), the final values correspond to a double\u2011smoothed series. For the base series [10, 20, 30, 40]: first SMA(3) yields [10, 15, 20, 30]; applying SMA(2) on that yields final values [10, 12.5, 17.5, 25].",
+        "description": "Ensures that SMA wrappers can be chained and that each layer correctly uses the previous indicator as its source."
+      }
+    ]
+  },
+  {
+    "group": "sma() - null delegate exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 5
+          }
+        ],
+        "expected": "NullPointerException thrown when constructing SMAIndicator because the NumericIndicator's internal delegate is null.",
+        "description": "Create a NumericIndicator via NumericIndicator.of(null). Calling sma(5) should fail immediately with NPE, proving that the method does not accept a null underlying indicator."
+      }
+    ]
+  },
+  {
+    "group": "sma() - delegate with null BarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException (or IllegalArgumentException) thrown because the underlying delegate's getBarSeries() returns null, which SMAIndicator requires.",
+        "description": "Use a custom Indicator implementation whose getBarSeries() returns null. Invoking sma(3) must propagate an exception indicating the missing BarSeries."
+      }
+    ]
+  },
+  {
+    "group": "sma() - underlying indicator runtime exception propagation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 4
+          }
+        ],
+        "expected": "RuntimeException (e.g., IllegalStateException) thrown when calling getValue(index) on the returned NumericIndicator, originating from the wrapped indicator's getValue implementation.",
+        "description": "Create a NumericIndicator wrapping an Indicator whose getValue(int) deliberately throws IllegalStateException for index >= 2. After calling sma(4), invoking getValue(2) on the SMA wrapper must propagate the same exception, confirming that sma() does not swallow runtime errors from the source indicator."
+      }
+    ]
+  }
+]

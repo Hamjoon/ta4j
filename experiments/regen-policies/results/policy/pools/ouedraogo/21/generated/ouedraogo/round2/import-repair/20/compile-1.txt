@@ -1,0 +1,41 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:80: error: cannot find symbol
+        assertEquals(TradeType.BUY, position.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:100: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:113: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:162: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:201: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:220: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:302: error: cannot find symbol
+        Trade entry = position.operate(0, Position.NaN, Position.NaN);
+                                                  ^
+  symbol:   variable NaN
+  location: class Position
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:302: error: cannot find symbol
+        Trade entry = position.operate(0, Position.NaN, Position.NaN);
+                                                                ^
+  symbol:   variable NaN
+  location: class Position
+8 errors

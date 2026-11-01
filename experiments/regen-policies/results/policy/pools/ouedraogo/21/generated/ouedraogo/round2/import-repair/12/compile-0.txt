@@ -1,0 +1,188 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:18: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:20: error: cannot find symbol
+import org.ta4j.core.DefaultTradingRecord;
+                    ^
+  symbol:   class DefaultTradingRecord
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:65: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:69: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(1), DecimalNum.valueOf(1),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:71: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(2), DecimalNum.valueOf(2),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:73: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(3), DecimalNum.valueOf(3),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:75: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(4), DecimalNum.valueOf(4),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:77: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        series.addBar(new BaseBar(ZonedDateTime.now(), DecimalNum.valueOf(5), DecimalNum.valueOf(5),
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:80: error: cannot find symbol
+        one = series.numFactory().valueOf(1);
+                                 ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:81: error: cannot find symbol
+        two = series.numFactory().valueOf(2);
+                                 ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:82: error: cannot find symbol
+        three = series.numFactory().valueOf(3);
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:83: error: cannot find symbol
+        five = series.numFactory().valueOf(5);
+                                  ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:93: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(), series.numFactory().valueOf(1), series.getBar(0));
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:93: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(), series.numFactory().valueOf(1), series.getBar(0));
+                                                                                                    ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:94: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, series.getBar(4).getClosePrice(), series.numFactory().valueOf(1), series.getBar(4));
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:94: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, series.getBar(4).getClosePrice(), series.numFactory().valueOf(1), series.getBar(4));
+                                                                                                    ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:109: error: cannot find symbol
+        TradingRecord record = new DefaultTradingRecord();
+                                   ^
+  symbol:   class DefaultTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:122: error: cannot find symbol
+        Num expected = three.multipliedBy(series.numFactory().valueOf(5).dividedBy(series.numFactory().valueOf(4)));
+                                                             ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:122: error: cannot find symbol
+        Num expected = three.multipliedBy(series.numFactory().valueOf(5).dividedBy(series.numFactory().valueOf(4)));
+                                                                                                      ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:128: error: cannot find symbol
+        CashFlow cf = new CashFlow(series, new DefaultTradingRecord());
+                                               ^
+  symbol:   class DefaultTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:134: error: cannot find symbol
+        CashFlow cf = new CashFlow(series, new DefaultTradingRecord());
+                                               ^
+  symbol:   class DefaultTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:140: error: cannot find symbol
+        CashFlow cf = new CashFlow(series, new DefaultTradingRecord());
+                                               ^
+  symbol:   class DefaultTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:147: error: cannot find symbol
+        Num cost = series.numFactory().valueOf(0.5);
+                                      ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:149: error: cannot find symbol
+        assertEquals(series.numFactory().valueOf(2.5), result);
+                                        ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:155: error: cannot find symbol
+        Num cost = series.numFactory().valueOf(0.5);
+                                      ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:157: error: cannot find symbol
+        assertEquals(series.numFactory().valueOf(3.5), result);
+                                        ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:163: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:165: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, series.getBar(3).getClosePrice(),
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:175: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(1).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:202: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(0).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:210: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(2).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:223: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:227: error: cannot find symbol
+        CashFlow cf = new CashFlow(empty, new DefaultTradingRecord());
+                                              ^
+  symbol:   class DefaultTradingRecord
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:235: error: cannot find symbol
+        Num zero = series.numFactory().valueOf(0);
+                                      ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:246: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(isLong, entryPrice, exitPrice);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:248: error: cannot find symbol
+        Num expected = series.numFactory().valueOf(2).minus(exitPrice.dividedBy(entryPrice));
+                                          ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:255: error: cannot find symbol
+        TradingRecord record = new DefaultTradingRecord();
+                                   ^
+  symbol:   class DefaultTradingRecord
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+37 errors

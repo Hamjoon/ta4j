@@ -1,0 +1,350 @@
+package org.ta4j.core.backtest;
+import org.ta4j.core.BaseBarConvertibleBuilder;
+
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.Position;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.Trade;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.NumFactory;
+import org.ta4j.core.num.DecimalNum;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link BarSeriesManager}.
+ *
+ * <p>The suite follows the “three experts” scenario described in the
+ * prompt: each test method can be seen as a contribution from a different
+ * expert, together covering typical usage, edge‑cases and error
+ * situations.</p>
+ *
+ * <p>Only the public API that appears in the source of {@code BarSeriesManager}
+ * and the dependency signatures supplied in the prompt are used.  No
+ * external mocking frameworks are employed – concrete stub implementations
+ * are provided for the required interfaces.</p>
+ */
+public class BarSeriesManagerTest {
+
+    /* --------------------------------------------------------------------- *
+     * Helper stub implementations                                            *
+     * --------------------------------------------------------------------- */
+
+    /** Very small {@link Num} implementation based on {@link DecimalNum}. */
+    private static class SimpleNum implements Num {
+
+        private final DecimalNum delegate;
+
+        SimpleNum(double value) {
+            this.delegate = DecimalNum.valueOf(value);
+        }
+
+        @Override public Number getDelegate() { return delegate.getDelegate(); }
+        @Override public NumFactory getNumFactory() { return delegate.getNumFactory(); }
+        @Override public String getName() { return delegate.getName(); }
+        @Override public Num plus(Num augend) { return delegate.plus(augend); }
+        @Override public Num minus(Num subtrahend) { return delegate.minus(subtrahend); }
+        @Override public Num multipliedBy(Num multiplicand) { return delegate.multipliedBy(multiplicand); }
+        @Override public Num dividedBy(Num divisor) { return delegate.dividedBy(divisor); }
+        @Override public Num remainder(Num divisor) { return delegate.remainder(divisor); }
+        @Override public Num floor() { return delegate.floor(); }
+        @Override public Num ceil() { return delegate.ceil(); }
+        @Override public Num pow(int n) { return delegate.pow(n); }
+        @Override public Num pow(Num n) { return delegate.pow(n); }
+        @Override public Num log() { return delegate.log(); }
+        @Override public Num sqrt() { return delegate.sqrt(); }
+        @Override public Num sqrt(int precision) { return delegate.sqrt(precision); }
+        @Override public Num abs() { return delegate.abs(); }
+        @Override public Num negate() { return delegate.negate(); }
+        @Override public boolean isZero() { return delegate.isZero(); }
+        @Override public boolean isPositive() { return delegate.isPositive(); }
+        @Override public boolean isPositiveOrZero() { return delegate.isPositiveOrZero(); }
+        @Override public boolean isNegative() { return delegate.isNegative(); }
+        @Override public boolean isNegativeOrZero() { return delegate.isNegativeOrZero(); }
+        @Override public boolean isEqual(Num other) { return delegate.isEqual(other); }
+        @Override public boolean isGreaterThan(Num other) { return delegate.isGreaterThan(other); }
+        @Override public boolean isGreaterThanOrEqual(Num other) { return delegate.isGreaterThanOrEqual(other); }
+        @Override public boolean isLessThan(Num other) { return delegate.isLessThan(other); }
+        @Override public boolean isLessThanOrEqual(Num other) { return delegate.isLessThanOrEqual(other); }
+        @Override public Num min(Num other) { return delegate.min(other); }
+        @Override public Num max(Num other) { return delegate.max(other); }
+        @Override public boolean isNaN() { return delegate.isNaN(); }
+        @Override public int intValue() { return delegate.intValue(); }
+        @Override public long longValue() { return delegate.longValue(); }
+        @Override public float floatValue() { return delegate.floatValue(); }
+        @Override public double doubleValue() { return delegate.doubleValue(); }
+        @Override public BigDecimal bigDecimalValue() { return delegate.bigDecimalValue(); }
+        @Override public int hashCode() { return delegate.hashCode(); }
+        @Override public String toString() { return delegate.toString(); }
+        @Override public boolean equals(Object obj) { return delegate.equals(obj); }
+        @Override public int compareTo(Num o) { return delegate.compareTo(o); }
+    }
+
+    /** Minimal {@link Bar} implementation – the manager never inspects a bar. */
+    private static class SimpleBar implements Bar {
+        // All methods are default / unused for the purpose of these tests.
+    }
+
+    /** Very small in‑memory {@link BarSeries} implementation. */
+    private static class SimpleBarSeries implements BarSeries {
+
+        private final List<Bar> bars = new ArrayList<>();
+        private final NumFactory numFactory = DecimalNum::valueOf; // lambda works because DecimalNum implements NumFactory
+
+        SimpleBarSeries(int size) {
+            for (int i = 0; i < size; i++) {
+                bars.add(new SimpleBar());
+            }
+        }
+
+        @Override public NumFactory numFactory() { return numFactory; }
+        @Override public Bar getBar(int i) { return bars.get(i); }
+        @Override public String getName() { return "simple-series"; }
+        @Override public int getBarCount() { return bars.size(); }
+        @Override public List<Bar> getBarData() { return Collections.unmodifiableList(bars); }
+        @Override public int getBeginIndex() { return 0; }
+        @Override public int getEndIndex() { return bars.isEmpty() ? -1 : bars.size() - 1; }
+
+        // The remaining methods are not needed for the tests – they are implemented
+        // with trivial behaviour just to satisfy the interface.
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { return this; }
+        @Override public void addBar(Bar bar) { bars.add(bar); }
+        @Override public void addBar(Bar bar, boolean replace) { /* not required */ }
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { /* not required */ }
+        @Override public void addPrice(Num price) { /* not required */ }
+        @Override public int getMaximumBarCount() { return Integer.MAX_VALUE; }
+        @Override public void setMaximumBarCount(int maximumBarCount) { /* not required */ }
+        @Override public int getRemovedBarsCount() { return 0; }
+        @Override public String getSeriesPeriodDescription() { return ""; }
+        @Override public boolean isEmpty() { return bars.isEmpty(); }
+        @Override public BaseBarConvertibleBuilder barBuilder() { throw new UnsupportedOperationException(); }
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) { throw new UnsupportedOperationException(); }
+        @Override public void addPrice(Number price) { throw new UnsupportedOperationException(); }
+    }
+
+    /** Strategy that decides to operate only on the indexes supplied in the constructor. */
+    private static class IndexBasedStrategy implements Strategy {
+
+        private final List<Integer> operateIndexes;
+        private final TradeType entryType;
+
+        IndexBasedStrategy(List<Integer> operateIndexes, TradeType entryType) {
+            this.operateIndexes = new ArrayList<>(operateIndexes);
+            this.entryType = entryType;
+        }
+
+        @Override public String getName() { return "index‑based‑strategy"; }
+        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }
+        @Override public Rule getExitRule() { throw new UnsupportedOperationException(); }
+        @Override public Strategy and(Strategy strategy) { throw new UnsupportedOperationException(); }
+        @Override public Strategy or(Strategy strategy) { throw new UnsupportedOperationException(); }
+        @Override public Strategy and(String name, Strategy strategy, int unstableBars) { throw new UnsupportedOperationException(); }
+        @Override public Strategy or(String name, Strategy strategy, int unstableBars) { throw new UnsupportedOperationException(); }
+        @Override public Strategy opposite() { throw new UnsupportedOperationException(); }
+        @Override public void setUnstableBars(int unstableBars) { /* not needed */ }
+        @Override public int getUnstableBars() { return 0; }
+        @Override public boolean isUnstableAt(int index) { return false; }
+
+        @Override
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+            return operateIndexes.contains(index);
+        }
+    }
+
+    /** Execution model that simply toggles between “enter” and “exit”. */
+    private static class SimpleExecutionModel implements TradeExecutionModel {
+
+        @Override
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+            // If there is no open position → enter, otherwise → exit
+            if (tradingRecord.getCurrentPosition() == null ||
+                tradingRecord.getCurrentPosition().isClosed()) {
+                tradingRecord.enter(index, amount, amount);
+            } else {
+                tradingRecord.exit(index, amount, amount);
+            }
+        }
+    }
+
+    /** A dummy cost model that always returns zero (different from ZeroCostModel just for type checking). */
+    private static class DummyCostModel implements CostModel {
+        @Override public Num calculate(Position position, int finalIndex) { return DecimalNum.ZERO; }
+        @Override public Num calculate(Position position) { return DecimalNum.ZERO; }
+        @Override public Num calculate(Num price, Num amount) { return DecimalNum.ZERO; }
+        @Override public boolean equals(CostModel otherModel) { return otherModel instanceof DummyCostModel; }
+    }
+
+    private BarSeries series;
+    private CostModel transactionCost;
+    private CostModel holdingCost;
+    private TradeExecutionModel execModel;
+
+    @Before
+    public void setUp() {
+        series = new SimpleBarSeries(5);               // indexes 0 … 4
+        transactionCost = new ZeroCostModel();
+        holdingCost = new ZeroCostModel();
+        execModel = new SimpleExecutionModel();
+    }
+
+    /* --------------------------------------------------------------------- *
+     * 1️⃣  Constructor and getter tests                                      *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testDefaultConstructorInitialisesModels() {
+        BarSeriesManager manager = new BarSeriesManager(series);
+        assertSame(series, manager.getBarSeries());
+        assertTrue(manager.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(manager.getHoldingCostModel() instanceof ZeroCostModel);
+        assertNotNull(manager.tradeExecutionModel); // default model is not null
+    }
+
+    @Test
+    public void testFullConstructorKeepsProvidedModels() {
+        CostModel tx = new DummyCostModel();
+        CostModel hold = new DummyCostModel();
+        TradeExecutionModel customExec = new SimpleExecutionModel();
+
+        BarSeriesManager manager = new BarSeriesManager(series, tx, hold, customExec);
+        assertSame(tx, manager.getTransactionCostModel());
+        assertSame(hold, manager.getHoldingCostModel());
+        assertSame(customExec, manager.tradeExecutionModel);
+    }
+
+    /* --------------------------------------------------------------------- *
+     * 2️⃣  run(Strategy, TradeType, Num) – normal flow                         *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunWithExplicitAmountOpensAndClosesOnePosition() {
+        // Strategy will signal entry at index 1 and exit at index 3
+        Strategy strategy = new IndexBasedStrategy(
+                List.of(1, 3),          // operate on 1 → enter, 3 → exit
+                TradeType.BUY);
+
+        BarSeriesManager manager = new BarSeriesManager(series, transactionCost, holdingCost, execModel);
+        Num amount = new SimpleNum(1.0);
+
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount);
+
+        // One complete position (entry + exit)
+        assertEquals(1, record.getPositionCount());
+        Position pos = record.getLastPosition();
+        assertTrue(pos.isClosed());
+
+        // Verify that the entry and exit indexes are the ones we expected
+        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());
+        assertEquals(Integer.valueOf(3), pos.getExit().getIndex());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * 3️⃣  run(Strategy, TradeType, Num, int, int) – start/finish bounds       *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunWithSubrangeIgnoresIndexesOutsideRange() {
+        // Strategy signals on 0, 2 and 4 – we will run only 1 … 3
+        Strategy strategy = new IndexBasedStrategy(
+                List.of(0, 2, 4),       // 2 is the only one inside the range
+                TradeType.SELL);
+
+        BarSeriesManager manager = new BarSeriesManager(series, transactionCost, holdingCost, execModel);
+        Num amount = new SimpleNum(2.0);
+
+        TradingRecord record = manager.run(strategy, TradeType.SELL, amount, 1, 3);
+
+        // Only index 2 should have been processed → a single entry (no exit)
+        assertEquals(1, record.getPositionCount());
+        Position pos = record.getLastPosition();
+        assertFalse(pos.isClosed());
+        assertEquals(Integer.valueOf(2), pos.getEntry().getIndex());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * 4️⃣  run(Strategy, TradeType, Num, int, int) – auto‑close after end     *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunClosesOpenPositionUsingPostRunLoop() {
+        // Strategy signals entry at index 0 only (no exit inside the range)
+        Strategy strategy = new IndexBasedStrategy(
+                List.of(0),              // entry only
+                TradeType.BUY);
+
+        // Run only on the first two bars (0 and 1)
+        BarSeriesManager manager = new BarSeriesManager(series, transactionCost, holdingCost, execModel);
+        Num amount = new SimpleNum(1.0);
+
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount, 0, 1);
+
+        // The manager should have attempted to close the position at index 2
+        // (the first bar after the run range). Because our execution model always
+        // exits when a position is open, the position will be closed.
+        assertEquals(1, record.getPositionCount());
+        Position pos = record.getLastPosition();
+        assertTrue(pos.isClosed());
+        assertEquals(Integer.valueOf(0), pos.getEntry().getIndex());
+        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());
+    }
+
+    /* --------------------------------------------------------------------- *
+     * 5️⃣  run with startIndex > endIndex – nothing should happen               *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunWithInvalidRangeProducesEmptyRecord() {
+        Strategy strategy = new IndexBasedStrategy(
+                List.of(0, 1, 2),       // would normally create trades
+                TradeType.BUY);
+
+        BarSeriesManager manager = new BarSeriesManager(series, transactionCost, holdingCost, execModel);
+        Num amount = new SimpleNum(1.0);
+
+        // start > finish → loop body never executed
+        TradingRecord record = manager.run(strategy, TradeType.BUY, amount, 4, 2);
+
+        assertEquals(0, record.getPositionCount());
+        assertTrue(record.isClosed()); // no open position
+    }
+
+    /* --------------------------------------------------------------------- *
+     * 6️⃣  run with a custom (non‑zero) cost model – just ensure it is wired  *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testRunUsesProvidedCostModels() {
+        CostModel customTx = new DummyCostModel();
+        CostModel customHold = new DummyCostModel();
+
+        BarSeriesManager manager = new BarSeriesManager(
+                series, customTx, customHold, execModel);
+
+        assertSame(customTx, manager.getTransactionCostModel());
+        assertSame(customHold, manager.getHoldingCostModel());
+
+        // Run a trivial strategy to make sure the manager works with the custom models
+        Strategy strategy = new IndexBasedStrategy(
+                List.of(0, 1), TradeType.BUY);
+        TradingRecord record = manager.run(strategy, TradeType.BUY, new SimpleNum(1.0));
+
+        // One closed position (enter at 0, exit at 1)
+        assertEquals(1, record.getPositionCount());
+        assertTrue(record.getLastPosition().isClosed());
+    }
+}

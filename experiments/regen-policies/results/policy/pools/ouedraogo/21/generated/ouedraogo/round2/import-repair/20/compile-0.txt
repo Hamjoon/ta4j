@@ -1,0 +1,67 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:78: error: cannot find symbol
+        assertEquals(TradeType.BUY, position.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:98: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:111: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:160: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:199: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:218: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:287: error: cannot find symbol
+        CostModel customCost = new CostModel() {
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:287: error: cannot find symbol
+        CostModel customCost = new CostModel() {
+                                   ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:291: error: cannot find symbol
+            @Override public boolean equals(CostModel other) { return false; }
+                                            ^
+  symbol: class CostModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:288: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Position p, int i) { return ZERO; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:289: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Position p) { return ZERO; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:290: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Num price, Num amount) { return ZERO; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:291: error: method does not override or implement a method from a supertype
+            @Override public boolean equals(CostModel other) { return false; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:300: error: cannot find symbol
+        Trade entry = position.operate(0, Position.NaN, Position.NaN);
+                                                  ^
+  symbol:   variable NaN
+  location: class Position
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/CoT/PositionTest.java:300: error: cannot find symbol
+        Trade entry = position.operate(0, Position.NaN, Position.NaN);
+                                                                ^
+  symbol:   variable NaN
+  location: class Position
+15 errors

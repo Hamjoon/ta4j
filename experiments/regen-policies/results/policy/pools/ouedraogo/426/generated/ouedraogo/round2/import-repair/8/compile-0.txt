@@ -1,0 +1,163 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:63: error: cannot find symbol
+        public void onBar(int index, TradingRecord tradingRecord, BarSeries barSeries) {
+                                     ^
+  symbol:   class TradingRecord
+  location: class SimpleExecutionModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:75: error: cannot find symbol
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+                                       ^
+  symbol:   class TradingRecord
+  location: class SimpleExecutionModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:120: error: cannot find symbol
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+                                                ^
+  symbol:   class TradingRecord
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:91: error: AlwaysOperateStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysOperateStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:145: error: incompatible types: NumFactory is not a functional interface
+        NumFactory nf = DecimalNum::valueOf;
+                        ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol
+                nf.valueOf(10), nf.valueOf(12), nf.valueOf(9), nf.valueOf(11), nf.valueOf(100));
+                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol
+                nf.valueOf(10), nf.valueOf(12), nf.valueOf(9), nf.valueOf(11), nf.valueOf(100));
+                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol
+                nf.valueOf(10), nf.valueOf(12), nf.valueOf(9), nf.valueOf(11), nf.valueOf(100));
+                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol
+                nf.valueOf(10), nf.valueOf(12), nf.valueOf(9), nf.valueOf(11), nf.valueOf(100));
+                                                                 ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol
+                nf.valueOf(10), nf.valueOf(12), nf.valueOf(9), nf.valueOf(11), nf.valueOf(100));
+                                                                                 ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:149: error: cannot find symbol
+                nf.valueOf(11), nf.valueOf(13), nf.valueOf(10), nf.valueOf(12), nf.valueOf(150));
+                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:149: error: cannot find symbol
+                nf.valueOf(11), nf.valueOf(13), nf.valueOf(10), nf.valueOf(12), nf.valueOf(150));
+                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:149: error: cannot find symbol
+                nf.valueOf(11), nf.valueOf(13), nf.valueOf(10), nf.valueOf(12), nf.valueOf(150));
+                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:149: error: cannot find symbol
+                nf.valueOf(11), nf.valueOf(13), nf.valueOf(10), nf.valueOf(12), nf.valueOf(150));
+                                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:149: error: cannot find symbol
+                nf.valueOf(11), nf.valueOf(13), nf.valueOf(10), nf.valueOf(12), nf.valueOf(150));
+                                                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:151: error: cannot find symbol
+                nf.valueOf(12), nf.valueOf(14), nf.valueOf(11), nf.valueOf(13), nf.valueOf(200));
+                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:151: error: cannot find symbol
+                nf.valueOf(12), nf.valueOf(14), nf.valueOf(11), nf.valueOf(13), nf.valueOf(200));
+                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:151: error: cannot find symbol
+                nf.valueOf(12), nf.valueOf(14), nf.valueOf(11), nf.valueOf(13), nf.valueOf(200));
+                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:151: error: cannot find symbol
+                nf.valueOf(12), nf.valueOf(14), nf.valueOf(11), nf.valueOf(13), nf.valueOf(200));
+                                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:151: error: cannot find symbol
+                nf.valueOf(12), nf.valueOf(14), nf.valueOf(11), nf.valueOf(13), nf.valueOf(200));
+                                                                                  ^
+  symbol:   method valueOf(int)
+  location: variable nf of type NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:264: error: cannot find symbol
+        TradingRecord record = manager.run(strategy);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:278: error: cannot find symbol
+        Num amount = series.numFactory().valueOf(5);
+                                        ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:280: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, Trade.TradeType.BUY, amount);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:292: error: cannot find symbol
+        Num fixedAmount = series.numFactory().valueOf(7);
+                                             ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:295: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, Trade.TradeType.BUY, sizer);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:309: error: cannot find symbol
+        TradingRecord result = manager.run(strategy, customRecord, series.numFactory().one());
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:323: error: cannot find symbol
+        PositionSizer badSizer = new FixedAmountSizer(series.numFactory().valueOf(-1));
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:339: error: cannot find symbol
+        PositionSizer badSizer = new FixedAmountSizer(DecimalNum.NaN);
+                                                                ^
+  symbol:   variable NaN
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:352: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:383: error: cannot find symbol
+            public void onRunEnd(int lastProcessedIndex, TradingRecord tradingRecord) {
+                                                         ^
+  symbol:   class TradingRecord
+  location: class RecordingExecutionModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:408: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, Trade.TradeType.BUY,
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:424: error: cannot find symbol
+        WalkForwardConfig cfg = WalkForwardConfig.defaultConfig(series);
+        ^
+  symbol:   class WalkForwardConfig
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:424: error: cannot find symbol
+        WalkForwardConfig cfg = WalkForwardConfig.defaultConfig(series);
+                                ^
+  symbol:   variable WalkForwardConfig
+  location: class BarSeriesManagerTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+33 errors

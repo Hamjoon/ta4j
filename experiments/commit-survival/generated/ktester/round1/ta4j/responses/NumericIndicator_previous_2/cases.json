@@ -1,0 +1,92 @@
+[
+  {
+    "group": "NumericIndicator.previous()",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Returned Indicator yields getValue(i) == original delegate.getValue(i-1) for all i >= 1",
+        "description": "Verify that previous() delegates to previous(1) by checking that the returned Indicator shifts the underlying values by one bar. A simple stub Indicator returning the index as a Num is used as the delegate; calling previous() and then getValue(5) must equal stub.getValue(4)."
+      },
+      {
+        "input": [],
+        "expected": "Returned Indicator is equal (by .equals) to the result of calling previous(1) directly",
+        "description": "Confirm that previous() is just a convenience wrapper for previous(1). The test creates a NumericIndicator from a stub delegate, obtains indicatorA = numeric.previous() and indicatorB = numeric.previous(1) and asserts that indicatorA.equals(indicatorB) (or that they are the same instance if the implementation caches)."
+      },
+      {
+        "input": [],
+        "expected": "No exception is thrown and the original delegate remains unchanged",
+        "description": "Ensure that invoking previous() does not mutate the original delegate Indicator. After calling numeric.previous(), the test calls delegate.getValue(3) and expects the same value as before the call."
+      },
+      {
+        "input": [],
+        "expected": "Two successive calls to previous() produce distinct Indicator objects",
+        "description": "Check that each call to previous() creates a new Indicator instance (i.e., numeric.previous() != numeric.previous()). This guarantees that the method does not return a cached singleton unless explicitly designed."
+      },
+      {
+        "input": [],
+        "expected": "Calling getValue(0) on the Indicator returned by previous() yields Num.NaN (or the library\u2011defined default for out\u2011of\u2011range access)",
+        "description": "Validate the edge case where the shifted index would be negative. For index 0 the underlying previous(1) cannot fetch a value, so the expected behavior is the library\u2019s standard out\u2011of\u2011range value (usually Num.NaN). The test asserts that the returned Num is NaN."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.previous(int) basic shift",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "For any index i >= 3, indicator.getValue(i) equals delegate.getValue(i-3). For i < 3 the result is Num.NaN.",
+        "description": "Validate that previous(3) correctly shifts the underlying values by three bars. Use a stub delegate that returns the index as a Num; assert getValue(5) == 2 and getValue(2) == Num.NaN."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 0
+          }
+        ],
+        "expected": "The returned Indicator behaves identically to the original delegate (no shift).",
+        "description": "Edge case where barCount is zero. According to the implementation contract, previous(0) should return an indicator that forwards calls directly to the delegate. Verify by comparing getValue(i) of both indicators for several i."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.previous(int) invalid arguments",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": -5
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Calling previous(-5) should reject negative shift values. The method is expected to validate the argument and throw IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": -1
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "Edge case: the smallest negative integer (-1) is passed. The method must still throw IllegalArgumentException rather than silently accept it."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.previous() with null delegate",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "When a NumericIndicator is created via NumericIndicator.of(null) (or any constructor that accepts a null delegate), invoking previous() should attempt to access the delegate and consequently throw NullPointerException."
+      }
+    ]
+  }
+]

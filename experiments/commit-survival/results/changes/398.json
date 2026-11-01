@@ -1,0 +1,18 @@
+{
+  "index": 398,
+  "sha": "713a911ea02a4af72cdf0592a604408f4f62ed6d",
+  "parent": "7a74f3f105971c5989d793e5debd8b13d200d562",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java": [
+      39,
+      40
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java": [
+      40,
+      41
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java\nindex fafb5e042..17c362937 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/ATMAIndicator.java\n@@ -34 +34,2 @@ public class ATMAIndicator extends CachedIndicator<Num> {\n-     * @param barCount  the Simple Moving Average time frame\n+     * @param barCount  the Simple Moving Average time frame. Odd time frames use\n+     *                  the rounded-up half as the fast smoothing length.\n@@ -39,2 +40,2 @@ public class ATMAIndicator extends CachedIndicator<Num> {\n-        this.fast = (int) (Math.ceil(barCount / 2));\n-        this.slow = (int) (Math.floor(barCount / 2) + 1);\n+        this.fast = Math.ceilDiv(barCount, 2);\n+        this.slow = (barCount / 2) + 1;"
+}

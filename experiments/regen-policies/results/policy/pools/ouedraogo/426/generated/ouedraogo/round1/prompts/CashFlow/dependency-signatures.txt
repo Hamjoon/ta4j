@@ -1,0 +1,299 @@
+// public API of org.ta4j.core.analysis.PerformanceIndicator
+public interface PerformanceIndicator extends Indicator<Num> {
+   EquityCurveMode getEquityCurveMode();
+   void calculatePosition(Position position, int finalIndex);
+  default void calculate(TradingRecord tradingRecord, int finalIndex, OpenPositionHandling openPositionHandling);
+  private OpenPositionHandling getEffectiveOpenPositionHandling(OpenPositionHandling openPositionHandling);
+  default int determineEndIndex(Position position, int finalIndex, int maxIndex);
+  default Num addCost(Num rawPrice, Num holdingCost, boolean isLongTrade);
+  default Num averageHoldingCostPerPeriod(Position position, int endIndex, NumFactory numFactory);
+  default Num resolveExitPrice(Position position, int endIndex, BarSeries series);
+  default void padToEndIndex(List<Num> values, int endIndex, Num padValue);
+  default void padToSize(List<Num> values, int requiredSize, Num padValue);
+}
+
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+  default boolean isStable();
+   int getCountOfUnstableBars();
+   BarSeries getBarSeries();
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+  default String toJson();
+  default ComponentDescriptor toDescriptor();
+  static Indicator<?> fromJson(BarSeries series, String json);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+  static boolean isFinite(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+  default void clear();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.TradingRecord
+public interface TradingRecord extends Serializable {
+   TradeType getStartingType();
+   String getName();
+  default void operate(int index);
+   void operate(int index, Num price, Num amount);
+  default void operate(TradeFill fill);
+  default void operate(Trade trade);
+  default boolean enter(int index);
+   boolean enter(int index, Num price, Num amount);
+  default boolean enter(Trade trade);
+  default boolean exit(int index);
+   boolean exit(int index, Num price, Num amount);
+  default boolean exit(Trade trade);
+  default boolean isClosed();
+   CostModel getTransactionCostModel();
+   CostModel getHoldingCostModel();
+   List<Position> getPositions();
+  default int getPositionCount();
+   Position getCurrentPosition();
+  default Num getRecordedTotalFees();
+  default List<Position> getOpenPositions();
+  default Position getNetOpenPosition();
+  default Position getLastPosition();
+   List<Trade> getTrades();
+  default Trade getLastTrade();
+  default Trade getLastTrade(TradeType tradeType);
+  default Trade getLastEntry();
+  default Trade getLastExit();
+   Integer getStartIndex();
+   Integer getEndIndex();
+  default int getStartIndex(BarSeries series);
+  default int getEndIndex(BarSeries series);
+}
+
+// public API of org.ta4j.core.analysis.EquityCurveMode
+public enum EquityCurveMode {
+  public static final EquityCurveMode MARK_TO_MARKET;
+  public static final EquityCurveMode REALIZED;
+}
+
+// public API of org.ta4j.core.analysis.OpenPositionHandling
+public enum OpenPositionHandling {
+  public static final OpenPositionHandling MARK_TO_MARKET;
+  public static final OpenPositionHandling IGNORE;
+}
+
+// public API of org.ta4j.core.Position
+public class Position implements Serializable {
+  public Position();
+  public Position(TradeType startingType);
+  public Position(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Position(Trade entry, Trade exit);
+  public Position(Trade entry, Trade exit, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Position(Trade entry, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Trade getEntry();
+  public Trade getExit();
+  public ExecutionSide side();
+  public Num amount();
+  public Num averageEntryPrice();
+  public Num totalEntryCost();
+  public Num totalFees();
+  public boolean equals(Object obj);
+  public int hashCode();
+  public Trade operate(int index);
+  public Trade operate(int index, Num price, Num amount);
+  public Trade operate(Trade trade);
+  public boolean isClosed();
+  public boolean isOpened();
+  public boolean isNew();
+  public boolean hasProfit();
+  public boolean hasLoss();
+  public Num getProfit();
+  public Num getProfit(int finalIndex, Num finalPrice);
+  public Num getGrossProfit();
+  public Num getGrossProfit(Num finalPrice);
+  public Num getGrossReturn();
+  public Num getGrossReturn(Num finalPrice);
+  public Num getGrossReturn(BarSeries barSeries);
+  public Num getGrossReturn(Num entryPrice, Num exitPrice);
+  public Num getPositionCost(int finalIndex);
+  public Num getPositionCost();
+  public Num getHoldingCost();
+  public Num getHoldingCost(int finalIndex);
+  public CostModel getTransactionCostModel();
+  public CostModel getHoldingCostModel();
+  public TradeType getStartingType();
+  public String toString();
+}
+
+// public API of org.ta4j.core.BaseBarSeriesBuilder
+public class BaseBarSeriesBuilder implements BarSeriesBuilder {
+  public BaseBarSeriesBuilder();
+  public BaseBarSeries build();
+  public BaseBarSeriesBuilder setConstrained(boolean constrained);
+  public BaseBarSeriesBuilder withNumFactory(NumFactory numFactory);
+  public BaseBarSeriesBuilder withName(String name);
+  public BaseBarSeriesBuilder withBars(List<Bar> bars);
+  public BaseBarSeriesBuilder withBeginIndex(int beginIndex);
+  public BaseBarSeriesBuilder withMaxBarCount(int maxBarCount);
+  public BaseBarSeriesBuilder withBarBuilderFactory(BarBuilderFactory barBuilderFactory);
+}
+
+// public API of org.ta4j.core.BaseTradingRecord
+public class BaseTradingRecord implements TradingRecord {
+  public BaseTradingRecord();
+  public BaseTradingRecord(String name);
+  public BaseTradingRecord(String name, TradeType tradeType);
+  public BaseTradingRecord(TradeType startingType);
+  public BaseTradingRecord(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BaseTradingRecord(TradeType startingType, Integer startIndex, Integer endIndex, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BaseTradingRecord(TradeType startingType, ExecutionMatchPolicy matchPolicy, CostModel transactionCostModel, CostModel holdingCostModel, Integer startIndex, Integer endIndex);
+  public BaseTradingRecord(Trade... trades);
+  public BaseTradingRecord(Position position);
+  public BaseTradingRecord(List<Position> positions);
+  public BaseTradingRecord(CostModel transactionCostModel, CostModel holdingCostModel, Trade... trades);
+  public TradeType getStartingType();
+  public ExecutionMatchPolicy getMatchPolicy();
+  public String getName();
+  public void setName(String name);
+  public void recordFill(Trade trade);
+  public void recordFill(int index, Trade trade);
+  public void recordExecutionFill(TradeFill fill);
+  public void operate(Trade trade);
+  public void operate(int index, Num price, Num amount);
+  public boolean enter(int index, Num price, Num amount);
+  public boolean exit(int index, Num price, Num amount);
+  public CostModel getTransactionCostModel();
+  public CostModel getHoldingCostModel();
+  public List<Position> getPositions();
+  public Position getCurrentPosition();
+  public List<Trade> getTrades();
+  public Trade getLastEntry();
+  public Trade getLastExit();
+  public Integer getStartIndex();
+  public Integer getEndIndex();
+  public List<Position> getOpenPositions();
+  public Position getNetOpenPosition();
+  public Num getTotalFees();
+  public Num getRecordedTotalFees();
+  public String toString();
+  public void rehydrate(CostModel holdingCostModel);
+  public void rehydrate(CostModel transactionCostModel, CostModel holdingCostModel);
+}
+
+// public API of org.ta4j.core.Trade
+public interface Trade extends Serializable {
+   TradeType getType();
+   int getIndex();
+   Num getPricePerAsset();
+  default Num getPricePerAsset(BarSeries barSeries);
+   Num getNetPrice();
+   Num getAmount();
+   Num getCost();
+   CostModel getCostModel();
+  default Instant getTime();
+  default String getId();
+  default String getInstrument();
+  default String getOrderId();
+  default String getCorrelationId();
+  default boolean isBuy();
+  default boolean isSell();
+  default Num getValue();
+  default List<TradeFill> getFills();
+  static List<TradeFill> executionFillsOf(Trade trade);
+  static Trade fromFill(TradeFill fill);
+  static Trade fromFill(TradeFill fill, CostModel transactionCostModel);
+  static Trade fromFill(TradeType type, TradeFill fill);
+  static Trade fromFill(TradeType type, TradeFill fill, CostModel transactionCostModel);
+  static Trade fromFills(TradeType type, List<TradeFill> fills);
+  static Trade fromFills(TradeType type, List<TradeFill> fills, CostModel transactionCostModel);
+  static Trade buyAt(int index, BarSeries series);
+  static Trade buyAt(int index, Num price, Num amount, CostModel transactionCostModel);
+  static Trade buyAt(int index, Num price, Num amount);
+  static Trade buyAt(int index, BarSeries series, Num amount);
+  static Trade buyAt(int index, BarSeries series, Num amount, CostModel transactionCostModel);
+  static Trade sellAt(int index, BarSeries series);
+  static Trade sellAt(int index, Num price, Num amount);
+  static Trade sellAt(int index, Num price, Num amount, CostModel transactionCostModel);
+  static Trade sellAt(int index, BarSeries series, Num amount);
+  static Trade sellAt(int index, BarSeries series, Num amount, CostModel transactionCostModel);
+}
+
+// public API of org.ta4j.core.num.NumFactory
+public interface NumFactory extends Serializable {
+   Num minusOne();
+   Num zero();
+   Num one();
+   Num two();
+   Num three();
+   Num hundred();
+   Num thousand();
+  default Num epsilon();
+   Num numOf(Number number);
+   Num numOf(String number);
+  default boolean produces(Num num);
+}
+

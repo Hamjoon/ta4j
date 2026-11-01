@@ -1,0 +1,126 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:40: error: cannot find symbol
+    private TRIndicator trIndicator;
+            ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:109: error: cannot find symbol
+        @Override public NumFactory numFactory() { return DecimalNum::valueOf; }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:111: error: cannot find symbol
+        @Override public BaseBarConvertibleBuilder barBuilder() {
+                         ^
+  symbol:   class BaseBarConvertibleBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:52: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:87: error: getTrades() in SimpleBar cannot implement getTrades() in Bar
+        @Override public int getTrades() { return 0; }
+                             ^
+  return type int is not compatible with long
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:76: error: getEndTime() in SimpleBar cannot implement getEndTime() in Bar
+        @Override public int getEndTime() { return 0; }
+                             ^
+  return type int is not compatible with ZonedDateTime
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:75: error: getBeginTime() in SimpleBar cannot implement getBeginTime() in Bar
+        @Override public int getBeginTime() { return 0; }
+                             ^
+  return type int is not compatible with ZonedDateTime
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:75: error: method does not override or implement a method from a supertype
+        @Override public int getBeginTime() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:76: error: method does not override or implement a method from a supertype
+        @Override public int getEndTime() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:77: error: method does not override or implement a method from a supertype
+        @Override public Num getBidVolume() { return DecimalNum.ZERO; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:77: error: cannot find symbol
+        @Override public Num getBidVolume() { return DecimalNum.ZERO; }
+                                                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:78: error: method does not override or implement a method from a supertype
+        @Override public Num getAskVolume() { return DecimalNum.ZERO; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:78: error: cannot find symbol
+        @Override public Num getAskVolume() { return DecimalNum.ZERO; }
+                                                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:79: error: method does not override or implement a method from a supertype
+        @Override public Num getBidOpenPrice() { return openPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:80: error: method does not override or implement a method from a supertype
+        @Override public Num getAskOpenPrice() { return openPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:81: error: method does not override or implement a method from a supertype
+        @Override public Num getBidClosePrice() { return closePrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:82: error: method does not override or implement a method from a supertype
+        @Override public Num getAskClosePrice() { return closePrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:83: error: method does not override or implement a method from a supertype
+        @Override public Num getBidHighPrice() { return highPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:84: error: method does not override or implement a method from a supertype
+        @Override public Num getAskHighPrice() { return highPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:85: error: method does not override or implement a method from a supertype
+        @Override public Num getBidLowPrice() { return lowPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:86: error: method does not override or implement a method from a supertype
+        @Override public Num getAskLowPrice() { return lowPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:87: error: method does not override or implement a method from a supertype
+        @Override public int getTrades() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:88: error: method does not override or implement a method from a supertype
+        @Override public Num getTradeVolume() { return volume; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:89: error: method does not override or implement a method from a supertype
+        @Override public Num getTradePrice() { return closePrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:90: error: method does not override or implement a method from a supertype
+        @Override public Num getOpenBidPrice() { return openPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:91: error: method does not override or implement a method from a supertype
+        @Override public Num getOpenAskPrice() { return openPrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:92: error: method does not override or implement a method from a supertype
+        @Override public Num getCloseBidPrice() { return closePrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:93: error: method does not override or implement a method from a supertype
+        @Override public Num getCloseAskPrice() { return closePrice; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:94: error: method does not override or implement a method from a supertype
+        @Override public Num getMidPrice() { return openPrice.plus(closePrice).dividedBy(DecimalNum.valueOf(2)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:165: error: cannot find symbol
+                DecimalNum.ONE));         // volume
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:172: error: cannot find symbol
+                DecimalNum.ONE));
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:179: error: cannot find symbol
+                DecimalNum.ONE));
+                          ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:186: error: cannot find symbol
+        trIndicator = new TRIndicator(series);
+                          ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/CoT/ATRIndicatorTest.java:287: error: cannot find symbol
+        new ATRIndicator((TRIndicator) null, BAR_COUNT);
+                          ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+34 errors

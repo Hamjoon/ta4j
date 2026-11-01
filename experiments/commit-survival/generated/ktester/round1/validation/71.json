@@ -1,0 +1,330 @@
+{
+  "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/classes",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.997,
+    "log": "work/validation/ktester/round1/71/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsRuntimeException_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsOnMinValue_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#positionCreatedWithNullTransactionCostModel_throwsNullPointerException()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/run1"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.876,
+      "log": "work/validation/ktester/round1/71/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsRuntimeException_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsOnMinValue_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#positionCreatedWithNullTransactionCostModel_throwsNullPointerException()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/run2"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.826,
+      "log": "work/validation/ktester/round1/71/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsRuntimeException_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsOnMinValue_isPropagated()",
+        "--select-method",
+        "org.ta4j.core.Position_getPositionCost_Test#positionCreatedWithNullTransactionCostModel_throwsNullPointerException()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/71/test/run3"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.622,
+      "log": "work/validation/ktester/round1/71/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_returnsSumOfTransactionAndHoldingCosts",
+      "body_hash": "28d7c8df4266e516e3a750c7dc38033293bd411486412dbeff7b3b790df5e0f6",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_returnsSumOfTransactionAndHoldingCosts()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "getPositionCost_callsBothCostModelsExactlyOnce",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|getPositionCost_callsBothCostModelsExactlyOnce",
+      "body_hash": "93988ef8be7456f965f8824624c883b356626328ec05b52032f60c5dc2aaca73",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#getPositionCost_callsBothCostModelsExactlyOnce()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "standardCalculations",
+      "kind": "parameterized",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|standardCalculations",
+      "body_hash": "cedeab231843ac32786aae6d8461d230e5d0e6d8c19a87e26290d05130a7834c",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#standardCalculations(int,org.ta4j.core.num.Num,org.ta4j.core.num.Num,org.ta4j.core.num.Num)"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "transactionCostModelThrowsRuntimeException_isPropagated",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|transactionCostModelThrowsRuntimeException_isPropagated",
+      "body_hash": "a6feaa4d3619b6431b6ae4bfdfaf7632ca28e1eac3958d1014698547b67b2b68",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.misusing.UnnecessaryStubbingException:  Unnecessary stubbings detected. Clean & maintainable test code requires zero unnecessary code. Following stubbings are unnecessary (click to navigate to relevant line of code):   1. -> at org.ta4j.core.Position_getPositionCost_Test.transactionCostModelThrowsRuntimeException_isPropagated(Position_getPositionCost_Test.java:138) Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsRuntimeException_isPropagated()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "holdingCostModelThrowsIllegalStateException_isPropagated",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|holdingCostModelThrowsIllegalStateException_isPropagated",
+      "body_hash": "a155fcc72b3d162bf24e45ea804a406b81016a09a573f3c7389fdbf984d43361",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#holdingCostModelThrowsIllegalStateException_isPropagated()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "transactionCostModelReturnsNull_throwsNullPointerException",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|transactionCostModelReturnsNull_throwsNullPointerException",
+      "body_hash": "6b18c284b9efa0c6bd9eb5c0d1e514c3495d053c2732f96641ee5f0ba83d6e77",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelReturnsNull_throwsNullPointerException()"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "transactionCostModelThrowsOnMinValue_isPropagated",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|transactionCostModelThrowsOnMinValue_isPropagated",
+      "body_hash": "b3764bd1e71d474f90aab7186c82d3ff9b3a7fbb59b48fd48467d02302bd204b",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.misusing.UnnecessaryStubbingException:  Unnecessary stubbings detected. Clean & maintainable test code requires zero unnecessary code. Following stubbings are unnecessary (click to navigate to relevant line of code):   1. -> at org.ta4j.core.Position_getPositionCost_Test.transactionCostModelThrowsOnMinValue_isPropagated(Position_getPositionCost_Test.java:179) Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#transactionCostModelThrowsOnMinValue_isPropagated()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "class": "org.ta4j.core.Position_getPositionCost_Test",
+      "method": "positionCreatedWithNullTransactionCostModel_throwsNullPointerException",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java|org.ta4j.core.Position_getPositionCost_Test|positionCreatedWithNullTransactionCostModel_throwsNullPointerException",
+      "body_hash": "3c2b15ccbf0900e8b45c7fc8230cd27b606e8f5975394b8ff19d45826e5433e7",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.misusing.UnnecessaryStubbingException:  Unnecessary stubbings detected. Clean & maintainable test code requires zero unnecessary code. Following stubbings are unnecessary (click to navigate to relevant line of code):   1. -> at org.ta4j.core.Position_getPositionCost_Test.setupBeforeEach(Position_getPositionCost_Test.java:58)   2. -> at org.ta4j.core.Position_getPositionCost_Test.setupBeforeEach(Position_getPositionCost_Test.java:60)   3. -> at org.ta4j.core.Position_getPositionCost_Test.positionCreatedWithNullTransactionCostModel_throwsNullPointerException(Position_getPositionCost_Test.java:194) Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.Position_getPositionCost_Test#positionCreatedWithNullTransactionCostModel_throwsNullPointerException()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/Position_getPositionCost_Test.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.518,
+    "log": "work/validation/ktester/round1/71/inventory.tsv"
+  },
+  "input_sha256": "e0fe3ac039305db06c92651eb4167e3070086c366178280901ffa294eaa363ef"
+}

@@ -1,0 +1,46 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:62: error: cannot find symbol
+            Num volume = DecimalNum.ONE;
+                                   ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:70: error: cannot find symbol
+                    DecimalNum.ZERO      // amount (price * volume)
+                              ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:110: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, vi.getValue(0));
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:130: error: cannot find symbol
+        assertEquals(DecimalNum.ZERO, diff.getValue(0));
+                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:131: error: cannot find symbol
+        assertEquals(DecimalNum.ZERO, diff.getValue(1));
+                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:158: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, div.getValue(0));
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:159: error: cannot find symbol
+        assertEquals(DecimalNum.ONE, div.getValue(1));
+                               ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:248: error: cannot find symbol
+                .dividedBy(DecimalNum.ONE); // sample size = 1 (n-1)
+                                     ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:341: error: cannot find symbol
+        NumericIndicator zero = NumericIndicator.of(new ConstantIndicator<>(series, DecimalNum.ZERO));
+                                                                                              ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+9 errors

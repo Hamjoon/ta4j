@@ -1,0 +1,143 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:19: error: cannot find symbol
+import org.ta4j.core.num.PrecisionNum;
+                        ^
+  symbol:   class PrecisionNum
+  location: package org.ta4j.core.num
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:21: error: cannot find symbol
+import org.ta4j.core.BasePosition;
+                    ^
+  symbol:   class BasePosition
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:23: error: cannot find symbol
+import org.ta4j.core.BaseTrade;
+                    ^
+  symbol:   class BaseTrade
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:52: error: <anonymous org.ta4j.core.analysis.CashFlowTest$1> is not abstract and does not override abstract method addPrice(Num) in Bar
+        return new Bar() {
+                         ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:61: error: method does not override or implement a method from a supertype
+            @Override public BarSeries getBarSeries() { return series; }
+            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:98: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(1).getClosePrice(), series.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:99: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.getBar(4).getClosePrice(), series.numOf(1));
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:100: error: cannot find symbol
+        Position position = new BasePosition(entry, exit);
+                                ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:155: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(0).getClosePrice(), series.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:156: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.getBar(1).getClosePrice(), series.numOf(1));
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:157: error: cannot find symbol
+        Position pos = new BasePosition(entry, exit);
+                           ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:168: error: cannot find symbol
+        CashFlow cf = new CashFlow(series, new BasePosition()); // empty position (no entry/exit)
+                                               ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:175: error: cannot find symbol
+        CashFlow cf = new CashFlow(series, new BasePosition());
+                                               ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:181: error: cannot find symbol
+        CashFlow cf = new CashFlow(series, new BasePosition());
+                                               ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:192: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(3).getClosePrice(), series.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:193: error: cannot find symbol
+        Position openPos = new BasePosition(entry, null);
+                               ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:200: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(2).getClosePrice(), series.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:201: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.getBar(5).getClosePrice(), series.numOf(1));
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:202: error: cannot find symbol
+        Position pos = new BasePosition(entry, exit);
+                           ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:210: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(3).getClosePrice(), series.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:211: error: cannot find symbol
+        Position openPos = new BasePosition(entry, null);
+                               ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:219: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, series.getBar(1).getClosePrice(), series.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:220: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, series.numOf(12), series.numOf(1)); // price irrelevant
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:223: error: cannot find symbol
+        Position pos = new BasePosition(entry, exit);
+                           ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:251: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:261: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:270: error: cannot find symbol
+        Trade entry = new BaseTrade(TradeType.BUY, shortSeries.getBar(0).getClosePrice(), shortSeries.numOf(1));
+                          ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:271: error: cannot find symbol
+        Trade exit = new BaseTrade(TradeType.SELL, shortSeries.getBar(2).getClosePrice(), shortSeries.numOf(1));
+                         ^
+  symbol:   class BaseTrade
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:272: error: cannot find symbol
+        Position pos = new BasePosition(entry, exit);
+                           ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:284: error: cannot find symbol
+        CashFlow cf = new CashFlow(empty, new BasePosition());
+                                              ^
+  symbol:   class BasePosition
+  location: class CashFlowTest
+30 errors

@@ -1,0 +1,18 @@
+{
+  "index": 58,
+  "sha": "001c1b4a35e6fe423f216d0ea9bc9f2ae00a3c4e",
+  "parent": "c1d9d3bc7122dca4127b798e4303baf11dfa62b2",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java": [
+      44
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java": [
+      44
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\nindex 7a5b0d5f3..483c2b9bf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/ReturnOverMaxDrawdownCriterion.java\n@@ -39 +39 @@ import org.ta4j.core.num.Num;\n- * RoMaD = {@link NetReturnCriterion net return (with base)} / {@link MaximumDrawdownCriterion maximum drawdown}\n+ * RoMaD = {@link NetReturnCriterion net return (without base)} / {@link MaximumDrawdownCriterion maximum drawdown}\n@@ -44 +44 @@ public class ReturnOverMaxDrawdownCriterion extends AbstractAnalysisCriterion {\n-    private final AnalysisCriterion netReturnCriterion = new NetReturnCriterion();\n+    private final AnalysisCriterion netReturnCriterion = new NetReturnCriterion(false);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java\nindex 47f2d97a8..ff2727c04 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/NetReturnCriterion.java\n@@ -42,0 +43 @@ public class NetReturnCriterion extends AbstractReturnCriterion {\n+"
+}

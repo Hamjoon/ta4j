@@ -1,0 +1,533 @@
+index,sha,date,subject,evaluated,event,dev-scope_segment,dev-scope_segment_denominator,dev-scope_alive,dev-scope_lost,dev-scope_carried_alive,dev-scope_new_alive,ouedraogo_segment,ouedraogo_segment_denominator,ouedraogo_alive,ouedraogo_lost,ouedraogo_carried_alive,ouedraogo_new_alive
+0,897a114c2c74413d05a7a2091efb0fe3611b0036,2024-05-17T10:12:19-04:00,t = 897a114c2c74413d05a7a2091efb0fe3611b0036,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+1,109596ec1989b7bb5c78ad31abe21e729148926c,2024-05-17T10:23:56-04:00,Merge pull request #1154 from ta4j/feature/begin-0.17-snapshot,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+2,ad120c0355974c7034517970bc26f0cbc7ab2bc5,2024-05-19T12:52:11-04:00,Merge pull request #1140 from sgflt/sma-partial-sum-cache,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+3,8476e74fa36d12540198ceafa91b182ca8945c72,2024-05-23T19:40:18-04:00,Merge pull request #1155 from sgflt/macd-signal-and-histogram,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+4,94c13f01bd0b429e3f9388dd89830e9f24e27be9,2024-05-23T19:40:53-04:00,Merge pull request #1156 from ta4j/TheCookieLab-patch-1,no,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+5,69fd473d678e4fdf937f2c704cd8db5653759fa6,2024-06-11T07:15:19-04:00,Merge pull request #1158 from ts-00/patch-1,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+6,6b24a6dcd4b15a551a44d0d261bab932fd04de31,2024-06-11T07:50:50-04:00,Merge pull request #1160 from ts-00/tradingrecord-getters,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+7,8189e9431ec3250561546f76df4da79c786ac550,2024-06-28T08:05:31-04:00,Merge pull request #1163 from Petersoj/feature/booleantransformindicator-predicate,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+8,7f223a1c7ca5e27ed81dcee5c794d6bc708a124b,2024-06-29T08:04:50-04:00,Merge pull request #1166 from ta4j/bugfix/update-ta4jexamples-dependency-version,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+9,f72ba167c397042a83670606e1f4a335312c400e,2024-07-01T08:40:19-04:00,Merge pull request #1105 from nimo23/Added-EnterAndHoldCriterion,yes,evaluate,1,67,67,0,67,0,1,98,98,0,98,0
+10,7e296def2d4cf923e9af8aa3054d89871b5dc943,2024-07-06T12:29:50-04:00,Merge pull request #1109 from nimo23/add--bigDecimalValue,yes,evaluate,1,67,67,0,67,0,1,98,82,16,82,0
+11,cd6f3d3366217a148dae565aa6aca7e54e1f8545,2024-08-07T20:21:21-04:00,Merge pull request #1125 from ta4j/feature/recent-swing-high-and-low-indicators,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+12,c45e5c0157cf6118056d57b5a48294fe461fe96e,2024-08-07T20:25:23-04:00,Merge pull request #1168 from ta4j/feature/ttmsqueezepro-indicator,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+13,fbfbc7cec1c939ddefa20bee48c0199e12cd7d18,2024-08-12T08:46:27-04:00,Merge pull request #1170 from ta4j/feature/1169-atr-based-stop-loss-rules,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+14,195f1d0b6675d5a65e60a8beaf30f1999f0626d4,2024-08-12T08:51:00-04:00,Merge pull request #1172 from ta4j/feature/kalman-filter-indicator,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+15,38fbb04425bec4fefe208d8c4c69892d846569e1,2024-08-27T10:56:14-04:00,Merge pull request #1174 from btezergil/candle-indicators,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+16,4755270e61e2478a66a65c1c9606e50be6c02204,2024-08-30T11:09:54-04:00,Merge pull request #1173 from ta4j/bugfix/recent-swing-high-and-low-peeking,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+17,dae1daef9e87679a26458ac4435ecdef9aac4f1a,2024-09-13T13:48:30-04:00,Merge pull request #1176 from ta4j/bugfix/atrindicator-reuse-trindicator-instance-in-constructor,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+18,15ddaf9966f2ea64e167cdac84c5bc50c02b67aa,2024-09-18T14:51:19-04:00,Merge pull request #1177 from ta4j/release/0.17,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+19,0953881d69cbbae1fec09780a9c2c1e0c58adffd,2024-09-18T15:49:21-04:00,Merge pull request #1178 from ta4j/feature/begin-0.18-snapshot,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+20,5f31cda7a05bc833b808b96181645d905f5ff1aa,2024-09-24T08:50:18-04:00,Merge pull request #1179 from ta4j/feature/update-dependencies-9-18-2024,yes,evaluate,1,67,67,0,67,0,1,98,82,0,82,0
+21,632b3077a63c11d356efdea2f2cd813a6fd84ff4,2024-09-30T15:36:07-04:00,Merge pull request #1147 from sgflt/introduce-num-factory,yes,evaluate,1,67,0,67,0,0,1,98,0,82,0,0
+21,632b3077a63c11d356efdea2f2cd813a6fd84ff4,2024-09-30T15:36:07-04:00,Merge pull request #1147 from sgflt/introduce-num-factory,yes,regenerate,1,67,0,0,0,0,2,14,14,0,0,14
+22,184174c9d5d9f62758f23da89c94dc8ee3db02f8,2024-09-30T17:28:11-04:00,Merge pull request #1184 from algonell/master,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+23,c708a7d82250a589bb624acf141a837c3a91f6fa,2024-10-11T17:18:28-04:00,Merge pull request #1191 from nimo23/replace-ZonedDateTime-with-Instant,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+24,9484f521e107937031a4728ecd9f5168b626278b,2024-10-18T13:08:12-04:00,Merge pull request #1189 from sgflt/implemented-tick-bars,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+25,08268f52afa1269ab5d2a0ed9574d6ff1572fb2e,2024-10-20T19:08:56-04:00,Merge pull request #1196 from nimo23/rename-FixedDecimalIndicator,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+26,3df6c700973be0361be690bc39b71e1c2061ab16,2024-11-04T10:02:32-05:00,Merge pull request #1193 from nimo23/fix-EnterAndHold-Consider-Amount,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+27,42d93197fb6851fe23fbd863c1843fdb9844f47e,2024-11-04T10:10:41-05:00,Merge pull request #1206 from Cypher01/kri-indicator,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+28,17823a59c1eb526545c52f1031759558a799d328,2024-11-15T11:53:21-05:00,Merge pull request #1218 from nimo23/create-bars-package,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+29,d695b0a338a1e36164001acc6b5da3d7585dbf18,2024-11-26T07:48:30-05:00,Merge pull request #1221 from nimo23/code-cleanups,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+30,eff7fa33a942b695380c4fd3090b317dee4701dd,2024-12-02T12:08:19-05:00,Merge pull request #1223 from nimo23/add_Indicator.isStable,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+31,2b43fb17ed6a38c84ba4ee66c4adea18c913ad7f,2024-12-03T13:17:53-05:00,Merge pull request #1220 from sgflt/feature/#379-allow-usage-of-junit5,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+32,607cd8c451da6ddcfe2ca19042e4eed62ccc698f,2024-12-08T09:10:37-05:00,Merge pull request #1232 from ek-ex/feature/fix-tests,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+33,c20124de504e090929742f2851f6d30956a3dd24,2024-12-10T07:56:17-05:00,Merge pull request #1226 from brhurley/movingaverages,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+34,fe395b62fc3600df3ace1aba6b0284eeb0cd7dae,2024-12-10T07:59:02-05:00,Merge pull request #1234 from sgflt/fix-MockBarBuilder-Time,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+35,9abcd0134f0e3961b6f7bc413d0c728be54ed04a,2024-12-11T13:49:34-05:00,Merge pull request #1237 from brhurley/movingaverage-package,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+36,f7aa0f19edbaa31b1d7eab7da949e36b6aca1bc7,2024-12-16T08:38:16-05:00,Merge pull request #1222 from nimo23/improve_BarBuilders,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+37,ccaee65ff838acb79a397a76cfda98d078cd0ca9,2024-12-16T08:40:21-05:00,Merge pull request #1238 from brhurley/vwma,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+38,7aea96a31536e69885be7567ab2dac6f403e6eb7,2024-12-27T09:22:58-05:00,Merge pull request #1241 from brhurley/lsma,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+39,89038f31b8018be1d2903ee29965946a5ec95d25,2025-01-13T11:18:09-05:00,Merge pull request #1246 from sgflt/#1244-share-math-context,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+40,6cc3a55af537c7f5212d5e298214cf6546f86a92,2025-01-24T13:35:43-05:00,Merge pull request #1242 from francescopeloi/#1186-Heikin-Ashi-bar-builder,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+41,64896b0d621e2b3d9aa4e161560df45ec8d7dedc,2025-02-17T13:24:05-05:00,Merge pull request #1201 from Cypher01/average-indicator,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+42,1101dbe059cda92d7dd1f86e755b0466782911d5,2025-02-24T11:41:33-05:00,Merge pull request #1251 from sgflt/#1250-parabolic-sar-optimization,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+43,37c4809fbef36f9015dae67e331a8d2ea705732b,2025-05-15T13:48:22-04:00,Merge pull request #1262 from ta4j/release/0.18,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+44,02d1b044f08a6343c153f44baeef48c4562bb1ce,2025-05-15T14:45:01-04:00,Merge pull request #1263 from ta4j/feature/init-0.19-snapshot,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+45,545e8435cd7e6e2f6954e9947949a032b4413684,2025-05-15T15:16:04-04:00,Merge pull request #1264 from ta4j/feature/update-test-workflow,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+46,78fe3d6d8919bb15bed9013744860d652215d087,2025-05-27T14:35:03-04:00,Merge pull request #1267 from francescopeloi/costs-in-enter-and-hold-criterion,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+47,f3aca41d9bcfca86faeec67bb7d2853d1aa8c476,2025-05-28T15:36:41-04:00,Merge pull request #1269 from francescopeloi/clarify-misleading-comment-on-trading-costs,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+48,39e75d0a3cab690cc2903c8077906643cb76bbe2,2025-06-01T19:43:55-04:00,Merge pull request #1270 from jleskovar/master,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+49,2f39dbc00759dc4400b7857e0117a995c93604b7,2025-06-02T12:29:57-04:00,Merge pull request #1273 from francescopeloi/refactor-profitlosspercentagecriterion-to-optimize-division,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+50,c6400ff7bf4030ee3940be3a6964ff013b48a2fe,2025-06-02T13:02:19-04:00,Merge pull request #1274 from francescopeloi/wrong-profit-naming,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+51,a9955915b51a332b0904902e0fc60a2f889199e5,2025-06-09T09:22:51-04:00,Merge pull request #1276 from francescopeloi/refactor-pnl-criteria,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+52,3639c47491cc57ce3c560ec59afb36c884e95747,2025-06-09T09:29:04-04:00,Merge pull request #1260 from ta4j/bugfix/1256-rsi-indicator-incorrect-unstable-bars,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+53,676e3645b0ff65489c94b78d2b666262ba40fdb1,2025-06-17T13:13:39-04:00,Merge pull request #1277 from francescopeloi/refactor-the-last-pnl-criteria,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+54,4ef47226d6815130a4c00fe70fb781bdbf588688,2025-06-18T12:56:01-04:00,Merge pull request #1279 from nimo23/fix-ConvergenceDivergenceIndicator,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+55,df40f73bc3a6f256a3de162cda6daa3a6c458547,2025-06-18T13:06:46-04:00,Merge pull request #1280 from nimo23/remove-unused-imports,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+56,f29bdd71cacf083028e3c6f722a82bdcc4177563,2025-06-24T12:29:46-04:00,Merge pull request #1283 from nimo23/BarBuilder-with-beginTime,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+57,c1d9d3bc7122dca4127b798e4303baf11dfa62b2,2025-06-24T12:38:45-04:00,Merge pull request #1285 from nimo23/fix-BaseBarSeries-addTrade,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+58,001c1b4a35e6fe423f216d0ea9bc9f2ae00a3c4e,2025-06-24T15:05:24-04:00,Merge pull request #1281 from nimo23/fix-ReturrnOverMaxDrawdown,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+59,b929c4112cf1b6861d25df97230347c833984e28,2025-06-25T11:31:01-04:00,Merge pull request #1286 from sgflt/#1266-consolidate-redundant-classes,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+60,a5eb46ffdfcfa78a11906bb3d66b509c4918b421,2025-06-25T11:42:24-04:00,Merge pull request #1288 from francescopeloi/1287-ReturnOverMaxDrawdownCriterion-fix,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+61,7c82c4c0755ffc4c979c455809b8cb52d88c5000,2025-06-30T12:43:14-04:00,Merge pull request #1291 from sgflt/bugfix/#1290-aggregate-amount,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+62,31ef93b298bf78134baaab3636b35abf6fe9ac5e,2025-06-30T12:57:21-04:00,Merge pull request #1297 from nimo23/patch-1,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+63,56c99df6f9c2f107fff282d74261c393781d66b1,2025-07-02T18:59:53-04:00,Merge pull request #1294 from nimo23/remove-unused-imports-2,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+64,4ea96a3a4eb0a4aab4ba48af201fe3be049cb568,2025-07-23T15:26:40-04:00,Merge pull request #1301 from ta4j/feature/update-sonatype-snapshot-publishing,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+65,5ecafb411feb595fe9cd59b788d42779f90e12f6,2025-07-28T17:13:35-04:00,Merge pull request #1299 from nimo23/add-AmountBarBuilder,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+66,2c746f6c1c4522ecf29ff9b62000b1326e4b02a0,2025-08-19T15:17:02-04:00,Update README.md,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+67,497bf77064af5a1d8f3c8ebbe690ef2d802b8f8f,2025-09-04T19:26:24-04:00,StopGainRule and StopLossRule now accept any price Indicator instead of only ClosePriceIndicator (#1320),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+68,0c735f68b47a756bb04a423f46c6c2786c259190,2025-09-15T11:00:48-04:00,add tests for NumFactory (#1315),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+69,759c392b54ff7805d14068edc8ad4895e08d5ab2,2025-09-16T13:35:19-04:00,More on drawdown (#1321),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+70,28e480eedbeb70c5e0e914a165383fc6c84964d7,2025-09-16T15:34:06-04:00,improve-javadoc-for-rules (#1313),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+71,fe7740af5b3c183532f7f86712e83890ddef594b,2025-09-30T08:43:53-04:00,New criteria (#1324),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+72,bcbe570c6b42084f407b483d454e8a3cfcb6525f,2025-10-01T18:47:38-04:00,Test fixes for java 25 (#1327),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+73,f0d643b0b3c98510e8ba18a809d9daf5522d770c,2025-10-04T14:44:31-04:00,correct calculation of unstable bars of SMA indicator (#1326),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+74,9fe87348633901fa938b5e0469140b8072063fc5,2025-10-07T17:24:23-04:00,Add bullish and bearish Marubozu candlestick indicators (#1330),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+75,40b99cffddd2e549b74c17a9f27e636206195999,2025-10-09T13:13:03-04:00,Modernize build tooling and headless test guards (#1331),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+76,83a4f4fc08ec361d3696e9bc1327092c7a151b3c,2025-10-14T17:49:26-04:00,Allow configuring DecimalNum precision and add performance benchmarks (#1332),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+77,d5c2b17f939afa7bb584d9c4a23b86f8c21f2102,2025-10-15T16:48:44-04:00,Net Momentum Indicator (#1323),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+78,da9aff2d348d41b2f73812b6babd40796caa28bd,2025-10-15T16:51:10-04:00,Add Renko indicators for issue #1187 (#1333),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+79,2b7e311298e16392c28c9f9beb766ded94a339df,2025-10-15T16:53:14-04:00,Refine recent swing indicators (#1335),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+80,c2e21ed37f85b03dc5a38cf2f9d328758dc09319,2025-10-15T16:55:22-04:00,infer NumFactory in BaseBarBuilder (#1306),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+81,54d3e2f91ecf271db5f08b4f239a4bc489a094eb,2025-10-18T07:48:19-04:00,refactor: NumericIndicator's previous method return NumericIndicator (#1345),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+82,47a08bcd990ae4ff851ac9ce948fc71734efdf5b,2025-10-25T18:41:58-04:00,fixed calculation for VersusEnterAndHoldCriterion (#1282),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+83,f22a35ee75c9a77ecc1c48759a17e23085be637a,2025-10-27T14:45:32-04:00,Remove magic number 25 in `UpTrendIndicator` and `DownTrendIndicator` (#1364),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+84,cca0bb02dde3b68ea9b61498623835c669cae527,2025-10-27T14:45:52-04:00,add VoteRule for majority-based rule satisfaction (#1363),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+85,f48e1a95daae559d2c2697cc3f622488be26b284,2025-10-28T12:14:27-04:00,Correct spelling errors (#1366),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+86,8cb1d5b4adb73e0833266d2ebebedc715a2e245a,2025-10-29T11:50:09-04:00,Feature/expand ta4j examples part2 (#1365),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+87,41c57a4f67ae1dfb5c882ce4c3cba88e490f0d35,2025-11-03T18:31:14-05:00,Add MACDVIndicator (#1337),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+88,c29781e0453b9ec116ae9cab4a22fa8c6866b08a,2025-11-11T17:30:54-05:00,"Consolidate Logging Dependencies, Example Backtest and Reporting Enhancements (#1368)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+89,8e887f15e827da78224f14775e6017d4496051bb,2025-11-14T14:52:36-05:00,release automation scripts and workflow (#1369),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+90,b62d9bad715c52da7249e9ee4253e7635355b69e,2025-11-18T16:10:27-05:00,"Feature - Indicator, Rule, and Strategy Serialization (#1373)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+91,145bce3b6770f98f3579529eef025daf9625edb9,2025-11-18T16:53:38-05:00,"fixed comments indentation, kick off master workflows that were aborted due to github problems",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+92,5d8b86e233ff138a5c1c287b7109ee0f9c8901d8,2025-11-18T16:56:47-05:00,"reformatted comments, kick off build again",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+93,a65f4cc6f6cd060ca61a089035601f9f72f54fc9,2025-11-18T18:26:07-05:00,write settings-security.xml (#1377),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+94,7362d924be5f5b9d3eaf2e5e351b0f3193b5647e,2025-11-18T18:37:00-05:00,"Enhance release workflow in release.yml by improving branch and tag handling. Added checks to prevent duplicate branch and tag creation, and implemented cleanup steps for failed workflows to delete remote branches and tags. Updated error messaging for better clarity during the release process.",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+95,025962ffa3ba87f79be24c9f2a958afbf8626f1f,2025-11-18T18:42:42-05:00,Update README.md and release.yml to enhance release workflow documentation and error handling. Added optional OSSRH_SECURITY_MASTER_PASSWORD for Maven security settings and improved checks to prevent duplicate release branch creation. Updated cleanup instructions for failed release attempts to ensure a smoother workflow experience.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+96,11467375573eb09248c27b7511ccc37dec884227,2025-11-18T19:53:20-05:00,Refactor release.yml to simplify Maven security settings handling. Updated server credentials to use environment variable names directly and commented out the Maven security settings generation step for clarity and future reference.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+97,c839cb9213026bfcbf5ccacbb284b8432e66ed99,2025-11-18T20:12:33-05:00,Update release.yml to utilize GitHub secrets for server credentials and reintroduce Maven security settings generation.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+98,6ef58796b2bc681d559b69f1f6ea6e6a939e3a8d,2025-11-18T20:34:16-05:00,Enhance release.yml by adding a step to configure Maven settings with server credentials for deployment. Updated the generation of settings-security.xml to use a here-document for improved readability and maintainability.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+99,88db6b770b7a96df3d2755638696b26ec15aa35d,2025-11-19T13:38:51-05:00,Feature/central release mgt (#1378),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+100,6375640e4045d083d4e3bc3ac660dd31deb223e8,2025-11-19T13:41:49-05:00,Refactor snapshot.yml to enhance Maven security settings generation. Added a new step to create settings-security.xml using a here-document for improved readability and included checks for the presence of the master password. Updated the workflow to utilize GitHub secrets for credentials securely.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+101,b18379bb6cda3b8ab09888d2dcff5bbcc8447a7e,2025-11-19T13:48:15-05:00,"Update workflow names for consistency and clarity in GitHub Actions. Changed names in check.yml, snapshot.yml, test.yml, and validate.yml to follow a standardized naming convention.",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+102,348e7169d6cde8a5bcc74db8e40313376fa66f70,2025-11-19T14:06:41-05:00,Update Maven settings handling in workflows. Changed environment variable names for clarity in release.yml and added a new step to create settings.xml in snapshot.yml for improved configuration management.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+103,d73289bc60c415ac9748a60eecca23d81b027277,2025-11-19T14:10:54-05:00,Refactor Maven settings generation in snapshot.yml. Replaced here-document with printf for improved readability and maintainability of settings.xml creation.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+104,d3b7aa8354ce9bf07848517b83f06c79a305a8a1,2025-11-19T14:16:36-05:00,Refactor Maven settings generation in release.yml and snapshot.yml. Replaced here-documents with printf for improved readability and maintainability of settings.xml and settings-security.xml creation. Added a new step in release.yml to write Maven settings for better configuration management.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+105,e444fb151682140c3e6cae7b09d7569f922b8f61,2025-11-19T14:19:15-05:00,Add echo statement to confirm creation of settings.xml in release.yml and snapshot.yml,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+106,f169ba1cd3b1fc3925d16e9dd2b84e25c8e1d266,2025-11-19T14:26:44-05:00,Add profile to sign snapshots during deployment in pom.xml and update snapshot.yml to use this profile. This enhances artifact security by ensuring that snapshots are signed before deployment.,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+107,fd696b43548a85bd8b83f014af498a0b9e3fff73,2025-11-19T14:31:42-05:00,"Add GPG configuration for signing in snapshot.yml. This step sets up the GPG environment to enable signing of artifacts, enhancing security during the build process.",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+108,6455c686d504617b9978257716c7089fdd374488,2025-11-19T14:46:49-05:00,Update snapshot.yml to configure GPG signing with environment variables for enhanced security during deployment. This change ensures that the GPG passphrase is securely accessed from GitHub secrets.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+109,5bb30e4451f2ef91293fb9d2fc8caaf26ab85844,2025-11-19T14:54:25-05:00,"Add GPG configuration for signing in release.yml. This update mirrors the changes made in snapshot.yml, enhancing security by setting up the GPG environment for artifact signing during the release process. Additionally, it includes the use of environment variables for securely accessing the GPG passphrase from GitHub secrets.",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+110,778cd56ff2401e850ad8fd4545b4718df058dfbd,2025-11-19T15:12:44-05:00,Refactor release.yml to enhance version input handling and improve workflow clarity. Updated release and next version inputs to be optional with auto-detection capabilities. Simplified version computation logic and improved output handling for better maintainability. Adjusted GPG configuration and commit messages to reflect dynamic versioning.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+111,845fe98e44b02b4d02572303a7dec1c5d659b297,2025-11-19T15:31:50-05:00,Enhance release.yml by adding comprehensive version validation and auto-computation for release and next snapshot versions.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+112,c652e33a84f9bb967f0ac42baea76c1e7472430c,2025-11-19T15:58:45-05:00,Update release.yml to push changes using a Personal Access Token (PAT) for enhanced security. This change replaces the previous push method with a secure URL format that utilizes the PAT stored in GitHub secrets.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+113,3f65f51172ca79c798d2a711348607073b07c2b5,2025-11-19T16:03:48-05:00,Release 0.19,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+114,50b84e5d3c6be109bd256830146b1857b5375a9b,2025-11-19T16:04:47-05:00,Start 0.20-SNAPSHOT,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+115,446e0073e85a9d28c4bc8b9ec52544fe2b495119,2025-11-19T16:35:47-05:00,Add release notes for 0.19,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+116,6a2ad1a73858747e07a7ad2fc4e48e6717230ca3,2025-11-19T16:48:46-05:00,Enhance GitHub workflows by adding steps to prepare release notes and build all module artifacts. This update includes setting up JDK 21 and uploading the complete artifact set to the GitHub Release.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+117,969eec6d886587bec2de7810101f53907183ba98,2025-11-19T16:59:18-05:00,Merge branch 'master' of github.com:ta4j/ta4j,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+118,ce9bf2f4ff83bf5a1f48e3842dffa980a403a850,2025-11-19T17:38:25-05:00,Update GitHub workflows to ensure proper handling of release notes and commit changes. Added step to stage release notes in release.yml and ensured consistent formatting in github-release.yml.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+119,4cd450dd201c8d98fdd5b8eeb31747d46f3281c4,2025-11-21T20:41:36-05:00,Release Scheduler Workflow (#1379),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+120,bfd2c820e600ec303e64bd8e28c99a32db5cb924,2025-11-21T21:07:22-05:00,use heredoc instead of printf (#1381),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+121,98c8d7fb54781add944a078a3608f84912d025ac,2025-11-21T21:23:16-05:00,Add default shell configuration to semantic-release-ai workflow,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+122,5c8d4a520acb1cde5c5af36e834d6b0913a91eb6,2025-11-22T09:01:01-05:00,Feature/ai semantic release scheduler (#1382),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+123,e050e7e8f7ca85a15ce798354537e32707b99b18,2025-11-22T09:05:59-05:00,Update semantic-release workflow conditions to exclude dry runs from triggering publish jobs for both patch/minor and major releases. Upgraded GitHub script action to version 8 for improved functionality.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+124,a0fafb632c1ce442b1e9a1b65a5ca7b5e4439ef3,2025-11-22T09:10:48-05:00,Export OIDC token as an environment variable in semantic-release workflow for improved accessibility in subsequent steps.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+125,49d5f82b4c635e181c18cba32dbfa7847aa1ce8e,2025-11-22T09:21:58-05:00,Refactor semantic-release workflow to encode diff and changelog outputs in base64 format for improved data handling. Updated output variables accordingly.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+126,0ccef84c071bfbe343a118a2dbc0cfc1a47eaf20,2025-11-22T09:30:38-05:00,Improve error handling in semantic-release workflow by ensuring base64 decoding of diff and changelog outputs does not fail the process. Refactor AI request logic to capture HTTP response status and enhance logging for request retries and failures.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+127,a1f68be14bc0316876b87b0c8ef657a16eaa19d5,2025-11-22T12:57:05-05:00,Bugfix/semantic release versioning (#1383),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+128,e7ee86729b4dc1a841375068fd77970b952bd95b,2025-11-22T14:04:50-05:00,Bugfix/semantic release versioning (#1384),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+129,f9594bd63ebb817f20b32f5963852ceb291746df,2025-11-22T14:26:41-05:00,"Add TrueStrengthIndex, SchaffTrendCycle, and ConnorsRSI indicators (#1350)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+130,24a1c81874808528b2fbff68cce454e3486fdc9e,2025-11-22T17:51:50-05:00,Feature/release workflow visualization (#1385),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+131,736db117e82d80788c826a4656875b95ebb9f8c1,2025-11-22T18:01:35-05:00,Add configurable return representation policy (#1376),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+132,1dd774262db3a3e015dfeeb988156e784e8eb865,2025-11-24T20:52:47-05:00,Feature/improve readme (#1386),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+133,0be00e880da45001a2c4b28477cd0b23d90e3900,2025-11-29T12:48:36-05:00,Merge branch 'release/0.21.0',yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+134,c63cfbb9f49f0ce1a9dc3950c2be27f2c5f02cd4,2025-11-29T12:54:22-05:00,Update version to 0.22.0-SNAPSHOT in parent and child POM files,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+135,c926eb90e9b980c0fb52468815d6222542b77392,2025-11-30T16:03:05-05:00,Bugfix/release double incrementing (#1389),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+136,8192022572c00eb900ca43663826d74d8fa0076a,2025-12-01T15:02:20-05:00,Feature/improve readme pt2 (#1387),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+137,b814436b11561e6c855ea7fd24bf3d615c190a8b,2025-12-01T18:16:46-05:00,Add trend line support and resistance indicators (#1360),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+138,a6c37545af6c300f6451fbe9b8ca6ddad9f2abd0,2025-12-08T15:36:31-05:00,Enhance caching for rule names to improve performance (#1391),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+139,eaddc9806a896ca5f5cebc3cbad19da8f14b7765,2025-12-08T15:39:58-05:00,Updated SqueezeProIndicator to reflect TradingView/LazyBear's Algorithm (#1392),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+140,2958aecdb002ad72112cb37f67d61b6cdcf58355,2025-12-14T14:49:12-05:00,Bugfix/1394 super trend nan (#1395),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+141,627bf0777ab42847d57a350d1e32cd4ec9f2ea40,2025-12-15T12:42:37-05:00,Feature/cached indicator performance qol (#1393),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+142,8ca71608d15d4eeabf37088a9de55f2847649a1a,2025-12-24T14:18:32-05:00,Bump org.apache.logging.log4j:log4j-core (#1396),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+143,d6cb699f7510036285e1330d6945be8cd02b9c6b,2025-12-28T20:00:29-05:00,Add Elliott swing indicator utilities and tests (#1358),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+144,13bc97d009cffd185d4c5c8996f42d275fafb289,2025-12-28T20:11:49-05:00,Refactor SwingChartDisplayerTest to improve headless environment handling (#1397),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+145,b18d1b0d37474ea24f0f665bbede2aef8f608ee5,2025-12-30T09:24:42-05:00,Release 0.22.0 (#1398),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+146,d7ef99646581d479112c69701417e48495966e42,2026-01-06T11:53:02-05:00,Fix GitHub Release Workflow (#1399),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+147,7bd354b57a91b9e10a040f58c12d13d82a280a40,2026-01-06T14:53:11-05:00,Enhance GitHub Release Workflow with Dry-Run and Permission Validation (#1402),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+148,ef24aa1b629a8eb9226d7487ae6b65f9d6b25284,2026-01-06T15:24:02-05:00,Avoid duplicate GitHub Release asset uploads (#1403),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+149,d6ded9953c64aa72c8edc7ebb680e56626e9a4c9,2026-01-08T11:46:23-05:00,Remove nested blocks from AverageTrueRangeStopGainRule::isSatisfied (#1404),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+150,40ec357b49c51f9989512ebe2956eb2b20a9a017,2026-01-15T08:25:33-05:00,Cash flow with same index positions (#1405),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+151,e04eff012741474c414b658ead318585cf69225d,2026-01-15T11:10:52-05:00,"fixes #1410: sub-series creation to preserve the original series max bars, instead of resetting it to default Integer.MAX_VALUE (#1412)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+152,697e23a69c1df2c80a88ed86aeb452f44e873b75,2026-01-15T14:37:45-05:00,Release 0.22.1 (#1411),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+153,8edf3868deb9859978836984a098e82e3795682d,2026-01-15T19:19:01-05:00,Merge pull request #1418 from ta4j/restore/tag-reachability-0.22.x,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+154,bf315addb68e670164903d4e2ed2ea41440643b5,2026-01-16T12:04:20-05:00,"Release Scheduler Only Considers Binary Impacting Changes, Add Release Notifications via Discussions (#1416)",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+155,0af7c7176793823733b7bc4f01fbda0899debf73,2026-01-18T13:26:00-05:00,Derive the NumFactory from the first available bar price instead of assuming a specific price is always present. (#1408),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+156,a299fbc904a61b2c0866b143689daa173a8a0c77,2026-01-20T18:51:33-05:00,edge case missed on #1410 (#1413),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+157,ae7dc395526f396e0f9351109561bd3689b20a5d,2026-01-22T12:15:50-05:00,Split release workflow into prepare-release and publish-release (#1419),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+158,dc7594362a9070b657e93c2b6e7242ea4b2e36ac,2026-01-24T20:13:38-05:00,Add concurrent bar series implementation for live trading (#1347),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+159,1c822d83c49c734c133f8a4e2dfe7b4b51dfbd1d,2026-01-26T15:52:59-05:00,Add option to CashFlow for realized equity calculation (#1425),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+160,cad4b976f31f53ad7cfb6b7d166e8094a1885e13,2026-01-26T17:02:59-05:00,Bump org.assertj:assertj-core in the maven group across 1 directory (#1426),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+161,9a89421eea9da31e2ca48cd875b2a26d0c642f87,2026-01-27T14:59:12-05:00,Candle indicators (#1420),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+162,9e0f63a9630ca80e4616ed4aecd53849ba47c567,2026-01-27T15:03:09-05:00,Sharpe ratio (#1406),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+163,70098e7cd3a0a238b57fa91a0a076af1e89f5ff5,2026-01-28T19:08:37-05:00,Fix release health notification handling (#1430),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+164,66fceb95e7e253904b2def21e4efc3810a0da0bf,2026-01-31T11:47:24-05:00,Add TimeAxisMode for charting to handle non-trading gaps,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+165,b9c04cf379a5232f32333af7d3abc5cb02b0e4d7,2026-01-31T11:47:24-05:00,Refactor TradingChartFactory to utilize AxisFactory for domain axis creation and improve chart dataset handling in ChartWorkflow. Add tests for BAR_INDEX mode to ensure correct tooltip generation and dataset usage.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+166,a7cf4f4fe05ea6d9ac70de37df4cc2e667c8cc36,2026-01-31T11:47:24-05:00,Refactor TradingChartFactory to centralize overlay rendering logic with OverlayRendererFactory,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+167,7f48bc8a63f706dab29b0be0ef478236a959ce41,2026-01-31T11:47:24-05:00,"Refactor TradingChartFactory to centralize chart styling logic, improving consistency across chart types. Update CHANGELOG to reflect new centralized chart styling defaults.",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+168,88ec769c34eb4a5220b851051f4bb865485798ec,2026-01-31T11:47:24-05:00,Enhance ChartBuilder to introduce shared metadata for chart definitions,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+169,0068954512b4cfdb544ecee40be09e0032d05971,2026-01-31T11:47:24-05:00,Introduce ChartContext to encapsulate shared metadata for chart definitions and update ChartPlan and ChartWorkflow to use,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+170,c287812a09f09e202967afd578fed3e41d236829,2026-01-31T11:47:24-05:00,add test,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+171,bd8781bb91b6904ecb11ae8395b47c038ee4afd8,2026-01-31T11:47:50-05:00,Update charting refactor checklist,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+172,e782d51467c855bdca3d7bd2dac6d8f217c5b274,2026-01-31T12:01:09-05:00,Remove the PRD Charting Refactor Checklist document as it is no longer needed for the ongoing refactor process.,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+173,207c1a782ade7f0dad51706cdf738d721df94eff,2026-01-31T12:31:00-05:00,cleaned of non-related changes,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+174,b6b9310635cacd380db0b902325500ab04c3ff26,2026-01-31T12:33:43-05:00,Add spdx headers for license (#1424),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+175,7e05347098b7ea8c13ecf1b7b18d3a1f1e7abf90,2026-01-31T13:10:15-05:00,Fix @since versioning for time-axis charting (#1432),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+176,3ea04e81d9178b555673fa7baabda8ee6efdd15a,2026-02-01T14:14:42-05:00,Dependency updates (#1433),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+177,665d0099ec60e974e4aa8bee781784849ea62a20,2026-02-02T10:00:41-05:00,Enhance SECURITY.md with detailed security policy,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+178,5e5acc99a812806a66600c22e28d0d6e0afaf5db,2026-02-02T11:59:24-05:00,And/or rules with threshold (#1428),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+179,282cf02bfb9226ca5e43915d89e152aca3508318,2026-02-02T12:21:10-05:00,Position duration criterion (#1431),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+180,846f610f1e55c2ce99903e769875d57095c3009d,2026-02-02T14:38:53-05:00,Addition of DonchianChannelFacade (#1437),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+181,19a2758e28f9ff598918bd2bcbc6e318e15edb88,2026-02-02T15:11:22-05:00,Fix mktemp usage in full build script,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+182,c53d029264f0fe3f4f49b1a918911f87094b867f,2026-02-02T18:48:57-05:00,Potential fix for code scanning alert no. 11: Workflow does not contain permissions (#1436),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+183,8ec29eb0277a1c39b988ca77b7989728d5b14b30,2026-02-02T18:53:07-05:00,"Enable cancel-in-progress for actionlint, check, test, validate workflows (#1440)",no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+184,9c9904f8e80e0c71c7315d19193034cfa12f9d9b,2026-02-03T15:42:32-05:00,Reduce release scheduler request size (#1442),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+185,8d3191693ac333501be257ac92d9a0a892fedc98,2026-02-05T16:55:02-05:00,Sortino ratio criterion (#1439),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+186,b112d34b0c676cebf966b70c674501f4e8795c31,2026-02-06T15:09:51-05:00,"Live Trading Record, Equity Curve Control, and Open Position Handling (#1434)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+187,d0ef59e7c0072e972c9f24607d349e20e61dc6cb,2026-02-06T18:19:10-05:00,Update Indicator Unstable Counts (#1445),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+188,1fa097ef21e353806fd37305b694799becb89683,2026-02-07T08:31:35-05:00,Add custom ATR constructors to stop loss & stop gain rules (#1443),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+189,bebb758e53da964cd4312243fee5199691a312ce,2026-02-12T12:28:03-05:00,Improve Elliott Wave analysis with trend bias and extension ratio penalties (#1435),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+190,7db416160c2c522b63c65dea44e81a968b3d665a,2026-02-15T11:04:25-05:00,Harden release workflow auth checks and fix github-script runtime errors (#1450),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+191,df6fa0a666046eb2dc80dc53403f219aef0104cc,2026-02-15T11:28:45-05:00,Merge pull request #1451 from ta4j/release/0.22.2,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+192,e783d9408353a912d6bd9aeefe784964b88afc63,2026-02-15T11:42:48-05:00,Merge pull request #1452 from ta4j/feature/restore-maven-central-developers,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+193,251f44c6a18dcfb2cd1503965d4fde98ec40deec,2026-02-15T13:05:26-05:00,Merge pull request #1453 from ta4j/feature/retry-0222-release-commit,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+194,873a82259b8b8fc8ef70f254db7d66a5a685077a,2026-02-15T13:13:05-05:00,Merge pull request #1455 from ta4j/feature/fix-publish-dispatch-inputs,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+195,0e8293f65d17980510db72a648efa8899ddbf221,2026-02-16T15:33:39-05:00,Feature/release metadata gate bash (#1457),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+196,39194498d1236aafea3ed5ec78124579cad48f66,2026-02-21T13:14:29-05:00,"VWAP Enhancements, Wyckoff Cycle Support, and Support/Resistance Indicators (#1444)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+197,9a034b8630b861be7a09ff9fe00562abca7b3ff2,2026-02-21T15:39:17-05:00,"Enable support for mvnw use in build script, fixed README LF/CRLF inconsistencies (#1456)",yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+198,89cd2271d47074d738d405207404804de43274ad,2026-02-21T15:58:23-05:00,Enhance Stop Loss and Stop Gain Rules (#1446),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+199,2e9f9e58ad22adfcf8d040f3d50de8d137ebe7d0,2026-02-23T16:56:47-05:00,Reorganize AGENTS guidance and harden benchmarked regressions (#1461),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+200,b9dad6ad36078267ef2fda8dddd22d11c4ac52a0,2026-02-23T17:25:44-05:00,Address follow-up review nits and test coverage gaps (#1462),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+201,9a5909a6ccb9728305657ea65af4f9125f2d1676,2026-02-25T12:58:59-05:00,Feature/non interactive chart test jvm (#1463),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+202,161f765668d92ec9124bf4385fc6e3e48e086017,2026-02-25T16:15:17-05:00,Enhance MACD-V indicators with momentum-state QoL APIs (#1460),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+203,1a1bec933db078ed7249705b89eb3182d22a0c34,2026-02-26T17:14:29-05:00,Refactor ta4j-examples chart tests to remove reflection and focus-steal (#1468),no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+204,0efc79a99822d89c9552bf9d1bd9e60d28b95fa1,2026-02-26T17:22:12-05:00,Add Bill Williams Indicators (#1465),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+205,8159dcae9a8e94e2627768a6e54b8c700cf2601f,2026-02-26T18:43:29-05:00,Harden release preflight and indicator edge cases (#1469),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+206,6a4d208d627e9d997f5c9f3ce261e70ebcb00f49,2026-03-02T17:45:54-05:00,Release 0.22.3 (#1471),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+207,8ca4e0b0f5518809ee5d2126c7548659a7f216ef,2026-03-02T18:17:50-05:00,Merge pull request #1472 from ta4j/feature/release-commit-resolution,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+208,d385f055110a79ad4f122809418a1be09f6aa043,2026-03-03T15:07:16-05:00,Merge pull request #1470 from ta4j/feature/analysiscriterion-windowed-api-prd,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+209,d9a7a58e226eb1d247ea03484422c903a4d93f39,2026-03-03T18:53:00-05:00,Merge pull request #1466 from ta4j/feature/aggregator-range-volume-renko-origin,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+210,47b01a85ee82a94828274ad23bdec7ad01a32957,2026-03-04T10:44:11-05:00,Merge pull request #1473 from ta4j/feature/release-0223-tag-reachability,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+211,cd071995a8d62f41259940718775f6ef6037b807,2026-03-04T12:47:48-05:00,Merge pull request #1474 from ta4j/feature/release-workflow-tag-reachability-guards,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+212,279d9056fd045ed94bb38ca8aeffc5d84f6c80b7,2026-03-05T12:56:18-05:00,Enhance EW Analysis With Automatic Multi-Timeframe Wave Counting (#1448),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+213,6cce88098ebe376a74b51ebefa553fbd956e6fbc,2026-03-05T13:46:21-05:00,Add sample/population variance modes and preserve return metadata (#1475),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+214,d79d53c9e0fa23a072a2bec8c435a798cd5c1af4,2026-03-05T18:24:07-05:00,Add Elliott anchor calibration harness,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+215,62b1a7e594c4cf2f849a3ba37b82dc69e2b80e41,2026-03-05T18:45:24-05:00,Fix Elliott anchor calibration regressions,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+216,ea4e4ac65b5142b500e7911d5a5cb05356f883f4,2026-03-05T19:22:57-05:00,Address anchor calibration review findings,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+217,39d170263a085fbef7d677e7cdf361f0c90f5d46,2026-03-05T21:26:28-05:00,Guard ordered anchor test helpers,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+218,af78296787bac131789b67248b410465faab6ba0,2026-03-05T21:31:14-05:00,Tighten ordered helper loop bounds,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+219,3c6574903074ae4824bcddfbd6c94e0bb570ad37,2026-03-06T10:27:24-05:00,Add BTC macro-cycle validation dataset,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+220,8380be50a4b011a20b445b39d76e83db17a4d08e,2026-03-06T10:30:46-05:00,Fix holdout cycle peak partitioning,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+221,98494337e5fb332be45c1ac5c2e39918478d12e8,2026-03-06T11:50:08-05:00,Add BTC macro cycle Elliott demo,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+222,20eb20cdb03651b2c294916630e251f1598f6bd2,2026-03-06T11:56:50-05:00,Improve BTC macro cycle chart rendering,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+223,efa68241162174c3b41bdb0e03eeb66fef74d93f,2026-03-06T12:17:42-05:00,Improve chart workflow sizing and BTC cycle colors,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+224,19e4666af8e5b39705d04365268600ff6e0de9c0,2026-03-06T12:37:02-05:00,Add 2013 BTC macro top anchor,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+225,07feb0c19bf1443e50b3725ce1ed11f069758bf0,2026-03-06T12:55:30-05:00,Label matched BTC wave counts on chart,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+226,7f6f6fc761544e52de601b8055d3af1c056d343e,2026-03-06T13:46:07-05:00,Fix BTC macro wave fit charting,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+227,97864b42f5fe4d14489afabf418b6d2d43af1167,2026-03-06T14:23:40-05:00,Refit BTC macro cycle demo,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+228,6dc408eeb4843048fa9783e95317f1e703f0fe00,2026-03-06T14:44:40-05:00,Add hierarchical Elliott swing scoring,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+229,1cf19f305562b25523af244d8ca88975c18c992a,2026-03-06T14:58:59-05:00,Search decomposed Elliott swing paths,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+230,9e7c147f70a25841c412ee865d8e5870169b2a9c,2026-03-06T15:09:08-05:00,Favor broader Elliott structures,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+231,96067e757851ca7884da72e3dae6c2037d3359ff,2026-03-06T15:43:23-05:00,Stabilize macro Elliott swing search,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+232,2f6f3311ed840f1139e70353d3a5adf226a86646,2026-03-06T15:54:35-05:00,Prefer core Elliott fits in BTC demo,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+233,2e3d50db52bb63ed4a9d6ab6b09bb044f07a4d25,2026-03-06T16:09:11-05:00,Drive BTC profiles through core runner,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+234,4e8c950278ae6ff4cdec17806b461e1bf658fd96,2026-03-06T16:17:55-05:00,Show current BTC count on demo chart,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+235,f8f2942e3060147e817715ff32c8a64fce2bf4b7,2026-03-06T16:25:54-05:00,Hide current BTC macro guide,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+236,804f081b766ff6b03575dabb6a4af2e9ae7ba2bb,2026-03-06T16:30:41-05:00,Draw BTC waves straight on log chart,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+237,5eeb555edf3a3f084014c10b25d881742880ef7e,2026-03-06T16:37:11-05:00,Restore BTC macro guide curves,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+238,26655874ba5dbef013aa7988ab2c96ce6bf3cfa8,2026-03-06T16:53:59-05:00,Push BTC fit selection deeper into core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+239,f470d144b954dd84230d5ffaeefd7d2a114c335e,2026-03-06T17:45:34-05:00,Use prefix history for BTC core fits,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+240,043c9d5e9c8bb35c7f2b098291e0959fc78c28d5,2026-03-06T18:01:42-05:00,Widen BTC macro core scenario pool,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+241,c77b389de7824bac75a6528302bdeab392670ee0,2026-03-06T18:23:22-05:00,Deepen BTC core macro fit selection,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+242,d03ef14abd7f3b4b5224336a53f109e410026c75,2026-03-06T18:29:31-05:00,Re-anchor BTC macro wave segments,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+243,70e6533da42b7de5d7a4972db67cd58aa8e188be,2026-03-06T19:03:14-05:00,Improve core anchor span scoring,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+244,27a13fc5aeacf7030542e6c3724d9cf44a7e3971,2026-03-06T19:16:34-05:00,Retain broad-history macro swings,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+245,ffd9790cdb93fd99818d899bcd92de389c29e372,2026-03-06T19:37:33-05:00,Broaden core macro scenario retention,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+246,5b92b7e13c9173c2794d248f825cac89a4feae86,2026-03-07T11:30:32-05:00,Move BTC macro fit selection into core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+247,38aa3b776b14700186c4307cc532a5dbdd4fd823,2026-03-07T12:53:19-05:00,Route BTC live preset through macro cycle logic,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+248,3702a565e67f0d923f48ac40a8540e5cf4332d23,2026-03-07T13:11:59-05:00,Restore BTC preset legacy UX,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+249,d08a0935f0c922011356661eb5472ce05430ccf3,2026-03-07T13:18:35-05:00,Fix live wave pivot progression,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+250,4bd53f69c7185c7d4617990f4bb33c36a3a2c852,2026-03-07T13:28:55-05:00,Tighten live BTC impulse pivot selection,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+251,b3af0b89bc63cce433ac201b182ee571945268c3,2026-03-07T13:51:25-05:00,Add BTC EW macro unification PRD,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+252,635cfdae478d8e18b4f734a6ab6328c9157b32e5,2026-03-07T14:29:05-05:00,Merge branch 'master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+253,035c21197f532685a46406ba7d70509d6e70c43a,2026-03-07T15:47:36-05:00,Unify live BTC macro fitting in core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+254,67843439095409f0629f9790ea06adf5fe51b3aa,2026-03-07T16:07:58-05:00,Normalize live wave pivots and harden chart tests,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+255,34b2b12a4bb505390e713d32d4982e26da824b1f,2026-03-07T16:21:00-05:00,Address ElliottWave PR review findings,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+256,c480c49c281c99bf43d6f00c015bb1283bebddb8,2026-03-08T15:47:34-04:00,Move BTC macro profile defaults into core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+257,cd73dc2f7549dc43a2c868a3401c3f2cd9fabc98,2026-03-08T15:56:35-04:00,Tag slow Elliott analysis integration tests,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+258,96a017088c71b486e434ece41dfeeef8df4dfee0,2026-03-08T16:24:04-04:00,Move BTC macro profile defaults into core presets,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+259,c54238a05b5fbc590619fff179c50131ff7f090c,2026-03-08T16:29:05-04:00,Default Elliott runner to orthodox profile,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+260,192c86603a66c0243a362a07444db4d576db6fad,2026-03-08T16:43:42-04:00,Move anchored fit scoring into core result,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+261,81696ad11dde04a1f7ec3f9303ec203db227f4df,2026-03-08T16:57:37-04:00,Show phase and structural invalidations,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+262,760c864e8be9fed910eb7e16d44ef11260cb0f00,2026-03-08T17:04:43-04:00,Add final EW sanity-check gate to PRD,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+263,ab8270f4d306518777c28d4af07a667eed35ad04,2026-03-08T17:15:03-04:00,Lock BTC anchor registry validation set,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+264,310948315053e770077350ed198488af766a2aeb,2026-03-08T17:27:25-04:00,Move anchored window selection into core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+265,babe0c371d6cbdee931d79f53cf27759eb1ebb22,2026-03-08T17:45:38-04:00,Move live preset candidate dedup into core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+266,d55dc79c558425bb05c86a9dd578c440abb35f87,2026-03-08T17:52:12-04:00,Add window partial phase selection primitives,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+267,f2d105ee95fcd0e2cc0ed723bf02669f323c0945,2026-03-08T18:01:22-04:00,Add bearish corrective dominance validation,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+268,75f56a73ca6476a7f9a828c15709b570c95f3bb4,2026-03-08T18:16:39-04:00,Clarify BTC invalidation direction in outlook,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+269,e28d8357cd66aa9294e867cfe67af0260acca54c,2026-03-08T18:24:52-04:00,Preserve early macro cycle start candidates,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+270,f74cd788a1da494de00cba3966d6def389f926a9,2026-03-08T18:41:51-04:00,Lock BTC macro truth set to core fits,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+271,4ed7d8dfc77da5ab53be4a520cddb461d5b3564d,2026-03-08T18:48:40-04:00,Keep BTC profile surface internal,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+272,5dc26bd17fae11c30e2569030e6ab0a19d6a5c81,2026-03-08T19:09:57-04:00,Document unified BTC macro demo path,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+273,d64616da204a5e7f2fed4a103b7b5971024a6457,2026-03-08T21:34:14-04:00,Add anchor-free macro cycle detector,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+274,3ec52f99d5c2b00df9947d242d492e62917b7e7b,2026-03-08T21:41:20-04:00,Delegate BTC report entry to generic demo,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+275,04a1ee2d684dd0da01fa530b936bb651ce12d442,2026-03-08T21:51:29-04:00,Add corrective window ranking regression test,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+276,d1b56013fe1b64894d7e79a6573ba576c7ea2912,2026-03-08T22:29:41-04:00,Move macro study ownership into generic demo,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+277,6a628f218791c0cf1292d08a2cc4f5416515352a,2026-03-09T11:14:33-04:00,Project orthodox wave five target zone,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+278,c91807615df5a61046df428c9a433a4153ea65d5,2026-03-09T11:57:42-04:00,Move BTC live macro flow into generic demo,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+279,6c80e9b5150a793ad04a0b8b67b0a4e49d5a3d2f,2026-03-09T12:18:56-04:00,Finish BTC macro unification PRD,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+280,3aad15d13e46b8a588c3b124332a73713438ef86,2026-03-09T13:54:59-04:00,Add BTC single-engine calibration PRD,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+281,6d1d6576a7c03f227950141a732a64850b221dab,2026-03-09T14:34:20-04:00,Add BTC historical truth-target regressions,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+282,2977c16d4f7119e14c277d7a43d9f2f689feb075,2026-03-09T14:46:50-04:00,Lock BTC historical truth targets,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+283,956b058e7aafd31e80f98848007ad2d369695b14,2026-03-09T14:55:23-04:00,Add historical calibration report,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+284,9a99d4dee6330074c614185357b0af34a959188d,2026-03-09T15:22:09-04:00,Format BTC anchor registry,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+285,c7a063232b13dc3290b1c970179be559d6e914b6,2026-03-10T17:47:20-04:00,Add incremental analysis reporting guidance,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+286,d17283160ab0036bc8928343c5b580e5e4dd3941,2026-03-10T17:50:14-04:00,Tighten incremental analysis reporting guidance,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+287,7207c4fc121450c9fde089fa48790c822545dbd2,2026-03-10T18:07:42-04:00,Plan calibration performance work,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+288,00ccddc77b435df216327a6077f2a72188241462,2026-03-11T10:02:30-04:00,Sequence calibration follow-up work,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+289,6dbb7a9983438bf2f2ea29b1d1cb393df8b8ae67,2026-03-11T10:05:34-04:00,Remove completed macro unification PRD,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+290,7e74285b401f87badc1e0c3c2efb18926ef657bd,2026-03-11T10:06:57-04:00,Note portability dataset expansion,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+291,f56dcc15c45269ebcb0d75248b1f2251bd73b5f6,2026-03-11T10:33:15-04:00,Add calibration runtime instrumentation,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+292,5eebcb0976d674156bbcaa405a1578189419ffa6,2026-03-11T10:51:27-04:00,Add Elliott search diagnostics to calibration,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+293,6dd729a988ae8ff91d99da9bab7e0cb35e452947,2026-03-11T11:08:06-04:00,Persist BTC calibration artifacts and widen holdout search,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+294,de8bcc09c822c42fdf61a2f2fcc384ef1e79451e,2026-03-11T11:15:10-04:00,Parallelize walk-forward folds for calibration,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+295,98db4649797561ecf66243130a35033b2db7bf45,2026-03-11T11:28:25-04:00,Expand calibration portability datasets,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+296,60d250e43263bd917559565a51b89a266bc0ea79,2026-03-11T11:35:01-04:00,Split calibration artifacts by depth,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+297,0cdf86e80aea306f397dbd6712291e8833881f29,2026-03-11T11:36:13-04:00,Clarify calibration rule vector,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+298,2da36ca43e96b22fdffb29f6f63b9a96c81095a1,2026-03-11T12:05:25-04:00,Define controlled calibration profile search,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+299,e1cc531710f30ff08be525415d00790c4ab7b840,2026-03-11T12:13:59-04:00,Persist canonical BTC calibration profile,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+300,d4a397041850a7a077cdc6e25f020d4162a098b5,2026-03-11T12:21:59-04:00,Prune invalid decomposition cut paths,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+301,0d1ba3b0006b45185fa94ec89408b0e385f7e6ce,2026-03-11T12:32:02-04:00,Record Elliott pruning diagnostics,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+302,eecf6f3d68e6a1c2b8ddee41885f7c8956ba7dd8,2026-03-11T14:43:56-04:00,Default calibration to routine lane,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+303,d55b0c90be0e6b8e832fe2d47ca244deee9f1863,2026-03-11T14:52:47-04:00,Add targeted BTC calibration lane,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+304,7c986d8295bffec6fe5e647aeb03e8903c670e68,2026-03-11T15:00:20-04:00,Prune invalid impulse decomposition branches,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+305,5d96fad2eca4754f3907fe37dfa6f455a0c3bb42,2026-03-11T15:06:18-04:00,Prune invalid corrective decomposition branches,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+306,7121c0a801f805074db896d81552d081a9950f42,2026-03-11T15:07:33-04:00,Document BTC truth target semantics,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+307,0a02e742d4e79b43aadf02b1d933a8ddadfd49f7,2026-03-11T16:56:49-04:00,Add canonical macro structure surface,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+308,eaf3db91f2741d923172bf35e11ae2e2940de1cf,2026-03-11T17:10:56-04:00,Move terminal leg selection into core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+309,daca2fcdf400b6bd61f54599eba8ade661a954a8,2026-03-11T17:18:13-04:00,Lock partial leg fitting in core,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+310,fabf6c6685a8bce26c92c21f3ae91e4f78ad296f,2026-03-11T17:25:49-04:00,Add macro pivot graph scaffolding,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+311,0b070d194295d08c95500914aaa8265d8360ac44,2026-03-11T17:30:45-04:00,Prune dense macro pivot graphs,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+312,e7426101679636d4ee3848afe1624c3a64580a3a,2026-03-11T17:35:22-04:00,Add bounded canonical structure search,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+313,dc7e213ca9760a8ff0d9a868f88cb7e9aabe0e45,2026-03-11T17:38:26-04:00,Cap canonical structure search frontier,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+314,e2d0ba08243f1c8abf9a69f41037421f7382e8fd,2026-03-11T17:56:03-04:00,Route current-cycle ranking through canonical search,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+315,5a31ee4315bf3e3c166c7d9b92837f8df64b4bfe,2026-03-11T18:11:55-04:00,Use canonical prefixes for current-cycle ranking,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+316,3c98713718d2e69a3edafae05b4945f4220802a7,2026-03-11T18:17:31-04:00,Preserve live current-cycle report semantics,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+317,da8b0fb3e794c236676fee3f13fdb007a5dad293,2026-03-11T18:42:08-04:00,Stop locking live current-cycle outputs,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+318,c5e7b0b5c099bf21f5083dc27a2fcde1d240dd41,2026-03-11T18:48:13-04:00,Keep BTC regressions on completed cycles,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+319,4c21496fd215d0d1b73d6f43d7db9c9b8f00d766,2026-03-11T20:05:12-04:00,Render historical cycles from study results,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+320,923b80bb9904fd12fb65c58096051decdb349e51,2026-03-11T20:11:04-04:00,Route historical charts through canonical study,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+321,a740e55d837268f0fa3c8ab03af588ff2acd68f8,2026-03-11T20:17:21-04:00,Route live charts through canonical structure,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+322,2fac78cf774cdc4664e7cb9b54dcd6678a29ee71,2026-03-11T20:38:34-04:00,Tighten macro demo provenance and wrapper,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+323,bd85856b603a6a4bf7d9fe36489fa03c7ae7c6e7,2026-03-12T12:02:58-04:00,Fit only completed macro legs in study,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+324,bb23bc84b0236dc4b4a9d76125f1a4c709069ddd,2026-03-12T12:33:59-04:00,Expose canonical historical structure bridge,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+325,845f79d32511916eddb49bd95d2537dcb5e63099,2026-03-12T13:04:55-04:00,Preserve legacy anchored macro comparison,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+326,c97f73c74b6e5e01d1114274c157bb192ae2079a,2026-03-12T13:55:58-04:00,Add historical study diff artifact,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+327,6277f01fa83f44bbe5924a19a3a641a94c537156,2026-03-12T15:04:35-04:00,Improve canonical historical pivot coverage,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+328,7cd83b89b21da7869a6558ffca07927d32b8111f,2026-03-12T15:54:12-04:00,Promote only top-level canonical macro cycles,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+329,97c8bbceece3981d2e7e9ba67fe4365b787c7975,2026-03-12T16:26:57-04:00,Recover canonical historical cycle candidates,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+330,cd4ffc0b784c124478f883c20cd1cdedad764c24,2026-03-12T16:47:27-04:00,Recover canonical first-cycle lows,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+331,83096bc07f55cff2087e5228086769ac210b6425,2026-03-12T17:30:35-04:00,Promote canonical historical macro cycles,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+332,28a73efbd7d434a578355a09d171be3a1d5b56b9,2026-03-12T19:25:36-04:00,Promote canonical runtime by cycle coverage,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+333,a67ba37781bdba7858b842c8501f5c0c3a626b04,2026-03-12T19:35:23-04:00,Scope legacy study comparison to harness,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+334,831edfd89fb18d755abf5bdb0abd7d82b5a3339a,2026-03-12T19:53:08-04:00,Remove detector-backed runtime historical path,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+335,f15cacae1f0e705d6f6a909b93da5ae7c087a4ef,2026-03-12T20:04:10-04:00,Align live report with canonical history,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+336,91deaaf21975152a0551d05da860b841536dba78,2026-03-12T20:46:42-04:00,Add replay coherence regression,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+337,c9ee045eaae4d56f31b5e887611090921164c551,2026-03-12T22:14:18-04:00,Scope detector regressions to completed cycles,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+338,33b560d298d348a972ed0f2f8ef24c07b213b30a,2026-03-13T10:56:33-04:00,Recover canonical replay macro cycle,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+339,aa6bff12c6ef91682aeeb949f75ed0c8c575d97a,2026-03-13T12:21:34-04:00,Recover replay cycle starts and tag detector integration,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+340,1d17b4231782493cbe53bbc0ee6ced32ad4ee845,2026-03-13T14:15:11-04:00,Surface accepted canonical replay cycles,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+341,54b6a43f41d9d5eed75f1267aa67ef03e718e920,2026-03-13T15:13:54-04:00,Retain milestone historical leg candidates,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+342,49079983680d75055d4bc10bc57f731f8f2ee2ab,2026-03-13T15:58:03-04:00,Confirm replay macro bottoms by reclaimed peaks,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+343,8ee535036d0651734a49ff92d67a697dd820b860,2026-03-13T16:41:29-04:00,Correct replay cutoff status,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+344,ebcf627e7121ace7a582e379f34b5f2e1094ca1d,2026-03-13T17:17:36-04:00,Recover 2022 replay macro boundary,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+345,a58973cca66101d6933e5bb02259a3b70d442c08,2026-03-13T17:41:21-04:00,Add replay cutoff diff artifact,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+346,422dce735a0a6e001f74cda5c00e9e0e5cd17dc6,2026-03-13T17:47:22-04:00,Fix replay cutoff diff anchor filtering,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+347,f7b4f9ed1967f564ef6807dace1d0901065a21a1,2026-03-13T18:13:16-04:00,Add replay cutoff profile sweep artifact,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+348,f7f8bf619fa051c544556f88e9df6e710b2fe90c,2026-03-13T18:33:03-04:00,Align replay profile sweep with canonical history,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+349,2165ce5fdbc74fe0299b207e25a9489dad964f1c,2026-03-13T18:50:41-04:00,Prefer candidate-based historical promotion,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+350,c7aabf68e0d2faa4b32afdf72ea6db899b2a7823,2026-03-13T19:18:34-04:00,Prefer macro backbone over generic path score,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+351,fef45196da568d7dee60623faed23eff2c429621,2026-03-13T20:19:03-04:00,Prefer broader replay macro backbones,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+352,6de1e3794db7a8fa86edaf9434fb559de4200aa1,2026-03-13T22:47:19-04:00,Stabilize canonical replay macro bottoms,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+353,646496e6b4671cdadff81417733c5b56b1099b85,2026-03-13T22:47:36-04:00,Prefer broader canonical replay profiles,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+354,a158cca46e6ecedf467c40d4b9c47fb5b4ad5457,2026-03-14T12:14:43-04:00,Prune impulse retracement branches earlier,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+355,b5b9ea0f391b893f4bcc3948ee9bc235ac7c5370,2026-03-14T12:16:58-04:00,Prune weak impulse extensions earlier,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+356,f3bfcbccfbdbba456864dba22a4be97dcf640478,2026-03-14T12:19:48-04:00,Trim BTC demo charting pass-throughs,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+357,30aba113c4e123372f69a521e22fa733b6ad670e,2026-03-14T12:49:33-04:00,Clarify canonical macro demo docs,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+358,c20abd60a57b6094df5bcd7835b6ab73b0c46414,2026-03-14T13:31:25-04:00,Move macro demo report ownership,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+359,f9ce3b6a492e6fd4f20d1c0c54c3e56292e70a13,2026-03-14T13:58:15-04:00,Move shared macro study types,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+360,a2d88a43b7d6a29fe072dca7d76d238017705578,2026-03-14T14:17:59-04:00,Share canonical structure between report views,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+361,3970525ed3cd7fa672e71c8a38451cb38dd22561,2026-03-14T17:29:33-04:00,Merge branch 'master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+362,d7f322be6f9da74eec9df9e32c49882405eeb75b,2026-03-14T18:40:29-04:00,Refine replay validation guidance,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+363,1b96015c2f1f675b54e3375796c9d56d41104d02,2026-03-15T15:11:12-04:00,Merge branch 'master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+364,c6360557e72de81a9b3f028949f3e3b7a8c14085,2026-03-26T18:02:04-04:00,Merge branch 'master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+365,7da1e889f730ab6fe2ae101083d34639a9a7f57b,2026-03-29T12:42:07-04:00,Merge branch 'master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+366,ba0500168ea3cc3c2dff875fc792f4038618a19d,2026-04-02T12:55:11-04:00,Merge branch 'master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+367,e3b1916c2c07561b5ce80e7c4ecf984eda077983,2026-04-21T12:26:33-04:00,Recover canonical macro truth-target scoring,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+368,808db05e3baa6d138121fdd31eae30e38f097197,2026-04-21T13:30:38-04:00,Polish canonical macro demo boundary,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+369,700e9800e04154207d9d3e7c54a1a64c25485594,2026-04-21T13:51:45-04:00,Polish final macro cycle release audit,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+370,97ecfea16bce5a22fdc7a323ac5958b75afa2f3e,2026-04-21T14:42:39-04:00,Address PR review root causes,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+371,274ea6e69034f96101e0264c50bd0877cc4f6ab4,2026-04-21T14:58:02-04:00,Merge remote-tracking branch 'origin/master' into feature/deliver-prd-cf-17-ew-anchor-calibration-20260305-172251,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+372,2f489fd32b74efa2b119d5dfb1b2c9950fe87fad,2026-04-21T15:10:14-04:00,Address merged PR review follow-ups,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+373,45f3a931aee5772685a1697e5d2582295b635e77,2026-04-21T15:27:37-04:00,Address remaining CodeRabbit cleanup,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+374,e825db6bdfd7a2bf51cfd38da8a6839fff439280,2026-04-21T16:12:22-04:00,Trim PRD docs and retarget changelog entries,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+375,0d1b7167b9f1383a94301797d42a50a23febdd4d,2026-04-21T17:10:29-04:00,Move Elliott demo docs into ta4j-examples,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+376,f4c1d68067ac1714daf7dc70df5c3eed616438a7,2026-04-21T17:30:04-04:00,Fix ChartWorkflow @since metadata,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+377,be775887ef9dc30edb388f6376624c6a1ec99858,2026-04-25T21:09:36-04:00,Address remaining PR review fixes,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+378,d3c1012571dfd5dbfc5f4fff3802f223b2901789,2026-04-29T22:28:21-04:00,Fix canonical macro-cycle replay selection,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+379,2712efec5270eb990a3f2dc364e06464c9b8d94f,2026-05-01T11:14:42-04:00,Merge pull request #1508 from ta4j/bugfix/ci-elliott-macro-cycle-all-tags,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+380,69548ce1d166f0859ecadf95148fa4a95b8788ef,2026-05-05T13:31:07-04:00,Merge pull request #1513 from ta4j/feature/java-25-lts,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+381,ef8c4bea53e3e04eeb1e24d6a15413b9c0840710,2026-05-05T14:58:18-04:00,Merge pull request #1515 from ta4j/feature/release-automation-hardening,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+382,faf5f48a241f82b218958ebaf94d14356c06b2d6,2026-05-05T19:42:13-04:00,Merge pull request #1512 from ta4j/feature/split-tagged-test-workflows,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+383,4786cc30c7475630a9974d0bfe009138aae33206,2026-05-05T20:06:27-04:00,Merge pull request #1514 from ta4j/feature/analysis-demo-tagged-ew-report,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+384,96b3ede651581f2cd41e62a639358d020c342668,2026-05-05T20:13:52-04:00,Merge pull request #1509 from ta4j/feature/deliver-prd-cf-119-20260430-214214,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+385,d082ffb2417bb770dfe74565c8b901260fa5538a,2026-05-06T08:42:33-04:00,Merge pull request #1516 from ta4j/feature/deliver-prd-cf-118-20260506-074423,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+386,3a474854cedab2d9e478aef096071c2b9819d93a,2026-05-07T10:30:17-04:00,Merge pull request #1519 from ta4j/feature/doc-drift-update-20260507,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+387,fa350f5bb91adacc486cd0be829b093bcc58b7cc,2026-05-12T21:55:30-04:00,Update Doc Drift Part 2 & Automate Documentation Integrity Check During Release (#1521),yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+388,cf503c2c69344b7d3f6febf3d200be6d6f3d3376,2026-05-13T08:40:19-04:00,added JDK 25 as a breaking change,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+389,b2f51cddb536a8f6059cca774c9814fb28bc7557,2026-05-13T12:20:53-04:00,Merge pull request #1522 from ta4j/docs/live-candle-evaluation-guidance,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+390,e9e2cae4e82a673058187df08befb18c17dcf2f1,2026-05-13T13:59:16-04:00,Merge pull request #1506 from ta4j/feature/deliver-prd-cf-16-20260421-150727,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+391,c66f2eed5e446eb8cb01e9066938433e88f52e44,2026-05-15T08:44:06-04:00,Merge pull request #1523 from ta4j/feature/deliver-prd-cf-160-20260513-133759,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+392,b3f1bd47824dfbc5546bb9031e37412e9aea0a89,2026-05-15T20:59:20-04:00,Merge pull request #1526 from ta4j/feature/add-pr-instruction-overrides,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+393,c169123e7d0b52880c26f5956394265ad7d870dc,2026-05-16T11:14:50-04:00,Merge pull request #1529 from ta4j/bugfix/release-scheduler-production-mode,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+394,991b7bf170e1a7c7efd4c4a9d7c420d513a3053e,2026-05-17T19:08:55-04:00,Merge pull request #1530 from ta4j/feature/omni-exit-rule-primitives,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+395,366bee05c375adcff0bffafcaf30bfaa4cd46c10,2026-05-17T19:33:29-04:00,Merge pull request #1531 from ta4j/feature/cf-170-throughput-controls,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+396,ed99fe95d711ba67922e29adbef971cf44c38f71,2026-05-17T19:53:41-04:00,Merge pull request #1505 from ta4j/feature/enhanced-rule-trace-mode,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+397,7a74f3f105971c5989d793e5debd8b13d200d562,2026-05-18T11:25:56-04:00,Merge pull request #1525 from ta4j/feature/advanced-correlation-indicators,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+398,713a911ea02a4af72cdf0592a604408f4f62ed6d,2026-05-18T13:03:55-04:00,Merge pull request #1532 from ta4j/feature/cf-157-quality-scan-loop,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+399,9ac7eba2417043c3dcd143825780ff4e7eb04a5f,2026-05-18T13:04:32-04:00,Require approval for new remote branches,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+400,c7eff18733533426accae6900ff15683e66fc6ae,2026-05-18T13:18:35-04:00,Merge pull request #1533 from ta4j/feature/clear-deprecated-removal-warnings,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+401,0f637ec08abc602916dd75a8cedc0a0491cd653a,2026-05-18T13:28:38-04:00,Merge pull request #1534 from ta4j/feature/ta4j-full-build-test-time-optimization,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+402,f3c06bbe3d8ababd71fe440bf67f414314487732,2026-05-20T14:15:00-04:00,Merge pull request #1528 from saulojg/bugfix/ew-scenarios-fibtolerance,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+403,f3cd5246036d11247f25e81bfc5df21f98b2b4d9,2026-05-21T15:24:20-04:00,Merge pull request #1535 from ta4j/feature/reusable-performance-runner-kalman,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+404,eb8fd5dd8edec23e5c109e92437261e88efb864e,2026-05-22T18:10:47-04:00,Merge pull request #1537 from ta4j/feature/netmomentum-battery-thesis-overhaul,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+405,0f9716b68265963f6654d4193ca5edcb7ccb94c6,2026-05-25T08:05:13-04:00,Merge pull request #1536 from ta4j/feature/deliver-prd-cf-86-20260423-151830,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+406,3eb0ad58dc40c23f5c441d2bdf7843d39bb6664a,2026-06-01T12:04:48-04:00,Merge pull request #1540 from ta4j/feature/active-return-criterion,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+407,9b7b1f52f658edd7cb9936c04d8bc830e3228583,2026-06-03T16:40:24-04:00,Merge pull request #1541 from ta4j/feature/issue-1538-dpo-serialization,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+408,767aab1d45dc776ad6705c855f0a6696d785cde8,2026-06-05T16:21:39-04:00,Merge pull request #1543 from ta4j/bugfix/release-scheduler-ai-diagnostics,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+409,533e2ac0bd51e52cc311b4651c74a424988aa078,2026-06-06T14:24:55-04:00,Merge pull request #1545 from ta4j/feature/bump-dependencies-and-silence-build-warnings,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+410,47e2ac20ac0e3584e4621a28b2eea0ce9233d70b,2026-06-24T11:26:26-04:00,Merge pull request #1547 from ta4j/feature/bot-daily-summary-alert,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+411,9a1d0d30896d648a9f0703ac3f1ed160e7f43b15,2026-06-27T13:36:12-04:00,Merge pull request #1549 from ta4j/release/0.22.7,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+412,fd1c8048224e5258e22202c2a6cc2872aa3e975c,2026-06-27T17:04:37-04:00,Merge pull request #1548 from ta4j/feature/quiet-maven-verify,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+413,96722e553c79a972568712b61ac95f22b45f7e78,2026-06-27T18:56:34-04:00,Merge pull request #1551 from ta4j/feature/cf-250-release-scheduler-curl18,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+414,8a0929e32dde6176a9c8bff86cd7e6cfdf33a56a,2026-06-28T11:53:39-04:00,Merge pull request #1550 from ta4j/feature/cf-251-prepare-release-self-review,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+415,ef6d69e280ab448f5bd86efba30aa50ed8042fe1,2026-06-28T16:45:15-04:00,Merge pull request #1552 from ta4j/feature/release-scheduler-biweekly-guard,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+416,56b3d2c252d0cf4a6ca4ebbc0d0ca16b1a53bd56,2026-06-29T13:40:18-04:00,Merge pull request #1553 from ta4j/release/0.22.8,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+417,9efb26ee4a95a6d883842a1ee589dd5ef4a98f2a,2026-06-29T16:42:17-04:00,Merge pull request #1554 from ta4j/feature/quiet-mvn-verify-output,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+418,3a55a5f05ca228f7bddd8cf76696dde391c71b53,2026-07-01T16:07:41-04:00,Merge pull request #1544 from ta4j/feature/ew-snapshot-workflow,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+419,30f9f9594d892fa2f6af913021b80c283106eaeb,2026-07-01T19:35:00-04:00,Merge pull request #1510 from ta4j/feature/deliver-prd-cf-90-20260420-214831,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+420,0534f3276e6949985299cea8fd35fa933b749167,2026-07-04T14:28:13-04:00,Merge pull request #1555 from ta4j/feature/deliver-prd-cf-157-20260524-141305,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+421,18ec8d9f5d2670751fb062c5dc0c3bd77d47ee65,2026-07-07T16:45:27-04:00,Merge pull request #1556 from ta4j/feature/deliver-prd-cf-289-20260704-144436,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+422,f96b50e77a3cd1093a2562d94c4d17ad7cc8ad3a,2026-07-10T20:01:18-04:00,Merge pull request #1559 from ta4j/feature/deliver-prd-cf-299-20260710-165047,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+423,402658b11f756dbae77fdf9062dde1b829d74723,2026-07-12T12:38:16-04:00,Merge pull request #1562 from ta4j/feature/deliver-prd-cf-303-build-under-3m-20260712-0515,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+424,51a6ebbeec60f14cd389442fa103c17f30183bf9,2026-07-12T17:16:33-04:00,Merge pull request #1563 from ta4j/feature/bar-series-resume-index-offset,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+425,5bf0988b8b153b9f2c6b1704f1dece8440fad6cc,2026-07-12T17:24:01-04:00,Merge pull request #1560 from ta4j/feature/deliver-prd-swing-detection-20260711-000000,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+426,e869f8b50bdb0359d60df3839fbfc400d75284f4,2026-07-13T09:22:24-04:00,Merge pull request #1565 from ta4j/release/0.23.0,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+427,e53daca6b0d4159d3859cef2630f8e09719f7dda,2026-07-13T14:06:09-04:00,Merge pull request #1564 from ta4j/feature/hosted-local-ci-parity-20260712,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+428,5c47bb4451e24337cb46ba7b1f679174abce4320,2026-07-14T14:36:46-04:00,Merge pull request #1566 from ta4j/feature/snapshot-consumability-gate-20260714,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+429,612e2cb1c786f09caac27a7777dc2dfb7464b2cc,2026-07-14T17:18:02-04:00,Merge pull request #1561 from ta4j/feature/state-estimation-v2-foundation,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+430,89b12e5023ff54e0adfc45d9fc6ad4666d307d52,2026-07-14T18:26:01-04:00,Merge pull request #1511 from ta4j/feature/lppl-indicator,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+431,b04705e7fddb1b1b19a0d00e343427d1fef741c6,2026-07-15T09:05:34-04:00,Merge pull request #1567 from ta4j/feature/elliott-intraday-live-wave-counts,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+432,5d33b84c6b02078da618bf97891d7847548ff319,2026-07-15T10:14:22-04:00,Merge pull request #1568 from ta4j/feature/state-estimation-v2-projections,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+433,d3b02afbdd8c2066776a7dc5803a3582791cb94d,2026-07-15T14:00:20-04:00,Merge pull request #1569 from ta4j/feature/state-estimation-v2-rough-volatility,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+434,7c9f1ab18994cf25f8c2867f06dc8080084b5e8e,2026-07-17T21:49:28-04:00,Merge pull request #1570 from ta4j/feature/state-estimation-v2-change-point,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+435,89620921377877b155a1dac2a1e16a7965375185,2026-07-18T18:26:03-04:00,Merge pull request #1507 from ta4j/feature/deliver-prd-cf-113-20260421-211230,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+436,fec626175c286e5ef1726b51ee10ee4d0b820cff,2026-07-18T19:20:36-04:00,Merge pull request #1572 from ta4j/feature/deliver-prd-ta4j-build-runtime-20260718154146,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+437,cc6c4ec959f91daf953bb7e2cb1a16083e845148,2026-07-18T20:11:16-04:00,Merge pull request #1571 from ta4j/feature/adopt-pr-1458-1546-ratio-costs,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+438,233ce7ed4b3565f6e7b9bd6abc8d89bc2dfea1ed,2026-07-18T21:19:03-04:00,Merge pull request #1573 from ta4j/bugfix/quiet-build-empty-args,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+439,c88b1e456288aee61de7f3b5852807e7bbc2e3b5,2026-07-19T14:51:20-04:00,Merge pull request #1574 from ta4j/feature/cf-232-serialization-audit,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+440,b3d6da4d6e84e29ddf7b635d537c1dd84beed305,2026-07-19T14:54:12-04:00,Merge pull request #1575 from ta4j/feature/cf-232-oscillator-serialization,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+441,5400821af433835f5f004a3d7f89355cc9000d6e,2026-07-19T14:54:18-04:00,Merge pull request #1576 from ta4j/feature/cf-232-trend-volume-serialization,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+442,cbfeb540a1cf07bf14fb7ea9f3345d5af769865e,2026-07-19T15:12:15-04:00,Merge pull request #1577 from ta4j/feature/cf-232-candles-serialization,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+443,fda20b2e53d140403e0e7e273a63b01387cad3c3,2026-07-20T08:19:44-04:00,Merge pull request #1579 from ta4j/feature/deliver-prd-quiet-build-skip-jacoco-20260719-160155,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+444,42e1a941ebdf4f8b122b12ab65bfd012c6bee7f3,2026-07-22T18:20:48-04:00,Merge pull request #1580 from ta4j/feature/deliver-prd-cf-341-watchdog-20260722-161920,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+445,0b72600e9aef41f2dd025fb93412b802b9c1f4eb,2026-07-26T17:16:44-04:00,Merge pull request #1582 from ta4j/feature/swing-high-low-default,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+446,0e87cafd5bf38d24a8b23b4b26d81688728c7af4,2026-07-29T16:55:46-04:00,Merge pull request #1585 from ta4j/feature/hurst-chop-indicators,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+447,f7e1eab22d5040f257c4cae9b60ad36a797591b9,2026-07-30T09:16:00-04:00,Merge pull request #1586 from ta4j/feature/deliver-prd-cf-16-20260729-213040,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+448,98ab185ad20a64e25e395f2fd7fdf95df9b0139e,2026-07-30T21:23:36-04:00,Merge pull request #1589 from ta4j/feature/testing-runtime-guidance-20260730162118,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+449,8715285da3422a1a215426bebdd50bb46f8b4389,2026-08-02T13:45:53-04:00,Merge pull request #1587 from ta4j/feature/deliver-prd-kalman-forecast-20260730-111929,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+450,63d17a6ef98da5f320ee971672a9137dde60fd62,2026-08-03T10:05:55-04:00,Merge pull request #1592 from ta4j/feature/deliver-prd-reduce-ta4j-maven-test-runtime-20260802,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+451,b296c72b84bb209be639384713f24cba4c6ec032,2026-08-08T11:32:44-04:00,Merge pull request #1595 from ta4j/feature/openai-semantic-release,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+452,5cddd8910b9b81e0a6b61a3655eaf23a259cc6f3,2026-08-08T13:04:03-04:00,Merge pull request #1596 from ta4j/feature/release-0.24.0-deprecation-remediation,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+453,f7360f247a5b6f4edfd1924734510ee0f3084d3f,2026-08-08T15:25:08-04:00,Merge pull request #1597 from ta4j/feature/snapshot-consumption-cache-busting,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+454,555daf3fe5b9fb0de746ffd4fbdf3bd6b44d9f68,2026-08-08T16:31:11-04:00,Merge pull request #1598 from ta4j/release/0.24.0,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+455,6d8f05a2e63512bf1b84568594165b4100293bfc,2026-08-08T19:43:10-04:00,Merge pull request #1599 from ta4j/agent/streamline-readme,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+456,fa623f8c2e0a8f79dce19df20372610f5bcd4287,2026-08-09T13:55:33-04:00,Merge pull request #1588 from ta4j/feature/deliver-prd-moving-series-cache-sync-20260730-141243,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+457,46c9a35d67f103d0cb764dad268282938cb7b0a1,2026-08-09T16:21:03-04:00,Merge pull request #1601 from ta4j/feature/deliver-prd-cf-411-formatting-tooling-implementation-20260809-153410,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+458,65e921b6984c3b244610df955d4b642cbd8871a5,2026-08-10T08:44:12-04:00,Merge pull request #1604 from ta4j/release/0.24.1,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+459,9bd898c883184bdce50d7765d8849a0a46edb07c,2026-08-10T14:38:44-04:00,Merge pull request #1605 from ta4j/feature/release-scheduler-last-release-input,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+460,634ec707d3adbaa6af5eecd4d6627753c3d26b5d,2026-08-13T16:10:10-04:00,Merge pull request #1607 from ta4j/dependabot/maven/maven-c4bd600149,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+461,73f36de7331e1ba264e56fd7aaf433c710034f0a,2026-08-14T08:57:04-04:00,Merge pull request #1608 from ta4j/feature/deliver-prd-cf-360-audit-20260813-141034,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+462,f3a3e5ef36a50c64171c7c11b66c3cf98f119382,2026-08-24T20:22:49-04:00,Merge pull request #1616 from ta4j/feature/monte-carlo-methods,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+463,eafb6853b73fe328abad010b4b53ab024965cd50,2026-08-25T09:53:28-04:00,Merge pull request #1602 from ta4j/feature/deliver-prd-cf-453-event-synchronization-20260809-160824,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+464,19ba3270db5849d6bcfbe5cf793a3fb8304a72f3,2026-08-25T10:02:44-04:00,Merge pull request #1603 from ta4j/feature/deliver-prd-cf-454-advanced-leadlag-dtw-event-mi-20260809-191508,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+465,5816c1a2eea5ebf8860c51634e071354af68e898,2026-08-25T10:03:51-04:00,Merge pull request #1609 from ta4j/feature/deliver-prd-cf-455-unified-parameter-search-20260813-211156,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+466,55749921be77f755050cb5bebdaac1c764f4dd1e,2026-08-25T14:20:40-04:00,Merge pull request #1619 from ta4j/fix/test-suite-runtime,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+467,e4340715c7b4a098993cecc5e21fa53ef56ebfc4,2026-08-25T15:01:15-04:00,Merge pull request #1620 from ta4j/refactor/cross-platform-scripts,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+468,68b04212cd1d3e601e7330e03287b403d65b05f5,2026-08-29T15:10:14-04:00,Merge pull request #1621 from ta4j/feature/candle-foundation-slice-1-geometry,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+469,bc7157ed2100ff5567022c81eae5bc37c4d1640d,2026-08-29T15:16:45-04:00,Merge pull request #1622 from ta4j/feature/candle-foundation-slice-2-thresholds,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+470,d0d97db742c718941f3635447925a116ce39c6c4,2026-09-02T17:18:11-04:00,Merge pull request #1628 from ta4j/feature/spc-process-control-indicators,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+471,d3ba1307239ade973a75438650abe0872fb66454,2026-09-02T17:51:01-04:00,Merge pull request #1629 from ta4j/feature/deliver-prd-cf-558-correntropy-kalman-20260831-1926,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+472,2ac01b542af530bcbafb6466307f0051fe76ce1c,2026-09-03T09:48:45-04:00,Merge pull request #1623 from ta4j/feature/candle-foundation-slice-3-single-candle,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+473,e2fecd446fb5d761205a93d19d076acf458c7182,2026-09-03T09:49:04-04:00,Merge pull request #1624 from ta4j/feature/candle-foundation-slice-4-two-candle,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+474,558a2efb44ebc2706db073b70d0af4f17107a21a,2026-09-03T11:00:55-04:00,Merge pull request #1625 from ta4j/feature/candle-foundation-slice-5-multi-candle,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+475,6e33cc894b138f0bf7f20cbefb7e82e75b72b9c9,2026-09-03T11:10:26-04:00,Merge pull request #1630 from ta4j/bugfix/remediate-overlooked-pr-threads,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+476,b32af7d8aa50f98c64803559c9265cf36280cd9b,2026-09-03T11:11:43-04:00,Merge pull request #1626 from ta4j/feature/candle-foundation-slice-6-docs,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+477,1aa6a3d9d8e3778db3084e2c38b88bb37ac1e631,2026-09-06T09:48:18-04:00,Merge pull request #1631 from ta4j/feature/quiet-test-failure-logs,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+478,da4215f57ac2c3f6da47d84b40594d0b7e53a2d3,2026-09-07T09:20:10-04:00,Merge pull request #1632 from ta4j/release/0.25.0,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+479,97f4326e5cc3443da5383d6bf038dd32e2b1599c,2026-09-07T10:00:35-04:00,fix: gate Javadoc warnings before deploy and fix 0.25.0-flagged links,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+480,c91a1dad8995eefc8496d95a7c44accba59ef2b6,2026-09-07T10:23:15-04:00,style: drop trailing space in post-deploy javadoc audit echo,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+481,240deb4c236dc296bc301bb3c4801f3d86a58366,2026-09-07T19:01:00-04:00,Merge pull request #1633 from ta4j/bugfix/native-windows-build-gate,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+482,c97695e5fc0ef8c5bf031fd8090618d60c4a86a4,2026-09-09T19:29:09-04:00,Merge pull request #1634 from ta4j/cf-552-instruction-efficiency,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+483,8e678bf2385524fc29f4334c00cc99db825e76f0,2026-09-10T21:12:11-04:00,Merge pull request #1635 from ta4j/bugfix/cf-578-bounded-backtest-execution-20260910,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+484,aa559ca06fe0cc9803819c0f047c9bc8a8b45f23,2026-09-14T12:38:30-04:00,Merge pull request #1615 from ta4j/feature/deliver-prd-cf-525-elliott-wave-hypothesis-stack-20260824-104834,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+485,f8d32f1caf5e104faae3c38dfcdd9b3371eceea2,2026-09-18T21:01:22-04:00,Merge pull request #1637 from ta4j/bugfix/quiet-gate-noise-parity,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+486,19a9e454517e2b2704d1d8af7ef419d51aae6afe,2026-09-24T16:41:32-04:00,Merge pull request #1640 from ta4j/feature/optimize-build-time,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+487,56753172e1954e7d81cffbd60026b52417348a29,2026-09-25T14:14:00-04:00,Merge pull request #1638 from ta4j/fix/kalman-first-usable-observation,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+488,f738979c6affd5c2df089b316d3e02a08cbc6445,2026-09-25T14:49:32-04:00,Merge pull request #1639 from ta4j/feat/adaptive-kalman-noise-example,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+489,d5b08720fd402e5b86488858ab05368e13578571,2026-09-25T20:26:45-04:00,Merge pull request #1641 from ta4j/bugfix/serialization-class-loading-hardening,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+490,4addc0f511bc2741e176d059c45d737f796c343d,2026-09-27T20:17:49-04:00,Merge pull request #1557 from ta4j/feature/deliver-prd-cf-148-20260706-214233,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+491,2e78f9633a09edbfeb878f7877a974d95a743aa6,2026-09-27T20:18:27-04:00,Merge pull request #1583 from ta4j/feature/portfolio-correlation-analytics-20260723,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+492,6447d77d65f77d09dadf559dd270e9c0a1445695,2026-09-27T20:39:23-04:00,Merge pull request #1613 from ta4j/refactor/criteria-perf-p2-p7,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+493,a4771c915becd58c79b07f102bf184ef75eb5c1b,2026-09-29T13:47:39-04:00,Merge pull request #1618 from ta4j/bugfix/preserve-series-begin-index,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+494,6b3fac95138f99820703ba6288007ad758607d61,2026-10-04T15:31:09-04:00,Merge pull request #1646 from ta4j/bugfix/cf-638-revisionless-cache-validation,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+495,ca01739ca6a78fc35daf7caa07ed621d2a795530,2026-10-05T09:03:56-04:00,Merge pull request #1647 from ta4j/release/0.26.0,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+496,e810fbcdde468df4c6b9e0bd08c13025481fdf9b,2026-10-05T09:57:08-04:00,Merge pull request #1617 from ta4j/feature/walk-forward-calibration-bakeoff,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+497,c7adb77bc076ea21f3f3893409030b9f2b8ecab7,2026-10-06T12:20:00-04:00,Merge pull request #1653 from ta4j/jules-7909428473110955379-20227275,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+498,bbc25869341d828863ab09d0b8fd25c26473c077,2026-10-06T15:06:00-04:00,Merge pull request #1654 from ta4j/perf-portfolio-snapshot-weights-117225184424027411,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+499,85c72a4e9d12aab6fa4cf979310b5d5e52917e73,2026-10-06T15:06:23-04:00,Merge pull request #1655 from ta4j/perf-optimize-portfolio-asset-check-12129742312635320678,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+500,60569fb9b9bc9bfc0ba2f50a78700f09c5b82df6,2026-10-06T15:06:48-04:00,Merge pull request #1656 from ta4j/perf-optimize-patch-calibration-metrics-15235838780887759879,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+501,f77110709fb7690ae9f40295ef7e1e590ba3f6ed,2026-10-07T09:49:45-04:00,Merge pull request #1658 from ta4j/feature/deliver-prd-cf-620-cf-621-build-noise-20261006-1512,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+502,6448f810d933cd882ee03a806eeb5ff084e667ff,2026-10-11T09:47:26-04:00,Merge pull request #1659 from ta4j/fix-decimalnum-pow-exception-doc-14908305305798533509,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+503,98dd2374c03258279c31b19e8a9e78857fc419b6,2026-10-11T20:41:12-04:00,Merge pull request #1664 from ta4j/perf/optimize-decimalnum-sqrt-2046452536590918144,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+504,cef8acbf3ad78420fa744fa8795c87a39e98dc94,2026-10-12T11:56:40-04:00,Merge pull request #1667 from ta4j/fix/decimalnum-sqrt-unlimited-precision,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+505,9beef61bcf99c666bcf8e410c581d019cd4528e5,2026-10-12T14:04:26-04:00,Merge pull request #1665 from ta4j/feature/deliver-prd-cf-637-20261009,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+506,0d1e1a0870aff46f1f44beacad2fdda5bf3238db,2026-10-14T13:12:20-04:00,Merge pull request #1668 from ta4j/docs/cf-148-released-portfolio-api,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+507,369eae35a189af21730a1d17b1f08b54ec109128,2026-10-17T11:17:51-04:00,Merge pull request #1676 from ta4j/fix/1666-continuous-smoothing,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+508,61886ac7d7f649b034b95691dbb02acfa1d64801,2026-10-18T16:54:05-04:00,Merge pull request #1669 from ta4j/perf/distance-from-ma-set-of-6724529482638641308,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+509,17b7f5f4849099a726bd42170e1504be7d1dc9ba,2026-10-18T16:54:44-04:00,Merge pull request #1671 from ta4j/perf/use-isempty-in-returns-getsize-879702220992120012,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+510,0e9bb2485c62ace5e6d4030a5cf04dec094f181b,2026-10-18T16:54:53-04:00,Merge pull request #1672 from ta4j/optimize-rule-serialization-map-lookup-18419999298994940961,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+511,4dfd25bf5eab14d53dde57be02ca30fc72bc26ce,2026-10-18T16:55:06-04:00,Merge pull request #1673 from ta4j/optimize-lowest-value-indicator-11260340800512810377,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+512,be661ee9983c4f7c41e172ae55d4fb11289bee3c,2026-10-18T16:55:33-04:00,Merge pull request #1677 from ta4j/fix/prevent-path-traversal-file-datasources-12037756940847971602,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+513,e7ddaa51f9216c2fa44656f3e03a627c2d499511,2026-10-19T16:35:57-04:00,Merge pull request #1686 from ta4j/release/0.27.0,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+514,a95de61e4899f783d995348b1d43290c936f9b56,2026-10-21T08:50:55-04:00,Merge pull request #1692 from ta4j/feature/deliver-prd-cf-725-20261021,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+515,546abcd15bd8e6b8ced5c7b04df8009579bcf107,2026-10-21T10:14:58-04:00,Merge pull request #1691 from ta4j/feature/deliver-prd-cf-720-20261020,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+516,1334344520067c1c3b59afe0bea4174c873b8814,2026-10-21T10:15:26-04:00,Merge pull request #1690 from ta4j/sentinel-harden-linkage-error-handling-7157902271865515547,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+517,9620a8ce2378ce8190f0a83e2c5fb140bd7edc78,2026-10-21T10:15:45-04:00,Merge pull request #1689 from ta4j/optimize-minimum-variance-optimizer-covariance-4087608861879000761,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+518,403b6557dee052e5fe00ca8907c6514c0f8b2962,2026-10-21T10:16:29-04:00,Merge pull request #1688 from ta4j/optimize-standard-reversal-indicator-bar-retrieval-10531223624195863227,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+519,d644c1164a1a08d95fef70047dc7696e542796d6,2026-10-21T10:25:16-04:00,Merge pull request #1685 from ta4j/sentinel/fix-base-bar-series-deserialization-validation-12343273196849964196,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+520,1abf7be9df63094ebd9b6ed08a67173e60c70953,2026-10-21T10:25:36-04:00,Merge pull request #1683 from ta4j/sentinel-harden-classloading-linkageerror-15257695163342696981,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+521,f07f29c5970e20a571eabbbae85f9cc858611263,2026-10-21T10:37:26-04:00,Merge pull request #1678 from ta4j/sentinel/fix-deserialization-filter-4739347119559830866,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+522,35548b07182afcd16c5822e446360c5723b8dd52,2026-10-22T08:53:35-04:00,Merge pull request #1687 from ta4j/perf/portfolio-series-manager-rebalance-allocations-16282249588365651953,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+523,67e1093da7c479a74974ea0f8ff825581ecde42a,2026-10-22T08:54:01-04:00,Merge pull request #1682 from ta4j/feature/deliver-prd-cf-724-20261017,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+524,a6cf36a58ecff7545153513a8852e2584f7f7165,2026-10-22T08:54:29-04:00,Merge pull request #1680 from ta4j/feature/deliver-prd-cf-722-20261017,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+525,a9e750adfb44472164e50cf378655936c98c5d08,2026-10-22T15:00:02-04:00,Merge pull request #1694 from ta4j/feature/deliver-prd-cf-635-20261021,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+526,a107cf4d9d25ffdda1d176f55f5ebb0afd80777a,2026-10-22T15:33:38-04:00,Merge pull request #1679 from ta4j/feature/deliver-prd-cf-721-20261017,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+527,add379a7c9b0e9b61800e6a2f6123950cb937452,2026-10-22T15:50:37-04:00,Merge pull request #1693 from ta4j/fix/path-traversal-cache-notes-16355209202590016353,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+528,8b067fda69edf3dce2e2152608666000b745fa83,2026-10-22T16:38:12-04:00,Merge pull request #1684 from ta4j/feature/deliver-prd-cf-728-20261018,no,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+529,1f0d906c538c0aa5f069a9b1d9976e45cc0938a9,2026-10-22T17:26:14-04:00,Merge pull request #1681 from ta4j/feature/deliver-prd-cf-723-20261017,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14
+530,7adc45bfdf78aae2c07f4008b8bb939eac0aea6b,2026-10-22T19:28:33-04:00,Merge pull request #1593 from ta4j/feature/deliver-prd-cf-336-cf-107-20260802-143305,yes,evaluate,1,67,0,0,0,0,2,14,14,0,0,14

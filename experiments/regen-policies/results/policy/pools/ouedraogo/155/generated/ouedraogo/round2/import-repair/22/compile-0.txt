@@ -1,0 +1,51 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:125: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:139: error: incompatible types: Num cannot be converted to SimpleNum
+        private static final SimpleNum ZERO = SimpleNumFactory.INSTANCE.zero();
+                                                                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:160: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum price = SimpleNumFactory.INSTANCE.valueOf(10.0);
+                                                           ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:161: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum amount = SimpleNumFactory.INSTANCE.valueOf(5.0);
+                                                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:175: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:181: error: cannot find symbol
+        Position p = new Position(TradeType.SELL, zeroCostModel, zeroCostModel);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:182: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:211: error: incompatible types: Num cannot be converted to SimpleNum
+            private final SimpleNum ONE = SimpleNumFactory.INSTANCE.one();
+                                                                       ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:233: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:234: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:278: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:290: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+12 errors

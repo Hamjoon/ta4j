@@ -1,0 +1,273 @@
+###Test START##
+package org.ta4j.core.backtest;
+
+import static org.junit.Assert.*;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Collections;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.NumFactory;
+import org.ta4j.core.trading.rules.Rule;
+
+/**
+ * Comprehensive unit tests for {@link BarSeriesManager}.
+ *
+ * <p>
+ * The tests use only the public API of the library (as listed in the problem
+ * statement) and concrete classes that are part of the TA‑4J core module.
+ * No mocking frameworks are used.
+ * </p>
+ */
+public class BarSeriesManagerTest {
+
+    private BarSeries emptySeries;
+    private BarSeries singleBarSeries;
+    private Bar singleBar;
+
+    /** Simple strategy that always signals an operation at index 0. */
+    private static class AlwaysSignalStrategy implements Strategy {
+        private final TradeType startingType;
+
+        AlwaysSignalStrategy(TradeType startingType) {
+            this.startingType = startingType;
+        }
+
+        @Override
+        public String getName() {
+            return "alwaysSignal";
+        }
+
+        @Override
+        public Rule getEntryRule() {
+            return null;
+        }
+
+        @Override
+        public Rule getExitRule() {
+            return null;
+        }
+
+        @Override
+        public TradeType getStartingType() {
+            return startingType;
+        }
+
+        /**
+         * Signal only at index 0 – this keeps the test deterministic.
+         */
+        @Override
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+            return index == 0;
+        }
+    }
+
+    /** PositionSizer that returns a valid fixed amount (1). */
+    private static class FixedOneSizer implements PositionSizer {
+        @Override
+        public Num amount(Context context) {
+            return context.numFactory().one();
+        }
+    }
+
+    /** PositionSizer that returns an illegal amount (zero). */
+    private static class ZeroAmountSizer implements PositionSizer {
+        @Override
+        public Num amount(Context context) {
+            return context.numFactory().numOf(0);
+        }
+    }
+
+    /** PositionSizer that returns a NaN amount. */
+    private static class NaNAmountSizer implements PositionSizer {
+        @Override
+        public Num amount(Context context) {
+            return DecimalNum.NaN;
+        }
+    }
+
+    @Before
+    public void setUp() {
+        // empty series – used for tests that do not need any bar data
+        emptySeries = new BaseBarSeriesBuilder().withName("empty").build();
+
+        // a single‑bar series – used for the execution tests
+        singleBar = new BaseBar(
+                java.time.ZonedDateTime.now(),
+                DecimalNum.valueOf(100), // open
+                DecimalNum.valueOf(110), // high
+                DecimalNum.valueOf(90),  // low
+                DecimalNum.valueOf(105), // close
+                DecimalNum.valueOf(1000) // volume
+        );
+        singleBarSeries = new BaseBarSeriesBuilder()
+                .withName("single")
+                .withBars(Collections.singletonList(singleBar))
+                .build();
+    }
+
+    /** Verify that the snapshot returned by {@code getBarSeries()} is a different instance. */
+    @Test
+    public void testGetBarSeriesSnapshot() {
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        BarSeries snapshot = manager.getBarSeries();
+
+        assertNotNull(snapshot);
+        assertNotSame(singleBarSeries, snapshot);
+        // The snapshot must contain the same bar data
+        assertEquals(singleBarSeries.getBarCount(), snapshot.getBarCount());
+        assertEquals(singleBarSeries.getBar(0).getClosePrice(),
+                     snapshot.getBar(0).getClosePrice());
+    }
+
+    /** Test that the cost model getters return the instances supplied to the constructor. */
+    @Test
+    public void testCostModelGetters() {
+        CostModel transactionCost = new ZeroCostModel();
+        CostModel holdingCost = new ZeroCostModel();
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries, transactionCost, holdingCost);
+        assertSame(transactionCost, manager.getTransactionCostModel());
+        assertSame(holdingCost, manager.getHoldingCostModel());
+    }
+
+    /** Run a strategy on a series with a single bar and verify that a position is opened. */
+    @Test
+    public void testRunStrategyOpensPosition() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        // The default amount is 1 (numFactory().one())
+        TradingRecord record = manager.run(strategy);
+        // One entry should have been performed; the position stays open because we never signal an exit.
+        assertFalse(record.isClosed());
+        assertEquals(1, record.getPositions().size());
+        assertEquals(TradeType.BUY, record.getStartingType());
+    }
+
+    /** Run a strategy with a custom amount and verify that the amount is respected. */
+    @Test
+    public void testRunStrategyWithCustomAmount() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.SELL);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        Num customAmount = singleBarSeries.numFactory().numOf(5);
+        TradingRecord record = manager.run(strategy, TradeType.SELL, customAmount);
+        assertFalse(record.isClosed());
+        // The amount stored in the current position must be equal to the custom amount
+        assertEquals(customAmount, record.getCurrentPosition().amount());
+    }
+
+    /** Verify that a custom {@link TradingRecordFactory} is used. */
+    @Test
+    public void testCustomTradingRecordFactory() {
+        BarSeriesManager.TradingRecordFactory factory = (type, start, end, txCost, holdCost) ->
+                new BaseTradingRecord(type) {
+                    @Override
+                    public String getName() {
+                        return "customRecord";
+                    }
+                };
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries, new ZeroCostModel(),
+                new ZeroCostModel(), new TradeOnNextOpenModel(), factory);
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        TradingRecord record = manager.run(strategy);
+        assertEquals("customRecord", record.getName());
+    }
+
+    /** Run a strategy using a PositionSizer that returns a valid fixed amount. */
+    @Test
+    public void testRunWithValidPositionSizer() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        TradingRecord record = manager.run(strategy, TradeType.BUY, new FixedOneSizer());
+        assertFalse(record.isClosed());
+        assertEquals(DecimalNum.ONE, record.getCurrentPosition().amount());
+    }
+
+    /** Run a strategy using a PositionSizer that returns zero – expect IllegalArgumentException. */
+    @Test(expected = IllegalArgumentException.class)
+    public void testRunWithZeroAmountSizerThrows() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        manager.run(strategy, TradeType.BUY, new ZeroAmountSizer());
+    }
+
+    /** Run a strategy using a PositionSizer that returns NaN – expect IllegalArgumentException. */
+    @Test(expected = IllegalArgumentException.class)
+    public void testRunWithNaNAmountSizerThrows() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        manager.run(strategy, TradeType.BUY, new NaNAmountSizer());
+    }
+
+    /** Directly test the private {@code fallbackSizingTarget} method via reflection. */
+    @Test
+    public void testFallbackSizingTarget() throws NoSuchMethodException, IllegalAccessException,
+            InvocationTargetException {
+        BarSeriesManager manager = new BarSeriesManager(emptySeries);
+        Method method = BarSeriesManager.class.getDeclaredMethod("fallbackSizingTarget", int.class);
+        method.setAccessible(true);
+
+        // When the series is empty the price should be 1 (numFactory().one())
+        ExecutionTarget target = (ExecutionTarget) method.invoke(manager, 5);
+        assertEquals(5, target.index());
+        assertEquals(emptySeries.numFactory().one(), target.price());
+    }
+
+    /** Verify that the {@code createDefaultTradingRecord} method respects index clamping. */
+    @Test
+    public void testCreateDefaultTradingRecordClampsIndexes() throws Exception {
+        // Series has a single bar (index 0)
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        Method method = BarSeriesManager.class.getDeclaredMethod("createDefaultTradingRecord",
+                TradeType.class, int.class, int.class);
+        method.setAccessible(true);
+
+        // Provide indexes out of range – they should be clamped to 0..0
+        TradingRecord record = (TradingRecord) method.invoke(manager, TradeType.BUY, -10, 100);
+        assertEquals(Integer.valueOf(0), record.getStartIndex());
+        assertEquals(Integer.valueOf(0), record.getEndIndex());
+    }
+
+    /** Run walk‑forward execution with a minimal configuration and verify that a result is produced. */
+    @Test
+    public void testRunWalkForwardProducesResult() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        WalkForwardConfig config = WalkForwardConfig.defaultConfig();
+
+        StrategyWalkForwardExecutionResult result = manager.runWalkForward(strategy, config);
+        assertNotNull(result);
+        assertEquals(singleBarSeries, result.barSeries());
+        assertEquals(strategy, result.strategy());
+        // With a single‑bar series the executor will produce zero folds but must still return a valid object.
+        assertTrue(result.folds().isEmpty());
+    }
+
+    /** Verify that the manager throws an exception when the tradingRecordFactory returns null. */
+    @Test(expected = IllegalStateException.class)
+    public void testFactoryReturningNullThrows() {
+        BarSeriesManager.TradingRecordFactory nullFactory = (type, start, end, tx, hold) -> null;
+        new BarSeriesManager(singleBarSeries, new ZeroCostModel(), new ZeroCostModel(),
+                new TradeOnNextOpenModel(), nullFactory);
+    }
+
+    /** Verify that passing a null amount to {@code run(..., amount, ...)} triggers NPE. */
+    @Test(expected = NullPointerException.class)
+    public void testRunWithNullAmountThrows() {
+        Strategy strategy = new AlwaysSignalStrategy(TradeType.BUY);
+        BarSeriesManager manager = new BarSeriesManager(singleBarSeries);
+        manager.run(strategy, TradeType.BUY, null, 0, 0);
+    }
+}
+###Test END##

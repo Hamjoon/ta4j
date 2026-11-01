@@ -1,0 +1,17 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:52: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+            series.addBar(new BaseBar(Duration.ofDays(1), endTime, open, high, low, close, series.numOf(0)));
+                          ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:105: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:114: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+3 errors

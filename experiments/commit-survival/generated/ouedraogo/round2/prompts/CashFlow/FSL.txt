@@ -1,0 +1,498 @@
+As a professional software tester who writes Java test methods, consider the following examples:
+//Example Java Class:
+package org.apache.commons.cli;
+
+final class Util {
+
+    static final String[] EMPTY_STRING_ARRAY = {};
+
+    static String stripLeadingAndTrailingQuotes(String str) {
+        final int length = str.length();
+        if (length > 1 && str.startsWith(""") && str.endsWith(""") && str.substring(1, length - 1).indexOf('"') == -1) {
+            str = str.substring(1, length - 1);
+        }
+
+        return str;
+    }
+
+    static String stripLeadingHyphens(final String str) {
+        if (str == null) {
+            return null;
+        }
+        if (str.startsWith("--")) {
+            return str.substring(2);
+        }
+        if (str.startsWith("-")) {
+            return str.substring(1);
+        }
+
+        return str;
+    }
+}
+
+
+//Corresponding JUnit 4 Test Cases:
+package org.apache.commons.cli;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
+import org.junit.Test;
+
+public class UtilTest {
+    @Test
+    public void testStripLeadingAndTrailingQuotes() {
+        assertEquals("foo", Util.stripLeadingAndTrailingQuotes(""foo""));
+        assertEquals("foo "bar"", Util.stripLeadingAndTrailingQuotes("foo "bar""));
+        assertEquals(""foo" bar", Util.stripLeadingAndTrailingQuotes(""foo" bar"));
+        assertEquals(""foo" and "bar"", Util.stripLeadingAndTrailingQuotes(""foo" and "bar""));
+        assertEquals(""", Util.stripLeadingAndTrailingQuotes("""));
+    }
+
+    @Test
+    public void testStripLeadingHyphens() {
+        assertEquals("f", Util.stripLeadingHyphens("-f"));
+        assertEquals("foo", Util.stripLeadingHyphens("--foo"));
+        assertEquals("-foo", Util.stripLeadingHyphens("---foo"));
+        assertNull(Util.stripLeadingHyphens(null));
+    }
+}
+        
+Now, generate JUnit 4 test cases to comprehensively test all methods in the following class named CashFlow. Your output file must start with ###Test START## and finish with ###Test END##. Here is the source code:
+/**
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2017-2023 Ta4j Organization & respective
+ * authors (see AUTHORS)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+package org.ta4j.core.analysis;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Indicator;
+import org.ta4j.core.Position;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.num.Num;
+
+/**
+ * Allows to follow the money cash flow involved by a list of positions over a
+ * bar series.
+ */
+public class CashFlow implements Indicator<Num> {
+
+    /** The bar series. */
+    private final BarSeries barSeries;
+
+    /** The (accrued) cash flow sequence (without trading costs). */
+    private final List<Num> values;
+
+    /**
+     * Constructor for cash flows of a closed position.
+     *
+     * @param barSeries the bar series
+     * @param position  a single position
+     */
+    public CashFlow(BarSeries barSeries, Position position) {
+        this.barSeries = barSeries;
+        values = new ArrayList<>(Collections.singletonList(numOf(1)));
+
+        calculate(position);
+        fillToTheEnd(barSeries.getEndIndex());
+    }
+
+    /**
+     * Constructor for cash flows of closed positions of a trading record.
+     *
+     * @param barSeries     the bar series
+     * @param tradingRecord the trading record
+     */
+    public CashFlow(BarSeries barSeries, TradingRecord tradingRecord) {
+        this(barSeries, tradingRecord, tradingRecord.getEndIndex(barSeries));
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param barSeries     the bar series
+     * @param tradingRecord the trading record
+     * @param finalIndex    index up until cash flows of open positions are
+     *                      considered
+     */
+    public CashFlow(BarSeries barSeries, TradingRecord tradingRecord, int finalIndex) {
+        this.barSeries = barSeries;
+        values = new ArrayList<>(Collections.singletonList(one()));
+
+        calculate(tradingRecord, finalIndex);
+        fillToTheEnd(finalIndex);
+    }
+
+    /**
+     * @param index the bar index
+     * @return the cash flow value at the index-th position
+     */
+    @Override
+    public Num getValue(int index) {
+        return values.get(index);
+    }
+
+    @Override
+    public int getUnstableBars() {
+        return 0;
+    }
+
+    @Override
+    public BarSeries getBarSeries() {
+        return barSeries;
+    }
+
+    @Override
+    public Num numOf(Number number) {
+        return barSeries.numOf(number);
+    }
+
+    /**
+     * @return the size of the bar series
+     */
+    public int getSize() {
+        return barSeries.getBarCount();
+    }
+
+    /**
+     * Calculates the cash flow for a single closed position.
+     *
+     * @param position a single position
+     */
+    private void calculate(Position position) {
+        if (position.isOpened()) {
+            throw new IllegalArgumentException(
+                    "Position is not closed. Final index of observation needs to be provided.");
+        }
+        calculate(position, position.getExit().getIndex());
+    }
+
+    /**
+     * Calculates the cash flow for a single position (including accrued cashflow
+     * for open positions).
+     *
+     * @param position   a single position
+     * @param finalIndex index up until cash flow of open positions is considered
+     */
+    private void calculate(Position position, int finalIndex) {
+        boolean isLongTrade = position.getEntry().isBuy();
+        int endIndex = determineEndIndex(position, finalIndex, barSeries.getEndIndex());
+        final int entryIndex = position.getEntry().getIndex();
+        int begin = entryIndex + 1;
+        if (begin > values.size()) {
+            Num lastValue = values.get(values.size() - 1);
+            values.addAll(Collections.nCopies(begin - values.size(), lastValue));
+        }
+        // Trade is not valid if net balance at the entryIndex is negative
+        if (values.get(values.size() - 1).isGreaterThan(values.get(0).numOf(0))) {
+            int startingIndex = Math.max(begin, 1);
+
+            int nPeriods = endIndex - entryIndex;
+            Num holdingCost = position.getHoldingCost(endIndex);
+            Num avgCost = holdingCost.dividedBy(holdingCost.numOf(nPeriods));
+
+            // Add intermediate cash flows during position
+            Num netEntryPrice = position.getEntry().getNetPrice();
+            for (int i = startingIndex; i < endIndex; i++) {
+                Num intermediateNetPrice = addCost(barSeries.getBar(i).getClosePrice(), avgCost, isLongTrade);
+                Num ratio = getIntermediateRatio(isLongTrade, netEntryPrice, intermediateNetPrice);
+                values.add(values.get(entryIndex).multipliedBy(ratio));
+            }
+
+            // add net cash flow at exit position
+            Num exitPrice;
+            if (position.getExit() != null) {
+                exitPrice = position.getExit().getNetPrice();
+            } else {
+                exitPrice = barSeries.getBar(endIndex).getClosePrice();
+            }
+            Num ratio = getIntermediateRatio(isLongTrade, netEntryPrice, addCost(exitPrice, avgCost, isLongTrade));
+            values.add(values.get(entryIndex).multipliedBy(ratio));
+        }
+    }
+
+    /**
+     * Calculates the ratio of intermediate prices.
+     *
+     * @param isLongTrade true, if the entry trade type is BUY
+     * @param entryPrice  price ratio denominator
+     * @param exitPrice   price ratio numerator
+     */
+    private static Num getIntermediateRatio(boolean isLongTrade, Num entryPrice, Num exitPrice) {
+        Num ratio;
+        if (isLongTrade) {
+            ratio = exitPrice.dividedBy(entryPrice);
+        } else {
+            ratio = entryPrice.numOf(2).minus(exitPrice.dividedBy(entryPrice));
+        }
+
+        return ratio;
+    }
+
+    /**
+     * Calculates the cash flow for the closed positions of a trading record.
+     *
+     * @param tradingRecord the trading record
+     */
+    private void calculate(TradingRecord tradingRecord) {
+        // For each position...
+        tradingRecord.getPositions().forEach(this::calculate);
+    }
+
+    /**
+     * Calculates the cash flow for all positions of a trading record, including
+     * accrued cash flow of an open position.
+     *
+     * @param tradingRecord the trading record
+     * @param finalIndex    index up until cash flows of open positions are
+     *                      considered
+     */
+    private void calculate(TradingRecord tradingRecord, int finalIndex) {
+        calculate(tradingRecord);
+
+        // Add accrued cash flow of open position
+        if (tradingRecord.getCurrentPosition().isOpened()) {
+            calculate(tradingRecord.getCurrentPosition(), finalIndex);
+        }
+    }
+
+    /**
+     * Adjusts (intermediate) price to incorporate trading costs.
+     *
+     * @param rawPrice    the gross asset price
+     * @param holdingCost share of the holding cost per period
+     * @param isLongTrade true, if the entry trade type is BUY
+     */
+    static Num addCost(Num rawPrice, Num holdingCost, boolean isLongTrade) {
+        Num netPrice;
+        if (isLongTrade) {
+            netPrice = rawPrice.minus(holdingCost);
+        } else {
+            netPrice = rawPrice.plus(holdingCost);
+        }
+        return netPrice;
+    }
+
+    /**
+     * Pads {@link #values} with its last value up until {@code endIndex}.
+     * 
+     * @param endIndex the end index
+     */
+    private void fillToTheEnd(int endIndex) {
+        if (endIndex >= values.size()) {
+            Num lastValue = values.get(values.size() - 1);
+            values.addAll(Collections.nCopies(barSeries.getEndIndex() - values.size() + 1, lastValue));
+        }
+    }
+
+    /**
+     * Determines the valid final index to be considered.
+     *
+     * @param position   the position
+     * @param finalIndex index up until cash flows of open positions are considered
+     * @param maxIndex   maximal valid index
+     */
+    static int determineEndIndex(Position position, int finalIndex, int maxIndex) {
+        int idx = finalIndex;
+        // After closing of position, no further accrual necessary
+        if (position.getExit() != null) {
+            idx = Math.min(position.getExit().getIndex(), finalIndex);
+        }
+        // Accrual at most until maximal index of asset data
+        if (idx > maxIndex) {
+            idx = maxIndex;
+        }
+        return idx;
+    }
+}
+
+
+Use only classes, constructors and methods that appear in the class source above or in the dependency signatures below. Do not use APIs from other versions of this library. Construct real objects through the constructors or factory methods shown instead of mocking; do not mock or subclass abstract classes or interfaces of this library.
+
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+   int getUnstableBars();
+   BarSeries getBarSeries();
+  default Num zero();
+  default Num one();
+  default Num hundred();
+  default Num numOf(Number number);
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+  default Num zero();
+  default Num one();
+  default Num hundred();
+   Number getDelegate();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num sqrt();
+   Num sqrt(int precision);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+   Function<Number, Num> function();
+  default Num numOf(Number value);
+  default Num numOf(String value, int precision);
+  default boolean isNaN();
+  default double doubleValue();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   String getName();
+   Num num();
+  default Function<Number, Num> function();
+  default Num zero();
+  default Num one();
+  default Num hundred();
+  default Num numOf(Number number);
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+   void addBar(Duration timePeriod, ZonedDateTime endTime);
+  default void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice);
+  default void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume);
+  default void addBar(ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount);
+  default void addBar(Duration timePeriod, ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume);
+  default void addBar(Duration timePeriod, ZonedDateTime endTime, Number openPrice, Number highPrice, Number lowPrice, Number closePrice, Number volume, Number amount);
+  default void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice);
+  default void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice, String volume);
+  default void addBar(ZonedDateTime endTime, String openPrice, String highPrice, String lowPrice, String closePrice, String volume, String amount);
+  default void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume);
+   void addBar(ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount);
+   void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume);
+   void addBar(Duration timePeriod, ZonedDateTime endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice, Num volume, Num amount);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+  default void addTrade(String tradeVolume, String tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(String price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.Position
+public class Position implements Serializable {
+  public Position();
+  public Position(TradeType startingType);
+  public Position(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Position(Trade entry, Trade exit);
+  public Position(Trade entry, Trade exit, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Trade getEntry();
+  public Trade getExit();
+  public boolean equals(Object obj);
+  public int hashCode();
+  public Trade operate(int index);
+  public Trade operate(int index, Num price, Num amount);
+  public boolean isClosed();
+  public boolean isOpened();
+  public boolean isNew();
+  public boolean hasProfit();
+  public boolean hasLoss();
+  public Num getProfit();
+  public Num getProfit(int finalIndex, Num finalPrice);
+  public Num getGrossProfit();
+  public Num getGrossProfit(Num finalPrice);
+  public Num getGrossReturn();
+  public Num getGrossReturn(Num finalPrice);
+  public Num getGrossReturn(BarSeries barSeries);
+  public Num getGrossReturn(Num entryPrice, Num exitPrice);
+  public Num getPositionCost(int finalIndex);
+  public Num getPositionCost();
+  public Num getHoldingCost();
+  public Num getHoldingCost(int finalIndex);
+  public TradeType getStartingType();
+  public String toString();
+}
+
+// public API of org.ta4j.core.TradingRecord
+public interface TradingRecord extends Serializable {
+   TradeType getStartingType();
+   String getName();
+  default void operate(int index);
+   void operate(int index, Num price, Num amount);
+  default boolean enter(int index);
+   boolean enter(int index, Num price, Num amount);
+  default boolean exit(int index);
+   boolean exit(int index, Num price, Num amount);
+  default boolean isClosed();
+   List<Position> getPositions();
+  default int getPositionCount();
+   Position getCurrentPosition();
+  default Position getLastPosition();
+   Trade getLastTrade();
+   Trade getLastTrade(TradeType tradeType);
+   Trade getLastEntry();
+   Trade getLastExit();
+   Integer getStartIndex();
+   Integer getEndIndex();
+  default int getStartIndex(BarSeries series);
+  default int getEndIndex(BarSeries series);
+}
+
+.

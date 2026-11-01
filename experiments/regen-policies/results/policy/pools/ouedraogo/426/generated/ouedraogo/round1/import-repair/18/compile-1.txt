@@ -1,0 +1,59 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:56: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("testSeries");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:59: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:67: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(
+                      ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:322: error: cannot find symbol
+        Rule rule = a.crossedOver(b);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:331: error: cannot find symbol
+        Rule rule = a.crossedOver(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:340: error: cannot find symbol
+        Rule rule = a.crossedUnder(b);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:348: error: cannot find symbol
+        Rule rule = a.crossedUnder(10);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:357: error: cannot find symbol
+        Rule rule = a.isGreaterThan(b);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:365: error: cannot find symbol
+        Rule rule = a.isGreaterThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:374: error: cannot find symbol
+        Rule rule = a.isLessThan(b);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:382: error: cannot find symbol
+        Rule rule = a.isLessThan(10);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+11 errors

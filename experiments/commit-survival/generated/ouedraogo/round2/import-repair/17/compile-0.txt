@@ -1,0 +1,81 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:14: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:206: error: cannot find symbol
+        Indicator<Num> prev = close.previous(); // same as previous(1)
+        ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:214: error: cannot find symbol
+        Rule rule = close.crossedOver(higher);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:221: error: cannot find symbol
+        Rule rule = close.crossedOver(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:229: error: cannot find symbol
+        Rule rule = close.crossedUnder(lower);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:235: error: cannot find symbol
+        Rule rule = close.crossedUnder(20);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:241: error: cannot find symbol
+        Rule rule = close.isGreaterThan(close.minus(1));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:247: error: cannot find symbol
+        Rule rule = close.isGreaterThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:253: error: cannot find symbol
+        Rule rule = close.isLessThan(close.plus(1));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:259: error: cannot find symbol
+        Rule rule = close.isLessThan(20);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:318: error: cannot find symbol
+        Indicator<Num> prev = close.previous(10);
+        ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:328: error: cannot find symbol
+        Indicator<Num> prev = singleClose.previous(); // previous(1)
+        ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:335: error: cannot find symbol
+        Rule rule = close.crossedOver(10); // threshold equals first value
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:341: error: cannot find symbol
+        Rule rule = close.crossedUnder(10);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:348: error: cannot find symbol
+        Rule rule = close.isGreaterThan(Double.NaN);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/GToT/NumericIndicatorTest.java:354: error: cannot find symbol
+        Rule rule = close.isLessThan(Double.NaN);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+16 errors

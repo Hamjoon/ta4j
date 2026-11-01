@@ -1,0 +1,152 @@
+[
+  {
+    "group": "stddev method tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NumericIndicator whose delegate is a StandardDeviationIndicator with barCount=3; getValue(2) equals standard deviation of the first three values of the underlying series",
+        "description": "Normal case: create a NumericIndicator from a simple BarSeries (e.g., close prices 1, 2, 3, 4). Calling stddev(3) should wrap a StandardDeviationIndicator that computes the standard deviation over the last 3 bars. Verify that the returned object is a NumericIndicator and that its delegate is an instance of StandardDeviationIndicator. Also verify the computed value matches the manually\u2011calculated standard deviation."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 0
+          }
+        ],
+        "expected": "IllegalArgumentException thrown with message containing \"barCount must be > 0\"",
+        "description": "Edge case: passing a barCount of 0 should cause the StandardDeviationIndicator constructor to reject the argument and the stddev method to propagate the IllegalArgumentException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": -5
+          }
+        ],
+        "expected": "IllegalArgumentException thrown with message containing \"barCount must be > 0\"",
+        "description": "Edge case: passing a negative barCount should also trigger an IllegalArgumentException from the underlying StandardDeviationIndicator."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 10
+          }
+        ],
+        "expected": "NumericIndicator whose delegate returns NaN (Num.NaN) for any index because the underlying series contains fewer than 10 bars",
+        "description": "Boundary case: request a standard deviation over more bars than exist in the series. The StandardDeviationIndicator returns Num.NaN for indices where the window is incomplete. Verify that the wrapped NumericIndicator propagates this NaN value."
+      }
+    ]
+  },
+  {
+    "group": "stddev additional tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 1
+          }
+        ],
+        "expected": "NumericIndicator whose delegate returns Num.ZERO for any index because the standard deviation of a single value is 0",
+        "description": "Edge case: barCount = 1. For any index the StandardDeviationIndicator should compute a variance of 0, therefore the wrapped NumericIndicator must return Num.ZERO. Verify with a series of arbitrary values (e.g., 10, 20, 30)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 4
+          }
+        ],
+        "expected": "NumericIndicator whose delegate returns the correct standard deviation of the whole series (indices 0\u20113) and Num.NaN for any index < 3 (none in this case)",
+        "description": "Boundary case: barCount equals the exact number of bars in the series. Use a series with known close prices (e.g., 2, 4, 6, 8). The expected standard deviation is sqrt(((2\u20115)\u00b2+(4\u20115)\u00b2+(6\u20115)\u00b2+(8\u20115)\u00b2)/4) = 2.236... Verify that getValue(3) matches this value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 2
+          }
+        ],
+        "expected": "NumericIndicator returns Num.NaN for index 0 and the correct standard deviation for index 1 (and later indices)",
+        "description": "Check unstable\u2011bars handling: with barCount = 2 the StandardDeviationIndicator is unstable for the first (barCount\u20111) = 1 bar. For a series 1, 5, 9 verify that getValue(0) is NaN and getValue(1) equals sqrt(((1\u20113)\u00b2+(5\u20113)\u00b2)/2) = 2.828..."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 5
+          }
+        ],
+        "expected": "NumericIndicator returns the correct standard deviation for index 4 (the first complete window) and NaN for indices 0\u20113",
+        "description": "Series length exactly matches barCount. Use a series of five values (e.g., 3, 3, 3, 3, 7). The first four windows are incomplete \u2192 NaN. At index 4 the window contains [3,3,3,3,7]; expected stddev = sqrt(((3\u20113.8)\u00b2*4+(7\u20113.8)\u00b2)/5) \u2248 1.720."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NumericIndicator returns Num.ZERO for index 2 because the first three values are identical, and correct non\u2011zero stddev for later windows",
+        "description": "Zero\u2011variance window: series 5,5,5,6,7. For barCount 3, the window ending at index 2 is [5,5,5] \u2192 stddev 0. Verify getValue(2) == Num.ZERO, while getValue(3) and getValue(4) produce the expected non\u2011zero values."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NumericIndicator.getUnstableBars() returns 2 (barCount\u20111)",
+        "description": "Confirm that the wrapper propagates the unstable\u2011bars information from the underlying StandardDeviationIndicator. After creating stddev(3) on any series, calling getUnstableBars() on the resulting NumericIndicator should equal 2."
+      },
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NumericIndicator.delegate() is an instance of StandardDeviationIndicator",
+        "description": "Verify the internal delegate type: the stddev method must wrap the StandardDeviationIndicator. After calling stddev(3), the returned NumericIndicator\u2019s delegate() should be instanceof StandardDeviationIndicator."
+      }
+    ]
+  },
+  {
+    "group": "stddev null delegate tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException thrown when constructing StandardDeviationIndicator because the NumericIndicator was created with a null delegate",
+        "description": "Create a NumericIndicator via NumericIndicator.of(null). Calling stddev(3) should propagate a NullPointerException from the StandardDeviationIndicator constructor, which expects a non\u2011null delegate."
+      }
+    ]
+  },
+  {
+    "group": "stddev null series tests",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "barCount",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException thrown because the underlying delegate's getBarSeries() returns null",
+        "description": "Implement a custom Indicator<Num> that returns null for getBarSeries() (while providing valid getValue and getUnstableBars). Wrap it with NumericIndicator.of(customIndicator) and invoke stddev(3). The StandardDeviationIndicator will attempt to access the series and throw a NullPointerException."
+      }
+    ]
+  }
+]

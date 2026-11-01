@@ -1,0 +1,5 @@
+policy,dev-scope_regenerations,dev-scope_entered_after_t,dev-scope_alive,dev-scope_segment_denominator,dev-scope_changed_lines_covered,dev-scope_changed_lines_executable,ouedraogo_regenerations,ouedraogo_entered_after_t,ouedraogo_alive,ouedraogo_segment_denominator,ouedraogo_changed_lines_covered,ouedraogo_changed_lines_executable
+none,0,0,0,67,1,763,0,0,0,98,1,763
+release-reset,0,0,0,67,1,763,2,33,26,26,31,763
+half-reset,0,0,0,67,1,763,1,14,14,14,40,752
+half-fill,0,0,0,67,1,763,1,14,14,14,40,752

@@ -1,0 +1,264 @@
+###Test START##
+```java
+package org.ta4j.core.indicators;
+
+import static org.junit.Assert.*;
+
+import java.time.ZonedDateTime;
+import java.time.Duration;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link ATRIndicator}.
+ *
+ * The tests cover:
+ * <ul>
+ *   <li>Public API extraction and basic sanity checks</li>
+ *   <li>Correctness of the value returned by {@code getValue(int)}</li>
+ *   <li>Edge‑case handling (single‑bar series, barCount = 1, negative indexes, null arguments)</li>
+ *   <li>Behaviour of stability‑related methods</li>
+ *   <li>String representation</li>
+ * </ul>
+ *
+ * The tests use only the public constructors and methods that are part of the
+ * provided API (no mocking or subclassing of library classes).
+ */
+public class ATRIndicatorTest {
+
+    private BarSeries series;
+    private final int BAR_COUNT = 3;               // typical time‑frame used in tests
+
+    /**
+     * Helper that creates a {@link BarSeries} with a deterministic set of bars.
+     * The series contains 5 bars with the following OHLC values (open = close
+     * for simplicity – only high/low are relevant for the TR calculation):
+     *
+     * <pre>
+     * Index | High | Low | Close
+     *   0   |  10  |  5  |  8
+     *   1   |  12  |  6  | 10
+     *   2   |  15  |  9  | 14
+     *   3   |  13  |  7  | 12
+     *   4   |  16  | 10  | 15
+     * </pre>
+     *
+     * The true range (TR) for each index can be calculated manually and is
+     * reused in several test cases.
+     */
+    @Before
+    public void setUp() {
+        series = new BaseBarSeriesBuilder()
+                .withName("ATR test series")
+                .build();
+
+        // Helper to create a bar with the same open/close (only high/low matter)
+        addBar(10, 5, 8);
+        addBar(12, 6, 10);
+        addBar(15, 9, 14);
+        addBar(13, 7, 12);
+        addBar(16,10,15);
+    }
+
+    private void addBar(double high, double low, double close) {
+        ZonedDateTime endTime = ZonedDateTime.now().plusSeconds(series.getBarCount());
+        BaseBar bar = BaseBar.builder()
+                .timePeriod(Duration.ofSeconds(1))
+                .endTime(endTime)
+                .openPrice(DecimalNum.valueOf(close))   // open == close for simplicity
+                .highPrice(DecimalNum.valueOf(high))
+                .lowPrice(DecimalNum.valueOf(low))
+                .closePrice(DecimalNum.valueOf(close))
+                .volume(DecimalNum.valueOf(0))
+                .build();
+        series.addBar(bar);
+    }
+
+    /**
+     * Extracted public API of {@link ATRIndicator}
+     *
+     * <pre>
+     * public ATRIndicator(BarSeries series, int barCount)
+     * public ATRIndicator(TRIndicator tr, int barCount)
+     * public Num getValue(int index)
+     * public int getCountOfUnstableBars()
+     * public TRIndicator getTRIndicator()
+     * public int getBarCount()
+     * public String toString()
+     * </pre>
+     */
+
+    /** ------------------------------------------------------------
+     *  BASIC FUNCTIONALITY TESTS
+     *  ------------------------------------------------------------ */
+
+    @Test
+    public void testConstructorAndGetters() {
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+
+        // getBarCount() must return the same value passed to the constructor
+        assertEquals(BAR_COUNT, atr.getBarCount());
+
+        // getTRIndicator() must not be null and must reference the series used
+        assertNotNull(atr.getTRIndicator());
+        assertSame(series, atr.getTRIndicator().getBarSeries());
+
+        // getCountOfUnstableBars() is defined to be equal to barCount
+        assertEquals(BAR_COUNT, atr.getCountOfUnstableBars());
+
+        // toString() must contain the class name and the barCount
+        String s = atr.toString();
+        assertTrue(s.contains("ATRIndicator"));
+        assertTrue(s.contains(String.valueOf(BAR_COUNT)));
+    }
+
+    @Test
+    public void testGetValueMatchesMMAIndicator() {
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+        // The underlying MMAIndicator is private – we recreate it here to compare
+        MMAIndicator mma = new MMAIndicator(new TRIndicator(series), BAR_COUNT);
+
+        for (int i = 0; i < series.getBarCount(); i++) {
+            Num expected = mma.getValue(i);
+            Num actual   = atr.getValue(i);
+            assertEquals("ATR value at index " + i + " differs from MMA", expected, actual);
+        }
+    }
+
+    /** ------------------------------------------------------------
+     *  EDGE CASE TESTS
+     *  ------------------------------------------------------------ */
+
+    @Test
+    public void testBarCountOneReturnsTRDirectly() {
+        // With a barCount of 1 the MMAIndicator behaves like a simple moving average
+        // whose first value equals the TR of the same index.
+        ATRIndicator atr = new ATRIndicator(series, 1);
+        TRIndicator tr = atr.getTRIndicator();
+
+        for (int i = 0; i < series.getBarCount(); i++) {
+            assertEquals("ATR(1) should equal TR at index " + i,
+                    tr.getValue(i), atr.getValue(i));
+        }
+    }
+
+    @Test
+    public void testSingleBarSeries() {
+        // Build a series that contains only a single bar
+        BarSeries singleBarSeries = new BaseBarSeriesBuilder()
+                .withName("single bar")
+                .build();
+        addBarTo(singleBarSeries, 20, 15, 18); // high, low, close
+
+        ATRIndicator atr = new ATRIndicator(singleBarSeries, 2);
+        // With only one bar, the true range = high - low
+        Num expectedTR = DecimalNum.valueOf(20).minus(DecimalNum.valueOf(15));
+        assertEquals(expectedTR, atr.getValue(0));
+    }
+
+    private void addBarTo(BarSeries target, double high, double low, double close) {
+        ZonedDateTime endTime = ZonedDateTime.now().plusSeconds(target.getBarCount());
+        BaseBar bar = BaseBar.builder()
+                .timePeriod(Duration.ofSeconds(1))
+                .endTime(endTime)
+                .openPrice(DecimalNum.valueOf(close))
+                .highPrice(DecimalNum.valueOf(high))
+                .lowPrice(DecimalNum.valueOf(low))
+                .closePrice(DecimalNum.valueOf(close))
+                .volume(DecimalNum.valueOf(0))
+                .build();
+        target.addBar(bar);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueNegativeIndexThrows() {
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+        atr.getValue(-1); // should raise an exception
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueIndexBeyondSeriesThrows() {
+        ATRIndicator atr = new ATRIndicator(series, BAR_COUNT);
+        atr.getValue(series.getBarCount()); // out of range
+    }
+
+    /** ------------------------------------------------------------
+     *  EXCEPTION / INVALID INPUT TESTS
+     *  ------------------------------------------------------------ */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorWithZeroBarCountThrows() {
+        new ATRIndicator(series, 0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorWithNegativeBarCountThrows() {
+        new ATRIndicator(series, -5);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructorWithNullSeriesThrows() {
+        new ATRIndicator((BarSeries) null, BAR_COUNT);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testConstructorWithNullTRIndicatorThrows() {
+        new ATRIndicator((TRIndicator) null, BAR_COUNT);
+    }
+
+    /** ------------------------------------------------------------
+     *  MANUAL CALCULATION VERIFICATION
+     *  ------------------------------------------------------------ */
+    @Test
+    public void testManualATRValuesAgainstKnownResults() {
+        // Pre‑computed true‑range (TR) values for the series defined in setUp()
+        // index : TR = max(high‑low, |high‑prevClose|, |low‑prevClose|)
+        //   0 : max(10‑5, |10‑8|, |5‑8|) = 5
+        //   1 : max(12‑6, |12‑8|, |6‑8|) = 6
+        //   2 : max(15‑9, |15‑10|, |9‑10|) = 6
+        //   3 : max(13‑7, |13‑14|, |7‑14|) = 6
+        //   4 : max(16‑10,|16‑12|,|10‑12|) = 6
+
+        Num[] trValues = new Num[] {
+                DecimalNum.valueOf(5),
+                DecimalNum.valueOf(6),
+                DecimalNum.valueOf(6),
+                DecimalNum.valueOf(6),
+                DecimalNum.valueOf(6)
+        };
+
+        // Build the ATR indicator with barCount = 3 (MMA smoothing)
+        ATRIndicator atr = new ATRIndicator(series, 3);
+        // Compute the expected MMA manually:
+        // MMA(0) = TR(0)                     (first value)
+        // MMA(1) = (TR(1) + 2 * MMA(0)) / 3
+        // MMA(2) = (TR(2) + 2 * MMA(1)) / 3
+        // ... etc.
+        Num[] expectedMMA = new Num[trValues.length];
+        expectedMMA[0] = trValues[0];
+        for (int i = 1; i < trValues.length; i++) {
+            // MMA formula used by MMAIndicator (same as EMA with α = 2/(barCount+1))
+            // α = 2/(3+1) = 0.5
+            // MMA(i) = α * TR(i) + (1‑α) * MMA(i‑1)
+            Num alpha = DecimalNum.valueOf(0.5);
+            expectedMMA[i] = alpha.multipliedBy(trValues[i])
+                    .plus(DecimalNum.valueOf(1).minus(alpha).multipliedBy(expectedMMA[i - 1]));
+        }
+
+        // Verify each index
+        for (int i = 0; i < series.getBarCount(); i++) {
+            Num actual = atr.getValue(i);
+            assertEquals("ATR value mismatch at index " + i, expectedMMA[i].doubleValue(),
+                    actual.doubleValue(), 1e-10);
+        }
+    }
+}
+```
+###Test END##

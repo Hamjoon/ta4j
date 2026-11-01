@@ -1,0 +1,84 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:19: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:25: error: cannot find symbol
+import org.ta4j.core.num.DefaultNumFactory;
+                        ^
+  symbol:   class DefaultNumFactory
+  location: package org.ta4j.core.num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:46: error: cannot find symbol
+        numFactory = new DefaultNumFactory();
+                         ^
+  symbol:   class DefaultNumFactory
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:49: error: cannot find symbol
+        series = new BaseBarSeries.Builder()
+                                  ^
+  symbol:   class Builder
+  location: class BaseBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:56: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+            Bar bar = new BaseBar(
+                      ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    Duration,int,Num,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:116: error: no suitable constructor found for Trade(TradeType,int,Num,Num)
+        Trade entry = new Trade(TradeType.BUY, 1, numFactory.numOf(2), numFactory.numOf(1));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:117: error: no suitable constructor found for Trade(TradeType,int,Num,Num)
+        Trade exit = new Trade(TradeType.SELL, 4, numFactory.numOf(5), numFactory.numOf(1));
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:137: error: no suitable constructor found for Trade(TradeType,int,Num,Num)
+        Trade entry = new Trade(TradeType.BUY, 2, numFactory.numOf(3), numFactory.numOf(1));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:191: error: no suitable constructor found for Trade(TradeType,int,Num,Num)
+        Trade entry = new Trade(TradeType.BUY, 1, numFactory.numOf(2), numFactory.numOf(1));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:192: error: no suitable constructor found for Trade(TradeType,int,Num,Num)
+        Trade exit = new Trade(TradeType.SELL, 3, numFactory.numOf(4), numFactory.numOf(1));
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:201: error: no suitable constructor found for Trade(TradeType,int,Num,Num)
+        Trade entry = new Trade(TradeType.BUY, 2, numFactory.numOf(3), numFactory.numOf(1));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:212: error: fillToTheEnd(int) has private access in CashFlow
+        cf.fillToTheEnd(4);
+          ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:219: error: values has private access in CashFlow
+        assertEquals("After padding, internal list size must equal series bar count", series.getBarCount(), cf.values.size());
+                                                                                                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:254: error: cannot find symbol
+        BarSeries emptySeries = new BaseBarSeries.Builder()
+                                                 ^
+  symbol:   class Builder
+  location: class BaseBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:265: error: values has private access in CashFlow
+        assertEquals("Value list must contain exactly one element for empty series", 1, cf.values.size());
+                                                                                          ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+15 errors

@@ -1,0 +1,58 @@
+{
+  "class_name": "ATRIndicator",
+  "technique": "CoT",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-25T07:37:06.333871+00:00",
+      "latency": 13.34,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "BaseTen",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1792913826-TTMF8bHy3rjz2g6nAPhO",
+      "usage": {
+        "prompt_tokens": 2102,
+        "completion_tokens": 2125,
+        "total_tokens": 4227,
+        "cost": 0.0012727,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0012727,
+          "upstream_inference_prompt_cost": 0.0002102,
+          "upstream_inference_completions_cost": 0.0010625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "ad4a5a8a7b17be1065a0a9ffd34c650cba69908b404fdbfb4fde29b7b6fe7af8",
+      "response_sha256": "69c543360948413ad52d7c175008747dad9609e546613c2bd4170fae9eb6a46a"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "ATRIndicatorTest",
+    "package": "org.ta4j.core.indicators",
+    "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round1/sources/ATRIndicator/CoT/ATRIndicatorTest.java"
+}

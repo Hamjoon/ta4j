@@ -1,0 +1,244 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:37: error: cannot find symbol
+    private static class SimpleStrategy implements Strategy {
+                                                   ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:55: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:61: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:67: error: cannot find symbol
+        public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+                                                ^
+  symbol:   class TradingRecord
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:77: error: cannot find symbol
+        @Override public Strategy and(Strategy strategy) { return null; }
+                                      ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:77: error: cannot find symbol
+        @Override public Strategy and(Strategy strategy) { return null; }
+                         ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:78: error: cannot find symbol
+        @Override public Strategy or(Strategy strategy) { return null; }
+                                     ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:78: error: cannot find symbol
+        @Override public Strategy or(Strategy strategy) { return null; }
+                         ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:79: error: cannot find symbol
+        @Override public Strategy and(String name, Strategy strategy, int unstableBars) { return null; }
+                                                   ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:79: error: cannot find symbol
+        @Override public Strategy and(String name, Strategy strategy, int unstableBars) { return null; }
+                         ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:80: error: cannot find symbol
+        @Override public Strategy or(String name, Strategy strategy, int unstableBars) { return null; }
+                                                  ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:80: error: cannot find symbol
+        @Override public Strategy or(String name, Strategy strategy, int unstableBars) { return null; }
+                         ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:81: error: cannot find symbol
+        @Override public Strategy opposite() { return null; }
+                         ^
+  symbol:   class Strategy
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:86: error: cannot find symbol
+        @Override public boolean shouldEnter(int index, TradingRecord tradingRecord) { return false; }
+                                                        ^
+  symbol:   class TradingRecord
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:88: error: cannot find symbol
+        @Override public boolean shouldExit(int index, TradingRecord tradingRecord) { return false; }
+                                                       ^
+  symbol:   class TradingRecord
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:90: error: cannot find symbol
+        @Override public ComponentDescriptor toDescriptor() { return null; }
+                         ^
+  symbol:   class ComponentDescriptor
+  location: class SimpleStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:96: error: cannot find symbol
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+                                       ^
+  symbol:   class TradingRecord
+  location: class SimpleExecutionModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:96: error: cannot find symbol
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+                                                                    ^
+  symbol:   class BarSeries
+  location: class SimpleExecutionModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:49: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:54: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:60: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:66: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:77: error: method does not override or implement a method from a supertype
+        @Override public Strategy and(Strategy strategy) { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:78: error: method does not override or implement a method from a supertype
+        @Override public Strategy or(Strategy strategy) { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:79: error: method does not override or implement a method from a supertype
+        @Override public Strategy and(String name, Strategy strategy, int unstableBars) { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:80: error: method does not override or implement a method from a supertype
+        @Override public Strategy or(String name, Strategy strategy, int unstableBars) { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:81: error: method does not override or implement a method from a supertype
+        @Override public Strategy opposite() { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:82: error: method does not override or implement a method from a supertype
+        @Override public void setUnstableBars(int unstableBars) {}
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:83: error: method does not override or implement a method from a supertype
+        @Override public int getUnstableBars() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:84: error: method does not override or implement a method from a supertype
+        @Override public boolean isUnstableAt(int index) { return false; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:85: error: method does not override or implement a method from a supertype
+        @Override public boolean shouldEnter(int index) { return false; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:86: error: method does not override or implement a method from a supertype
+        @Override public boolean shouldEnter(int index, TradingRecord tradingRecord) { return false; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:87: error: method does not override or implement a method from a supertype
+        @Override public boolean shouldExit(int index) { return false; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:88: error: method does not override or implement a method from a supertype
+        @Override public boolean shouldExit(int index, TradingRecord tradingRecord) { return false; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:89: error: method does not override or implement a method from a supertype
+        @Override public String toJson() { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:90: error: method does not override or implement a method from a supertype
+        @Override public ComponentDescriptor toDescriptor() { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:106: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:108: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(price, price, price, price, price); // index 0
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BaseBarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:109: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(price, price, price, price, price); // index 1
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BaseBarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:110: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(price, price, price, price, price); // index 2
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BaseBarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:134: error: cannot find symbol
+        Strategy strategy = new SimpleStrategy("enter‑0‑exit‑1", entry, exit);
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:138: error: cannot find symbol
+        TradingRecord record = manager.run(strategy); // default BUY, whole series
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:154: error: cannot find symbol
+        Strategy strategy = new SimpleStrategy("enter‑0‑exit‑2", entry, exit);
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:158: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.SELL);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:171: error: cannot find symbol
+        Strategy strategy = new SimpleStrategy("enter‑1‑exit‑2", entry, exit);
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:176: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, customAmount, 0, 2);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:194: error: cannot find symbol
+        Strategy strategy = new SimpleStrategy("enter‑0‑exit‑2", entry, exit);
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:199: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, 0, 1);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:211: error: cannot find symbol
+        Strategy strategy = new SimpleStrategy("enter‑2‑no‑exit", entry, exit);
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:217: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, 0, 2);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:224: error: no suitable method found for addBar(DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        series.addBar(DecimalNum.valueOf(100), DecimalNum.valueOf(100),
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BaseBarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:228: error: cannot find symbol
+        TradingRecord record2 = manager.run(strategy, TradeType.BUY, 0, 2);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:236: error: cannot find symbol
+        Strategy never = new SimpleStrategy("never", Collections.emptySet(), Collections.emptySet());
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:240: error: cannot find symbol
+        TradingRecord record = manager.run(never);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+54 errors

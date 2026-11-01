@@ -1,0 +1,51 @@
+{
+  "index": 402,
+  "sha": "f3c06bbe3d8ababd71fe440bf67f414314487732",
+  "parent": "0f637ec08abc602916dd75a8cedc0a0491cd653a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottFibonacciValidator.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      95
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveFacade.java": [
+      300,
+      301,
+      302,
+      303,
+      401
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottFibonacciValidator.java": [
+      82
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      81,
+      82,
+      83,
+      109,
+      111,
+      128,
+      130,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      148
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveFacade.java": [
+      301,
+      314,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottFibonacciValidator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottFibonacciValidator.java\nindex 93a376fd7..4255f7b53 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottFibonacciValidator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottFibonacciValidator.java\n@@ -76,0 +77,8 @@ public class ElliottFibonacciValidator {\n+    /**\n+     * @return the symmetric tolerance applied to each Fibonacci band\n+     * @since 0.22.7\n+     */\n+    public Num getTolerance() {\n+        return tolerance;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex d231e1bb8..1d71d9785 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -14,0 +15 @@ import org.ta4j.core.indicators.elliott.confidence.ConfidenceModel;\n+import org.ta4j.core.indicators.elliott.confidence.ConfidenceProfile;\n@@ -16,0 +18 @@ import org.ta4j.core.indicators.elliott.confidence.ElliottConfidenceBreakdown;\n+import org.ta4j.core.indicators.elliott.confidence.ElliottConfidenceContext;\n@@ -69,0 +72,13 @@ public final class ElliottScenarioGenerator {\n+    /**\n+     * Creates a generator with default settings but a caller-supplied Fibonacci\n+     * validator (typically carrying a custom tolerance).\n+     *\n+     * @param numFactory   factory for creating numeric values\n+     * @param fibValidator Fibonacci validator (typically with a custom tolerance)\n+     * @since 0.22.7\n+     */\n+    ElliottScenarioGenerator(final NumFactory numFactory, final ElliottFibonacciValidator fibValidator) {\n+        this(numFactory, DEFAULT_MIN_CONFIDENCE, DEFAULT_MAX_SCENARIOS,\n+                defaultConfidenceModel(numFactory, fibValidator), PatternSet.all(), fibValidator);\n+    }\n+\n@@ -93,0 +109,20 @@ public final class ElliottScenarioGenerator {\n+        this(numFactory, minConfidence, maxScenarios, confidenceModel, patternSet,\n+                new ElliottFibonacciValidator(numFactory));\n+    }\n+\n+    /**\n+     * Creates a generator with custom pruning thresholds, scoring model, and\n+     * Fibonacci validator.\n+     *\n+     * @param numFactory      factory for creating numeric values\n+     * @param minConfidence   minimum confidence to retain a scenario (0.0 - 1.0)\n+     * @param maxScenarios    maximum number of scenarios to return\n+     * @param confidenceModel confidence model used to score scenarios\n+     * @param patternSet      enabled pattern set\n+     * @param fibValidator    Fibonacci validator (typically with a custom\n+     *                        tolerance)\n+     * @since 0.22.7\n+     */\n+    private ElliottScenarioGenerator(final NumFactory numFactory, final double minConfidence, final int maxScenarios,\n+            final ConfidenceModel confidenceModel, final PatternSet patternSet,\n+            final ElliottFibonacciValidator fibValidator) {\n@@ -95 +130 @@ public final class ElliottScenarioGenerator {\n-        this.fibValidator = new ElliottFibonacciValidator(numFactory);\n+        this.fibValidator = Objects.requireNonNull(fibValidator, \"fibValidator\");\n@@ -102,0 +138,14 @@ public final class ElliottScenarioGenerator {\n+    private static ConfidenceModel defaultConfidenceModel(final NumFactory numFactory,\n+            final ElliottFibonacciValidator fibValidator) {\n+        final NumFactory checkedFactory = Objects.requireNonNull(numFactory, \"numFactory\");\n+        final ElliottFibonacciValidator checkedValidator = Objects.requireNonNull(fibValidator, \"fibValidator\");\n+        final ConfidenceProfile profile = ConfidenceProfiles.defaultProfile(checkedFactory);\n+        return (swings, phase, channel, scenarioType) -> {\n+            final List<ElliottSwing> safeSwings = swings == null ? List.of() : swings;\n+            final ElliottPhase safePhase = phase == null ? ElliottPhase.NONE : phase;\n+            final ElliottConfidenceContext context = new ElliottConfidenceContext(safeSwings, safePhase, channel,\n+                    checkedValidator, checkedFactory);\n+            return profile.score(context);\n+        };\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveFacade.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveFacade.java\nindex 194c987a9..f8d2ba79a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveFacade.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveFacade.java\n@@ -14 +13,0 @@ import org.ta4j.core.num.Num;\n-import org.ta4j.core.num.NumFactory;\n@@ -120,4 +119,5 @@ public final class ElliottWaveFacade {\n-     * @param fibTolerance optional custom Fibonacci tolerance for phase validation\n-     *                     (default: 0.05). When provided, the phase indicator will\n-     *                     use a custom {@link ElliottFibonacciValidator} with this\n-     *                     tolerance instead of the default validator.\n+     * @param fibTolerance optional custom Fibonacci tolerance for phase and\n+     *                     scenario validation (default: 0.05). When provided, phase\n+     *                     and scenario indicators will use a custom\n+     *                     {@link ElliottFibonacciValidator} with this tolerance\n+     *                     instead of the default validator.\n@@ -165,3 +165,3 @@ public final class ElliottWaveFacade {\n-     * @param fibTolerance      optional custom Fibonacci tolerance for phase\n-     *                          validation (default: 0.05). When provided, the phase\n-     *                          indicator will use a custom\n+     * @param fibTolerance      optional custom Fibonacci tolerance for phase and\n+     *                          scenario validation (default: 0.05). When provided,\n+     *                          phase and scenario indicators will use a custom\n@@ -209,4 +209,5 @@ public final class ElliottWaveFacade {\n-     * @param fibTolerance optional custom Fibonacci tolerance for phase validation\n-     *                     (default: 0.05). When provided, the phase indicator will\n-     *                     use a custom {@link ElliottFibonacciValidator} with this\n-     *                     tolerance instead of the default validator.\n+     * @param fibTolerance optional custom Fibonacci tolerance for phase and\n+     *                     scenario validation (default: 0.05). When provided, phase\n+     *                     and scenario indicators will use a custom\n+     *                     {@link ElliottFibonacciValidator} with this tolerance\n+     *                     instead of the default validator.\n@@ -249,3 +250,3 @@ public final class ElliottWaveFacade {\n-     * @param fibTolerance   optional custom Fibonacci tolerance for phase\n-     *                       validation (default: 0.05). When provided, the phase\n-     *                       indicator will use a custom\n+     * @param fibTolerance   optional custom Fibonacci tolerance for phase and\n+     *                       scenario validation (default: 0.05). When provided,\n+     *                       phase and scenario indicators will use a custom\n@@ -300,4 +301 @@ public final class ElliottWaveFacade {\n-                final NumFactory numFactory = series.numFactory();\n-                final ElliottFibonacciValidator validator = new ElliottFibonacciValidator(numFactory,\n-                        fibTolerance.get());\n-                phaseIndicator = new ElliottPhaseIndicator(swingIndicator, validator);\n+                phaseIndicator = new ElliottPhaseIndicator(swingIndicator, customFibValidator());\n@@ -310,0 +309,8 @@ public final class ElliottWaveFacade {\n+    /**\n+     * @return a Fibonacci validator carrying the configured custom tolerance; only\n+     *         valid to call when {@code fibTolerance} is present\n+     */\n+    private ElliottFibonacciValidator customFibValidator() {\n+        return new ElliottFibonacciValidator(series.numFactory(), fibTolerance.get());\n+    }\n+\n@@ -401 +407,7 @@ public final class ElliottWaveFacade {\n-            scenarioIndicator = new ElliottScenarioIndicator(swingIndicator, channel());\n+            if (fibTolerance.isPresent()) {\n+                final ElliottScenarioGenerator generator = new ElliottScenarioGenerator(series.numFactory(),\n+                        customFibValidator());\n+                scenarioIndicator = new ElliottScenarioIndicator(swingIndicator, channel(), generator);\n+            } else {\n+                scenarioIndicator = new ElliottScenarioIndicator(swingIndicator, channel());\n+            }"
+}

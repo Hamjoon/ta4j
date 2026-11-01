@@ -1,0 +1,6 @@
+{
+  "api document of class org.ta4j.core.Position": "\n * A {@code Position} is a pair of two {@link Trade trades}.\n *\n * <p>\n * The exit trade has the complement type of the entry trade, i.e.:\n * <ul>\n * <li>entry == BUY --> exit == SELL\n * <li>entry == SELL --> exit == BUY\n * </ul>\n ",
+  "api document of method operate(int)": "\n     * Operates the position at the index-th position.\n     *\n     * @param index the bar index\n     * @return the trade\n     * @see #operate(int, Num, Num)\n     ",
+  "return type": "org.ta4j.core.Trade",
+  "dependent classes": "class `org.ta4j.core.num.NaN`:\n\tdependent fields:\n\t\torg.ta4j.core.num.Num org.ta4j.core.num.NaN.NaN;\n\t\nclass `org.ta4j.core.TradingRecord`:\n\trelated functions:\n\t\tmethod ` void operate(int)` returns `void`, related with `org.ta4j.core.Position.operate(int)`, api document: \n     * Places a trade in the trading record.\n     *\n     * @param index the index to place the trade\n     ;"
+}

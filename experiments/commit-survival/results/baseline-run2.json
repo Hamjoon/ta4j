@@ -1,0 +1,30 @@
+{
+  "index": 2,
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "test"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 0.855,
+      "log": "results/baseline-run2-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "test"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 17.404,
+      "log": "results/baseline-run2-2.txt"
+    }
+  ]
+}

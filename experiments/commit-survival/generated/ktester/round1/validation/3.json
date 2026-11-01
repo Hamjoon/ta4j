@@ -1,0 +1,218 @@
+{
+  "file": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/classes",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.778,
+    "log": "work/validation/ktester/round1/3/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValueDelegatesToAverageTrueRangeIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_ValidIndices_DelegatesAndReturnsNum(int)",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_InvalidIndices_PropagatesException(int)",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_CallsMMAIndicatorExactlyOnce()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/run1"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 3.069,
+      "log": "work/validation/ktester/round1/3/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValueDelegatesToAverageTrueRangeIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_ValidIndices_DelegatesAndReturnsNum(int)",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_InvalidIndices_PropagatesException(int)",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_CallsMMAIndicatorExactlyOnce()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/run2"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 2.076,
+      "log": "work/validation/ktester/round1/3/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValueDelegatesToAverageTrueRangeIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_ValidIndices_DelegatesAndReturnsNum(int)",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_InvalidIndices_PropagatesException(int)",
+        "--select-method",
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_CallsMMAIndicatorExactlyOnce()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/3/test/run3"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.672,
+      "log": "work/validation/ktester/round1/3/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java",
+      "class": "org.ta4j.core.indicators.ATRIndicator_getValue_Test",
+      "method": "testGetValueDelegatesToAverageTrueRangeIndicator",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java|org.ta4j.core.indicators.ATRIndicator_getValue_Test|testGetValueDelegatesToAverageTrueRangeIndicator",
+      "body_hash": "7412ca9daf65d03c5753f7bb2c3c4078f9df5fd429130d10b09af8c183f3f649",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "fail",
+      "message": "org.opentest4j.AssertionFailedError: ATRIndicator.getValue should delegate to MMAIndicator.getValue ==> expected: <null> but was: <Mock for Num, hashCode: 67811496>",
+      "flaky": false,
+      "initial_state": "fail",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValueDelegatesToAverageTrueRangeIndicator()"
+      ],
+      "baseline_states": [
+        "fail",
+        "fail",
+        "fail"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java",
+      "class": "org.ta4j.core.indicators.ATRIndicator_getValue_Test",
+      "method": "testGetValue_ValidIndices_DelegatesAndReturnsNum",
+      "kind": "parameterized",
+      "id": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java|org.ta4j.core.indicators.ATRIndicator_getValue_Test|testGetValue_ValidIndices_DelegatesAndReturnsNum",
+      "body_hash": "bb89ba7ebdef33b00e81a40ca79c38782f330b049ea99f6fa62b8e356262696e",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.misusing.UnnecessaryStubbingException:  Unnecessary stubbings detected. Clean & maintainable test code requires zero unnecessary code. Following stubbings are unnecessary (click to navigate to relevant line of code):   1. -> at org.ta4j.core.indicators.ATRIndicator_getValue_Test.setupBeforeEach(ATRIndicator_getValue_Test.java:43)   2. -> at org.ta4j.core.indicators.ATRIndicator_getValue_Test.setupBeforeEach(ATRIndicator_getValue_Test.java:49) Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_ValidIndices_DelegatesAndReturnsNum(int)"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java",
+      "class": "org.ta4j.core.indicators.ATRIndicator_getValue_Test",
+      "method": "testGetValue_InvalidIndices_PropagatesException",
+      "kind": "parameterized",
+      "id": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java|org.ta4j.core.indicators.ATRIndicator_getValue_Test|testGetValue_InvalidIndices_PropagatesException",
+      "body_hash": "8bf7d39a6f8c2ea47f0fedde68f23eaa7fd0a967bee1711af501062c721db815",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.misusing.UnnecessaryStubbingException:  Unnecessary stubbings detected. Clean & maintainable test code requires zero unnecessary code. Following stubbings are unnecessary (click to navigate to relevant line of code):   1. -> at org.ta4j.core.indicators.ATRIndicator_getValue_Test.setupBeforeEach(ATRIndicator_getValue_Test.java:43)   2. -> at org.ta4j.core.indicators.ATRIndicator_getValue_Test.setupBeforeEach(ATRIndicator_getValue_Test.java:49) Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_InvalidIndices_PropagatesException(int)"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java",
+      "class": "org.ta4j.core.indicators.ATRIndicator_getValue_Test",
+      "method": "testGetValue_CallsMMAIndicatorExactlyOnce",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java|org.ta4j.core.indicators.ATRIndicator_getValue_Test|testGetValue_CallsMMAIndicatorExactlyOnce",
+      "body_hash": "66af7f5e4110f90f505db0ab98a5f20574afb3ce7598e079325dd837516a9941",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "error",
+      "message": "org.mockito.exceptions.misusing.UnnecessaryStubbingException:  Unnecessary stubbings detected. Clean & maintainable test code requires zero unnecessary code. Following stubbings are unnecessary (click to navigate to relevant line of code):   1. -> at org.ta4j.core.indicators.ATRIndicator_getValue_Test.setupBeforeEach(ATRIndicator_getValue_Test.java:43)   2. -> at org.ta4j.core.indicators.ATRIndicator_getValue_Test.setupBeforeEach(ATRIndicator_getValue_Test.java:49) Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.",
+      "flaky": false,
+      "initial_state": "error",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicator_getValue_Test#testGetValue_CallsMMAIndicatorExactlyOnce()"
+      ],
+      "baseline_states": [
+        "error",
+        "error",
+        "error"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/ATRIndicator_getValue_Test.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 1.036,
+    "log": "work/validation/ktester/round1/3/inventory.tsv"
+  },
+  "input_sha256": "51d0dd3753a4925c287ed0b6a75b4ce1ddc695d8e80b3a96e92fbd8246825992"
+}

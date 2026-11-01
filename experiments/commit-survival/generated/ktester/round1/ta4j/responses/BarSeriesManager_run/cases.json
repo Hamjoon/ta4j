@@ -1,0 +1,127 @@
+[
+  {
+    "group": "BarSeriesManager.run(Strategy) - default BUY trade type",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "AlwaysEnterExitStrategy"
+          }
+        ],
+        "expected": "TradingRecord containing at least one BUY trade (entry) and one SELL trade (exit) corresponding to the series length",
+        "description": "Verify that a non\u2011null strategy which always returns true for both entry and exit signals results in a non\u2011empty TradingRecord. The method should delegate to run(strategy, TradeType.BUY) and use BUY as the default trade type."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "NeverEnterStrategy"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "When the supplied strategy never signals an entry, the manager should still return a TradingRecord object, but it must contain no trades. This confirms that the default BUY trade type does not cause unintended trades."
+      },
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "Passing a null strategy should result in a NullPointerException (or the specific exception the implementation throws). The test ensures that the method validates its input before delegating."
+      }
+    ]
+  },
+  {
+    "group": "BarSeriesManager.run(Strategy) - entry without exit",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "AlwaysEnterNeverExitStrategy"
+          }
+        ],
+        "expected": "TradingRecord containing exactly one BUY trade (entry) with no corresponding SELL trade (position remains open)",
+        "description": "The strategy signals entry on every bar but never signals exit. The default BUY trade type should create a single open trade at the first signal and never close it, resulting in a TradingRecord with one entry and no exit."
+      }
+    ]
+  },
+  {
+    "group": "BarSeriesManager.run(Strategy) - exit without prior entry",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "NeverEnterAlwaysExitStrategy"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "The strategy never signals an entry but always signals an exit. Since there is no open position, the manager must ignore exit signals and return an empty TradingRecord."
+      }
+    ]
+  },
+  {
+    "group": "BarSeriesManager.run(Strategy) - single\u2011bar series with immediate entry/exit",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "EnterAndExitSameBarStrategy"
+          }
+        ],
+        "expected": "TradingRecord containing one completed BUY\u2011SELL trade whose entry and exit indices are both 0",
+        "description": "The BarSeries contains only one bar. The strategy signals both entry and exit on that bar. The manager should record a trade that opens and closes on the same index, yielding a single completed trade."
+      }
+    ]
+  },
+  {
+    "group": "BarSeriesManager.run(Strategy) - strategy throws exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "ExceptionThrowingStrategy"
+          }
+        ],
+        "expected": "RuntimeException (propagated from strategy)",
+        "description": "When the supplied strategy throws a RuntimeException during signal evaluation, the manager must not catch it silently; the exception should propagate to the caller."
+      }
+    ]
+  },
+  {
+    "group": "BarSeriesManager.run(Strategy) - empty BarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "AlwaysEnterExitStrategy"
+          }
+        ],
+        "expected": "TradingRecord with zero trades (empty record)",
+        "description": "The manager is configured with an empty BarSeries (no bars). Even if the strategy would normally generate signals, there are no data points to evaluate, so the resulting TradingRecord must be empty."
+      }
+    ]
+  },
+  {
+    "group": "BarSeriesManager.run(Strategy) - null BarSeries",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "strategy",
+            "value": "AlwaysEnterExitStrategy"
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "The BarSeriesManager is configured with a null BarSeries (e.g., via a constructor or setter that allows null). Invoking run(strategy) with a valid non\u2011null strategy should trigger a NullPointerException because the implementation attempts to access the series before delegating to the overloaded run method."
+      }
+    ]
+  }
+]

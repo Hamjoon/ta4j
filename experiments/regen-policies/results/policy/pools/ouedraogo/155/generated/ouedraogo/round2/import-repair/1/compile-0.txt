@@ -1,0 +1,4 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:25: error: DummyBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries
+    private static class DummyBarSeries implements BarSeries {
+                   ^
+1 error

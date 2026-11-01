@@ -1,0 +1,125 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:17: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:47: error: cannot find symbol
+        series = new BaseBarSeries.Builder().withName("test-series").build();
+                                  ^
+  symbol:   class Builder
+  location: class BaseBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:60: error: cannot find symbol
+        series.addBar(Bar.builder()
+                         ^
+  symbol:   method builder()
+  location: interface Bar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:69: error: cannot find symbol
+        series.addBar(Bar.builder()
+                         ^
+  symbol:   method builder()
+  location: interface Bar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:78: error: cannot find symbol
+        series.addBar(Bar.builder()
+                         ^
+  symbol:   method builder()
+  location: interface Bar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:165: error: no suitable method found for minus(DecimalNum)
+        NumericIndicator negative = close.minus(DecimalNum.valueOf(50));
+                                         ^
+    method NumericIndicator.minus(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.minus(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:214: error: cannot find symbol
+        Num ema1 = close.getValue(1).multipliedBy(k).plus(ema0.multipliedBy(DecimalNum.ONE.minus(k)));
+                                                                                      ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:215: error: cannot find symbol
+        Num ema2 = close.getValue(2).multipliedBy(k).plus(ema1.multipliedBy(DecimalNum.ONE.minus(k)));
+                                                                                      ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:268: error: cannot find symbol
+        Rule crossedOver = close.crossedOver(sma);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:281: error: cannot find symbol
+        Rule crossedUnder = close.crossedUnder(sma);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:293: error: cannot find symbol
+        Rule greaterThan15 = close.isGreaterThan(DecimalNum.valueOf(15));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:293: error: no suitable method found for isGreaterThan(DecimalNum)
+        Rule greaterThan15 = close.isGreaterThan(DecimalNum.valueOf(15));
+                                  ^
+    method NumericIndicator.isGreaterThan(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.isGreaterThan(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:301: error: cannot find symbol
+        Rule lessThan25 = close.isLessThan(DecimalNum.valueOf(25));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:301: error: no suitable method found for isLessThan(DecimalNum)
+        Rule lessThan25 = close.isLessThan(DecimalNum.valueOf(25));
+                               ^
+    method NumericIndicator.isLessThan(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.isLessThan(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:360: error: cannot find symbol
+        Rule rule = close.crossedOver(DecimalNum.valueOf(15));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:360: error: no suitable method found for crossedOver(DecimalNum)
+        Rule rule = close.crossedOver(DecimalNum.valueOf(15));
+                         ^
+    method NumericIndicator.crossedOver(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.crossedOver(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:368: error: cannot find symbol
+        Rule rule = close.crossedUnder(DecimalNum.valueOf(25));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:368: error: no suitable method found for crossedUnder(DecimalNum)
+        Rule rule = close.crossedUnder(DecimalNum.valueOf(25));
+                         ^
+    method NumericIndicator.crossedUnder(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.crossedUnder(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:377: error: cannot find symbol
+        Rule rule = close.isGreaterThan(DecimalNum.valueOf(20));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:377: error: no suitable method found for isGreaterThan(DecimalNum)
+        Rule rule = close.isGreaterThan(DecimalNum.valueOf(20));
+                         ^
+    method NumericIndicator.isGreaterThan(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.isGreaterThan(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:385: error: cannot find symbol
+        Rule rule = close.isLessThan(DecimalNum.valueOf(20));
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:385: error: no suitable method found for isLessThan(DecimalNum)
+        Rule rule = close.isLessThan(DecimalNum.valueOf(20));
+                         ^
+    method NumericIndicator.isLessThan(Indicator<Num>) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Indicator<Num>)
+    method NumericIndicator.isLessThan(Number) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to Number)
+22 errors

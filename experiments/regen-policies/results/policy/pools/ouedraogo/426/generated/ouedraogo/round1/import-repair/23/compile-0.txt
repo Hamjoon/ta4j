@@ -1,0 +1,68 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:51: error: incompatible types: String cannot be converted to Config
+        BarSeries s = new BaseBarSeries("test-series");
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:54: error: incompatible types: int cannot be converted to Duration
+                .timePeriod(1)
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:76: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:89: error: cannot find symbol
+        Position longPos = new Position(TradeType.BUY);
+                                        ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:90: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:91: error: cannot find symbol
+        assertEquals(TradeType.BUY, longPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:92: error: cannot find symbol
+        assertEquals(TradeType.SELL, shortPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:106: error: cannot find symbol
+        Position pos = new Position(TradeType.BUY);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:111: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:121: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:131: error: cannot find symbol
+        Position pos = new Position(TradeType.BUY);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:153: error: cannot find symbol
+        CostModel zeroCost = new ZeroCostModel();
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:163: error: cannot find symbol
+        CostModel otherCost = new ZeroCostModel() {
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:248: error: cannot find symbol
+        Num gross = TWELVE.negated().plus(EIGHT); // (8 - 12) = -4
+                          ^
+  symbol:   method negated()
+  location: variable TWELVE of type Num
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+14 errors

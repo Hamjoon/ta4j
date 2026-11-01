@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/donggi/_projects/experiment-projects/test-survival/src/test_survival/policy/pipeline.py", line 45, in __call__
+    action()
+  File "/Users/donggi/_projects/experiment-projects/test-survival/src/test_survival/policy/cover.py", line 39, in measure
+    raw = coverage(adapter,index,list(tests.values()),str(index))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/donggi/_projects/experiment-projects/test-survival/src/test_survival/policy/pools.py", line 31, in coverage
+    result = adapter.worker(dict(action='policy-cover', index=index, sha=sha, group='policy-coverage', methods=members,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/donggi/_projects/experiment-projects/test-survival/src/test_survival/adapters/java_maven.py", line 237, in worker
+    raise RuntimeError('Java worker failed; see '+str(path.with_suffix('.log')))
+RuntimeError: Java worker failed; see /Users/donggi/_projects/experiment-projects/ta4j/experiments/regen-policies/work/policy-coverage/17-0-job.log

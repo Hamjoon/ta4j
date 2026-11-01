@@ -1,0 +1,329 @@
+###Test START##
+```java
+package org.ta4j.core;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+
+/**
+ * JUnit‑4 test suite for {@link Position}.
+ *
+ * The test class follows the requested steps:
+ *
+ * 1. List all public methods of {@code Position}.
+ * 2. Provide a basic test for each method.
+ * 3. Identify edge‑case / exception scenarios.
+ * 4. Add dedicated tests for those scenarios.
+ * 5. Merge everything into a single test file.
+ *
+ * NOTE: The library provides a concrete {@link DecimalNum} implementation of
+ * {@link Num}. It is used throughout the tests to create price/amount values.
+ */
+public class PositionTest {
+
+    /* --------------------------------------------------------------------- *
+     *  1. PUBLIC METHODS OF Position (extracted from the source)            *
+     * --------------------------------------------------------------------- *
+     *
+     *  Trade getEntry()
+     *  Trade getExit()
+     *  boolean equals(Object obj)
+     *  int hashCode()
+     *  Trade operate(int index)
+     *  Trade operate(int index, Num price, Num amount)
+     *  boolean isClosed()
+     *  boolean isOpened()
+     *  boolean isNew()
+     *  boolean hasProfit()
+     *  boolean hasLoss()
+     *  Num getProfit()
+     *  Num getProfit(int finalIndex, Num finalPrice)
+     *  Num getGrossProfit()
+     *  Num getGrossProfit(Num finalPrice)
+     *  Num getGrossReturn()
+     *  Num getGrossReturn(Num finalPrice)
+     *  Num getGrossReturn(BarSeries barSeries)
+     *  Num getGrossReturn(Num entryPrice, Num exitPrice)
+     *  Num getPositionCost(int finalIndex)
+     *  Num getPositionCost()
+     *  Num getHoldingCost()
+     *  Num getHoldingCost(int finalIndex)
+     *  TradeType getStartingType()
+     *  String toString()
+     */
+
+    private static final Num PRICE_10 = DecimalNum.valueOf(10);
+    private static final Num PRICE_12 = DecimalNum.valueOf(12);
+    private static final Num PRICE_8  = DecimalNum.valueOf(8);
+    private static final Num AMOUNT_1 = DecimalNum.valueOf(1);
+    private static final Num ZERO = DecimalNum.valueOf(0);
+
+    private Position position;
+
+    @Before
+    public void setUp() {
+        // a fresh Position for each test (new → isNew == true)
+        position = new Position();
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  2. BASIC TESTS FOR EVERY PUBLIC METHOD                               *
+     * --------------------------------------------------------------------- */
+
+    @Test
+    public void testDefaultConstructorStartingType() {
+        assertEquals(TradeType.BUY, position.getStartingType());
+    }
+
+    @Test
+    public void testGetEntryAndExitInitiallyNull() {
+        assertNull(position.getEntry());
+        assertNull(position.getExit());
+    }
+
+    @Test
+    public void testIsNewInitially() {
+        assertTrue(position.isNew());
+        assertFalse(position.isOpened());
+        assertFalse(position.isClosed());
+    }
+
+    @Test
+    public void testOperateCreatesEntry() {
+        Trade entry = position.operate(0, PRICE_10, AMOUNT_1);
+        assertNotNull(entry);
+        assertEquals(TradeType.BUY, entry.getType());
+        assertEquals(entry, position.getEntry());
+        assertTrue(position.isOpened());
+        assertFalse(position.isClosed());
+    }
+
+    @Test
+    public void testOperateCreatesExit() {
+        // create entry first
+        position.operate(0, PRICE_10, AMOUNT_1);
+        // create exit
+        Trade exit = position.operate(5, PRICE_12, AMOUNT_1);
+        assertNotNull(exit);
+        assertEquals(TradeType.SELL, exit.getType());
+        assertEquals(exit, position.getExit());
+        assertTrue(position.isClosed());
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testOperateIndexLessThanEntryThrows() {
+        // create entry at index 3
+        position.operate(3, PRICE_10, AMOUNT_1);
+        // try to create exit at index 2 → should throw
+        position.operate(2, PRICE_12, AMOUNT_1);
+    }
+
+    @Test
+    public void testOperateWithoutPriceAmountUsesNaN() {
+        // NaN is a valid Num (static import from Position)
+        Trade entry = position.operate(0);
+        assertNotNull(entry);
+        // price and amount are NaN – the trade still exists
+        assertTrue(entry.getPricePerAsset().isNaN());
+        assertTrue(entry.getAmount().isNaN());
+    }
+
+    @Test
+    public void testIsOpenedAndIsClosedTransitions() {
+        assertFalse(position.isOpened());
+        assertFalse(position.isClosed());
+
+        position.operate(0, PRICE_10, AMOUNT_1);
+        assertTrue(position.isOpened());
+        assertFalse(position.isClosed());
+
+        position.operate(2, PRICE_12, AMOUNT_1);
+        assertTrue(position.isClosed());
+        assertFalse(position.isOpened());
+    }
+
+    @Test
+    public void testGetProfitClosedBuyPosition() {
+        // BUY @10, SELL @12 → profit = 2
+        position.operate(0, PRICE_10, AMOUNT_1); // entry
+        position.operate(1, PRICE_12, AMOUNT_1); // exit
+        Num profit = position.getProfit();
+        assertEquals(DecimalNum.valueOf(2), profit);
+    }
+
+    @Test
+    public void testGetProfitClosedSellPosition() {
+        // SELL @12, BUY @10 → profit = 2 (short)
+        Position shortPos = new Position(TradeType.SELL);
+        shortPos.operate(0, PRICE_12, AMOUNT_1); // entry (sell)
+        shortPos.operate(1, PRICE_10, AMOUNT_1); // exit (buy)
+        Num profit = shortPos.getProfit();
+        assertEquals(DecimalNum.valueOf(2), profit);
+    }
+
+    @Test
+    public void testHasProfitAndHasLoss() {
+        // profit case
+        position.operate(0, PRICE_10, AMOUNT_1);
+        position.operate(1, PRICE_12, AMOUNT_1);
+        assertTrue(position.hasProfit());
+        assertFalse(position.hasLoss());
+
+        // loss case
+        Position lossPos = new Position();
+        lossPos.operate(0, PRICE_12, AMOUNT_1);
+        lossPos.operate(1, PRICE_10, AMOUNT_1);
+        assertFalse(lossPos.hasProfit());
+        assertTrue(lossPos.hasLoss());
+    }
+
+    @Test
+    public void testGetProfitWhenOpenedReturnsZero() {
+        position.operate(0, PRICE_10, AMOUNT_1);
+        assertEquals(ZERO, position.getProfit());
+    }
+
+    @Test
+    public void testGetGrossProfitClosedBuy() {
+        position.operate(0, PRICE_10, AMOUNT_1);
+        position.operate(1, PRICE_12, AMOUNT_1);
+        Num gross = position.getGrossProfit();
+        assertEquals(DecimalNum.valueOf(2), gross);
+    }
+
+    @Test
+    public void testGetGrossProfitClosedSell() {
+        Position shortPos = new Position(TradeType.SELL);
+        shortPos.operate(0, PRICE_12, AMOUNT_1);
+        shortPos.operate(1, PRICE_10, AMOUNT_1);
+        Num gross = shortPos.getGrossProfit();
+        // gross profit before sign‑adjustment is -2, after sign‑adjustment it becomes 2
+        assertEquals(DecimalNum.valueOf(2), gross);
+    }
+
+    @Test
+    public void testGetGrossReturnBuy() {
+        position.operate(0, PRICE_10, AMOUNT_1);
+        position.operate(1, PRICE_12, AMOUNT_1);
+        Num ret = position.getGrossReturn();
+        // 12 / 10 = 1.2
+        assertEquals(DecimalNum.valueOf(1.2), ret);
+    }
+
+    @Test
+    public void testGetGrossReturnSell() {
+        Position shortPos = new Position(TradeType.SELL);
+        shortPos.operate(0, PRICE_12, AMOUNT_1);
+        shortPos.operate(1, PRICE_10, AMOUNT_1);
+        Num ret = shortPos.getGrossReturn();
+        // ((10/12 - 1) * -1) + 1 = 1.16666...
+        assertEquals(DecimalNum.valueOf(1.1666666666666667), ret);
+    }
+
+    @Test
+    public void testGetGrossReturnWithExplicitPrices() {
+        // BUY 8 → 12
+        Position p = new Position();
+        p.operate(0, PRICE_8, AMOUNT_1);
+        p.operate(1, PRICE_12, AMOUNT_1);
+        Num ret = p.getGrossReturn(PRICE_8, PRICE_12);
+        assertEquals(DecimalNum.valueOf(1.5), ret); // 12/8 = 1.5
+    }
+
+    @Test
+    public void testGetPositionCostZeroModel() {
+        // With the default ZeroCostModel the total cost must be zero
+        position.operate(0, PRICE_10, AMOUNT_1);
+        position.operate(1, PRICE_12, AMOUNT_1);
+        assertEquals(ZERO, position.getPositionCost());
+        assertEquals(ZERO, position.getHoldingCost());
+    }
+
+    @Test
+    public void testEqualsAndHashCode() {
+        Position p1 = new Position();
+        p1.operate(0, PRICE_10, AMOUNT_1);
+        p1.operate(1, PRICE_12, AMOUNT_1);
+
+        Position p2 = new Position();
+        p2.operate(0, PRICE_10, AMOUNT_1);
+        p2.operate(1, PRICE_12, AMOUNT_1);
+
+        assertEquals(p1, p2);
+        assertEquals(p1.hashCode(), p2.hashCode());
+    }
+
+    @Test
+    public void testToStringContainsEntryAndExit() {
+        position.operate(0, PRICE_10, AMOUNT_1);
+        position.operate(1, PRICE_12, AMOUNT_1);
+        String txt = position.toString();
+        assertTrue(txt.contains("Entry"));
+        assertTrue(txt.contains("exit"));
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  3. EDGE‑CASE / EXCEPTION SCENARIOS                                   *
+     * --------------------------------------------------------------------- */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorNullStartingType() {
+        new Position(null);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorEntryExitSameTypeThrows() {
+        Trade buy = Trade.buyAt(0, PRICE_10, AMOUNT_1);
+        Trade anotherBuy = Trade.buyAt(1, PRICE_12, AMOUNT_1);
+        new Position(buy, anotherBuy);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorEntryExitMismatchedCostModelThrows() {
+        // Build a custom (non‑zero) cost model to cause a mismatch
+        CostModel customCost = new CostModel() {
+            @Override public Num calculate(Position p, int i) { return ZERO; }
+            @Override public Num calculate(Position p) { return ZERO; }
+            @Override public Num calculate(Num price, Num amount) { return ZERO; }
+            @Override public boolean equals(CostModel other) { return false; }
+        };
+        Trade buy = Trade.buyAt(0, PRICE_10, AMOUNT_1, customCost);
+        Trade sell = Trade.sellAt(1, PRICE_12, AMOUNT_1); // uses ZeroCostModel internally
+        new Position(buy, sell, customCost, new ZeroCostModel());
+    }
+
+    @Test
+    public void testOperateWithNaNPriceAndAmountCreatesTrade() {
+        Trade entry = position.operate(0, Position.NaN, Position.NaN);
+        assertNotNull(entry);
+        assertTrue(entry.getPricePerAsset().isNaN());
+        assertTrue(entry.getAmount().isNaN());
+    }
+
+    @Test
+    public void testGetProfitWithOpenPositionAndFinalValues() {
+        // Open position only
+        position.operate(0, PRICE_10, AMOUNT_1);
+        // final price 12, final index 5 → profit should be (12‑10)=2
+        Num profit = position.getProfit(5, PRICE_12);
+        assertEquals(DecimalNum.valueOf(2), profit);
+    }
+
+    @Test
+    public void testGetGrossProfitWithOpenPositionAndFinalPrice() {
+        position.operate(0, PRICE_10, AMOUNT_1);
+        Num gross = position.getGrossProfit(PRICE_12);
+        assertEquals(DecimalNum.valueOf(2), gross);
+    }
+
+    /* --------------------------------------------------------------------- *
+     *  4. COMPLETION – ALL TESTS ARE IN THIS SINGLE FILE                     *
+     * --------------------------------------------------------------------- */
+}
+```
+###Test END##

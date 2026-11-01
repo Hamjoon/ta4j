@@ -1,0 +1,70 @@
+{
+  "index": 159,
+  "sha": "1c822d83c49c734c133f8a4e2dfe7b4b51dfbd1d",
+  "parent": "dc7594362a9070b657e93c2b6e7242ea4b2e36ac",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/analysis/CashFlow.java": [
+      55,
+      69,
+      81,
+      82,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      154,
+      164,
+      165,
+      167,
+      215,
+      228
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/analysis/CashFlow.java": [
+      59,
+      60,
+      71,
+      72,
+      73,
+      87,
+      88,
+      100,
+      112,
+      113,
+      126,
+      127,
+      128,
+      129,
+      194,
+      195,
+      196,
+      199,
+      200,
+      201,
+      202,
+      203,
+      205,
+      206,
+      213,
+      214,
+      218,
+      219,
+      220,
+      221,
+      223,
+      224,
+      225,
+      269,
+      282
+    ],
+    "src/main/java/org/ta4j/core/analysis/EquityCurveMode.java": [
+      36,
+      41,
+      47
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java\nindex 27c29a26e..c3c043e0e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java\n@@ -29,0 +30 @@ import java.util.List;\n+import java.util.Objects;\n@@ -38 +39 @@ import org.ta4j.core.num.Num;\n- * bar series.\n+ * bar series, either marked to market or using realized values only.\n@@ -47,0 +49,3 @@ public class CashFlow implements Indicator<Num> {\n+    /** The equity curve calculation mode. */\n+    private final EquityCurveMode equityCurveMode;\n+\n@@ -55 +59,15 @@ public class CashFlow implements Indicator<Num> {\n-        this.barSeries = barSeries;\n+        this(barSeries, position, EquityCurveMode.MARK_TO_MARKET);\n+    }\n+\n+    /**\n+     * Constructor for cash flows of a closed position.\n+     *\n+     * @param barSeries       the bar series\n+     * @param position        a single position\n+     * @param equityCurveMode the calculation mode\n+     *\n+     * @since 0.22.2\n+     */\n+    public CashFlow(BarSeries barSeries, Position position, EquityCurveMode equityCurveMode) {\n+        this.barSeries = Objects.requireNonNull(barSeries);\n+        this.equityCurveMode = Objects.requireNonNull(equityCurveMode);\n@@ -69 +87,14 @@ public class CashFlow implements Indicator<Num> {\n-        this(barSeries, tradingRecord, tradingRecord.getEndIndex(barSeries));\n+        this(barSeries, tradingRecord, tradingRecord.getEndIndex(barSeries), EquityCurveMode.MARK_TO_MARKET);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param barSeries       the bar series\n+     * @param tradingRecord   the trading record\n+     * @param equityCurveMode the calculation mode\n+     *\n+     * @since 0.22.2\n+     */\n+    public CashFlow(BarSeries barSeries, TradingRecord tradingRecord, EquityCurveMode equityCurveMode) {\n+        this(barSeries, tradingRecord, tradingRecord.getEndIndex(barSeries), equityCurveMode);\n@@ -81,2 +112,18 @@ public class CashFlow implements Indicator<Num> {\n-        this.barSeries = barSeries;\n-        values = new ArrayList<>(Collections.singletonList(getBarSeries().numFactory().one()));\n+        this(barSeries, tradingRecord, finalIndex, EquityCurveMode.MARK_TO_MARKET);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param barSeries       the bar series\n+     * @param tradingRecord   the trading record\n+     * @param finalIndex      index up until cash flows of open positions are\n+     *                        considered\n+     * @param equityCurveMode the calculation mode\n+     *\n+     * @since 0.22.2\n+     */\n+    public CashFlow(BarSeries barSeries, TradingRecord tradingRecord, int finalIndex, EquityCurveMode equityCurveMode) {\n+        this.barSeries = Objects.requireNonNull(barSeries);\n+        this.equityCurveMode = Objects.requireNonNull(equityCurveMode);\n+        values = new ArrayList<>(List.of(getBarSeries().numFactory().one()));\n@@ -139,0 +187 @@ public class CashFlow implements Indicator<Num> {\n+\n@@ -144 +192 @@ public class CashFlow implements Indicator<Num> {\n-        // Trade is not valid if net balance at the entryIndex is negative\n+\n@@ -146,6 +194,10 @@ public class CashFlow implements Indicator<Num> {\n-        if (values.getLast().isGreaterThan(zero)) {\n-            var startingIndex = Math.max(begin, 1);\n-            var holdingCost = position.getHoldingCost(endIndex);\n-            var nPeriods = endIndex - entryIndex;\n-            var effectivePeriods = Math.max(1, nPeriods);\n-            var avgCost = holdingCost.dividedBy(numFactory.numOf(effectivePeriods));\n+        var entryEquity = values.get(entryIndex);\n+        if (!entryEquity.isGreaterThan(zero)) {\n+            return;\n+        }\n+\n+        var startingIndex = Math.max(begin, 1);\n+        var holdingCost = position.getHoldingCost(endIndex);\n+        var nPeriods = endIndex - entryIndex;\n+        var effectivePeriods = Math.max(1, nPeriods);\n+        var netEntryPrice = position.getEntry().getNetPrice();\n@@ -153,2 +205,2 @@ public class CashFlow implements Indicator<Num> {\n-            // Add intermediate cash flows during position\n-            var netEntryPrice = position.getEntry().getNetPrice();\n+        if (equityCurveMode == EquityCurveMode.MARK_TO_MARKET) {\n+            var avgCost = holdingCost.dividedBy(numFactory.numOf(effectivePeriods));\n@@ -161,8 +213,2 @@ public class CashFlow implements Indicator<Num> {\n-\n-            // add net cash flow at exit position\n-            Num exitPrice;\n-            if (position.getExit() != null) {\n-                exitPrice = position.getExit().getNetPrice();\n-            } else {\n-                exitPrice = barSeries.getBar(endIndex).getClosePrice();\n-            }\n+            var exitPrice = position.getExit() != null ? position.getExit().getNetPrice()\n+                    : barSeries.getBar(endIndex).getClosePrice();\n@@ -171,0 +218,8 @@ public class CashFlow implements Indicator<Num> {\n+        } else if (position.getExit() != null && endIndex >= position.getExit().getIndex()) {\n+            var entryValue = values.get(entryIndex);\n+            for (var i = startingIndex; i < endIndex; i++) {\n+                values.add(entryValue);\n+            }\n+            var netExitPrice = AnalysisUtils.addCost(position.getExit().getNetPrice(), holdingCost, isLongTrade);\n+            var ratio = getIntermediateRatio(isLongTrade, netEntryPrice, netExitPrice);\n+            values.add(entryValue.multipliedBy(ratio));\n@@ -215 +269 @@ public class CashFlow implements Indicator<Num> {\n-        if (tradingRecord.getCurrentPosition().isOpened()) {\n+        if (equityCurveMode == EquityCurveMode.MARK_TO_MARKET && tradingRecord.getCurrentPosition().isOpened()) {\n@@ -228 +282 @@ public class CashFlow implements Indicator<Num> {\n-            values.addAll(Collections.nCopies(barSeries.getEndIndex() - values.size() + 1, lastValue));\n+            values.addAll(Collections.nCopies(endIndex - values.size() + 1, lastValue));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/EquityCurveMode.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/EquityCurveMode.java\nnew file mode 100644\nindex 000000000..c53e03b10\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/EquityCurveMode.java\n@@ -0,0 +1,48 @@\n+/*\n+ * The MIT License (MIT)\n+ *\n+ * Copyright (c) 2017-2025 Ta4j Organization & respective\n+ * authors (see AUTHORS)\n+ *\n+ * Permission is hereby granted, free of charge, to any person obtaining a copy of\n+ * this software and associated documentation files (the \"Software\"), to deal in\n+ * the Software without restriction, including without limitation the rights to\n+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\n+ * the Software, and to permit persons to whom the Software is furnished to do so,\n+ * subject to the following conditions:\n+ *\n+ * The above copyright notice and this permission notice shall be included in all\n+ * copies or substantial portions of the Software.\n+ *\n+ * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\n+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\n+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\n+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n+ */\n+package org.ta4j.core.analysis;\n+\n+/**\n+ * Defines how equity curves are computed.\n+ * <p>\n+ * {@link #MARK_TO_MARKET} reflects unrealized profit and loss on each bar using\n+ * intermediate prices, while {@link #REALIZED} updates the curve only when a\n+ * position is closed, keeping interim bars flat.\n+ * </p>\n+ *\n+ * @since 0.22.2\n+ */\n+public enum EquityCurveMode {\n+\n+    /**\n+     * Updates the equity curve on every bar, including unrealized gains/losses.\n+     */\n+    MARK_TO_MARKET,\n+\n+    /**\n+     * Updates the equity curve only when positions close, reflecting realized\n+     * gains/losses.\n+     */\n+    REALIZED\n+}\n\\ No newline at end of file"
+}

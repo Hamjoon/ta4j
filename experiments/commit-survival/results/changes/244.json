@@ -1,0 +1,16 @@
+{
+  "index": 244,
+  "sha": "27a13fc5aeacf7030542e6c3724d9cf44a7e3971",
+  "parent": "70e6533da42b7de5d7a4972db67cd58aa8e188be",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      233
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      233
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex e6121d68a..4dab8579c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -233 +233 @@ public final class ElliottWaveAnalysisRunner {\n-        final double broadHistoryThreshold = scale(baseDegree, degree, 0.02, 1.35, 0.005, 0.20);\n+        final double broadHistoryThreshold = scale(baseDegree, degree, 0.005, 1.35, 0.001, 0.10);"
+}

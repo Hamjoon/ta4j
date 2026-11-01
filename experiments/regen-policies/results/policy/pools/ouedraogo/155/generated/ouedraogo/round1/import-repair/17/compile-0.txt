@@ -1,0 +1,96 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:34: error: cannot find symbol
+            Num price = s.numFactory().numOf(i);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:59: error: cannot find symbol
+        Indicator<Num> ind = new ClosePriceIndicator(series);
+                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:83: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1 + 5); // first close = 1
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:90: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1 + 5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:97: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1 - 5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:104: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1 - 5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:111: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1 * 5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:118: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1 * 5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:127: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1.0 / 2.0);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:134: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1.0 / 2.0);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:141: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1); // 1 < 5
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:148: error: cannot find symbol
+        Num expected = series.numFactory().numOf(1);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:155: error: cannot find symbol
+        Num expected = series.numFactory().numOf(5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:162: error: cannot find symbol
+        Num expected = series.numFactory().numOf(5);
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:214: error: cannot find symbol
+        Num expected = series.numFactory().numOf(Math.sqrt(2.0 / 3.0));
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:288: error: cannot find symbol
+        close.plus((Indicator<Num>) null);
+                              ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:303: error: cannot find symbol
+        close.multipliedBy((Indicator<Num>) null);
+                                      ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:358: error: cannot find symbol
+        close.crossedOver((Indicator<Num>) null);
+                                     ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:373: error: cannot find symbol
+        close.isGreaterThan((Indicator<Num>) null);
+                                       ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+19 errors

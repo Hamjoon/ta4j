@@ -1,0 +1,218 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/opt/apache-maven-3.9.9/lib/jansi-2.4.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/opt/apache-maven-3.9.9/lib/guava-33.2.1-jre.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[ERROR] COMPILATION ERROR : 
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,12] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,31] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,45] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,63] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,64] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,12] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,67] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,36] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,53] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,54] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,12] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,57] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,26] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,42] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,53] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,59] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,80] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,81] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[224,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[224,9] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[225,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[226,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,16] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[224,12] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,27] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,34] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,39] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,54] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,62] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,78] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,25] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,43] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,51] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,58] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,39] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,41] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,62] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,63] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,76] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,80] '(' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[230,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[230,18] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[230,35] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,8] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,21] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,22] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,29] ')' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,39] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,37] variable declaration not allowed here
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,49] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,67] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,8] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,19] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,42] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,60] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,61] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,63] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,71] illegal character: '#'
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,78] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[234,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[234,9] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[234,25] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,9] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,43] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,75] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,78] '(' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[236,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[237,81] ')' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[238,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[238,78] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[240,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[240,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[244,83] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[245,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[245,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[244,86] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[248,77] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[248,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[248,82] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[252,85] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[253,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[253,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[252,88] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[257,87] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[258,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[258,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[257,90] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[260,85] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[261,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[261,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[260,88] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[265,83] illegal start of expression
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project ta4j-core: Compilation failure: Compilation failure: 
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,12] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,31] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,45] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,63] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,64] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,12] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[221,67] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,36] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,53] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,54] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,12] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[222,57] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,26] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,42] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,53] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,59] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,80] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[223,81] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[224,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[224,9] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[225,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[226,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,16] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[224,12] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,27] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,34] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,39] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,54] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,62] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[227,78] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,25] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,43] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,51] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[228,58] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,39] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,41] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,62] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,63] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,76] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[229,80] '(' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[230,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[230,18] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[230,35] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,8] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,21] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,22] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,29] ')' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,39] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,37] variable declaration not allowed here
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,49] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[232,67] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,8] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,19] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,42] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,60] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,61] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,63] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,71] illegal character: '#'
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[233,78] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[234,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[234,9] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[234,25] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,9] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,43] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,75] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[235,78] '(' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[236,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[237,81] ')' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[238,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[238,78] ';' expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[240,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[240,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[244,83] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[245,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[245,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[244,86] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[248,77] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[248,6] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[248,82] <identifier> expected
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[252,85] illegal start of type
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[253,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[253,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[252,88] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[257,87] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[258,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[258,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[257,90] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[260,85] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[261,6] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[261,80] illegal start of expression
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[260,88] not a statement
+[ERROR] /repo/experiments/commit-survival/work/checkouts/91/ta4j-core/src/main/java/org/ta4j/core/Indicator.java:[265,83] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,55 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:122: error: cannot find symbol
+        @Override public Rule getEntryRule() { return new BooleanRule(false); }
+                         ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:123: error: cannot find symbol
+        @Override public Rule getExitRule() { return new BooleanRule(false); }
+                         ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:120: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$1> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static final Strategy NOOP_STRATEGY = new Strategy() {
+                                                                 ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:131: error: cannot find symbol
+        @Override public Rule getEntryRule() { return new BooleanRule(true); }
+                         ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:132: error: cannot find symbol
+        @Override public Rule getExitRule() { return new BooleanRule(false); }
+                         ^
+  symbol: class Rule
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:129: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$2> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static final Strategy ALWAYS_ENTER_STRATEGY = new Strategy() {
+                                                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:143: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        Bar b1 = new BaseBar(java.time.Duration.ofDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:148: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        Bar b2 = new BaseBar(java.time.Duration.ofDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:153: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        Bar b3 = new BaseBar(java.time.Duration.ofDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:195: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        Bar extra = new BaseBar(java.time.Duration.ofDays(1),
+                    ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:258: error: reference to run is ambiguous
+        manager.run(NOOP_STRATEGY, TradeType.BUY, null);
+               ^
+  both method run(Strategy,TradeType,Num) in BarSeriesManager and method run(Strategy,TradeType,PositionSizer) in BarSeriesManager match
+11 errors

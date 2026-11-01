@@ -1,0 +1,54 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:175: error: method getMaximumBarCount() is already defined in class SimpleBarSeries
+        @Override public int getMaximumBarCount() { return Integer.MAX_VALUE; }
+                             ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:66: error: cannot find symbol
+        @Override public Function<Number, Num> function()   { return n -> new SimpleNum(n.doubleValue()); }
+                         ^
+  symbol:   class Function
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:82: error: method zero() is already defined in class SimpleNum
+        @Override public Num zero()                         { return zero(); }
+                             ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:83: error: method one() is already defined in class SimpleNum
+        @Override public Num one()                          { return one(); }
+                             ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:33: error: one() in SimpleNum cannot implement one() in Num
+        static SimpleNum one()  { return new SimpleNum(1d); }
+                         ^
+  overriding method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:32: error: zero() in SimpleNum cannot implement zero() in Num
+        static SimpleNum zero() { return new SimpleNum(0d); }
+                         ^
+  overriding method is static
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:90: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:106: error: method does not override or implement a method from a supertype
+        @Override public String getName()                        { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:269: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.SELL, amount);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:291: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.SELL, 0, 2);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:305: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, 5, 2);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:316: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, SimpleNum.one(), -5, 100);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:346: error: cannot find symbol
+        manager.run(strategy, TradeType.BUY, null);
+                              ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+13 errors

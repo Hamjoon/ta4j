@@ -1,0 +1,4 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java:72: error: ')' or ',' expected
+            return new SimpleNum(this.value.divide(toBigDecimal(divisor), BigDecimal.ROUND_HALF_UP);
+                                                                                                   ^
+1 error

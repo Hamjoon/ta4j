@@ -1,0 +1,68 @@
+{
+  "class_name": "org.ta4j.core.indicators.numeric.NumericIndicator",
+  "ordered_types": [
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.Rule",
+    "org.ta4j.core.indicators.EMAIndicator",
+    "org.ta4j.core.indicators.SMAIndicator",
+    "org.ta4j.core.indicators.helpers.ClosePriceIndicator",
+    "org.ta4j.core.indicators.helpers.ConstantIndicator",
+    "org.ta4j.core.indicators.helpers.HighestValueIndicator",
+    "org.ta4j.core.indicators.helpers.LowestValueIndicator",
+    "org.ta4j.core.indicators.helpers.PreviousValueIndicator",
+    "org.ta4j.core.indicators.helpers.VolumeIndicator",
+    "org.ta4j.core.indicators.statistics.StandardDeviationIndicator",
+    "org.ta4j.core.rules.CrossedDownIndicatorRule",
+    "org.ta4j.core.rules.CrossedUpIndicatorRule",
+    "org.ta4j.core.rules.OverIndicatorRule",
+    "org.ta4j.core.rules.UnderIndicatorRule"
+  ],
+  "included": [
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.Rule",
+    "org.ta4j.core.indicators.EMAIndicator",
+    "org.ta4j.core.indicators.SMAIndicator",
+    "org.ta4j.core.indicators.helpers.ClosePriceIndicator",
+    "org.ta4j.core.indicators.helpers.ConstantIndicator",
+    "org.ta4j.core.indicators.helpers.HighestValueIndicator",
+    "org.ta4j.core.indicators.helpers.LowestValueIndicator",
+    "org.ta4j.core.indicators.helpers.PreviousValueIndicator",
+    "org.ta4j.core.indicators.helpers.VolumeIndicator",
+    "org.ta4j.core.indicators.statistics.StandardDeviationIndicator",
+    "org.ta4j.core.rules.CrossedDownIndicatorRule",
+    "org.ta4j.core.rules.CrossedUpIndicatorRule"
+  ],
+  "omitted": [
+    "org.ta4j.core.rules.OverIndicatorRule",
+    "org.ta4j.core.rules.UnderIndicatorRule"
+  ],
+  "reasons": {
+    "org.ta4j.core.Indicator": "superclass/interface chain",
+    "org.ta4j.core.num.Num": "superclass/interface chain",
+    "org.ta4j.core.BarSeries": "method",
+    "org.ta4j.core.Rule": "method",
+    "org.ta4j.core.indicators.EMAIndicator": "import",
+    "org.ta4j.core.indicators.SMAIndicator": "import",
+    "org.ta4j.core.indicators.helpers.ClosePriceIndicator": "import",
+    "org.ta4j.core.indicators.helpers.ConstantIndicator": "import",
+    "org.ta4j.core.indicators.helpers.HighestValueIndicator": "import",
+    "org.ta4j.core.indicators.helpers.LowestValueIndicator": "import",
+    "org.ta4j.core.indicators.helpers.PreviousValueIndicator": "import",
+    "org.ta4j.core.indicators.helpers.VolumeIndicator": "import",
+    "org.ta4j.core.indicators.statistics.StandardDeviationIndicator": "import",
+    "org.ta4j.core.rules.CrossedDownIndicatorRule": "import",
+    "org.ta4j.core.rules.CrossedUpIndicatorRule": "import",
+    "org.ta4j.core.rules.OverIndicatorRule": "import",
+    "org.ta4j.core.rules.UnderIndicatorRule": "import"
+  },
+  "types": 15,
+  "lines": 176,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

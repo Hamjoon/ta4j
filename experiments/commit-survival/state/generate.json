@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "config_hash": "fe2ed986b93d412c97dfc41d1d340022d3c57d928e312b15b1a3ec5ade49d828",
+  "started": "2026-10-25T11:05:11.577478+00:00",
+  "finished": "2026-10-25T11:19:21.175086+00:00",
+  "notes": "ktester: already generated; ouedraogo: max-rounds",
+  "group_hashes": {
+    "ktester": "d5108c58026476b21534a7c2fefeceb25432792595623e93e57dc801c113c4b3",
+    "ouedraogo": "b44ff90751a977878e4d4e325804af76903e5f2f14695cadba3ff9cd8e929eda"
+  }
+}

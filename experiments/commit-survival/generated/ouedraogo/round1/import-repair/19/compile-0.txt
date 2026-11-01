@@ -1,0 +1,72 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:359: error: method addBar(Bar) is already defined in class SimpleBarSeries
+        @Override public void addBar(Bar bar) { addBar(bar); }
+                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:47: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:273: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static final class SimpleBar implements Bar {
+                         ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:305: error: getTrades() in SimpleBar cannot implement getTrades() in Bar
+        @Override public Num getTrades() { return open; }
+                             ^
+  return type Num is not compatible with long
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:303: error: method does not override or implement a method from a supertype
+        @Override public Num getTypicalPrice() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:304: error: method does not override or implement a method from a supertype
+        @Override public Num getWeightedAveragePrice() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:305: error: method does not override or implement a method from a supertype
+        @Override public Num getTrades() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:306: error: method does not override or implement a method from a supertype
+        @Override public Num getBidVolume() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:307: error: method does not override or implement a method from a supertype
+        @Override public Num getAskVolume() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:308: error: method does not override or implement a method from a supertype
+        @Override public Num getBidOpenPrice() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:309: error: method does not override or implement a method from a supertype
+        @Override public Num getBidHighPrice() { return high; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:310: error: method does not override or implement a method from a supertype
+        @Override public Num getBidLowPrice() { return low; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:311: error: method does not override or implement a method from a supertype
+        @Override public Num getBidClosePrice() { return close; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:312: error: method does not override or implement a method from a supertype
+        @Override public Num getAskOpenPrice() { return open; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:313: error: method does not override or implement a method from a supertype
+        @Override public Num getAskHighPrice() { return high; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:314: error: method does not override or implement a method from a supertype
+        @Override public Num getAskLowPrice() { return low; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:315: error: method does not override or implement a method from a supertype
+        @Override public Num getAskClosePrice() { return close; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:330: error: addBar(Bar) in SimpleBarSeries cannot implement addBar(Bar) in BarSeries
+        void addBar(Bar bar) {
+             ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:515: error: cannot find symbol
+        NumericIndicator min = seven.min(twelve);
+                                    ^
+  symbol:   method min(ConstantIndicator<Num>)
+  location: variable seven of type ConstantIndicator<Num>
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:516: error: cannot find symbol
+        NumericIndicator max = seven.max(twelve);
+                                    ^
+  symbol:   method max(ConstantIndicator<Num>)
+  location: variable seven of type ConstantIndicator<Num>
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:528: error: cannot find symbol
+        NumericIndicator abs = minusNine.abs();
+                                        ^
+  symbol:   method abs()
+  location: variable minusNine of type ConstantIndicator<Num>
+21 errors

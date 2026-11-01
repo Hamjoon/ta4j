@@ -1,0 +1,7 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:94: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:104: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+2 errors

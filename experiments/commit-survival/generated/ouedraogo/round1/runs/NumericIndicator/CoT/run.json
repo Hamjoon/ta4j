@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-25T07:28:00.063351+00:00",
+  "latency": 41.922,
+  "status": "ok",
+  "http_status": 200,
+  "finish_reason": "stop",
+  "provider": "Near AI",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "request_id": "gen-1792913280-WZsfqc5OuWdP8Ulp2txe",
+  "usage": {
+    "prompt_tokens": 4887,
+    "completion_tokens": 3855,
+    "total_tokens": 8742,
+    "cost": 0.00072414,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 48,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00072414,
+      "upstream_inference_prompt_cost": 0.00014589,
+      "upstream_inference_completions_cost": 0.00057825
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 776,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "error_type": null,
+  "prompt_sha256": "96dc561db19ab10c833776fefdcc1f00855b0508f6ed3ad80cc8d2031f9bd71b",
+  "response_sha256": "31110ec261c2e5744a73747cd9a9d54ff06bc2d55d942cc36cca9b69d3c45c1b"
+}

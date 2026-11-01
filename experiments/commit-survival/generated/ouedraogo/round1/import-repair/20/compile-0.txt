@@ -1,0 +1,62 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:162: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:167: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:168: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:181: error: cannot find symbol
+        assertEquals(TradeType.BUY, e.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:195: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:212: error: cannot find symbol
+        assertEquals(TradeType.BUY, e.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:267: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum expected = price12.dividedBy(price10); // 12/10 = 1.2
+                                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:277: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:289: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:294: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum exitDivEntry = price8.dividedBy(price10); // 0.8
+                                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:295: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum expected = exitDivEntry.minus(one).negate().plus(one); // 1.2
+                                                                  ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:307: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum zero = price10.zero(); // zero from any Num instance
+                                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:361: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum zero = price10.zero();
+                                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:370: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum zero = price10.zero();
+                                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/Position/CoT/PositionTest.java:384: error: incompatible types: Num cannot be converted to SimpleNum
+        SimpleNum profit = p.getProfit(5, finalPrice);
+                                      ^
+15 errors

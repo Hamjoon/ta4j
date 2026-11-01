@@ -1,0 +1,68 @@
+{
+  "index": 384,
+  "sha": "96b3ede651581f2cd41e62a639358d020c342668",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/384/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.38,
+      "log": "results/builds/logs/384-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/384/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 12.912,
+      "log": "results/builds/logs/384-2.txt"
+    }
+  ],
+  "input_sha256": "d98a7198ed884f0defe95bb569923960454ba1189f90eaa87f7863e3802470eb",
+  "pom_sha256": "e044480146785d8f2ac97ddbc54be157042aa90e712291e2986b4f4877b105ca",
+  "classpath": "work/classpaths/e044480146785d8f2ac97ddbc54be157042aa90e712291e2986b4f4877b105ca.txt",
+  "classpath_attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/e044480146785d8f2ac97ddbc54be157042aa90e712291e2986b4f4877b105ca.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/384/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.224,
+      "log": "results/builds/logs/classpath-384-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/commit-survival/work/classpaths/e044480146785d8f2ac97ddbc54be157042aa90e712291e2986b4f4877b105ca.txt"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/384/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 8.915,
+      "log": "results/builds/logs/classpath-384-2.txt"
+    }
+  ]
+}

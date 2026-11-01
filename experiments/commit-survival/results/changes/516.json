@@ -1,0 +1,22 @@
+{
+  "index": 516,
+  "sha": "1334344520067c1c3b59afe0bea4174c873b8814",
+  "parent": "546abcd15bd8e6b8ced5c7b04df8009579bcf107",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java": [
+      116
+    ],
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      1032
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java": [
+      116
+    ],
+    "src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java": [
+      1032
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java\nindex 377fd29d6..569f88233 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java\n@@ -116 +116 @@ public final class ComponentDescriptor {\n-        } catch (ClassNotFoundException ex) {\n+        } catch (ClassNotFoundException | LinkageError ex) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\nindex 6a7611410..15b158651 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/IndicatorSerialization.java\n@@ -1032 +1032 @@ public final class IndicatorSerialization {\n-        } catch (ClassNotFoundException ignored) {\n+        } catch (ClassNotFoundException | LinkageError ignored) {"
+}

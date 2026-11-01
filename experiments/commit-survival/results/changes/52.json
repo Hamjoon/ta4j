@@ -1,0 +1,37 @@
+{
+  "index": 52,
+  "sha": "3639c47491cc57ce3c560ec59afb36c884e95747",
+  "parent": "a9955915b51a332b0904902e0fc60a2f889199e5",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/RSIIndicator.java": [
+      71
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java": [
+      78,
+      79,
+      80,
+      85,
+      86,
+      91
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/RSIIndicator.java": [
+      56,
+      61,
+      62,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java": [
+      77,
+      78,
+      84,
+      85,
+      87,
+      92
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\nindex e489184bb..d95f198c3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\n@@ -31,0 +32,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -36 +38 @@ import org.ta4j.core.num.Num;\n- * Computed using original Welles Wilder formula.\n+ * Computed using the original Welles Wilder formula.\n@@ -41,0 +44 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+    private final int barCount;\n@@ -52,0 +56 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+        this.barCount = barCount;\n@@ -56,0 +61,3 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -71 +78 @@ public class RSIIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return this.barCount;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java\nindex 388ee18ee..f1b8eabc4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticOscillatorKIndicator.java\n@@ -28,5 +28 @@ import org.ta4j.core.Indicator;\n-import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.helpers.HighPriceIndicator;\n-import org.ta4j.core.indicators.helpers.HighestValueIndicator;\n-import org.ta4j.core.indicators.helpers.LowPriceIndicator;\n-import org.ta4j.core.indicators.helpers.LowestValueIndicator;\n+import org.ta4j.core.indicators.helpers.*;\n@@ -40,0 +37,2 @@ public class StochasticOscillatorKIndicator extends CachedIndicator<Num> {\n+    private final Indicator<Num> highPriceIndicator;\n+    private final Indicator<Num> lowPriceIndicator;\n@@ -42,2 +39,0 @@ public class StochasticOscillatorKIndicator extends CachedIndicator<Num> {\n-    private final HighPriceIndicator highPriceIndicator;\n-    private final LowPriceIndicator lowPriceIndicator;\n@@ -67,2 +63,2 @@ public class StochasticOscillatorKIndicator extends CachedIndicator<Num> {\n-     * @param highPriceIndicator the {@link HighPriceIndicator}\n-     * @param lowPriceIndicator  the {@link LowPriceIndicator}\n+     * @param highPriceIndicator the {@link Indicator}\n+     * @param lowPriceIndicator  the {@link Indicator}\n@@ -70,2 +66,2 @@ public class StochasticOscillatorKIndicator extends CachedIndicator<Num> {\n-    public StochasticOscillatorKIndicator(Indicator<Num> indicator, int barCount, HighPriceIndicator highPriceIndicator,\n-            LowPriceIndicator lowPriceIndicator) {\n+    public StochasticOscillatorKIndicator(Indicator<Num> indicator, int barCount, Indicator<Num> highPriceIndicator,\n+            Indicator<Num> lowPriceIndicator) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\nindex a9da2bfd8..4dd72eeb3 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\n@@ -29,2 +28,0 @@ import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.helpers.HighestValueIndicator;\n-import org.ta4j.core.indicators.helpers.LowestValueIndicator;\n@@ -32,0 +31,2 @@ import org.ta4j.core.num.Num;\n+import static org.ta4j.core.num.NaN.NaN;\n+\n@@ -42,3 +42,2 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-    private final RSIIndicator rsi;\n-    private final LowestValueIndicator minRsi;\n-    private final HighestValueIndicator maxRsi;\n+    private final int barCount;\n+    private final StochasticOscillatorKIndicator stochasticOscillatorKIndicator;\n@@ -54 +53 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-     * @param barCount the time frame for {@link #minRsi} and {@link #maxRsi}\n+     * @param barCount the time frame\n@@ -64 +63 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-     * @param barCount  the time frame for {@link #minRsi} and {@link #maxRsi}\n+     * @param barCount  the time frame\n@@ -74 +73 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-     * @param barCount     the time frame for {@link #minRsi} and {@link #maxRsi}\n+     * @param barCount     the time frame\n@@ -78,3 +77,3 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-        this.rsi = rsiIndicator;\n-        this.minRsi = new LowestValueIndicator(rsiIndicator, barCount);\n-        this.maxRsi = new HighestValueIndicator(rsiIndicator, barCount);\n+        this.barCount = barCount;\n+        this.stochasticOscillatorKIndicator = new StochasticOscillatorKIndicator(rsiIndicator, barCount, rsiIndicator,\n+                rsiIndicator);\n@@ -85,2 +84,4 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-        Num minRsiValue = minRsi.getValue(index);\n-        return rsi.getValue(index).minus(minRsiValue).dividedBy(maxRsi.getValue(index).minus(minRsiValue));\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n+        return this.stochasticOscillatorKIndicator.getValue(index);\n@@ -91 +92 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-        return 0;\n+        return this.barCount;"
+}

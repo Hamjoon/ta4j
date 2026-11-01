@@ -1,0 +1,32 @@
+{
+  "index": 46,
+  "sha": "78fe3d6d8919bb15bed9013744860d652215d087",
+  "parent": "545e8435cd7e6e2f6954e9947949a032b4413684",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [
+      132,
+      133,
+      134,
+      151,
+      152,
+      153,
+      154,
+      155
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [
+      135,
+      152,
+      153,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\nindex fde5425a0..6d1685460 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n@@ -26,3 +25,0 @@ package org.ta4j.core.criteria;\n-import java.math.BigDecimal;\n-import java.util.Objects;\n-\n@@ -34,0 +32 @@ import org.ta4j.core.TradingRecord;\n+import org.ta4j.core.analysis.cost.ZeroCostModel;\n@@ -37,0 +36,3 @@ import org.ta4j.core.num.Num;\n+import java.math.BigDecimal;\n+import java.util.Objects;\n+\n@@ -59 +60,3 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-    /** The amount to be used to hold the entry position */\n+    /**\n+     * The amount to be used to hold the entry position\n+     */\n@@ -132,3 +135 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        var beginIndex = tradingRecord.getStartIndex(series);\n-        var endIndex = tradingRecord.getEndIndex(series);\n-        return criterion.calculate(series, createEnterAndHoldTradingRecord(series, beginIndex, endIndex));\n+        return criterion.calculate(series, createEnterAndHoldTradingRecord(series, tradingRecord));\n@@ -150,6 +151,11 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-    private TradingRecord createEnterAndHoldTradingRecord(BarSeries series, int beginIndex, int endIndex) {\n-        var fakeRecord = new BaseTradingRecord(tradeType);\n-        var entryAmount = series.numFactory().numOf(amount);\n-        fakeRecord.enter(beginIndex, series.getBar(beginIndex).getClosePrice(), entryAmount);\n-        fakeRecord.exit(endIndex, series.getBar(endIndex).getClosePrice(), entryAmount);\n-        return fakeRecord;\n+    private TradingRecord createEnterAndHoldTradingRecord(BarSeries series, TradingRecord source) {\n+        var txCostModel = Objects.requireNonNullElseGet(source.getTransactionCostModel(), ZeroCostModel::new);\n+        var holdingCostModel = Objects.requireNonNullElseGet(source.getHoldingCostModel(), ZeroCostModel::new);\n+\n+        var record = new BaseTradingRecord(tradeType, txCostModel, holdingCostModel);\n+        var amountNum = series.numFactory().numOf(amount);\n+        var beginIndex = source.getStartIndex(series);\n+        var endIndex = source.getEndIndex(series);\n+        record.enter(beginIndex, series.getBar(beginIndex).getClosePrice(), amountNum);\n+        record.exit(endIndex, series.getBar(endIndex).getClosePrice(), amountNum);\n+        return record;"
+}

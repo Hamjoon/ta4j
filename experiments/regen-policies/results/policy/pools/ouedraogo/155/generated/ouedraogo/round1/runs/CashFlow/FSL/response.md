@@ -1,0 +1,333 @@
+###Test START##
+```java
+package org.ta4j.core.analysis;
+
+import static org.junit.Assert.*;
+
+import java.lang.reflect.Method;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.Position;
+import org.ta4j.core.Trade;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive unit tests for {@link CashFlow}.
+ *
+ * The tests use the concrete implementations that are part of the public
+ * ta4j API (e.g. {@link BaseBarSeries}, {@link BaseTradingRecord},
+ * {@link Trade}, {@link DecimalNum}).  Only constructors and methods that are
+ * exposed in the supplied source code or in the listed dependency signatures
+ * are used.
+ */
+public class CashFlowTest {
+
+    private BarSeries series;
+    private static final Num ONE = DecimalNum.valueOf(1);
+    private static final Num ZERO = DecimalNum.valueOf(0);
+
+    /**
+     * Build a simple bar series with 5 bars.  The close price of each bar is
+     * {@code 10 + index}.  This makes the price evolution easy to reason about
+     * when checking intermediate cash‑flow values.
+     */
+    @Before
+    public void setUp() {
+        series = new BaseBarSeries("test-series");
+        // create 5 bars (index 0 … 4) with close prices 10,11,12,13,14
+        for (int i = 0; i < 5; i++) {
+            Num close = DecimalNum.valueOf(10 + i);
+            // BaseBarSeries allows us to add a bar via its builder
+            series.addBar(series.barBuilder()
+                    .closePrice(close)
+                    .openPrice(close)   // open = close – not relevant for CashFlow
+                    .highPrice(close)
+                    .lowPrice(close)
+                    .volume(DecimalNum.ONE)
+                    .build());
+        }
+        // sanity check
+        assertEquals(5, series.getBarCount());
+        assertEquals(DecimalNum.valueOf(10), series.getBar(0).getClosePrice());
+        assertEquals(DecimalNum.valueOf(14), series.getBar(4).getClosePrice());
+    }
+
+    /**
+     * Helper to create a closed long position (BUY → SELL) between the given
+     * indexes.
+     */
+    private Position createLongPosition(int entryIdx, int exitIdx) {
+        Trade entry = new Trade(TradeType.BUY, entryIdx,
+                series.getBar(entryIdx).getClosePrice(),
+                DecimalNum.ONE);
+        Trade exit = new Trade(TradeType.SELL, exitIdx,
+                series.getBar(exitIdx).getClosePrice(),
+                DecimalNum.ONE);
+        return new Position(entry, exit);
+    }
+
+    /**
+     * Helper to create a closed short position (SELL → BUY) between the given
+     * indexes.
+     */
+    private Position createShortPosition(int entryIdx, int exitIdx) {
+        Trade entry = new Trade(TradeType.SELL, entryIdx,
+                series.getBar(entryIdx).getClosePrice(),
+                DecimalNum.ONE);
+        Trade exit = new Trade(TradeType.BUY, exitIdx,
+                series.getBar(exitIdx).getClosePrice(),
+                DecimalNum.ONE);
+        return new Position(entry, exit);
+    }
+
+    @Test
+    public void testGetCountOfUnstableBarsIsZero() {
+        CashFlow cf = new CashFlow(series, createLongPosition(0, 4));
+        assertEquals(0, cf.getCountOfUnstableBars());
+    }
+
+    @Test
+    public void testGetBarSeriesReturnsOriginalSeries() {
+        Position pos = createLongPosition(0, 4);
+        CashFlow cf = new CashFlow(series, pos);
+        assertSame(series, cf.getBarSeries());
+    }
+
+    @Test
+    public void testGetSizeReflectsSeriesBarCount() {
+        Position pos = createLongPosition(0, 4);
+        CashFlow cf = new CashFlow(series, pos);
+        assertEquals(series.getBarCount(), cf.getSize());
+    }
+
+    @Test
+    public void testCashFlowForClosedLongPosition() {
+        // entry at index 0 (price 10), exit at index 4 (price 14)
+        Position longPos = createLongPosition(0, 4);
+        CashFlow cf = new CashFlow(series, longPos);
+
+        // Expected values:
+        // index 0 : 1 (initial)
+        // index 1 : 1 * (11 / 10) = 1.1
+        // index 2 : 1 * (12 / 10) = 1.2
+        // index 3 : 1 * (13 / 10) = 1.3
+        // index 4 : 1 * (14 / 10) = 1.4   (exit)
+        // indices 5 … end (none, series ends at 4)
+        Num[] expected = new Num[]{
+                DecimalNum.valueOf(1.0),
+                DecimalNum.valueOf(1.1),
+                DecimalNum.valueOf(1.2),
+                DecimalNum.valueOf(1.3),
+                DecimalNum.valueOf(1.4)
+        };
+
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals("cash‑flow at index " + i,
+                    expected[i], cf.getValue(i));
+        }
+        // values after the last bar are padded with the last value (1.4)
+        assertEquals(DecimalNum.valueOf(1.4), cf.getValue(5));
+    }
+
+    @Test
+    public void testCashFlowForClosedShortPosition() {
+        // entry at index 0 (price 10, SELL), exit at index 4 (price 14, BUY)
+        Position shortPos = createShortPosition(0, 4);
+        CashFlow cf = new CashFlow(series, shortPos);
+
+        // For a short trade the ratio is 2 – (exit / entry)
+        // entryPrice = 10, exitPrice = 14
+        // ratio = 2 – (14 / 10) = 2 – 1.4 = 0.6
+        // Expected cash‑flow values:
+        // index 0 : 1
+        // index 1 : 1 * (2 – (11/10)) = 2 – 1.1 = 0.9
+        // index 2 : 2 – (12/10) = 0.8
+        // index 3 : 2 – (13/10) = 0.7
+        // index 4 : 2 – (14/10) = 0.6
+        Num[] expected = new Num[]{
+                DecimalNum.valueOf(1.0),
+                DecimalNum.valueOf(0.9),
+                DecimalNum.valueOf(0.8),
+                DecimalNum.valueOf(0.7),
+                DecimalNum.valueOf(0.6)
+        };
+
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals("short cash‑flow at index " + i,
+                    expected[i], cf.getValue(i));
+        }
+        // padding after the series end
+        assertEquals(DecimalNum.valueOf(0.6), cf.getValue(5));
+    }
+
+    @Test
+    public void testCashFlowWithOpenPositionViaTradingRecord() {
+        // Build a trading record with a closed long position (0‑2) and an open
+        // position (3‑?) that we will evaluate up to index 4.
+        BaseTradingRecord record = new BaseTradingRecord();
+
+        // closed position 0 → 2
+        record.operate(0, series.getBar(0).getClosePrice(), DecimalNum.ONE); // BUY
+        record.operate(2, series.getBar(2).getClosePrice(), DecimalNum.ONE); // SELL
+
+        // open position starts at index 3 (BUY) – we do NOT close it
+        record.operate(3, series.getBar(3).getClosePrice(), DecimalNum.ONE); // BUY
+
+        // Build CashFlow with explicit finalIndex = 4 (so the open position is
+        // evaluated up to bar 4)
+        CashFlow cf = new CashFlow(series, record, 4);
+
+        // Expected cash‑flow sequence:
+        // index 0 : 1 (initial)
+        // index 1 : 1 * (11/10) = 1.1   (intermediate of first closed trade)
+        // index 2 : 1 * (12/10) = 1.2   (exit of first closed trade)
+        // index 3 : 1.2 * (13/10) = 1.56 (intermediate of open trade)
+        // index 4 : 1.2 * (14/10) = 1.68 (open trade evaluated up to finalIndex)
+        // indices 5 … padded with 1.68
+        Num[] expected = new Num[]{
+                DecimalNum.valueOf(1.0),
+                DecimalNum.valueOf(1.1),
+                DecimalNum.valueOf(1.2),
+                DecimalNum.valueOf(1.56),
+                DecimalNum.valueOf(1.68)
+        };
+
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals("cash‑flow with open position at index " + i,
+                    expected[i], cf.getValue(i));
+        }
+        assertEquals(DecimalNum.valueOf(1.68), cf.getValue(5));
+    }
+
+    @Test
+    public void testGetIntermediateRatioLongTrade() throws Exception {
+        Method method = CashFlow.class.getDeclaredMethod(
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+        method.setAccessible(true);
+
+        Num entry = DecimalNum.valueOf(10);
+        Num exit = DecimalNum.valueOf(15);
+        Num ratio = (Num) method.invoke(null, true, entry, exit);
+        assertEquals(DecimalNum.valueOf(1.5), ratio);
+    }
+
+    @Test
+    public void testGetIntermediateRatioShortTrade() throws Exception {
+        Method method = CashFlow.class.getDeclaredMethod(
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+        method.setAccessible(true);
+
+        Num entry = DecimalNum.valueOf(10);
+        Num exit = DecimalNum.valueOf(15);
+        // For short: 2 – (exit/entry) = 2 – 1.5 = 0.5
+        Num ratio = (Num) method.invoke(null, false, entry, exit);
+        assertEquals(DecimalNum.valueOf(0.5), ratio);
+    }
+
+    @Test
+    public void testFillToTheEndPadsWithLastValue() throws Exception {
+        // Build a CashFlow where the calculation stops before the series end.
+        // We'll use a single closed position that exits at index 2.
+        Position pos = createLongPosition(0, 2);
+        CashFlow cf = new CashFlow(series, pos);
+
+        // At this point values contain entries for indexes 0‑2 and are padded
+        // up to series end (index 4) by the constructor’s fillToTheEnd call.
+        // Verify that indexes 3 and 4 hold the same value as index 2.
+        Num lastCalculated = cf.getValue(2);
+        assertEquals(lastCalculated, cf.getValue(3));
+        assertEquals(lastCalculated, cf.getValue(4));
+        // also check the padded value beyond the series (index 5) – it should
+        // still be the same because fillToTheEnd adds one extra element.
+        assertEquals(lastCalculated, cf.getValue(5));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorRejectsOpenPosition() {
+        // Create a position that has an entry but no exit (still opened)
+        Trade entry = new Trade(TradeType.BUY, 0,
+                series.getBar(0).getClosePrice(),
+                DecimalNum.ONE);
+        Position opened = new Position(entry, null);
+        // The CashFlow constructor for a single Position must throw
+        new CashFlow(series, opened);
+    }
+
+    @Test
+    public void testValuesListNeverContainsZeroWhenStartingFromOne() {
+        // All cash‑flow calculations start with Num.one().  Verify that the
+        // internal list never contains zero (which would stop further
+        // calculations according to the implementation).
+        Position pos = createLongPosition(0, 4);
+        CashFlow cf = new CashFlow(series, pos);
+        for (int i = 0; i < cf.getSize() + 2; i++) { // extra indexes for padding
+            assertFalse("value at index " + i + " should not be zero",
+                    cf.getValue(i).isZero());
+        }
+    }
+
+    @Test
+    public void testCashFlowWithHoldingCostIsTakenIntoAccount() {
+        // This test demonstrates that a non‑zero holding cost influences the
+        // intermediate cash‑flow values.  We create a custom Position that
+        // reports a holding cost of 2 (per period).  The holding cost model is
+        // part of the Position API, but the library’s default implementation
+        // already provides a non‑zero cost when a CostModel is supplied.
+        // For simplicity we use the constructor that accepts explicit cost models.
+
+        // Build a trivial CostModel that returns a constant holding cost of 2.
+        CostModel constantHoldingCost = new CostModel() {
+            @Override
+            public Num calculate(Position position, int index) {
+                return DecimalNum.valueOf(2);
+            }
+
+            @Override
+            public Num calculate(Trade trade) {
+                return DecimalNum.ZERO;
+            }
+        };
+
+        // Entry at index 0 (price 10, BUY)
+        Trade entry = new Trade(TradeType.BUY, 0,
+                DecimalNum.valueOf(10), DecimalNum.ONE);
+        // Exit at index 4 (price 14, SELL)
+        Trade exit = new Trade(TradeType.SELL, 4,
+                DecimalNum.valueOf(14), DecimalNum.ONE);
+
+        Position pos = new Position(entry, exit,
+                CostModel.ZERO_COST_MODEL, // transaction cost – zero
+                constantHoldingCost);     // holding cost – constant 2
+
+        CashFlow cf = new CashFlow(series, pos);
+
+        // Holding cost per period = 2, total periods = 4, avgCost = 2/4 = 0.5
+        // Adjusted intermediate price = close + avgCost (for long trade)
+        //   index 1: 11 + 0.5 = 11.5 → ratio = 11.5 / 10 = 1.15 → value = 1 * 1.15 = 1.15
+        //   index 2: 12 + 0.5 = 12.5 → ratio = 12.5 / 10 = 1.25 → value = 1.25
+        //   index 3: 13 + 0.5 = 13.5 → ratio = 13.5 / 10 = 1.35 → value = 1.35
+        //   exit (index 4): 14 + 0.5 = 14.5 → ratio = 14.5 / 10 = 1.45 → value = 1.45
+        Num[] expected = new Num[]{
+                DecimalNum.valueOf(1.0),
+                DecimalNum.valueOf(1.15),
+                DecimalNum.valueOf(1.25),
+                DecimalNum.valueOf(1.35),
+                DecimalNum.valueOf(1.45)
+        };
+
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals("cash‑flow with holding cost at index " + i,
+                    expected[i], cf.getValue(i));
+        }
+    }
+}
+```
+###Test END##

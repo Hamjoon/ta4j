@@ -1,0 +1,122 @@
+[
+  {
+    "group": "NumericIndicator.isGreaterThan(Indicator<Num>) - valid inputs",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == true",
+        "description": "Create a NumericIndicator wrapping a ConstantIndicator(10) and compare it with another ConstantIndicator(5). The returned Rule should be an OverIndicatorRule and evaluate to true because 10 > 5 at index 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(15)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == false",
+        "description": "Create a NumericIndicator wrapping a ConstantIndicator(10) and compare it with ConstantIndicator(15). The returned Rule should be an OverIndicatorRule and evaluate to false because 10 is not greater than 15 at index 0."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isGreaterThan(Indicator<Num>) - varying index values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "IncreasingIndicator([0]=5, [1]=15, [2]=8)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == true, rule.isSatisfied(1) == false, rule.isSatisfied(2) == true",
+        "description": "NumericIndicator wraps a ConstantIndicator(10). The supplied other indicator returns 5 at index 0, 15 at index 1 and 8 at index 2. The OverIndicatorRule should evaluate true when 10 > 5 (index 0), false when 10 > 15 (index 1), and true when 10 > 8 (index 2)."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "DecreasingIndicator([0]=20, [1]=12, [2]=9)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == false, rule.isSatisfied(1) == false, rule.isSatisfied(2) == true",
+        "description": "NumericIndicator wraps a ConstantIndicator(10). The other indicator returns decreasing values 20, 12, 9. The rule should be false for indices 0 and 1 (10 not greater than 20 or 12) and true for index 2 (10 > 9)."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isGreaterThan(Indicator<Num>) - equality case",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(10)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == false",
+        "description": "Both the NumericIndicator and the other indicator return the same value (10). OverIndicatorRule uses a strict 'greater than' comparison, therefore the rule must be unsatisfied at index 0."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isGreaterThan(Indicator<Num>) - null argument",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException thrown",
+        "description": "Passing a null reference as the other indicator should result in a NullPointerException according to the contract of OverIndicatorRule."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isGreaterThan(Indicator<Num>) - negative numbers",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(-10)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == true",
+        "description": "NumericIndicator wraps ConstantIndicator(-5). Since -5 > -10, the rule must be satisfied at index 0."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(-2)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == false",
+        "description": "NumericIndicator wraps ConstantIndicator(-5). Because -5 is not greater than -2, the rule must be unsatisfied at index 0."
+      }
+    ]
+  },
+  {
+    "group": "NumericIndicator.isGreaterThan(Indicator<Num>) - series based indicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(102)"
+          }
+        ],
+        "expected": "Rule instance of OverIndicatorRule where rule.isSatisfied(0) == false, rule.isSatisfied(1) == true",
+        "description": "NumericIndicator is created via NumericIndicator.closePrice(series) where the series has close prices 100 (index 0) and 105 (index 1). Comparing against ConstantIndicator(102) should yield false at index 0 (100 > 102? false) and true at index 1 (105 > 102)."
+      }
+    ]
+  }
+]

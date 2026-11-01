@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.jacoco:org.jacoco.agent:0.8.12:jar:runtime",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.jacoco:org.jacoco.agent:0.8.12:jar:runtime",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.026,
+      "log": "results/runner-dependency-org.jacoco.org.jacoco.agent-0.8.12-runtime-1.txt",
+      "coordinate": "org.jacoco:org.jacoco.agent:0.8.12:jar:runtime",
+      "expected_sha256": "115e8e6e6593ca3a9892dfef695df4d487c706e59e71e64dc0ab95716ee02622",
+      "rejected_sha256": null,
+      "downloaded_sha256": "115e8e6e6593ca3a9892dfef695df4d487c706e59e71e64dc0ab95716ee02622"
+    }
+  ]
+}

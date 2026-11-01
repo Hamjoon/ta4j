@@ -1,0 +1,74 @@
+{
+  "index": 243,
+  "sha": "70e6533da42b7de5d7a4972db67cd58aa8e188be",
+  "parent": "d03ef14abd7f3b4b5224336a53f109e410026c75",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      210,
+      291,
+      352,
+      403,
+      454,
+      721,
+      777
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      221,
+      222,
+      223
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      210,
+      291,
+      352,
+      403,
+      454,
+      721,
+      777,
+      1127,
+      1128,
+      1130
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [
+      89,
+      90,
+      92,
+      93,
+      95,
+      96,
+      98,
+      99,
+      100,
+      102,
+      103,
+      104,
+      105,
+      109,
+      110,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      223,
+      238,
+      239,
+      240,
+      241,
+      243,
+      244
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      52,
+      53
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex 1187c050e..a797960ef 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -210 +210 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(impulseSwings))\n@@ -291 +291 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(corrSwings))\n@@ -352 +352 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(corrSwings))\n@@ -403 +403 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(corrSwings))\n@@ -454 +454 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(corrSwings))\n@@ -721 +721 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(decomposition))\n@@ -777 +777 @@ public final class ElliottScenarioGenerator {\n-                    .startIndex(startIndex)\n+                    .startIndex(scenarioStartIndex(decomposition))\n@@ -1125,0 +1126,7 @@ public final class ElliottScenarioGenerator {\n+    private int scenarioStartIndex(final List<ElliottSwing> swings) {\n+        if (swings == null || swings.isEmpty()) {\n+            return 0;\n+        }\n+        return swings.getFirst().fromIndex();\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex e362a24bb..ae62b91b4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -6,0 +7 @@ import java.time.Duration;\n+import java.util.Comparator;\n@@ -70,0 +72,48 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n+    /**\n+     * Returns the base scenarios re-ranked for how closely they span a target\n+     * anchor window.\n+     *\n+     * <p>\n+     * This is useful for research and reporting flows that need the best scenario\n+     * for a known start/end segment rather than the globally best scenario for the\n+     * full analyzed prefix. Scenarios that start near {@code startIndex} and\n+     * terminate near {@code endIndex} are preferred ahead of broader ranking ties.\n+     *\n+     * @param startIndex expected scenario start pivot index\n+     * @param endIndex   expected scenario terminal pivot index\n+     * @return immutable base-scenario view sorted by anchor-span fit first and\n+     *         composite score second\n+     * @since 0.22.4\n+     */\n+    public List<BaseScenarioAssessment> rankedBaseScenariosForSpan(final int startIndex, final int endIndex) {\n+        if (startIndex < 0) {\n+            throw new IllegalArgumentException(\"startIndex must be >= 0\");\n+        }\n+        if (endIndex < startIndex) {\n+            throw new IllegalArgumentException(\"endIndex must be >= startIndex\");\n+        }\n+        if (rankedBaseScenarios.isEmpty()) {\n+            return List.of();\n+        }\n+        return rankedBaseScenarios.stream()\n+                .sorted(Comparator\n+                        .comparingDouble((BaseScenarioAssessment assessment) -> anchorSpanScore(assessment.scenario(),\n+                                startIndex, endIndex))\n+                        .reversed()\n+                        .thenComparing(Comparator.comparingDouble(BaseScenarioAssessment::compositeScore).reversed())\n+                        .thenComparing(assessment -> assessment.scenario().id()))\n+                .toList();\n+    }\n+\n+    private static double anchorSpanScore(final ElliottScenario scenario, final int startIndex, final int endIndex) {\n+        if (scenario == null || scenario.swings().isEmpty()) {\n+            return 0.0;\n+        }\n+        final int actualStart = scenario.swings().getFirst().fromIndex();\n+        final int actualEnd = scenario.swings().getLast().toIndex();\n+        final double span = Math.max(1.0, endIndex - startIndex);\n+        final double startAlignment = 1.0 - Math.min(1.0, Math.abs(actualStart - startIndex) / span);\n+        final double endAlignment = 1.0 - Math.min(1.0, Math.abs(actualEnd - endIndex) / span);\n+        return (startAlignment + endAlignment) / 2.0;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 19311752a..e6121d68a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -83,0 +84,2 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final int DEFAULT_COMPRESSOR_MIN_BARS = 2;\n+    private static final int BROAD_HISTORY_COMPRESSOR_MIN_BARS = 1;\n@@ -221,3 +223 @@ public final class ElliottWaveAnalysisRunner {\n-        ElliottSwingCompressor compressor = new ElliottSwingCompressor(new ClosePriceIndicator(series),\n-                scale(baseDegree, degree, 0.01, 1.5, 0.0025, 0.05),\n-                Math.max(1, 2 + (baseDegree.ordinal() - degree.ordinal())));\n+        ElliottSwingCompressor compressor = defaultSwingCompressor(series, degree);\n@@ -236,0 +237,11 @@ public final class ElliottWaveAnalysisRunner {\n+    private ElliottSwingCompressor defaultSwingCompressor(final BarSeries series, final ElliottDegree degree) {\n+        if (scenarioSwingWindow != 0 || series.getBarCount() < BROAD_HISTORY_FILTER_BAR_THRESHOLD) {\n+            return new ElliottSwingCompressor(new ClosePriceIndicator(series),\n+                    scale(baseDegree, degree, 0.01, 1.5, 0.0025, 0.05),\n+                    Math.max(1, DEFAULT_COMPRESSOR_MIN_BARS + (baseDegree.ordinal() - degree.ordinal())));\n+        }\n+        final double broadHistoryPercentage = scale(baseDegree, degree, 0.002, 1.15, 0.0005, 0.01);\n+        return new ElliottSwingCompressor(new ClosePriceIndicator(series), broadHistoryPercentage,\n+                BROAD_HISTORY_COMPRESSOR_MIN_BARS);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\nindex 0d2adacee..374a77a9e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n@@ -51,0 +52,3 @@ final class SwingDetectorSupport {\n+            if (previous.index() == current.index()) {\n+                continue;\n+            }"
+}

@@ -1,0 +1,451 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:262: error: cannot find symbol
+    private static final class SimpleNumFactory implements NumFactory {
+                                                           ^
+  symbol:   class NumFactory
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:40: error: cannot find symbol
+    private static final class SimpleNum implements Num {
+                                                    ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:60: error: cannot find symbol
+        public NumFactory getNumFactory() {
+               ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:70: error: cannot find symbol
+        private SimpleNum op(java.util.function.BinaryOperator<BigDecimal> operator, Num other) {
+                                                                                     ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:75: error: cannot find symbol
+        public Num plus(Num augend) {
+                        ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:75: error: cannot find symbol
+        public Num plus(Num augend) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:80: error: cannot find symbol
+        public Num minus(Num subtrahend) {
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:80: error: cannot find symbol
+        public Num minus(Num subtrahend) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:85: error: cannot find symbol
+        public Num multipliedBy(Num multiplicand) {
+                                ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:85: error: cannot find symbol
+        public Num multipliedBy(Num multiplicand) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:90: error: cannot find symbol
+        public Num dividedBy(Num divisor) {
+                             ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:90: error: cannot find symbol
+        public Num dividedBy(Num divisor) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:95: error: cannot find symbol
+        public Num remainder(Num divisor) {
+                             ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:95: error: cannot find symbol
+        public Num remainder(Num divisor) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:100: error: cannot find symbol
+        public Num floor() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:105: error: cannot find symbol
+        public Num ceil() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:110: error: cannot find symbol
+        public Num pow(int n) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:115: error: cannot find symbol
+        public Num pow(Num n) {
+                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:115: error: cannot find symbol
+        public Num pow(Num n) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:121: error: cannot find symbol
+        public Num log() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:126: error: cannot find symbol
+        public Num sqrt() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:131: error: cannot find symbol
+        public Num sqrt(int precision) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:136: error: cannot find symbol
+        public Num abs() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:141: error: cannot find symbol
+        public Num negate() {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:171: error: cannot find symbol
+        public boolean isEqual(Num other) {
+                               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:176: error: cannot find symbol
+        public boolean isGreaterThan(Num other) {
+                                     ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:181: error: cannot find symbol
+        public boolean isGreaterThanOrEqual(Num other) {
+                                            ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:186: error: cannot find symbol
+        public boolean isLessThan(Num other) {
+                                  ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:191: error: cannot find symbol
+        public boolean isLessThanOrEqual(Num other) {
+                                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:196: error: cannot find symbol
+        public Num min(Num other) {
+                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:196: error: cannot find symbol
+        public Num min(Num other) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:201: error: cannot find symbol
+        public Num max(Num other) {
+                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:201: error: cannot find symbol
+        public Num max(Num other) {
+               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:256: error: cannot find symbol
+        public int compareTo(Num o) {
+                             ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:277: error: cannot find symbol
+        public NumFactory numFactory() {
+               ^
+  symbol:   class NumFactory
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:295: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) {}
+                                       ^
+  symbol:   class Num
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:295: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) {}
+                                                        ^
+  symbol:   class Num
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:296: error: cannot find symbol
+        @Override public void addPrice(Num price) {}
+                                       ^
+  symbol:   class Num
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:54: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:59: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:65: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:74: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:79: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:84: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:89: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:94: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:99: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:104: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:109: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:114: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:120: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:125: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:130: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:135: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:140: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:145: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:150: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:155: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:160: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:165: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:170: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:175: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:180: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:185: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:190: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:195: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:200: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:205: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:210: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:215: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:220: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:225: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:230: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:255: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:294: error: name clash: class DummyBarSeries has two methods with the same erasure, yet neither overrides the other
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) {}
+                              ^
+  first method:  addTrade(Num,Num) in DummyBarSeries
+  second method: addTrade(Num,Num) in BarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:297: error: name clash: class DummyBarSeries has two methods with the same erasure, yet neither overrides the other
+        @Override public void addPrice(Number price) {}
+                              ^
+  first method:  addPrice(Num) in DummyBarSeries
+  second method: addPrice(Num) in BarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:310: error: no suitable method found for buyAt(int,SimpleNum,SimpleNum)
+        return Trade.buyAt(index, numFactory.valueOf(price), numFactory.valueOf(amount));
+                    ^
+    method Trade.buyAt(int,Num,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to Num)
+    method Trade.buyAt(int,BarSeries,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to BarSeries)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:315: error: no suitable method found for sellAt(int,SimpleNum,SimpleNum)
+        return Trade.sellAt(index, numFactory.valueOf(price), numFactory.valueOf(amount));
+                    ^
+    method Trade.sellAt(int,Num,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to Num)
+    method Trade.sellAt(int,BarSeries,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to BarSeries)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:325: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:330: error: cannot find symbol
+        Position sellPos = new Position(TradeType.SELL);
+                                        ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:332: error: cannot find symbol
+        assertEquals(TradeType.SELL, sellPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:348: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:369: error: incompatible types: SimpleNum cannot be converted to Num
+        Trade entry = pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(1));
+                                                       ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:375: error: incompatible types: SimpleNum cannot be converted to Num
+        Trade exit = pos.operate(5, numFactory.valueOf(12), numFactory.valueOf(1));
+                                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:384: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(3, numFactory.valueOf(10), numFactory.valueOf(1));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:386: error: incompatible types: SimpleNum cannot be converted to Num
+            pos.operate(2, numFactory.valueOf(11), numFactory.valueOf(1));
+                                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:399: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(2)); // entry BUY 10 * 2 = 20
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:400: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(4, numFactory.valueOf(15), numFactory.valueOf(2)); // exit SELL 15 * 2 = 30
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:403: error: cannot find symbol
+        Num expectedGross = numFactory.valueOf(10);
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:414: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:415: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(20), numFactory.valueOf(3)); // entry SELL (short) 20*3 = 60
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:416: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(3, numFactory.valueOf(15), numFactory.valueOf(3)); // exit BUY 15*3 = 45
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:419: error: cannot find symbol
+        Num expectedGross = numFactory.valueOf(15);
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:430: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(1));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:431: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(2, numFactory.valueOf(8), numFactory.valueOf(1)); // price drops
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:433: error: cannot find symbol
+        Num profit = pos.getProfit();
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:442: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(10), numFactory.valueOf(2)); // entry
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:448: error: cannot find symbol
+        Num profitIfClosed = pos.getProfit(10, numFactory.valueOf(13));
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:448: error: incompatible types: SimpleNum cannot be converted to Num
+        Num profitIfClosed = pos.getProfit(10, numFactory.valueOf(13));
+                                                                 ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:449: error: cannot find symbol
+        Num expected = numFactory.valueOf(6); // (13*2)-20 = 6
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:459: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(100), numFactory.valueOf(1));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:460: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(5, numFactory.valueOf(110), numFactory.valueOf(1));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:463: error: cannot find symbol
+        Num expected = numFactory.valueOf(1.1);
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:469: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:470: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(200), numFactory.valueOf(1)); // short entry
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:471: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(3, numFactory.valueOf(180), numFactory.valueOf(1)); // covering buy
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:474: error: cannot find symbol
+        Num expected = numFactory.valueOf(1.1);
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:484: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(5), numFactory.valueOf(10));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:485: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(2, numFactory.valueOf(7), numFactory.valueOf(10));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:510: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(0, numFactory.valueOf(1), numFactory.valueOf(1));
+                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:511: error: incompatible types: SimpleNum cannot be converted to Num
+        pos.operate(1, numFactory.valueOf(2), numFactory.valueOf(1));
+                                         ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+111 errors

@@ -1,0 +1,11 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:71: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries();
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:95: error: incompatible types: ZonedDateTime cannot be converted to Instant
+                    .endTime(time.plusDays(i))
+                                          ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2 errors

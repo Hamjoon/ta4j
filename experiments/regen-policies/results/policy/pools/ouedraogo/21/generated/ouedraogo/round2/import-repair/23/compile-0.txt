@@ -1,0 +1,380 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:88: error: cannot find symbol
+    private static class SimpleNumFactory implements NumFactory {
+                                                     ^
+  symbol:   class NumFactory
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:102: error: cannot find symbol
+        @Override public NumFactory numFactory(){ return factory; }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:116: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice){ }
+                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:116: error: cannot find symbol
+        @Override public void addTrade(Num tradeVolume, Num tradePrice){ }
+                                                        ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:117: error: cannot find symbol
+        @Override public void addPrice(Num price){ }
+                                       ^
+  symbol:   class Num
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:89: error: cannot find symbol
+        @Override public Num zero(){ return new SimpleNum(0.0, this); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:90: error: cannot find symbol
+        @Override public Num one(){ return new SimpleNum(1.0, this); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:91: error: cannot find symbol
+        public Num valueOf(double d){ return new SimpleNum(d, this); }
+               ^
+  symbol:   class Num
+  location: class SimpleNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:29: error: cannot find symbol
+    private static class SimpleNum implements Num {
+                                              ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:39: error: cannot find symbol
+        @Override public NumFactory getNumFactory() { return factory; }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:44: error: cannot find symbol
+        @Override public Num plus(Num augend)   { return newNum(this.value + ((SimpleNum) augend).value); }
+                                  ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:44: error: cannot find symbol
+        @Override public Num plus(Num augend)   { return newNum(this.value + ((SimpleNum) augend).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:45: error: cannot find symbol
+        @Override public Num minus(Num subtrahend){ return newNum(this.value - ((SimpleNum) subtrahend).value); }
+                                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:45: error: cannot find symbol
+        @Override public Num minus(Num subtrahend){ return newNum(this.value - ((SimpleNum) subtrahend).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:46: error: cannot find symbol
+        @Override public Num multipliedBy(Num multiplicand){ return newNum(this.value * ((SimpleNum) multiplicand).value); }
+                                          ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:46: error: cannot find symbol
+        @Override public Num multipliedBy(Num multiplicand){ return newNum(this.value * ((SimpleNum) multiplicand).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: cannot find symbol
+        @Override public Num dividedBy(Num divisor){ return newNum(this.value / ((SimpleNum) divisor).value); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: cannot find symbol
+        @Override public Num dividedBy(Num divisor){ return newNum(this.value / ((SimpleNum) divisor).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:48: error: cannot find symbol
+        @Override public Num remainder(Num divisor){ return newNum(this.value % ((SimpleNum) divisor).value); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:48: error: cannot find symbol
+        @Override public Num remainder(Num divisor){ return newNum(this.value % ((SimpleNum) divisor).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:49: error: cannot find symbol
+        @Override public Num floor(){ return newNum(Math.floor(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:50: error: cannot find symbol
+        @Override public Num ceil(){ return newNum(Math.ceil(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:51: error: cannot find symbol
+        @Override public Num pow(int n){ return newNum(Math.pow(this.value, n)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:52: error: cannot find symbol
+        @Override public Num pow(Num n){ return newNum(Math.pow(this.value, ((SimpleNum)n).value)); }
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:52: error: cannot find symbol
+        @Override public Num pow(Num n){ return newNum(Math.pow(this.value, ((SimpleNum)n).value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:53: error: cannot find symbol
+        @Override public Num log(){ return newNum(Math.log(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:54: error: cannot find symbol
+        @Override public Num sqrt(){ return newNum(Math.sqrt(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:55: error: cannot find symbol
+        @Override public Num sqrt(int precision){ return sqrt(); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:56: error: cannot find symbol
+        @Override public Num abs(){ return newNum(Math.abs(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:57: error: cannot find symbol
+        @Override public Num negate(){ return newNum(-this.value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:64: error: cannot find symbol
+        @Override public boolean isEqual(Num other){ return Double.compare(this.value, ((SimpleNum)other).value) == 0; }
+                                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:65: error: cannot find symbol
+        @Override public boolean isGreaterThan(Num other){ return this.value > ((SimpleNum)other).value; }
+                                               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:66: error: cannot find symbol
+        @Override public boolean isGreaterThanOrEqual(Num other){ return this.value >= ((SimpleNum)other).value; }
+                                                      ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:67: error: cannot find symbol
+        @Override public boolean isLessThan(Num other){ return this.value < ((SimpleNum)other).value; }
+                                            ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:68: error: cannot find symbol
+        @Override public boolean isLessThanOrEqual(Num other){ return this.value <= ((SimpleNum)other).value; }
+                                                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:69: error: cannot find symbol
+        @Override public Num min(Num other){ return this.isLessThan(other) ? this : other; }
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:69: error: cannot find symbol
+        @Override public Num min(Num other){ return this.isLessThan(other) ? this : other; }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:70: error: cannot find symbol
+        @Override public Num max(Num other){ return this.isGreaterThan(other) ? this : other; }
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:70: error: cannot find symbol
+        @Override public Num max(Num other){ return this.isGreaterThan(other) ? this : other; }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:85: error: cannot find symbol
+        @Override public int compareTo(Num o){ return Double.compare(this.value, ((SimpleNum)o).value); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:38: error: method does not override or implement a method from a supertype
+        @Override public Number getDelegate() { return value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:39: error: method does not override or implement a method from a supertype
+        @Override public NumFactory getNumFactory() { return factory; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:40: error: method does not override or implement a method from a supertype
+        @Override public String getName() { return "SimpleNum"; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:44: error: method does not override or implement a method from a supertype
+        @Override public Num plus(Num augend)   { return newNum(this.value + ((SimpleNum) augend).value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:45: error: method does not override or implement a method from a supertype
+        @Override public Num minus(Num subtrahend){ return newNum(this.value - ((SimpleNum) subtrahend).value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:46: error: method does not override or implement a method from a supertype
+        @Override public Num multipliedBy(Num multiplicand){ return newNum(this.value * ((SimpleNum) multiplicand).value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: method does not override or implement a method from a supertype
+        @Override public Num dividedBy(Num divisor){ return newNum(this.value / ((SimpleNum) divisor).value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:48: error: method does not override or implement a method from a supertype
+        @Override public Num remainder(Num divisor){ return newNum(this.value % ((SimpleNum) divisor).value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:49: error: method does not override or implement a method from a supertype
+        @Override public Num floor(){ return newNum(Math.floor(this.value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:50: error: method does not override or implement a method from a supertype
+        @Override public Num ceil(){ return newNum(Math.ceil(this.value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:51: error: method does not override or implement a method from a supertype
+        @Override public Num pow(int n){ return newNum(Math.pow(this.value, n)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:52: error: method does not override or implement a method from a supertype
+        @Override public Num pow(Num n){ return newNum(Math.pow(this.value, ((SimpleNum)n).value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:53: error: method does not override or implement a method from a supertype
+        @Override public Num log(){ return newNum(Math.log(this.value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:54: error: method does not override or implement a method from a supertype
+        @Override public Num sqrt(){ return newNum(Math.sqrt(this.value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:55: error: method does not override or implement a method from a supertype
+        @Override public Num sqrt(int precision){ return sqrt(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:56: error: method does not override or implement a method from a supertype
+        @Override public Num abs(){ return newNum(Math.abs(this.value)); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:57: error: method does not override or implement a method from a supertype
+        @Override public Num negate(){ return newNum(-this.value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:59: error: method does not override or implement a method from a supertype
+        @Override public boolean isZero(){ return value == 0.0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:60: error: method does not override or implement a method from a supertype
+        @Override public boolean isPositive(){ return value > 0.0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:61: error: method does not override or implement a method from a supertype
+        @Override public boolean isPositiveOrZero(){ return value >= 0.0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:62: error: method does not override or implement a method from a supertype
+        @Override public boolean isNegative(){ return value < 0.0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:63: error: method does not override or implement a method from a supertype
+        @Override public boolean isNegativeOrZero(){ return value <= 0.0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:64: error: method does not override or implement a method from a supertype
+        @Override public boolean isEqual(Num other){ return Double.compare(this.value, ((SimpleNum)other).value) == 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:65: error: method does not override or implement a method from a supertype
+        @Override public boolean isGreaterThan(Num other){ return this.value > ((SimpleNum)other).value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:66: error: method does not override or implement a method from a supertype
+        @Override public boolean isGreaterThanOrEqual(Num other){ return this.value >= ((SimpleNum)other).value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:67: error: method does not override or implement a method from a supertype
+        @Override public boolean isLessThan(Num other){ return this.value < ((SimpleNum)other).value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:68: error: method does not override or implement a method from a supertype
+        @Override public boolean isLessThanOrEqual(Num other){ return this.value <= ((SimpleNum)other).value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:69: error: method does not override or implement a method from a supertype
+        @Override public Num min(Num other){ return this.isLessThan(other) ? this : other; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:70: error: method does not override or implement a method from a supertype
+        @Override public Num max(Num other){ return this.isGreaterThan(other) ? this : other; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:72: error: method does not override or implement a method from a supertype
+        @Override public boolean isNaN(){ return Double.isNaN(value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:73: error: method does not override or implement a method from a supertype
+        @Override public int intValue(){ return (int) value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:74: error: method does not override or implement a method from a supertype
+        @Override public long longValue(){ return (long) value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:75: error: method does not override or implement a method from a supertype
+        @Override public float floatValue(){ return (float) value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:76: error: method does not override or implement a method from a supertype
+        @Override public double doubleValue(){ return value; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:77: error: method does not override or implement a method from a supertype
+        @Override public BigDecimal bigDecimalValue(){ return BigDecimal.valueOf(value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:85: error: method does not override or implement a method from a supertype
+        @Override public int compareTo(Num o){ return Double.compare(this.value, ((SimpleNum)o).value); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:89: error: method does not override or implement a method from a supertype
+        @Override public Num zero(){ return new SimpleNum(0.0, this); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:90: error: method does not override or implement a method from a supertype
+        @Override public Num one(){ return new SimpleNum(1.0, this); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:115: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+        @Override public void addTrade(Number tradeVolume, Number tradePrice){ }
+                              ^
+  first method:  addTrade(Num,Num) in SimpleBarSeries
+  second method: addTrade(Num,Num) in BarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:118: error: name clash: class SimpleBarSeries has two methods with the same erasure, yet neither overrides the other
+        @Override public void addPrice(Number price){ }
+                              ^
+  first method:  addPrice(Num) in SimpleBarSeries
+  second method: addPrice(Num) in BarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:152: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:169: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:200: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:207: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:231: error: cannot find symbol
+        Num profit = pos.getProfit(); // no transaction cost (ZeroCostModel)
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:241: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:245: error: cannot find symbol
+        Num profit = pos.getProfit();
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:283: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:301: error: cannot find symbol
+        Position pos = new Position(TradeType.SELL);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:316: error: cannot find symbol
+        Num grossReturn = pos.getGrossReturn(series);
+        ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:371: error: cannot find symbol
+        Num cost = pos.getPositionCost(5);
+        ^
+  symbol:   class Num
+  location: class PositionTest
+91 errors

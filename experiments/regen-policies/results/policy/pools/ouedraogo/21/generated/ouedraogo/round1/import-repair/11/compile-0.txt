@@ -1,0 +1,271 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:15: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:51: error: incompatible types: NumFactory is not a functional interface
+                .withNumFactory(DecimalNum::valueOf)
+                ^
+    multiple non-overriding abstract methods found in interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:55: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(1), series.numFactory().valueOf(1),
+                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:55: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(1), series.numFactory().valueOf(1),
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:56: error: cannot find symbol
+                series.numFactory().valueOf(1), series.numFactory().valueOf(1),
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:56: error: cannot find symbol
+                series.numFactory().valueOf(1), series.numFactory().valueOf(1),
+                                                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:57: error: cannot find symbol
+                series.numFactory().valueOf(1));
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:58: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(2), series.numFactory().valueOf(2),
+                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:58: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(2), series.numFactory().valueOf(2),
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:59: error: cannot find symbol
+                series.numFactory().valueOf(2), series.numFactory().valueOf(2),
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:59: error: cannot find symbol
+                series.numFactory().valueOf(2), series.numFactory().valueOf(2),
+                                                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:60: error: cannot find symbol
+                series.numFactory().valueOf(2));
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:61: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(3), series.numFactory().valueOf(3),
+                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:61: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(3), series.numFactory().valueOf(3),
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:62: error: cannot find symbol
+                series.numFactory().valueOf(3), series.numFactory().valueOf(3),
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:62: error: cannot find symbol
+                series.numFactory().valueOf(3), series.numFactory().valueOf(3),
+                                                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:63: error: cannot find symbol
+                series.numFactory().valueOf(3));
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:64: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(4), series.numFactory().valueOf(4),
+                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:64: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(4), series.numFactory().valueOf(4),
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:65: error: cannot find symbol
+                series.numFactory().valueOf(4), series.numFactory().valueOf(4),
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:65: error: cannot find symbol
+                series.numFactory().valueOf(4), series.numFactory().valueOf(4),
+                                                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:66: error: cannot find symbol
+                series.numFactory().valueOf(4));
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:67: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(5), series.numFactory().valueOf(5),
+                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:67: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(5), series.numFactory().valueOf(5),
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:68: error: cannot find symbol
+                series.numFactory().valueOf(5), series.numFactory().valueOf(5),
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:68: error: cannot find symbol
+                series.numFactory().valueOf(5), series.numFactory().valueOf(5),
+                                                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:69: error: cannot find symbol
+                series.numFactory().valueOf(5));
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:70: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(6), series.numFactory().valueOf(6),
+                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:70: error: cannot find symbol
+        series.addBar(series.numFactory().valueOf(6), series.numFactory().valueOf(6),
+                                                                         ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:71: error: cannot find symbol
+                series.numFactory().valueOf(6), series.numFactory().valueOf(6),
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:71: error: cannot find symbol
+                series.numFactory().valueOf(6), series.numFactory().valueOf(6),
+                                                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:72: error: cannot find symbol
+                series.numFactory().valueOf(6));
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:74: error: cannot find symbol
+        one   = series.numFactory().valueOf(1);
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:75: error: cannot find symbol
+        two   = series.numFactory().valueOf(2);
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:76: error: cannot find symbol
+        three = series.numFactory().valueOf(3);
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:77: error: cannot find symbol
+        four  = series.numFactory().valueOf(4);
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:78: error: cannot find symbol
+        five  = series.numFactory().valueOf(5);
+                                   ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:109: error: cannot find symbol
+                new Trade(TradeType.BUY, series.getBar(1), one, one),
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:110: error: cannot find symbol
+                new Trade(TradeType.SELL, series.getBar(4), four, one));
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:119: error: cannot find symbol
+                new Trade(TradeType.BUY, series.getBar(0), one, one)); // only entry
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:128: error: cannot find symbol
+                new Trade(TradeType.BUY, series.getBar(2), three, one));
+                          ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:149: error: cannot find symbol
+        Num expected = series.numFactory().valueOf(1.5);
+                                          ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:173: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(1), two, one);
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:174: error: cannot find symbol
+        Trade exit  = new Trade(TradeType.SELL, series.getBar(4), five, one);
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:192: error: cannot find symbol
+        Num expected2 = series.numFactory().valueOf(1.5);
+                                           ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:194: error: cannot find symbol
+        Num expected4 = series.numFactory().valueOf(2.5);
+                                           ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:209: error: cannot find symbol
+        Trade entry = new Trade(TradeType.SELL, series.getBar(2), three, one);
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:210: error: cannot find symbol
+        Trade exit  = new Trade(TradeType.BUY,  series.getBar(5), six(), one);
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:226: error: cannot find symbol
+        Num expected3 = series.numFactory().valueOf(0.6666666666666667);
+                                           ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:227: error: cannot find symbol
+        Num expected4 = series.numFactory().valueOf(0.3333333333333333);
+                                           ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:228: error: cannot find symbol
+        Num expected5 = series.numFactory().valueOf(0.0);
+                                           ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:239: error: cannot find symbol
+        return series.numFactory().valueOf(6);
+                                  ^
+  symbol:   method valueOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:270: error: cannot find symbol
+        assertEquals(series.numFactory().valueOf(1.5), cf.getValue(2));
+                                        ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:279: error: cannot find symbol
+        Num expected5 = series.numFactory().valueOf(1.6);
+                                           ^
+  symbol:   method valueOf(double)
+  location: interface NumFactory
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+54 errors

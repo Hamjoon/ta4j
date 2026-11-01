@@ -1,0 +1,64 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:16: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:46: error: cannot find symbol
+    private Num n(Number value) {
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:51: error: cannot find symbol
+    private ConstantIndicator<Num> constant(Number value) {
+                              ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:279: error: incompatible types: Indicator<Num> cannot be converted to NumericIndicator
+        NumericIndicator prev = close.previous();
+                                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:296: error: cannot find symbol
+        Rule rule = low.crossedOver(high);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:299: error: cannot find symbol
+        Rule opposite = high.crossedOver(low);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:306: error: cannot find symbol
+        Rule rule = indicator.crossedUnder(10); // 7 crosses under 10 at first bar
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:315: error: cannot find symbol
+        Rule greater = a.isGreaterThan(b);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:316: error: cannot find symbol
+        Rule less = b.isLessThan(a);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:322: error: cannot find symbol
+        Rule greaterNum = a.isGreaterThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:323: error: cannot find symbol
+        Rule lessNum = b.isLessThan(5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:335: error: cannot find symbol
+        ConstantIndicator<Num> constInd = constant(42);
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:343: error: cannot find symbol
+        ConstantIndicator<Num> constInd = constant(99);
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+13 errors

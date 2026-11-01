@@ -1,0 +1,67 @@
+{
+  "index": 478,
+  "sha": "da4215f57ac2c3f6da47d84b40594d0b7e53a2d3",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/regen-policies/work/checkouts/478/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 5.227,
+      "log": "results/builds/logs/478-1.txt"
+    }
+  ],
+  "input_sha256": "64bf30435e26ad2d85d55ed9d34a5ab02d21a47cdfb7855e005a14d6153160d4",
+  "pom_sha256": "0200f03b6d3e111880ff1f2192d3873a044ecc59aa76910377f2d7c79c0f95cf",
+  "classpath": "work/classpaths/0200f03b6d3e111880ff1f2192d3873a044ecc59aa76910377f2d7c79c0f95cf.txt",
+  "classpath_attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "dependency:go-offline"
+      ],
+      "cwd": "/repo/experiments/regen-policies/work/checkouts/478/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.591,
+      "log": "results/builds/logs/classpath-478/go-offline-64f160af5ea44559b2ab68bd22c9215a/1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "dependency:go-offline"
+      ],
+      "cwd": "/repo/experiments/regen-policies/work/checkouts/478/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.73,
+      "log": "results/builds/logs/classpath-478/go-offline-64f160af5ea44559b2ab68bd22c9215a/2.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "dependency:build-classpath",
+        "-DincludeScope=test",
+        "-Dmdep.outputFile=/repo/experiments/regen-policies/work/classpaths/0200f03b6d3e111880ff1f2192d3873a044ecc59aa76910377f2d7c79c0f95cf-a2980f713bf240fcb048d625e3f65360.tmp"
+      ],
+      "cwd": "/repo/experiments/regen-policies/work/checkouts/478/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 0.92,
+      "log": "results/builds/logs/classpath-478/build-classpath-4939efae63e64a009f6bb14fe634502f/1.txt"
+    }
+  ]
+}

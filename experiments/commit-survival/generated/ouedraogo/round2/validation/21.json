@@ -1,0 +1,21 @@
+{
+  "file": "generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java",
+  "methods": [],
+  "compile": null,
+  "runs": [],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/FSL/PositionTest.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 1,
+    "timeout": false,
+    "seconds": 0.675,
+    "log": "work/validation/ouedraogo/round2/21/inventory.tsv"
+  },
+  "input_sha256": "954179849233cb06ddde678754bab2fd4e76f779605fc2f03181a92627f1a496"
+}

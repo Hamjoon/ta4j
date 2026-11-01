@@ -1,0 +1,107 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:34: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:191: error: cannot find symbol
+    private Position createClosedPosition(TradeType entryType, int entryIdx, int exitIdx) {
+                                          ^
+  symbol:   class TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:54: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.minusDays(3),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:57: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.minusDays(2),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:60: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.minusDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:80: error: cannot find symbol
+        Position closedPos = createClosedPosition(TradeType.BUY, 0, 2);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:87: error: cannot find symbol
+        Position closedPos = createClosedPosition(TradeType.BUY, 0, 2);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:94: error: cannot find symbol
+        Position closedPos = createClosedPosition(TradeType.BUY, 0, 2);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:102: error: cannot find symbol
+        Position closedPos = createClosedPosition(TradeType.BUY, 0, 2);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:110: error: cannot find symbol
+        Position closedPos = createClosedPosition(TradeType.BUY, 0, 2);
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:127: error: cannot find symbol
+        Trade entry = new Trade(series, 0, TradeType.BUY, one, one);
+                                           ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:128: error: incompatible types: Trade cannot be converted to TradeType
+        Position openPos = new Position(entry);
+                                        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:151: error: cannot find symbol
+        Position pos = createClosedPosition(TradeType.BUY, 0, 2); // exit at index 2
+                                            ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:162: error: cannot find symbol
+        Trade entry = new Trade(series, 0, TradeType.BUY, one, one);
+                                           ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:163: error: incompatible types: Trade cannot be converted to TradeType
+        Position openPos = new Position(entry);
+                                        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:174: error: cannot find symbol
+        Position closedPos = createClosedPosition(TradeType.BUY, 0, 1); // exit at index 1
+                                                  ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:196: error: no suitable constructor found for Trade(BaseBarSeries,int,entryType.[...]e.BUY,Num,Num)
+        Trade exit = new Trade(series, exitIdx,
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:197: error: cannot find symbol
+                entryType.isBuy() ? TradeType.SELL : TradeType.BUY, one, exitPrice);
+                                    ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:197: error: cannot find symbol
+                entryType.isBuy() ? TradeType.SELL : TradeType.BUY, one, exitPrice);
+                                                     ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+19 errors

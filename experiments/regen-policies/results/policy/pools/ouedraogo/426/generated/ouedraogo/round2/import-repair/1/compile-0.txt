@@ -1,0 +1,12 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:45: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("test-series");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:57: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+            BaseBar bar = new BaseBar(Duration.ofMinutes(1), endTime, open, high, low, close, volume);
+                          ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2 errors

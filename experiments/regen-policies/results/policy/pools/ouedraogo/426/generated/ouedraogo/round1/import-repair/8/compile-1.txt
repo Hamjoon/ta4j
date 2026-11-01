@@ -1,0 +1,63 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:82: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class NoOpStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:88: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class NoOpStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:75: error: NoOpStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class NoOpStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:240: error: cannot find symbol
+        PositionSizer sizer = PositionSizer.fixed(DecimalNum.NaN);
+                                                            ^
+  symbol:   variable NaN
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:289: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements org.ta4j.core.Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:311: error: getEndTime() in SimpleBar cannot implement getEndTime() in Bar
+        @Override public long getEndTime() { return endTime; }
+                              ^
+  return type long is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:321: error: getBeginTime() in SimpleBar cannot implement getBeginTime() in Bar
+        @Override public long getBeginTime() { return endTime; }
+                              ^
+  return type long is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:311: error: method does not override or implement a method from a supertype
+        @Override public long getEndTime() { return endTime; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:315: error: method does not override or implement a method from a supertype
+        @Override public Num getPrice() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:316: error: method does not override or implement a method from a supertype
+        @Override public Num getBidPrice() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:317: error: method does not override or implement a method from a supertype
+        @Override public Num getAskPrice() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:318: error: method does not override or implement a method from a supertype
+        @Override public Num getSpread() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:319: error: method does not override or implement a method from a supertype
+        @Override public Num getMidPrice() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:320: error: method does not override or implement a method from a supertype
+        @Override public Num getWeightedPrice() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:321: error: method does not override or implement a method from a supertype
+        @Override public long getBeginTime() { return endTime; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:322: error: method does not override or implement a method from a supertype
+        @Override public long getNumberOfTrades() { return 0L; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:323: error: method does not override or implement a method from a supertype
+        @Override public int getTradesCount() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:326: error: method does not override or implement a method from a supertype
+        @Override public boolean isNeutral() { return false; }
+        ^
+18 errors

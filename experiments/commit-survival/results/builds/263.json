@@ -1,0 +1,7 @@
+{
+  "index": 263,
+  "sha": "ab8270f4d306518777c28d4af07a667eed35ad04",
+  "build": "skipped-untouched",
+  "attempts": [],
+  "reason": "No changes under ta4j-core/ or to any pom.xml"
+}

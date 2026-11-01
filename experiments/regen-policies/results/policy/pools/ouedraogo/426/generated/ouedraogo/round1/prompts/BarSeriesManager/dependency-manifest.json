@@ -1,0 +1,71 @@
+{
+  "class_name": "org.ta4j.core.backtest.BarSeriesManager",
+  "ordered_types": [
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.backtest.TradeExecutionModel",
+    "org.ta4j.core.analysis.cost.CostModel",
+    "org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory",
+    "org.ta4j.core.Strategy",
+    "org.ta4j.core.TradingRecord",
+    "org.ta4j.core.Trade.TradeType",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.backtest.PositionSizer",
+    "org.ta4j.core.walkforward.WalkForwardConfig",
+    "org.ta4j.core.backtest.StrategyWalkForwardExecutionResult",
+    "org.ta4j.core.backtest.PositionSizer.Context",
+    "org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget",
+    "org.ta4j.core.BaseBarSeriesBuilder",
+    "org.ta4j.core.BaseTradingRecord",
+    "org.ta4j.core.analysis.cost.ZeroCostModel",
+    "org.ta4j.core.reports.TradingStatementGenerator",
+    "org.ta4j.core.walkforward.AnchoredExpandingWalkForwardSplitter"
+  ],
+  "included": [
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.backtest.TradeExecutionModel",
+    "org.ta4j.core.analysis.cost.CostModel",
+    "org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory",
+    "org.ta4j.core.Strategy",
+    "org.ta4j.core.TradingRecord",
+    "org.ta4j.core.Trade.TradeType",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.backtest.PositionSizer",
+    "org.ta4j.core.walkforward.WalkForwardConfig",
+    "org.ta4j.core.backtest.StrategyWalkForwardExecutionResult",
+    "org.ta4j.core.backtest.PositionSizer.Context",
+    "org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget",
+    "org.ta4j.core.BaseBarSeriesBuilder",
+    "org.ta4j.core.BaseTradingRecord"
+  ],
+  "omitted": [
+    "org.ta4j.core.analysis.cost.ZeroCostModel",
+    "org.ta4j.core.reports.TradingStatementGenerator",
+    "org.ta4j.core.walkforward.AnchoredExpandingWalkForwardSplitter"
+  ],
+  "reasons": {
+    "org.ta4j.core.BarSeries": "constructor",
+    "org.ta4j.core.backtest.TradeExecutionModel": "constructor",
+    "org.ta4j.core.analysis.cost.CostModel": "constructor",
+    "org.ta4j.core.backtest.BarSeriesManager.TradingRecordFactory": "constructor",
+    "org.ta4j.core.Strategy": "method",
+    "org.ta4j.core.TradingRecord": "method",
+    "org.ta4j.core.Trade.TradeType": "method",
+    "org.ta4j.core.num.Num": "method",
+    "org.ta4j.core.backtest.PositionSizer": "method",
+    "org.ta4j.core.walkforward.WalkForwardConfig": "method",
+    "org.ta4j.core.backtest.StrategyWalkForwardExecutionResult": "method",
+    "org.ta4j.core.backtest.PositionSizer.Context": "method",
+    "org.ta4j.core.backtest.TradeExecutionModel.ExecutionTarget": "method",
+    "org.ta4j.core.BaseBarSeriesBuilder": "import",
+    "org.ta4j.core.BaseTradingRecord": "import",
+    "org.ta4j.core.analysis.cost.ZeroCostModel": "import",
+    "org.ta4j.core.reports.TradingStatementGenerator": "import",
+    "org.ta4j.core.walkforward.AnchoredExpandingWalkForwardSplitter": "import"
+  },
+  "types": 15,
+  "lines": 285,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

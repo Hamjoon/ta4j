@@ -1,0 +1,42 @@
+{
+  "index": 350,
+  "sha": "c7aabf68e0d2faa4b32afdf72ea6db899b2a7823",
+  "parent": "2165ce5fdbc74fe0299b207e25a9489dad964f1c",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      521
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      521,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      2969,
+      2972,
+      2973,
+      2974,
+      2975,
+      2976,
+      2977,
+      2978,
+      2981,
+      2985,
+      2989,
+      2990,
+      2991,
+      2992,
+      2996,
+      2997,
+      2998,
+      2999,
+      3003
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 89ca7462a..e3dec5d75 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -521 +521 @@ public final class ElliottWaveAnalysisRunner {\n-        return searchCanonicalStructure(historicalCandidates).map(path -> historicalStructureAssessment(series, path))\n+        return selectHistoricalStructureAssessment(series, searchCanonicalStructurePaths(historicalCandidates))\n@@ -524,0 +525,11 @@ public final class ElliottWaveAnalysisRunner {\n+    Optional<ElliottWaveAnalysisResult.HistoricalStructureAssessment> selectHistoricalStructureAssessment(\n+            final BarSeries series, final List<CanonicalStructurePath> paths) {\n+        Objects.requireNonNull(series, \"series\");\n+        Objects.requireNonNull(paths, \"paths\");\n+        return paths.stream()\n+                .map(path -> new HistoricalStructureCandidate(path, historicalStructureAssessment(series, path)))\n+                .filter(candidate -> !candidate.assessment().legs().isEmpty())\n+                .max(HistoricalStructureCandidate.ORDERING)\n+                .map(HistoricalStructureCandidate::assessment);\n+    }\n+\n@@ -2957,0 +2969,38 @@ public final class ElliottWaveAnalysisRunner {\n+    private record HistoricalStructureCandidate(CanonicalStructurePath path,\n+            ElliottWaveAnalysisResult.HistoricalStructureAssessment assessment) {\n+\n+        private static final Comparator<HistoricalStructureCandidate> ORDERING = Comparator\n+                .comparingInt(HistoricalStructureCandidate::cycleCount)\n+                .thenComparingInt(HistoricalStructureCandidate::terminalCycleEndIndex)\n+                .thenComparingInt(HistoricalStructureCandidate::totalCycleSpan)\n+                .thenComparingDouble(HistoricalStructureCandidate::totalCycleFitScore)\n+                .thenComparingDouble(candidate -> candidate.path().score())\n+                .thenComparingInt(HistoricalStructureCandidate::terminalLegEndIndex);\n+\n+        private int cycleCount() {\n+            return assessment.cycles().size();\n+        }\n+\n+        private int terminalCycleEndIndex() {\n+            return assessment.cycles().isEmpty() ? -1 : assessment.cycles().getLast().bearishLeg().endIndex();\n+        }\n+\n+        private int totalCycleSpan() {\n+            return assessment.cycles()\n+                    .stream()\n+                    .mapToInt(cycle -> cycle.bearishLeg().endIndex() - cycle.bullishLeg().startIndex())\n+                    .sum();\n+        }\n+\n+        private double totalCycleFitScore() {\n+            return assessment.cycles()\n+                    .stream()\n+                    .mapToDouble(cycle -> cycle.bullishLeg().fitScore() + cycle.bearishLeg().fitScore())\n+                    .sum();\n+        }\n+\n+        private int terminalLegEndIndex() {\n+            return assessment.legs().isEmpty() ? -1 : assessment.legs().getLast().endIndex();\n+        }\n+    }\n+"
+}

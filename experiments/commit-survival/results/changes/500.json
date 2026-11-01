@@ -1,0 +1,24 @@
+{
+  "index": 500,
+  "sha": "60569fb9b9bc9bfc0ba2f50a78700f09c5b82df6",
+  "parent": "85c72a4e9d12aab6fa4cf979310b5d5e52917e73",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java": [
+      300,
+      301,
+      303,
+      306,
+      308
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java": [
+      300,
+      301,
+      303,
+      306,
+      308
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java\nindex b6ce705e5..5832bf9d8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/walkforward/WalkForwardTuner.java\n@@ -300,2 +300,2 @@ public final class WalkForwardTuner<C, P, O> {\n-        for (String key : new ArrayList<>(metricMap.keySet())) {\n-            String normalized = key.toLowerCase();\n+        for (Map.Entry<String, Num> entry : metricMap.entrySet()) {\n+            String normalized = entry.getKey().toLowerCase();\n@@ -303 +303 @@ public final class WalkForwardTuner<C, P, O> {\n-                metricMap.put(key, scores.brier);\n+                entry.setValue(scores.brier);\n@@ -306 +306 @@ public final class WalkForwardTuner<C, P, O> {\n-                metricMap.put(key, scores.logLoss);\n+                entry.setValue(scores.logLoss);\n@@ -308 +308 @@ public final class WalkForwardTuner<C, P, O> {\n-                metricMap.put(key, scores.ece);\n+                entry.setValue(scores.ece);"
+}

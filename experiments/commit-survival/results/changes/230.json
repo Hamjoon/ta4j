@@ -1,0 +1,46 @@
+{
+  "index": 230,
+  "sha": "9e7c147f70a25841c412ee865d8e5870169b2a9c",
+  "parent": "1cf19f305562b25523af244d8ca88975c18c992a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      318
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      326,
+      329,
+      348,
+      349,
+      354,
+      355,
+      357,
+      358,
+      361,
+      362,
+      363,
+      364,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      378,
+      379,
+      381,
+      382,
+      384,
+      385,
+      387,
+      391
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex 3ad5c4bed..e362a24bb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -114 +114,2 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-     * @param compositeScore    blended score used for ranking\n+     * @param compositeScore    blended ranking score combining raw confidence,\n+     *                          structural priority, and cross-degree support\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex c545d99f2..ce16e26c7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -47,2 +47,3 @@ import org.ta4j.core.num.NumFactory;\n- * {@link ElliottScenarioSet} by measuring compatibility against the best\n- * matching scenarios in the supporting degrees.\n+ * {@link ElliottScenarioSet} by blending base confidence, structural breadth,\n+ * and compatibility against the best matching scenarios in the supporting\n+ * degrees.\n@@ -72 +73,9 @@ public final class ElliottWaveAnalysisRunner {\n-    private static final int DEFAULT_SCENARIO_SWING_WINDOW = 5;\n+    /**\n+     * Default scenario window.\n+     *\n+     * <p>\n+     * {@code 0} means the runner forwards the full processed swing history into\n+     * scenario generation so decomposition search can operate on broader structures\n+     * by default.\n+     */\n+    private static final int DEFAULT_SCENARIO_SWING_WINDOW = 0;\n@@ -77,0 +87 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final double STRUCTURAL_SELECTION_WEIGHT = 0.20;\n@@ -315,0 +326 @@ public final class ElliottWaveAnalysisRunner {\n+            double rankedConfidence = rankedConfidenceScore(baseScenario, baseResult.processedSwings(), confidence);\n@@ -318 +329,2 @@ public final class ElliottWaveAnalysisRunner {\n-            double composite = (baseConfidenceWeight * confidence) + ((1.0 - baseConfidenceWeight) * crossDegreeScore);\n+            double composite = (baseConfidenceWeight * rankedConfidence)\n+                    + ((1.0 - baseConfidenceWeight) * crossDegreeScore);\n@@ -332,0 +345,48 @@ public final class ElliottWaveAnalysisRunner {\n+\n+    private double rankedConfidenceScore(final ElliottScenario scenario, final List<ElliottSwing> processedSwings,\n+            final double rawConfidence) {\n+        double structuralPriority = scenarioStructuralPriority(scenario, processedSwings);\n+        return blend(rawConfidence, structuralPriority, STRUCTURAL_SELECTION_WEIGHT);\n+    }\n+\n+    private static double scenarioStructuralPriority(final ElliottScenario scenario,\n+            final List<ElliottSwing> processedSwings) {\n+        if (scenario == null || scenario.swings().isEmpty()) {\n+            return 0.0;\n+        }\n+        if (processedSwings == null || processedSwings.isEmpty()) {\n+            return phaseProgressScore(scenario.currentPhase());\n+        }\n+\n+        final ElliottSwing firstProcessed = processedSwings.getFirst();\n+        final ElliottSwing lastProcessed = processedSwings.getLast();\n+        final ElliottSwing firstScenario = scenario.swings().getFirst();\n+        final ElliottSwing lastScenario = scenario.swings().getLast();\n+\n+        final double totalSpan = Math.max(1.0, lastProcessed.toIndex() - firstProcessed.fromIndex());\n+        final double scenarioSpan = Math.max(1.0, lastScenario.toIndex() - firstScenario.fromIndex());\n+        final double coverageScore = clamp01(scenarioSpan / totalSpan);\n+        final double earlyStartScore = clamp01(\n+                1.0 - ((firstScenario.fromIndex() - firstProcessed.fromIndex()) / totalSpan));\n+        final double completionScore = phaseProgressScore(scenario.currentPhase());\n+        final double waveRichnessScore = scenario.currentPhase().isCorrective() ? clamp01(scenario.waveCount() / 3.0)\n+                : clamp01(scenario.waveCount() / 5.0);\n+        return clamp01((coverageScore + earlyStartScore + completionScore + waveRichnessScore) / 4.0);\n+    }\n+\n+    private static double phaseProgressScore(final ElliottPhase phase) {\n+        if (phase == null || phase == ElliottPhase.NONE) {\n+            return 0.0;\n+        }\n+        if (phase.isImpulse()) {\n+            return clamp01(0.20 + (phase.impulseIndex() * 0.16));\n+        }\n+        if (phase.isCorrective()) {\n+            return clamp01(0.30 + (phase.correctiveIndex() * 0.25));\n+        }\n+        return 0.0;\n+    }\n+\n+    private static double blend(final double primary, final double secondary, final double secondaryWeight) {\n+        return clamp01((primary * (1.0 - secondaryWeight)) + (secondary * secondaryWeight));\n+    }"
+}

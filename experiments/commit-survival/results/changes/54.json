@@ -1,0 +1,28 @@
+{
+  "index": 54,
+  "sha": "4ef47226d6815130a4c00fe70fb781bdbf588688",
+  "parent": "676e3645b0ff65489c94b78d2b666262ba40fdb1",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java": [
+      263,
+      274,
+      285,
+      296,
+      356,
+      357,
+      362
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java": [
+      263,
+      274,
+      285,
+      296,
+      355,
+      357,
+      362
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java\nindex 365493cac..a6b55d97f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/ConvergenceDivergenceIndicator.java\n@@ -263 +263 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-        Rule otherIsRising = new IsRisingRule(ref, barCount);\n+        Rule otherIsRising = new IsRisingRule(other, barCount);\n@@ -274 +274 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-        Rule otherIsFalling = new IsFallingRule(ref, barCount);\n+        Rule otherIsFalling = new IsFallingRule(other, barCount);\n@@ -285 +285 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-        Rule otherIsFalling = new IsFallingRule(ref, barCount);\n+        Rule otherIsFalling = new IsFallingRule(other, barCount);\n@@ -296 +296 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-        Rule otherIsRising = new IsRisingRule(ref, barCount);\n+        Rule otherIsRising = new IsRisingRule(other, barCount);\n@@ -354,0 +355 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n+        Num minusOne = getBarSeries().numFactory().minusOne();\n@@ -356,2 +357 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-        boolean isDivergent = cc.getValue(index)\n-                .isLessThanOrEqual(minStrength.multipliedBy(getBarSeries().numFactory().numOf(-1)));\n+        boolean isDivergent = cc.getValue(index).isLessThanOrEqual(minStrength.multipliedBy(minusOne));\n@@ -362 +362 @@ public class ConvergenceDivergenceIndicator extends CachedIndicator<Boolean> {\n-            return slope.isLessThanOrEqual(minSlope.abs().multipliedBy(getBarSeries().numFactory().numOf(-1)));\n+            return slope.isLessThanOrEqual(minSlope.abs().multipliedBy(minusOne));"
+}

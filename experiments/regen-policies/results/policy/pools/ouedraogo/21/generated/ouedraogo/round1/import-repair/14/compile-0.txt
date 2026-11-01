@@ -1,0 +1,118 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:10: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:99: error: method one() is already defined in class SimpleNumFactory
+        @Override public Num one() { return one(); }
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:103: error: method numOf(double) is already defined in class SimpleNumFactory
+        @Override public Num numOf(double d) { return numOf(d); }
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:169: error: cannot find symbol
+        private final TradeType startingType;
+                      ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:171: error: cannot find symbol
+        SimpleTradingRecord(TradeType startingType) {
+                            ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:175: error: cannot find symbol
+        @Override public TradeType getStartingType() { return startingType; }
+                         ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:191: error: cannot find symbol
+        @Override public CostModel getTransactionCostModel() { return null; }
+                         ^
+  symbol:   class CostModel
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:192: error: cannot find symbol
+        @Override public CostModel getHoldingCostModel() { return null; }
+                         ^
+  symbol:   class CostModel
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:198: error: cannot find symbol
+        @Override public org.ta4j.core.Trade getLastTrade(TradeType tradeType) { throw new UnsupportedOperationException(); }
+                                                          ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:43: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:96: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:97: error: one() in SimpleNumFactory cannot implement one() in NumFactory
+        SimpleNum one() { return numOf(1.0); }
+                  ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:101: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(int i) { return numOf((double) i); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:102: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(long l) { return numOf((double) l); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:103: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(double d) { return numOf(d); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:104: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(java.math.BigDecimal bd) { return numOf(bd.doubleValue()); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:108: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static final class SimpleBar implements org.ta4j.core.Bar {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:124: error: method does not override or implement a method from a supertype
+        @Override public long getTimestamp() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:125: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:224: error: cannot find symbol
+        Position position = new Position(TradeType.BUY);
+                                         ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:250: error: cannot find symbol
+        Position openPos = new Position(TradeType.BUY);
+                                        ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:254: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openPos, series.getEndIndex());
+                                           ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:275: error: cannot find symbol
+        SimpleTradingRecord record = new SimpleTradingRecord(TradeType.BUY);
+                                                             ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:322: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:331: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:338: error: cannot find symbol
+        Position closed = new Position(TradeType.BUY);
+                                       ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:343: error: cannot find symbol
+        Position open = new Position(TradeType.BUY);
+                                     ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:368: error: cannot find symbol
+        Position pos = new Position(TradeType.BUY);
+                                    ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:378: error: cannot find symbol
+        Position open = new Position(TradeType.BUY);
+                                     ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+29 errors

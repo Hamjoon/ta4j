@@ -1,0 +1,40 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:54: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+        return new BaseBar(
+               ^
+  required: Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long
+  found:    Num,Num,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:68: error: no suitable constructor found for Trade(TradeType,Bar,Num,Num)
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx), series.numFactory().numOf(entryPrice), series.numFactory().numOf(1));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:69: error: no suitable constructor found for Trade(TradeType,Bar,Num,Num)
+        Trade exit = new Trade(TradeType.SELL, series.getBar(exitIdx), series.numFactory().numOf(exitPrice), series.numFactory().numOf(1));
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:75: error: no suitable constructor found for Trade(TradeType,Bar,Num,Num)
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx), series.numFactory().numOf(entryPrice), series.numFactory().numOf(1));
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:82: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+6 errors

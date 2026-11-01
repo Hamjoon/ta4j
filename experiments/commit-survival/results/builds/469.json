@@ -1,0 +1,38 @@
+{
+  "index": 469,
+  "sha": "bc7157ed2100ff5567022c81eae5bc37c4d1640d",
+  "build": "ok",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-o",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/469/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 1.376,
+      "log": "results/builds/logs/469-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-DskipTests",
+        "compile"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/469/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 15.291,
+      "log": "results/builds/logs/469-2.txt"
+    }
+  ],
+  "input_sha256": "07efd8d41932ba3bce3e2668a27580453189179092719f40b82aed56bf20766f",
+  "pom_sha256": "b7d2c82f1f514e01643592420769662a8679bde5078465b29a8776b710b9f3cb",
+  "classpath": "work/classpaths/b7d2c82f1f514e01643592420769662a8679bde5078465b29a8776b710b9f3cb.txt",
+  "classpath_attempts": []
+}

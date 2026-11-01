@@ -1,0 +1,35 @@
+{
+  "index": 84,
+  "sha": "cca0bb02dde3b68ea9b61498623835c669cae527",
+  "parent": "f22a35ee75c9a77ecc1c48759a17e23085be637a",
+  "pre_image": {},
+  "post_image": {
+    "src/main/java/org/ta4j/core/rules/VoteRule.java": [
+      55,
+      56,
+      64,
+      65,
+      66,
+      68,
+      69,
+      71,
+      72,
+      75,
+      76,
+      77,
+      81,
+      82,
+      83,
+      84,
+      86,
+      87,
+      90,
+      92,
+      93,
+      94,
+      101,
+      108
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/VoteRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/VoteRule.java\nnew file mode 100644\nindex 000000000..90c28d8cd\n--- /dev/null\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/VoteRule.java\n@@ -0,0 +1,110 @@\n+/*\n+ * The MIT License (MIT)\n+ *\n+ * Copyright (c) 2017-2025 Ta4j Organization & respective\n+ * authors (see AUTHORS)\n+ *\n+ * Permission is hereby granted, free of charge, to any person obtaining a copy of\n+ * this software and associated documentation files (the \"Software\"), to deal in\n+ * the Software without restriction, including without limitation the rights to\n+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\n+ * the Software, and to permit persons to whom the Software is furnished to do so,\n+ * subject to the following conditions:\n+ *\n+ * The above copyright notice and this permission notice shall be included in all\n+ * copies or substantial portions of the Software.\n+ *\n+ * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\n+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\n+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\n+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n+ */\n+package org.ta4j.core.rules;\n+\n+import java.util.Arrays;\n+import java.util.List;\n+\n+import org.ta4j.core.Rule;\n+import org.ta4j.core.TradingRecord;\n+\n+/**\n+ * A voting combination of multiple {@link Rule rules}.\n+ *\n+ * <p>\n+ * Satisfied when at least the required number of rules are satisfied.\n+ *\n+ * <p>\n+ * <b>Warning:</b> Early termination if we already have enough votes.\n+ *\n+ * @since 0.19\n+ */\n+public class VoteRule extends AbstractRule {\n+\n+    private final List<Rule> rules;\n+    private final int requiredVotes;\n+\n+    /**\n+     * Constructor with required votes count.\n+     *\n+     * @param requiredVotes the minimum number of rules that must be satisfied\n+     * @param rules         the rules to vote\n+     */\n+    public VoteRule(int requiredVotes, Rule... rules) {\n+        this(requiredVotes, Arrays.asList(rules));\n+    }\n+\n+    /**\n+     * Constructor with required votes count.\n+     *\n+     * @param requiredVotes the minimum number of rules that must be satisfied\n+     * @param rules         the rules to vote\n+     */\n+    public VoteRule(int requiredVotes, List<Rule> rules) {\n+        if (requiredVotes < 1) {\n+            throw new IllegalArgumentException(\"Required votes must be at least 1\");\n+        }\n+        if (rules == null || rules.isEmpty()) {\n+            throw new IllegalArgumentException(\"At least one rule is required\");\n+        }\n+        if (requiredVotes > rules.size()) {\n+            throw new IllegalArgumentException(\"Required votes cannot exceed number of rules\");\n+        }\n+\n+        this.requiredVotes = requiredVotes;\n+        this.rules = rules;\n+    }\n+\n+    @Override\n+    public boolean isSatisfied(int index, TradingRecord tradingRecord) {\n+        int count = 0;\n+        for (Rule rule : rules) {\n+            if (rule.isSatisfied(index, tradingRecord)) {\n+                count++;\n+                // Early termination if we already have enough votes\n+                if (count >= requiredVotes) {\n+                    break;\n+                }\n+            }\n+        }\n+\n+        final boolean satisfied = count >= requiredVotes;\n+        traceIsSatisfied(index, satisfied);\n+        return satisfied;\n+    }\n+\n+    /**\n+     * @return the list of rules\n+     */\n+    public List<Rule> getRules() {\n+        return rules;\n+    }\n+\n+    /**\n+     * @return the required number of votes\n+     */\n+    public int getRequiredVotes() {\n+        return requiredVotes;\n+    }\n+}"
+}

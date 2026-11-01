@@ -1,0 +1,73 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:6: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:13: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.TradingRecord;
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:26: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new org.ta4j.core.BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:28: error: cannot find symbol
+            Num close = series.numFactory().numOf(i + 1);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:29: error: cannot find symbol
+            Num volume = series.numFactory().numOf((i + 1) * 10);
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:125: error: cannot find symbol
+        NumericIndicator neg = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                       ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:131: error: cannot find symbol
+        NumericIndicator sqrt = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                        ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:135: error: cannot find symbol
+        NumericIndicator squared = NumericIndicator.of(new ConstantIndicator<>(series,
+                                                           ^
+  symbol:   class ConstantIndicator
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:181: error: incompatible types: Indicator<Num> cannot be converted to NumericIndicator
+        NumericIndicator previousDefault = close.previous();
+                                                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:191: error: cannot find symbol
+        Rule crossedOver = close.crossedOver(2);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:195: error: cannot find symbol
+        Rule crossedOver2 = close.crossedOver(1.5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:199: error: cannot find symbol
+        Rule crossedUnder = close.crossedUnder(4);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:203: error: cannot find symbol
+        Rule crossedUnder2 = close.crossedUnder(3.5);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:211: error: cannot find symbol
+        Rule greaterThan3 = close.isGreaterThan(3);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:217: error: cannot find symbol
+        Rule lessThan2 = close.isLessThan(2);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+15 errors

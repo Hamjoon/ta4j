@@ -1,0 +1,21 @@
+{
+  "index": 241,
+  "sha": "c77b389de7824bac75a6528302bdeab392670ee0",
+  "parent": "043c9d5e9c8bb35c7f2b098291e0959fc78c28d5",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      217
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      218,
+      229,
+      230,
+      231,
+      233,
+      234
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 65e50c5c6..19311752a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -82,0 +83 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final int BROAD_HISTORY_FILTER_BAR_THRESHOLD = 250;\n@@ -217 +218 @@ public final class ElliottWaveAnalysisRunner {\n-            filter = new MinMagnitudeSwingFilter(scale(baseDegree, degree, 0.20, 1.5, 0.05, 0.60));\n+            filter = new MinMagnitudeSwingFilter(defaultMinRelativeMagnitude(series, degree));\n@@ -226,0 +228,9 @@ public final class ElliottWaveAnalysisRunner {\n+    private double defaultMinRelativeMagnitude(final BarSeries series, final ElliottDegree degree) {\n+        final double standardThreshold = scale(baseDegree, degree, 0.20, 1.5, 0.05, 0.60);\n+        if (scenarioSwingWindow != 0 || series.getBarCount() < BROAD_HISTORY_FILTER_BAR_THRESHOLD) {\n+            return standardThreshold;\n+        }\n+        final double broadHistoryThreshold = scale(baseDegree, degree, 0.02, 1.35, 0.005, 0.20);\n+        return Math.min(standardThreshold, broadHistoryThreshold);\n+    }\n+"
+}

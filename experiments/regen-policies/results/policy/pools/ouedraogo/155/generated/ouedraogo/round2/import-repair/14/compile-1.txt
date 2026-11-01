@@ -1,0 +1,86 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:353: error: interface expected here
+    private static class SimpleTrade implements Trade {
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:27: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:247: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:273: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements org.ta4j.core.Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:294: error: getTimePeriod() in SimpleBar cannot implement getTimePeriod() in Bar
+        @Override public org.ta4j.core.num.Num getTimePeriod() { throw new UnsupportedOperationException(); }
+                                               ^
+  return type Num is not compatible with Duration
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:292: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:293: error: method does not override or implement a method from a supertype
+        @Override public org.ta4j.core.num.Num getTimestamp() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:294: error: method does not override or implement a method from a supertype
+        @Override public org.ta4j.core.num.Num getTimePeriod() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:364: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:369: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:374: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:380: error: method does not override or implement a method from a supertype
+        @Override public Num getPrice() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:381: error: method does not override or implement a method from a supertype
+        @Override public Num getAmount() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:382: error: method does not override or implement a method from a supertype
+        @Override public Num getVolume() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:383: error: method does not override or implement a method from a supertype
+        @Override public Num getCost() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:384: error: method does not override or implement a method from a supertype
+        @Override public Num getFee() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:385: error: method does not override or implement a method from a supertype
+        @Override public Num getCommission() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:386: error: method does not override or implement a method from a supertype
+        @Override public boolean isEntry() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:387: error: method does not override or implement a method from a supertype
+        @Override public boolean isExit() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:388: error: method does not override or implement a method from a supertype
+        @Override public TradeType getTradeType() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:389: error: method does not override or implement a method from a supertype
+        @Override public void setTradeType(TradeType tradeType) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:393: error: SimpleTradingRecord is not abstract and does not override abstract method exit(int,Num,Num) in TradingRecord
+    private static class SimpleTradingRecord implements TradingRecord {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:473: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, true, numFactory.numOf(10)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:504: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, false, numFactory.numOf(20)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:528: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, true, numFactory.numOf(10)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:534: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(2, false, numFactory.numOf(30)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:565: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, true, numFactory.numOf(10)),
+                ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+27 errors

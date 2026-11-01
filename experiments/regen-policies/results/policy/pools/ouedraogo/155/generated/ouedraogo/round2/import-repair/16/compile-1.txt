@@ -1,0 +1,32 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:14: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:58: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+            Bar bar = new org.ta4j.core.BaseBar(
+                      ^
+  required: Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long
+  found:    Duration,Num,Num,Num,Num,Num
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:254: error: cannot find symbol
+        Rule crossedOverRule = close.crossedOver(threshold);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:259: error: cannot find symbol
+        Rule crossedUnderRule = close.crossedUnder(threshold);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:269: error: cannot find symbol
+        Rule greaterThanRule = close.isGreaterThan(five);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:279: error: cannot find symbol
+        Rule lessThanRule = close.isLessThan(five);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+6 errors

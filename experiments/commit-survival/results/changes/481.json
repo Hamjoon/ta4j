@@ -1,0 +1,12 @@
+{
+  "index": 481,
+  "sha": "240deb4c236dc296bc301bb3c4801f3d86a58366",
+  "parent": "c91a1dad8995eefc8496d95a7c44accba59ef2b6",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\nindex cbec184ae..a51e0156d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n@@ -752,3 +752,4 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n-     * example {@link org.ta4j.core.indicators.macd.MACDVIndicator}'s moving averages). Subclasses with such\n-     * sources override {@link #minimumCacheableIndexAfterHeadAdvance(int)} and pass\n-     * them here after initialization.\n+     * example {@link org.ta4j.core.indicators.macd.MACDVIndicator}'s moving\n+     * averages). Subclasses with such sources override\n+     * {@link #minimumCacheableIndexAfterHeadAdvance(int)} and pass them here after\n+     * initialization."
+}

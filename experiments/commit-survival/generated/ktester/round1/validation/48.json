@@ -1,0 +1,302 @@
+{
+  "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/classes",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.771,
+    "log": "work/validation/ktester/round1/48/test/javac.txt"
+  },
+  "runs": [
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofCreatesNumericIndicatorWithCorrectDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getBarSeriesIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getUnstableBarsIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofWorksWithARealIndicatorImplementation()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#testOf_NullDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getValueIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofRejectsNullDelegate()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/run1"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 2,
+      "timeout": false,
+      "seconds": 0.825,
+      "log": "work/validation/ktester/round1/48/test/run1/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofCreatesNumericIndicatorWithCorrectDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getBarSeriesIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getUnstableBarsIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofWorksWithARealIndicatorImplementation()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#testOf_NullDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getValueIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofRejectsNullDelegate()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/run2"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 2,
+      "timeout": false,
+      "seconds": 0.824,
+      "log": "work/validation/ktester/round1/48/test/run2/console.txt"
+    },
+    {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-XX:+UseSerialGC",
+        "-cp",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/classes:/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar:/repo/experiments/commit-survival/dev/src-test-t/resources:/repo/experiments/commit-survival/dev/src-test-t/suite",
+        "org.junit.platform.console.ConsoleLauncher",
+        "--disable-banner",
+        "--disable-ansi-colors",
+        "--fail-if-no-tests",
+        "--details",
+        "summary",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofCreatesNumericIndicatorWithCorrectDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getBarSeriesIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getUnstableBarsIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofWorksWithARealIndicatorImplementation()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#testOf_NullDelegate()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getValueIsDelegatedToUnderlyingIndicator()",
+        "--select-method",
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofRejectsNullDelegate()",
+        "--reports-dir",
+        "/repo/experiments/commit-survival/work/validation/ktester/round1/48/test/run3"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/runtime",
+      "exit_code": 2,
+      "timeout": false,
+      "seconds": 0.868,
+      "log": "work/validation/ktester/round1/48/test/run3/console.txt"
+    }
+  ],
+  "methods": [
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "ofCreatesNumericIndicatorWithCorrectDelegate",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|ofCreatesNumericIndicatorWithCorrectDelegate",
+      "body_hash": "61a2148ada2cf76437f99a9118300c105d5d47a4916d0dd2340d6d6f11abe219",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofCreatesNumericIndicatorWithCorrectDelegate()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "getBarSeriesIsDelegatedToUnderlyingIndicator",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|getBarSeriesIsDelegatedToUnderlyingIndicator",
+      "body_hash": "eec12e5721753ef2fd12ee9a454af2bf6089493e01ad2bbb86a850976d691308",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getBarSeriesIsDelegatedToUnderlyingIndicator()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "getUnstableBarsIsDelegatedToUnderlyingIndicator",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|getUnstableBarsIsDelegatedToUnderlyingIndicator",
+      "body_hash": "61426e8a54c9c842701badc5ac0e2ad82cce977cfac0266a3c97a9e79cd8ec87",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getUnstableBarsIsDelegatedToUnderlyingIndicator()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "ofWorksWithARealIndicatorImplementation",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|ofWorksWithARealIndicatorImplementation",
+      "body_hash": "fb41b45f83c638a4b71bdde95f2a7f36dcfbc6577a8b700eca4465e966a31c5d",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofWorksWithARealIndicatorImplementation()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "testOf_NullDelegate",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|testOf_NullDelegate",
+      "body_hash": "8794eb8345a4aa1eeea8a0c55a46e7aa3edf5cbf5010d4d1e13f50b4ff68c7d9",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#testOf_NullDelegate()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "getValueIsDelegatedToUnderlyingIndicator",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|getValueIsDelegatedToUnderlyingIndicator",
+      "body_hash": "c8d0fecb3b6529276df560c8d436610cf968403263db42d80f04da8f4fe05369",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#getValueIsDelegatedToUnderlyingIndicator()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test",
+      "method": "ofRejectsNullDelegate",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_of_Test|ofRejectsNullDelegate",
+      "body_hash": "8794eb8345a4aa1eeea8a0c55a46e7aa3edf5cbf5010d4d1e13f50b4ff68c7d9",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "absent",
+      "message": "Method not reported by launcher",
+      "flaky": false,
+      "initial_state": "absent",
+      "selector": [
+        "org.ta4j.core.indicators.numeric.NumericIndicator_of_Test#ofRejectsNullDelegate()"
+      ],
+      "baseline_states": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_of_Test.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.686,
+    "log": "work/validation/ktester/round1/48/inventory.tsv"
+  },
+  "input_sha256": "e8d9afe7f815c5420dccf8eb976034fb363a96b1c47f1d0e1a29dec2822d0499"
+}

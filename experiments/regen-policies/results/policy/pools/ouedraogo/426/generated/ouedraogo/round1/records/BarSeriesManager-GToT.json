@@ -1,0 +1,58 @@
+{
+  "class_name": "BarSeriesManager",
+  "technique": "GToT",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-29T16:51:46.334507+00:00",
+      "latency": 110.513,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "Near AI",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1793292706-66xsD5UIVMv4K2IAnOUg",
+      "usage": {
+        "prompt_tokens": 9265,
+        "completion_tokens": 5670,
+        "total_tokens": 14935,
+        "cost": 0.00112773,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 48,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00112773,
+          "upstream_inference_prompt_cost": 0.00027723,
+          "upstream_inference_completions_cost": 0.0008505
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1121,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "0e9a58c1feec280e9a7d054e1d67b387dc8bb3ab3bcb4b8f4119a65dd591d462",
+      "response_sha256": "53d22b72a7fb8bc16948d57216646896c1a55c0e81ec34301bff8a9a25cb22f3"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "BarSeriesManagerTest",
+    "package": "org.ta4j.core.backtest",
+    "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java"
+}

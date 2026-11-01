@@ -1,0 +1,61 @@
+{
+  "classes": [
+    {
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator",
+      "file": "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java",
+      "m": 38,
+      "has_test": "yes",
+      "d": 15,
+      "c": 12,
+      "accessors": 7,
+      "accessor_fraction": 0.18421052631578946,
+      "excluded_accessors": "no"
+    },
+    {
+      "class": "org.ta4j.core.Position",
+      "file": "src/main/java/org/ta4j/core/Position.java",
+      "m": 25,
+      "has_test": "yes",
+      "d": 27,
+      "c": 9,
+      "accessors": 12,
+      "accessor_fraction": 0.48,
+      "excluded_accessors": "no"
+    },
+    {
+      "class": "org.ta4j.core.backtest.BarSeriesManager",
+      "file": "src/main/java/org/ta4j/core/backtest/BarSeriesManager.java",
+      "m": 9,
+      "has_test": "yes",
+      "d": 7,
+      "c": 14,
+      "accessors": 3,
+      "accessor_fraction": 0.3333333333333333,
+      "excluded_accessors": "no"
+    },
+    {
+      "class": "org.ta4j.core.analysis.CashFlow",
+      "file": "src/main/java/org/ta4j/core/analysis/CashFlow.java",
+      "m": 7,
+      "has_test": "yes",
+      "d": 16,
+      "c": 14,
+      "accessors": 4,
+      "accessor_fraction": 0.5714285714285714,
+      "excluded_accessors": "yes"
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicator",
+      "file": "src/main/java/org/ta4j/core/indicators/ATRIndicator.java",
+      "m": 5,
+      "has_test": "yes",
+      "d": 2,
+      "c": 15,
+      "accessors": 4,
+      "accessor_fraction": 0.8,
+      "excluded_accessors": "yes"
+    }
+  ],
+  "m": 84,
+  "d": 67
+}

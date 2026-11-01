@@ -1,0 +1,28 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:55: error: cannot find symbol
+        series.addBar(org.ta4j.core.BaseBar.builder()
+                                           ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:64: error: cannot find symbol
+        series.addBar(org.ta4j.core.BaseBar.builder()
+                                           ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:73: error: cannot find symbol
+        series.addBar(org.ta4j.core.BaseBar.builder()
+                                           ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:111: error: incompatible types: Indicator is not a functional interface
+        Indicator<Num> constantHigh  = index -> HIGH;
+                                       ^
+    multiple non-overriding abstract methods found in interface Indicator
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:112: error: incompatible types: Indicator is not a functional interface
+        Indicator<Num> constantLow   = index -> LOW;
+                                       ^
+    multiple non-overriding abstract methods found in interface Indicator
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:113: error: incompatible types: Indicator is not a functional interface
+        Indicator<Num> constantClose = index -> CLOSE;
+                                       ^
+    multiple non-overriding abstract methods found in interface Indicator
+6 errors

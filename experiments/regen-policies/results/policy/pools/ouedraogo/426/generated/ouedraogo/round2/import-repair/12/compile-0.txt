@@ -1,0 +1,66 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:79: error: cannot find symbol
+        Trade dummyTrade0 = Trade.buyAt(0, price10, price10.one());
+                                                           ^
+  symbol:   method one()
+  location: variable price10 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:80: error: cannot find symbol
+        Trade dummyTrade1 = Trade.sellAt(1, price12, price12.one());
+                                                            ^
+  symbol:   method one()
+  location: variable price12 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:82: error: cannot find symbol
+        twoBarSeries.addBar(dummyTrade0.getBar(twoBarSeries));
+                                       ^
+  symbol:   method getBar(BarSeries)
+  location: variable dummyTrade0 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:83: error: cannot find symbol
+        twoBarSeries.addBar(dummyTrade1.getBar(twoBarSeries));
+                                       ^
+  symbol:   method getBar(BarSeries)
+  location: variable dummyTrade1 of type Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:185: error: cannot find symbol
+        Trade entry = Trade.buyAt(0, price10, price10.one());
+                                                     ^
+  symbol:   method one()
+  location: variable price10 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:189: error: cannot find symbol
+        Trade exit = Trade.sellAt(1, price12, price12.one());
+                                                     ^
+  symbol:   method one()
+  location: variable price12 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:221: error: cannot find symbol
+        Trade entry = Trade.sellAt(0, price15, price15.one());
+                                                      ^
+  symbol:   method one()
+  location: variable price15 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:225: error: cannot find symbol
+        Trade exit = Trade.buyAt(1, price10, price10.one());
+                                                    ^
+  symbol:   method one()
+  location: variable price10 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:256: error: reference to CashFlow is ambiguous
+        new CashFlow(emptySeries,
+        ^
+  both constructor CashFlow(BarSeries,Position,EquityCurveMode) in CashFlow and constructor CashFlow(BarSeries,TradingRecord,EquityCurveMode) in CashFlow match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:264: error: reference to CashFlow is ambiguous
+        new CashFlow(emptySeries,
+        ^
+  both constructor CashFlow(BarSeries,TradingRecord,EquityCurveMode) in CashFlow and constructor CashFlow(BarSeries,TradingRecord,OpenPositionHandling) in CashFlow match
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:273: error: constructor CashFlow in class CashFlow cannot be applied to given types;
+        new CashFlow(emptySeries,
+        ^
+  required: BarSeries,TradingRecord,int,int,int,EquityCurveMode,OpenPositionHandling
+  found:    BarSeries,BaseTradingRecord,int,int,int,EquityCurveMode,<null>
+  reason: CashFlow(BarSeries,TradingRecord,int,int,int,EquityCurveMode,OpenPositionHandling) has private access in CashFlow
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:292: error: cannot find symbol
+        Trade dummy = Trade.buyAt(0, price5, price5.one());
+                                                   ^
+  symbol:   method one()
+  location: variable price5 of type Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:293: error: cannot find symbol
+        singleBarSeries.addBar(dummy.getBar(singleBarSeries));
+                                    ^
+  symbol:   method getBar(BarSeries)
+  location: variable dummy of type Trade
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+13 errors

@@ -1,0 +1,166 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:71: error: cannot find symbol
+    private static final CostModel ZERO_COST = new ZeroCostModel();
+                         ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:112: error: cannot find symbol
+        CostModel otherCost = new CostModel() {
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:112: error: cannot find symbol
+        CostModel otherCost = new CostModel() {
+                                  ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:116: error: cannot find symbol
+            @Override public boolean equals(CostModel other) { return false; }
+                                            ^
+  symbol: class CostModel
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:113: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Position p, int i) { return DecimalNum.ZERO; }
+            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:114: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Position p) { return DecimalNum.ZERO; }
+            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:115: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Num price, Num amount) { return DecimalNum.ZERO; }
+            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:116: error: method does not override or implement a method from a supertype
+            @Override public boolean equals(CostModel other) { return false; }
+            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:137: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:138: error: ONE has private access in DecimalNum
+        Trade entry = p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                                     ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:140: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:144: error: ONE has private access in DecimalNum
+        Trade exit = p.operate(1, DecimalNum.valueOf(15), DecimalNum.ONE);
+                                                                    ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:146: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:152: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:153: error: ONE has private access in DecimalNum
+        p.operate(5, DecimalNum.valueOf(10), DecimalNum.ONE); // creates entry at index 5
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:154: error: ONE has private access in DecimalNum
+        p.operate(3, DecimalNum.valueOf(12), DecimalNum.ONE); // index < entry → exception
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:159: error: cannot find symbol
+        Position pBuy = new Position(TradeType.BUY);
+                                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:160: error: cannot find symbol
+        Position pSell = new Position(TradeType.SELL);
+                                      ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:161: error: cannot find symbol
+        assertEquals(TradeType.BUY, pBuy.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:162: error: cannot find symbol
+        assertEquals(TradeType.SELL, pSell.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:172: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE); // entry BUY @10
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:173: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(15), DecimalNum.ONE); // exit SELL @15
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:184: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(15), DecimalNum.ONE); // entry BUY @15
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:185: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(10), DecimalNum.ONE); // exit SELL @10
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:196: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:197: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(15), DecimalNum.ONE); // entry SELL @15
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:198: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(10), DecimalNum.ONE); // exit BUY @10
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:207: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:208: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE); // entry SELL @10
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:209: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(15), DecimalNum.ONE); // exit BUY @15
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:219: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:220: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(15), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:227: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:228: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(15), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:229: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:238: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:259: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE); // entry only
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:267: error: cannot find symbol
+        Position p = new Position(TradeType.BUY, ZERO_COST, ZERO_COST);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:268: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:269: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(15), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:295: error: cannot find symbol
+        Position p2 = new Position(TradeType.SELL);
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:306: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE); // opened BUY @10
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:320: error: ONE has private access in DecimalNum
+        p.operate(0, DecimalNum.valueOf(10), DecimalNum.ONE);
+                                                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/GToT/PositionTest.java:321: error: ONE has private access in DecimalNum
+        p.operate(1, DecimalNum.valueOf(15), DecimalNum.ONE);
+                                                       ^
+44 errors

@@ -1,0 +1,192 @@
+[
+  {
+    "group": "Normal division",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == 5 for any index i (10 / 2)",
+        "description": "Divides a NumericIndicator wrapping a constant 10 by another constant indicator 2. The result should be a NumericIndicator that returns 5 for all indices."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(0.5)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == 20 for any index i (10 / 0.5)",
+        "description": "Divides a constant 10 by a constant 0.5. Verifies that the quotient is correctly calculated as 20."
+      }
+    ]
+  },
+  {
+    "group": "Division by zero indicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(0)"
+          }
+        ],
+        "expected": "ArithmeticException thrown when getValue(i) is evaluated",
+        "description": "Dividing a NumericIndicator wrapping constant 10 by a constant indicator 0 should raise an ArithmeticException (division by zero)."
+      }
+    ]
+  },
+  {
+    "group": "Numerator zero",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(5)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == 0 for any index i (0 / 5)",
+        "description": "When the numerator indicator wraps constant 0, division by any non\u2011zero constant must yield 0 for all indices."
+      }
+    ]
+  },
+  {
+    "group": "Negative divisor",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(-2)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == -5 for any index i (10 / -2)",
+        "description": "Verify that division correctly propagates the sign of a negative divisor."
+      }
+    ]
+  },
+  {
+    "group": "Negative numerator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == -5 for any index i (-10 / 2)",
+        "description": "Dividing a negative constant numerator by a positive divisor should produce a negative result."
+      }
+    ]
+  },
+  {
+    "group": "Varying divisor indicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "IndexIndicator(start=1)"
+          }
+        ],
+        "expected": "NumericIndicator whose getValue(i) == 10 / (i + 1) for each index i",
+        "description": "Use an indicator that returns the index+1 as its value (e.g., 1,2,3,\u2026). The quotient must be computed per index, confirming element\u2011wise division."
+      }
+    ]
+  },
+  {
+    "group": "Mixed zero divisor (runtime exception on zero index)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "AlternatingZeroIndicator"
+          }
+        ],
+        "expected": "ArithmeticException thrown when getValue(i) is called for an index where divisor == 0",
+        "description": "The divisor indicator returns 2 for even indices and 0 for odd indices. Accessing an odd index should raise an ArithmeticException, while even indices return 5 (10/2)."
+      }
+    ]
+  },
+  {
+    "group": "Division by non\u2011numeric (null) indicator",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException thrown at method entry",
+        "description": "Passing a null Indicator to dividedBy should result in an immediate NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Divisor returns null Num",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NullReturningIndicator()"
+          }
+        ],
+        "expected": "NullPointerException thrown when getValue(i) is evaluated",
+        "description": "The divisor indicator returns null for its Num value. When the resulting NumericIndicator evaluates getValue(i), it attempts to divide by a null Num, which should raise a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "Divisor shorter series (IndexOutOfBounds)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2) based on BarSeries of length 5"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException thrown when getValue(i) is called for i >= 5",
+        "description": "The numerator NumericIndicator is built on a BarSeries with 10 bars, while the divisor indicator is built on a different BarSeries that only has 5 bars. Accessing an index beyond the divisor's size should result in an IndexOutOfBoundsException."
+      }
+    ]
+  },
+  {
+    "group": "Divisor throws custom exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ExceptionThrowingIndicator()"
+          }
+        ],
+        "expected": "IllegalStateException propagated from divisor indicator",
+        "description": "The divisor indicator deliberately throws an IllegalStateException from its getValue method. The exception should propagate through the division operation unchanged."
+      }
+    ]
+  },
+  {
+    "group": "Numerator with null delegate",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "ConstantIndicator(2)"
+          }
+        ],
+        "expected": "NullPointerException thrown when getValue(i) is evaluated",
+        "description": "A NumericIndicator created via NumericIndicator.of(null) has a null internal delegate. Dividing this indicator by a valid divisor should cause a NullPointerException when the resulting indicator attempts to read the numerator's value."
+      }
+    ]
+  }
+]

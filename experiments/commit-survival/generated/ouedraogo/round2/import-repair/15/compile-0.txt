@@ -1,0 +1,20 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:51: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:98: error: incompatible types: invalid constructor reference
+        @Override public Function<Number, Num> function(){ return SimpleNum::new; }
+                                                                  ^
+    incompatible types: Number cannot be converted to double
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:123: error: incompatible types: invalid constructor reference
+        @Override public Function<Number, Num> function(){ return SimpleNum::new; }
+                                                                  ^
+    incompatible types: Number cannot be converted to double
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:467: error: incompatible types: Indicator is not a functional interface
+        Indicator<Num> a = index -> (index == 0 ? a0.getValue(0) : a1.getValue(0));
+                           ^
+    multiple non-overriding abstract methods found in interface Indicator
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:483: error: incompatible types: Indicator is not a functional interface
+        Indicator<Num> a = index -> (index == 0 ? a0.getValue(0) : a1.getValue(0));
+                           ^
+    multiple non-overriding abstract methods found in interface Indicator
+5 errors

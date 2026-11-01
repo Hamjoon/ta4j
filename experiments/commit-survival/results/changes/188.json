@@ -1,0 +1,61 @@
+{
+  "index": 188,
+  "sha": "1fa097ef21e353806fd37305b694799becb89683",
+  "parent": "d0ef59e7c0072e972c9f24607d349e20e61dc6cb",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      55,
+      56,
+      57,
+      58,
+      85
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java": [
+      60,
+      61,
+      62,
+      63,
+      100
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java": [
+      62,
+      63,
+      64,
+      65,
+      109
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      58,
+      59,
+      69,
+      70,
+      71,
+      72,
+      73,
+      100
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java": [
+      62,
+      63,
+      73,
+      74,
+      75,
+      76,
+      77,
+      114
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java": [
+      64,
+      65,
+      75,
+      76,
+      77,
+      78,
+      79,
+      123
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\nindex 241fb66f4..af844e97d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n@@ -14,0 +15,2 @@ import org.ta4j.core.num.Num;\n+import static java.util.Objects.requireNonNull;\n+\n@@ -32 +34 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-    private final int atrBarCount;\n+    private final ATRIndicator atrIndicator;\n@@ -47 +49 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-     * Constructor.\n+     * Constructor with custom price indicator.\n@@ -49,0 +52 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n+     * @param referencePrice the price indicator\n@@ -55,4 +58,16 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-        this.referencePrice = referencePrice;\n-        this.atrBarCount = atrBarCount;\n-        this.atrCoefficient = atrCoefficient;\n-        this.stopGainThreshold = createStopGainThreshold(series);\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    }\n+\n+    /**\n+     * Constructor with custom price and ATR indicators.\n+     *\n+     * @param referencePrice the price indicator\n+     * @param atrIndicator   ATR indicator\n+     * @param atrCoefficient the multiple of ATR to set the gain threshold\n+     */\n+    public AverageTrueRangeStopGainRule(final Indicator<Num> referencePrice, final ATRIndicator atrIndicator,\n+            final Number atrCoefficient) {\n+        this.referencePrice = requireNonNull(referencePrice);\n+        this.atrIndicator = requireNonNull(atrIndicator);\n+        this.atrCoefficient = requireNonNull(atrCoefficient);\n+        this.stopGainThreshold = createStopGainThreshold();\n@@ -84,2 +99,2 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-    private Indicator<Num> createStopGainThreshold(BarSeries series) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    private Indicator<Num> createStopGainThreshold() {\n+        return BinaryOperationIndicator.product(atrIndicator, atrCoefficient);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\nindex 176d5e816..3a89e1150 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\n@@ -13,0 +14,2 @@ import org.ta4j.core.num.Num;\n+import static java.util.Objects.requireNonNull;\n+\n@@ -36 +38 @@ public class AverageTrueRangeStopLossRule extends AbstractRule {\n-    private final int atrBarCount;\n+    private final ATRIndicator atrIndicator;\n@@ -60,4 +62,16 @@ public class AverageTrueRangeStopLossRule extends AbstractRule {\n-        this.referencePrice = referencePrice;\n-        this.atrBarCount = atrBarCount;\n-        this.atrCoefficient = atrCoefficient;\n-        this.stopLossThreshold = createStopLossThreshold(series);\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    }\n+\n+    /**\n+     * Constructor with custom reference price and ATR indicators.\n+     *\n+     * @param referencePrice the reference price indicator\n+     * @param atrIndicator   ATR indicator\n+     * @param atrCoefficient the coefficient to multiply ATR\n+     */\n+    public AverageTrueRangeStopLossRule(final Indicator<Num> referencePrice, final ATRIndicator atrIndicator,\n+            final Number atrCoefficient) {\n+        this.referencePrice = requireNonNull(referencePrice);\n+        this.atrIndicator = requireNonNull(atrIndicator);\n+        this.atrCoefficient = requireNonNull(atrCoefficient);\n+        this.stopLossThreshold = createStopLossThreshold();\n@@ -99,2 +113,2 @@ public class AverageTrueRangeStopLossRule extends AbstractRule {\n-    private Indicator<Num> createStopLossThreshold(BarSeries series) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    private Indicator<Num> createStopLossThreshold() {\n+        return BinaryOperationIndicator.product(atrIndicator, atrCoefficient);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\nindex 7d263e93a..fb5abede1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\n@@ -15,0 +16,2 @@ import org.ta4j.core.num.Num;\n+import static java.util.Objects.requireNonNull;\n+\n@@ -38 +40 @@ public class AverageTrueRangeTrailingStopLossRule extends AbstractRule {\n-    private final int atrBarCount;\n+    private final ATRIndicator atrIndicator;\n@@ -62,4 +64,16 @@ public class AverageTrueRangeTrailingStopLossRule extends AbstractRule {\n-        this.referencePrice = referencePrice;\n-        this.atrBarCount = atrBarCount;\n-        this.atrCoefficient = atrCoefficient;\n-        this.stopLossThreshold = createStopLossThreshold(series);\n+        this(referencePrice, new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    }\n+\n+    /**\n+     * Constructor with custom reference price and ATR indicators.\n+     *\n+     * @param referencePrice the reference price indicator\n+     * @param atrIndicator   the ATR indicator\n+     * @param atrCoefficient the coefficient to multiply ATR\n+     */\n+    public AverageTrueRangeTrailingStopLossRule(final Indicator<Num> referencePrice, final ATRIndicator atrIndicator,\n+            final Number atrCoefficient) {\n+        this.referencePrice = requireNonNull(referencePrice);\n+        this.atrIndicator = requireNonNull(atrIndicator);\n+        this.atrCoefficient = requireNonNull(atrCoefficient);\n+        this.stopLossThreshold = createStopLossThreshold();\n@@ -108,2 +122,2 @@ public class AverageTrueRangeTrailingStopLossRule extends AbstractRule {\n-    private Indicator<Num> createStopLossThreshold(BarSeries series) {\n-        return BinaryOperationIndicator.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    private Indicator<Num> createStopLossThreshold() {\n+        return BinaryOperationIndicator.product(atrIndicator, atrCoefficient);"
+}

@@ -1,0 +1,24 @@
+{
+  "coordinate": "net.bytebuddy:byte-buddy-agent:1.14.1",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=net.bytebuddy:byte-buddy-agent:1.14.1",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.072,
+      "log": "results/runner-dependency-net.bytebuddy.byte-buddy-agent-1.14.1-1.txt",
+      "coordinate": "net.bytebuddy:byte-buddy-agent:1.14.1",
+      "expected_sha256": "f4809b9d0f00e71be98a61a25b3e14437f53f6821485694011beeb25e9231dde",
+      "rejected_sha256": null,
+      "downloaded_sha256": "f4809b9d0f00e71be98a61a25b3e14437f53f6821485694011beeb25e9231dde"
+    }
+  ]
+}

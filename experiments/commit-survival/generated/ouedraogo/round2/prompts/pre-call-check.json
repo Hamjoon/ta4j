@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-25T11:06:11.556776+00:00",
+  "blocks": [
+    {
+      "class_name": "org.ta4j.core.indicators.numeric.NumericIndicator",
+      "ordered_types": [
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.Rule",
+        "org.ta4j.core.indicators.EMAIndicator",
+        "org.ta4j.core.indicators.SMAIndicator",
+        "org.ta4j.core.indicators.helpers.ClosePriceIndicator",
+        "org.ta4j.core.indicators.helpers.ConstantIndicator",
+        "org.ta4j.core.indicators.helpers.HighestValueIndicator",
+        "org.ta4j.core.indicators.helpers.LowestValueIndicator",
+        "org.ta4j.core.indicators.helpers.PreviousValueIndicator",
+        "org.ta4j.core.indicators.helpers.VolumeIndicator",
+        "org.ta4j.core.indicators.statistics.StandardDeviationIndicator",
+        "org.ta4j.core.rules.CrossedDownIndicatorRule",
+        "org.ta4j.core.rules.CrossedUpIndicatorRule",
+        "org.ta4j.core.rules.OverIndicatorRule",
+        "org.ta4j.core.rules.UnderIndicatorRule"
+      ],
+      "included": [
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.Rule",
+        "org.ta4j.core.indicators.EMAIndicator",
+        "org.ta4j.core.indicators.SMAIndicator",
+        "org.ta4j.core.indicators.helpers.ClosePriceIndicator",
+        "org.ta4j.core.indicators.helpers.ConstantIndicator",
+        "org.ta4j.core.indicators.helpers.HighestValueIndicator",
+        "org.ta4j.core.indicators.helpers.LowestValueIndicator",
+        "org.ta4j.core.indicators.helpers.PreviousValueIndicator",
+        "org.ta4j.core.indicators.helpers.VolumeIndicator",
+        "org.ta4j.core.indicators.statistics.StandardDeviationIndicator",
+        "org.ta4j.core.rules.CrossedDownIndicatorRule",
+        "org.ta4j.core.rules.CrossedUpIndicatorRule"
+      ],
+      "omitted": [
+        "org.ta4j.core.rules.OverIndicatorRule",
+        "org.ta4j.core.rules.UnderIndicatorRule"
+      ],
+      "reasons": {
+        "org.ta4j.core.Indicator": "superclass/interface chain",
+        "org.ta4j.core.num.Num": "superclass/interface chain",
+        "org.ta4j.core.BarSeries": "method",
+        "org.ta4j.core.Rule": "method",
+        "org.ta4j.core.indicators.EMAIndicator": "import",
+        "org.ta4j.core.indicators.SMAIndicator": "import",
+        "org.ta4j.core.indicators.helpers.ClosePriceIndicator": "import",
+        "org.ta4j.core.indicators.helpers.ConstantIndicator": "import",
+        "org.ta4j.core.indicators.helpers.HighestValueIndicator": "import",
+        "org.ta4j.core.indicators.helpers.LowestValueIndicator": "import",
+        "org.ta4j.core.indicators.helpers.PreviousValueIndicator": "import",
+        "org.ta4j.core.indicators.helpers.VolumeIndicator": "import",
+        "org.ta4j.core.indicators.statistics.StandardDeviationIndicator": "import",
+        "org.ta4j.core.rules.CrossedDownIndicatorRule": "import",
+        "org.ta4j.core.rules.CrossedUpIndicatorRule": "import",
+        "org.ta4j.core.rules.OverIndicatorRule": "import",
+        "org.ta4j.core.rules.UnderIndicatorRule": "import"
+      },
+      "types": 15,
+      "lines": 203,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.Position",
+      "ordered_types": [
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.Trade",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.analysis.cost.ZeroCostModel"
+      ],
+      "included": [
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.Trade",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.analysis.cost.ZeroCostModel"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.Trade.TradeType": "constructor",
+        "org.ta4j.core.analysis.cost.CostModel": "constructor",
+        "org.ta4j.core.Trade": "constructor",
+        "org.ta4j.core.num.Num": "method",
+        "org.ta4j.core.BarSeries": "method",
+        "org.ta4j.core.analysis.cost.ZeroCostModel": "import"
+      },
+      "types": 6,
+      "lines": 145,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.backtest.BarSeriesManager",
+      "ordered_types": [
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.backtest.TradeExecutionModel",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.Strategy",
+        "org.ta4j.core.TradingRecord",
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BaseTradingRecord",
+        "org.ta4j.core.analysis.cost.ZeroCostModel"
+      ],
+      "included": [
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.backtest.TradeExecutionModel",
+        "org.ta4j.core.analysis.cost.CostModel",
+        "org.ta4j.core.Strategy",
+        "org.ta4j.core.TradingRecord",
+        "org.ta4j.core.Trade.TradeType",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BaseTradingRecord",
+        "org.ta4j.core.analysis.cost.ZeroCostModel"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.BarSeries": "constructor",
+        "org.ta4j.core.backtest.TradeExecutionModel": "constructor",
+        "org.ta4j.core.analysis.cost.CostModel": "constructor",
+        "org.ta4j.core.Strategy": "method",
+        "org.ta4j.core.TradingRecord": "method",
+        "org.ta4j.core.Trade.TradeType": "method",
+        "org.ta4j.core.num.Num": "method",
+        "org.ta4j.core.BaseTradingRecord": "import",
+        "org.ta4j.core.analysis.cost.ZeroCostModel": "import"
+      },
+      "types": 9,
+      "lines": 187,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.analysis.CashFlow",
+      "ordered_types": [
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.Position",
+        "org.ta4j.core.TradingRecord"
+      ],
+      "included": [
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.Position",
+        "org.ta4j.core.TradingRecord"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.Indicator": "superclass/interface chain",
+        "org.ta4j.core.num.Num": "superclass/interface chain",
+        "org.ta4j.core.BarSeries": "constructor",
+        "org.ta4j.core.Position": "constructor",
+        "org.ta4j.core.TradingRecord": "constructor"
+      },
+      "types": 5,
+      "lines": 163,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    },
+    {
+      "class_name": "org.ta4j.core.indicators.ATRIndicator",
+      "ordered_types": [
+        "org.ta4j.core.indicators.AbstractIndicator",
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.indicators.helpers.TRIndicator",
+        "org.ta4j.core.indicators.MMAIndicator"
+      ],
+      "included": [
+        "org.ta4j.core.indicators.AbstractIndicator",
+        "org.ta4j.core.Indicator",
+        "org.ta4j.core.num.Num",
+        "org.ta4j.core.BarSeries",
+        "org.ta4j.core.indicators.helpers.TRIndicator",
+        "org.ta4j.core.indicators.MMAIndicator"
+      ],
+      "omitted": [],
+      "reasons": {
+        "org.ta4j.core.indicators.AbstractIndicator": "superclass/interface chain",
+        "org.ta4j.core.Indicator": "superclass/interface chain",
+        "org.ta4j.core.num.Num": "superclass/interface chain",
+        "org.ta4j.core.BarSeries": "constructor",
+        "org.ta4j.core.indicators.helpers.TRIndicator": "constructor",
+        "org.ta4j.core.indicators.MMAIndicator": "field"
+      },
+      "types": 6,
+      "lines": 124,
+      "limits": {
+        "types": 15,
+        "lines": 400
+      }
+    }
+  ],
+  "empty_angle_brackets": false,
+  "headers_have_modifiers": true
+}

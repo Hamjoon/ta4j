@@ -1,0 +1,33 @@
+{
+  "coordinate": "org.apiguardian:apiguardian-api:1.1.2",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.apiguardian:apiguardian-api:1.1.2",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 31.15,
+      "log": "results/runner-dependency-apiguardian-api-1.txt"
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.apiguardian:apiguardian-api:1.1.2",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 31.108,
+      "log": "results/runner-dependency-apiguardian-api-2.txt"
+    }
+  ]
+}

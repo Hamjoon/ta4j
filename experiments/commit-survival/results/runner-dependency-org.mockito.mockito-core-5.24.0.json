@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.mockito:mockito-core:5.24.0",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.mockito:mockito-core:5.24.0",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.176,
+      "log": "results/runner-dependency-org.mockito.mockito-core-5.24.0-1.txt",
+      "coordinate": "org.mockito:mockito-core:5.24.0",
+      "expected_sha256": "97a1f835ad84075255aa37809e4379eff541273c02c6201cbad49bd5950932cd",
+      "rejected_sha256": null,
+      "downloaded_sha256": "97a1f835ad84075255aa37809e4379eff541273c02c6201cbad49bd5950932cd"
+    }
+  ]
+}

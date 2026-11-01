@@ -1,0 +1,764 @@
+{
+  "index": 155,
+  "sha": "0af7c7176793823733b7bc4f01fbda0899debf73",
+  "status": "evaluated",
+  "imported": true,
+  "methods": [
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenNewShouldCreateBuyOrderWhenEntering",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenNewShouldCreateBuyOrderWhenEntering",
+      "body_hash": "f3bfbe91de4ebe356da3889695364a470015b28394918bef7e383e1ece79b460",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenNewShouldCreateBuyOrderWhenEntering"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenNewShouldCreateBuyOrderWhenEntering",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateBuyOrderWhenEntering"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenNewShouldNotExit",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenNewShouldNotExit",
+      "body_hash": "d1388c73f79c383ce4d6471358218131852abba41505fa8ba4f96287e9fc8262",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenNewShouldNotExit"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenNewShouldNotExit",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldNotExit"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenOpenedShouldCreateSellOrderWhenExiting",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenOpenedShouldCreateSellOrderWhenExiting",
+      "body_hash": "0c97a3df3cb9e7db24996e02d2e82149e623ae203264aef474c48b3ae6e9426c",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenOpenedShouldCreateSellOrderWhenExiting"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenOpenedShouldCreateSellOrderWhenExiting",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateSellOrderWhenExiting"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenClosedShouldNotEnter",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenClosedShouldNotEnter",
+      "body_hash": "65a180365898b2079e23608ce7ba302c348555028d3522eb017a4432b2da5bb4",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenClosedShouldNotEnter"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenClosedShouldNotEnter",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenClosedShouldNotEnter"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenExitIndexIsLessThanEntryIndexShouldThrowException",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenExitIndexIsLessThanEntryIndexShouldThrowException",
+      "body_hash": "37dc5c407d96915948116dd6da1368fec4e4735f3a5c03e1e1e47dbea0ec7c39",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenExitIndexIsLessThanEntryIndexShouldThrowException"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenExitIndexIsLessThanEntryIndexShouldThrowException",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenExitIndexIsLessThanEntryIndexShouldThrowException"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "shouldClosePositionOnSameIndex",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#shouldClosePositionOnSameIndex",
+      "body_hash": "f65133f32a094858faf9f1374595827c7876cd73e0d483058a87343a1f07a3b9",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#shouldClosePositionOnSameIndex"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#shouldClosePositionOnSameIndex",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldClosePositionOnSameIndex"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+      "body_hash": "3e216bc26b0abb128c67846d605e78726546ff6fca3c9c44c4dd3eb66f877389",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrderTypeIsNull"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+      "body_hash": "30ba0183f3e77674ef876ac5c1731f505ca4cb7e291af56de7a5d561f70ebaf7",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|shouldThrowIllegalArgumentExceptionWhenOrdersHaveSameType"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenNewShouldCreateSellOrderWhenEnteringUncovered",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenNewShouldCreateSellOrderWhenEnteringUncovered",
+      "body_hash": "9233ac05e223570164ce437ec96d8676c5cbdb72ee6a8203dd0088f310a4a275",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenNewShouldCreateSellOrderWhenEnteringUncovered"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenNewShouldCreateSellOrderWhenEnteringUncovered",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenNewShouldCreateSellOrderWhenEnteringUncovered"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+      "body_hash": "d6502adcbbd85c554cb9d889ebc0acfd7e7d3452cdf4d9770c31e1dbf0ddc18b",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#whenOpenedShouldCreateBuyOrderWhenExitingUncovered"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#whenOpenedShouldCreateBuyOrderWhenExitingUncovered",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|whenOpenedShouldCreateBuyOrderWhenExitingUncovered"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "overrideToString",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#overrideToString",
+      "body_hash": "49df266e480ad028d4e8952df7a53f9ca09f685cfd2f69a43a238fea8adfd3b7",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#overrideToString"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#overrideToString",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|overrideToString"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsForNewPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testEqualsForNewPositions",
+      "body_hash": "fceb0157c25a2b3b2c0bd5ed1ea38052628ae6e3864e49394240258593e33f95",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsForNewPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testEqualsForNewPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForNewPositions"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsForEntryOrders",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testEqualsForEntryOrders",
+      "body_hash": "817d72230d11c368f94a9e1771a26a02bc295e84273d45a56b000b48df3231fe",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsForEntryOrders"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testEqualsForEntryOrders",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForEntryOrders"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsForExitOrders",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testEqualsForExitOrders",
+      "body_hash": "9ffed7e3fb21e3404e316d11cd9a1f2f2eb8c312dc8b0e148b923b59bf4804e6",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testEqualsForExitOrders"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testEqualsForExitOrders",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testEqualsForExitOrders"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetProfitForLongPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testGetProfitForLongPositions",
+      "body_hash": "5aec01b0bf7b3cacace0d709fb406eaff3290f0e5f024be846757d5f562f92f5",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetProfitForLongPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testGetProfitForLongPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForLongPositions"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetProfitForShortPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testGetProfitForShortPositions",
+      "body_hash": "2e3e6682ad5dab8c15c3583bf9b1e4389635b305f9c31c232c3e73c8c5156dca",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetProfitForShortPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testGetProfitForShortPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetProfitForShortPositions"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForLongPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositions",
+      "body_hash": "1db0bf52766602f273b54c2edb8d286ee1820e05f27e6e8e9fcad408b989a350",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositions"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForShortPositions",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositions",
+      "body_hash": "da88989044dcb1eea928ce73418c820915bb1c27913b9058543ab24332451303",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositions"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositions",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositions"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+      "body_hash": "d5556bbac3eb62a17c7c789c93254f6541bffbc795a0c1292f9fdc90c1317a4d",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositionsUsingBarCloseOnNaN"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testGetGrossReturnForLongPositionsUsingBarCloseOnNaN",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForLongPositionsUsingBarCloseOnNaN"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+      "body_hash": "bb8313adf8b1a53ec43bf5f00db6bda6f9baf53dc4dabfd1df0a839e3168aa73",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositionsUsingBarCloseOnNaN"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testGetGrossReturnForShortPositionsUsingBarCloseOnNaN",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testGetGrossReturnForShortPositionsUsingBarCloseOnNaN"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testCostModelConsistencyTrue",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testCostModelConsistencyTrue",
+      "body_hash": "afaf08e2408dcf1d93e7c746112e450b1c6ce8d65772ac01038dee930316f5e7",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testCostModelConsistencyTrue"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testCostModelConsistencyTrue",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelConsistencyTrue"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testCostModelEntryInconsistent",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testCostModelEntryInconsistent",
+      "body_hash": "750223e626a86f102f9d017a4751f50d8d4d35a1eceb578eea150f328a9040f9",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testCostModelEntryInconsistent"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testCostModelEntryInconsistent",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelEntryInconsistent"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testCostModelExitInconsistent",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#testCostModelExitInconsistent",
+      "body_hash": "3c5dbf544c18b3dcba4c354d083a36ad6b5849c722f16c1163ad158e29d612ff",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#testCostModelExitInconsistent"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#testCostModelExitInconsistent",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|testCostModelExitInconsistent"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitLongNoFinalBarTest",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#getProfitLongNoFinalBarTest",
+      "body_hash": "7578c5d09802d920827378363a46ea5819a2642d43067c013d0de9dd01cd7c54",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitLongNoFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#getProfitLongNoFinalBarTest",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongNoFinalBarTest"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitLongWithFinalBarTest",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#getProfitLongWithFinalBarTest",
+      "body_hash": "00b3bc5191a5b0d8e0d7a9a5aae23633a00f8bbdd369b9314a9c66ac30f11363",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitLongWithFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#getProfitLongWithFinalBarTest",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitLongWithFinalBarTest"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitShortNoFinalBarTest",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#getProfitShortNoFinalBarTest",
+      "body_hash": "93e844cb9d81636b9f89dc9186ba8d8da36947338d8beadd97823f6bc0c9c50d",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitShortNoFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#getProfitShortNoFinalBarTest",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortNoFinalBarTest"
+    },
+    {
+      "class": "org.ta4j.core.PositionTest",
+      "method": "getProfitShortWithFinalBarTest",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/155/dev/src-test-t/java/org/ta4j/core/PositionTest.java",
+      "id": "org.ta4j.core.PositionTest#getProfitShortWithFinalBarTest",
+      "body_hash": "c37597d94bcbd8247f6977957e9ddd6be4fdf8d205270a9afa11c102d0bff1d9",
+      "source_root": "results/policy/pools/dev-scope/155/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/155/dev/src-test-t",
+      "file_hash": "78a028199b2220e93453e712ccfbef6bf5b6305f9df5ae7d956cbe2c364cf5aa",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.PositionTest#getProfitShortWithFinalBarTest"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "243974c4a35e6f6032357bd025e21d4bdadfc55465871e50cd0390c0cebc900b",
+      "source_tree_hash": "dc4bda49a72f68dc2caec1a3c4ee1700af2a3b054a2b19415bb2078a2bf3a437",
+      "resource_tree_hash": "946a9091a998e5cc00a46ff3145688e3342de8c6566e4c90f69fede56c73110c",
+      "unit": "org.ta4j.core.PositionTest#getProfitShortWithFinalBarTest",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/PositionTest.java|org.ta4j.core.PositionTest|getProfitShortWithFinalBarTest"
+    }
+  ]
+}

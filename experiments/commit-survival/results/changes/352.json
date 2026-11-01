@@ -1,0 +1,61 @@
+{
+  "index": 352,
+  "sha": "6de1e3794db7a8fa86edaf9434fb559de4200aa1",
+  "parent": "fef45196da568d7dee60623faed23eff2c429621",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      1040,
+      1041,
+      1045,
+      1058,
+      1062,
+      1063,
+      1073,
+      2989,
+      2990,
+      2991,
+      2994,
+      3043,
+      3044,
+      3045,
+      3047
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      1038,
+      1041,
+      1042,
+      1046,
+      1047,
+      1048,
+      1049,
+      1050,
+      1052,
+      1059,
+      1060,
+      1061,
+      1068,
+      1069,
+      1073,
+      1074,
+      1086,
+      1087,
+      1088,
+      1089,
+      1090,
+      1091,
+      1095,
+      1099,
+      3017,
+      3018,
+      3019,
+      3020,
+      3070,
+      3071,
+      3072,
+      3073
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 16b42e8c7..d4713ebd1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -1037,0 +1038 @@ public final class ElliottWaveAnalysisRunner {\n+        double lastCommittedPeakPrice = Double.NEGATIVE_INFINITY;\n@@ -1040,2 +1041,2 @@ public final class ElliottWaveAnalysisRunner {\n-            if (historicalMacroBottomConfirmed(series, pending, next.startIndex())) {\n-                macroBottoms.add(pending);\n+            if (lowPrice(series, boundedHistoricalIndex(series, next.endIndex())) <= lowPrice(series,\n+                    boundedHistoricalIndex(series, pending.endIndex()))) {\n@@ -1045 +1046,5 @@ public final class ElliottWaveAnalysisRunner {\n-            if (lowPrice(series, next.endIndex()) <= lowPrice(series, pending.endIndex())) {\n+            final double recoveryPeakPrice = highPrice(series, boundedHistoricalIndex(series, next.startIndex()));\n+            if (recoveryPeakPrice > lastCommittedPeakPrice && meaningfulHistoricalBottomConfirmation(pending, next)\n+                    && historicalMacroBottomConfirmed(series, pending, next.startIndex())) {\n+                macroBottoms.add(pending);\n+                lastCommittedPeakPrice = recoveryPeakPrice;\n@@ -1046,0 +1052 @@ public final class ElliottWaveAnalysisRunner {\n+                continue;\n@@ -1052,0 +1059,4 @@ public final class ElliottWaveAnalysisRunner {\n+        final ElliottWaveAnalysisResult.HistoricalLegAssessment boundaryCandidate = bearishLegs.getLast();\n+        if (boundaryCandidate != pending && boundaryHistoricalMacroBottom(series, boundaryCandidate)) {\n+            macroBottoms.add(boundaryCandidate);\n+        }\n@@ -1058 +1068,2 @@ public final class ElliottWaveAnalysisRunner {\n-        if (recoveryEndIndex <= candidate.endIndex()) {\n+        final int boundedCandidateEndIndex = boundedHistoricalIndex(series, candidate.endIndex());\n+        if (recoveryEndIndex <= boundedCandidateEndIndex) {\n@@ -1062,2 +1073,2 @@ public final class ElliottWaveAnalysisRunner {\n-        return highestHigh(series, candidate.endIndex(), boundedRecoveryEndIndex) > highPrice(series,\n-                candidate.startIndex());\n+        return highestHigh(series, boundedCandidateEndIndex, boundedRecoveryEndIndex) > highPrice(series,\n+                boundedHistoricalIndex(series, candidate.startIndex()));\n@@ -1071,0 +1083,11 @@ public final class ElliottWaveAnalysisRunner {\n+    private boolean meaningfulHistoricalBottomConfirmation(\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment pending,\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment next) {\n+        final int recoverySpan = Math.max(1, next.startIndex() - pending.endIndex());\n+        final int correctionSpan = Math.max(0, next.endIndex() - next.startIndex());\n+        final int minimumCorrectionSpan = Math.max(CURRENT_CYCLE_MIN_WINDOW_BARS,\n+                (int) Math.ceil(recoverySpan * HISTORICAL_CYCLE_PROMOTION_MIN_GAP_RATIO));\n+        return correctionSpan >= minimumCorrectionSpan\n+                && (next.accepted() || next.fitScore() >= HISTORICAL_BOUNDARY_BOTTOM_FIT_FLOOR);\n+    }\n+\n@@ -1073 +1095,5 @@ public final class ElliottWaveAnalysisRunner {\n-        return leg.accepted();\n+        return leg.accepted() || leg.fitScore() >= HISTORICAL_BOUNDARY_BOTTOM_FIT_FLOOR;\n+    }\n+\n+    private static int boundedHistoricalIndex(final BarSeries series, final int index) {\n+        return Math.max(series.getBeginIndex(), Math.min(series.getEndIndex(), index));\n@@ -2989,3 +3014,0 @@ public final class ElliottWaveAnalysisRunner {\n-                .thenComparingDouble(HistoricalStructureCandidate::averageCycleSpan)\n-                .thenComparingInt(HistoricalStructureCandidate::totalCycleSpan)\n-                .thenComparingInt(HistoricalStructureCandidate::terminalCycleEndIndex)\n@@ -2994 +3017,4 @@ public final class ElliottWaveAnalysisRunner {\n-                .thenComparingInt(HistoricalStructureCandidate::cycleCount)\n+                .thenComparingInt(HistoricalStructureCandidate::terminalCycleEndIndex)\n+                .thenComparing(Comparator.comparingInt(HistoricalStructureCandidate::cycleCount).reversed())\n+                .thenComparingInt(HistoricalStructureCandidate::totalCycleSpan)\n+                .thenComparingDouble(HistoricalStructureCandidate::averageCycleSpan)\n@@ -3043,3 +3068,0 @@ public final class ElliottWaveAnalysisRunner {\n-                .thenComparingDouble(HistoricalCycleBundle::averageCycleSpan)\n-                .thenComparingInt(HistoricalCycleBundle::totalCycleSpan)\n-                .thenComparingInt(HistoricalCycleBundle::terminalCycleEndIndex)\n@@ -3047 +3070,4 @@ public final class ElliottWaveAnalysisRunner {\n-                .thenComparingInt(HistoricalCycleBundle::cycleCount)\n+                .thenComparingInt(HistoricalCycleBundle::terminalCycleEndIndex)\n+                .thenComparing(Comparator.comparingInt(HistoricalCycleBundle::cycleCount).reversed())\n+                .thenComparingInt(HistoricalCycleBundle::totalCycleSpan)\n+                .thenComparingDouble(HistoricalCycleBundle::averageCycleSpan)"
+}

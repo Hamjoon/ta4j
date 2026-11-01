@@ -1,0 +1,270 @@
+package org.ta4j.core.analysis;
+import org.ta4j.core.Trade.TradeType;
+
+
+import static org.junit.Assert.*;
+
+import java.util.Collections;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.Position;
+import org.ta4j.core.Trade;
+import org.ta4j.core.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.DecimalNum;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link CashFlow}.
+ *
+ * <p>
+ * The tests cover:
+ * <ul>
+ *   <li>Extraction of all public methods and basic functional verification.</li>
+ *   <li>Edge‑case and exception scenarios (open positions, zero‑holding‑cost,
+ *       long vs. short trades, etc.).</li>
+ *   <li>Reflection‑based checks for the private static {@code getIntermediateRatio}
+ *       method.</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * The ta4j library provides concrete implementations for {@link BarSeries},
+ * {@link Bar}, {@link Position}, {@link Trade} and {@link TradingRecord}
+ * (e.g. {@link BaseBarSeries}, {@link BaseBar}, {@link BaseTradingRecord}).
+ * These are used to build realistic objects without any mocking.
+ * </p>
+ */
+public class CashFlowTest {
+
+    private BarSeries series;
+    private Num one;
+    private Num zero;
+
+    /** Helper to create a {@link Bar} with a given close price. */
+    private Bar createBar(double closePrice) {
+        // In ta4j a Bar is built via BaseBar.builder()
+        // Using the simplest constructor for demonstration.
+        return new BaseBar(
+                series.numFactory().numOf(1),                     // time period (dummy)
+                series.numFactory().numOf(closePrice),           // open price
+                series.numFactory().numOf(closePrice),           // high price
+                series.numFactory().numOf(closePrice),           // low price
+                series.numFactory().numOf(closePrice),           // close price
+                series.numFactory().numOf(0),                     // volume
+                series.numFactory().numOf(0)                     // amount
+        );
+    }
+
+    /** Creates a simple {@link Position} that is already closed (entry + exit). */
+    private Position createClosedLongPosition(int entryIdx, double entryPrice,
+                                               int exitIdx, double exitPrice) {
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx), series.numFactory().numOf(entryPrice), series.numFactory().numOf(1));
+        Trade exit = new Trade(TradeType.SELL, series.getBar(exitIdx), series.numFactory().numOf(exitPrice), series.numFactory().numOf(1));
+        return new Position(entry, exit);
+    }
+
+    /** Creates a simple open {@link Position} (only entry). */
+    private Position createOpenLongPosition(int entryIdx, double entryPrice) {
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx), series.numFactory().numOf(entryPrice), series.numFactory().numOf(1));
+        return new Position(entry, null);
+    }
+
+    @Before
+    public void setUp() {
+        // Build a series with 5 bars (indices 0‑4) all having close price = 100
+        series = new BaseBarSeries("test-series");
+        for (int i = 0; i < 5; i++) {
+            series.addBar(createBar(100.0));
+        }
+        one = series.numFactory().one();
+        zero = series.numFactory().zero();
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 1. PUBLIC API – BASIC FUNCTIONALITY                                    */
+    /* --------------------------------------------------------------------- */
+
+    @Test
+    public void testGetBarSeries() {
+        Position pos = createClosedLongPosition(0, 100, 2, 110);
+        CashFlow cf = new CashFlow(series, pos);
+        assertSame("CashFlow should return the same BarSeries instance", series, cf.getBarSeries());
+    }
+
+    @Test
+    public void testGetCountOfUnstableBars() {
+        Position pos = createClosedLongPosition(0, 100, 2, 110);
+        CashFlow cf = new CashFlow(series, pos);
+        assertEquals("CashFlow reports 0 unstable bars", 0, cf.getCountOfUnstableBars());
+    }
+
+    @Test
+    public void testGetSize() {
+        Position pos = createClosedLongPosition(0, 100, 2, 110);
+        CashFlow cf = new CashFlow(series, pos);
+        assertEquals("Size should equal underlying series bar count", series.getBarCount(), cf.getSize());
+    }
+
+    @Test
+    public void testGetValue_basicFlow() {
+        // Entry at index 0 (price 100), exit at index 2 (price 110)
+        Position pos = createClosedLongPosition(0, 100, 2, 110);
+        CashFlow cf = new CashFlow(series, pos);
+
+        // values[0] = 1 (initial)
+        assertEquals(one, cf.getValue(0));
+
+        // At index 1 we expect the intermediate cash flow:
+        // ratio = 110 / 100 = 1.1 (no holding cost in this simple test)
+        Num expectedIdx1 = one.multipliedBy(series.numFactory().numOf(1.1));
+        assertEquals(expectedIdx1, cf.getValue(1));
+
+        // At index 2 we expect cash flow after exit:
+        Num expectedIdx2 = one.multipliedBy(series.numFactory().numOf(1.1));
+        assertEquals(expectedIdx2, cf.getValue(2));
+
+        // Remaining indices are padded with the last value
+        for (int i = 3; i <= series.getEndIndex(); i++) {
+            assertEquals(expectedIdx2, cf.getValue(i));
+        }
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 2. EDGE CASES & EXCEPTION SCENARIOS                                   */
+    /* --------------------------------------------------------------------- */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructor_singlePosition_openPosition_throws() {
+        // Position is opened (no exit) – constructor must reject it
+        Position openPos = createOpenLongPosition(0, 100);
+        new CashFlow(series, openPos); // should throw IllegalArgumentException
+    }
+
+    @Test
+    public void testConstructor_tradingRecord_withOpenPosition() {
+        // Build a trading record with one closed position and one open position
+        BaseTradingRecord record = new BaseTradingRecord();
+
+        // Closed position: buy at idx 0, sell at idx 2
+        record.operate(0, series.numFactory().numOf(100), series.numFactory().numOf(1)); // entry
+        record.operate(2, series.numFactory().numOf(110), series.numFactory().numOf(1)); // exit
+
+        // Open position: buy at idx 3 (no exit)
+        record.operate(3, series.numFactory().numOf(120), series.numFactory().numOf(1));
+
+        // finalIndex = 4 (last bar) – open position should be considered up to that index
+        CashFlow cf = new CashFlow(series, record, series.getEndIndex());
+
+        // Verify that cash flow values exist up to the end of the series
+        assertEquals(series.getBarCount(), cf.getSize());
+        // The first value is always 1
+        assertEquals(one, cf.getValue(0));
+        // The last value must be non‑null (the method pads the series)
+        assertNotNull(cf.getValue(series.getEndIndex()));
+    }
+
+    @Test
+    public void testIntermediateRatio_longTrade() throws Exception {
+        // Directly test the private static method via reflection
+        java.lang.reflect.Method method = CashFlow.class.getDeclaredMethod(
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+        method.setAccessible(true);
+
+        // Long trade: ratio = exit / entry
+        Num entry = series.numFactory().numOf(100);
+        Num exit = series.numFactory().numOf(150);
+        Num ratio = (Num) method.invoke(null, true, entry, exit);
+        assertEquals(exit.dividedBy(entry), ratio);
+    }
+
+    @Test
+    public void testIntermediateRatio_shortTrade() throws Exception {
+        java.lang.reflect.Method method = CashFlow.class.getDeclaredMethod(
+                "getIntermediateRatio", boolean.class, Num.class, Num.class);
+        method.setAccessible(true);
+
+        // Short trade: ratio = 2 - (exit / entry)
+        Num entry = series.numFactory().numOf(100);
+        Num exit = series.numFactory().numOf(80);
+        Num expected = entry.getNumFactory().numOf(2).minus(exit.dividedBy(entry));
+        Num ratio = (Num) method.invoke(null, false, entry, exit);
+        assertEquals(expected, ratio);
+    }
+
+    @Test
+    public void testCalculate_withZeroHoldingCost() {
+        // Holding cost is zero by default (no CostModel supplied)
+        Position pos = createClosedLongPosition(0, 100, 2, 110);
+        // No exception should be thrown and cash flow should be based solely on price ratio
+        CashFlow cf = new CashFlow(series, pos);
+        Num expected = one.multipliedBy(series.numFactory().numOf(1.1));
+        assertEquals(expected, cf.getValue(2));
+    }
+
+    @Test
+    public void testFillToTheEnd_paddingBehavior() {
+        // Create a CashFlow with a single closed position ending at index 1
+        Position pos = createClosedLongPosition(0, 100, 1, 105);
+        CashFlow cf = new CashFlow(series, pos);
+
+        // Values after index 1 should be padded with the last calculated value
+        Num lastValue = cf.getValue(1);
+        for (int i = 2; i <= series.getEndIndex(); i++) {
+            assertEquals("Values after last trade must be padded", lastValue, cf.getValue(i));
+        }
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 3. CONSTRUCTORS WITH TRADING RECORD (multiple positions)              */
+    /* --------------------------------------------------------------------- */
+
+    @Test
+    public void testConstructor_tradingRecord_multipleClosedPositions() {
+        BaseTradingRecord record = new BaseTradingRecord();
+
+        // First trade: 100 -> 110 (indices 0‑2)
+        record.operate(0, series.numFactory().numOf(100), series.numFactory().numOf(1));
+        record.operate(2, series.numFactory().numOf(110), series.numFactory().numOf(1));
+
+        // Second trade: 105 -> 95 (indices 3‑4) – short trade
+        record.operate(3, series.numFactory().numOf(105), series.numFactory().numOf(1));
+        record.operate(4, series.numFactory().numOf(95), series.numFactory().numOf(1));
+
+        CashFlow cf = new CashFlow(series, record);
+
+        // Verify that cash flow reflects both trades
+        // After first trade (index 2) ratio = 110 / 100 = 1.1
+        Num afterFirst = one.multipliedBy(series.numFactory().numOf(1.1));
+        assertEquals(afterFirst, cf.getValue(2));
+
+        // After second (short) trade (index 4):
+        // For short: ratio = 2 - (exit/entry) = 2 - (95/105) = 2 - 0.904761... = 1.095238...
+        Num shortRatio = series.numFactory().numOf(2).minus(series.numFactory().numOf(95.0/105.0));
+        Num afterSecond = afterFirst.multipliedBy(shortRatio);
+        assertEquals(afterSecond, cf.getValue(4));
+    }
+
+    /* --------------------------------------------------------------------- */
+    /* 4. VALIDATION OF INTERNAL State (values list size)                     */
+    /* --------------------------------------------------------------------- */
+
+    @Test
+    public void testValuesSizeMatchesSeriesAfterConstruction() throws Exception {
+        Position pos = createClosedLongPosition(0, 100, 2, 110);
+        CashFlow cf = new CashFlow(series, pos);
+        // Using reflection to access the private 'values' field
+        java.lang.reflect.Field valuesField = CashFlow.class.getDeclaredField("values");
+        valuesField.setAccessible(true);
+        @SuppressWarnings("unchecked")
+        java.util.List<Num> values = (java.util.List<Num>) valuesField.get(cf);
+        assertEquals("Internal values list must be padded to series end",
+                series.getBarCount(), values.size());
+    }
+}

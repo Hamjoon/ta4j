@@ -1,0 +1,5 @@
+{
+  "api document of class org.ta4j.core.indicators.ATRIndicator": "\n * Average true range indicator.\n ",
+  "return type": "int",
+  "dependent classes": "class `org.ta4j.core.indicators.ATRIndicator`:\n\trelated functions:\n\t\tmethod `public int getUnstableBars()` returns `int`, related with `org.ta4j.core.indicators.ATRIndicator.getUnstableBars()`;\n\t\tmethod `public String toString()` returns `java.lang.String`, related with `org.ta4j.core.indicators.ATRIndicator.getUnstableBars()`;\nclass `org.ta4j.core.Strategy`:\n\trelated functions:\n\t\tmethod ` boolean shouldOperate(int, TradingRecord)` returns `boolean`, related with `org.ta4j.core.indicators.ATRIndicator.getUnstableBars()`, api document: \n     * @param index         the bar index\n     * @param tradingRecord the potentially needed trading history\n     * @return true to recommend a trade, false otherwise (no recommendation)\n     ;"
+}

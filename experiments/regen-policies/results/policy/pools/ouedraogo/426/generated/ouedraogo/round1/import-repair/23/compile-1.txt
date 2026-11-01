@@ -1,0 +1,61 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:53: error: incompatible types: String cannot be converted to Config
+        BarSeries s = new BaseBarSeries("test-series");
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:56: error: incompatible types: int cannot be converted to Duration
+                .timePeriod(1)
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:78: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:91: error: cannot find symbol
+        Position longPos = new Position(TradeType.BUY);
+                                        ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:92: error: cannot find symbol
+        Position shortPos = new Position(TradeType.SELL);
+                                         ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:93: error: cannot find symbol
+        assertEquals(TradeType.BUY, longPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:94: error: cannot find symbol
+        assertEquals(TradeType.SELL, shortPos.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:108: error: cannot find symbol
+        Position pos = new Position(TradeType.BUY);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:113: error: cannot find symbol
+        assertEquals(TradeType.BUY, entry.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:123: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:133: error: cannot find symbol
+        Position pos = new Position(TradeType.BUY);
+                                    ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:157: error: incompatible types: CostModel cannot be converted to Trade
+        Position pos = new Position(entry, zeroCost); // open‑position ctor validates cost model
+                                           ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/ToT/PositionTest.java:250: error: cannot find symbol
+        Num gross = TWELVE.negated().plus(EIGHT); // (8 - 12) = -4
+                          ^
+  symbol:   method negated()
+  location: variable TWELVE of type Num
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+13 errors

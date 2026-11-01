@@ -1,0 +1,63 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:20: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:22: error: cannot find symbol
+import org.ta4j.core.BasicTradingRecord;
+                    ^
+  symbol:   class BasicTradingRecord
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:69: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now,
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:74: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.plusDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:79: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.plusDays(2),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:192: error: cannot find symbol
+        TradingRecord record = new BasicTradingRecord(TradeType.BUY);
+                                   ^
+  symbol:   class BasicTradingRecord
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:251: error: no suitable constructor found for Trade(Bar,Num,TradeType)
+        Trade entry = new Trade(series.getBar(entryIdx), series.numOf(1), type);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; Bar cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; Bar cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/ToT/CashFlowTest.java:256: error: no suitable constructor found for Trade(Bar,Num,TradeType)
+            exit = new Trade(series.getBar(exitIdx), series.numOf(1), exitType);
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType) is not applicable
+      (argument mismatch; Bar cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num) is not applicable
+      (argument mismatch; Bar cannot be converted to int)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+9 errors

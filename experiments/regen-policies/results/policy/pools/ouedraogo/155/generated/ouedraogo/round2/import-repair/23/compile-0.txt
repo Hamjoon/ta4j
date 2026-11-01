@@ -1,0 +1,128 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:70: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:92: error: cannot find symbol
+        CostModel zero = new ZeroCostModel();
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:93: error: cannot find symbol
+        CostModel custom = new ZeroCostModel(); // different instance, but equal – we need a non‑equal model
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:95: error: cannot find symbol
+        CostModel other = new CostModel() {
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:95: error: cannot find symbol
+        CostModel other = new CostModel() {
+                              ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:99: error: cannot find symbol
+            @Override public boolean equals(CostModel otherModel) { return false; }
+                                            ^
+  symbol: class CostModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:96: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Position position, int finalIndex) { return num(0); }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:97: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Position position) { return num(0); }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:98: error: method does not override or implement a method from a supertype
+            @Override public Num calculate(Num price, Num amount) { return num(0); }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:99: error: method does not override or implement a method from a supertype
+            @Override public boolean equals(CostModel otherModel) { return false; }
+            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:183: error: cannot find symbol
+        entry = new Trade(0, TradeType.BUY, num(100), num(10), new ZeroCostModel()); // price per asset = 100
+                             ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:185: error: cannot find symbol
+        exit = new Trade(1, TradeType.SELL, num(110), num(10), new ZeroCostModel());
+                            ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:198: error: cannot find symbol
+        entry = new Trade(0, TradeType.SELL, num(200), num(5), new ZeroCostModel());
+                             ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:200: error: cannot find symbol
+        exit = new Trade(1, TradeType.BUY, num(180), num(5), new ZeroCostModel());
+                            ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:211: error: cannot find symbol
+        Trade entry = new Trade(0, TradeType.BUY, num(50), num(1), new ZeroCostModel());
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:212: error: cannot find symbol
+        Trade exit = new Trade(1, TradeType.SELL, num(40), num(1), new ZeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:228: error: cannot find symbol
+        Trade entry = new Trade(0, TradeType.BUY, num(100), num(2), new ZeroCostModel());
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:229: error: cannot find symbol
+        Trade exit = new Trade(1, TradeType.SELL, num(115), num(2), new ZeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:237: error: cannot find symbol
+        Trade entry = new Trade(0, TradeType.SELL, num(200), num(3), new ZeroCostModel());
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:238: error: cannot find symbol
+        Trade exit = new Trade(1, TradeType.BUY, num(190), num(3), new ZeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:259: error: cannot find symbol
+        Trade entry = new Trade(0, TradeType.BUY, num(50), num(1), new ZeroCostModel());
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:260: error: cannot find symbol
+        Trade exit = new Trade(1, TradeType.SELL, num(55), num(1), new ZeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:268: error: cannot find symbol
+        Trade entry = new Trade(0, TradeType.SELL, num(80), num(1), new ZeroCostModel());
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:269: error: cannot find symbol
+        Trade exit = new Trade(1, TradeType.BUY, num(72), num(1), new ZeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:289: error: cannot find symbol
+        Trade entry = new Trade(0, TradeType.BUY, num(10), num(1), new ZeroCostModel());
+                                   ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:290: error: cannot find symbol
+        Trade exit = new Trade(1, TradeType.SELL, num(12), num(1), new ZeroCostModel());
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+27 errors

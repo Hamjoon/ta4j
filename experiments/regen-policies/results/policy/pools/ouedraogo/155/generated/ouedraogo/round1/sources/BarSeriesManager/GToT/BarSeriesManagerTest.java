@@ -1,0 +1,377 @@
+package org.ta4j.core.backtest;
+import org.ta4j.core.serialization.ComponentDescriptor;
+
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeries;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive JUnit‑4 test suite for {@link BarSeriesManager}.
+ *
+ * <p>The tests cover:
+ * <ul>
+ *   <li>All public constructors and accessor methods.</li>
+ *   <li>All overloads of {@code run(...)} – normal execution, custom trade type,
+ *       custom amount, start/finish indexes.</li>
+ *   <li>Edge‑case handling such as empty series, out‑of‑range indexes,
+ *       zero/negative amount and null strategy.</li>
+ *   <li>Verification that the supplied {@link CostModel}s are correctly
+ *       stored and used.</li>
+ * </ul>
+ *
+ * <p>Only concrete classes that belong to the ta4j library (or small test‑only
+ * helper classes) are used – no mocking frameworks are employed.</p>
+ */
+public class BarSeriesManagerTest {
+
+    /** A simple series with three bars (index 0‑2). */
+    private BarSeries series;
+
+    /** A strategy that always signals an operation (enter/exit). */
+    private Strategy alwaysTrueStrategy;
+
+    /** Trade execution model – we use the default implementation from the
+     *  library (TradeOnNextOpenModel). */
+    private TradeExecutionModel executionModel = new TradeOnNextOpenModel();
+
+    @Before
+    public void setUp() {
+        // Build a series with three dummy bars (price = 1,2,3).  DecimalNum is the
+        // default Num implementation in ta4j.
+        series = new BaseBarSeries("test-series");
+        series.addBar(createBar(DecimalNum.valueOf(1)));
+        series.addBar(createBar(DecimalNum.valueOf(2)));
+        series.addBar(createBar(DecimalNum.valueOf(3)));
+
+        // Simple Strategy – only the default method shouldOperate is needed.
+        alwaysTrueStrategy = new Strategy() {
+            @Override
+            public String getName() {
+                return "alwaysTrue";
+            }
+
+            @Override
+            public org.ta4j.core.Rule getEntryRule() {
+                return null;
+            }
+
+            @Override
+            public org.ta4j.core.Rule getExitRule() {
+                return null;
+            }
+
+            @Override
+            public Strategy and(Strategy strategy) {
+                return null;
+            }
+
+            @Override
+            public Strategy or(Strategy strategy) {
+                return null;
+            }
+
+            @Override
+            public Strategy and(String name, Strategy strategy, int unstableBars) {
+                return null;
+            }
+
+            @Override
+            public Strategy or(String name, Strategy strategy, int unstableBars) {
+                return null;
+            }
+
+            @Override
+            public Strategy opposite() {
+                return null;
+            }
+
+            @Override
+            public void setUnstableBars(int unstableBars) {
+            }
+
+            @Override
+            public int getUnstableBars() {
+                return 0;
+            }
+
+            @Override
+            public boolean isUnstableAt(int index) {
+                return false;
+            }
+
+            @Override
+            public boolean shouldOperate(int index, TradingRecord tradingRecord) {
+                // always signal that a trade should be executed
+                return true;
+            }
+
+            @Override
+            public boolean shouldEnter(int index) {
+                return true;
+            }
+
+            @Override
+            public boolean shouldEnter(int index, TradingRecord tradingRecord) {
+                return true;
+            }
+
+            @Override
+            public boolean shouldExit(int index) {
+                return true;
+            }
+
+            @Override
+            public boolean shouldExit(int index, TradingRecord tradingRecord) {
+                return true;
+            }
+
+            @Override
+            public String toJson() {
+                return "";
+            }
+
+            @Override
+            public org.ta4j.core.ComponentDescriptor toDescriptor() {
+                return null;
+            }
+        };
+    }
+
+    /** Helper – creates a dummy bar with the given close price. */
+    private Bar createBar(Num closePrice) {
+        // BaseBarSeries uses BarBuilder internally; we simply use the factory method
+        // that creates a bar with the same open/high/low/close.
+        return series.barBuilder()
+                .openPrice(closePrice)
+                .highPrice(closePrice)
+                .lowPrice(closePrice)
+                .closePrice(closePrice)
+                .volume(DecimalNum.ONE)
+                .build();
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  1.  Constructor & accessor tests                                      */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testConstructor_WithOnlySeries() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        assertSame(series, mgr.getBarSeries());
+        assertTrue(mgr.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(mgr.getHoldingCostModel() instanceof ZeroCostModel);
+    }
+
+    @Test
+    public void testConstructor_WithSeriesAndExecutionModel() {
+        BarSeriesManager mgr = new BarSeriesManager(series, executionModel);
+        assertSame(series, mgr.getBarSeries());
+        assertTrue(mgr.getTransactionCostModel() instanceof ZeroCostModel);
+        assertTrue(mgr.getHoldingCostModel() instanceof ZeroCostModel);
+    }
+
+    @Test
+    public void testConstructor_WithCostModels() {
+        CostModel tx = new ZeroCostModel();
+        CostModel hold = new ZeroCostModel();
+        BarSeriesManager mgr = new BarSeriesManager(series, tx, hold);
+        assertSame(tx, mgr.getTransactionCostModel());
+        assertSame(hold, mgr.getHoldingCostModel());
+    }
+
+    @Test
+    public void testConstructor_AllParameters() {
+        CostModel tx = new ZeroCostModel();
+        CostModel hold = new ZeroCostModel();
+        BarSeriesManager mgr = new BarSeriesManager(series, tx, hold, executionModel);
+        assertSame(series, mgr.getBarSeries());
+        assertSame(tx, mgr.getTransactionCostModel());
+        assertSame(hold, mgr.getHoldingCostModel());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  2.  Basic run() – default BUY, whole series                           */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_DefaultBuy() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        TradingRecord record = mgr.run(alwaysTrueStrategy);
+        // With a strategy that always operates, we expect a single BUY followed
+        // by a SELL (because the execution model closes the position on the next
+        // bar).  Hence two trades and one closed position.
+        assertEquals(2, record.getTrades().size());
+        assertTrue(record.isClosed());
+        assertEquals(TradeType.BUY, record.getStartingType());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  3.  run with explicit TradeType                                        */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_WithSellTradeType() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.SELL);
+        assertEquals(TradeType.SELL, record.getStartingType());
+        assertTrue(record.isClosed());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  4.  run with custom amount                                            */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_WithCustomAmount() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        Num amount = DecimalNum.valueOf(10);
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY, amount);
+        // amount does not affect the number of trades – just a sanity check that
+        // the method does not throw.
+        assertNotNull(record);
+        assertEquals(2, record.getTrades().size());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  5.  run with start/finish indexes – normal range                      */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_WithIndexes_NormalRange() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        // Use only the middle bar (index 1)
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY, 1, 1);
+        // One entry and one exit should still be generated because the execution
+        // model will try to close after the end index.
+        assertEquals(2, record.getTrades().size());
+        assertTrue(record.isClosed());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  6.  Edge case – start index after series end                           */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_StartIndexAfterSeriesEnd() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        // start index beyond the last bar – the manager should clamp to series end
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY,
+                series.getEndIndex() + 5, series.getEndIndex() + 10);
+        // No bars to iterate → no trades, record stays open but also empty.
+        assertTrue(record.getTrades().isEmpty());
+        assertFalse(record.isClosed());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  7.  Edge case – finish index before series begin                       */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_FinishIndexBeforeSeriesBegin() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        // finish index before the series start → run range will be empty
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY,
+                series.getBeginIndex() - 5, series.getBeginIndex() - 1);
+        assertTrue(record.getTrades().isEmpty());
+        assertFalse(record.isClosed());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  8.  Edge case – zero amount                                            */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_ZeroAmount() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        Num zero = DecimalNum.ZERO;
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY, zero);
+        // Zero amount is allowed – the execution model will still create trades
+        // (price is still taken from the bar).  Verify that no exception is thrown.
+        assertNotNull(record);
+        assertEquals(2, record.getTrades().size());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /*  9.  Edge case – negative amount                                         */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_NegativeAmount() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        Num negative = DecimalNum.valueOf(-5);
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY, negative);
+        // Negative amount is technically allowed (short selling).  The test ensures
+        // the method handles it without crashing.
+        assertNotNull(record);
+        assertEquals(2, record.getTrades().size());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 10.  Null strategy – should throw NPE                                   */
+    /* ---------------------------------------------------------------------- */
+
+    @Test(expected = NullPointerException.class)
+    public void testRun_NullStrategy() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        mgr.run(null);
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 11.  Empty BarSeries – run should produce an empty record               */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_EmptySeries() {
+        BarSeries empty = new BaseBarSeries("empty");
+        BarSeriesManager mgr = new BarSeriesManager(empty);
+        TradingRecord record = mgr.run(alwaysTrueStrategy);
+        assertTrue(record.getTrades().isEmpty());
+        assertFalse(record.isClosed());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 12.  Verify that custom CostModels are stored and retrieved correctly   */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testCustomCostModels_AreReturned() {
+        CostModel tx = new ZeroCostModel();
+        CostModel hold = new ZeroCostModel();
+        BarSeriesManager mgr = new BarSeriesManager(series, tx, hold, executionModel);
+        assertSame(tx, mgr.getTransactionCostModel());
+        assertSame(hold, mgr.getHoldingCostModel());
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 13.  Verify that the run method respects the internal clamping logic   */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testRun_ClampingLogic() {
+        BarSeriesManager mgr = new BarSeriesManager(series);
+        // Provide a start index lower than begin and a finish index higher than end
+        // The manager must clamp to 0‑2.
+        TradingRecord record = mgr.run(alwaysTrueStrategy, TradeType.BUY, -10, 100);
+        // The whole series is processed → same result as the default run
+        assertEquals(2, record.getTrades().size());
+        assertTrue(record.isClosed());
+    }
+
+}

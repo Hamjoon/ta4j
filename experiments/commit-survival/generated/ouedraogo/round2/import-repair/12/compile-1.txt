@@ -1,0 +1,73 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:36: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:56: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.minusDays(3),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:59: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.minusDays(2),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:62: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum)
+        s.addBar(new BaseBar(Duration.ofDays(1), now.minusDays(1),
+                 ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; DecimalNum cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:129: error: no suitable constructor found for Trade(BaseBarSeries,int,TradeType,Num,Num)
+        Trade entry = new Trade(series, 0, TradeType.BUY, one, one);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:130: error: incompatible types: Trade cannot be converted to TradeType
+        Position openPos = new Position(entry);
+                                        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:164: error: no suitable constructor found for Trade(BaseBarSeries,int,TradeType,Num,Num)
+        Trade entry = new Trade(series, 0, TradeType.BUY, one, one);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:165: error: incompatible types: Trade cannot be converted to TradeType
+        Position openPos = new Position(entry);
+                                        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:197: error: no suitable constructor found for Trade(BaseBarSeries,int,TradeType,Num,Num)
+        Trade entry = new Trade(series, entryIdx, entryType, one, entryPrice);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:198: error: no suitable constructor found for Trade(BaseBarSeries,int,entryType.[...]e.BUY,Num,Num)
+        Trade exit = new Trade(series, exitIdx,
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/CashFlow/GToT/CashFlowTest.java:199: error: cannot find symbol
+                entryType.isBuy() ? TradeType.SELL : TradeType.BUY, one, exitPrice);
+                         ^
+  symbol:   method isBuy()
+  location: variable entryType of type TradeType
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+11 errors

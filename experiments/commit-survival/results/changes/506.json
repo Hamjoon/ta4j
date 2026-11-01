@@ -1,0 +1,12 @@
+{
+  "index": 506,
+  "sha": "0d1e1a0870aff46f1f44beacad2fdda5bf3238db",
+  "parent": "9beef61bcf99c666bcf8e410c581d019cd4528e5",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/portfolio/package-info.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/portfolio/package-info.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/portfolio/package-info.java b/ta4j-core/src/main/java/org/ta4j/core/portfolio/package-info.java\nindex 25de9d33b..4fd9482f7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/portfolio/package-info.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/portfolio/package-info.java\n@@ -19,2 +19,5 @@\n- * Allocation optimizers (minimum variance, HRP, and similar) are out of scope\n- * here; they can produce a {@code PortfolioAllocation} for the same workflow.\n+ * {@link org.ta4j.core.portfolio.MinimumVarianceOptimizer} is an optional\n+ * allocation calculation in this package. It produces a\n+ * {@code PortfolioAllocation} for the same workflow; explicit static weights do\n+ * not require an optimizer. Other optimizer families can remain consumers of\n+ * that allocation contract without adding another execution API."
+}

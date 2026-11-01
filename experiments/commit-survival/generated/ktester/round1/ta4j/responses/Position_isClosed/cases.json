@@ -1,0 +1,57 @@
+[
+  {
+    "group": "Position.isClosed() branch coverage",
+    "cases": [
+      {
+        "input": [],
+        "expected": false,
+        "description": "Both entry and exit are null \u2013 the position has never been opened, so isClosed() must return false."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Entry trade is set (non\u2011null) but exit trade is still null \u2013 the position is opened but not closed, therefore isClosed() must return false."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "Exit trade is set (non\u2011null) while entry trade remains null \u2013 an inconsistent state that should still yield false because entry is missing."
+      },
+      {
+        "input": [],
+        "expected": true,
+        "description": "Both entry and exit trades are non\u2011null \u2013 the position is fully closed, so isClosed() must return true."
+      }
+    ]
+  },
+  {
+    "group": "Position.isClosed() after operate",
+    "cases": [
+      {
+        "input": [],
+        "expected": false,
+        "description": "A freshly created Position, then operate(0) is called \u2013 this creates the entry trade only. The position is opened but not closed, so isClosed() must return false."
+      },
+      {
+        "input": [],
+        "expected": true,
+        "description": "A Position where operate(0) creates the entry trade and a subsequent operate(5) creates the exit trade. After both trades exist the position is fully closed, therefore isClosed() must return true."
+      },
+      {
+        "input": [],
+        "expected": true,
+        "description": "A Position where the entry trade is created with explicit price and amount via operate(0, price, amount) and the exit trade is later created with operate(7, price, amount). The presence of both non\u2011null trades must make isClosed() return true."
+      },
+      {
+        "input": [],
+        "expected": false,
+        "description": "A Position where operate(0) creates the entry trade and a second call to operate(0) (same index) does not create an exit trade because the position is already opened with the same type. The position remains open, so isClosed() must return false."
+      },
+      {
+        "input": [],
+        "expected": true,
+        "description": "A Position where after being fully closed (operate for entry then exit), a third call to operate(10) is made \u2013 the method should not alter the closed state, and isClosed() must still return true."
+      }
+    ]
+  }
+]

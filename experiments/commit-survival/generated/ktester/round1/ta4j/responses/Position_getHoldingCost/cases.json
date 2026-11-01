@@ -1,0 +1,112 @@
+[
+  {
+    "group": "ZeroCostModel behavior",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to ZeroCostModel.ZERO (i.e., Num representing 0)",
+        "description": "When a Position is constructed with the built\u2011in ZeroCostModel, getHoldingCost() should delegate to the model and return a Num equal to zero, regardless of the Position state."
+      }
+    ]
+  },
+  {
+    "group": "Custom constant CostModel",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to 5",
+        "description": "Create a Position with a custom CostModel whose calculate(Position) method always returns Num.valueOf(5). Call getHoldingCost() and verify that the returned Num equals 5, confirming that the method delegates to the supplied CostModel."
+      }
+    ]
+  },
+  {
+    "group": "Bar\u2011based HoldingCostModel (cost per bar held)",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to 12",
+        "description": "Use a CostModel that computes holding cost as (exitIndex - entryIndex) * unitCost, where unitCost = 3. Build a Position with an entry Trade at index 2 and an exit Trade at index 6. The expected cost is (6\u20112) * 3 = 12. Verify that getHoldingCost() returns Num.valueOf(12)."
+      }
+    ]
+  },
+  {
+    "group": "NaN HoldingCostModel for open positions",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num NaN",
+        "description": "Provide a CostModel that returns Num.NaN when the Position is not closed (i.e., exit trade is null). Construct a Position with only an entry Trade (open position) and invoke getHoldingCost(). The method should return NaN, demonstrating correct handling of incomplete positions."
+      }
+    ]
+  },
+  {
+    "group": "CostModel receives the same Position instance",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to 7",
+        "description": "Implement a CostModel that records the hashCode of the Position passed to calculate(Position) and returns Num.valueOf(7) if the hashCode matches the Position under test. After constructing the Position with this model, call getHoldingCost() and verify that the returned Num is 7, confirming that the exact Position instance is forwarded to the CostModel."
+      }
+    ]
+  },
+  {
+    "group": "ZeroCostModel with non\u2011zero trades",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Num value equal to ZeroCostModel.ZERO (i.e., Num representing 0)",
+        "description": "Even when the Position has entry and exit trades with non\u2011zero amounts and prices, using the built\u2011in ZeroCostModel must still yield a holding cost of zero. Construct such a Position, call getHoldingCost(), and assert the result is zero."
+      }
+    ]
+  },
+  {
+    "group": "Null CostModel",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "Construct a Position with a null holdingCostModel (e.g., via reflection or a constructor that allows null). Invoking getHoldingCost() should throw NullPointerException because the method tries to call calculate on a null reference."
+      }
+    ]
+  },
+  {
+    "group": "CostModel throws NullPointerException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "Provide a custom CostModel whose calculate(Position) implementation deliberately throws NullPointerException. After creating a Position with this model, calling getHoldingCost() must propagate the NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "CostModel throws IllegalArgumentException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IllegalArgumentException",
+        "description": "Implement a CostModel that validates the Position (e.g., requires a non\u2011null exit trade) and throws IllegalArgumentException when the Position is open. Construct an open Position with this model and verify that getHoldingCost() throws IllegalArgumentException."
+      }
+    ]
+  },
+  {
+    "group": "CostModel throws ArithmeticException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "ArithmeticException",
+        "description": "Create a CostModel whose calculate(Position) performs a division by zero (or any illegal arithmetic) and thus throws ArithmeticException. When getHoldingCost() is called on a Position using this model, the exception should be propagated."
+      }
+    ]
+  },
+  {
+    "group": "CostModel returns null",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "Supply a CostModel whose calculate(Position) returns null. The getHoldingCost() method will return null; however, if the calling code immediately dereferences the result (e.g., calls .isZero()), a NullPointerException would occur. This test asserts that getHoldingCost() itself does not throw, but the subsequent use of the returned value leads to NullPointerException, highlighting the need for non\u2011null contract."
+      }
+    ]
+  }
+]

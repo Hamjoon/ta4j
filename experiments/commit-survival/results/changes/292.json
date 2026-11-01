@@ -1,0 +1,73 @@
+{
+  "index": 292,
+  "sha": "5eebcb0976d674156bbcaa405a1578189419ffa6",
+  "parent": "f56dcc15c45269ebcb0d75248b1f2251bd73b5f6",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      1069,
+      1576,
+      1602,
+      1617,
+      1689
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java": [
+      53,
+      54,
+      55,
+      65,
+      99,
+      100,
+      101,
+      103,
+      104,
+      106,
+      107,
+      109,
+      110,
+      112,
+      119
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      56,
+      57,
+      132,
+      138,
+      139,
+      152,
+      160,
+      166,
+      179,
+      185,
+      245,
+      492,
+      494,
+      508,
+      519,
+      521,
+      535
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [
+      584,
+      585,
+      586,
+      594
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      578,
+      1069,
+      1070,
+      1154,
+      1577,
+      1578,
+      1604,
+      1619,
+      1691
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java\nindex 0be85d794..b3de25036 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottAnalysisResult.java\n@@ -34,0 +35 @@ import org.ta4j.core.indicators.elliott.confidence.ElliottConfidenceBreakdown;\n+ * @param diagnostics          scenario-generation diagnostics for this analysis\n@@ -40 +41,15 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n-        ElliottTrendBias trendBias) {\n+        ElliottTrendBias trendBias, AnalysisDiagnostics diagnostics) {\n+\n+    /**\n+     * Creates an analysis result with empty diagnostics for backward-compatible\n+     * callers.\n+     *\n+     * @since 0.22.4\n+     */\n+    public ElliottAnalysisResult(ElliottDegree degree, int index, List<ElliottSwing> rawSwings,\n+            List<ElliottSwing> processedSwings, ElliottScenarioSet scenarios,\n+            Map<String, ElliottConfidenceBreakdown> confidenceBreakdowns, ElliottChannel channel,\n+            ElliottTrendBias trendBias) {\n+        this(degree, index, rawSwings, processedSwings, scenarios, confidenceBreakdowns, channel, trendBias,\n+                AnalysisDiagnostics.empty());\n+    }\n@@ -49,0 +65 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n+        diagnostics = diagnostics == null ? AnalysisDiagnostics.empty() : diagnostics;\n@@ -64,0 +81,41 @@ public record ElliottAnalysisResult(ElliottDegree degree, int index, List<Elliot\n+\n+    /**\n+     * Scenario-generation diagnostics captured during one analysis pass.\n+     *\n+     * @param candidateScenarioCountBeforePrune  scenarios produced before pruning\n+     * @param retainedScenarioCount              scenarios retained after pruning\n+     * @param impulseDecompositionBranchCount    impulse decomposition leaf branches\n+     *                                           explored\n+     * @param correctiveDecompositionBranchCount corrective decomposition leaf\n+     *                                           branches explored\n+     * @since 0.22.4\n+     */\n+    public record AnalysisDiagnostics(int candidateScenarioCountBeforePrune, int retainedScenarioCount,\n+            int impulseDecompositionBranchCount, int correctiveDecompositionBranchCount) {\n+\n+        /**\n+         * Creates validated analysis diagnostics.\n+         */\n+        public AnalysisDiagnostics {\n+            if (candidateScenarioCountBeforePrune < 0) {\n+                throw new IllegalArgumentException(\"candidateScenarioCountBeforePrune must be >= 0\");\n+            }\n+            if (retainedScenarioCount < 0) {\n+                throw new IllegalArgumentException(\"retainedScenarioCount must be >= 0\");\n+            }\n+            if (impulseDecompositionBranchCount < 0) {\n+                throw new IllegalArgumentException(\"impulseDecompositionBranchCount must be >= 0\");\n+            }\n+            if (correctiveDecompositionBranchCount < 0) {\n+                throw new IllegalArgumentException(\"correctiveDecompositionBranchCount must be >= 0\");\n+            }\n+        }\n+\n+        /**\n+         * @return empty diagnostics\n+         * @since 0.22.4\n+         */\n+        public static AnalysisDiagnostics empty() {\n+            return new AnalysisDiagnostics(0, 0, 0, 0);\n+        }\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex f7f5e1f3a..8abf7e82f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -55,0 +56,4 @@ public final class ElliottScenarioGenerator {\n+    private ElliottAnalysisResult.AnalysisDiagnostics lastDiagnostics = ElliottAnalysisResult.AnalysisDiagnostics\n+            .empty();\n+    private int lastImpulseBranchCount;\n+    private int lastCorrectiveBranchCount;\n@@ -127,0 +132 @@ public final class ElliottScenarioGenerator {\n+            lastDiagnostics = ElliottAnalysisResult.AnalysisDiagnostics.empty();\n@@ -132,0 +138,2 @@ public final class ElliottScenarioGenerator {\n+        int impulseBranchCount = 0;\n+        int correctiveBranchCount = 0;\n@@ -144,0 +152 @@ public final class ElliottScenarioGenerator {\n+                impulseBranchCount += lastImpulseBranchCount;\n@@ -151,0 +160 @@ public final class ElliottScenarioGenerator {\n+                correctiveBranchCount += lastCorrectiveBranchCount;\n@@ -156,0 +166,2 @@ public final class ElliottScenarioGenerator {\n+        lastDiagnostics = new ElliottAnalysisResult.AnalysisDiagnostics(candidates.size(), pruned.size(),\n+                impulseBranchCount, correctiveBranchCount);\n@@ -160,0 +172,10 @@ public final class ElliottScenarioGenerator {\n+    /**\n+     * Returns the diagnostics captured by the most recent generation pass.\n+     *\n+     * @return last generation diagnostics\n+     * @since 0.22.4\n+     */\n+    public ElliottAnalysisResult.AnalysisDiagnostics lastDiagnostics() {\n+        return lastDiagnostics;\n+    }\n+\n@@ -163,0 +185 @@ public final class ElliottScenarioGenerator {\n+        lastImpulseBranchCount = 0;\n@@ -222,0 +245 @@ public final class ElliottScenarioGenerator {\n+        lastCorrectiveBranchCount = 0;\n@@ -468,0 +492 @@ public final class ElliottScenarioGenerator {\n+        final AtomicInteger branches = new AtomicInteger();\n@@ -469,0 +494 @@ public final class ElliottScenarioGenerator {\n+            branches.incrementAndGet();\n@@ -482,0 +508 @@ public final class ElliottScenarioGenerator {\n+        lastImpulseBranchCount += branches.get();\n@@ -492,0 +519 @@ public final class ElliottScenarioGenerator {\n+        final AtomicInteger branches = new AtomicInteger();\n@@ -493,0 +521 @@ public final class ElliottScenarioGenerator {\n+            branches.incrementAndGet();\n@@ -506,0 +535 @@ public final class ElliottScenarioGenerator {\n+        lastCorrectiveBranchCount += branches.get();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex 858f05850..2e4f65b68 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -574,0 +575 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n+     * @param diagnostics       scenario-generation diagnostics for the analysis\n@@ -578 +579,8 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-            double compositeScore, List<SupportingScenarioMatch> supportingMatches) {\n+            double compositeScore, List<SupportingScenarioMatch> supportingMatches,\n+            ElliottAnalysisResult.AnalysisDiagnostics diagnostics) {\n+\n+        public BaseScenarioAssessment(ElliottScenario scenario, double confidenceScore, double crossDegreeScore,\n+                double compositeScore, List<SupportingScenarioMatch> supportingMatches) {\n+            this(scenario, confidenceScore, crossDegreeScore, compositeScore, supportingMatches,\n+                    ElliottAnalysisResult.AnalysisDiagnostics.empty());\n+        }\n@@ -585,0 +594 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n+            diagnostics = diagnostics == null ? ElliottAnalysisResult.AnalysisDiagnostics.empty() : diagnostics;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex abcbad4fd..06093de5d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -578 +578 @@ public final class ElliottWaveAnalysisRunner {\n-                trendBias);\n+                trendBias, generator.lastDiagnostics());\n@@ -1069 +1069,2 @@ public final class ElliottWaveAnalysisRunner {\n-                clippedScenarioSet, clippedBreakdowns, result.channel(), clippedScenarioSet.trendBias());\n+                clippedScenarioSet, clippedBreakdowns, result.channel(), clippedScenarioSet.trendBias(),\n+                result.diagnostics());\n@@ -1153 +1154 @@ public final class ElliottWaveAnalysisRunner {\n-                    crossDegreeScore, composite, matches));\n+                    crossDegreeScore, composite, matches, baseResult.diagnostics()));\n@@ -1576 +1577,2 @@ public final class ElliottWaveAnalysisRunner {\n-                        assessment.crossDegreeScore(), assessment.compositeScore(), assessment.supportingMatches()))\n+                        assessment.crossDegreeScore(), assessment.compositeScore(), assessment.supportingMatches(),\n+                        assessment.diagnostics()))\n@@ -1602 +1604 @@ public final class ElliottWaveAnalysisRunner {\n-                        assessment.supportingMatches()))\n+                        assessment.supportingMatches(), assessment.diagnostics()))\n@@ -1617 +1619 @@ public final class ElliottWaveAnalysisRunner {\n-                anchoredScenarioSet.trendBias());\n+                anchoredScenarioSet.trendBias(), analysis.diagnostics());\n@@ -1689 +1691 @@ public final class ElliottWaveAnalysisRunner {\n-                rebasedScenarioSet.trendBias());\n+                rebasedScenarioSet.trendBias(), analysis.diagnostics());"
+}

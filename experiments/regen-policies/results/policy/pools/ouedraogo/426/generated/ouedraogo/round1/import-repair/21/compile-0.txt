@@ -1,0 +1,18 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java:49: error: cannot find symbol
+        @Override public NumFactory getNumFactory() { return null; } // not needed for the tested paths
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java:102: error: cannot find symbol
+        @Override public CostModel getCostModel() { return costModel; }
+                         ^
+  symbol:   class CostModel
+  location: class SimpleTrade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java:20: error: SimpleNum is not abstract and does not override abstract method max(Num) in Num
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java:156: error: reference to Position is ambiguous
+        new Position(null, new ZeroCostModel(), new ZeroCostModel());
+        ^
+  both constructor Position(TradeType,CostModel,CostModel) in Position and constructor Position(Trade,CostModel,CostModel) in Position match
+4 errors

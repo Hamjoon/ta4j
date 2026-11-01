@@ -1,0 +1,18 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:56: error: cannot find symbol
+        @Override public NumFactory getNumFactory() {
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:42: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:124: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements org.ta4j.core.num.NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:468: error: incompatible types: double cannot be converted to Num
+                    prevZero.getValue(i).doubleValue());
+                                                    ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+4 errors

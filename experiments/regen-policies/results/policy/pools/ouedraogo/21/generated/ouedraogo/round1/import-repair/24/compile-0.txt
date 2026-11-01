@@ -1,0 +1,34 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:180: error: zero() has private access in Position
+        Assert.assertEquals(p.getPositionCost(), p.zero());
+                                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:181: error: zero() has private access in Position
+        Assert.assertEquals(p.getPositionCost(5), p.zero());
+                                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:214: error: SimpleNum is not abstract and does not override abstract method getNumFactory() in Num
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:229: error: getNumFactory() in SimpleNum cannot implement getNumFactory() in Num
+        public SimpleNumFactory getNumFactory() {
+                                ^
+  return type SimpleNumFactory is not compatible with NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:228: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:428: error: StubBarSeries is not abstract and does not override abstract method barBuilder() in BarSeries
+    private static class StubBarSeries implements BarSeries {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:442: error: barBuilder() in StubBarSeries cannot implement barBuilder() in BarSeries
+        @Override public BarSeries barBuilder() { throw new UnsupportedOperationException(); }
+                                   ^
+  return type BarSeries is not compatible with BaseBarConvertibleBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:436: error: numFactory() in StubBarSeries cannot implement numFactory() in BarSeries
+        public SimpleNumFactory numFactory() {
+                                ^
+  return type SimpleNumFactory is not compatible with NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:435: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java:442: error: method does not override or implement a method from a supertype
+        @Override public BarSeries barBuilder() { throw new UnsupportedOperationException(); }
+        ^
+10 errors

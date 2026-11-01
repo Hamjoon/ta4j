@@ -1,0 +1,40 @@
+{
+  "index": 258,
+  "sha": "96a017088c71b486e434ece41dfeeef8df4dfee0",
+  "parent": "cd73dc2f7549dc43a2c868a3401c3f2cd9fabc98",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java": [
+      34,
+      54,
+      60,
+      73
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      152,
+      153
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java": [
+      34,
+      55,
+      61,
+      79,
+      88,
+      89,
+      90,
+      162,
+      170,
+      178
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      138,
+      139,
+      140,
+      141,
+      2079,
+      2095
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java\nindex 73dfc14e1..3f882205b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottLogicProfile.java\n@@ -34 +34,2 @@ public enum ElliottLogicProfile {\n-    ORTHODOX_CLASSICAL(\"orthodox-classical\", \"Classical Elliott constraints\", 2, 1, 1, PatternSet.all(), false, 0.70),\n+    ORTHODOX_CLASSICAL(\"orthodox-classical\", \"Classical Elliott constraints\", 2, 1, 1, PatternSet.all(), false, 0.70,\n+            25, 0, 0.74),\n@@ -40 +41 @@ public enum ElliottLogicProfile {\n-            0.78),\n+            0.78, 25, 0, 0.72),\n@@ -48 +49 @@ public enum ElliottLogicProfile {\n-            0.82),\n+            0.82, 35, 0, 0.70),\n@@ -54 +55 @@ public enum ElliottLogicProfile {\n-            PatternSet.all(), true, 0.64),\n+            PatternSet.all(), true, 0.64, 35, 0, 0.68),\n@@ -60 +61,2 @@ public enum ElliottLogicProfile {\n-    ANCHOR_FIRST_HYBRID(\"h4-anchor-first-hybrid\", \"Anchor-first hybrid profile\", 5, 2, 2, PatternSet.all(), true, 0.58);\n+    ANCHOR_FIRST_HYBRID(\"h4-anchor-first-hybrid\", \"Anchor-first hybrid profile\", 5, 2, 2, PatternSet.all(), true,\n+            0.58, 40, 0, 0.66);\n@@ -69,0 +72,3 @@ public enum ElliottLogicProfile {\n+    private final int maxScenarios;\n+    private final int scenarioSwingWindow;\n+    private final double acceptanceThreshold;\n@@ -73 +78,2 @@ public enum ElliottLogicProfile {\n-            final double baseConfidenceWeight) {\n+            final double baseConfidenceWeight, final int maxScenarios, final int scenarioSwingWindow,\n+            final double acceptanceThreshold) {\n@@ -81,0 +88,3 @@ public enum ElliottLogicProfile {\n+        this.maxScenarios = maxScenarios;\n+        this.scenarioSwingWindow = scenarioSwingWindow;\n+        this.acceptanceThreshold = acceptanceThreshold;\n@@ -146,0 +156,24 @@ public enum ElliottLogicProfile {\n+\n+    /**\n+     * @return default maximum number of ranked scenarios retained by the runner\n+     * @since 0.22.4\n+     */\n+    public int maxScenarios() {\n+        return maxScenarios;\n+    }\n+\n+    /**\n+     * @return default swing window forwarded to scenario generation\n+     * @since 0.22.4\n+     */\n+    public int scenarioSwingWindow() {\n+        return scenarioSwingWindow;\n+    }\n+\n+    /**\n+     * @return default anchored-fit acceptance threshold for macro profile studies\n+     * @since 0.22.4\n+     */\n+    public double acceptanceThreshold() {\n+        return acceptanceThreshold;\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 0774a467d..b4a9d2b1a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -137,0 +138,4 @@ public final class ElliottWaveAnalysisRunner {\n+        this.maxScenarios = builder.maxScenariosExplicit ? builder.maxScenarios\n+                : logicProfile == null ? builder.maxScenarios : logicProfile.maxScenarios();\n+        this.scenarioSwingWindow = builder.scenarioSwingWindowExplicit ? builder.scenarioSwingWindow\n+                : logicProfile == null ? builder.scenarioSwingWindow : logicProfile.scenarioSwingWindow();\n@@ -152,2 +155,0 @@ public final class ElliottWaveAnalysisRunner {\n-        this.maxScenarios = builder.maxScenarios;\n-        this.scenarioSwingWindow = builder.scenarioSwingWindow;\n@@ -1875,0 +1878,2 @@ public final class ElliottWaveAnalysisRunner {\n+        private boolean maxScenariosExplicit;\n+        private boolean scenarioSwingWindowExplicit;\n@@ -2074,0 +2079 @@ public final class ElliottWaveAnalysisRunner {\n+            this.maxScenariosExplicit = true;\n@@ -2089,0 +2095 @@ public final class ElliottWaveAnalysisRunner {\n+            this.scenarioSwingWindowExplicit = true;"
+}

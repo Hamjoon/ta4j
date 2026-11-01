@@ -1,0 +1,21 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:21: error: cannot find symbol
+import org.ta4j.core.indicators.helpers.CachedIndicator;
+                                       ^
+  symbol:   class CachedIndicator
+  location: package org.ta4j.core.indicators.helpers
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:22: error: cannot find symbol
+import org.ta4j.core.indicators.helpers.AbstractEMAIndicator;
+                                       ^
+  symbol:   class AbstractEMAIndicator
+  location: package org.ta4j.core.indicators.helpers
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:84: error: cannot find symbol
+                DecimalNum.ZERO); // volume = 0 (not used for TR)
+                          ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:179: error: cannot find symbol
+        Num sum = DecimalNum.ZERO;
+                            ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+4 errors

@@ -1,0 +1,33 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:146: error: cannot find symbol
+        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class IndexStrategy
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol
+        @Override public Rule getExitRule()  { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class IndexStrategy
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:98: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries
+    private static class SimpleBarSeries implements BarSeries {
+                   ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:125: error: DummyBar is not abstract and does not override abstract method addPrice(Num) in Bar
+        private static class DummyBar implements Bar {
+                       ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:210: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:211: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:258: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(4), pos.getEntry().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:259: error: reference to assertEquals is ambiguous
+        assertEquals(Integer.valueOf(5), pos.getExit().getIndex());
+        ^
+  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match
+8 errors

@@ -1,0 +1,112 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:111: error: cannot find symbol
+    private static class SimpleBarSeries implements BarSeries {
+                                                    ^
+  symbol:   class BarSeries
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:122: error: cannot find symbol
+        @Override public NumFactory numFactory() { return numFactory; }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:123: error: cannot find symbol
+        @Override public BaseBarConvertibleBuilder barBuilder() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BaseBarConvertibleBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:125: error: cannot find symbol
+        @Override public Bar getBar(int i) { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:127: error: cannot find symbol
+        @Override public List<Bar> getBarData() { return Collections.emptyList(); }
+                              ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:133: error: cannot find symbol
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:136: error: cannot find symbol
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BarSeries
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:54: error: cannot find symbol
+        @Override public NumFactory getNumFactory() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class NumFactory
+  location: class SimpleNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:176: error: cannot find symbol
+        public void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount) {
+                                                                    ^
+  symbol:   class BarSeries
+  location: class RecordingTradeExecutionModel
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:122: error: method does not override or implement a method from a supertype
+        @Override public NumFactory numFactory() { return numFactory; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:123: error: method does not override or implement a method from a supertype
+        @Override public BaseBarConvertibleBuilder barBuilder() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:124: error: method does not override or implement a method from a supertype
+        @Override public String getName() { return "simple-series"; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:125: error: method does not override or implement a method from a supertype
+        @Override public Bar getBar(int i) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:126: error: method does not override or implement a method from a supertype
+        @Override public int getBarCount() { return bars.size(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:127: error: method does not override or implement a method from a supertype
+        @Override public List<Bar> getBarData() { return Collections.emptyList(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:128: error: method does not override or implement a method from a supertype
+        @Override public int getBeginIndex() { return bars.isEmpty() ? 0 : 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:129: error: method does not override or implement a method from a supertype
+        @Override public int getEndIndex() { return bars.isEmpty() ? -1 : bars.size() - 1; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:130: error: method does not override or implement a method from a supertype
+        @Override public int getMaximumBarCount() { return bars.size(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:131: error: method does not override or implement a method from a supertype
+        @Override public void setMaximumBarCount(int maximumBarCount) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:132: error: method does not override or implement a method from a supertype
+        @Override public int getRemovedBarsCount() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:133: error: method does not override or implement a method from a supertype
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:134: error: method does not override or implement a method from a supertype
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:135: error: method does not override or implement a method from a supertype
+        @Override public void addPrice(Num price) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:136: error: method does not override or implement a method from a supertype
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:207: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        BarSeriesManager manager = new BarSeriesManager(series3);
+                                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:222: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        BarSeriesManager manager = new BarSeriesManager(series3, tx, hold);
+                                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:231: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        BarSeriesManager manager = new BarSeriesManager(series3,
+                                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:265: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        BarSeriesManager manager = new BarSeriesManager(series5,
+                                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:295: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        BarSeriesManager manager = new BarSeriesManager(series5,
+                                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:318: error: incompatible types: SimpleBarSeries cannot be converted to BarSeries
+        BarSeriesManager manager = new BarSeriesManager(series3,
+                                                        ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+30 errors

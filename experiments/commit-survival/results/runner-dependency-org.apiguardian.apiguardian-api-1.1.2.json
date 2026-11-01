@@ -1,0 +1,43 @@
+{
+  "coordinate": "org.apiguardian:apiguardian-api:1.1.2",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.apiguardian:apiguardian-api:1.1.2",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 1,
+      "timeout": false,
+      "seconds": 31.497,
+      "log": "results/runner-dependency-org.apiguardian.apiguardian-api-1.1.2-1.txt",
+      "coordinate": "org.apiguardian:apiguardian-api:1.1.2",
+      "expected_sha256": "b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38",
+      "rejected_sha256": null,
+      "downloaded_sha256": null
+    },
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.apiguardian:apiguardian-api:1.1.2",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 6.48,
+      "log": "results/runner-dependency-org.apiguardian.apiguardian-api-1.1.2-2.txt",
+      "coordinate": "org.apiguardian:apiguardian-api:1.1.2",
+      "expected_sha256": "b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38",
+      "rejected_sha256": null,
+      "downloaded_sha256": "b509448ac506d607319f182537f0b35d71007582ec741832a1f111e5b5b70b38"
+    }
+  ]
+}

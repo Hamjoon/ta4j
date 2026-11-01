@@ -1,0 +1,5 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:68: error: incompatible types: invalid constructor reference
+        @Override public java.util.function.Function<Number, Num> function() { return SimpleNum::new; }
+                                                                                      ^
+    incompatible types: Number cannot be converted to double
+1 error

@@ -1,0 +1,25 @@
+{
+    "group": "isNew",
+    "cases": [
+        {
+            "input": [],
+            "expected": "true",
+            "description": "A newly created Position has both entry and exit trades as null, therefore isNew() should return true."
+        },
+        {
+            "input": [],
+            "expected": "false",
+            "description": "A Position with a non‑null entry trade (created via operate(...) or reflection) but a null exit trade is not new; isNew() must return false."
+        },
+        {
+            "input": [],
+            "expected": "false",
+            "description": "A Position with a null entry trade but a non‑null exit trade (simulated by setting exit via reflection) is not new; isNew() must return false."
+        },
+        {
+            "input": [],
+            "expected": "false",
+            "description": "A Position where both entry and exit trades are non‑null (e.g., after opening and then closing a trade) is not new; isNew() must return false."
+        }
+    ]
+}

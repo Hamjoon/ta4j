@@ -1,0 +1,212 @@
+###Test START##
+```java
+package org.ta4j.core.indicators;
+
+import static org.junit.Assert.*;
+import static org.ta4j.core.num.NaN.NaN;
+
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.indicators.averages.MMAIndicator;
+import org.ta4j.core.indicators.helpers.TRIndicator;
+import org.ta4j.core.num.Num;
+
+/**
+ * Comprehensive unit tests for {@link ATRIndicator}.
+ *
+ * <p>The tests cover:
+ * <ul>
+ *   <li>Construction via both public constructors</li>
+ *   <li>Behaviour of {@code getValue(int)}</li>
+ *   <li>Unstable‑bars calculation</li>
+ *   <li>Accessors {@code getTRIndicator()}, {@code getBarCount()}, {@code toString()}</li>
+ *   <li>Null‑argument validation</li>
+ * </ul>
+ *
+ * <p>Only public APIs that appear in the supplied source code or in the
+ * dependency signatures are used.  No mocking or subclassing of library
+ * abstract classes or interfaces is performed – a real {@link BarSeries}
+ * implementation from the library (created via {@link BaseBarSeriesBuilder})
+ * is used.
+ */
+public class ATRIndicatorTest {
+
+    /** A small series (6 bars) used for all tests. */
+    private BarSeries series;
+
+    /** The ATR indicator under test (3‑period). */
+    private ATRIndicator atr;
+
+    /** The underlying TR indicator (used for expected calculations). */
+    private TRIndicator tr;
+
+    /** Number factory shortcut. */
+    private NumFactory numFactory;
+
+    @Before
+    public void setUp() {
+        // Build a concrete BarSeries (BaseBarSeries) using the public builder.
+        series = new BaseBarSeriesBuilder()
+                .withName("ATR‑Test‑Series")
+                .build();
+
+        // Helper to create Num instances.
+        numFactory = series.numFactory();
+
+        // Add six deterministic bars.
+        //  (high, low, close) values are chosen to make the true range easy to verify.
+        addBar(10, 5, 7);   // index 0
+        addBar(12, 6, 11);  // index 1
+        addBar(11, 4, 9);   // index 2
+        addBar(13, 7, 12);  // index 3
+        addBar(14, 8, 13);  // index 4
+        addBar(15, 9, 14);  // index 5
+
+        // Create ATR with a 3‑period window.
+        atr = new ATRIndicator(series, 3);
+        tr = atr.getTRIndicator(); // same series, fresh TR instance
+    }
+
+    /** Helper that adds a bar with the given high, low and close values. */
+    private void addBar(double high, double low, double close) {
+        Num highNum = numFactory.numOf(high);
+        Num lowNum = numFactory.numOf(low);
+        Num closeNum = numFactory.numOf(close);
+        Num openNum = closeNum;               // open does not affect TR
+        Num volumeNum = numFactory.numOf(0);  // volume is irrelevant for TR
+
+        series.addBar(series.barBuilder()
+                .openPrice(openNum)
+                .highPrice(highNum)
+                .lowPrice(lowNum)
+                .closePrice(closeNum)
+                .volume(volumeNum)
+                .build());
+    }
+
+    /** --------------------------------------------------------------------- *
+     *  Constructor validation tests
+     *  --------------------------------------------------------------------- */
+
+    @Test(expected = NullPointerException.class)
+    public void constructor_nullTRIndicator_throwsNPE() {
+        new ATRIndicator((TRIndicator) null, 5);
+    }
+
+    @Test
+    public void constructor_usingSeries_delegatesToTRIndicator() {
+        ATRIndicator atrFromSeries = new ATRIndicator(series, 4);
+        assertNotNull(atrFromSeries);
+        // The internal TR indicator should have the same series as the one supplied.
+        assertEquals(series, atrFromSeries.getTRIndicator().getBarSeries());
+    }
+
+    /** --------------------------------------------------------------------- *
+     *  Accessor tests
+     *  --------------------------------------------------------------------- */
+
+    @Test
+    public void getBarCount_returnsConfiguredValue() {
+        assertEquals(3, atr.getBarCount());
+    }
+
+    @Test
+    public void getTRIndicator_returnsNewInstanceWithSameSeries() {
+        TRIndicator tr1 = atr.getTRIndicator();
+        TRIndicator tr2 = atr.getTRIndicator();
+
+        // Different instances
+        assertNotSame(tr1, tr2);
+        // Same underlying series
+        assertEquals(series, tr1.getBarSeries());
+        assertEquals(series, tr2.getBarSeries());
+    }
+
+    @Test
+    public void getCountOfUnstableBars_isSumOfTRUnstableAndBarCount() {
+        int expected = tr.getCountOfUnstableBars() + 3; // barCount = 3
+        assertEquals(expected, atr.getCountOfUnstableBars());
+    }
+
+    @Test
+    public void toString_containsClassNameAndBarCount() {
+        String s = atr.toString();
+        assertTrue(s.contains("ATRIndicator"));
+        assertTrue(s.contains("barCount: 3"));
+    }
+
+    /** --------------------------------------------------------------------- *
+     *  getValue() tests
+     *  --------------------------------------------------------------------- */
+
+    @Test
+    public void getValue_beforeStablePeriod_returnsNaN() {
+        int unstable = atr.getCountOfUnstableBars();
+        for (int i = 0; i < unstable; i++) {
+            Num v = atr.getValue(i);
+            assertTrue("Index " + i + " should be NaN", v.isNaN());
+            // also verify that the static NaN constant behaves the same
+            assertTrue(NaN.isNaN());
+        }
+    }
+
+    @Test
+    public void getValue_afterUnstablePeriod_matchesMMAIndicator() {
+        // Expected values are produced by an independent MMAIndicator instance.
+        MMAIndicator expectedMMA = new MMAIndicator(tr, 3);
+
+        int start = atr.getCountOfUnstableBars(); // first stable index
+        for (int i = start; i < series.getBarCount(); i++) {
+            Num expected = expectedMMA.getValue(i);
+            Num actual = atr.getValue(i);
+            assertEquals("ATR value at index " + i + " differs from expected MMA value",
+                    expected, actual);
+        }
+    }
+
+    /** --------------------------------------------------------------------- *
+     *  Edge case: single‑bar series
+     *  --------------------------------------------------------------------- */
+
+    @Test
+    public void singleBarSeries_returnsNaN_forAllIndexes() {
+        BarSeries singleBarSeries = new BaseBarSeriesBuilder()
+                .withName("single")
+                .build();
+
+        // one bar (values arbitrary)
+        Num open = numFactory.numOf(1);
+        Num high = numFactory.numOf(2);
+        Num low = numFactory.numOf(0.5);
+        Num close = numFactory.numOf(1.5);
+        Num volume = numFactory.numOf(0);
+        singleBarSeries.addBar(singleBarSeries.barBuilder()
+                .openPrice(open)
+                .highPrice(high)
+                .lowPrice(low)
+                .closePrice(close)
+                .volume(volume)
+                .build());
+
+        ATRIndicator singleAtr = new ATRIndicator(singleBarSeries, 2);
+        // With only one bar, any index is unstable → NaN
+        for (int i = 0; i < singleBarSeries.getBarCount(); i++) {
+            assertTrue(singleAtr.getValue(i).isNaN());
+        }
+    }
+
+    /** --------------------------------------------------------------------- *
+     *  Helper to compare Num values (uses Num.equals which is value‑based)
+     *  --------------------------------------------------------------------- */
+    private void assertEquals(Num expected, Num actual) {
+        // Num implements value‑based equals; we delegate to JUnit's assertEquals
+        assertTrue("expected " + expected + " but got " + actual,
+                expected.equals(actual));
+    }
+}
+```
+###Test END##

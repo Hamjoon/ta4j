@@ -1,0 +1,81 @@
+{
+  "index": 231,
+  "sha": "96067e757851ca7884da72e3dae6c2037d3359ff",
+  "parent": "9e7c147f70a25841c412ee865d8e5870169b2a9c",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      465,
+      489
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      67,
+      68
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      466,
+      490,
+      534,
+      535,
+      538,
+      539,
+      541,
+      542,
+      543,
+      544,
+      545,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      554,
+      555,
+      557,
+      558,
+      560,
+      563,
+      564,
+      565,
+      568,
+      569,
+      570,
+      574,
+      575,
+      576
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      77,
+      78,
+      80,
+      81,
+      98,
+      99,
+      101,
+      102,
+      104,
+      105,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      115,
+      116,
+      118
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex b158c16c3..1187c050e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -44,0 +45 @@ public final class ElliottScenarioGenerator {\n+    private static final int MAX_DECOMPOSITION_PIVOTS = 16;\n@@ -465 +466 @@ public final class ElliottScenarioGenerator {\n-        final List<SwingPivotPoint> pivots = extractPivots(swings);\n+        final List<SwingPivotPoint> pivots = limitPivotsForDecomposition(extractPivots(swings));\n@@ -489 +490 @@ public final class ElliottScenarioGenerator {\n-        final List<SwingPivotPoint> pivots = extractPivots(swings);\n+        final List<SwingPivotPoint> pivots = limitPivotsForDecomposition(extractPivots(swings));\n@@ -531,0 +533,46 @@ public final class ElliottScenarioGenerator {\n+    private List<SwingPivotPoint> limitPivotsForDecomposition(final List<SwingPivotPoint> pivots) {\n+        if (pivots.size() <= MAX_DECOMPOSITION_PIVOTS) {\n+            return pivots;\n+        }\n+\n+        final List<SwingPivotPoint> limited = new ArrayList<>(MAX_DECOMPOSITION_PIVOTS);\n+        limited.add(pivots.getFirst());\n+\n+        final int internalTarget = MAX_DECOMPOSITION_PIVOTS - 2;\n+        final int internalSourceCount = pivots.size() - 2;\n+        final boolean[] selected = new boolean[pivots.size()];\n+        selected[0] = true;\n+        selected[pivots.size() - 1] = true;\n+\n+        for (int slot = 0; slot < internalTarget; slot++) {\n+            final double fraction = (slot + 1.0) / (internalTarget + 1.0);\n+            int sourceIndex = 1 + (int) Math.round(fraction * (internalSourceCount - 1));\n+            sourceIndex = Math.max(1, Math.min(pivots.size() - 2, sourceIndex));\n+            while (selected[sourceIndex] && sourceIndex < pivots.size() - 2) {\n+                sourceIndex++;\n+            }\n+            while (selected[sourceIndex] && sourceIndex > 1) {\n+                sourceIndex--;\n+            }\n+            if (selected[sourceIndex]) {\n+                continue;\n+            }\n+            selected[sourceIndex] = true;\n+        }\n+\n+        for (int index = 1; index < pivots.size() - 1 && limited.size() < MAX_DECOMPOSITION_PIVOTS - 1; index++) {\n+            if (selected[index]) {\n+                limited.add(pivots.get(index));\n+            }\n+        }\n+        for (int index = 1; index < pivots.size() - 1 && limited.size() < MAX_DECOMPOSITION_PIVOTS - 1; index++) {\n+            if (!selected[index]) {\n+                limited.add(pivots.get(index));\n+            }\n+        }\n+\n+        limited.sort(java.util.Comparator.comparingInt(SwingPivotPoint::index));\n+        limited.add(pivots.getLast());\n+        return List.copyOf(limited);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\nindex da71eeb61..0d2adacee 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n@@ -67,2 +67,15 @@ final class SwingDetectorSupport {\n-        final List<SwingPivot> normalized = new ArrayList<>(sorted.size());\n-        for (final SwingPivot pivot : sorted) {\n+        final List<SwingPivot> byIndex = new ArrayList<>(sorted.size());\n+        int position = 0;\n+        while (position < sorted.size()) {\n+            final int currentIndex = sorted.get(position).index();\n+            SwingPivot resolved = sorted.get(position);\n+            position++;\n+            while (position < sorted.size() && sorted.get(position).index() == currentIndex) {\n+                resolved = chooseSharedIndexPivot(byIndex, resolved, sorted.get(position));\n+                position++;\n+            }\n+            byIndex.add(resolved);\n+        }\n+\n+        final List<SwingPivot> normalized = new ArrayList<>(byIndex.size());\n+        for (final SwingPivot pivot : byIndex) {\n@@ -82,0 +96,25 @@ final class SwingDetectorSupport {\n+    private static SwingPivot chooseSharedIndexPivot(final List<SwingPivot> normalized, final SwingPivot existing,\n+            final SwingPivot candidate) {\n+        if (existing == null) {\n+            return candidate;\n+        }\n+        if (candidate == null) {\n+            return existing;\n+        }\n+        if (existing.type() == candidate.type()) {\n+            return chooseMoreExtreme(existing, candidate);\n+        }\n+        if (normalized.size() >= 2) {\n+            final Num anchor = normalized.get(normalized.size() - 2).price();\n+            if (!Num.isNaNOrNull(anchor)) {\n+                final Num existingDistance = existing.price().minus(anchor).abs();\n+                final Num candidateDistance = candidate.price().minus(anchor).abs();\n+                return candidateDistance.isGreaterThan(existingDistance) ? candidate : existing;\n+            }\n+        }\n+        if (existing.type() == SwingPivotType.HIGH || candidate.type() == SwingPivotType.LOW) {\n+            return existing.price().isGreaterThan(candidate.price()) ? existing : candidate;\n+        }\n+        return existing.price().isLessThan(candidate.price()) ? existing : candidate;\n+    }\n+"
+}

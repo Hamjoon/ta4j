@@ -1,0 +1,5 @@
+{
+  "api document of class org.ta4j.core.analysis.CashFlow": "\n * Allows to follow the money cash flow involved by a list of positions over a\n * bar series.\n ",
+  "return type": "org.ta4j.core.num.Num",
+  "dependent classes": "class `org.ta4j.core.analysis.CashFlow`:\n\tdependent fields:\n\t\torg.ta4j.core.BarSeries org.ta4j.core.analysis.CashFlow.barSeries;\n\trelated functions:\n\t\tmethod `public BarSeries getBarSeries()` returns `org.ta4j.core.BarSeries`, related with `org.ta4j.core.analysis.CashFlow.numOf(Number)`;\nclass `org.ta4j.core.analysis.Returns`:\n\trelated functions:\n\t\tmethod `public Num numOf(Number)` returns `org.ta4j.core.num.Num`, related with `org.ta4j.core.analysis.CashFlow.numOf(Number)`;\nclass `org.ta4j.core.BarSeries`:\n\trelated functions:\n\t\tmethod ` void addBar(ZonedDateTime, Number, Number, Number, Number, Number)` returns `void`, related with `org.ta4j.core.analysis.CashFlow.numOf(Number)`;"
+}

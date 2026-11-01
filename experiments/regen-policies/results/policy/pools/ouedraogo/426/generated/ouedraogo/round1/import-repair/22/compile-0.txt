@@ -1,0 +1,69 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:29: error: cannot find symbol
+    private CostModel zeroCostModel;
+            ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:185: error: cannot find symbol
+        assertEquals(TradeType.BUY, t.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:198: error: cannot find symbol
+        assertEquals(TradeType.SELL, exit.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:232: error: cannot find symbol
+        CostModel other = new FixedTransactionCostModel(DecimalNum.valueOf(1));
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:232: error: cannot find symbol
+        CostModel other = new FixedTransactionCostModel(DecimalNum.valueOf(1));
+                              ^
+  symbol:   class FixedTransactionCostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:240: error: cannot find symbol
+        Position p = new Position(TradeType.SELL); // expects first trade = SELL
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:430: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(100));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:431: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(115));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:442: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(150));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:443: error: incompatible types: DecimalNum cannot be converted to Bar
+        series.addBar(DecimalNum.valueOf(180));
+                                        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:445: error: cannot find symbol
+        Trade entry = Trade.buyAt(0, NaN, DecimalNum.valueOf(1), zeroCostModel);
+                                     ^
+  symbol:   variable NaN
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:516: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:521: error: cannot find symbol
+        Position p = new Position(TradeType.SELL);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:522: error: cannot find symbol
+        assertEquals(TradeType.SELL, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/GToT/PositionTest.java:549: error: cannot find symbol
+        new Position((TradeType) null); // constructor forwards to validateStartingPosition
+                      ^
+  symbol:   class TradeType
+  location: class PositionTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+15 errors

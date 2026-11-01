@@ -1,0 +1,62 @@
+[
+  {
+    "group": "CashFlow#getUnstableBars",
+    "cases": [
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Verify that getUnstableBars() always returns 0 for a freshly instantiated CashFlow implementation. Since the method contains no conditional logic, the only expected behavior is to return the constant value 0."
+      },
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Call getUnstableBars() multiple times on the same CashFlow instance to ensure the method is idempotent and consistently returns 0 regardless of any prior interactions with the object."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow#getUnstableBars - multiple instances",
+    "cases": [
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Create two independent CashFlow objects and verify each returns 0, confirming that the method does not rely on any shared mutable state."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow#getUnstableBars - after other method calls",
+    "cases": [
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Invoke getValue(index) on a valid index before calling getUnstableBars() to ensure prior instance method calls do not affect the returned constant."
+      },
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Call the static addCost(rawPrice, holdingCost, true) utility method with arbitrary arguments before calling getUnstableBars() to confirm static helpers have no side\u2011effects on the instance."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow#getUnstableBars - concurrency",
+    "cases": [
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Execute getUnstableBars() simultaneously from multiple threads on the same CashFlow instance and verify each thread receives 0, demonstrating thread\u2011safety of the method."
+      }
+    ]
+  },
+  {
+    "group": "CashFlow#getUnstableBars - after exception scenario",
+    "cases": [
+      {
+        "input": [],
+        "expected": "0",
+        "description": "Attempt to call getValue() with an out\u2011of\u2011range index, catch the resulting exception, then call getUnstableBars() and verify it still returns 0, showing the method is unaffected by prior failures."
+      }
+    ]
+  }
+]

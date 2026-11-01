@@ -1,0 +1,141 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:17: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:20: error: package org.ta4j.core.cost does not exist
+import org.ta4j.core.cost.ZeroCostModel;
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:45: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BaseBarSeries series = new BaseBarSeries("test-series");
+                               ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:48: error: constructor BaseBar in class BaseBar cannot be applied to given types;
+            series.addBar(new BaseBar(
+                          ^
+  required: Duration,ZonedDateTime,Num,Num,Num,Num,Num,Num,long
+  found:    ZonedDateTime,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum,DecimalNum
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:71: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade entry = new Trade(series, 0, DecimalNum.valueOf(10), DecimalNum.valueOf(1),
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:73: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade exit = new Trade(series, 2, DecimalNum.valueOf(12), DecimalNum.valueOf(1),
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:108: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade entry = new Trade(series, 0, DecimalNum.valueOf(10), DecimalNum.valueOf(1),
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:110: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade exit = new Trade(series, 2, DecimalNum.valueOf(8), DecimalNum.valueOf(1),
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:163: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade entry = new Trade(series, 0, DecimalNum.valueOf(10), DecimalNum.valueOf(1),
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:165: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade exit = new Trade(series, 2, DecimalNum.valueOf(12), DecimalNum.valueOf(1),
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:173: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade openEntry = new Trade(series, 1, DecimalNum.valueOf(11), DecimalNum.valueOf(1),
+                          ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:204: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade e1 = new Trade(series, 0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), TradeType.BUY);
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:205: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade x1 = new Trade(series, 2, DecimalNum.valueOf(12), DecimalNum.valueOf(1), TradeType.SELL);
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:209: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade e2 = new Trade(series, 3, DecimalNum.valueOf(13), DecimalNum.valueOf(1), TradeType.SELL);
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:210: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade x2 = new Trade(series, 5, DecimalNum.valueOf(15), DecimalNum.valueOf(1), TradeType.BUY);
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:214: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade e3 = new Trade(series, 6, DecimalNum.valueOf(16), DecimalNum.valueOf(1), TradeType.BUY);
+                   ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:269: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade entry = new Trade(series, 0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), TradeType.BUY);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:270: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade exit = new Trade(series, 1, DecimalNum.valueOf(11), DecimalNum.valueOf(1), TradeType.SELL);
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:290: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade entry = new Trade(series, 0, DecimalNum.valueOf(10), DecimalNum.valueOf(1), TradeType.BUY);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:307: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade entry = new Trade(series, 2, DecimalNum.valueOf(7), DecimalNum.valueOf(1), TradeType.BUY);
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/CashFlow/FSL/CashFlowTest.java:308: error: no suitable constructor found for Trade(BaseBarSeries,int,DecimalNum,DecimalNum,TradeType)
+        Trade exit = new Trade(series, 4, DecimalNum.valueOf(9), DecimalNum.valueOf(1), TradeType.SELL);
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num,CostModel) is not applicable
+      (argument mismatch; BaseBarSeries cannot be converted to int)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+21 errors

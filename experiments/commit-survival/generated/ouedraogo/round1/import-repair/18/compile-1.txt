@@ -1,0 +1,41 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:408: error: cannot find symbol
+        Rule rule = fast.crossedOver(slow);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:416: error: cannot find symbol
+        Rule rule = close.crossedOver(12);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:425: error: cannot find symbol
+        Rule rule = fast.crossedUnder(slow);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:434: error: cannot find symbol
+        Rule rule = close.crossedUnder(12);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:445: error: cannot find symbol
+        Rule rule = close.isGreaterThan(volume);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:454: error: cannot find symbol
+        Rule rule = close.isGreaterThan(12);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:463: error: cannot find symbol
+        Rule rule = close.isLessThan(volume);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/ToT/NumericIndicatorTest.java:472: error: cannot find symbol
+        Rule rule = close.isLessThan(12);
+        ^
+  symbol:   class Rule
+  location: class NumericIndicatorTest
+8 errors

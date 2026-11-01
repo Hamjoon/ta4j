@@ -1,0 +1,140 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:22: error: cannot find symbol
+    private static class DummyBarSeries implements BarSeries {
+                                                   ^
+  symbol:   class BarSeries
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:30: error: cannot find symbol
+        public NumFactory numFactory() {
+               ^
+  symbol:   class NumFactory
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:36: error: cannot find symbol
+        public BaseBarConvertibleBuilder barBuilder() {
+               ^
+  symbol:   class BaseBarConvertibleBuilder
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:46: error: cannot find symbol
+        public Bar getBar(int i) {
+               ^
+  symbol:   class Bar
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:56: error: cannot find symbol
+        public java.util.List<Bar> getBarData() {
+                              ^
+  symbol:   class Bar
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:86: error: cannot find symbol
+        public void addBar(Bar bar) {
+                           ^
+  symbol:   class Bar
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:91: error: cannot find symbol
+        public void addBar(Bar bar, boolean replace) {
+                           ^
+  symbol:   class Bar
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:101: error: cannot find symbol
+        public void addTrade(Num tradeVolume, Num tradePrice) {
+                             ^
+  symbol:   class Num
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:101: error: cannot find symbol
+        public void addTrade(Num tradeVolume, Num tradePrice) {
+                                              ^
+  symbol:   class Num
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:106: error: cannot find symbol
+        public void addPrice(Num price) {
+                             ^
+  symbol:   class Num
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:116: error: cannot find symbol
+        public BarSeries getSubSeries(int startIndex, int endIndex) {
+               ^
+  symbol:   class BarSeries
+  location: class DummyBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:29: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:35: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:40: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:45: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:50: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:55: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:60: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:65: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:70: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:75: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:80: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:85: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:90: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:95: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:100: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:105: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:110: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:115: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:127: error: cannot find symbol
+        BarSeries series = new DummyBarSeries(10);
+        ^
+  symbol:   class BarSeries
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:158: error: cannot find symbol
+        BarSeries series = new DummyBarSeries(5);
+        ^
+  symbol:   class BarSeries
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:159: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:159: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:188: error: cannot find symbol
+        BarSeries series = new DummyBarSeries(2);
+        ^
+  symbol:   class BarSeries
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/ATRIndicator/FSL/ATRIndicatorTest.java:211: error: cannot find symbol
+        BarSeries series = new DummyBarSeries(1);
+        ^
+  symbol:   class BarSeries
+  location: class ATRIndicatorTest
+35 errors

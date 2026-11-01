@@ -1,0 +1,19 @@
+{
+  "index": 150,
+  "sha": "40ec357b49c51f9989512ebe2956eb2b20a9a017",
+  "parent": "d6ded9953c64aa72c8edc7ebb680e56626e9a4c9",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/analysis/CashFlow.java": [
+      148,
+      150
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/analysis/CashFlow.java": [
+      149,
+      150,
+      151
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java b/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java\nindex 1a5af1cf0..27c29a26e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/analysis/CashFlow.java\n@@ -148 +147,0 @@ public class CashFlow implements Indicator<Num> {\n-            var nPeriods = endIndex - entryIndex;\n@@ -150 +149,3 @@ public class CashFlow implements Indicator<Num> {\n-            var avgCost = holdingCost.dividedBy(numFactory.numOf(nPeriods));\n+            var nPeriods = endIndex - entryIndex;\n+            var effectivePeriods = Math.max(1, nPeriods);\n+            var avgCost = holdingCost.dividedBy(numFactory.numOf(effectivePeriods));"
+}

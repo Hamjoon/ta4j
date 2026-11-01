@@ -1,0 +1,7 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:45: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/CoT/NumericIndicatorTest.java:109: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements org.ta4j.core.num.NumFactory {
+                         ^
+2 errors

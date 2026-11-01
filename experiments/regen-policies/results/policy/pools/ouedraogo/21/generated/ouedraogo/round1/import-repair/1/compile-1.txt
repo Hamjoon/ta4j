@@ -1,0 +1,13 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:72: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/ATRIndicator/FSL/ATRIndicatorTest.java:176: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries singleBarSeries = new BaseBarSeries("single");
+                                    ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+2 errors

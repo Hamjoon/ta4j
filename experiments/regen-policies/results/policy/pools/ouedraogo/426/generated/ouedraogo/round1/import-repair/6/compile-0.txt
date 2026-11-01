@@ -1,0 +1,58 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:21: error: cannot find symbol
+import org.ta4j.core.num.PrecisionNum;
+                        ^
+  symbol:   class PrecisionNum
+  location: package org.ta4j.core.num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:22: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:55: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:60: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:41: error: AlwaysOperateStrategy is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+    private static class AlwaysOperateStrategy implements Strategy {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:147: error: cannot find symbol
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(1)));
+                                         ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:148: error: cannot find symbol
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(2)));
+                                         ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:149: error: cannot find symbol
+        series.addBar(series.barBuilder().newBar(DecimalNum.valueOf(3)));
+                                         ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:165: error: DEFAULT_TRADING_RECORD_FACTORY has private access in BarSeriesManager
+                BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:171: error: DEFAULT_TRADING_RECORD_FACTORY has private access in BarSeriesManager
+                BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:177: error: DEFAULT_TRADING_RECORD_FACTORY has private access in BarSeriesManager
+                null, BarSeriesManager.DEFAULT_TRADING_RECORD_FACTORY);
+                                      ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:201: error: cannot find symbol
+        snapshot.addBar(snapshot.barBuilder().newBar(DecimalNum.valueOf(99)));
+                                             ^
+  symbol:   method newBar(DecimalNum)
+  location: interface BarBuilder
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:324: error: cannot find symbol
+        TradingRecord customRecord = new BaseTradingRecord(TradeType.BUY);
+                                         ^
+  symbol:   class BaseTradingRecord
+  location: class BarSeriesManagerTest
+13 errors

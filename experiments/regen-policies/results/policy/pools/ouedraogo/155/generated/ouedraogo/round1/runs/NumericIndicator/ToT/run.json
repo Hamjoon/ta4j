@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-29T16:41:21.485073+00:00",
+  "latency": 22.994,
+  "status": "ok",
+  "http_status": 200,
+  "finish_reason": "stop",
+  "provider": "Sail Research",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "request_id": "gen-1793292081-DmUEBFtk9z8zHiOfn0xv",
+  "usage": {
+    "prompt_tokens": 4489,
+    "completion_tokens": 4617,
+    "total_tokens": 9106,
+    "cost": 0.00211422,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 64,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00211422,
+      "upstream_inference_prompt_cost": 0.00026742,
+      "upstream_inference_completions_cost": 0.0018468
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1307,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "error_type": null,
+  "prompt_sha256": "c60f4e21c5e43ee807ae6dd7c932afd6ceab9b6c9c0852216e7f3674dac04aa7",
+  "response_sha256": "b5ccef382f58ad4bca70cc33a40cbdd693162a8c149c30c96d43c66b11ba370b"
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-29T16:42:07.733965+00:00",
+  "latency": 36.81,
+  "status": "ok",
+  "http_status": 200,
+  "finish_reason": "stop",
+  "provider": "Crusoe",
+  "model_requested": "openai/gpt-oss-120b",
+  "model_reported": "openai/gpt-oss-120b",
+  "request_id": "gen-1793292127-iO4bHjWefDQd96VtnRTc",
+  "usage": {
+    "prompt_tokens": 4487,
+    "completion_tokens": 5025,
+    "total_tokens": 9512,
+    "cost": 0.0014806,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 48,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0014806,
+      "upstream_inference_prompt_cost": 0.00022435,
+      "upstream_inference_completions_cost": 0.00125625
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1208,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "error_type": null,
+  "prompt_sha256": "25e8719d774bf1d80ce9c7adaeda8a5dcaa03f97d181fa32e46524e3dde3ea25",
+  "response_sha256": "939c6898d07e03cab1d26b9bccfa7af5dca59c13e200671c7bff594d3c6a57c6"
+}

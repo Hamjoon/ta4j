@@ -1,0 +1,147 @@
+// public API of org.ta4j.core.Indicator
+public interface Indicator<T> {
+   T getValue(int index);
+  default boolean isStable();
+   int getCountOfUnstableBars();
+   BarSeries getBarSeries();
+  default Stream<T> stream();
+  static Double[] toDouble(Indicator<Num> ref, int index, int barCount);
+  default String toJson();
+  default ComponentDescriptor toDescriptor();
+  static Indicator<?> fromJson(BarSeries series, String json);
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.Position
+public class Position implements Serializable {
+  public Position();
+  public Position(TradeType startingType);
+  public Position(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Position(Trade entry, Trade exit);
+  public Position(Trade entry, Trade exit, CostModel transactionCostModel, CostModel holdingCostModel);
+  public Trade getEntry();
+  public Trade getExit();
+  public boolean equals(Object obj);
+  public int hashCode();
+  public Trade operate(int index);
+  public Trade operate(int index, Num price, Num amount);
+  public boolean isClosed();
+  public boolean isOpened();
+  public boolean isNew();
+  public boolean hasProfit();
+  public boolean hasLoss();
+  public Num getProfit();
+  public Num getProfit(int finalIndex, Num finalPrice);
+  public Num getGrossProfit();
+  public Num getGrossProfit(Num finalPrice);
+  public Num getGrossReturn();
+  public Num getGrossReturn(Num finalPrice);
+  public Num getGrossReturn(BarSeries barSeries);
+  public Num getGrossReturn(Num entryPrice, Num exitPrice);
+  public Num getPositionCost(int finalIndex);
+  public Num getPositionCost();
+  public Num getHoldingCost();
+  public Num getHoldingCost(int finalIndex);
+  public TradeType getStartingType();
+  public String toString();
+}
+
+// public API of org.ta4j.core.TradingRecord
+public interface TradingRecord extends Serializable {
+   TradeType getStartingType();
+   String getName();
+  default void operate(int index);
+   void operate(int index, Num price, Num amount);
+  default boolean enter(int index);
+   boolean enter(int index, Num price, Num amount);
+  default boolean exit(int index);
+   boolean exit(int index, Num price, Num amount);
+  default boolean isClosed();
+   CostModel getTransactionCostModel();
+   CostModel getHoldingCostModel();
+   List<Position> getPositions();
+  default int getPositionCount();
+   Position getCurrentPosition();
+  default Position getLastPosition();
+   List<Trade> getTrades();
+   Trade getLastTrade();
+   Trade getLastTrade(TradeType tradeType);
+   Trade getLastEntry();
+   Trade getLastExit();
+   Integer getStartIndex();
+   Integer getEndIndex();
+  default int getStartIndex(BarSeries series);
+  default int getEndIndex(BarSeries series);
+}
+

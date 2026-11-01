@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.hamcrest:hamcrest:2.2",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.hamcrest:hamcrest:2.2",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.022,
+      "log": "results/runner-dependency-org.hamcrest.hamcrest-2.2-1.txt",
+      "coordinate": "org.hamcrest:hamcrest:2.2",
+      "expected_sha256": "5e62846a89f05cd78cd9c1a553f340d002458380c320455dd1f8fc5497a8a1c1",
+      "rejected_sha256": null,
+      "downloaded_sha256": "5e62846a89f05cd78cd9c1a553f340d002458380c320455dd1f8fc5497a8a1c1"
+    }
+  ]
+}

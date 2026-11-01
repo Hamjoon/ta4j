@@ -1,0 +1,94 @@
+{
+  "index": 378,
+  "sha": "d3c1012571dfd5dbfc5f4fff3802f223b2901789",
+  "parent": "be775887ef9dc30edb388f6376624c6a1ec99858",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottSwingCompressor.java": [
+      163
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      960,
+      961,
+      962,
+      968,
+      969,
+      970,
+      972,
+      973,
+      985,
+      1037,
+      1039,
+      1080,
+      3018,
+      3071
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      118,
+      119,
+      120,
+      121,
+      123,
+      124
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottSwingCompressor.java": [
+      169,
+      173,
+      174,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      185,
+      186,
+      188,
+      189,
+      193,
+      194,
+      195,
+      196,
+      197,
+      199,
+      201,
+      202,
+      203,
+      205
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      961,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029,
+      1030,
+      1032,
+      1034,
+      1036,
+      1037,
+      1044,
+      1045,
+      1046,
+      1084,
+      1103,
+      3026,
+      3079
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java": [
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      127,
+      128
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottSwingCompressor.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottSwingCompressor.java\nindex 2490830fe..cb2c58768 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottSwingCompressor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottSwingCompressor.java\n@@ -26,0 +27,6 @@ import org.ta4j.core.num.Num;\n+ * After threshold-based filtering, adjacent swings with the same direction are\n+ * collapsed back into one dominant swing. This preserves the alternating pivot\n+ * stream expected by later Elliott scenario generation when a small\n+ * counter-trend swing is filtered away.\n+ *\n+ * <p>\n@@ -163 +169,37 @@ public class ElliottSwingCompressor {\n-        return Collections.unmodifiableList(filtered);\n+        return Collections.unmodifiableList(collapseAdjacentSameDirection(filtered));\n+    }\n+\n+    private List<ElliottSwing> collapseAdjacentSameDirection(final List<ElliottSwing> swings) {\n+        if (swings.size() < 2) {\n+            return swings;\n+        }\n+\n+        final List<ElliottSwing> collapsed = new ArrayList<>(swings.size());\n+        ElliottSwing current = swings.getFirst();\n+        for (int index = 1; index < swings.size(); index++) {\n+            final ElliottSwing candidate = swings.get(index);\n+            if (current.isRising() == candidate.isRising()) {\n+                current = mergeSameDirectionCluster(current, candidate);\n+                continue;\n+            }\n+            collapsed.add(current);\n+            current = candidate;\n+        }\n+        collapsed.add(current);\n+        return collapsed;\n+    }\n+\n+    private ElliottSwing mergeSameDirectionCluster(final ElliottSwing current, final ElliottSwing candidate) {\n+        if (current.isRising()) {\n+            if (candidate.toPrice().isGreaterThan(current.toPrice())\n+                    || candidate.toPrice().isEqual(current.toPrice())) {\n+                return new ElliottSwing(current.fromIndex(), candidate.toIndex(), current.fromPrice(),\n+                        candidate.toPrice(), current.degree());\n+            }\n+            return current;\n+        }\n+        if (candidate.toPrice().isLessThan(current.toPrice()) || candidate.toPrice().isEqual(current.toPrice())) {\n+            return new ElliottSwing(current.fromIndex(), candidate.toIndex(), current.fromPrice(), candidate.toPrice(),\n+                    current.degree());\n+        }\n+        return current;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex d4713ebd1..8cb492f59 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -113,0 +114 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final double HISTORICAL_CONTINUATION_BOTTOM_FIT_FLOOR = 0.75;\n@@ -960,3 +961 @@ public final class ElliottWaveAnalysisRunner {\n-        final int alignedStartIndex = bullish ? alignedHistoricalLegStartIndex(startIndex, endIndex, selection)\n-                : startIndex;\n-        return new ElliottWaveAnalysisResult.HistoricalLegAssessment(alignedStartIndex, endIndex, bullish,\n+        return new ElliottWaveAnalysisResult.HistoricalLegAssessment(startIndex, endIndex, bullish,\n@@ -966,10 +964,0 @@ public final class ElliottWaveAnalysisRunner {\n-    private int alignedHistoricalLegStartIndex(final int startIndex, final int endIndex,\n-            final AnchoredWindowSelection selection) {\n-        final List<ElliottSwing> scenarioSwings = selection.assessment().scenario().swings();\n-        if (scenarioSwings.isEmpty()) {\n-            return startIndex;\n-        }\n-        final int scenarioStartIndex = scenarioSwings.getFirst().fromIndex();\n-        return scenarioStartIndex > startIndex && scenarioStartIndex < endIndex ? scenarioStartIndex : startIndex;\n-    }\n-\n@@ -985 +973,0 @@ public final class ElliottWaveAnalysisRunner {\n-                .filter(this::eligibleHistoricalMacroBottom)\n@@ -1037 +1025,8 @@ public final class ElliottWaveAnalysisRunner {\n-        ElliottWaveAnalysisResult.HistoricalLegAssessment pending = bearishLegs.getFirst();\n+        final ElliottWaveAnalysisResult.HistoricalLegAssessment pendingSeed = bearishLegs.stream()\n+                .filter(this::eligibleHistoricalMacroBottom)\n+                .findFirst()\n+                .orElse(null);\n+        if (pendingSeed == null) {\n+            return List.of();\n+        }\n+        ElliottWaveAnalysisResult.HistoricalLegAssessment pending = pendingSeed;\n@@ -1039 +1034 @@ public final class ElliottWaveAnalysisRunner {\n-        for (int index = 1; index < bearishLegs.size(); index++) {\n+        for (int index = bearishLegs.indexOf(pendingSeed) + 1; index < bearishLegs.size(); index++) {\n@@ -1040,0 +1036,3 @@ public final class ElliottWaveAnalysisRunner {\n+            if (!eligibleHistoricalMacroBottom(next) && !eligibleHistoricalContinuationBottom(next)) {\n+                continue;\n+            }\n@@ -1045,0 +1044,6 @@ public final class ElliottWaveAnalysisRunner {\n+            if (!historicalMacroBottomConfirmed(series, pending, next.startIndex())) {\n+                if (eligibleHistoricalContinuationBottom(next)) {\n+                    pending = next;\n+                }\n+                continue;\n+            }\n@@ -1080 +1084 @@ public final class ElliottWaveAnalysisRunner {\n-                && (candidate.accepted() || candidate.fitScore() >= HISTORICAL_BOUNDARY_BOTTOM_FIT_FLOOR);\n+                && (eligibleHistoricalMacroBottom(candidate) || eligibleHistoricalContinuationBottom(candidate));\n@@ -1097,0 +1102,4 @@ public final class ElliottWaveAnalysisRunner {\n+    private boolean eligibleHistoricalContinuationBottom(final ElliottWaveAnalysisResult.HistoricalLegAssessment leg) {\n+        return leg.accepted() || leg.fitScore() >= HISTORICAL_CONTINUATION_BOTTOM_FIT_FLOOR;\n+    }\n+\n@@ -3018 +3026 @@ public final class ElliottWaveAnalysisRunner {\n-                .thenComparing(Comparator.comparingInt(HistoricalStructureCandidate::cycleCount).reversed())\n+                .thenComparingInt(HistoricalStructureCandidate::cycleCount)\n@@ -3071 +3079 @@ public final class ElliottWaveAnalysisRunner {\n-                .thenComparing(Comparator.comparingInt(HistoricalCycleBundle::cycleCount).reversed())\n+                .thenComparingInt(HistoricalCycleBundle::cycleCount)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\nindex 3a7fda971..baca449ed 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/swing/SwingDetectorSupport.java\n@@ -118,7 +118,12 @@ final class SwingDetectorSupport {\n-        final SwingPivot previous = priorPivots.isEmpty() ? null : priorPivots.getLast();\n-        if (previous != null) {\n-            if (previous.type() == existing.type()) {\n-                return candidate;\n-            }\n-            if (previous.type() == candidate.type()) {\n-                return existing;\n+\n+        if (priorPivots.size() >= 2) {\n+            final Num anchor = priorPivots.get(priorPivots.size() - 2).price();\n+            if (!Num.isNaNOrNull(anchor)) {\n+                final Num existingDistance = existingPrice.minus(anchor).abs();\n+                final Num candidateDistance = candidatePrice.minus(anchor).abs();\n+                if (candidateDistance.isGreaterThan(existingDistance)) {\n+                    return candidate;\n+                }\n+                if (existingDistance.isGreaterThan(candidateDistance)) {\n+                    return existing;\n+                }\n@@ -126,0 +132 @@ final class SwingDetectorSupport {\n+"
+}

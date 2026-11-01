@@ -1,0 +1,24 @@
+{
+  "index": 354,
+  "sha": "a158cca46e6ecedf467c40d4b9c47fb5b4ad5457",
+  "parent": "646496e6b4671cdadff81417733c5b56b1099b85",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      659
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      640,
+      641,
+      642,
+      656,
+      657,
+      664,
+      665,
+      667,
+      668
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex bab570634..d7e48315d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -639,0 +640,3 @@ public final class ElliottScenarioGenerator {\n+        final ElliottDegree degree = ElliottDegree.MINOR;\n+        final ElliottSwing wave1 = swingBetween(degree, pivots, 0, cutPoints.getFirst());\n+        final ElliottSwing wave2 = swingBetween(degree, pivots, cutPoints.getFirst(), cutPoints.get(1));\n@@ -652,0 +656,3 @@ public final class ElliottScenarioGenerator {\n+        if (!fibValidator.isWaveTwoRetracementValid(wave1, wave2)) {\n+            return false;\n+        }\n@@ -657,0 +664,2 @@ public final class ElliottScenarioGenerator {\n+        final ElliottSwing wave3 = swingBetween(degree, pivots, cutPoints.get(1), cutPoints.get(2));\n+        final ElliottSwing wave4 = swingBetween(degree, pivots, cutPoints.get(2), cutPoints.get(3));\n@@ -659 +667,2 @@ public final class ElliottScenarioGenerator {\n-        return wave1Direction > 0 ? wave4End >= wave1End : wave4End <= wave1End;\n+        return (wave1Direction > 0 ? wave4End >= wave1End : wave4End <= wave1End)\n+                && fibValidator.isWaveFourRetracementValid(wave3, wave4);"
+}

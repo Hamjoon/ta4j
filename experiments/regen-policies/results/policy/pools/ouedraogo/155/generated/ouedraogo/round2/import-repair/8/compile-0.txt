@@ -1,0 +1,124 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:22: error: cannot find symbol
+import org.ta4j.core.num.PrecisionNum;
+                        ^
+  symbol:   class PrecisionNum
+  location: package org.ta4j.core.num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:63: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:65: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(num(1), num(1), num(1), num(1), num(1));
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:66: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(num(2), num(2), num(2), num(2), num(2));
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:67: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(num(3), num(3), num(3), num(3), num(3));
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:68: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(num(2), num(2), num(2), num(2), num(2));
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:69: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(num(1), num(1), num(1), num(1), num(1));
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:78: error: constructor BooleanRule in class BooleanRule cannot be applied to given types;
+        BooleanRule entryRule = new BooleanRule() {
+                                ^
+  required: boolean
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:85: error: constructor BooleanRule in class BooleanRule cannot be applied to given types;
+        BooleanRule exitRule = new BooleanRule() {
+                               ^
+  required: boolean
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:130: error: constructor BooleanRule in class BooleanRule cannot be applied to given types;
+        Strategy never = new BaseStrategy(new BooleanRule() {
+                                          ^
+  required: boolean
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:132: error: constructor BooleanRule in class BooleanRule cannot be applied to given types;
+        }, new BooleanRule() {
+           ^
+  required: boolean
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:157: error: cannot find symbol
+        assertEquals(num(2), pos.getEntry().getPrice());
+                                           ^
+  symbol:   method getPrice()
+  location: class Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:158: error: cannot find symbol
+        assertEquals(num(2), pos.getExit().getPrice());
+                                          ^
+  symbol:   method getPrice()
+  location: class Trade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:166: error: cannot find symbol
+        TradingRecord record = defaultManager.run(upDownStrategy, TradeType.SELL);
+                                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:172: error: cannot find symbol
+        assertEquals(TradeType.SELL, pos.getEntry().getType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:173: error: cannot find symbol
+        assertEquals(TradeType.BUY, pos.getExit().getType()); // exit is opposite
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:182: error: cannot find symbol
+        TradingRecord record = defaultManager.run(upDownStrategy, TradeType.BUY, customAmount);
+                                                                  ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:194: error: constructor BooleanRule in class BooleanRule cannot be applied to given types;
+        Strategy onlyEnter = new BaseStrategy(new BooleanRule() {
+                                              ^
+  required: boolean
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:196: error: constructor BooleanRule in class BooleanRule cannot be applied to given types;
+        }, new BooleanRule() {
+           ^
+  required: boolean
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:201: error: cannot find symbol
+        TradingRecord record = defaultManager.run(onlyEnter, TradeType.BUY, num(5), 0, 2);
+                                                             ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:225: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries empty = new BaseBarSeries("empty");
+                          ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+21 errors

@@ -1,0 +1,6 @@
+{
+  "api document of class org.ta4j.core.indicators.ATRIndicator": "\n * Average true range indicator.\n ",
+  "api document of method getBarCount()": " @return the bar count of {@link #averageTrueRangeIndicator} ",
+  "return type": "int",
+  "dependent classes": "class `org.ta4j.core.indicators.ATRIndicator`:\n\tdependent fields:\n\t\torg.ta4j.core.indicators.MMAIndicator org.ta4j.core.indicators.ATRIndicator.averageTrueRangeIndicator;\n\trelated functions:\n\t\tmethod `public Num getValue(int)` returns `org.ta4j.core.num.Num`, related with `org.ta4j.core.indicators.ATRIndicator.getBarCount()`;\nclass `org.ta4j.core.indicators.EMAIndicator`:\n\trelated functions:\n\t\tmethod `public int getUnstableBars()` returns `int`, related with `org.ta4j.core.indicators.ATRIndicator.getBarCount()`;\nclass `org.ta4j.core.Strategy`:\n\trelated functions:\n\t\tmethod ` boolean shouldOperate(int, TradingRecord)` returns `boolean`, related with `org.ta4j.core.indicators.ATRIndicator.getBarCount()`, api document: \n     * @param index         the bar index\n     * @param tradingRecord the potentially needed trading history\n     * @return true to recommend a trade, false otherwise (no recommendation)\n     ;"
+}

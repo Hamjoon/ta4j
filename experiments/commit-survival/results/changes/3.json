@@ -1,0 +1,15 @@
+{
+  "index": 3,
+  "sha": "8476e74fa36d12540198ceafa91b182ca8945c72",
+  "parent": "ad120c0355974c7034517970bc26f0cbc7ab2bc5",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/MACDIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/MACDIndicator.java": [
+      92,
+      100
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java\nindex 5a0b3e443..fd7a46769 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MACDIndicator.java\n@@ -26,0 +27 @@ import org.ta4j.core.Indicator;\n+import org.ta4j.core.indicators.numeric.NumericIndicator;\n@@ -85,0 +87,16 @@ public class MACDIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @param barCount of signal line\n+     * @return signal line for this MACD indicator\n+     */\n+    public EMAIndicator getSignalLine(int barCount) {\n+        return new EMAIndicator(this, barCount);\n+    }\n+\n+    /**\n+     * @param barCount of signal line\n+     * @return histogram of this MACD indicator\n+     */\n+    public NumericIndicator getHistogram(int barCount) {\n+        return NumericIndicator.of(this).minus(getSignalLine(barCount));\n+    }\n+"
+}

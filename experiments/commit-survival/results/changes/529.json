@@ -1,0 +1,503 @@
+{
+  "index": 529,
+  "sha": "1f0d906c538c0aa5f069a9b1d9976e45cc0938a9",
+  "parent": "8b067fda69edf3dce2e2152608666000b745fa83",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/ATRIndicator.java": [
+      72
+    ],
+    "src/main/java/org/ta4j/core/indicators/AlligatorIndicator.java": [
+      73,
+      176,
+      177
+    ],
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java": [
+      49,
+      52,
+      53,
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java": [
+      49,
+      52,
+      53,
+      61
+    ],
+    "src/main/java/org/ta4j/core/indicators/ConnorsRSIIndicator.java": [
+      62,
+      92,
+      93
+    ],
+    "src/main/java/org/ta4j/core/indicators/CorrentropyKalmanFilterIndicator.java": [
+      463,
+      464,
+      465,
+      466,
+      473,
+      474,
+      475,
+      476
+    ],
+    "src/main/java/org/ta4j/core/indicators/CorrentropyKalmanResidualIndicator.java": [
+      61,
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/GatorOscillatorIndicator.java": [
+      137
+    ],
+    "src/main/java/org/ta4j/core/indicators/MarketFacilitationIndexIndicator.java": [
+      76,
+      77
+    ],
+    "src/main/java/org/ta4j/core/indicators/RSIIndicator.java": [
+      35,
+      37,
+      38,
+      49,
+      50
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java": [
+      57,
+      60
+    ],
+    "src/main/java/org/ta4j/core/indicators/TrueStrengthIndexIndicator.java": [
+      59,
+      84,
+      93,
+      94,
+      107
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java": [
+      35,
+      38,
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java": [
+      30,
+      32,
+      33
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java": [
+      39,
+      41,
+      42,
+      43,
+      48,
+      53,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java": [
+      39,
+      41,
+      42,
+      43,
+      48,
+      53,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/AbstractEMAIndicator.java": [
+      97,
+      111
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java": [
+      35,
+      39,
+      40,
+      49
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java": [
+      40,
+      44
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java": [
+      40,
+      43,
+      44,
+      45,
+      55,
+      56,
+      57,
+      58
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java": [
+      124
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java": [
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java": [
+      41
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/LogReturnIndicator.java": [
+      103
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PercentRankIndicator.java": [
+      86
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java": [
+      198,
+      221,
+      222
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java": [
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java": [
+      68,
+      69,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java": [
+      36
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java": [
+      61,
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java": [
+      45,
+      48,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java": [
+      61,
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/macd/MACDVIndicator.java": [
+      486,
+      590,
+      591
+    ],
+    "src/main/java/org/ta4j/core/indicators/macd/MACDVMomentumStateIndicator.java": [
+      85
+    ],
+    "src/main/java/org/ta4j/core/indicators/macd/VolatilityNormalizedMACDIndicator.java": [
+      548,
+      653,
+      654,
+      655
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/ForceIndexIndicator.java": [
+      136
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/ATRIndicator.java": [
+      69,
+      73,
+      87
+    ],
+    "src/main/java/org/ta4j/core/indicators/AlligatorIndicator.java": [
+      73,
+      181,
+      182,
+      195
+    ],
+    "src/main/java/org/ta4j/core/indicators/CachedIndicator.java": [
+      456,
+      486,
+      487,
+      488,
+      490,
+      491,
+      492,
+      494,
+      495,
+      496,
+      498,
+      499,
+      500,
+      502,
+      503,
+      504,
+      505
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java": [
+      49,
+      51,
+      54,
+      57,
+      58,
+      63,
+      67,
+      77
+    ],
+    "src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java": [
+      49,
+      51,
+      54,
+      57,
+      58,
+      63,
+      67,
+      77
+    ],
+    "src/main/java/org/ta4j/core/indicators/ConnorsRSIIndicator.java": [
+      62,
+      88,
+      89,
+      109
+    ],
+    "src/main/java/org/ta4j/core/indicators/CorrentropyKalmanFilterIndicator.java": [
+      459,
+      460,
+      461,
+      462
+    ],
+    "src/main/java/org/ta4j/core/indicators/CorrentropyKalmanResidualIndicator.java": [],
+    "src/main/java/org/ta4j/core/indicators/GatorOscillatorIndicator.java": [
+      133
+    ],
+    "src/main/java/org/ta4j/core/indicators/MarketFacilitationIndexIndicator.java": [
+      79,
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/RSIIndicator.java": [
+      35,
+      37,
+      41,
+      43,
+      44,
+      51,
+      52,
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java": [
+      57,
+      58,
+      61,
+      64,
+      69
+    ],
+    "src/main/java/org/ta4j/core/indicators/TrueStrengthIndexIndicator.java": [
+      61,
+      62,
+      66,
+      67,
+      89,
+      95,
+      96,
+      97,
+      98,
+      115,
+      124
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java": [
+      35,
+      36,
+      39,
+      40,
+      43,
+      46,
+      47,
+      64,
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java": [
+      30,
+      31,
+      34,
+      36,
+      37,
+      62
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java": [
+      39,
+      40,
+      43,
+      44,
+      48,
+      50,
+      51,
+      52,
+      57,
+      58,
+      63,
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java": [
+      39,
+      40,
+      43,
+      44,
+      48,
+      50,
+      51,
+      52,
+      57,
+      58,
+      63,
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/AbstractEMAIndicator.java": [
+      96,
+      108
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java": [
+      35,
+      36,
+      39,
+      40,
+      43,
+      47,
+      48,
+      54,
+      55,
+      59,
+      73
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java": [
+      38,
+      39,
+      42,
+      46,
+      53,
+      76
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java": [
+      40,
+      41,
+      44,
+      45,
+      48,
+      49,
+      53,
+      56,
+      57,
+      58,
+      64,
+      65,
+      66,
+      71,
+      72,
+      86
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java": [
+      121,
+      125
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java": [
+      63,
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java": [
+      63,
+      80
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java": [
+      39,
+      40,
+      43
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/LogReturnIndicator.java": [
+      100
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PercentRankIndicator.java": [
+      83
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java": [
+      193,
+      194,
+      195,
+      196,
+      197,
+      226,
+      227
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java": [
+      45
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java": [
+      64,
+      65,
+      66
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java": [
+      35,
+      39
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java": [
+      58,
+      59,
+      63,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java": [
+      45,
+      46,
+      49,
+      52,
+      57,
+      61,
+      75
+    ],
+    "src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java": [
+      58,
+      59,
+      63,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/macd/MACDVIndicator.java": [
+      483,
+      487,
+      588,
+      589,
+      590,
+      591,
+      593,
+      594,
+      616
+    ],
+    "src/main/java/org/ta4j/core/indicators/macd/MACDVMomentumStateIndicator.java": [
+      82,
+      86
+    ],
+    "src/main/java/org/ta4j/core/indicators/macd/VolatilityNormalizedMACDIndicator.java": [
+      545,
+      549,
+      650,
+      651,
+      652,
+      681,
+      693,
+      694
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java": [
+      43,
+      45,
+      46,
+      52,
+      53,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java": [
+      43,
+      45,
+      46,
+      52,
+      53,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/volume/ForceIndexIndicator.java": [
+      132,
+      151
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\nindex 79bd52264..c94b4d211 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ATRIndicator.java\n@@ -68,0 +69 @@ public class ATRIndicator extends CachedIndicator<Num> {\n+        Num averageTrueRange = averageTrueRangeIndicator.getValue(index);\n@@ -72 +73 @@ public class ATRIndicator extends CachedIndicator<Num> {\n-        return averageTrueRangeIndicator.getValue(index);\n+        return averageTrueRange;\n@@ -79,0 +81,9 @@ public class ATRIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the Wilder average retains full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/AlligatorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/AlligatorIndicator.java\nindex 82e2619f8..426656c35 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/AlligatorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/AlligatorIndicator.java\n@@ -73 +73 @@ public class AlligatorIndicator extends CachedIndicator<Num> {\n-        super(config.indicator());\n+        super(config.smoothedIndicator());\n@@ -176,3 +175,0 @@ public class AlligatorIndicator extends CachedIndicator<Num> {\n-        if (index < getCountOfUnstableBars()) {\n-            return NaN;\n-        }\n@@ -183,0 +181,3 @@ public class AlligatorIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\n@@ -186,0 +187,11 @@ public class AlligatorIndicator extends CachedIndicator<Num> {\n+    /**\n+     * The displaced output retains the smoothing chain's historical state.\n+     *\n+     * @return {@code true}\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\nindex fb69010d6..dbf423421 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CachedIndicator.java\n@@ -10,0 +11 @@ import java.util.Deque;\n+import java.util.HashSet;\n@@ -41,0 +43,9 @@ import org.ta4j.core.num.Num;\n+ * <p>\n+ * When the current series capacity is smaller than\n+ * {@link #getCountOfUnstableBars()}, the next value read logs an advisory\n+ * warning once per instance and distinct capacity, including capacities\n+ * configured after construction. Equality does not warn. The warning does not\n+ * block continued values, change warm-up results or reconstruct discarded raw\n+ * inputs. Recursive indicators must be read continuously while their required\n+ * inputs are available to preserve their seeded history.\n+ *\n@@ -141,0 +152,4 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+    /** Diagnostic state, unrelated to the indicator's serialized configuration. */\n+    private transient Set<Integer> warnedMaximumBarCounts;\n+    private transient volatile int lastWarnedMaximumBarCount;\n+\n@@ -441,0 +456 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+        warnIfWindowIsShorterThanUnstablePeriod(snapshot.maximumBarCount());\n@@ -469,0 +485,22 @@ public abstract class CachedIndicator<T> extends AbstractIndicator<T> {\n+    private void warnIfWindowIsShorterThanUnstablePeriod(int maximumBarCount) {\n+        if (maximumBarCount == Integer.MAX_VALUE || maximumBarCount == lastWarnedMaximumBarCount\n+                || !log.isWarnEnabled()) {\n+            return;\n+        }\n+        int unstableBars = getCountOfUnstableBars();\n+        if (maximumBarCount >= unstableBars) {\n+            return;\n+        }\n+        synchronized (firstBarLock) {\n+            if (warnedMaximumBarCounts == null) {\n+                warnedMaximumBarCounts = new HashSet<>();\n+            }\n+            lastWarnedMaximumBarCount = maximumBarCount;\n+            if (!warnedMaximumBarCounts.add(maximumBarCount)) {\n+                return;\n+            }\n+        }\n+        log.warn(\"{}: maximumBarCount {} is smaller than unstable bars {}; continued values are not blocked\",\n+                getClass().getName(), maximumBarCount, unstableBars);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java\nindex e43d5e94f..527b751e1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitLongIndicator.java\n@@ -49 +49,6 @@ public class ChandelierExitLongIndicator extends CachedIndicator<Num> {\n-        super(series);\n+        this(barCount, k, new HighestValueIndicator(new HighPriceIndicator(series), barCount),\n+                new ATRIndicator(series, barCount));\n+    }\n+\n+    private ChandelierExitLongIndicator(int barCount, double k, HighestValueIndicator high, ATRIndicator atr) {\n+        super(high, atr);\n@@ -52,2 +57,2 @@ public class ChandelierExitLongIndicator extends CachedIndicator<Num> {\n-        this.high = new HighestValueIndicator(new HighPriceIndicator(series), barCount);\n-        this.atr = new ATRIndicator(series, barCount);\n+        this.high = high;\n+        this.atr = atr;\n@@ -57,0 +63 @@ public class ChandelierExitLongIndicator extends CachedIndicator<Num> {\n+        Num averageTrueRange = atr.getValue(index);\n@@ -61 +67,11 @@ public class ChandelierExitLongIndicator extends CachedIndicator<Num> {\n-        return high.getValue(index).minus(atr.getValue(index).multipliedBy(k));\n+        return high.getValue(index).minus(averageTrueRange.multipliedBy(k));\n+    }\n+\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java\nindex 127c06a6c..876e8696d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ChandelierExitShortIndicator.java\n@@ -49 +49,6 @@ public class ChandelierExitShortIndicator extends CachedIndicator<Num> {\n-        super(series);\n+        this(barCount, k, new LowestValueIndicator(new LowPriceIndicator(series), barCount),\n+                new ATRIndicator(series, barCount));\n+    }\n+\n+    private ChandelierExitShortIndicator(int barCount, double k, LowestValueIndicator low, ATRIndicator atr) {\n+        super(low, atr);\n@@ -52,2 +57,2 @@ public class ChandelierExitShortIndicator extends CachedIndicator<Num> {\n-        this.low = new LowestValueIndicator(new LowPriceIndicator(series), barCount);\n-        this.atr = new ATRIndicator(series, barCount);\n+        this.low = low;\n+        this.atr = atr;\n@@ -57,0 +63 @@ public class ChandelierExitShortIndicator extends CachedIndicator<Num> {\n+        Num averageTrueRange = atr.getValue(index);\n@@ -61 +67,11 @@ public class ChandelierExitShortIndicator extends CachedIndicator<Num> {\n-        return low.getValue(index).plus(atr.getValue(index).multipliedBy(k));\n+        return low.getValue(index).plus(averageTrueRange.multipliedBy(k));\n+    }\n+\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ConnorsRSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ConnorsRSIIndicator.java\nindex 2a8b11422..dc0cf651a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ConnorsRSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ConnorsRSIIndicator.java\n@@ -62 +62 @@ public class ConnorsRSIIndicator extends CachedIndicator<Num> {\n-        super(config.indicator());\n+        super(config.priceRsi(), config.streakRsi(), config.percentRankIndicator());\n@@ -87,0 +88,2 @@ public class ConnorsRSIIndicator extends CachedIndicator<Num> {\n+        Num priceRsiValue = priceRsi.getValue(index);\n+        Num streakRsiValue = streakRsi.getValue(index);\n@@ -92,2 +93,0 @@ public class ConnorsRSIIndicator extends CachedIndicator<Num> {\n-        Num priceRsiValue = priceRsi.getValue(index);\n-        Num streakRsiValue = streakRsi.getValue(index);\n@@ -101,0 +102,10 @@ public class ConnorsRSIIndicator extends CachedIndicator<Num> {\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanFilterIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanFilterIndicator.java\nindex 82a0658d3..88ccb9ee0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanFilterIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanFilterIndicator.java\n@@ -458,0 +459,4 @@ public class CorrentropyKalmanFilterIndicator extends CachedIndicator<Num> {\n+            NumFactory numFactory = getBarSeries().numFactory();\n+            Num measurement = normalizeInput(indicator.getValue(effectiveIndex), numFactory);\n+            Num processNoise = normalizeInput(processNoiseIndicator.getValue(effectiveIndex), numFactory);\n+            Num measurementNoise = normalizeInput(measurementNoiseIndicator.getValue(effectiveIndex), numFactory);\n@@ -463,4 +466,0 @@ public class CorrentropyKalmanFilterIndicator extends CachedIndicator<Num> {\n-                NumFactory numFactory = getBarSeries().numFactory();\n-                Num measurement = normalizeInput(indicator.getValue(effectiveIndex), numFactory);\n-                Num processNoise = normalizeInput(processNoiseIndicator.getValue(effectiveIndex), numFactory);\n-                Num measurementNoise = normalizeInput(measurementNoiseIndicator.getValue(effectiveIndex), numFactory);\n@@ -473,4 +472,0 @@ public class CorrentropyKalmanFilterIndicator extends CachedIndicator<Num> {\n-            NumFactory numFactory = getBarSeries().numFactory();\n-            Num measurement = normalizeInput(indicator.getValue(effectiveIndex), numFactory);\n-            Num processNoise = normalizeInput(processNoiseIndicator.getValue(effectiveIndex), numFactory);\n-            Num measurementNoise = normalizeInput(measurementNoiseIndicator.getValue(effectiveIndex), numFactory);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanResidualIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanResidualIndicator.java\nindex 13ef134a3..b548a8a3d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanResidualIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/CorrentropyKalmanResidualIndicator.java\n@@ -61,3 +60,0 @@ class CorrentropyKalmanResidualIndicator extends CachedIndicator<Num> {\n-        if (effectiveIndex < getCountOfUnstableBars()) {\n-            return NaN.NaN;\n-        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/GatorOscillatorIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/GatorOscillatorIndicator.java\nindex 22108b3c4..82d96e11d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/GatorOscillatorIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/GatorOscillatorIndicator.java\n@@ -132,0 +133 @@ public class GatorOscillatorIndicator extends CachedIndicator<Num> {\n+        final Num rawSpread = upperHistogram ? jawMinusTeeth.getValue(index) : teethMinusLips.getValue(index);\n@@ -137 +137,0 @@ public class GatorOscillatorIndicator extends CachedIndicator<Num> {\n-        final Num rawSpread = upperHistogram ? jawMinusTeeth.getValue(index) : teethMinusLips.getValue(index);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MarketFacilitationIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MarketFacilitationIndexIndicator.java\nindex a5d9eefcf..dedb6c7f7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MarketFacilitationIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MarketFacilitationIndexIndicator.java\n@@ -76,3 +75,0 @@ public class MarketFacilitationIndexIndicator extends CachedIndicator<Num> {\n-        if (index < getCountOfUnstableBars()) {\n-            return NaN;\n-        }\n@@ -81,0 +79,3 @@ public class MarketFacilitationIndexIndicator extends CachedIndicator<Num> {\n+        if (index < getCountOfUnstableBars()) {\n+            return NaN;\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\nindex ef72ee78a..4384a0789 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/RSIIndicator.java\n@@ -35 +35,7 @@ public class RSIIndicator extends CachedIndicator<Num> {\n-        super(indicator);\n+        this(indicator, barCount, new MMAIndicator(new GainIndicator(indicator), barCount),\n+                new MMAIndicator(new LossIndicator(indicator), barCount));\n+    }\n+\n+    private RSIIndicator(Indicator<Num> indicator, int barCount, MMAIndicator averageGainIndicator,\n+            MMAIndicator averageLossIndicator) {\n+        super(averageGainIndicator, averageLossIndicator);\n@@ -37,2 +43,2 @@ public class RSIIndicator extends CachedIndicator<Num> {\n-        this.averageGainIndicator = new MMAIndicator(new GainIndicator(indicator), barCount);\n-        this.averageLossIndicator = new MMAIndicator(new LossIndicator(indicator), barCount);\n+        this.averageGainIndicator = averageGainIndicator;\n+        this.averageLossIndicator = averageLossIndicator;\n@@ -44,0 +51,2 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+        Num averageGain = averageGainIndicator.getValue(index);\n+        Num averageLoss = averageLossIndicator.getValue(index);\n@@ -49,2 +56,0 @@ public class RSIIndicator extends CachedIndicator<Num> {\n-        Num averageGain = averageGainIndicator.getValue(index);\n-        Num averageLoss = averageLossIndicator.getValue(index);\n@@ -66,0 +73,9 @@ public class RSIIndicator extends CachedIndicator<Num> {\n+\n+    /**\n+     * @return {@code true}, because Wilder averages retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\nindex 160e5d67f..46af2658b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/StochasticRSIIndicator.java\n@@ -57 +57,5 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-        super(rsiIndicator);\n+        this(rsiIndicator, barCount, new StochasticIndicator(rsiIndicator, barCount));\n+    }\n+\n+    private StochasticRSIIndicator(RSIIndicator rsiIndicator, int barCount, StochasticIndicator stochasticIndicator) {\n+        super(rsiIndicator, stochasticIndicator);\n@@ -60 +64 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n-        this.stochasticIndicator = new StochasticIndicator(rsiIndicator, barCount);\n+        this.stochasticIndicator = stochasticIndicator;\n@@ -64,0 +69 @@ public class StochasticRSIIndicator extends CachedIndicator<Num> {\n+        indicator.getValue(index);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/TrueStrengthIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/TrueStrengthIndexIndicator.java\nindex 1545326aa..c5b64560f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/TrueStrengthIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/TrueStrengthIndexIndicator.java\n@@ -29,0 +30,2 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n+    private final transient EMAIndicator firstSmoothedChange;\n+    private final transient EMAIndicator firstSmoothedAbsoluteChange;\n@@ -59 +61,2 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n-        super(config.priceIndicator());\n+        super(config.firstSmoothedChange(), config.firstSmoothedAbsoluteChange(), config.doubleSmoothedChange(),\n+                config.doubleSmoothedAbsoluteChange());\n@@ -62,0 +66,2 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n+        this.firstSmoothedChange = config.firstSmoothedChange();\n+        this.firstSmoothedAbsoluteChange = config.firstSmoothedAbsoluteChange();\n@@ -84,2 +89,2 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n-        return new Config(indicator, doubleSmoothedChange, doubleSmoothedAbsoluteChange, firstSmoothingPeriod,\n-                secondSmoothingPeriod);\n+        return new Config(indicator, firstSmoothingChange, firstSmoothingAbsoluteChange, doubleSmoothedChange,\n+                doubleSmoothedAbsoluteChange, firstSmoothingPeriod, secondSmoothingPeriod);\n@@ -89,0 +95,4 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n+        firstSmoothedChange.getValue(index);\n+        firstSmoothedAbsoluteChange.getValue(index);\n+        Num numerator = doubleSmoothedChange.getValue(index);\n+        Num denominator = doubleSmoothedAbsoluteChange.getValue(index);\n@@ -93,2 +101,0 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n-        Num numerator = doubleSmoothedChange.getValue(index);\n-        Num denominator = doubleSmoothedAbsoluteChange.getValue(index);\n@@ -100,0 +108,10 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\n@@ -107 +124,2 @@ public class TrueStrengthIndexIndicator extends CachedIndicator<Num> {\n-    private record Config(Indicator<Num> priceIndicator, EMAIndicator doubleSmoothedChange,\n+    private record Config(Indicator<Num> priceIndicator, EMAIndicator firstSmoothedChange,\n+            EMAIndicator firstSmoothedAbsoluteChange, EMAIndicator doubleSmoothedChange,\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java\nindex ae90be34a..7905068f0 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/ADXIndicator.java\n@@ -35 +35,9 @@ public class ADXIndicator extends CachedIndicator<Num> {\n-        super(series);\n+        this(diBarCount, adxBarCount, new DXIndicator(series, diBarCount));\n+    }\n+\n+    private ADXIndicator(int diBarCount, int adxBarCount, DXIndicator dxIndicator) {\n+        this(diBarCount, adxBarCount, dxIndicator, new MMAIndicator(dxIndicator, adxBarCount));\n+    }\n+\n+    private ADXIndicator(int diBarCount, int adxBarCount, DXIndicator dxIndicator, MMAIndicator averageDXIndicator) {\n+        super(averageDXIndicator);\n@@ -38,2 +46,2 @@ public class ADXIndicator extends CachedIndicator<Num> {\n-        this.dxIndicator = new DXIndicator(series, diBarCount);\n-        this.averageDXIndicator = new MMAIndicator(dxIndicator, adxBarCount);\n+        this.dxIndicator = dxIndicator;\n+        this.averageDXIndicator = averageDXIndicator;\n@@ -54,0 +63,2 @@ public class ADXIndicator extends CachedIndicator<Num> {\n+        // The outer average does not read DX while its own chain is warming up.\n+        dxIndicator.getValue(index);\n@@ -62,0 +73,9 @@ public class ADXIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the Wilder averages retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java\nindex 20f74d485..76d8430eb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/DXIndicator.java\n@@ -30 +30,5 @@ public class DXIndicator extends CachedIndicator<Num> {\n-        super(series);\n+        this(barCount, new PlusDIIndicator(series, barCount), new MinusDIIndicator(series, barCount));\n+    }\n+\n+    private DXIndicator(int barCount, PlusDIIndicator plusDIIndicator, MinusDIIndicator minusDIIndicator) {\n+        super(plusDIIndicator, minusDIIndicator);\n@@ -32,2 +36,2 @@ public class DXIndicator extends CachedIndicator<Num> {\n-        this.plusDIIndicator = new PlusDIIndicator(series, barCount);\n-        this.minusDIIndicator = new MinusDIIndicator(series, barCount);\n+        this.plusDIIndicator = plusDIIndicator;\n+        this.minusDIIndicator = minusDIIndicator;\n@@ -51,0 +56,9 @@ public class DXIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because both directional indexes retain Wilder state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java\nindex b0fa9b262..5b4c02ab9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/MinusDIIndicator.java\n@@ -39 +39,10 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n-        super(series);\n+        this(barCount, new MinusDMIndicator(series), new ATRIndicator(series, barCount));\n+    }\n+\n+    private MinusDIIndicator(int barCount, MinusDMIndicator minusDMIndicator, ATRIndicator atrIndicator) {\n+        this(barCount, minusDMIndicator, atrIndicator, new MMAIndicator(minusDMIndicator, barCount));\n+    }\n+\n+    private MinusDIIndicator(int barCount, MinusDMIndicator minusDMIndicator, ATRIndicator atrIndicator,\n+            MMAIndicator avgMinusDMIndicator) {\n+        super(atrIndicator, avgMinusDMIndicator);\n@@ -41,3 +50,3 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n-        this.atrIndicator = new ATRIndicator(series, barCount);\n-        this.minusDMIndicator = new MinusDMIndicator(series);\n-        this.avgMinusDMIndicator = new MMAIndicator(minusDMIndicator, barCount);\n+        this.atrIndicator = atrIndicator;\n+        this.minusDMIndicator = minusDMIndicator;\n+        this.avgMinusDMIndicator = avgMinusDMIndicator;\n@@ -48 +57,2 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n-        final var atrIndicatorValue = atrIndicator.getValue(index);\n+        Num atrIndicatorValue = atrIndicator.getValue(index);\n+        Num averageDirectionalMovement = avgMinusDMIndicator.getValue(index);\n@@ -53,2 +63 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n-        return avgMinusDMIndicator.getValue(index)\n-                .dividedBy(atrIndicatorValue)\n+        return averageDirectionalMovement.dividedBy(atrIndicatorValue)\n@@ -63,0 +73,9 @@ public class MinusDIIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the Wilder averages retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java\nindex 2bd967bd8..2011b914c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/adx/PlusDIIndicator.java\n@@ -39 +39,10 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n-        super(series);\n+        this(barCount, new PlusDMIndicator(series), new ATRIndicator(series, barCount));\n+    }\n+\n+    private PlusDIIndicator(int barCount, PlusDMIndicator plusDMIndicator, ATRIndicator atrIndicator) {\n+        this(barCount, plusDMIndicator, atrIndicator, new MMAIndicator(plusDMIndicator, barCount));\n+    }\n+\n+    private PlusDIIndicator(int barCount, PlusDMIndicator plusDMIndicator, ATRIndicator atrIndicator,\n+            MMAIndicator avgPlusDMIndicator) {\n+        super(atrIndicator, avgPlusDMIndicator);\n@@ -41,3 +50,3 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n-        this.atrIndicator = new ATRIndicator(series, barCount);\n-        this.plusDMIndicator = new PlusDMIndicator(series);\n-        this.avgPlusDMIndicator = new MMAIndicator(plusDMIndicator, barCount);\n+        this.atrIndicator = atrIndicator;\n+        this.plusDMIndicator = plusDMIndicator;\n+        this.avgPlusDMIndicator = avgPlusDMIndicator;\n@@ -48 +57,2 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n-        final var atrIndicatorValue = atrIndicator.getValue(index);\n+        Num atrIndicatorValue = atrIndicator.getValue(index);\n+        Num averageDirectionalMovement = avgPlusDMIndicator.getValue(index);\n@@ -53,2 +63 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n-        return avgPlusDMIndicator.getValue(index)\n-                .dividedBy(atrIndicatorValue)\n+        return averageDirectionalMovement.dividedBy(atrIndicatorValue)\n@@ -63,0 +73,9 @@ public class PlusDIIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the Wilder averages retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/AbstractEMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/AbstractEMAIndicator.java\nindex 67ad0c1b6..caf81ab44 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/AbstractEMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/AbstractEMAIndicator.java\n@@ -31 +31,3 @@ import static org.ta4j.core.num.NaN.NaN;\n- * full-history warm-up even when the window is shorter than the warm-up.\n+ * full-history warm-up even when the window is shorter than the warm-up. The\n+ * source is consumed during this warm-up too, so nested recurrences do not lose\n+ * their initial raw inputs before the average becomes stable.\n@@ -93,0 +96 @@ public abstract class AbstractEMAIndicator extends RecursiveCachedIndicator<Num>\n+        Num current = indicator.getValue(index);\n@@ -97 +99,0 @@ public abstract class AbstractEMAIndicator extends RecursiveCachedIndicator<Num>\n-        Num current = indicator.getValue(index);\n@@ -103,0 +106,3 @@ public abstract class AbstractEMAIndicator extends RecursiveCachedIndicator<Num>\n+        // Consume recursive inputs before their raw bars leave a moving window,\n+        // even while this average is still unstable.\n+        Num current = indicator.getValue(index);\n@@ -111,2 +115,0 @@ public abstract class AbstractEMAIndicator extends RecursiveCachedIndicator<Num>\n-        Num current = indicator.getValue(index);\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java\nindex 2a0c63544..518b37b92 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/DoubleEMAIndicator.java\n@@ -35 +35,9 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n-        super(indicator);\n+        this(indicator, barCount, new EMAIndicator(indicator, barCount));\n+    }\n+\n+    private DoubleEMAIndicator(Indicator<Num> indicator, int barCount, EMAIndicator ema) {\n+        this(indicator, barCount, ema, new EMAIndicator(ema, barCount));\n+    }\n+\n+    private DoubleEMAIndicator(Indicator<Num> indicator, int barCount, EMAIndicator ema, EMAIndicator emaEma) {\n+        super(emaEma);\n@@ -39,2 +47,2 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n-        this.ema = new EMAIndicator(indicator, barCount);\n-        this.emaEma = new EMAIndicator(ema, barCount);\n+        this.ema = ema;\n+        this.emaEma = emaEma;\n@@ -45,0 +54,2 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n+        Num firstAverage = ema.getValue(index);\n+        Num secondAverage = emaEma.getValue(index);\n@@ -49 +59 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n-        return ema.getValue(index).multipliedBy(two).minus(emaEma.getValue(index));\n+        return firstAverage.multipliedBy(two).minus(secondAverage);\n@@ -56,0 +67,9 @@ public class DoubleEMAIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because both EMA stages retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java\nindex ba94612b8..caab68272 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/EDMAIndicator.java\n@@ -38,3 +38,5 @@ public class EDMAIndicator extends CachedIndicator<Num> {\n-        // The source is registered so a rebaselining input (e.g., a stochastic)\n-        // invalidates the whole displaced cache after a series head advance.\n-        super(indicator);\n+        this(indicator, barCount, displacement, new EMAIndicator(indicator, barCount));\n+    }\n+\n+    private EDMAIndicator(Indicator<Num> indicator, int barCount, int displacement, EMAIndicator ema) {\n+        super(ema);\n@@ -44 +46 @@ public class EDMAIndicator extends CachedIndicator<Num> {\n-        this.ema = new EMAIndicator(indicator, barCount);\n+        this.ema = ema;\n@@ -50,0 +53 @@ public class EDMAIndicator extends CachedIndicator<Num> {\n+        ema.getValue(index);\n@@ -66,0 +70,9 @@ public class EDMAIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the displaced EMA retains full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java\nindex 489d7b3e3..a8edddcf8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/TripleEMAIndicator.java\n@@ -40 +40,14 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n-        super(indicator);\n+        this(indicator, barCount, new EMAIndicator(indicator, barCount));\n+    }\n+\n+    private TripleEMAIndicator(Indicator<Num> indicator, int barCount, EMAIndicator ema) {\n+        this(indicator, barCount, ema, new EMAIndicator(ema, barCount));\n+    }\n+\n+    private TripleEMAIndicator(Indicator<Num> indicator, int barCount, EMAIndicator ema, EMAIndicator emaEma) {\n+        this(indicator, barCount, ema, emaEma, new EMAIndicator(emaEma, barCount));\n+    }\n+\n+    private TripleEMAIndicator(Indicator<Num> indicator, int barCount, EMAIndicator ema, EMAIndicator emaEma,\n+            EMAIndicator emaEmaEma) {\n+        super(emaEmaEma);\n@@ -43,3 +56,3 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n-        this.ema = new EMAIndicator(indicator, barCount);\n-        this.emaEma = new EMAIndicator(ema, barCount);\n-        this.emaEmaEma = new EMAIndicator(emaEma, barCount);\n+        this.ema = ema;\n+        this.emaEma = emaEma;\n+        this.emaEmaEma = emaEmaEma;\n@@ -50,0 +64,3 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n+        Num firstAverage = ema.getValue(index);\n+        Num secondAverage = emaEma.getValue(index);\n+        Num thirdAverage = emaEmaEma.getValue(index);\n@@ -55,4 +71,2 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n-        final var numFactory = getBarSeries().numFactory();\n-        return numFactory.numOf(3)\n-                .multipliedBy(ema.getValue(index).minus(emaEma.getValue(index)))\n-                .plus(emaEmaEma.getValue(index));\n+        Num three = getBarSeries().numFactory().numOf(3);\n+        return three.multipliedBy(firstAverage.minus(secondAverage)).plus(thirdAverage);\n@@ -65,0 +80,9 @@ public class TripleEMAIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because all EMA stages retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\nindex 7fd3e4109..ea4abdf6c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\n@@ -120,0 +121 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n+        Num value = volumeWeightedIndicator.getValue(index);\n@@ -124 +125 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n-        return volumeWeightedIndicator.getValue(index);\n+        return value;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\nindex 732165afb..647031d82 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DarkCloudIndicator.java\n@@ -61,0 +62,2 @@ public class DarkCloudIndicator extends CachedIndicator<Boolean> {\n+        // Confirmation state advances on every bar, not only when a pattern matches.\n+        boolean upTrend = trendIndicator.getValue(index);\n@@ -78 +80 @@ public class DarkCloudIndicator extends CachedIndicator<Boolean> {\n-                && secondBar.getClosePrice().isLessThan(firstBarMiddlePoint) && this.trendIndicator.getValue(index);\n+                && secondBar.getClosePrice().isLessThan(firstBarMiddlePoint) && upTrend;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\nindex fcd3c5ba6..27791742b 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/PiercingIndicator.java\n@@ -61,0 +62,2 @@ public class PiercingIndicator extends CachedIndicator<Boolean> {\n+        // Confirmation state advances on every bar, not only when a pattern matches.\n+        boolean downTrend = trendIndicator.getValue(index);\n@@ -78 +80 @@ public class PiercingIndicator extends CachedIndicator<Boolean> {\n-                && secondBar.getClosePrice().isGreaterThan(firstBarMiddlePoint) && this.trendIndicator.getValue(index);\n+                && secondBar.getClosePrice().isGreaterThan(firstBarMiddlePoint) && downTrend;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\nindex 25d42ed61..e1d73b466 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/CrossIndicator.java\n@@ -38,0 +39,2 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n+        Num currentUp = up.getValue(index);\n+        Num currentLow = low.getValue(index);\n@@ -41 +43 @@ public class CrossIndicator extends CachedIndicator<Boolean> {\n-        if (i <= unstableBoundary || up.getValue(i).isGreaterThanOrEqual(low.getValue(i))) {\n+        if (i <= unstableBoundary || currentUp.isGreaterThanOrEqual(currentLow)) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LogReturnIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LogReturnIndicator.java\nindex cc29b24fc..01b71ebaf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LogReturnIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/LogReturnIndicator.java\n@@ -99,0 +100 @@ public final class LogReturnIndicator extends CachedIndicator<Num> implements Re\n+        Num current = indicator.getValue(index);\n@@ -103 +103,0 @@ public final class LogReturnIndicator extends CachedIndicator<Num> implements Re\n-        Num current = indicator.getValue(index);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentRankIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentRankIndicator.java\nindex b89565fd9..6f3bb9e49 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentRankIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentRankIndicator.java\n@@ -82,0 +83 @@ public class PercentRankIndicator extends CachedIndicator<Num> {\n+        Num current = indicator.getValue(index);\n@@ -86 +86,0 @@ public class PercentRankIndicator extends CachedIndicator<Num> {\n-        Num current = indicator.getValue(index);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java\nindex 8d4d400c2..453f88f4c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/PercentageChangeIndicator.java\n@@ -192,0 +193,7 @@ public class PercentageChangeIndicator extends CachedIndicator<Num> {\n+        Num currentValue = indicator.getValue(index);\n+        Indicator<Num> sourceForPrevious = previousIndicator != null ? previousIndicator : indicator;\n+        Num previousValue = null;\n+        if (percentageThreshold.isZero() && index > beginIndex) {\n+            previousValue = sourceForPrevious.getValue(index - 1);\n+        }\n+\n@@ -198 +204,0 @@ public class PercentageChangeIndicator extends CachedIndicator<Num> {\n-        Num currentValue = indicator.getValue(index);\n@@ -220,3 +226,3 @@ public class PercentageChangeIndicator extends CachedIndicator<Num> {\n-        // Determine which indicator to use for previous value\n-        Indicator<Num> sourceForPrevious = (previousIndicator != null) ? previousIndicator : indicator;\n-        Num previousValue = sourceForPrevious.getValue(index - 1);\n+        if (previousValue == null) {\n+            previousValue = sourceForPrevious.getValue(index - 1);\n+        }\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java\nindex 12c6dd830..66a637158 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/StreakIndicator.java\n@@ -44,0 +45 @@ public class StreakIndicator extends RecursiveCachedIndicator<Num> {\n+        Num current = indicator.getValue(index);\n@@ -51 +51,0 @@ public class StreakIndicator extends RecursiveCachedIndicator<Num> {\n-        Num current = indicator.getValue(index);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java\nindex 927971668..a1c89ff34 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TRIndicator.java\n@@ -63,0 +64,3 @@ public class TRIndicator extends CachedIndicator<Num> {\n+        Num high = highPriceIndicator.getValue(index);\n+        Num low = lowPriceIndicator.getValue(index);\n+        Num previousClose = index > getBarSeries().getBeginIndex() ? closePriceIndicator.getValue(index - 1) : null;\n@@ -68,2 +70,0 @@ public class TRIndicator extends CachedIndicator<Num> {\n-        Num high = highPriceIndicator.getValue(index);\n-        Num low = lowPriceIndicator.getValue(index);\n@@ -78 +78,0 @@ public class TRIndicator extends CachedIndicator<Num> {\n-        Num previousClose = closePriceIndicator.getValue(index - 1);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java\nindex 5b7ef5022..320cbde20 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/UnstableIndicator.java\n@@ -12 +12,3 @@ import org.ta4j.core.num.Num;\n- * Indicator that returns {@link NaN#NaN NaN} in unstable bars.\n+ * Indicator that returns {@link NaN#NaN NaN} in unstable bars. The source is\n+ * evaluated during warm-up so a recursive source can retain its seed on a\n+ * bounded series; only this indicator's output is masked.\n@@ -32,0 +35 @@ public class UnstableIndicator extends CachedIndicator<Num> {\n+        Num value = indicator.getValue(index);\n@@ -36 +39 @@ public class UnstableIndicator extends CachedIndicator<Num> {\n-        return indicator.getValue(index);\n+        return value;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java\nindex f15e8748e..5bacac3b2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelLowerIndicator.java\n@@ -57,0 +58,2 @@ public class KeltnerChannelLowerIndicator extends CachedIndicator<Num> {\n+        Num middle = keltnerMiddleIndicator.getValue(index);\n+        Num averageTrueRange = getAverageTrueRangeIndicator().getValue(index);\n@@ -61,2 +63 @@ public class KeltnerChannelLowerIndicator extends CachedIndicator<Num> {\n-        return keltnerMiddleIndicator.getValue(index)\n-                .minus(ratio.multipliedBy(getAverageTrueRangeIndicator().getValue(index)));\n+        return middle.minus(ratio.multipliedBy(averageTrueRange));\n@@ -70,0 +72,9 @@ public class KeltnerChannelLowerIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the middle and ATR retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java\nindex a6a14682e..eed5bb0a4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelMiddleIndicator.java\n@@ -45 +45,5 @@ public class KeltnerChannelMiddleIndicator extends CachedIndicator<Num> {\n-        super(indicator);\n+        this(indicator, barCountEMA, new EMAIndicator(indicator, barCountEMA));\n+    }\n+\n+    private KeltnerChannelMiddleIndicator(Indicator<Num> indicator, int barCountEMA, EMAIndicator emaIndicator) {\n+        super(emaIndicator);\n@@ -48 +52 @@ public class KeltnerChannelMiddleIndicator extends CachedIndicator<Num> {\n-        this.emaIndicator = new EMAIndicator(indicator, barCountEMA);\n+        this.emaIndicator = emaIndicator;\n@@ -52,0 +57 @@ public class KeltnerChannelMiddleIndicator extends CachedIndicator<Num> {\n+        Num average = emaIndicator.getValue(index);\n@@ -56 +61 @@ public class KeltnerChannelMiddleIndicator extends CachedIndicator<Num> {\n-        return emaIndicator.getValue(index);\n+        return average;\n@@ -63,0 +69,9 @@ public class KeltnerChannelMiddleIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the EMA retains full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java\nindex dd5e0cb6d..d40d76f62 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/keltner/KeltnerChannelUpperIndicator.java\n@@ -57,0 +58,2 @@ public class KeltnerChannelUpperIndicator extends CachedIndicator<Num> {\n+        Num middle = keltnerMiddleIndicator.getValue(index);\n+        Num averageTrueRange = getAverageTrueRangeIndicator().getValue(index);\n@@ -61,2 +63 @@ public class KeltnerChannelUpperIndicator extends CachedIndicator<Num> {\n-        return keltnerMiddleIndicator.getValue(index)\n-                .plus(ratio.multipliedBy(getAverageTrueRangeIndicator().getValue(index)));\n+        return middle.plus(ratio.multipliedBy(averageTrueRange));\n@@ -70,0 +72,9 @@ public class KeltnerChannelUpperIndicator extends CachedIndicator<Num> {\n+    /**\n+     * @return {@code true}, because the middle and ATR retain full-history state\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVIndicator.java\nindex 93472dfb9..3bb94d5c8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVIndicator.java\n@@ -482,0 +483 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n+        Num value = getValue(index);\n@@ -486 +487 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n-        return MACDVMomentumState.fromMacdV(getValue(index), momentumProfile);\n+        return MACDVMomentumState.fromMacdV(value, momentumProfile);\n@@ -586,0 +588,7 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n+        ensureSubIndicatorsInitialized();\n+        shortAtrIndicator.getValue(index);\n+        if (longAtrIndicator != shortAtrIndicator) {\n+            longAtrIndicator.getValue(index);\n+        }\n+        Num shortValue = shortTermVwema.getValue(index);\n+        Num longValue = longTermVwema.getValue(index);\n@@ -590,2 +597,0 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n-        Num shortValue = getShortTermVwema().getValue(index);\n-        Num longValue = getLongTermVwema().getValue(index);\n@@ -601,0 +608,11 @@ public class MACDVIndicator extends CachedIndicator<Num> {\n+    /**\n+     * Retains the historical state consumed by the EMA-weighted branches.\n+     *\n+     * @return {@code true}\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVMomentumStateIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVMomentumStateIndicator.java\nindex 7f645cdf6..ac71572af 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVMomentumStateIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/MACDVMomentumStateIndicator.java\n@@ -81,0 +82 @@ public class MACDVMomentumStateIndicator extends CachedIndicator<MACDVMomentumSt\n+        Num value = macdVIndicator.getValue(index);\n@@ -85 +86 @@ public class MACDVMomentumStateIndicator extends CachedIndicator<MACDVMomentumSt\n-        return momentumProfile.classify(macdVIndicator.getValue(index));\n+        return momentumProfile.classify(value);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/VolatilityNormalizedMACDIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/VolatilityNormalizedMACDIndicator.java\nindex 9ab3c968a..874faf9d9 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/VolatilityNormalizedMACDIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/macd/VolatilityNormalizedMACDIndicator.java\n@@ -544,0 +545 @@ public class VolatilityNormalizedMACDIndicator extends CachedIndicator<Num> {\n+        Num value = getValue(index);\n@@ -548 +549 @@ public class VolatilityNormalizedMACDIndicator extends CachedIndicator<Num> {\n-        return MACDVMomentumState.fromMacdV(getValue(index), momentumProfile);\n+        return MACDVMomentumState.fromMacdV(value, momentumProfile);\n@@ -648,0 +650,3 @@ public class VolatilityNormalizedMACDIndicator extends CachedIndicator<Num> {\n+        Num fastValue = getCachedFastEma().getValue(index);\n+        Num slowValue = getCachedSlowEma().getValue(index);\n+        Num atrValue = getCachedAtrIndicator().getValue(index);\n@@ -653,3 +656,0 @@ public class VolatilityNormalizedMACDIndicator extends CachedIndicator<Num> {\n-        Num fastValue = getCachedFastEma().getValue(index);\n-        Num slowValue = getCachedSlowEma().getValue(index);\n-        Num atrValue = getCachedAtrIndicator().getValue(index);\n@@ -671,0 +673,24 @@ public class VolatilityNormalizedMACDIndicator extends CachedIndicator<Num> {\n+    /**\n+     * Retains the historical state consumed by the EMA and ATR branches.\n+     *\n+     * @return {@code true}\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+\n+    /**\n+     * Includes the actual lazily constructed averages in head-advance decisions.\n+     *\n+     * @param firstRetainedIndex the first retained series index\n+     * @return the cache floor derived from all three calculated branches\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected int minimumCacheableIndexAfterHeadAdvance(int firstRetainedIndex) {\n+        return minimumCacheableIndexAfterHeadAdvance(firstRetainedIndex, getCachedFastEma(), getCachedSlowEma(),\n+                getCachedAtrIndicator());\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\nindex 2c950b9a1..5f5226c46 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/DownTrendIndicator.java\n@@ -42,0 +43,4 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n+        Num strength = directionStrengthIndicator.getValue(index);\n+        // Advance both direction chains while their current raw inputs still exist.\n+        minusDIIndicator.getValue(index);\n+        plusDIIndicator.getValue(index);\n@@ -48,4 +52,3 @@ public class DownTrendIndicator extends AbstractIndicator<Boolean> {\n-        final var previousIndex = index - 1;\n-        return this.directionStrengthIndicator.getValue(index).isGreaterThan(strengthThreshold)\n-                && this.minusDIIndicator.getValue(previousIndex)\n-                        .isGreaterThan(this.plusDIIndicator.getValue(previousIndex));\n+        final int previousIndex = index - 1;\n+        return strength.isGreaterThan(strengthThreshold) && this.minusDIIndicator.getValue(previousIndex)\n+                .isGreaterThan(this.plusDIIndicator.getValue(previousIndex));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\nindex 688d36d3e..63579dff4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/trend/UpTrendIndicator.java\n@@ -42,0 +43,4 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n+        Num strength = directionStrengthIndicator.getValue(index);\n+        // Advance both direction chains while their current raw inputs still exist.\n+        minusDIIndicator.getValue(index);\n+        plusDIIndicator.getValue(index);\n@@ -48,4 +52,3 @@ public class UpTrendIndicator extends AbstractIndicator<Boolean> {\n-        final var previousIndex = index - 1;\n-        return this.directionStrengthIndicator.getValue(index).isGreaterThan(strengthThreshold)\n-                && this.minusDIIndicator.getValue(previousIndex)\n-                        .isLessThan(this.plusDIIndicator.getValue(previousIndex));\n+        final int previousIndex = index - 1;\n+        return strength.isGreaterThan(strengthThreshold) && this.minusDIIndicator.getValue(previousIndex)\n+                .isLessThan(this.plusDIIndicator.getValue(previousIndex));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ForceIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ForceIndexIndicator.java\nindex 07bc1b9fe..2077e1303 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ForceIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/volume/ForceIndexIndicator.java\n@@ -131,0 +132 @@ public class ForceIndexIndicator extends CachedIndicator<Num> {\n+        final Num forceIndexValue = smoothedForceIndexIndicator.getValue(index);\n@@ -136 +136,0 @@ public class ForceIndexIndicator extends CachedIndicator<Num> {\n-        final Num forceIndexValue = smoothedForceIndexIndicator.getValue(index);\n@@ -143,0 +144,10 @@ public class ForceIndexIndicator extends CachedIndicator<Num> {\n+    /**\n+     * {@inheritDoc}\n+     *\n+     * @since 0.27.1\n+     */\n+    @Override\n+    protected boolean hasRecursiveDependencies() {\n+        return true;\n+    }\n+"
+}

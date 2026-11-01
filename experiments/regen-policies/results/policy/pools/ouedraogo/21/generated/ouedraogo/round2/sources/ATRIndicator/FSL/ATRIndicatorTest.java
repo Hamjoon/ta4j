@@ -1,0 +1,227 @@
+package org.ta4j.core.indicators;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarConvertibleBuilder;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.NumFactory;
+import org.ta4j.core.indicators.helpers.TRIndicator;
+
+
+import static org.junit.Assert.*;
+
+import java.lang.reflect.Field;
+
+import org.junit.Test;
+
+/**
+ * Unit tests for {@link ATRIndicator}.
+ *
+ * <p>The tests focus on the behaviour that is implemented directly in
+ * {@code ATRIndicator} (delegation, state exposure and {@code toString()}).
+ * No external library classes other than those listed in the dependency
+ * signatures are used.  A very small in‑memory {@link BarSeries}
+ * implementation is provided so that the constructors can be exercised
+ * without needing the full TA4J implementation.</p>
+ */
+public class ATRIndicatorTest {
+
+    /** Minimal {@link BarSeries} implementation used only for construction. */
+    private static class DummyBarSeries implements BarSeries {
+        private final int barCount;
+
+        DummyBarSeries(int barCount) {
+            this.barCount = barCount;
+        }
+
+        @Override
+        public NumFactory numFactory() {
+            // not required for the tests – return {@code null}
+            return null;
+        }
+
+        @Override
+        public BaseBarConvertibleBuilder barBuilder() {
+            return null;
+        }
+
+        @Override
+        public String getName() {
+            return "dummy";
+        }
+
+        @Override
+        public Bar getBar(int i) {
+            return null;
+        }
+
+        @Override
+        public int getBarCount() {
+            return barCount;
+        }
+
+        @Override
+        public java.util.List<Bar> getBarData() {
+            return java.util.Collections.emptyList();
+        }
+
+        @Override
+        public int getBeginIndex() {
+            return 0;
+        }
+
+        @Override
+        public int getEndIndex() {
+            return barCount - 1;
+        }
+
+        @Override
+        public int getMaximumBarCount() {
+            return Integer.MAX_VALUE;
+        }
+
+        @Override
+        public void setMaximumBarCount(int maximumBarCount) {
+            // no‑op
+        }
+
+        @Override
+        public int getRemovedBarsCount() {
+            return 0;
+        }
+
+        @Override
+        public void addBar(Bar bar) {
+            // no‑op
+        }
+
+        @Override
+        public void addBar(Bar bar, boolean replace) {
+            // no‑op
+        }
+
+        @Override
+        public void addTrade(Number tradeVolume, Number tradePrice) {
+            // no‑op
+        }
+
+        @Override
+        public void addTrade(Num tradeVolume, Num tradePrice) {
+            // no‑op
+        }
+
+        @Override
+        public void addPrice(Num price) {
+            // no‑op
+        }
+
+        @Override
+        public void addPrice(Number price) {
+            // no‑op
+        }
+
+        @Override
+        public BarSeries getSubSeries(int startIndex, int endIndex) {
+            return this;
+        }
+    }
+
+    /**
+     * Tests the constructor that receives a {@link BarSeries} and a bar count.
+     */
+    @Test
+    public void testConstructorWithSeries() {
+        int barCount = 5;
+        BarSeries series = new DummyBarSeries(10);
+        ATRIndicator atr = new ATRIndicator(series, barCount);
+
+        // the internal MMAIndicator must have been created with the same barCount
+        assertEquals("getBarCount() should return the barCount supplied to the constructor",
+                barCount, atr.getBarCount());
+
+        // getUnstableBars() is defined to return the same value as getBarCount()
+        assertEquals("getUnstableBars() must be equal to getBarCount()",
+                atr.getBarCount(), atr.getUnstableBars());
+
+        // the TRIndicator created internally must reference the same series
+        assertNotNull("TRIndicator must not be null", atr.getTRIndicator());
+        assertSame("TRIndicator should have been created with the supplied series",
+                series, atr.getTRIndicator().getBarSeries());
+
+        // toString must contain the simple class name and the bar count
+        String toString = atr.toString();
+        assertTrue("toString() must contain the class name",
+                toString.contains(ATRIndicator.class.getSimpleName()));
+        assertTrue("toString() must contain the bar count",
+                toString.contains(String.valueOf(barCount)));
+    }
+
+    /**
+     * Tests the constructor that receives an already built {@link TRIndicator}
+     * and a bar count.
+     */
+    @Test
+    public void testConstructorWithTRIndicator() {
+        int barCount = 3;
+        BarSeries series = new DummyBarSeries(5);
+        TRIndicator tr = new TRIndicator(series);
+        ATRIndicator atr = new ATRIndicator(tr, barCount);
+
+        // the supplied TRIndicator must be returned unchanged
+        assertSame("getTRIndicator() must return the TRIndicator supplied to the constructor",
+                tr, atr.getTRIndicator());
+
+        // bar count must be correctly exposed
+        assertEquals(barCount, atr.getBarCount());
+
+        // unstable bars must match the bar count
+        assertEquals(barCount, atr.getUnstableBars());
+
+        // toString format check
+        String s = atr.toString();
+        assertTrue(s.startsWith(ATRIndicator.class.getSimpleName()));
+        assertTrue(s.contains(String.valueOf(barCount)));
+    }
+
+    /**
+     * Verifies that {@code getValue(int)} simply delegates to the internal
+     * {@link MMAIndicator}.  The test uses reflection to obtain the private
+     * field {@code averageTrueRangeIndicator} and compares the two results.
+     *
+     * <p>Only the delegation logic is verified – the actual numerical value
+     * depends on the library's EMA implementation and is therefore not asserted.</p>
+     */
+    @Test
+    public void testGetValueDelegatesToMMAIndicator() throws Exception {
+        BarSeries series = new DummyBarSeries(2);
+        int barCount = 1;
+        ATRIndicator atr = new ATRIndicator(series, barCount);
+
+        // Access the private MMAIndicator field
+        Field field = ATRIndicator.class.getDeclaredField("averageTrueRangeIndicator");
+        field.setAccessible(true);
+        MMAIndicator mma = (MMAIndicator) field.get(atr);
+
+        // Choose an index that is guaranteed to be inside the series range
+        int index = 0;
+
+        // The two values must be equal (delegation)
+        assertEquals("ATRIndicator.getValue should delegate to the internal MMAIndicator",
+                mma.getValue(index), atr.getValue(index));
+    }
+
+    /**
+     * Edge case: a zero‑length bar count.  The indicator should still expose the
+     * correct values without throwing.
+     */
+    @Test
+    public void testZeroBarCount() {
+        BarSeries series = new DummyBarSeries(1);
+        ATRIndicator atr = new ATRIndicator(series, 0);
+
+        assertEquals(0, atr.getBarCount());
+        assertEquals(0, atr.getUnstableBars());
+
+        // toString must still contain the bar count (0)
+        assertTrue(atr.toString().contains("0"));
+    }
+}

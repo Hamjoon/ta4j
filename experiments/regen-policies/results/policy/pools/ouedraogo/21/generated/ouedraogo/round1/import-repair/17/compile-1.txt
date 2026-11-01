@@ -1,0 +1,78 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:130: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(series.numFactory().numOf(1), // open
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:135: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(series.numFactory().numOf(2), n2, n2, n2, n2);
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:136: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(series.numFactory().numOf(3), n3, n3, n3, n3);
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:137: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(series.numFactory().numOf(4), n4, n4, n4, n4);
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:138: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(series.numFactory().numOf(5), n5, n5, n5, n5);
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:140: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        series.addBar(series.numFactory().numOf(6), series.numFactory().numOf(6),
+              ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:352: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        revSeries.addBar(series.numFactory().numOf(5), series.numFactory().numOf(5),
+                 ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:354: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        revSeries.addBar(series.numFactory().numOf(4), series.numFactory().numOf(4),
+                 ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:356: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        revSeries.addBar(series.numFactory().numOf(3), series.numFactory().numOf(3),
+                 ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:358: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        revSeries.addBar(series.numFactory().numOf(2), series.numFactory().numOf(2),
+                 ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:360: error: no suitable method found for addBar(Num,Num,Num,Num,Num)
+        revSeries.addBar(series.numFactory().numOf(1), series.numFactory().numOf(1),
+                 ^
+    method BarSeries.addBar(Bar) is not applicable
+      (actual and formal argument lists differ in length)
+    method BarSeries.addBar(Bar,boolean) is not applicable
+      (actual and formal argument lists differ in length)
+11 errors

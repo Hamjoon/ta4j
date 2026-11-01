@@ -1,0 +1,2146 @@
+{
+  "org.ta4j.core.AnalysisCriterion": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.AnalysisCriterion.PositionFilter": {
+    "package": "org.ta4j.core",
+    "kind": "ENUM",
+    "modifiers": "public static",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.Bar": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Serializable"
+  },
+  "org.ta4j.core.BarSeries": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Serializable"
+  },
+  "org.ta4j.core.BarSeriesBuilder": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.BaseBar": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Bar"
+  },
+  "org.ta4j.core.BaseBarBuilder": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.BaseBarConvertibleBuilder": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "T",
+    "extends": "BaseBarBuilder",
+    "implements": ""
+  },
+  "org.ta4j.core.BaseBarSeries": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "BarSeries"
+  },
+  "org.ta4j.core.BaseBarSeriesBuilder": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "BarSeriesBuilder"
+  },
+  "org.ta4j.core.BaseStrategy": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Strategy"
+  },
+  "org.ta4j.core.BaseTradingRecord": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "TradingRecord"
+  },
+  "org.ta4j.core.Indicator": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "T",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.Position": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Serializable"
+  },
+  "org.ta4j.core.Rule": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.Strategy": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.Trade": {
+    "package": "org.ta4j.core",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Serializable"
+  },
+  "org.ta4j.core.Trade.TradeType": {
+    "package": "org.ta4j.core",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.TradingRecord": {
+    "package": "org.ta4j.core",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Serializable"
+  },
+  "org.ta4j.core.aggregator.BarAggregator": {
+    "package": "org.ta4j.core.aggregator",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.aggregator.BarSeriesAggregator": {
+    "package": "org.ta4j.core.aggregator",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.aggregator.BaseBarSeriesAggregator": {
+    "package": "org.ta4j.core.aggregator",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "BarSeriesAggregator"
+  },
+  "org.ta4j.core.aggregator.DurationBarAggregator": {
+    "package": "org.ta4j.core.aggregator",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "BarAggregator"
+  },
+  "org.ta4j.core.analysis.CashFlow": {
+    "package": "org.ta4j.core.analysis",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Indicator<Num>"
+  },
+  "org.ta4j.core.analysis.Returns": {
+    "package": "org.ta4j.core.analysis",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Indicator<Num>"
+  },
+  "org.ta4j.core.analysis.Returns.ReturnType": {
+    "package": "org.ta4j.core.analysis",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.analysis.cost.CostModel": {
+    "package": "org.ta4j.core.analysis.cost",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.analysis.cost.FixedTransactionCostModel": {
+    "package": "org.ta4j.core.analysis.cost",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "CostModel"
+  },
+  "org.ta4j.core.analysis.cost.LinearBorrowingCostModel": {
+    "package": "org.ta4j.core.analysis.cost",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "CostModel"
+  },
+  "org.ta4j.core.analysis.cost.LinearTransactionCostModel": {
+    "package": "org.ta4j.core.analysis.cost",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "CostModel"
+  },
+  "org.ta4j.core.analysis.cost.ZeroCostModel": {
+    "package": "org.ta4j.core.analysis.cost",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "FixedTransactionCostModel",
+    "implements": ""
+  },
+  "org.ta4j.core.backtest.BacktestExecutor": {
+    "package": "org.ta4j.core.backtest",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.backtest.BarSeriesManager": {
+    "package": "org.ta4j.core.backtest",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.backtest.TradeExecutionModel": {
+    "package": "org.ta4j.core.backtest",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.backtest.TradeOnCurrentCloseModel": {
+    "package": "org.ta4j.core.backtest",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "TradeExecutionModel"
+  },
+  "org.ta4j.core.backtest.TradeOnNextOpenModel": {
+    "package": "org.ta4j.core.backtest",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "TradeExecutionModel"
+  },
+  "org.ta4j.core.criteria.AbstractAnalysisCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public abstract",
+    "parameters": "",
+    "extends": "",
+    "implements": "AnalysisCriterion"
+  },
+  "org.ta4j.core.criteria.AverageReturnPerBarCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.EnterAndHoldReturnCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.ExpectancyCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.ExpectedShortfallCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.LinearTransactionCostCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.MaximumDrawdownCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.NumberOfBarsCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.NumberOfBreakEvenPositionsCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.NumberOfConsecutivePositionsCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.NumberOfLosingPositionsCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.NumberOfPositionsCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.NumberOfWinningPositionsCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.PositionsRatioCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.ReturnOverMaxDrawdownCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.SqnCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.ValueAtRiskCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.VersusEnterAndHoldCriterion": {
+    "package": "org.ta4j.core.criteria",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.helpers.AverageCriterion": {
+    "package": "org.ta4j.core.criteria.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.helpers.RelativeStandardDeviationCriterion": {
+    "package": "org.ta4j.core.criteria.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.helpers.StandardDeviationCriterion": {
+    "package": "org.ta4j.core.criteria.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.helpers.StandardErrorCriterion": {
+    "package": "org.ta4j.core.criteria.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.helpers.VarianceCriterion": {
+    "package": "org.ta4j.core.criteria.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.AverageLossCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.AverageProfitCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.LossCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.ProfitCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.ProfitLossCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.ProfitLossPercentageCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.ProfitLossRatioCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.criteria.pnl.ReturnCriterion": {
+    "package": "org.ta4j.core.criteria.pnl",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractAnalysisCriterion",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ATRIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.AbstractEMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public abstract",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.AbstractIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public abstract",
+    "parameters": "T",
+    "extends": "",
+    "implements": "Indicator<T>"
+  },
+  "org.ta4j.core.indicators.AccelerationDecelerationIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.AwesomeOscillatorIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.CCIIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.CMOIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.CachedIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public abstract",
+    "parameters": "T",
+    "extends": "AbstractIndicator<T>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ChandelierExitLongIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ChandelierExitShortIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ChopIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.CoppockCurveIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.DPOIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.DistanceFromMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.DoubleEMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.EMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractEMAIndicator",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.FisherIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.HMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.IntraDayMomentumIndexIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.KAMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.KSTIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.LWMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.MACDIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.MMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractEMAIndicator",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.MassIndexIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.PPOIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.PVOIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "PPOIndicator",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ParabolicSarIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.RAVIIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ROCIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.RSIIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.RWIHighIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.RWILowIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.RecursiveCachedIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public abstract",
+    "parameters": "T",
+    "extends": "CachedIndicator<T>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.SMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.StochasticOscillatorDIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.StochasticOscillatorKIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.StochasticRSIIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.TripleEMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.UlcerIndexIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.WMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.WilliamsRIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ZLEMAIndicator": {
+    "package": "org.ta4j.core.indicators",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.adx.ADXIndicator": {
+    "package": "org.ta4j.core.indicators.adx",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.adx.DXIndicator": {
+    "package": "org.ta4j.core.indicators.adx",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.adx.MinusDIIndicator": {
+    "package": "org.ta4j.core.indicators.adx",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.adx.MinusDMIndicator": {
+    "package": "org.ta4j.core.indicators.adx",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.adx.PlusDIIndicator": {
+    "package": "org.ta4j.core.indicators.adx",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.adx.PlusDMIndicator": {
+    "package": "org.ta4j.core.indicators.adx",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.aroon.AroonDownIndicator": {
+    "package": "org.ta4j.core.indicators.aroon",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.aroon.AroonFacade": {
+    "package": "org.ta4j.core.indicators.aroon",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.aroon.AroonOscillatorIndicator": {
+    "package": "org.ta4j.core.indicators.aroon",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.aroon.AroonUpIndicator": {
+    "package": "org.ta4j.core.indicators.aroon",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.bollinger.BollingerBandFacade": {
+    "package": "org.ta4j.core.indicators.bollinger",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.bollinger.BollingerBandWidthIndicator": {
+    "package": "org.ta4j.core.indicators.bollinger",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.bollinger.BollingerBandsLowerIndicator": {
+    "package": "org.ta4j.core.indicators.bollinger",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.bollinger.BollingerBandsMiddleIndicator": {
+    "package": "org.ta4j.core.indicators.bollinger",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.bollinger.BollingerBandsUpperIndicator": {
+    "package": "org.ta4j.core.indicators.bollinger",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.bollinger.PercentBIndicator": {
+    "package": "org.ta4j.core.indicators.bollinger",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.BearishEngulfingIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.BearishHaramiIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.BullishEngulfingIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.BullishHaramiIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.DojiIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.LowerShadowIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.RealBodyIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.ThreeBlackCrowsIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.ThreeWhiteSoldiersIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.candles.UpperShadowIndicator": {
+    "package": "org.ta4j.core.indicators.candles",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.donchian.DonchianChannelLowerIndicator": {
+    "package": "org.ta4j.core.indicators.donchian",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.donchian.DonchianChannelMiddleIndicator": {
+    "package": "org.ta4j.core.indicators.donchian",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.donchian.DonchianChannelUpperIndicator": {
+    "package": "org.ta4j.core.indicators.donchian",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.AmountIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.BooleanTransformIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.BooleanTransformIndicator.BooleanTransformType": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.BooleanTransformIndicator.BooleanTransformSimpleType": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.CloseLocationValueIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ClosePriceDifferenceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ClosePriceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ClosePriceRatioIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.CombineIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ConstantIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "T",
+    "extends": "AbstractIndicator<T>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicator.ConvergenceDivergenceType": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.ConvergenceDivergenceIndicator.ConvergenceDivergenceStrictType": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.CrossIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.DateTimeIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<ZonedDateTime>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.DifferencePercentageIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.FixedBooleanIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "FixedIndicator<Boolean>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.FixedDecimalIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "FixedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.FixedIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "T",
+    "extends": "AbstractIndicator<T>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.GainIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.HighPriceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.HighestValueIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.LossIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.LowPriceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.LowestValueIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.MedianPriceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.NumIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.OpenPriceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.PreviousValueIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.RunningTotalIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.SumIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.TRIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.TradeCountIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Long>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.TransformIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.TypicalPriceIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.UnstableIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.helpers.VolumeIndicator": {
+    "package": "org.ta4j.core.indicators.helpers",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ichimoku.IchimokuChikouSpanIndicator": {
+    "package": "org.ta4j.core.indicators.ichimoku",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ichimoku.IchimokuKijunSenIndicator": {
+    "package": "org.ta4j.core.indicators.ichimoku",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "IchimokuLineIndicator",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ichimoku.IchimokuLineIndicator": {
+    "package": "org.ta4j.core.indicators.ichimoku",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ichimoku.IchimokuSenkouSpanAIndicator": {
+    "package": "org.ta4j.core.indicators.ichimoku",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ichimoku.IchimokuSenkouSpanBIndicator": {
+    "package": "org.ta4j.core.indicators.ichimoku",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.ichimoku.IchimokuTenkanSenIndicator": {
+    "package": "org.ta4j.core.indicators.ichimoku",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "IchimokuLineIndicator",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.keltner.KeltnerChannelFacade": {
+    "package": "org.ta4j.core.indicators.keltner",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.keltner.KeltnerChannelLowerIndicator": {
+    "package": "org.ta4j.core.indicators.keltner",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.keltner.KeltnerChannelMiddleIndicator": {
+    "package": "org.ta4j.core.indicators.keltner",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.keltner.KeltnerChannelUpperIndicator": {
+    "package": "org.ta4j.core.indicators.keltner",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.numeric.BinaryOperation": {
+    "package": "org.ta4j.core.indicators.numeric",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Indicator<Num>"
+  },
+  "org.ta4j.core.indicators.numeric.NumericIndicator": {
+    "package": "org.ta4j.core.indicators.numeric",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Indicator<Num>"
+  },
+  "org.ta4j.core.indicators.numeric.UnaryOperation": {
+    "package": "org.ta4j.core.indicators.numeric",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Indicator<Num>"
+  },
+  "org.ta4j.core.indicators.pivotpoints.DeMarkPivotPointIndicator": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.DeMarkReversalIndicator": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.DeMarkReversalIndicator.DeMarkPivotLevel": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.FibonacciReversalIndicator": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.FibonacciReversalIndicator.FibReversalTyp": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.FibonacciReversalIndicator.FibonacciFactor": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.PivotLevel": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.PivotPointIndicator": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.StandardReversalIndicator": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.pivotpoints.TimeLevel": {
+    "package": "org.ta4j.core.indicators.pivotpoints",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.CorrelationCoefficientIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.CovarianceIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.MeanDeviationIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.PearsonCorrelationIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.PeriodicalGrowthRateIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.SigmaIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.SimpleLinearRegressionIndicator.SimpleLinearRegressionType": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "ENUM",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.StandardDeviationIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.StandardErrorIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.statistics.VarianceIndicator": {
+    "package": "org.ta4j.core.indicators.statistics",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.supertrend.SuperTrendIndicator": {
+    "package": "org.ta4j.core.indicators.supertrend",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.supertrend.SuperTrendLowerBandIndicator": {
+    "package": "org.ta4j.core.indicators.supertrend",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.supertrend.SuperTrendUpperBandIndicator": {
+    "package": "org.ta4j.core.indicators.supertrend",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.AccumulationDistributionIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.ChaikinMoneyFlowIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.ChaikinOscillatorIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.IIIIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.MVWAPIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.MoneyFlowIndexIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.NVIIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.OnBalanceVolumeIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.PVIIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "RecursiveCachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.ROCVIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.RelativeVolumeStandardDeviationIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.TimeSegmentedVolumeIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.indicators.volume.VWAPIndicator": {
+    "package": "org.ta4j.core.indicators.volume",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "CachedIndicator<Num>",
+    "implements": ""
+  },
+  "org.ta4j.core.num.DecimalNum": {
+    "package": "org.ta4j.core.num",
+    "kind": "CLASS",
+    "modifiers": "public final",
+    "parameters": "",
+    "extends": "",
+    "implements": "Num"
+  },
+  "org.ta4j.core.num.DoubleNum": {
+    "package": "org.ta4j.core.num",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Num"
+  },
+  "org.ta4j.core.num.NaN": {
+    "package": "org.ta4j.core.num",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Num"
+  },
+  "org.ta4j.core.num.Num": {
+    "package": "org.ta4j.core.num",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Comparable<Num>,Serializable"
+  },
+  "org.ta4j.core.reports.PerformanceReport": {
+    "package": "org.ta4j.core.reports",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.reports.PerformanceReportGenerator": {
+    "package": "org.ta4j.core.reports",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "ReportGenerator<PerformanceReport>"
+  },
+  "org.ta4j.core.reports.PositionStatsReport": {
+    "package": "org.ta4j.core.reports",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.reports.PositionStatsReportGenerator": {
+    "package": "org.ta4j.core.reports",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "ReportGenerator<PositionStatsReport>"
+  },
+  "org.ta4j.core.reports.ReportGenerator": {
+    "package": "org.ta4j.core.reports",
+    "kind": "INTERFACE",
+    "modifiers": "public",
+    "parameters": "T",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.reports.TradingStatement": {
+    "package": "org.ta4j.core.reports",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.reports.TradingStatementGenerator": {
+    "package": "org.ta4j.core.reports",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "ReportGenerator<TradingStatement>"
+  },
+  "org.ta4j.core.rules.AbstractRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public abstract",
+    "parameters": "",
+    "extends": "",
+    "implements": "Rule"
+  },
+  "org.ta4j.core.rules.AndRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.BooleanIndicatorRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.BooleanRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.ChainRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.CrossedDownIndicatorRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.CrossedUpIndicatorRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.DayOfWeekRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.FixedRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.InPipeRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.InSlopeRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.IsEqualRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.IsFallingRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.IsHighestRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.IsLowestRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.IsRisingRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.JustOnceRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.NotRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.OpenedPositionMinimumBarCountRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.OrRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.OverIndicatorRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.StopGainRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.StopLossRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.TimeRangeRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.TimeRangeRule.TimeRange": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public static",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.TrailingStopLossRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.UnderIndicatorRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.WaitForRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.XorRule": {
+    "package": "org.ta4j.core.rules",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "AbstractRule",
+    "implements": ""
+  },
+  "org.ta4j.core.rules.helper.ChainLink": {
+    "package": "org.ta4j.core.rules.helper",
+    "kind": "CLASS",
+    "modifiers": "public",
+    "parameters": "",
+    "extends": "",
+    "implements": "Serializable"
+  },
+  "org.ta4j.core.utils.BarSeriesUtils": {
+    "package": "org.ta4j.core.utils",
+    "kind": "CLASS",
+    "modifiers": "public final",
+    "parameters": "",
+    "extends": "",
+    "implements": ""
+  }
+}

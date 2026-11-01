@@ -1,0 +1,41 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:13: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:60: error: cannot find symbol
+    private Num n(Number value) {
+            ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:127: error: cannot find symbol
+        ConstantIndicator<Num> negativeFour = new ConstantIndicator<>(series, n(-4));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:159: error: cannot find symbol
+        Num expectedEma1 = close.getValue(1).multipliedBy(n(2.0 / (2 + 1))).plus(
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:172: error: cannot find symbol
+        Num expectedStd = n(2).sqrt();
+        ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:199: error: cannot find symbol
+        Indicator<Num> prevDefault = close.previous();
+        ^
+  symbol:   class Indicator
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:199: error: cannot find symbol
+        Indicator<Num> prevDefault = close.previous();
+                  ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/NumericIndicator/ZSL/NumericIndicatorTest.java:247: error: cannot find symbol
+        ConstantIndicator<Num> constThree = new ConstantIndicator<>(series, n(3));
+                          ^
+  symbol:   class Num
+  location: class NumericIndicatorTest
+8 errors

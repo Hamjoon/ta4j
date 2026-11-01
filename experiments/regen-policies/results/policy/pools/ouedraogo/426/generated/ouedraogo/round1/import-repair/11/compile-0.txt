@@ -1,0 +1,43 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:47: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+                        new org.ta4j.core.BaseBar(numFactory.numOf(0), price, price, price, price, numFactory.one())
+                        ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:185: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+        snapshot1.addBar(new org.ta4j.core.BaseBar(nf.numOf(1), nf.numOf(200), nf.numOf(200), nf.numOf(200), nf.numOf(200), nf.one()));
+                         ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:222: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+                        new org.ta4j.core.BaseBar(nf.numOf(0), nf.numOf(50), nf.numOf(50), nf.numOf(50), nf.numOf(50), nf.one()),
+                        ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:223: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+                        new org.ta4j.core.BaseBar(nf.numOf(1), nf.numOf(100), nf.numOf(100), nf.numOf(100), nf.numOf(100), nf.one())
+                        ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:254: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+                        new org.ta4j.core.BaseBar(nf.numOf(0), nf.numOf(100), nf.numOf(100), nf.numOf(100), nf.numOf(100), nf.one()),
+                        ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/CashFlow/FSL/CashFlowTest.java:255: error: no suitable constructor found for BaseBar(Num,Num,Num,Num,Num,Num)
+                        new org.ta4j.core.BaseBar(nf.numOf(1), nf.numOf(50), nf.numOf(50), nf.numOf(50), nf.numOf(50), nf.one())
+                        ^
+    constructor BaseBar.BaseBar(Duration,Instant,Instant,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+    constructor BaseBar.BaseBar(ResolvedTimes,Num,Num,Num,Num,Num,Num,long) is not applicable
+      (actual and formal argument lists differ in length)
+6 errors

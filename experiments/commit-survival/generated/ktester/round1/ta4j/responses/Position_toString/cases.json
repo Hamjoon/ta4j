@@ -1,0 +1,77 @@
+[
+  {
+    "group": "Position.toString()",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Entry: null exit: null",
+        "description": "Both entry and exit trades are null. The default string representation should show the literal \"null\" for each part."
+      },
+      {
+        "input": [],
+        "expected": "Entry: Trade[id=E1] exit: null",
+        "description": "Only the entry trade is set (non\u2011null). The toString() should concatenate the entry's toString() value and the literal \"null\" for the exit."
+      },
+      {
+        "input": [],
+        "expected": "Entry: null exit: Trade[id=X1]",
+        "description": "Only the exit trade is set (non\u2011null). The method should display \"null\" for the entry and the exit's toString() value."
+      },
+      {
+        "input": [],
+        "expected": "Entry: Trade[id=E2] exit: Trade[id=X2]",
+        "description": "Both entry and exit trades are non\u2011null. The resulting string must contain the entry's toString() followed by a space, the word \"exit:\" and the exit's toString()."
+      }
+    ]
+  },
+  {
+    "group": "Position.toString() - entry empty string",
+    "cases": [
+      {
+        "input": [],
+        "expected": "Entry:  exit: Trade[id=X3]",
+        "description": "Entry trade's toString() returns an empty string while exit trade is a normal non\u2011null Trade. The method should concatenate the empty entry string with the literal \"exit:\" and the exit's toString() value."
+      }
+    ]
+  },
+  {
+    "group": "Position.toString() - entry toString throws IllegalStateException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IllegalStateException",
+        "description": "The entry Trade object's toString() method is overridden to throw an IllegalStateException. When Position.toString() is invoked, the exception should be propagated unchanged."
+      }
+    ]
+  },
+  {
+    "group": "Position.toString() - entry toString throws NullPointerException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "The entry Trade object's toString() method is overridden to throw a NullPointerException. Position.toString() must not catch it; the same exception should be thrown to the caller."
+      }
+    ]
+  },
+  {
+    "group": "Position.toString() - exit toString throws RuntimeException",
+    "cases": [
+      {
+        "input": [],
+        "expected": "RuntimeException",
+        "description": "The exit Trade object's toString() method is overridden to throw a generic RuntimeException. Position.toString() should propagate this exception."
+      }
+    ]
+  },
+  {
+    "group": "Position.toString() - both entry and exit toString throw",
+    "cases": [
+      {
+        "input": [],
+        "expected": "IllegalStateException",
+        "description": "Both entry and exit Trade objects have toString() implementations that throw exceptions, but entry's exception (IllegalStateException) occurs first. Position.toString() should propagate the first encountered exception."
+      }
+    ]
+  }
+]

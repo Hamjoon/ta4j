@@ -1,0 +1,26 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:99: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:108: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:122: error: getEndTime() in SimpleBar cannot implement getEndTime() in Bar
+        @Override public long getEndTime() { return 0L; }
+                              ^
+  return type long is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:123: error: getBeginTime() in SimpleBar cannot implement getBeginTime() in Bar
+        @Override public long getBeginTime() { return 0L; }
+                              ^
+  return type long is not compatible with Instant
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:121: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:122: error: method does not override or implement a method from a supertype
+        @Override public long getEndTime() { return 0L; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:123: error: method does not override or implement a method from a supertype
+        @Override public long getBeginTime() { return 0L; }
+        ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+7 errors

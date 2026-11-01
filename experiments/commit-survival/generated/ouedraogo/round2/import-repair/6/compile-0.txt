@@ -1,0 +1,55 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:21: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:71: error: ONE has private access in DecimalNum
+            Num high = open.plus(DecimalNum.ONE);
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:72: error: ONE has private access in DecimalNum
+            Num low = open.minus(DecimalNum.ONE);
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:83: error: ONE has private access in DecimalNum
+        one = DecimalNum.ONE;
+                        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:157: error: cannot find symbol
+        Rule entry = new BooleanRule(true);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:158: error: cannot find symbol
+        Rule exit = new BooleanRule(true);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:206: error: cannot find symbol
+        Rule entry = new BooleanRule(true);   // always true → entry on first opportunity
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:207: error: cannot find symbol
+        Rule exit = new BooleanRule(false);   // never exit inside the run
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:211: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, one, 0, 2);
+                                                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:221: error: cannot find symbol
+        Rule exitNow = new BooleanRule(true);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:226: error: cannot find symbol
+        TradingRecord finalRecord = manager.run(closingStrategy, TradeType.BUY, one, 3, 4);
+                                                                 ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:245: error: cannot find symbol
+        TradingRecord record = manager.run(alwaysTrue, TradeType.BUY, amount, 0, 2);
+                                                       ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+12 errors

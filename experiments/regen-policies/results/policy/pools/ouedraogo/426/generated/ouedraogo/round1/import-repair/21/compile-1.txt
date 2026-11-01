@@ -1,0 +1,8 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java:23: error: SimpleNum is not abstract and does not override abstract method max(Num) in Num
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/Position/FSL/PositionTest.java:159: error: reference to Position is ambiguous
+        new Position(null, new ZeroCostModel(), new ZeroCostModel());
+        ^
+  both constructor Position(TradeType,CostModel,CostModel) in Position and constructor Position(Trade,CostModel,CostModel) in Position match
+2 errors

@@ -1,0 +1,420 @@
+Imagine three different experts in software testing who are tasked with developing comprehensive JUnit 4 test cases for the following Java class. All experts will propose one test cases for each method, share it with the group, and then proceed to the next step. If any expert realizes they're wrong at any point, they leave.
+The Java class is:
+/*
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2017-2024 Ta4j Organization & respective
+ * authors (see AUTHORS)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+package org.ta4j.core.backtest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseTradingRecord;
+import org.ta4j.core.Strategy;
+import org.ta4j.core.Trade.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.analysis.cost.CostModel;
+import org.ta4j.core.analysis.cost.ZeroCostModel;
+import org.ta4j.core.num.Num;
+
+/**
+ * A manager for {@link BarSeries} objects used for backtesting. Allows to run a
+ * {@link Strategy trading strategy} over the managed bar series.
+ */
+public class BarSeriesManager {
+
+    /** The logger */
+    private static final Logger log = LoggerFactory.getLogger(BarSeriesManager.class);
+
+    /** The managed bar series */
+    private final BarSeries barSeries;
+
+    /** The trading cost models */
+    private final CostModel transactionCostModel;
+    private final CostModel holdingCostModel;
+
+    /** The trade execution model to use */
+    private final TradeExecutionModel tradeExecutionModel;
+
+    /**
+     * Constructor with {@link #tradeExecutionModel} = {@link TradeOnNextOpenModel}.
+     *
+     * @param barSeries the bar series to be managed
+     */
+    public BarSeriesManager(BarSeries barSeries) {
+        this(barSeries, new ZeroCostModel(), new ZeroCostModel(), new TradeOnNextOpenModel());
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param barSeries           the bar series to be managed
+     * @param tradeExecutionModel the trade execution model to use
+     */
+    public BarSeriesManager(BarSeries barSeries, TradeExecutionModel tradeExecutionModel) {
+        this(barSeries, new ZeroCostModel(), new ZeroCostModel(), tradeExecutionModel);
+    }
+
+    /**
+     * Constructor with {@link #tradeExecutionModel} = {@link TradeOnNextOpenModel}.
+     *
+     * @param barSeries            the bar series to be managed
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding the asset (e.g.
+     *                             borrowing)
+     */
+    public BarSeriesManager(BarSeries barSeries, CostModel transactionCostModel, CostModel holdingCostModel) {
+        this.barSeries = barSeries;
+        this.transactionCostModel = transactionCostModel;
+        this.holdingCostModel = holdingCostModel;
+        this.tradeExecutionModel = new TradeOnNextOpenModel();
+    }
+
+    /**
+     * Constructor.
+     *
+     * @param barSeries            the bar series to be managed
+     * @param transactionCostModel the cost model for transactions of the asset
+     * @param holdingCostModel     the cost model for holding asset (e.g. borrowing)
+     * @param tradeExecutionModel  the trade execution model to use
+     */
+    public BarSeriesManager(BarSeries barSeries, CostModel transactionCostModel, CostModel holdingCostModel,
+            TradeExecutionModel tradeExecutionModel) {
+        this.barSeries = barSeries;
+        this.transactionCostModel = transactionCostModel;
+        this.holdingCostModel = holdingCostModel;
+        this.tradeExecutionModel = tradeExecutionModel;
+    }
+
+    /**
+     * @return the managed bar series
+     */
+    public BarSeries getBarSeries() {
+        return barSeries;
+    }
+
+    /**
+     * @return the transaction cost model
+     */
+    public CostModel getTransactionCostModel() {
+        return transactionCostModel;
+    }
+
+    /**
+     * @return the holding cost model
+     */
+    public CostModel getHoldingCostModel() {
+        return holdingCostModel;
+    }
+
+    /**
+     * Runs the provided strategy over the managed series.
+     *
+     * Opens the position with a {@link TradeType} BUY trade.
+     *
+     * @return the trading record coming from the run
+     */
+    public TradingRecord run(Strategy strategy) {
+        return run(strategy, TradeType.BUY);
+    }
+
+    /**
+     * Runs the provided strategy over the managed series (from startIndex to
+     * finishIndex).
+     *
+     * Opens the position with a {@link TradeType} BUY trade.
+     *
+     * @param strategy    the trading strategy
+     * @param startIndex  the start index for the run (included)
+     * @param finishIndex the finish index for the run (included)
+     * @return the trading record coming from the run
+     */
+    public TradingRecord run(Strategy strategy, int startIndex, int finishIndex) {
+        return run(strategy, TradeType.BUY, barSeries.numFactory().one(), startIndex, finishIndex);
+    }
+
+    /**
+     * Runs the provided strategy over the managed series.
+     *
+     * Opens the position with a trade of {@link TradeType tradeType}.
+     *
+     * @param strategy  the trading strategy
+     * @param tradeType the {@link TradeType} used to open the position
+     * @return the trading record coming from the run
+     */
+    public TradingRecord run(Strategy strategy, TradeType tradeType) {
+        return run(strategy, tradeType, barSeries.numFactory().one());
+    }
+
+    /**
+     * Runs the provided strategy over the managed series (from startIndex to
+     * finishIndex).
+     *
+     * Opens the position with a trade of {@link TradeType tradeType}.
+     *
+     * @param strategy    the trading strategy
+     * @param tradeType   the {@link TradeType} used to open the position
+     * @param startIndex  the start index for the run (included)
+     * @param finishIndex the finish index for the run (included)
+     * @return the trading record coming from the run
+     */
+    public TradingRecord run(Strategy strategy, TradeType tradeType, int startIndex, int finishIndex) {
+        return run(strategy, tradeType, barSeries.numFactory().one(), startIndex, finishIndex);
+    }
+
+    /**
+     * Runs the provided strategy over the managed series.
+     *
+     * @param strategy  the trading strategy
+     * @param tradeType the {@link TradeType} used to open the position
+     * @param amount    the amount used to open/close the trades
+     * @return the trading record coming from the run
+     */
+    public TradingRecord run(Strategy strategy, TradeType tradeType, Num amount) {
+        return run(strategy, tradeType, amount, barSeries.getBeginIndex(), barSeries.getEndIndex());
+    }
+
+    /**
+     * Runs the provided strategy over the managed series (from startIndex to
+     * finishIndex).
+     *
+     * @param strategy    the trading strategy
+     * @param tradeType   the {@link TradeType} used to open the trades
+     * @param amount      the amount used to open/close the trades
+     * @param startIndex  the start index for the run (included)
+     * @param finishIndex the finish index for the run (included)
+     * @return the trading record coming from the run
+     */
+    public TradingRecord run(Strategy strategy, TradeType tradeType, Num amount, int startIndex, int finishIndex) {
+
+        int runBeginIndex = Math.max(startIndex, barSeries.getBeginIndex());
+        int runEndIndex = Math.min(finishIndex, barSeries.getEndIndex());
+
+        if (log.isTraceEnabled()) {
+            log.trace("Running strategy (indexes: {} -> {}): {} (starting with {})", runBeginIndex, runEndIndex,
+                    strategy, tradeType);
+        }
+
+        TradingRecord tradingRecord = new BaseTradingRecord(tradeType, runBeginIndex, runEndIndex, transactionCostModel,
+                holdingCostModel);
+
+        for (int i = runBeginIndex; i <= runEndIndex; i++) {
+            // For each bar between both indexes...
+            if (strategy.shouldOperate(i, tradingRecord)) {
+                tradeExecutionModel.execute(i, tradingRecord, barSeries, amount);
+            }
+        }
+
+        if (!tradingRecord.isClosed() && runEndIndex == barSeries.getEndIndex()) {
+            // If the last position is still open and there are still bars after the
+            // endIndex of the barSeries, then we execute the strategy on these bars
+            // to give an opportunity to close this position.
+            int seriesMaxSize = Math.max(barSeries.getEndIndex() + 1, barSeries.getBarData().size());
+            for (int i = runEndIndex + 1; i < seriesMaxSize; i++) {
+                // For each bar after the end index of this run...
+                // --> Trying to close the last position
+                if (strategy.shouldOperate(i, tradingRecord)) {
+                    tradeExecutionModel.execute(i, tradingRecord, barSeries, amount);
+                    break;
+                }
+            }
+        }
+        return tradingRecord;
+    }
+
+}
+
+
+Use only classes, constructors and methods that appear in the class source above or in the dependency signatures below. Do not use APIs from other versions of this library. Construct real objects through the constructors or factory methods shown instead of mocking; do not mock or subclass abstract classes or interfaces of this library.
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BaseBarConvertibleBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.backtest.TradeExecutionModel
+public interface TradeExecutionModel {
+   void execute(int index, TradingRecord tradingRecord, BarSeries barSeries, Num amount);
+}
+
+// public API of org.ta4j.core.analysis.cost.CostModel
+public interface CostModel {
+   Num calculate(Position position, int finalIndex);
+   Num calculate(Position position);
+   Num calculate(Num price, Num amount);
+   boolean equals(CostModel otherModel);
+}
+
+// public API of org.ta4j.core.Strategy
+public interface Strategy {
+   String getName();
+   Rule getEntryRule();
+   Rule getExitRule();
+   Strategy and(Strategy strategy);
+   Strategy or(Strategy strategy);
+   Strategy and(String name, Strategy strategy, int unstableBars);
+   Strategy or(String name, Strategy strategy, int unstableBars);
+   Strategy opposite();
+   void setUnstableBars(int unstableBars);
+   int getUnstableBars();
+   boolean isUnstableAt(int index);
+  default boolean shouldOperate(int index, TradingRecord tradingRecord);
+  default boolean shouldEnter(int index);
+  default boolean shouldEnter(int index, TradingRecord tradingRecord);
+  default boolean shouldExit(int index);
+  default boolean shouldExit(int index, TradingRecord tradingRecord);
+}
+
+// public API of org.ta4j.core.TradingRecord
+public interface TradingRecord extends Serializable {
+   TradeType getStartingType();
+   String getName();
+  default void operate(int index);
+   void operate(int index, Num price, Num amount);
+  default boolean enter(int index);
+   boolean enter(int index, Num price, Num amount);
+  default boolean exit(int index);
+   boolean exit(int index, Num price, Num amount);
+  default boolean isClosed();
+   CostModel getTransactionCostModel();
+   CostModel getHoldingCostModel();
+   List<Position> getPositions();
+  default int getPositionCount();
+   Position getCurrentPosition();
+  default Position getLastPosition();
+   List<Trade> getTrades();
+   Trade getLastTrade();
+   Trade getLastTrade(TradeType tradeType);
+   Trade getLastEntry();
+   Trade getLastExit();
+   Integer getStartIndex();
+   Integer getEndIndex();
+  default int getStartIndex(BarSeries series);
+  default int getEndIndex(BarSeries series);
+}
+
+// public API of org.ta4j.core.Trade.TradeType
+public enum TradeType {
+  public static final TradeType BUY;
+  public static final TradeType SELL;
+  public abstract TradeType complementType();
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num sqrt();
+   Num sqrt(int precision);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BaseTradingRecord
+public class BaseTradingRecord implements TradingRecord {
+  public BaseTradingRecord();
+  public BaseTradingRecord(String name);
+  public BaseTradingRecord(String name, TradeType tradeType);
+  public BaseTradingRecord(TradeType tradeType);
+  public BaseTradingRecord(TradeType entryTradeType, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BaseTradingRecord(TradeType entryTradeType, Integer startIndex, Integer endIndex, CostModel transactionCostModel, CostModel holdingCostModel);
+  public BaseTradingRecord(Trade... trades);
+  public BaseTradingRecord(CostModel transactionCostModel, CostModel holdingCostModel, Trade... trades);
+  public String getName();
+  public TradeType getStartingType();
+  public Position getCurrentPosition();
+  public void operate(int index, Num price, Num amount);
+  public boolean enter(int index, Num price, Num amount);
+  public boolean exit(int index, Num price, Num amount);
+  public CostModel getTransactionCostModel();
+  public CostModel getHoldingCostModel();
+  public List<Position> getPositions();
+  public List<Trade> getTrades();
+  public Trade getLastTrade();
+  public Trade getLastTrade(TradeType tradeType);
+  public Trade getLastEntry();
+  public Trade getLastExit();
+  public Integer getStartIndex();
+  public Integer getEndIndex();
+  public String toString();
+}
+
+// public API of org.ta4j.core.analysis.cost.ZeroCostModel
+public class ZeroCostModel extends FixedTransactionCostModel {
+  public ZeroCostModel();
+}
+
+
+At the end they must propose one complete (including typical use cases, edge cases, and error scenarios) JUnit 4 test file (BarSeriesManagerTest.java) for the given Java class. The complete JUnit test file must start with ###Test START## and finish with ###Test END##

@@ -1,0 +1,40 @@
+{
+  "index": 329,
+  "sha": "97c8bbceece3981d2e7e9ba67fe4365b787c7975",
+  "parent": "7cd83b89b21da7869a6558ffca07927d32b8111f",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      538,
+      542,
+      543,
+      550,
+      551,
+      552,
+      554,
+      737
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      539,
+      543,
+      544,
+      545,
+      546,
+      552,
+      553,
+      561,
+      562,
+      563,
+      564,
+      748,
+      749,
+      761,
+      762,
+      763,
+      764,
+      765
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 166ee69bf..db7cb076c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -110,0 +111 @@ public final class ElliottWaveAnalysisRunner {\n+    private static final double HISTORICAL_CYCLE_FALLBACK_FIT_FLOOR = 0.80;\n@@ -538 +539 @@ public final class ElliottWaveAnalysisRunner {\n-        if (analysis.processedSwings().isEmpty()) {\n+        if (analysis.rawSwings().isEmpty() && analysis.processedSwings().isEmpty()) {\n@@ -542,2 +543,12 @@ public final class ElliottWaveAnalysisRunner {\n-        final List<ElliottSwing> swings = analysis.processedSwings();\n-        final List<MacroPivot> pivots = new ArrayList<>(swings.size() + 1);\n+        final Map<Integer, MacroPivot> pivotsByBarIndex = new LinkedHashMap<>();\n+        mergeMacroPivots(series, analysis.rawSwings(), pivotsByBarIndex);\n+        mergeMacroPivots(series, analysis.processedSwings(), pivotsByBarIndex);\n+        return new MacroPivotGraph(pruneMacroPivots(series, List.copyOf(pivotsByBarIndex.values())), higherDegrees,\n+                lowerDegrees);\n+    }\n+\n+    private void mergeMacroPivots(final BarSeries series, final List<ElliottSwing> swings,\n+            final Map<Integer, MacroPivot> pivotsByBarIndex) {\n+        if (swings == null || swings.isEmpty()) {\n+            return;\n+        }\n@@ -550,3 +561,4 @@ public final class ElliottWaveAnalysisRunner {\n-            pivots.add(new MacroPivot(pivot.type() == org.ta4j.core.indicators.elliott.swing.SwingPivotType.HIGH,\n-                    barIndex, series.getBar(barIndex).getEndTime(), pivot.price(),\n-                    pivotDegreeProvenance(swings, barIndex)));\n+            pivotsByBarIndex.put(barIndex,\n+                    new MacroPivot(pivot.type() == org.ta4j.core.indicators.elliott.swing.SwingPivotType.HIGH, barIndex,\n+                            series.getBar(barIndex).getEndTime(), pivot.price(),\n+                            pivotDegreeProvenance(swings, barIndex)));\n@@ -554 +565,0 @@ public final class ElliottWaveAnalysisRunner {\n-        return new MacroPivotGraph(pruneMacroPivots(series, pivots), higherDegrees, lowerDegrees);\n@@ -737 +748,2 @@ public final class ElliottWaveAnalysisRunner {\n-            if (!bullishLeg.bullish() || bearishLeg.bullish() || !bullishLeg.accepted() || !bearishLeg.accepted()) {\n+            if (!bullishLeg.bullish() || bearishLeg.bullish()\n+                    || !eligibleForHistoricalCyclePromotion(bullishLeg, bearishLeg)) {\n@@ -745,0 +758,10 @@ public final class ElliottWaveAnalysisRunner {\n+    private boolean eligibleForHistoricalCyclePromotion(\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment bullishLeg,\n+            final ElliottWaveAnalysisResult.HistoricalLegAssessment bearishLeg) {\n+        final boolean bullishEligible = bullishLeg.accepted()\n+                || bullishLeg.fitScore() >= HISTORICAL_CYCLE_FALLBACK_FIT_FLOOR;\n+        final boolean bearishEligible = bearishLeg.accepted()\n+                || bearishLeg.fitScore() >= HISTORICAL_CYCLE_FALLBACK_FIT_FLOOR;\n+        return bullishEligible && bearishEligible && (bullishLeg.accepted() || bearishLeg.accepted());\n+    }\n+"
+}

@@ -1,0 +1,24 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:123: error: cannot find symbol
+        @Override public BarBuilder barBuilder()              { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BarBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:145: error: cannot find symbol
+        @Override public Rule getEntryRule()                  { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:146: error: cannot find symbol
+        @Override public Rule getExitRule()                   { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Rule
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:159: error: cannot find symbol
+        @Override public ComponentDescriptor toDescriptor()  { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class ComponentDescriptor
+  location: class AlwaysOperateStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:99: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+5 errors

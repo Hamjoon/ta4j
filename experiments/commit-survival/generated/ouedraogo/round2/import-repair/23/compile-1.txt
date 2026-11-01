@@ -1,0 +1,44 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:35: error: SimpleNum is not abstract and does not override abstract method function() in Num
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:130: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:139: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:143: error: cannot find symbol
+        assertEquals(TradeType.BUY, e.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:149: error: cannot find symbol
+        assertEquals(TradeType.SELL, x.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:159: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:223: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:254: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:270: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+9 errors

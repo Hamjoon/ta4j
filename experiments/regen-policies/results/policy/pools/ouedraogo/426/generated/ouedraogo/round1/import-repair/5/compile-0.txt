@@ -1,0 +1,17 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:56: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$1> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+        return new Strategy() {
+                              ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:179: error: cannot find symbol
+        TradingRecord record = manager.run(dummyStrategy());
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:221: error: cannot find symbol
+        TradingRecord record = manager.run(dummyStrategy(), TradeType.BUY, fixedSizer);
+        ^
+  symbol:   class TradingRecord
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:247: error: <anonymous org.ta4j.core.backtest.BarSeriesManagerTest$3> is not abstract and does not override abstract method isUnstableAt(int) in Strategy
+        Strategy alwaysEnter = new Strategy() {
+                                              ^
+4 errors

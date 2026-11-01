@@ -1,0 +1,6 @@
+{
+  "api document of class org.ta4j.core.indicators.ATRIndicator": "\n * Average true range indicator.\n ",
+  "api document of method getTRIndicator()": " @return the {@link #trIndicator} ",
+  "return type": "org.ta4j.core.indicators.helpers.TRIndicator",
+  "dependent classes": "class `org.ta4j.core.indicators.ATRIndicator`:\n\tdependent fields:\n\t\torg.ta4j.core.indicators.helpers.TRIndicator org.ta4j.core.indicators.ATRIndicator.trIndicator;\n\trelated functions:\n\t\tmethod `public TRIndicator getTRIndicator()` returns `org.ta4j.core.indicators.helpers.TRIndicator`, related with `org.ta4j.core.indicators.ATRIndicator.getTRIndicator()`, api document:  @return the {@link #trIndicator} ;\nclass `org.ta4j.core.Strategy`:\n\trelated functions:\n\t\tmethod ` boolean shouldOperate(int, TradingRecord)` returns `boolean`, related with `org.ta4j.core.indicators.ATRIndicator.getTRIndicator()`, api document: \n     * @param index         the bar index\n     * @param tradingRecord the potentially needed trading history\n     * @return true to recommend a trade, false otherwise (no recommendation)\n     ;"
+}

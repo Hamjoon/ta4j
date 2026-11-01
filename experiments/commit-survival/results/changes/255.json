@@ -1,0 +1,22 @@
+{
+  "index": 255,
+  "sha": "34b2b12a4bb505390e713d32d4982e26da824b1f",
+  "parent": "67843439095409f0629f9790ea06adf5fe51b3aa",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [
+      302
+    ],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      382,
+      972,
+      973
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java": [],
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      382
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\nindex cac07d7ed..6719b5c69 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisResult.java\n@@ -302 +301,0 @@ public record ElliottWaveAnalysisResult(ElliottDegree baseDegree, List<DegreeAna\n-        final double span = Math.max(1.0, endIndex - startIndex);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex e6612e610..00ebcad44 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -382 +382 @@ public final class ElliottWaveAnalysisRunner {\n-                    && (primary == null || candidate.fit().currentPhase() != primary.fit().currentPhase())) {\n+                    && candidate.fit().currentPhase() != primary.fit().currentPhase()) {\n@@ -972,4 +971,0 @@ public final class ElliottWaveAnalysisRunner {\n-        if (scanStart > endIndex) {\n-            return null;\n-        }\n-"
+}

@@ -1,0 +1,59 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:36: error: cannot find symbol
+    private TRIndicator trIndicator;
+            ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:44: error: incompatible types: String cannot be converted to Config
+        series = new BaseBarSeries("test-series");
+                                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:46: error: incompatible types: Num is not a functional interface
+        Num n = DecimalNum::valueOf;
+                ^
+    multiple non-overriding abstract methods found in interface Num
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:50: error: cannot find symbol
+                series.numFactory().numberOf(1), // duration (ignored)
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:60: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:70: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:80: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:90: error: cannot find symbol
+                series.numFactory().numberOf(1),
+                                   ^
+  symbol:   method numberOf(int)
+  location: interface NumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:99: error: cannot find symbol
+        trIndicator = new TRIndicator(series);
+                          ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:145: error: cannot find symbol
+        MMAIndicator expectedMma = new MMAIndicator(trIndicator, BAR_COUNT);
+        ^
+  symbol:   class MMAIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:145: error: cannot find symbol
+        MMAIndicator expectedMma = new MMAIndicator(trIndicator, BAR_COUNT);
+                                       ^
+  symbol:   class MMAIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round1/sources/ATRIndicator/ZSL/ATRIndicatorTest.java:159: error: cannot find symbol
+        TRIndicator newTr = atr.getTRIndicator();
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+12 errors

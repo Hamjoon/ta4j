@@ -1,0 +1,38 @@
+{
+  "index": 68,
+  "sha": "0c735f68b47a756bb04a423f46c6c2786c259190",
+  "parent": "497bf77064af5a1d8f3c8ebbe690ef2d802b8f8f",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      101,
+      102,
+      103,
+      104,
+      643
+    ],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": [
+      77,
+      263,
+      264,
+      266,
+      306
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [
+      111,
+      112,
+      113,
+      114,
+      684
+    ],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": [
+      77,
+      223,
+      224,
+      226,
+      324
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex ec0412c90..2682c1460 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -101,5 +100,0 @@ public final class DecimalNum implements Num {\n-    private DecimalNum(final short val, final MathContext mathContext) {\n-        this.mathContext = mathContext;\n-        this.delegate = new BigDecimal(val, mathContext);\n-    }\n-\n@@ -115,0 +111,5 @@ public final class DecimalNum implements Num {\n+    private DecimalNum(final short val, final MathContext mathContext) {\n+        this.mathContext = mathContext;\n+        this.delegate = new BigDecimal(val, mathContext);\n+    }\n+\n@@ -641,5 +640,0 @@ public final class DecimalNum implements Num {\n-    @Override\n-    public int compareTo(final Num other) {\n-        return other.isNaN() ? 0 : this.delegate.compareTo(((DecimalNum) other).delegate);\n-    }\n-\n@@ -686,0 +682,5 @@ public final class DecimalNum implements Num {\n+    @Override\n+    public int compareTo(final Num other) {\n+        return other.isNaN() ? 0 : this.delegate.compareTo(((DecimalNum) other).delegate);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\nindex 89c800be5..7839c5f2c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n@@ -73 +73 @@ public class DoubleNum implements Num {\n-     * @param i the number\n+     * @param val the number\n@@ -76,2 +76,2 @@ public class DoubleNum implements Num {\n-    public static DoubleNum valueOf(final Number i) {\n-        return new DoubleNum(i.doubleValue());\n+    public static DoubleNum valueOf(final Number val) {\n+        return new DoubleNum(val.doubleValue());\n@@ -220,0 +221,8 @@ public class DoubleNum implements Num {\n+    @Override\n+    public Num log() {\n+        if (this.delegate <= 0) {\n+            return NaN;\n+        }\n+        return new DoubleNum(Math.log(this.delegate));\n+    }\n+\n@@ -261,8 +268,0 @@ public class DoubleNum implements Num {\n-    @Override\n-    public Num log() {\n-        if (this.delegate <= 0) {\n-            return NaN;\n-        }\n-        return new DoubleNum(Math.log(this.delegate));\n-    }\n-\n@@ -304,5 +303,0 @@ public class DoubleNum implements Num {\n-    @Override\n-    public String toString() {\n-        return Double.toString(this.delegate);\n-    }\n-\n@@ -325,0 +321,5 @@ public class DoubleNum implements Num {\n+\n+    @Override\n+    public String toString() {\n+        return Double.toString(this.delegate);\n+    }"
+}

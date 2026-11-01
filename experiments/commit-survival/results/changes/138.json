@@ -1,0 +1,103 @@
+{
+  "index": 138,
+  "sha": "a6c37545af6c300f6451fbe9b8ca6ddad9f2abd0",
+  "parent": "b814436b11561e6c855ea7fd24bf3d615c190a8b",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/Rule.java": [],
+    "src/main/java/org/ta4j/core/rules/AbstractRule.java": [
+      90,
+      100,
+      112,
+      113,
+      114,
+      115,
+      118
+    ],
+    "src/main/java/org/ta4j/core/rules/AndRule.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/rules/NotRule.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/rules/OrRule.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/rules/XorRule.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java": [],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      165,
+      169,
+      170,
+      173,
+      174,
+      177,
+      178,
+      179,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      189,
+      193,
+      197,
+      204,
+      209,
+      213
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/Rule.java": [
+      47,
+      48,
+      60,
+      61
+    ],
+    "src/main/java/org/ta4j/core/rules/AbstractRule.java": [
+      80,
+      95,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      114,
+      115,
+      117,
+      120,
+      122
+    ],
+    "src/main/java/org/ta4j/core/rules/AndRule.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/rules/NotRule.java": [
+      49
+    ],
+    "src/main/java/org/ta4j/core/rules/OrRule.java": [
+      55
+    ],
+    "src/main/java/org/ta4j/core/rules/XorRule.java": [
+      50
+    ],
+    "src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java": [],
+    "src/main/java/org/ta4j/core/serialization/RuleSerialization.java": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      168,
+      169,
+      171,
+      175,
+      177,
+      180
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/Rule.java b/ta4j-core/src/main/java/org/ta4j/core/Rule.java\nindex 923f86f34..62875c9cf 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/Rule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/Rule.java\n@@ -29,0 +30,3 @@ import org.ta4j.core.rules.XorRule;\n+import org.ta4j.core.serialization.ComponentDescriptor;\n+import org.ta4j.core.serialization.ComponentSerialization;\n+import org.ta4j.core.serialization.RuleSerialization;\n@@ -36,0 +40,24 @@ public interface Rule {\n+    /**\n+     * Serializes this rule to JSON.\n+     *\n+     * @return JSON representation\n+     * @since 0.22\n+     */\n+    default String toJson() {\n+        ComponentDescriptor descriptor = RuleSerialization.describe(this);\n+        return ComponentSerialization.toJson(descriptor);\n+    }\n+\n+    /**\n+     * Builds a rule from JSON.\n+     *\n+     * @param series bar series context\n+     * @param json   payload\n+     * @return reconstructed rule\n+     * @since 0.22\n+     */\n+    static Rule fromJson(BarSeries series, String json) {\n+        ComponentDescriptor descriptor = ComponentSerialization.parse(json);\n+        return RuleSerialization.fromDescriptor(series, descriptor);\n+    }\n+\n@@ -106,2 +133 @@ public interface Rule {\n-     * @return a descriptive name or, by default, the same value as\n-     *         {@link Object#toString()}\n+     * @return a descriptive name or a lightweight default\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AbstractRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AbstractRule.java\nindex 1579c26c3..5942e3355 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AbstractRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AbstractRule.java\n@@ -29,2 +28,0 @@ import org.ta4j.core.Rule;\n-import org.ta4j.core.serialization.ComponentDescriptor;\n-import org.ta4j.core.serialization.ComponentSerialization;\n@@ -44 +42 @@ public abstract class AbstractRule implements Rule {\n-    private String name;\n+    private volatile String name;\n@@ -77,0 +76,7 @@ public abstract class AbstractRule implements Rule {\n+    /**\n+     * @return true if a custom name was assigned via {@link #setName(String)}\n+     */\n+    public boolean hasCustomName() {\n+        return name != null;\n+    }\n+\n@@ -90,11 +95 @@ public abstract class AbstractRule implements Rule {\n-        return createTypeOnlyName(className);\n-    }\n-\n-    /**\n-     * Builds a JSON object containing only the rule type field.\n-     *\n-     * @param type rule type label\n-     * @return JSON string\n-     */\n-    protected String createTypeOnlyName(String type) {\n-        return ComponentSerialization.toJson(ComponentDescriptor.typeOnly(type));\n+        return className;\n@@ -104,2 +99,2 @@ public abstract class AbstractRule implements Rule {\n-     * Builds a JSON object containing the type plus an optional array of child rule\n-     * names.\n+     * Builds a JSON object containing the type plus child rule descriptors without\n+     * re-parsing already cached rule names.\n@@ -107,2 +102,2 @@ public abstract class AbstractRule implements Rule {\n-     * @param type       rule type label\n-     * @param childNames child rule display names\n+     * @param type     rule type label\n+     * @param children child rules\n@@ -111,5 +106,13 @@ public abstract class AbstractRule implements Rule {\n-    protected String createCompositeName(String type, String... childNames) {\n-        ComponentDescriptor.Builder builder = ComponentDescriptor.builder().withType(type);\n-        if (childNames != null && childNames.length > 0) {\n-            for (String child : childNames) {\n-                builder.addComponent(ComponentSerialization.parse(child));\n+    protected String createCompositeName(String type, Rule... children) {\n+        StringBuilder builder = new StringBuilder(type);\n+        if (children != null && children.length > 0) {\n+            builder.append('(');\n+            for (int i = 0; i < children.length; i++) {\n+                if (i > 0) {\n+                    builder.append(',');\n+                }\n+                if (children[i] == null) {\n+                    builder.append(\"null\");\n+                } else {\n+                    builder.append(children[i].getName());\n+                }\n@@ -116,0 +120 @@ public abstract class AbstractRule implements Rule {\n+            builder.append(')');\n@@ -118 +122 @@ public abstract class AbstractRule implements Rule {\n-        return ComponentSerialization.toJson(builder.build());\n+        return builder.toString();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AndRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AndRule.java\nindex ad7b4db83..98ce785d7 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AndRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AndRule.java\n@@ -55 +55 @@ public class AndRule extends AbstractRule {\n-        setName(createCompositeName(getClass().getSimpleName(), rule1.getName(), rule2.getName()));\n+        setName(createCompositeName(getClass().getSimpleName(), rule1, rule2));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/NotRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/NotRule.java\nindex e0d2835d8..9af845374 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/NotRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/NotRule.java\n@@ -49 +49 @@ public class NotRule extends AbstractRule {\n-        setName(createCompositeName(getClass().getSimpleName(), ruleToNegate.getName()));\n+        setName(createCompositeName(getClass().getSimpleName(), ruleToNegate));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/OrRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/OrRule.java\nindex c0c5d3750..fc297d5e1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/OrRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/OrRule.java\n@@ -55 +55 @@ public class OrRule extends AbstractRule {\n-        setName(createCompositeName(getClass().getSimpleName(), rule1.getName(), rule2.getName()));\n+        setName(createCompositeName(getClass().getSimpleName(), rule1, rule2));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/XorRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/XorRule.java\nindex 02295e968..1c9358f5f 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/XorRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/XorRule.java\n@@ -50 +50 @@ public class XorRule extends AbstractRule {\n-        setName(createCompositeName(getClass().getSimpleName(), rule1.getName(), rule2.getName()));\n+        setName(createCompositeName(getClass().getSimpleName(), rule1, rule2));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java\nindex 5e704143b..a18e474ee 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/ComponentDescriptor.java\n@@ -138,3 +138,2 @@ public final class ComponentDescriptor {\n-     *         {@link org.ta4j.core.rules.AbstractRule#createCompositeName(String, String...)}\n-     *         keeps {@code null} slots so child names preserve their original\n-     *         positions).\n+     *         org.ta4j.core.rules.AbstractRule composite naming helpers keeps\n+     *         {@code null} slots so child names preserve their original positions).\n@@ -251,3 +250,2 @@ public final class ComponentDescriptor {\n-         * rule name helpers (e.g.,\n-         * {@link org.ta4j.core.rules.AbstractRule#createCompositeName(String, String...)})\n-         * to retain positional information when a child rule's display name is\n+         * rule name helpers (e.g., org.ta4j.core.rules.AbstractRule composite naming\n+         * helpers) to retain positional information when a child rule's display name is\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\nindex 117a88dd9..6ebe99c50 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/serialization/RuleSerialization.java\n@@ -160,39 +160,10 @@ public final class RuleSerialization {\n-        // Check if the rule has a custom name set via setName()\n-        // The rule's getName() returns either:\n-        // 1. A custom name (set via setName()) - which could be any string\n-        // 2. The default name - which is a JSON representation (either type-only or\n-        // with components)\n-        String currentName = rule.getName();\n-\n-        // Try to determine if currentName is the default name\n-        // Default names are JSON strings that start with \"{\"\n-        boolean hasCustomName = true;\n-        if (currentName != null && currentName.trim().startsWith(\"{\")) {\n-            // Current name looks like JSON - try to parse it\n-            try {\n-                ComponentDescriptor currentDescriptor = ComponentSerialization.parse(currentName);\n-                if (currentDescriptor != null) {\n-                    // Successfully parsed - check if it matches our descriptor structure\n-                    // For default names, the type should match\n-                    String currentType = currentDescriptor.getType();\n-                    String descriptorType = descriptor.getType();\n-                    if (currentType != null && currentType.equals(descriptorType)) {\n-                        // Types match - this is likely the default name\n-                        // Check if it's a type-only name (no components/parameters except __customName)\n-                        boolean isTypeOnly = currentDescriptor.getComponents().isEmpty()\n-                                && (currentDescriptor.getParameters().isEmpty() || currentDescriptor.getParameters()\n-                                        .keySet()\n-                                        .stream()\n-                                        .allMatch(k -> k.startsWith(\"__\")));\n-                        if (isTypeOnly) {\n-                            // Type-only default name - this is the default, not a custom name\n-                            hasCustomName = false;\n-                        } else {\n-                            // Has components/parameters - compare more carefully\n-                            // Remove __customName from both for comparison\n-                            hasCustomName = !descriptorsEqualIgnoringLabel(currentDescriptor, descriptor);\n-                        }\n-                    }\n-                }\n-            } catch (Exception e) {\n-                // Parsing failed - treat as custom name\n+        boolean hasCustomName = false;\n+        String customName = null;\n+        if (rule instanceof org.ta4j.core.rules.AbstractRule abstractRule) {\n+            hasCustomName = abstractRule.hasCustomName();\n+            if (hasCustomName) {\n+                customName = abstractRule.getName();\n+            }\n+        } else {\n+            String currentName = rule.getName();\n+            if (currentName != null && !currentName.isBlank() && !currentName.equals(rule.getClass().getSimpleName())) {\n@@ -199,0 +171 @@ public final class RuleSerialization {\n+                customName = currentName;\n@@ -202 +173,0 @@ public final class RuleSerialization {\n-        // If currentName doesn't start with \"{\", it's definitely a custom name\n@@ -204,4 +175 @@ public final class RuleSerialization {\n-        if (hasCustomName) {\n-            // Rule has a custom name - preserve it\n-            // Store it in __customName parameter so it's preserved even when applyLabel()\n-            // is called\n+        if (hasCustomName && customName != null) {\n@@ -209 +177 @@ public final class RuleSerialization {\n-            params.put(\"__customName\", currentName);\n+            params.put(\"__customName\", customName);\n@@ -211 +178,0 @@ public final class RuleSerialization {\n-            // Also set as label for top-level rules (if label not already set)\n@@ -213 +180 @@ public final class RuleSerialization {\n-                builder.withLabel(currentName);\n+                builder.withLabel(customName);"
+}

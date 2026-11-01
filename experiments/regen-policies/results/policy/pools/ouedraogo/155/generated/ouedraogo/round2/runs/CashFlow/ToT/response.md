@@ -1,0 +1,320 @@
+###Test START##
+```java
+/*
+ * JUnit‑4 test suite for {@link org.ta4j.core.analysis.CashFlow}
+ *
+ * The tests cover:
+ *   – basic construction (single closed position, trading record, open position)
+ *   – correct cash‑flow values (long & short trades)
+ *   – edge cases (position not closed, zero‑holding‑cost, final‑index handling)
+ *   – auxiliary methods (getSize, getIntermediateRatio, fillToTheEnd)
+ *
+ * The TA4J library provides concrete implementations for the required
+ * interfaces (BaseBarSeries, BaseBar, Trade, CostModel, etc.).  Only those
+ * public constructors / factory methods are used – no mocking or custom
+ * subclassing of library types.
+ */
+package org.ta4j.core.analysis;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+import java.time.ZonedDateTime;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBar;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.Position;
+import org.ta4j.core.Trade;
+import org.ta4j.core.TradeType;
+import org.ta4j.core.TradingRecord;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.DecimalNum;
+import org.ta4j.core.cost.ZeroCostModel;
+
+/**
+ * Comprehensive test cases for {@link CashFlow}.
+ */
+public class CashFlowTest {
+
+    private BarSeries series;
+    private Num one;
+    private Num two;
+    private Num three;
+    private Num five;
+
+    /**
+     * Helper that creates a {@link Bar} with the same open/high/low/close price.
+     */
+    private Bar barAt(int index, Num price) {
+        // TA4J's BaseBar constructor: (ZonedDateTime time, Num open, Num high,
+        // Num low, Num close, Num volume)
+        return new BaseBar(
+                ZonedDateTime.now().plusMinutes(index),
+                price, price, price, price,
+                DecimalNum.valueOf(0));
+    }
+
+    /**
+     * Helper that creates a {@link Trade} (BUY or SELL) at a given index/price.
+     */
+    private Trade tradeAt(int index, TradeType type, Num price) {
+        // Trade constructor: (TradeType type, int index, Num price, Num amount)
+        return new Trade(type, index, price, DecimalNum.ONE);
+    }
+
+    @Before
+    public void setUp() {
+        // Build a simple series with 6 bars (price = 1,2,3,4,5,6)
+        series = new BaseBarSeriesBuilder().withName("test-series")
+                .withNumFactory(DecimalNum::valueOf)
+                .build();
+
+        series.addBar(barAt(0, DecimalNum.valueOf(1)));
+        series.addBar(barAt(1, DecimalNum.valueOf(2)));
+        series.addBar(barAt(2, DecimalNum.valueOf(3)));
+        series.addBar(barAt(3, DecimalNum.valueOf(4)));
+        series.addBar(barAt(4, DecimalNum.valueOf(5)));
+        series.addBar(barAt(5, DecimalNum.valueOf(6)));
+
+        one = series.numFactory().one();   // 1
+        two = series.numFactory().numOf(2); // 2
+        three = series.numFactory().numOf(3);
+        five = series.numFactory().numOf(5);
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Test the static helper {@code getIntermediateRatio}
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testGetIntermediateRatio_LongTrade() {
+        // Long: ratio = exit / entry
+        Num entry = three; // 3
+        Num exit = five;   // 5
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+        assertEquals(exit.dividedBy(entry), ratio);
+    }
+
+    @Test
+    public void testGetIntermediateRatio_ShortTrade() {
+        // Short: ratio = 2 - (exit / entry)
+        Num entry = three; // 3
+        Num exit = one;    // 1
+        Num expected = two.minus(exit.dividedBy(entry));
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+        assertEquals(expected, ratio);
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Construction with a single CLOSED position (LONG)
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testCashFlow_SingleClosedLongPosition() {
+        // Entry at index 1 price = 2 (BUY)
+        Trade entry = tradeAt(1, TradeType.BUY, two);
+        // Exit at index 4 price = 5 (SELL)
+        Trade exit = tradeAt(4, TradeType.SELL, five);
+        Position position = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+
+        CashFlow cf = new CashFlow(series, position);
+
+        // Expected cash flow:
+        //   start value = 1
+        //   after entry (index 1) value = 1 (no change yet)
+        //   intermediate indices 2,3: price ratio applied
+        //   exit index 4: final ratio applied
+        //   all later indices padded with final value
+        Num expectedAt2 = one.multipliedBy(five.dividedBy(two)); // ratio 5/2 = 2.5
+        Num expectedAt3 = expectedAt2; // holding cost = 0, price unchanged
+        Num expectedAt4 = expectedAt2; // exit price = 5, same ratio as intermediate because entry price =2
+        // values list: index 0 = 1 (initial), 1 = 1 (entry), 2 = 2.5, 3 = 2.5, 4 = 2.5, 5 = 2.5 (padded)
+
+        assertEquals(one, cf.getValue(0));
+        assertEquals(one, cf.getValue(1));
+        assertEquals(expectedAt2, cf.getValue(2));
+        assertEquals(expectedAt3, cf.getValue(3));
+        assertEquals(expectedAt4, cf.getValue(4));
+        assertEquals(expectedAt4, cf.getValue(5));
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Construction with a single CLOSED position (SHORT)
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testCashFlow_SingleClosedShortPosition() {
+        // Entry at index 0 price = 1 (SELL)
+        Trade entry = tradeAt(0, TradeType.SELL, one);
+        // Exit at index 3 price = 4 (BUY)
+        Trade exit = tradeAt(3, TradeType.BUY, series.numFactory().numOf(4));
+        Position position = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+
+        CashFlow cf = new CashFlow(series, position);
+
+        // For short trade, ratio = 2 - (exit/entry)
+        Num ratio = two.minus(series.numFactory().numOf(4).dividedBy(one)); // 2 - 4 = -2
+        Num expectedAt1 = one.multipliedBy(ratio); // -2
+        // Because ratio is negative, subsequent values stay negative (no further price changes)
+        assertEquals(one, cf.getValue(0));
+        assertEquals(expectedAt1, cf.getValue(1));
+        // All later indices should be padded with the same negative value
+        for (int i = 2; i <= series.getEndIndex(); i++) {
+            assertEquals(expectedAt1, cf.getValue(i));
+        }
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Constructor should reject a NOT‑CLOSED position
+     * -----------------------------------------------------------------------
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void testCashFlow_UnclosedPositionThrows() {
+        // Entry BUY at index 2, no exit (open position)
+        Trade entry = tradeAt(2, TradeType.BUY, three);
+        Position openPos = new Position(entry, null, new ZeroCostModel(), new ZeroCostModel());
+
+        // This must throw because the position is still opened
+        new CashFlow(series, openPos);
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Construction with a TradingRecord containing two closed positions
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testCashFlow_TradingRecordMultipleClosedPositions() {
+        // First position: BUY @2 (index1) -> SELL @4 (price5)
+        Trade e1 = tradeAt(1, TradeType.BUY, two);
+        Trade x1 = tradeAt(4, TradeType.SELL, five);
+        Position p1 = new Position(e1, x1, new ZeroCostModel(), new ZeroCostModel());
+
+        // Second position: BUY @5 (index5) -> SELL @5 (price6) – immediate exit
+        Trade e2 = tradeAt(5, TradeType.BUY, series.numFactory().numOf(6));
+        Trade x2 = tradeAt(5, TradeType.SELL, series.numFactory().numOf(6));
+        Position p2 = new Position(e2, x2, new ZeroCostModel(), new ZeroCostModel());
+
+        // Build a simple TradingRecord implementation (BaseTradingRecord)
+        TradingRecord record = new org.ta4j.core.BaseTradingRecord();
+        record.operate(e1.getIndex(), e1.getPrice(), DecimalNum.ONE);
+        record.operate(x1.getIndex(), x1.getPrice(), DecimalNum.ONE);
+        record.operate(e2.getIndex(), e2.getPrice(), DecimalNum.ONE);
+        record.operate(x2.getIndex(), x2.getPrice(), DecimalNum.ONE);
+
+        // Insert positions manually – BaseTradingRecord already creates them
+        CashFlow cf = new CashFlow(series, record);
+
+        // Expected cash flow:
+        //   Up to index 1 -> 1
+        //   After first trade exit (index4) -> ratio = 5/2 = 2.5
+        //   After second exit (index5) -> ratio = 2.5 * (6/5) = 3.0
+        Num afterFirst = one.multipliedBy(five.dividedBy(two)); // 2.5
+        Num afterSecond = afterFirst.multipliedBy(series.numFactory().numOf(6).dividedBy(five)); // 3.0
+
+        assertEquals(one, cf.getValue(0));
+        assertEquals(one, cf.getValue(1));
+        assertEquals(afterFirst, cf.getValue(2));
+        assertEquals(afterFirst, cf.getValue(3));
+        assertEquals(afterFirst, cf.getValue(4));
+        assertEquals(afterSecond, cf.getValue(5));
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Construction with a TradingRecord that has an OPEN position – the open
+     *  position must be evaluated up to the supplied {@code finalIndex}.
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testCashFlow_TradingRecordWithOpenPosition() {
+        // Closed position: BUY @1 (price2) -> SELL @3 (price4)
+        Trade e1 = tradeAt(1, TradeType.BUY, two);
+        Trade x1 = tradeAt(3, TradeType.SELL, series.numFactory().numOf(4));
+        Position closed = new Position(e1, x1, new ZeroCostModel(), new ZeroCostModel());
+
+        // Open position: BUY @4 (price5) – not yet exited
+        Trade e2 = tradeAt(4, TradeType.BUY, five);
+        Position open = new Position(e2, null, new ZeroCostModel(), new ZeroCostModel());
+
+        // Build trading record manually
+        TradingRecord record = new org.ta4j.core.BaseTradingRecord();
+        record.operate(e1.getIndex(), e1.getPrice(), DecimalNum.ONE);
+        record.operate(x1.getIndex(), x1.getPrice(), DecimalNum.ONE);
+        record.operate(e2.getIndex(), e2.getPrice(), DecimalNum.ONE);
+        // note: no exit for the open position
+
+        // Use finalIndex = 5 (last bar) – cash‑flow of the open position should be
+        // calculated using the close price of bar 5 (price=6)
+        CashFlow cf = new CashFlow(series, record, 5);
+
+        // Expected:
+        //   start = 1
+        //   after closed trade exit (index3) ratio = 4/2 = 2
+        //   open position from index4 to finalIndex5:
+        //        avg holding cost = 0
+        //        intermediate at index5 (close price 6) ratio = 6/5 = 1.2
+        //   final value = 2 * 1.2 = 2.4
+        Num afterClosed = one.multipliedBy(series.numFactory().numOf(4).dividedBy(two)); // 2
+        Num ratioOpen = series.numFactory().numOf(6).dividedBy(five); // 1.2
+        Num afterOpen = afterClosed.multipliedBy(ratioOpen); // 2.4
+
+        assertEquals(one, cf.getValue(0));
+        assertEquals(one, cf.getValue(1));
+        assertEquals(afterClosed, cf.getValue(2));
+        assertEquals(afterClosed, cf.getValue(3));
+        assertEquals(afterClosed, cf.getValue(4));
+        assertEquals(afterOpen, cf.getValue(5));
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Verify {@code getSize()} mirrors the underlying series bar count.
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testGetSize() {
+        Position dummy = new Position(); // empty position (no trades) – will be ignored
+        CashFlow cf = new CashFlow(series, dummy);
+        assertEquals(series.getBarCount(), cf.getSize());
+    }
+
+    /**
+     * -----------------------------------------------------------------------
+     *  Verify that {@code fillToTheEnd} pads the internal {@code values} list
+     *  correctly when the last calculated index is before the series end.
+     * -----------------------------------------------------------------------
+     */
+    @Test
+    public void testFillToTheEnd_PadsWithLastValue() {
+        // Create a position that exits early (index 2)
+        Trade entry = tradeAt(0, TradeType.BUY, one);
+        Trade exit = tradeAt(2, TradeType.SELL, three);
+        Position pos = new Position(entry, exit, new ZeroCostModel(), new ZeroCostModel());
+
+        CashFlow cf = new CashFlow(series, pos);
+        // After exit at index2 the cash‑flow value should be 3 (ratio 3/1)
+        Num expectedAfterExit = one.multipliedBy(three); // 3
+
+        // Values up to end (index5) must be padded with 3
+        for (int i = 0; i <= series.getEndIndex(); i++) {
+            if (i <= 2) {
+                // values 0..2 are calculated, we only assert the final one
+                continue;
+            }
+            assertEquals("value at index " + i + " should be padded",
+                    expectedAfterExit, cf.getValue(i));
+        }
+    }
+}
+```
+###Test END##

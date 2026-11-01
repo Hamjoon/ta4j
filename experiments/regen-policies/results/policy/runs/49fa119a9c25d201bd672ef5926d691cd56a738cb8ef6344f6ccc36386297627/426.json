@@ -1,0 +1,148 @@
+{
+  "index": 426,
+  "sha": "e869f8b50bdb0359d60df3839fbfc400d75284f4",
+  "status": "evaluated",
+  "imported": true,
+  "methods": [
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testDummy",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#testDummy",
+      "body_hash": "05bc00e5621f5b6e70923cf4d33417a9b8e1757c1d715d22fb4bca446e416c67",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "2b91f986699defb3b4ca7be5d4cb5c6677d93f80b5743d2620a9335ce3f8b9c8",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testDummy"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "49fa119a9c25d201bd672ef5926d691cd56a738cb8ef6344f6ccc36386297627",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#testDummy",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testDummy"
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "testXls",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#testXls",
+      "body_hash": "b00477090d04964d517ca4e320bd8c17d496d6edb2227d4cf2872f1813d59699",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "2b91f986699defb3b4ca7be5d4cb5c6677d93f80b5743d2620a9335ce3f8b9c8",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#testXls"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "49fa119a9c25d201bd672ef5926d691cd56a738cb8ef6344f6ccc36386297627",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#testXls",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|testXls"
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "serializationRoundTrip",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#serializationRoundTrip",
+      "body_hash": "a4bca8f92f96a6fca0ad5475bd5c83bf22182df043dc83a7bf57edc732bdc909",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "2b91f986699defb3b4ca7be5d4cb5c6677d93f80b5743d2620a9335ce3f8b9c8",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#serializationRoundTrip"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "49fa119a9c25d201bd672ef5926d691cd56a738cb8ef6344f6ccc36386297627",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#serializationRoundTrip",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|serializationRoundTrip"
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "getTRIndicatorReturnsIndependentHelper",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#getTRIndicatorReturnsIndependentHelper",
+      "body_hash": "e332ab6ddb0719bc64d0d359201c89cf751a8241945de9c32c515fa20c744acd",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "2b91f986699defb3b4ca7be5d4cb5c6677d93f80b5743d2620a9335ce3f8b9c8",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#getTRIndicatorReturnsIndependentHelper"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "49fa119a9c25d201bd672ef5926d691cd56a738cb8ef6344f6ccc36386297627",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#getTRIndicatorReturnsIndependentHelper",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|getTRIndicatorReturnsIndependentHelper"
+    },
+    {
+      "class": "org.ta4j.core.indicators.ATRIndicatorTest",
+      "method": "customTrueRangeUnstableBarsAreRetained",
+      "kind": "plain",
+      "file": "results/policy/pools/dev-scope/426/dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java",
+      "id": "org.ta4j.core.indicators.ATRIndicatorTest#customTrueRangeUnstableBarsAreRetained",
+      "body_hash": "7aefce3331b43032cf682cce2e6d96685756df8ae88bcb52eace650dca83149b",
+      "source_root": "results/policy/pools/dev-scope/426/dev/src-test-t/java",
+      "resource_root": "results/policy/pools/dev-scope/426/dev/src-test-t",
+      "file_hash": "2b91f986699defb3b4ca7be5d4cb5c6677d93f80b5743d2620a9335ce3f8b9c8",
+      "state": "pass",
+      "message": "",
+      "flaky": false,
+      "initial_state": "pass",
+      "selector": [
+        "org.ta4j.core.indicators.ATRIndicatorTest#customTrueRangeUnstableBarsAreRetained"
+      ],
+      "baseline_states": [
+        "pass",
+        "pass",
+        "pass"
+      ],
+      "execution_hash": "49fa119a9c25d201bd672ef5926d691cd56a738cb8ef6344f6ccc36386297627",
+      "source_tree_hash": "599fd9aa504655c574651ecc3e9b3485418264aba6a23815c0a19ef47a35b5e7",
+      "resource_tree_hash": "7fdb06d176a055b45cdfea22f893c1b33fa62b8ee9a752c89deb91bd3a7222da",
+      "unit": "org.ta4j.core.indicators.ATRIndicatorTest#customTrueRangeUnstableBarsAreRetained",
+      "origin_id": "dev/src-test-t/java/org/ta4j/core/indicators/ATRIndicatorTest.java|org.ta4j.core.indicators.ATRIndicatorTest|customTrueRangeUnstableBarsAreRetained"
+    }
+  ]
+}

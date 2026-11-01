@@ -1,0 +1,177 @@
+{
+  "index": 59,
+  "sha": "b929c4112cf1b6861d25df97230347c833984e28",
+  "parent": "001c1b4a35e6fe423f216d0ea9bc9f2ae00a3c4e",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/DPOIndicator.java": [
+      75,
+      76,
+      77,
+      79
+    ],
+    "src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java": [
+      59,
+      62,
+      63
+    ],
+    "src/main/java/org/ta4j/core/indicators/KRIIndicator.java": [
+      51,
+      52,
+      53,
+      54
+    ],
+    "src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java": [
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java": [
+      53,
+      54,
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java": [
+      57,
+      58,
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java": [
+      65
+    ],
+    "src/main/java/org/ta4j/core/indicators/helpers/TransformIndicator.java": [
+      56,
+      57,
+      58,
+      59,
+      63,
+      68,
+      75,
+      76,
+      83,
+      84,
+      91,
+      92,
+      99,
+      100,
+      107,
+      108,
+      115,
+      116,
+      123,
+      130,
+      131,
+      138,
+      148,
+      149,
+      154
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/BinaryOperation.java": [
+      122,
+      130,
+      131,
+      137
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/UnaryOperation.java": [],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      69,
+      70
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java": [
+      74,
+      75
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java": [
+      76,
+      77
+    ],
+    "src/main/java/org/ta4j/core/rules/InSlopeRule.java": [
+      111,
+      112,
+      113,
+      114,
+      115
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/DPOIndicator.java": [
+      75,
+      76,
+      77,
+      78
+    ],
+    "src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java": [
+      60,
+      63,
+      64
+    ],
+    "src/main/java/org/ta4j/core/indicators/KRIIndicator.java": [
+      50,
+      51,
+      52,
+      53
+    ],
+    "src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java": [
+      56
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java": [
+      52,
+      53,
+      55
+    ],
+    "src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java": [
+      57,
+      58,
+      59
+    ],
+    "src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java": [
+      65
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/BinaryOperation.java": [
+      128,
+      129,
+      130,
+      141,
+      142,
+      143,
+      155,
+      156,
+      157,
+      169,
+      170,
+      171,
+      185,
+      186,
+      187,
+      201,
+      202,
+      203,
+      210,
+      218,
+      219,
+      225
+    ],
+    "src/main/java/org/ta4j/core/indicators/numeric/UnaryOperation.java": [
+      72,
+      73,
+      85
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      69,
+      70
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java": [
+      74,
+      75
+    ],
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java": [
+      76,
+      77
+    ],
+    "src/main/java/org/ta4j/core/rules/InSlopeRule.java": [
+      111,
+      112,
+      113,
+      114,
+      115
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\nindex 0c332a118..9a86fc242 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/DPOIndicator.java\n@@ -30 +30 @@ import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.helpers.CombineIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -54 +54 @@ public class DPOIndicator extends CachedIndicator<Num> {\n-    private final CombineIndicator indicatorMinusPreviousSMAIndicator;\n+    private final BinaryOperation indicatorMinusPreviousSMAIndicator;\n@@ -75,5 +75,4 @@ public class DPOIndicator extends CachedIndicator<Num> {\n-        int timeFrame = barCount / 2 + 1;\n-        final SMAIndicator simpleMovingAverage = new SMAIndicator(price, barCount);\n-        final PreviousValueIndicator previousSimpleMovingAverage = new PreviousValueIndicator(simpleMovingAverage,\n-                timeFrame);\n-        this.indicatorMinusPreviousSMAIndicator = CombineIndicator.minus(price, previousSimpleMovingAverage);\n+        final int timeFrame = barCount / 2 + 1;\n+        final var simpleMovingAverage = new SMAIndicator(price, barCount);\n+        final var previousSimpleMovingAverage = new PreviousValueIndicator(simpleMovingAverage, timeFrame);\n+        this.indicatorMinusPreviousSMAIndicator = BinaryOperation.difference(price, previousSimpleMovingAverage);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java\nindex 85ac92ea9..618e305ef 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/IntraDayMomentumIndexIndicator.java\n@@ -31 +31,2 @@ import org.ta4j.core.indicators.candles.RealBodyIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n+import org.ta4j.core.indicators.numeric.UnaryOperation;\n@@ -55 +56 @@ public class IntraDayMomentumIndexIndicator extends CachedIndicator<Num> {\n-    public IntraDayMomentumIndexIndicator(BarSeries series, int barCount) {\n+    public IntraDayMomentumIndexIndicator(final BarSeries series, final int barCount) {\n@@ -59 +60 @@ public class IntraDayMomentumIndexIndicator extends CachedIndicator<Num> {\n-        RealBodyIndicator realBody = new RealBodyIndicator(series);\n+        final var realBody = new RealBodyIndicator(series);\n@@ -62,2 +63,2 @@ public class IntraDayMomentumIndexIndicator extends CachedIndicator<Num> {\n-        TransformIndicator closeOpenDiff = TransformIndicator.max(realBody, 0);\n-        TransformIndicator openCloseDiff = TransformIndicator.abs(TransformIndicator.min(realBody, 0));\n+        final var closeOpenDiff = BinaryOperation.max(realBody, 0);\n+        final var openCloseDiff = UnaryOperation.abs(BinaryOperation.min(realBody, 0));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\nindex 8f9359c04..952e0567c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/KRIIndicator.java\n@@ -30,2 +30 @@ import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.helpers.CombineIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -51,4 +50,4 @@ public class KRIIndicator extends AbstractIndicator<Num> {\n-        Indicator<Num> smaIndicator = new SMAIndicator(indicator, barCount);\n-        Indicator<Num> difference = CombineIndicator.minus(indicator, smaIndicator);\n-        Indicator<Num> quotient = CombineIndicator.divide(difference, smaIndicator);\n-        this.kriIndicator = TransformIndicator.multiply(quotient, 100);\n+        final var smaIndicator = new SMAIndicator(indicator, barCount);\n+        final var difference = BinaryOperation.difference(indicator, smaIndicator);\n+        final var quotient = BinaryOperation.quotient(difference, smaIndicator);\n+        this.kriIndicator = BinaryOperation.product(quotient, 100);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\nindex 5c561aae7..30b032119 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/MassIndexIndicator.java\n@@ -29 +29 @@ import org.ta4j.core.indicators.averages.EMAIndicator;\n-import org.ta4j.core.indicators.helpers.CombineIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -56 +56 @@ public class MassIndexIndicator extends CachedIndicator<Num> {\n-        Indicator<Num> highLowDifferential = CombineIndicator.minus(new HighPriceIndicator(series),\n+        final var highLowDifferential = BinaryOperation.difference(new HighPriceIndicator(series),\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java\nindex 84fa37d10..c1ba50664 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/HMAIndicator.java\n@@ -28,2 +28 @@ import org.ta4j.core.indicators.CachedIndicator;\n-import org.ta4j.core.indicators.helpers.CombineIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -53,2 +52,2 @@ public class HMAIndicator extends CachedIndicator<Num> {\n-        WMAIndicator halfWma = new WMAIndicator(indicator, barCount / 2);\n-        WMAIndicator origWma = new WMAIndicator(indicator, barCount);\n+        final var halfWma = new WMAIndicator(indicator, barCount / 2);\n+        final var origWma = new WMAIndicator(indicator, barCount);\n@@ -56 +55 @@ public class HMAIndicator extends CachedIndicator<Num> {\n-        Indicator<Num> indicatorForSqrtWma = CombineIndicator.minus(TransformIndicator.multiply(halfWma, 2), origWma);\n+        final var indicatorForSqrtWma = BinaryOperation.difference(BinaryOperation.product(halfWma, 2), origWma);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\nindex ac7058d15..7f3e449d1 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/averages/VWMAIndicator.java\n@@ -28 +28 @@ import org.ta4j.core.indicators.CachedIndicator;\n-import org.ta4j.core.indicators.helpers.CombineIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -57,3 +57,3 @@ public class VWMAIndicator extends CachedIndicator<Num> {\n-        VolumeIndicator volumeIndicator = new VolumeIndicator(priceIndicator.getBarSeries());\n-        CombineIndicator weightedPriceSum = CombineIndicator.multiply(priceIndicator, volumeIndicator);\n-        this.volumeWeightedIndicator = CombineIndicator.divide(new SMAIndicator(weightedPriceSum, barCount),\n+        final var volumeIndicator = new VolumeIndicator(priceIndicator.getBarSeries());\n+        final var weightedPriceSum = BinaryOperation.product(priceIndicator, volumeIndicator);\n+        this.volumeWeightedIndicator = BinaryOperation.quotient(new SMAIndicator(weightedPriceSum, barCount),\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\nindex 30f443d98..e7d77798d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/candles/DojiIndicator.java\n@@ -30 +30 @@ import org.ta4j.core.indicators.averages.SMAIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.UnaryOperation;\n@@ -65 +65 @@ public class DojiIndicator extends CachedIndicator<Boolean> {\n-        this.bodyHeightInd = TransformIndicator.abs(new RealBodyIndicator(series));\n+        this.bodyHeightInd = UnaryOperation.abs(new RealBodyIndicator(series));\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TransformIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TransformIndicator.java\ndeleted file mode 100644\nindex 9944631af..000000000\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/TransformIndicator.java\n+++ /dev/null\n@@ -1,156 +0,0 @@\n-/*\n- * The MIT License (MIT)\n- *\n- * Copyright (c) 2017-2025 Ta4j Organization & respective\n- * authors (see AUTHORS)\n- *\n- * Permission is hereby granted, free of charge, to any person obtaining a copy of\n- * this software and associated documentation files (the \"Software\"), to deal in\n- * the Software without restriction, including without limitation the rights to\n- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\n- * the Software, and to permit persons to whom the Software is furnished to do so,\n- * subject to the following conditions:\n- *\n- * The above copyright notice and this permission notice shall be included in all\n- * copies or substantial portions of the Software.\n- *\n- * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\n- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\n- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\n- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n- */\n-package org.ta4j.core.indicators.helpers;\n-\n-import java.util.function.Function;\n-import java.util.function.UnaryOperator;\n-\n-import org.ta4j.core.Indicator;\n-import org.ta4j.core.indicators.CachedIndicator;\n-import org.ta4j.core.num.DecimalNumFactory;\n-import org.ta4j.core.num.Num;\n-\n-/**\n- * Transform indicator.\n- *\n- * <p>\n- * Transforms the {@link Num} of any indicator by using common math operations.\n- *\n- * @apiNote Minimal deviations in last decimal places possible. During some\n- *          calculations this indicator converts {@link Num DecimalNum} to\n- *          {@link Double double}\n- */\n-public class TransformIndicator extends CachedIndicator<Num> {\n-\n-    private final Indicator<Num> indicator;\n-    private final UnaryOperator<Num> transformationFunction;\n-\n-    /**\n-     * Constructor.\n-     *\n-     * @param indicator      the {@link Indicator}\n-     * @param transformation a {@link Function} describing the transformation\n-     */\n-    public TransformIndicator(Indicator<Num> indicator, UnaryOperator<Num> transformation) {\n-        super(indicator);\n-        this.indicator = indicator;\n-        this.transformationFunction = transformation;\n-    }\n-\n-    @Override\n-    protected Num calculate(int index) {\n-        return transformationFunction.apply(indicator.getValue(index));\n-    }\n-\n-    @Override\n-    public int getCountOfUnstableBars() {\n-        return 0;\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.plus(coefficient).\n-     */\n-    public static TransformIndicator plus(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.plus(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.minus(coefficient).\n-     */\n-    public static TransformIndicator minus(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.minus(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.dividedBy(coefficient).\n-     */\n-    public static TransformIndicator divide(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.dividedBy(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.multipliedBy(coefficient).\n-     */\n-    public static TransformIndicator multiply(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.multipliedBy(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.max(coefficient).\n-     */\n-    public static TransformIndicator max(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.max(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.min(coefficient).\n-     */\n-    public static TransformIndicator min(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.min(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.abs().\n-     */\n-    public static TransformIndicator abs(Indicator<Num> indicator) {\n-        return new TransformIndicator(indicator, Num::abs);\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.pow(coefficient).\n-     */\n-    public static TransformIndicator pow(Indicator<Num> indicator, Number coefficient) {\n-        Num numCoefficient = indicator.getBarSeries().numFactory().numOf(coefficient);\n-        return new TransformIndicator(indicator, val -> val.pow(numCoefficient));\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.sqrt().\n-     */\n-    public static TransformIndicator sqrt(Indicator<Num> indicator) {\n-        return new TransformIndicator(indicator, Num::sqrt);\n-    }\n-\n-    /**\n-     * Transforms the input indicator by indicator.log().\n-     *\n-     * @apiNote precision may be lost, because this implementation is using the\n-     *          underlying doubleValue method\n-     */\n-    public static TransformIndicator log(Indicator<Num> indicator) {\n-        return new TransformIndicator(indicator,\n-                val -> DecimalNumFactory.getInstance().numOf(Math.log(val.doubleValue())));\n-    }\n-\n-    @Override\n-    public String toString() {\n-        return getClass().getSimpleName();\n-    }\n-}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/BinaryOperation.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/BinaryOperation.java\nindex ac82f72ee..6d9077762 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/BinaryOperation.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/BinaryOperation.java\n@@ -29,0 +30 @@ import org.ta4j.core.Indicator;\n+import org.ta4j.core.indicators.helpers.ConstantIndicator;\n@@ -36,3 +37,2 @@ import org.ta4j.core.num.Num;\n- * This is a lightweight version of the\n- * {@link org.ta4j.core.indicators.helpers.CombineIndicator CombineIndicator};\n- * it doesn't cache.\n+ * This is a lightweight, non-cached implementation for binary operations\n+ * between two indicators.\n@@ -50 +50 @@ public class BinaryOperation implements Indicator<Num> {\n-    public static BinaryOperation sum(Indicator<Num> left, Indicator<Num> right) {\n+    public static BinaryOperation sum(final Indicator<Num> left, final Indicator<Num> right) {\n@@ -62 +62 @@ public class BinaryOperation implements Indicator<Num> {\n-    public static BinaryOperation difference(Indicator<Num> left, Indicator<Num> right) {\n+    public static BinaryOperation difference(final Indicator<Num> left, final Indicator<Num> right) {\n@@ -74 +74 @@ public class BinaryOperation implements Indicator<Num> {\n-    public static BinaryOperation product(Indicator<Num> left, Indicator<Num> right) {\n+    public static BinaryOperation product(final Indicator<Num> left, final Indicator<Num> right) {\n@@ -86 +86 @@ public class BinaryOperation implements Indicator<Num> {\n-    public static BinaryOperation quotient(Indicator<Num> left, Indicator<Num> right) {\n+    public static BinaryOperation quotient(final Indicator<Num> left, final Indicator<Num> right) {\n@@ -100 +100 @@ public class BinaryOperation implements Indicator<Num> {\n-    public static BinaryOperation min(Indicator<Num> left, Indicator<Num> right) {\n+    public static BinaryOperation min(final Indicator<Num> left, final Indicator<Num> right) {\n@@ -114 +114 @@ public class BinaryOperation implements Indicator<Num> {\n-    public static BinaryOperation max(Indicator<Num> left, Indicator<Num> right) {\n+    public static BinaryOperation max(final Indicator<Num> left, final Indicator<Num> right) {\n@@ -117,0 +118,88 @@ public class BinaryOperation implements Indicator<Num> {\n+    // Overloaded methods for operations with constants\n+\n+    /**\n+     * Returns an {@code Indicator} whose value is {@code (indicator + addend)}.\n+     *\n+     * @param indicator the indicator\n+     * @param addend    the coefficient to add\n+     * @return {@code indicator + addend}, rounded as necessary\n+     */\n+    public static BinaryOperation sum(final Indicator<Num> indicator, final Number addend) {\n+        final var constantIndicator = new ConstantIndicator<>(indicator.getBarSeries(),\n+                indicator.getBarSeries().numFactory().numOf(addend));\n+        return new BinaryOperation(Num::plus, indicator, constantIndicator);\n+    }\n+\n+    /**\n+     * Returns an {@code Indicator} whose value is {@code (indicator - subtrahend)}.\n+     *\n+     * @param indicator  the indicator\n+     * @param subtrahend the subtrahend to subtract\n+     * @return {@code indicator - subtrahend}, rounded as necessary\n+     */\n+    public static BinaryOperation difference(final Indicator<Num> indicator, final Number subtrahend) {\n+        final var constantIndicator = new ConstantIndicator<>(indicator.getBarSeries(),\n+                indicator.getBarSeries().numFactory().numOf(subtrahend));\n+        return new BinaryOperation(Num::minus, indicator, constantIndicator);\n+    }\n+\n+    /**\n+     * Returns an {@code Indicator} whose value is\n+     * {@code (indicator * coefficient)}.\n+     *\n+     * @param indicator   the indicator\n+     * @param coefficient the coefficient to multiply by\n+     * @return {@code indicator * coefficient}, rounded as necessary\n+     */\n+    public static BinaryOperation product(final Indicator<Num> indicator, final Number coefficient) {\n+        final var constantIndicator = new ConstantIndicator<>(indicator.getBarSeries(),\n+                indicator.getBarSeries().numFactory().numOf(coefficient));\n+        return new BinaryOperation(Num::multipliedBy, indicator, constantIndicator);\n+    }\n+\n+    /**\n+     * Returns an {@code Indicator} whose value is\n+     * {@code (indicator / coefficient)}.\n+     *\n+     * @param indicator   the indicator\n+     * @param coefficient the coefficient to divide by\n+     * @return {@code indicator / coefficient}, rounded as necessary\n+     */\n+    public static BinaryOperation quotient(final Indicator<Num> indicator, final Number coefficient) {\n+        final var constantIndicator = new ConstantIndicator<>(indicator.getBarSeries(),\n+                indicator.getBarSeries().numFactory().numOf(coefficient));\n+        return new BinaryOperation(Num::dividedBy, indicator, constantIndicator);\n+    }\n+\n+    /**\n+     * Returns the minimum of {@code indicator} and {@code constant} as an\n+     * {@code Indicator}.\n+     *\n+     * @param indicator the indicator\n+     * @param constant  the constant to compare with\n+     * @return the {@code Indicator} whose value is the smaller of {@code indicator}\n+     *         and {@code constant}. If they are equal, {@code indicator} is\n+     *         returned.\n+     */\n+    public static BinaryOperation min(final Indicator<Num> indicator, final Number constant) {\n+        final var constantIndicator = new ConstantIndicator<>(indicator.getBarSeries(),\n+                indicator.getBarSeries().numFactory().numOf(constant));\n+        return new BinaryOperation(Num::min, indicator, constantIndicator);\n+    }\n+\n+    /**\n+     * Returns the maximum of {@code indicator} and {@code constant} as an\n+     * {@code Indicator}.\n+     *\n+     * @param indicator the indicator\n+     * @param constant  the constant to compare with\n+     * @return the {@code Indicator} whose value is the greater of {@code indicator}\n+     *         and {@code constant}. If they are equal, {@code indicator} is\n+     *         returned.\n+     */\n+    public static BinaryOperation max(final Indicator<Num> indicator, final Number constant) {\n+        final var constantIndicator = new ConstantIndicator<>(indicator.getBarSeries(),\n+                indicator.getBarSeries().numFactory().numOf(constant));\n+        return new BinaryOperation(Num::max, indicator, constantIndicator);\n+    }\n+\n@@ -122 +210 @@ public class BinaryOperation implements Indicator<Num> {\n-    private BinaryOperation(BinaryOperator<Num> operator, Indicator<Num> left, Indicator<Num> right) {\n+    private BinaryOperation(final BinaryOperator<Num> operator, final Indicator<Num> left, final Indicator<Num> right) {\n@@ -129,3 +217,3 @@ public class BinaryOperation implements Indicator<Num> {\n-    public Num getValue(int index) {\n-        Num n1 = left.getValue(index);\n-        Num n2 = right.getValue(index);\n+    public Num getValue(final int index) {\n+        final var n1 = left.getValue(index);\n+        final var n2 = right.getValue(index);\n@@ -137 +225 @@ public class BinaryOperation implements Indicator<Num> {\n-        return 0;\n+        return Math.max(left.getCountOfUnstableBars(), right.getCountOfUnstableBars());\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperation.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperation.java\nindex 09ce95c54..ef8b5e664 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperation.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/UnaryOperation.java\n@@ -29,0 +30 @@ import org.ta4j.core.Indicator;\n+import org.ta4j.core.num.DecimalNumFactory;\n@@ -61,0 +63,25 @@ public class UnaryOperation implements Indicator<Num> {\n+    /**\n+     * Returns an {@code Indicator} whose value is {@code operand^exponent}.\n+     *\n+     * @param operand  the operand indicator\n+     * @param exponent the power exponent\n+     * @return {@code operand^exponent}\n+     * @see Num#pow\n+     */\n+    public static UnaryOperation pow(Indicator<Num> operand, Number exponent) {\n+        final var numExponent = operand.getBarSeries().numFactory().numOf(exponent);\n+        return new UnaryOperation(val -> val.pow(numExponent), operand);\n+    }\n+\n+    /**\n+     * Returns an {@code Indicator} whose value is {@code log(operand)}.\n+     *\n+     * @param operand the operand indicator\n+     * @return {@code log(operand)}\n+     * @apiNote precision may be lost, because this implementation is using the\n+     *          underlying doubleValue method\n+     */\n+    public static UnaryOperation log(Indicator<Num> operand) {\n+        return new UnaryOperation(val -> DecimalNumFactory.getInstance().numOf(Math.log(val.doubleValue())), operand);\n+    }\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\nindex b00052832..064bf6e19 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n@@ -32 +32 @@ import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -68,3 +68,3 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-    public AverageTrueRangeStopGainRule(BarSeries series, Indicator<Num> referencePrice, int atrBarCount,\n-            Number atrCoefficient) {\n-        this.stopGainThreshold = TransformIndicator.multiply(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    public AverageTrueRangeStopGainRule(final BarSeries series, final Indicator<Num> referencePrice,\n+            final int atrBarCount, final Number atrCoefficient) {\n+        this.stopGainThreshold = BinaryOperation.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\nindex 68972c716..2a940479e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopLossRule.java\n@@ -31 +31 @@ import org.ta4j.core.indicators.helpers.ClosePriceIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -73,3 +73,3 @@ public class AverageTrueRangeStopLossRule extends AbstractRule {\n-    public AverageTrueRangeStopLossRule(BarSeries series, Indicator<Num> referencePrice, int atrBarCount,\n-            Number atrCoefficient) {\n-        this.stopLossThreshold = TransformIndicator.multiply(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    public AverageTrueRangeStopLossRule(final BarSeries series, final Indicator<Num> referencePrice,\n+            final int atrBarCount, final Number atrCoefficient) {\n+        this.stopLossThreshold = BinaryOperation.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -108 +108 @@ public class AverageTrueRangeStopLossRule extends AbstractRule {\n-}\n\\ No newline at end of file\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\nindex aac342825..5005b714d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeTrailingStopLossRule.java\n@@ -33 +33 @@ import org.ta4j.core.indicators.helpers.LowestValueIndicator;\n-import org.ta4j.core.indicators.helpers.TransformIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -75,3 +75,3 @@ public class AverageTrueRangeTrailingStopLossRule extends AbstractRule {\n-    public AverageTrueRangeTrailingStopLossRule(BarSeries series, Indicator<Num> referencePrice, int atrBarCount,\n-            Number atrCoefficient) {\n-        this.stopLossThreshold = TransformIndicator.multiply(new ATRIndicator(series, atrBarCount), atrCoefficient);\n+    public AverageTrueRangeTrailingStopLossRule(final BarSeries series, final Indicator<Num> referencePrice,\n+            final int atrBarCount, final Number atrCoefficient) {\n+        this.stopLossThreshold = BinaryOperation.product(new ATRIndicator(series, atrBarCount), atrCoefficient);\n@@ -117 +117 @@ public class AverageTrueRangeTrailingStopLossRule extends AbstractRule {\n-}\n\\ No newline at end of file\n+}\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/InSlopeRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/InSlopeRule.java\nindex 86f75d27a..9840e0522 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/InSlopeRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/InSlopeRule.java\n@@ -30 +30 @@ import org.ta4j.core.TradingRecord;\n-import org.ta4j.core.indicators.helpers.CombineIndicator;\n+import org.ta4j.core.indicators.numeric.BinaryOperation;\n@@ -111,5 +111,5 @@ public class InSlopeRule extends AbstractRule {\n-        CombineIndicator diff = CombineIndicator.minus(ref, prev);\n-        Num val = diff.getValue(index);\n-        boolean minSlopeSatisfied = minSlope.isNaN() || val.isGreaterThanOrEqual(minSlope);\n-        boolean maxSlopeSatisfied = maxSlope.isNaN() || val.isLessThanOrEqual(maxSlope);\n-        boolean isNaN = minSlope.isNaN() && maxSlope.isNaN();\n+        final var diff = BinaryOperation.difference(ref, prev);\n+        final var val = diff.getValue(index);\n+        final boolean minSlopeSatisfied = minSlope.isNaN() || val.isGreaterThanOrEqual(minSlope);\n+        final boolean maxSlopeSatisfied = maxSlope.isNaN() || val.isLessThanOrEqual(maxSlope);\n+        final boolean isNaN = minSlope.isNaN() && maxSlope.isNaN();"
+}

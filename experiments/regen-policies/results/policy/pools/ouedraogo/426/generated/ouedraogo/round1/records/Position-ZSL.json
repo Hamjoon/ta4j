@@ -1,0 +1,58 @@
+{
+  "class_name": "Position",
+  "technique": "ZSL",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-29T16:42:44.553901+00:00",
+      "latency": 20.25,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "Crusoe",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1793292164-SqomA5fQCk9Ec2eFLuTq",
+      "usage": {
+        "prompt_tokens": 5959,
+        "completion_tokens": 5467,
+        "total_tokens": 11426,
+        "cost": 0.0016647,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 48,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0016647,
+          "upstream_inference_prompt_cost": 0.00029795,
+          "upstream_inference_completions_cost": 0.00136675
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1791,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "e5306078b5b756fb5c3acf92bd6f446cbaf10ec7c297a29478aad665e2b62ba4",
+      "response_sha256": "c500f3ea3e0c84cefa2d5d1073da9efc08b71fbeed78eea4521cbb80efdf4dc1"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "PositionTest",
+    "package": "org.ta4j.core",
+    "fqcn": "org.ta4j.core.PositionTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round1/sources/Position/ZSL/PositionTest.java"
+}

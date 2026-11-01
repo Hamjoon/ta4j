@@ -1,0 +1,42 @@
+{
+  "index": 300,
+  "sha": "d4a397041850a7a077cdc6e25f020d4162a098b5",
+  "parent": "e1cc531710f30ff08be525415d00790c4ab7b840",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      493,
+      520,
+      542,
+      548
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      493,
+      520,
+      541,
+      543,
+      544,
+      551,
+      552,
+      560,
+      561,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      571,
+      572,
+      573,
+      575,
+      576,
+      579,
+      580,
+      584,
+      585
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex 8abf7e82f..2af5c6061 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -493 +493 @@ public final class ElliottScenarioGenerator {\n-        searchDecompositionCuts(pivots.size(), waveCount - 1, 1, new ArrayList<>(), cutPoints -> {\n+        searchDecompositionCuts(pivots, waveCount - 1, 1, new ArrayList<>(), cutPoints -> {\n@@ -520 +520 @@ public final class ElliottScenarioGenerator {\n-        searchDecompositionCuts(pivots.size(), waveCount - 1, 1, new ArrayList<>(), cutPoints -> {\n+        searchDecompositionCuts(pivots, waveCount - 1, 1, new ArrayList<>(), cutPoints -> {\n@@ -539 +539 @@ public final class ElliottScenarioGenerator {\n-    private void searchDecompositionCuts(final int pivotCount, final int cutsNeeded, final int nextPivot,\n+    private void searchDecompositionCuts(final List<SwingPivotPoint> pivots, final int cutsNeeded, final int nextPivot,\n@@ -540,0 +541 @@ public final class ElliottScenarioGenerator {\n+        final int pivotCount = pivots.size();\n@@ -542 +543,3 @@ public final class ElliottScenarioGenerator {\n-            consumer.accept(List.copyOf(chosenCuts));\n+            if (decompositionAlternatesDirection(pivots, chosenCuts, true)) {\n+                consumer.accept(List.copyOf(chosenCuts));\n+            }\n@@ -548 +551,3 @@ public final class ElliottScenarioGenerator {\n-            searchDecompositionCuts(pivotCount, cutsNeeded - 1, pivotIndex + 1, chosenCuts, consumer);\n+            if (decompositionAlternatesDirection(pivots, chosenCuts, false)) {\n+                searchDecompositionCuts(pivots, cutsNeeded - 1, pivotIndex + 1, chosenCuts, consumer);\n+            }\n@@ -552,0 +558,30 @@ public final class ElliottScenarioGenerator {\n+    private boolean decompositionAlternatesDirection(final List<SwingPivotPoint> pivots, final List<Integer> cutPoints,\n+            final boolean includeTerminalSegment) {\n+        if (cutPoints.isEmpty()) {\n+            return true;\n+        }\n+\n+        int previousDirection = 0;\n+        int previousPivot = 0;\n+        for (Integer cutPoint : cutPoints) {\n+            final int currentDirection = segmentDirection(pivots, previousPivot, cutPoint);\n+            if (currentDirection == 0 || currentDirection == previousDirection) {\n+                return false;\n+            }\n+            previousDirection = currentDirection;\n+            previousPivot = cutPoint;\n+        }\n+\n+        if (!includeTerminalSegment) {\n+            return true;\n+        }\n+\n+        final int terminalDirection = segmentDirection(pivots, previousPivot, pivots.size() - 1);\n+        return terminalDirection != 0 && terminalDirection != previousDirection;\n+    }\n+\n+    private int segmentDirection(final List<SwingPivotPoint> pivots, final int startPivot, final int endPivot) {\n+        final double delta = pivots.get(endPivot).price().minus(pivots.get(startPivot).price()).doubleValue();\n+        return Double.compare(delta, 0.0);\n+    }\n+"
+}

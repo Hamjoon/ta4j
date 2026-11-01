@@ -1,0 +1,326 @@
+package org.ta4j.core.indicators;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.Indicator;
+import org.ta4j.core.indicators.helpers.TRIndicator;
+import org.ta4j.core.num.Num;
+
+/**
+ * JUnit‑4 test suite for {@link ATRIndicator}.
+ *
+ * <p>
+ * The tests are written without using any external library classes that are not
+ * listed in the provided source code or dependency signatures.  Simple concrete
+ * implementations of {@link BarSeries}, {@link Num} and {@link Indicator} are
+ * supplied inside the test file so that the library classes can be exercised
+ * without resorting to mocks or reflection.
+ * </p>
+ */
+public class ATRIndicatorTest {
+
+    /* -------------------------------------------------------------------- */
+    /* Helper classes                                                      */
+    /* -------------------------------------------------------------------- */
+
+    /** Minimal {@link Num} implementation based on a {@code double} value. */
+    private static final class SimpleNum implements Num {
+        private final double value;
+
+        private SimpleNum(double value) {
+            this.value = value;
+        }
+
+        static SimpleNum valueOf(double v) {
+            return new SimpleNum(v);
+        }
+
+        /* ---------- Numeric operations (only those used by the library) ---------- */
+        @Override public Num plus(Num augend)                 { return valueOf(this.value + augend.doubleValue()); }
+        @Override public Num minus(Num subtrahend)              { return valueOf(this.value - subtrahend.doubleValue()); }
+        @Override public Num multipliedBy(Num multiplicand)    { return valueOf(this.value * multiplicand.doubleValue()); }
+        @Override public Num dividedBy(Num divisor)              { return valueOf(this.value / divisor.doubleValue()); }
+        @Override public Num max(Num other)                    { return valueOf(Math.max(this.value, other.doubleValue())); }
+        @Override public Num min(Num other)                    { return valueOf(Math.min(this.value, other.doubleValue())); }
+        @Override public Num abs()                             { return valueOf(Math.abs(this.value)); }
+        @Override public Num negate()                           { return valueOf(-this.value); }
+        @Override public boolean isNaN()                       { return Double.isNaN(this.value); }
+        @Override public boolean isZero()                      { return this.value == 0.0; }
+        @Override public boolean isPositive()                  { return this.value > 0.0; }
+        @Override public boolean isPositiveOrZero()            { return this.value >= 0.0; }
+        @Override public boolean isNegative()                  { return this.value < 0.0; }
+        @Override public boolean isNegativeOrZero()            { return this.value <= 0.0; }
+        @Override public boolean isEqual(Num other)            { return Double.compare(this.value, other.doubleValue()) == 0; }
+        @Override public boolean isGreaterThan(Num other)      { return this.value > other.doubleValue(); }
+        @Override public boolean isGreaterThanOrEqual(Num other){ return this.value >= other.doubleValue(); }
+        @Override public boolean isLessThan(Num other)         { return this.value < other.doubleValue(); }
+        @Override public boolean isLessThanOrEqual(Num other)   { return this.value <= other.doubleValue(); }
+
+        /* ---------- Boiler‑plate methods ------------------------------------------ */
+        @Override public Number getDelegate()                 { return value; }
+        @Override public NumFactory getNumFactory()           { throw new UnsupportedOperationException("NumFactory not needed in tests"); }
+        @Override public String getName()                      { return Double.toString(value); }
+        @Override public Num floor()                           { return valueOf(Math.floor(value)); }
+        @Override public Num ceil()                            { return valueOf(Math.ceil(value)); }
+        @Override public Num pow(int n)                        { return valueOf(Math.pow(value, n)); }
+        @Override public Num pow(Num n)                        { return valueOf(Math.pow(value, n.doubleValue())); }
+        @Override public Num log()                             { return valueOf(Math.log(value)); }
+        @Override public Num exp()                             { return valueOf(Math.exp(value)); }
+        @Override public Num sqrt()                            { return valueOf(Math.sqrt(value)); }
+        @Override public Num sqrt(java.math.MathContext mc)    { return valueOf(Math.sqrt(value)); }
+        @Override public BigDecimal bigDecimalValue()          { return BigDecimal.valueOf(value); }
+        @Override public int intValue()                        { return (int) value; }
+        @Override public long longValue()                      { return (long) value; }
+        @Override public float floatValue()                    { return (float) value; }
+        @Override public double doubleValue()                  { return value; }
+        @Override public int hashCode()                        { return Double.hashCode(value); }
+        @Override public boolean equals(Object obj) {
+            if (this == obj) return true;
+            if (obj instanceof SimpleNum) {
+                return Double.compare(this.value, ((SimpleNum) obj).value) == 0;
+            }
+            return false;
+        }
+        @Override public String toString()                    { return Double.toString(value); }
+    }
+
+    /** Minimal constant {@link Indicator} that always returns the same {@link Num}. */
+    private static final class ConstantIndicator implements Indicator<Num> {
+        private final Num constant;
+
+        ConstantIndicator(Num constant) {
+            this.constant = constant;
+        }
+
+        @Override public Num getValue(int index) { return constant; }
+        @Override public BarSeries getBarSeries() { return null; }
+        @Override public int getCountOfUnstableBars() { return 0; }
+        @Override public String toString() { return "Constant(" + constant + ")"; }
+    }
+
+    /** Very small {@link BarSeries} implementation – only the methods required by
+     *  {@link TRIndicator} are needed for the tests that use the constructor
+     *  {@code ATRIndicator(BarSeries, int)}.  The series contains a single bar
+     *  with predefined high/low/close values. */
+    private static final class SimpleBarSeries implements BarSeries {
+        private final List<Num> highs;
+        private final List<Num> lows;
+        private final List<Num> closes;
+        private final String name = "simple-series";
+
+        SimpleBarSeries(List<Num> highs, List<Num> lows, List<Num> closes) {
+            if (highs.size() != lows.size() || lows.size() != closes.size())
+                throw new IllegalArgumentException("All lists must have the same size");
+            this.highs = highs;
+            this.lows = lows;
+            this.closes = closes;
+        }
+
+        // ----- Only the methods accessed by TRIndicator (via its Bar‑based constructor) -----
+        @Override public int getBarCount() { return highs.size(); }
+        @Override public NumFactory numFactory() { throw new UnsupportedOperationException(); }
+        @Override public BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+        @Override public String getName() { return name; }
+        @Override public org.ta4j.core.Bar getBar(int i) {
+            final int idx = i;
+            return new org.ta4j.core.Bar() {
+                @Override public Num getOpenPrice()            { return SimpleNum.valueOf(0); }
+                @Override public Num getHighPrice()            { return highs.get(idx); }
+                @Override public Num getLowPrice()             { return lows.get(idx); }
+                @Override public Num getClosePrice()           { return closes.get(idx); }
+                @Override public Num getVolume()               { return SimpleNum.valueOf(0); }
+                @Override public Num getAmount()               { return SimpleNum.valueOf(0); }
+                @Override public Num getTrades()               { return SimpleNum.valueOf(0); }
+                @Override public ZonedDateTime getEndTime()    { return ZonedDateTime.now(); }
+                @Override public ZonedDateTime getBeginTime()  { return ZonedDateTime.now(); }
+                @Override public Duration getTimePeriod()    { return Duration.ofMinutes(1); }
+                @Override public double getPrice(PriceComponent component) {
+                    switch (component) {
+                        case Open:    return 0.0;
+                        case High:    return highs.get(idx).doubleValue();
+                        case Low:     return lows.get(idx).doubleValue();
+                        case Close:   return closes.get(idx).doubleValue();
+                        default:      throw new IllegalArgumentException();
+                    }
+                }
+                @Override public double getVolume(VolumeComponent component) { return 0.0; }
+                @Override public double getAmount() { return 0.0; }
+                @Override public double getTrades() { return 0.0; }
+                @Override public boolean isTick() { return false; }
+                @Override public boolean isBar() { return true; }
+                @Override public String toString() { return "Bar[" + idx + "]"; }
+                @Override public int hashCode() { return idx; }
+                @Override public boolean equals(Object obj) { return this == obj; }
+            };
+        }
+
+        // ----- Remaining interface methods – not needed for our tests -----------------
+        @Override public Bar getFirstBar() { return getBar(0); }
+        @Override public Bar getLastBar() { return getBar(getBarCount() - 1); }
+        @Override public List<Bar> getBarData() { throw new UnsupportedOperationException(); }
+        @Override public void clear() { throw new UnsupportedOperationException(); }
+        @Override public int getBeginIndex() { return 0; }
+        @Override public int getEndIndex() { return getBarCount() - 1; }
+        @Override public String getSeriesPeriodDescription() { return ""; }
+        @Override public String getSeriesPeriodDescriptionInSystemTimeZone() { return ""; }
+        @Override public int getMaximumBarCount() { return Integer.MAX_VALUE; }
+        @Override public void setMaximumBarCount(int maximumBarCount) { }
+        @Override public int getRemovedBarsCount() { return 0; }
+        @Override public void addBar(Bar bar) { throw new UnsupportedOperationException(); }
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+        @Override public void addTrade(Number tradeVolume, Number tradePrice) { }
+        @Override public void addTrade(Num tradeVolume, Num tradePrice) { }
+        @Override public void addPrice(Num price) { }
+        @Override public void addPrice(Number price) { }
+        @Override public BarSeries getSubSeries(int startIndex, int endIndex) { throw new UnsupportedOperationException(); }
+    }
+
+    /* -------------------------------------------------------------------- */
+    /* Test cases                                                          */
+    /* -------------------------------------------------------------------- */
+
+    /** Verify that the public signatures are as expected. */
+    @Test
+    public void testPublicMethodSignatures() throws NoSuchMethodException {
+        // Constructors
+        assertNotNull(ATRIndicator.class.getConstructor(BarSeries.class, int.class));
+        assertNotNull(ATRIndicator.class.getConstructor(TRIndicator.class, int.class));
+
+        // Public methods
+        assertNotNull(ATRIndicator.class.getMethod("getValue", int.class));
+        assertNotNull(ATRIndicator.class.getMethod("getCountOfUnstableBars"));
+        assertNotNull(ATRIndicator.class.getMethod("getTRIndicator"));
+        assertNotNull(ATRIndicator.class.getMethod("getBarCount"));
+        assertNotNull(ATRIndicator.class.getMethod("toString"));
+    }
+
+    /** Basic functionality: unstable bars return NaN, later bars return a
+     *  concrete (non‑NaN) value. */
+    @Test
+    public void testGetValueBasicBehaviour() {
+        // constant high/low/close indicators – values are chosen so that the true range is 5.0
+        Indicator<Num> high = new ConstantIndicator(SimpleNum.valueOf(10));
+        Indicator<Num> low  = new ConstantIndicator(SimpleNum.valueOf(5));
+        Indicator<Num> close = new ConstantIndicator(SimpleNum.valueOf(7));
+
+        TRIndicator tr = new TRIndicator(high, low, close);
+        int barCount = 2;                     // moving‑average window
+        ATRIndicator atr = new ATRIndicator(tr, barCount);
+
+        int unstable = atr.getCountOfUnstableBars(); // should be tr.getCountOfUnstableBars() + barCount
+        // first 'unstable' indices must yield NaN
+        for (int i = 0; i < unstable; i++) {
+            Num v = atr.getValue(i);
+            assertTrue("Value at index " + i + " must be NaN", v.isNaN());
+        }
+
+        // the first stable index should return a finite, positive number
+        Num stableValue = atr.getValue(unstable);
+        assertNotNull(stableValue);
+        assertFalse("Stable value must not be NaN", stableValue.isNaN());
+        assertTrue("Stable value should be positive", stableValue.isPositive());
+    }
+
+    /** The count of unstable bars must equal the underlying TRIndicator's count
+     *  plus the ATR bar count. */
+    @Test
+    public void testGetCountOfUnstableBars() {
+        TRIndicator tr = new TRIndicator(new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)));
+        int barCount = 5;
+        ATRIndicator atr = new ATRIndicator(tr, barCount);
+        int expected = tr.getCountOfUnstableBars() + barCount;
+        assertEquals(expected, atr.getCountOfUnstableBars());
+    }
+
+    /** getTRIndicator must return a TRIndicator that works on the same
+     *  BarSeries that the ATRIndicator was created with. */
+    @Test
+    public void testGetTRIndicator() {
+        // Build a simple series with two bars
+        SimpleBarSeries series = new SimpleBarSeries(
+                List.of(SimpleNum.valueOf(12), SimpleNum.valueOf(13)),   // highs
+                List.of(SimpleNum.valueOf(8),  SimpleNum.valueOf(9)),    // lows
+                List.of(SimpleNum.valueOf(10), SimpleNum.valueOf(11))    // closes
+        );
+
+        ATRIndicator atr = new ATRIndicator(series, 2);
+        TRIndicator tr = atr.getTRIndicator();
+
+        assertNotNull(tr);
+        assertSame("TRIndicator should be built on the original series",
+                series, tr.getBarSeries());
+    }
+
+    /** The toString method must contain the class name and the bar count. */
+    @Test
+    public void testToString() {
+        TRIndicator tr = new TRIndicator(new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)));
+        ATRIndicator atr = new ATRIndicator(tr, 7);
+        String s = atr.toString();
+        assertTrue(s.contains("ATRIndicator"));
+        assertTrue(s.contains("barCount: 7"));
+    }
+
+    /** Edge case – negative index should throw an {@link IndexOutOfBoundsException}
+     *  (the underlying MMAIndicator follows the same contract). */
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueWithNegativeIndex() {
+        TRIndicator tr = new TRIndicator(new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)));
+        ATRIndicator atr = new ATRIndicator(tr, 1);
+        atr.getValue(-1); // expected to throw
+    }
+
+    /** Edge case – constructing with a null BarSeries must throw a
+     *  {@link NullPointerException}. */
+    @Test(expected = NullPointerException.class)
+    public void testConstructorWithNullSeries() {
+        new ATRIndicator((BarSeries) null, 3);
+    }
+
+    /** Edge case – constructing with a null TRIndicator must throw a
+     *  {@link NullPointerException}. */
+    @Test(expected = NullPointerException.class)
+    public void testConstructorWithNullTRIndicator() {
+        new ATRIndicator((TRIndicator) null, 3);
+    }
+
+    /** Edge case – zero bar count should still create the object but
+     *  subsequent calls to {@code getValue} must return NaN for every index
+     *  (because the moving‑average window is undefined). */
+    @Test
+    public void testZeroBarCountBehaviour() {
+        TRIndicator tr = new TRIndicator(new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)));
+        ATRIndicator atr = new ATRIndicator(tr, 0);
+        // With barCount = 0 the unstable bar count equals tr.getCountOfUnstableBars()
+        int unstable = atr.getCountOfUnstableBars();
+        // All indices up to (unstable + 5) should be NaN because MMAIndicator cannot produce a value
+        for (int i = 0; i < unstable + 5; i++) {
+            assertTrue("Expected NaN at index " + i, atr.getValue(i).isNaN());
+        }
+    }
+
+    /** Edge case – negative bar count should raise an {@link IllegalArgumentException}
+     *  when the underlying MMAIndicator is created. */
+    @Test(expected = IllegalArgumentException.class)
+    public void testNegativeBarCountThrows() {
+        TRIndicator tr = new TRIndicator(new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)),
+                                         new ConstantIndicator(SimpleNum.valueOf(1)));
+        // The library's MMAIndicator validates the bar count; we expect an exception here.
+        new ATRIndicator(tr, -3);
+    }
+}

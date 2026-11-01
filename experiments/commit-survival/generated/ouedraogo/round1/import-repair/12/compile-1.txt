@@ -1,0 +1,95 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:18: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:57: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,DecimalNum)
+            Bar bar = new BaseBar(Duration.ofDays(1), now.plusDays(i),
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:76: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(entryIdx));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:75: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:78: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(exitIdx));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:77: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade exit = new Trade(TradeType.SELL, series.getBar(exitIdx).getClosePrice(),
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:84: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(entryIdx));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:83: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:94: error: ONE has private access in DecimalNum
+                    DecimalNum.ONE);
+                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:97: error: ONE has private access in DecimalNum
+                        DecimalNum.ONE);
+                                  ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:172: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(0));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:171: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade entry = new Trade(TradeType.SELL, series.getBar(0).getClosePrice(),
+                      ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:174: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(2));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:173: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade exit = new Trade(TradeType.BUY, series.getBar(2).getClosePrice(),
+                     ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:213: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openPos, series.getEndIndex());
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:317: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(3));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:316: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade entryShort = new Trade(TradeType.SELL, series.getBar(3).getClosePrice(),
+                           ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:319: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(4));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:318: error: no suitable constructor found for Trade(TradeType,Num,DecimalNum,Bar)
+        Trade exitShort = new Trade(TradeType.BUY, series.getBar(4).getClosePrice(),
+                          ^
+    constructor Trade.Trade(int,BarSeries,TradeType,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+    constructor Trade.Trade(int,TradeType,Num,Num) is not applicable
+      (argument mismatch; TradeType cannot be converted to int)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+19 errors

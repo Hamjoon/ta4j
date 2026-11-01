@@ -1,0 +1,104 @@
+{
+  "index": 36,
+  "sha": "f7aa0f19edbaa31b1d7eab7da949e36b6aca1bc7",
+  "parent": "9abcd0134f0e3961b6f7bc413d0c728be54ed04a",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/BarBuilder.java": [],
+    "src/main/java/org/ta4j/core/BarBuilderFactory.java": [],
+    "src/main/java/org/ta4j/core/bars/BaseBar.java": [
+      85,
+      86,
+      87,
+      195,
+      196,
+      197
+    ],
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java": [
+      138
+    ],
+    "src/main/java/org/ta4j/core/bars/TickBarBuilder.java": [
+      60,
+      72,
+      77,
+      82,
+      87,
+      92,
+      97,
+      102,
+      107,
+      112
+    ],
+    "src/main/java/org/ta4j/core/bars/BaseBarBuilder.java": [
+      57
+    ],
+    "src/main/java/org/ta4j/core/bars/BaseBarBuilderFactory.java": [
+      29,
+      33
+    ],
+    "src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java": [
+      65,
+      77,
+      82,
+      87,
+      92,
+      97,
+      102,
+      107,
+      112,
+      117
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/BarBuilder.java": [],
+    "src/main/java/org/ta4j/core/BarBuilderFactory.java": [],
+    "src/main/java/org/ta4j/core/BaseBar.java": [
+      90,
+      91
+    ],
+    "src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java": [
+      46
+    ],
+    "src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java": [
+      138
+    ],
+    "src/main/java/org/ta4j/core/bars/TickBarBuilder.java": [
+      63,
+      64,
+      80,
+      92,
+      97,
+      102,
+      107,
+      112,
+      117,
+      122,
+      127,
+      132,
+      233
+    ],
+    "src/main/java/org/ta4j/core/bars/TimeBarBuilder.java": [
+      64
+    ],
+    "src/main/java/org/ta4j/core/bars/TimeBarBuilderFactory.java": [
+      29,
+      33
+    ],
+    "src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java": [
+      81,
+      93,
+      98,
+      103,
+      108,
+      113,
+      118,
+      123,
+      128,
+      133,
+      242
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java\nindex 4a6bc08f1..2e2fae5fd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BarBuilder.java\n@@ -31,0 +32 @@ public interface BarBuilder {\n+\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BarBuilderFactory.java b/ta4j-core/src/main/java/org/ta4j/core/BarBuilderFactory.java\nindex 5f89a81fe..576a97dfc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BarBuilderFactory.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BarBuilderFactory.java\n@@ -27 +27 @@ package org.ta4j.core;\n- * A factory that provides builders of bars.\n+ * A factory that provides a builder for a bar.\n@@ -30,0 +31,6 @@ public interface BarBuilderFactory {\n+    /**\n+     * Constructor.\n+     *\n+     * @param series the bar series to which the created bar should be added\n+     * @return the bar builder\n+     */\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/BaseBar.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\nsimilarity index 85%\nrename from ta4j-core/src/main/java/org/ta4j/core/bars/BaseBar.java\nrename to ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\nindex 35831ea77..c138533b8 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/BaseBar.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBar.java\n@@ -24 +24 @@\n-package org.ta4j.core.bars;\n+package org.ta4j.core;\n@@ -30 +29,0 @@ import java.util.Objects;\n-import org.ta4j.core.Bar;\n@@ -72,0 +72,4 @@ public class BaseBar implements Bar {\n+     * <p>\n+     * The {@link #beginTime} will be calculated by {@link #endTime} -\n+     * {@link #timePeriod}.\n+     *\n@@ -81,0 +85,2 @@ public class BaseBar implements Bar {\n+     * @throws NullPointerException if {@link #endTime} or {@link #timePeriod} is\n+     *                              {@code null}\n@@ -83 +88 @@ public class BaseBar implements Bar {\n-    BaseBar(Duration timePeriod, Instant endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice,\n+    public BaseBar(Duration timePeriod, Instant endTime, Num openPrice, Num highPrice, Num lowPrice, Num closePrice,\n@@ -85,3 +90,2 @@ public class BaseBar implements Bar {\n-        checkTimeArguments(timePeriod, endTime);\n-        this.timePeriod = timePeriod;\n-        this.endTime = endTime;\n+        this.timePeriod = Objects.requireNonNull(timePeriod, \"Time period cannot be null\");\n+        this.endTime = Objects.requireNonNull(endTime, \"End time cannot be null\");\n@@ -98,4 +101,0 @@ public class BaseBar implements Bar {\n-    /**\n-     * @return the time period of the bar (must be the same for all bars within the\n-     *         same {@code BarSeries})\n-     */\n@@ -107,4 +106,0 @@ public class BaseBar implements Bar {\n-    /**\n-     * @return the begin timestamp of the bar period (derived by {@link #endTime} -\n-     *         {@link #timePeriod})\n-     */\n@@ -189,10 +184,0 @@ public class BaseBar implements Bar {\n-    /**\n-     * @param timePeriod the time period\n-     * @param endTime    the end time of the bar\n-     * @throws NullPointerException if one of the arguments is null\n-     */\n-    private static void checkTimeArguments(Duration timePeriod, Instant endTime) {\n-        Objects.requireNonNull(timePeriod, \"Time period cannot be null\");\n-        Objects.requireNonNull(endTime, \"End time cannot be null\");\n-    }\n-\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\nindex fdfb8d748..e97904fdd 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/BaseBarSeriesBuilder.java\n@@ -29 +29 @@ import java.util.List;\n-import org.ta4j.core.bars.BaseBarBuilderFactory;\n+import org.ta4j.core.bars.TimeBarBuilderFactory;\n@@ -46 +46 @@ public class BaseBarSeriesBuilder implements BarSeriesBuilder {\n-    private BarBuilderFactory barBuilderFactory = new BaseBarBuilderFactory();\n+    private BarBuilderFactory barBuilderFactory = new TimeBarBuilderFactory();\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java b/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java\nindex 64a870007..2e8a6b96a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/aggregator/DurationBarAggregator.java\n@@ -32,2 +32,2 @@ import org.ta4j.core.Bar;\n-import org.ta4j.core.bars.BaseBar;\n-import org.ta4j.core.bars.BaseBarBuilder;\n+import org.ta4j.core.BaseBar;\n+import org.ta4j.core.bars.TimeBarBuilder;\n@@ -138 +138 @@ public class DurationBarAggregator implements BarAggregator {\n-                final Bar aggregatedBar = new BaseBarBuilder().timePeriod(timePeriod)\n+                final Bar aggregatedBar = new TimeBarBuilder().timePeriod(timePeriod)\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java\nindex ae2e108c8..a5c5d05fe 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/TickBarBuilder.java\n@@ -32,0 +33,2 @@ import org.ta4j.core.BarSeries;\n+import org.ta4j.core.BaseBar;\n+import org.ta4j.core.num.DoubleNumFactory;\n@@ -35,0 +38,3 @@ import org.ta4j.core.num.NumFactory;\n+/**\n+ * A tick bar is sampled after a fixed number of ticks.\n+ */\n@@ -51,0 +57,15 @@ public class TickBarBuilder implements BarBuilder {\n+    /**\n+     * A builder to build a new {@link BaseBar} with {@link DoubleNumFactory}\n+     *\n+     * @param tickCount the number of ticks at which a new bar should be created\n+     */\n+    public TickBarBuilder(final int tickCount) {\n+        this(DoubleNumFactory.getInstance(), tickCount);\n+    }\n+\n+    /**\n+     * A builder to build a new {@link BaseBar}\n+     *\n+     * @param numFactory\n+     * @param tickCount  the number of ticks at which a new bar should be created\n+     */\n@@ -60 +80 @@ public class TickBarBuilder implements BarBuilder {\n-        this.timePeriod = timePeriod;\n+        this.timePeriod = this.timePeriod == null ? timePeriod : this.timePeriod.plus(timePeriod);\n@@ -72 +92 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -77 +97 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -82 +102 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -87 +107 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -92 +112 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -97 +117 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -102 +122 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -107 +127 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -112 +132 @@ public class TickBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"TickBar can only be built from closePrice\");\n@@ -212,0 +233 @@ public class TickBarBuilder implements BarBuilder {\n+        this.timePeriod = null;\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/BaseBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java\nsimilarity index 82%\nrename from ta4j-core/src/main/java/org/ta4j/core/bars/BaseBarBuilder.java\nrename to ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java\nindex 4a7b0d756..fb93ec83e 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/BaseBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilder.java\n@@ -31,0 +32 @@ import org.ta4j.core.BarSeries;\n+import org.ta4j.core.BaseBar;\n@@ -37 +38 @@ import org.ta4j.core.num.NumFactory;\n- * A builder to build a new {@link BaseBar}.\n+ * A time bar is sampled after a fixed time period.\n@@ -39 +40 @@ import org.ta4j.core.num.NumFactory;\n-public class BaseBarBuilder implements BarBuilder {\n+public class TimeBarBuilder implements BarBuilder {\n@@ -53 +54,2 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder() {\n+    /** A builder to build a new {@link BaseBar} with {@link DoubleNumFactory} */\n+    public TimeBarBuilder() {\n@@ -57 +59,6 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder(final NumFactory numFactory) {\n+    /**\n+     * A builder to build a new {@link BaseBar}\n+     *\n+     * @param numFactory\n+     */\n+    public TimeBarBuilder(final NumFactory numFactory) {\n@@ -62 +69 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder timePeriod(final Duration timePeriod) {\n+    public TimeBarBuilder timePeriod(final Duration timePeriod) {\n@@ -68 +75 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder endTime(Instant endTime) {\n+    public TimeBarBuilder endTime(final Instant endTime) {\n@@ -74 +81 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder openPrice(final Num openPrice) {\n+    public TimeBarBuilder openPrice(final Num openPrice) {\n@@ -104 +111 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder highPrice(final Num highPrice) {\n+    public TimeBarBuilder highPrice(final Num highPrice) {\n@@ -110 +117 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder lowPrice(final Num lowPrice) {\n+    public TimeBarBuilder lowPrice(final Num lowPrice) {\n@@ -128 +135 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder closePrice(final Num closePrice) {\n+    public TimeBarBuilder closePrice(final Num closePrice) {\n@@ -146 +153 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder volume(final Num volume) {\n+    public TimeBarBuilder volume(final Num volume) {\n@@ -164 +171 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder amount(final Num amount) {\n+    public TimeBarBuilder amount(final Num amount) {\n@@ -182 +189 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder trades(final long trades) {\n+    public TimeBarBuilder trades(final long trades) {\n@@ -188 +195 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder trades(final String trades) {\n+    public TimeBarBuilder trades(final String trades) {\n@@ -194 +201 @@ public class BaseBarBuilder implements BarBuilder {\n-    public BaseBarBuilder bindTo(final BarSeries barSeries) {\n+    public TimeBarBuilder bindTo(final BarSeries barSeries) {\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/BaseBarBuilderFactory.java b/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilderFactory.java\nsimilarity index 87%\nrename from ta4j-core/src/main/java/org/ta4j/core/bars/BaseBarBuilderFactory.java\nrename to ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilderFactory.java\nindex cbb7ed6c2..2349f1a21 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/BaseBarBuilderFactory.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/TimeBarBuilderFactory.java\n@@ -29 +29 @@ import org.ta4j.core.BarSeries;\n-public class BaseBarBuilderFactory implements BarBuilderFactory {\n+public class TimeBarBuilderFactory implements BarBuilderFactory {\n@@ -32,2 +32,2 @@ public class BaseBarBuilderFactory implements BarBuilderFactory {\n-    public BaseBarBuilder createBarBuilder(BarSeries series) {\n-        return new BaseBarBuilder(series.numFactory()).bindTo(series);\n+    public TimeBarBuilder createBarBuilder(BarSeries series) {\n+        return new TimeBarBuilder(series.numFactory()).bindTo(series);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java b/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java\nindex 13a98fd0c..65e0d854a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/bars/VolumeBarBuilder.java\n@@ -32,0 +33 @@ import org.ta4j.core.BarSeries;\n+import org.ta4j.core.BaseBar;\n@@ -36,0 +38,4 @@ import org.ta4j.core.num.NumFactory;\n+/**\n+ * A volume bar is sampled after a fixed number of contracts (volume) have been\n+ * traded.\n+ */\n@@ -51,0 +57,5 @@ public class VolumeBarBuilder implements BarBuilder {\n+    /**\n+     * A builder to build a new {@link BaseBar} with {@link DoubleNumFactory}\n+     *\n+     * @param volumeThreshold the threshold at which a new bar should be created\n+     */\n@@ -55,0 +66,6 @@ public class VolumeBarBuilder implements BarBuilder {\n+    /**\n+     * A builder to build a new {@link BaseBar}\n+     *\n+     * @param numFactory\n+     * @param volumeThreshold the threshold at which a new bar should be created\n+     */\n@@ -65 +81 @@ public class VolumeBarBuilder implements BarBuilder {\n-        this.timePeriod = timePeriod;\n+        this.timePeriod = this.timePeriod == null ? timePeriod : this.timePeriod.plus(timePeriod);\n@@ -77 +93 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -82 +98 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -87 +103 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -92 +108 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -97 +113 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -102 +118 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -107 +123 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -112 +128 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -117 +133 @@ public class VolumeBarBuilder implements BarBuilder {\n-        throw new IllegalArgumentException(\"Ticks are build just from closePrices\");\n+        throw new IllegalArgumentException(\"VolumeBar can only be built from closePrice\");\n@@ -225,0 +242 @@ public class VolumeBarBuilder implements BarBuilder {\n+        this.timePeriod = null;"
+}

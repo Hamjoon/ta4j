@@ -1,0 +1,126 @@
+{
+  "testCases": [
+    {
+      "group": "Position.getEntry after operate",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "index",
+              "value": "5"
+            },
+            {
+              "parameter": "price",
+              "value": "Num.valueOf(100)"
+            },
+            {
+              "parameter": "amount",
+              "value": "Num.valueOf(10)"
+            }
+          ],
+          "expected": "tradeInstance",
+          "description": "Open a position by calling operate(index, price, amount). The returned Trade becomes the entry trade. A subsequent call to getEntry() must return the exact same Trade instance."
+        },
+        {
+          "input": [
+            {
+              "parameter": "firstIndex",
+              "value": "5"
+            },
+            {
+              "parameter": "secondIndex",
+              "value": "6"
+            },
+            {
+              "parameter": "price",
+              "value": "Num.valueOf(100)"
+            },
+            {
+              "parameter": "amount",
+              "value": "Num.valueOf(10)"
+            }
+          ],
+          "expected": "sameTradeInstance",
+          "description": "Call operate() twice with different indices but the same price/amount. The first call creates the entry trade; the second call should only create an exit trade (or be ignored) and must not replace the entry. getEntry() must still return the original Trade instance."
+        }
+      ]
+    },
+    {
+      "group": "Position.getEntry after exit set",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "entryIndex",
+              "value": "3"
+            },
+            {
+              "parameter": "exitIndex",
+              "value": "8"
+            },
+            {
+              "parameter": "entryPrice",
+              "value": "Num.valueOf(50)"
+            },
+            {
+              "parameter": "exitPrice",
+              "value": "Num.valueOf(55)"
+            },
+            {
+              "parameter": "amount",
+              "value": "Num.valueOf(20)"
+            }
+          ],
+          "expected": "originalEntryTrade",
+          "description": "Open a position (entry) and then close it (exit) by calling operate() twice. After the position is closed, getEntry() must still return the original entry Trade, not null and not the exit Trade."
+        }
+      ]
+    },
+    {
+      "group": "Position.getEntry idempotent",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "index",
+              "value": "2"
+            },
+            {
+              "parameter": "price",
+              "value": "Num.valueOf(200)"
+            },
+            {
+              "parameter": "amount",
+              "value": "Num.valueOf(5)"
+            }
+          ],
+          "expected": "sameReferenceOnMultipleCalls",
+          "description": "After creating the entry trade, invoke getEntry() three times in a row. All returned objects must be the same reference (==), proving that getEntry() is idempotent and does not create new objects."
+        }
+      ]
+    },
+    {
+      "group": "Position.getEntry after serialization",
+      "cases": [
+        {
+          "input": [
+            {
+              "parameter": "index",
+              "value": "1"
+            },
+            {
+              "parameter": "price",
+              "value": "Num.valueOf(75)"
+            },
+            {
+              "parameter": "amount",
+              "value": "Num.valueOf(15)"
+            }
+          ],
+          "expected": "equalTradeAfterDeserialization",
+          "description": "Create a Position with an entry trade, serialize the Position to a byte array, deserialize it back, and then call getEntry(). The deserialized Trade must be equal (by .equals) to the original entry Trade, confirming that the entry field is correctly persisted."
+        }
+      ]
+    }
+  ]
+}

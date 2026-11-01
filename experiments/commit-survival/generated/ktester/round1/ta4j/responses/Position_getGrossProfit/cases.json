@@ -1,0 +1,32 @@
+[
+  {
+    "group": "openedPositionReturnsZero",
+    "cases": [
+      {
+        "input": [],
+        "expected": "0",
+        "description": "A Position that has only an entry trade (isOpened() == true) should return zero() for getGrossProfit(). The entry trade is a BUY at price 10 with amount 1."
+      }
+    ]
+  },
+  {
+    "group": "closedPositionWithNullExitThrowsNPE",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "A Position that is closed (isOpened() == false) but whose internal 'exit' trade reference is null. Calling getGrossProfit() should attempt to access exit.getPricePerAsset() and throw a NullPointerException."
+      }
+    ]
+  },
+  {
+    "group": "closedPositionWithExitPriceNullThrowsNPE",
+    "cases": [
+      {
+        "input": [],
+        "expected": "NullPointerException",
+        "description": "A Position that is closed with a non\u2011null exit trade, however the exit trade's price per asset is null. When getGrossProfit() invokes getGrossProfit(exit.getPricePerAsset()), the null argument propagates and results in a NullPointerException inside the overloaded method."
+      }
+    ]
+  }
+]

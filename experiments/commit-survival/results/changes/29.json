@@ -1,0 +1,14 @@
+{
+  "index": 29,
+  "sha": "d695b0a338a1e36164001acc6b5da3d7585dbf18",
+  "parent": "17823a59c1eb526545c52f1031759558a799d328",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/num/DecimalNum.java": [],
+    "src/main/java/org/ta4j/core/num/DoubleNum.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\nindex 57db22a56..0db7fb8ce 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DecimalNum.java\n@@ -43,0 +44,3 @@ import org.slf4j.LoggerFactory;\n+ * <p>\n+ * It uses a precision of up to {@value #DEFAULT_PRECISION} decimal places.\n+ *\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\nindex 8b3f685bd..0790d3c6d 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/num/DoubleNum.java\n@@ -32,0 +33,4 @@ import java.math.BigDecimal;\n+ * *\n+ * <p>\n+ * It uses a precision of up to {@value #EPS} decimal places.\n+ *"
+}

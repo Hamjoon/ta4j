@@ -1,0 +1,24 @@
+{
+  "coordinate": "org.junit.vintage:junit-vintage-engine:5.10.2",
+  "attempts": [
+    {
+      "command": [
+        "mvn",
+        "-q",
+        "-U",
+        "org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get",
+        "-Dartifact=org.junit.vintage:junit-vintage-engine:5.10.2",
+        "-Dtransitive=false"
+      ],
+      "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+      "exit_code": 0,
+      "timeout": false,
+      "seconds": 1.387,
+      "log": "results/runner-dependency-org.junit.vintage.junit-vintage-engine-5.10.2-1.txt",
+      "coordinate": "org.junit.vintage:junit-vintage-engine:5.10.2",
+      "expected_sha256": "f1f8d1d33572c750cbe9bc6ab81019af28e8de555d58c42d1d0b7248b3315769",
+      "rejected_sha256": null,
+      "downloaded_sha256": "f1f8d1d33572c750cbe9bc6ab81019af28e8de555d58c42d1d0b7248b3315769"
+    }
+  ]
+}

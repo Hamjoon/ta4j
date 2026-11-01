@@ -1,0 +1,15 @@
+{
+  "executable": 763,
+  "groups": {
+    "dev-scope": 1,
+    "ouedraogo": 31
+  },
+  "group_executable": {
+    "dev-scope": 763,
+    "ouedraogo": 763
+  },
+  "reference_groups": [
+    "dev-scope"
+  ],
+  "missing_indices": []
+}

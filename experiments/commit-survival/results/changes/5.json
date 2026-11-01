@@ -1,0 +1,12 @@
+{
+  "index": 5,
+  "sha": "69fd473d678e4fdf937f2c704cd8db5653759fa6",
+  "parent": "94c13f01bd0b429e3f9388dd89830e9f24e27be9",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/pnl/ProfitLossCriterion.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/pnl/ProfitLossCriterion.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossCriterion.java\nindex e4b5ee384..6541e4eba 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossCriterion.java\n@@ -33 +33 @@ import org.ta4j.core.num.Num;\n- * Net Profit and loss criterion (absolute PnL, excludes trading costs).\n+ * Net Profit and loss criterion (absolute PnL, includes trading costs).\n@@ -59 +59 @@ public class ProfitLossCriterion extends AbstractAnalysisCriterion {\n-}\n\\ No newline at end of file\n+}"
+}

@@ -1,0 +1,20 @@
+{
+  "index": 355,
+  "sha": "b5b9ea0f391b893f4bcc3948ee9bc235ac7c5370",
+  "parent": "a158cca46e6ecedf467c40d4b9c47fb5b4ad5457",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      660
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java": [
+      660,
+      665,
+      666,
+      669,
+      670
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\nindex d7e48315d..86ace1cbb 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottScenarioGenerator.java\n@@ -660 +660 @@ public final class ElliottScenarioGenerator {\n-        if (cutPoints.size() < 4) {\n+        if (cutPoints.size() < 3) {\n@@ -664,0 +665,8 @@ public final class ElliottScenarioGenerator {\n+        if (!fibValidator.isWaveThreeExtensionValid(wave1, wave3)) {\n+            return false;\n+        }\n+\n+        if (cutPoints.size() < 4) {\n+            return true;\n+        }\n+"
+}

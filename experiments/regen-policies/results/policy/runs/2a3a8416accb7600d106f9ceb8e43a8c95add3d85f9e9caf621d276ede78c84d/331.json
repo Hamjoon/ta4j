@@ -1,0 +1,632 @@
+{
+  "index": 331,
+  "sha": "83096bc07f55cff2087e5228086769ac210b6425",
+  "status": "evaluated",
+  "imported": false,
+  "coverage_version": 2,
+  "coverage_status": "complete",
+  "coverage_reason": "",
+  "methods": [
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testNewPositionState",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testNewPositionState",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          203
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          210
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          217
+        ]
+      ]
+    },
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesEntryAndExit",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateCreatesEntryAndExit",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          185
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          186
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          187
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          188
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          189
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          190
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          193
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          194
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          196
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          203
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          210
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          217
+        ]
+      ]
+    },
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateCreatesEntryAndExitForSellStart",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateCreatesEntryAndExitForSellStart",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          185
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          186
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          187
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          188
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          189
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          190
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          193
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          194
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          196
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          210
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          217
+        ]
+      ]
+    },
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testOperateThrowsWhenIndexLessThanEntry",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testOperateThrowsWhenIndexLessThanEntry",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          185
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          186
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          187
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          188
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          189
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          190
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          191
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          196
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          210
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          217
+        ]
+      ]
+    },
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testEqualsAndHashCode",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testEqualsAndHashCode",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          139
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          146
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          151
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          152
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          153
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          160
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          185
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          186
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          187
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          188
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          189
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          190
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          193
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          194
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          196
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          210
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          217
+        ]
+      ]
+    },
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testToStringContainsEntryAndExit",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testToStringContainsEntryAndExit",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          185
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          186
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          187
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          188
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          189
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          190
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          193
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          194
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          196
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          210
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          217
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          450
+        ]
+      ]
+    },
+    {
+      "id": "generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java|org.ta4j.core.PositionTest|testGetStartingType",
+      "file_hash": "deb87b78bb216a393ea9a8b731a71e7714a5aa5b596bd633e6300e3d41c5ec7b",
+      "execution_hash": "2a3a8416accb7600d106f9ceb8e43a8c95add3d85f9e9caf621d276ede78c84d",
+      "class": "org.ta4j.core.PositionTest",
+      "method": "testGetStartingType",
+      "state": "pass",
+      "message": "",
+      "lines": [
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          49
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          50
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          59
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          60
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          70
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          71
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          74
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          75
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          76
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          77
+        ],
+        [
+          "src/main/java/org/ta4j/core/Position.java",
+          438
+        ]
+      ]
+    }
+  ]
+}

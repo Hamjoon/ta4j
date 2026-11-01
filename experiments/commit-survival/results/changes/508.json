@@ -1,0 +1,17 @@
+{
+  "index": 508,
+  "sha": "61886ac7d7f649b034b95691dbb02acfa1d64801",
+  "parent": "369eae35a189af21730a1d17b1f08b54ec109128",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java": [
+      54,
+      55
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java": [
+      52
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java\nindex 11482b68a..b8f059f0a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/DistanceFromMAIndicator.java\n@@ -6,2 +5,0 @@ package org.ta4j.core.indicators;\n-import java.util.Arrays;\n-import java.util.HashSet;\n@@ -54,7 +52,6 @@ public class DistanceFromMAIndicator extends CachedIndicator<Num> {\n-    private static final Set<Class<?>> supportedMovingAverages = new HashSet<>(\n-            Arrays.asList(EMAIndicator.class, DoubleEMAIndicator.class, TripleEMAIndicator.class, SMAIndicator.class,\n-                    WMAIndicator.class, ZLEMAIndicator.class, HMAIndicator.class, KAMAIndicator.class,\n-                    LWMAIndicator.class, AbstractEMAIndicator.class, MMAIndicator.class, WildersMAIndicator.class,\n-                    DMAIndicator.class, EDMAIndicator.class, JMAIndicator.class, TMAIndicator.class,\n-                    ATMAIndicator.class, MCGinleyMAIndicator.class, SMMAIndicator.class, SGMAIndicator.class,\n-                    LSMAIndicator.class, KiJunV2Indicator.class, VIDYAIndicator.class, VWMAIndicator.class));\n+    private static final Set<Class<?>> supportedMovingAverages = Set.of(EMAIndicator.class, DoubleEMAIndicator.class,\n+            TripleEMAIndicator.class, SMAIndicator.class, WMAIndicator.class, ZLEMAIndicator.class, HMAIndicator.class,\n+            KAMAIndicator.class, LWMAIndicator.class, AbstractEMAIndicator.class, MMAIndicator.class,\n+            WildersMAIndicator.class, DMAIndicator.class, EDMAIndicator.class, JMAIndicator.class, TMAIndicator.class,\n+            ATMAIndicator.class, MCGinleyMAIndicator.class, SMMAIndicator.class, SGMAIndicator.class,\n+            LSMAIndicator.class, KiJunV2Indicator.class, VIDYAIndicator.class, VWMAIndicator.class);"
+}

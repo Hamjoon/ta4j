@@ -1,0 +1,167 @@
+[
+  {
+    "group": "crossedUnder",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(5)))"
+          }
+        ],
+        "expected": "Rule.isSatisfied(2) == true (this indicator crosses under at index 2)",
+        "description": "this indicator values: [10, 8, 4]; other constant 5. At index 2 the value goes from 8 (above) to 4 (below) \u2192 crossed under, rule should be satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(5)))"
+          }
+        ],
+        "expected": "Rule.isSatisfied(1) == false (no crossing at index 1)",
+        "description": "this indicator values: [10, 8, 6]; other constant 5. Values stay above other, never cross under \u2192 rule must be false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(5)))"
+          }
+        ],
+        "expected": "Rule.isSatisfied(2) == false (equal values do not count as crossing)",
+        "description": "this indicator values: [7, 5, 5]; other constant 5. At index 2 the value equals other, not a strict crossing under \u2192 rule should be false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "null"
+          }
+        ],
+        "expected": "NullPointerException thrown",
+        "description": "Passing a null indicator should cause the method to throw NPE because CrossedDownIndicatorRule constructor expects non\u2011null arguments."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(5)))"
+          }
+        ],
+        "expected": "Rule.isSatisfied(0) == false (first index cannot have a previous value)",
+        "description": "CrossedDownIndicatorRule requires a previous value to detect a crossing. At index 0 there is no previous bar, so rule must be false even if current value is below other."
+      }
+    ]
+  },
+  {
+    "group": "crossedUnder_additional",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new Indicator<Num>() {\n    @Override public Num getValue(int index) { return Num.valueOf(new int[]{8,7,5}[index]); }\n    @Override public BarSeries getBarSeries() { return series; }\n    @Override public int getUnstableBars() { return 0; }\n})"
+          }
+        ],
+        "expected": "Rule.isSatisfied(1) == true (this indicator crosses under at index 1: previous 10 > 8, current 6 < 7)",
+        "description": "this indicator values are [10,6,4]; other indicator values are [8,7,5]. At index\u202f1 the value moves from above (10\u202f>\u202f8) to below (6\u202f<\u202f7) \u2192 crossed under, rule should be satisfied."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new Indicator<Num>() {\n    @Override public Num getValue(int index) { return Num.valueOf(new int[]{9,7,5}[index]); }\n    @Override public BarSeries getBarSeries() { return series; }\n    @Override public int getUnstableBars() { return 0; }\n})"
+          }
+        ],
+        "expected": "Rule.isSatisfied(1) == false (no crossing, this stays above other)",
+        "description": "this indicator values are [10,8,6]; other indicator values are [9,7,5]. The series stays above the other at every step, so no crossed\u2011under event occurs."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(5)))"
+          }
+        ],
+        "expected": "Rule.isSatisfied(2) == false (previous value equal to other, not a strict crossing)",
+        "description": "this indicator values are [5,5,4]; other constant 5. At index\u202f2 the value goes from equal (5) to below (4); a crossed\u2011under requires previous\u202f>\u202fother, therefore the rule must be false."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(-2)))"
+          }
+        ],
+        "expected": "Rule.isSatisfied(1) == true (crossed under at index 1 with negative numbers)",
+        "description": "this indicator values are [-1,-3,-5]; other constant -2. At index\u202f1 the value moves from -1\u202f>\u202f-2 to -3\u202f<\u202f-2, which is a valid crossed\u2011under."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(Num.valueOf(5)))"
+          }
+        ],
+        "expected": "rule.getClass().getSimpleName() == \"CrossedDownIndicatorRule\"",
+        "description": "Verify that the object returned by crossedUnder is an instance of CrossedDownIndicatorRule."
+      }
+    ]
+  },
+  {
+    "group": "crossedUnder_exceptions",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(null)"
+          }
+        ],
+        "expected": "NullPointerException thrown",
+        "description": "Passing a NumericIndicator created with a null delegate should cause the crossedUnder method (or the CrossedDownIndicatorRule constructor) to throw NPE because the underlying delegate is required."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new Indicator<Num>() {\n    @Override public Num getValue(int index) { throw new IllegalStateException(\"forced failure\"); }\n    @Override public BarSeries getBarSeries() { return series; }\n    @Override public int getUnstableBars() { return 0; }\n})"
+          }
+        ],
+        "expected": "IllegalStateException thrown when Rule.isSatisfied(index) is called",
+        "description": "The supplied indicator throws an exception from getValue; the rule creation succeeds, but evaluating the rule should propagate the IllegalStateException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new ConstantIndicator<>(null))"
+          }
+        ],
+        "expected": "NullPointerException thrown when Rule.isSatisfied(index) is called",
+        "description": "ConstantIndicator constructed with a null Num leads to NPE during rule evaluation because the comparison with a null value is illegal."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new Indicator<Num>() {\n    private final Num[] values = { Num.valueOf(5), Num.valueOf(6) };\n    @Override public Num getValue(int index) { return values[index]; }\n    @Override public BarSeries getBarSeries() { return series; }\n    @Override public int getUnstableBars() { return 0; }\n})"
+          }
+        ],
+        "expected": "IndexOutOfBoundsException thrown when Rule.isSatisfied(2) is called",
+        "description": "The 'other' indicator has fewer data points than the primary indicator; accessing index 2 during rule evaluation exceeds its array bounds, resulting in IndexOutOfBoundsException."
+      },
+      {
+        "input": [
+          {
+            "parameter": "other",
+            "value": "NumericIndicator.of(new Indicator<Num>() {\n    @Override public Num getValue(int index) { return Num.valueOf(index); }\n    @Override public BarSeries getBarSeries() { return null; }\n    @Override public int getUnstableBars() { return 0; }\n})"
+          }
+        ],
+        "expected": "NullPointerException thrown when Rule.isSatisfied(index) is called",
+        "description": "The supplied indicator returns null for getBarSeries(); CrossedDownIndicatorRule later accesses the series and throws NPE."
+      }
+    ]
+  }
+]

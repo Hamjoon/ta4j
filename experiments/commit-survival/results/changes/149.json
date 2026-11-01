@@ -1,0 +1,35 @@
+{
+  "index": 149,
+  "sha": "d6ded9953c64aa72c8edc7ebb680e56626e9a4c9",
+  "parent": "ef24aa1b629a8eb9226d7487ae6b65f9d6b25284",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      86,
+      88,
+      89,
+      90,
+      92,
+      93,
+      94,
+      96,
+      97,
+      99,
+      104
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java": [
+      87,
+      88,
+      91,
+      92,
+      93,
+      96,
+      97,
+      98,
+      100,
+      101
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\nindex 116cb2988..8193cbfbc 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/rules/AverageTrueRangeStopGainRule.java\n@@ -86,16 +86,3 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-        boolean satisfied = false;\n-        // No trading history or no position opened, no gain\n-        if (tradingRecord != null) {\n-            Position currentPosition = tradingRecord.getCurrentPosition();\n-            if (currentPosition.isOpened()) {\n-\n-                Num entryPrice = currentPosition.getEntry().getNetPrice();\n-                Num currentPrice = referencePrice.getValue(index);\n-                Num gainThreshold = stopGainThreshold.getValue(index);\n-\n-                if (currentPosition.getEntry().isBuy()) {\n-                    satisfied = currentPrice.isGreaterThanOrEqual(entryPrice.plus(gainThreshold));\n-                } else {\n-                    satisfied = currentPrice.isLessThanOrEqual(entryPrice.minus(gainThreshold));\n-                }\n-            }\n+        // No trading history\n+        if (tradingRecord == null) {\n+            return false;\n@@ -102,0 +90,9 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n+        // No position opened, no gain\n+        Position currentPosition = tradingRecord.getCurrentPosition();\n+        if (!currentPosition.isOpened()) {\n+            return false;\n+        }\n+\n+        Num entryPrice = currentPosition.getEntry().getNetPrice();\n+        Num currentPrice = referencePrice.getValue(index);\n+        Num gainThreshold = stopGainThreshold.getValue(index);\n@@ -104 +100,2 @@ public class AverageTrueRangeStopGainRule extends AbstractRule {\n-        return satisfied;\n+        return currentPosition.getEntry().isBuy() ? currentPrice.isGreaterThanOrEqual(entryPrice.plus(gainThreshold))\n+                : currentPrice.isLessThanOrEqual(entryPrice.minus(gainThreshold));"
+}

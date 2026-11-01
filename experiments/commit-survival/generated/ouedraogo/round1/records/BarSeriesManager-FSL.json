@@ -1,0 +1,58 @@
+{
+  "class_name": "BarSeriesManager",
+  "technique": "FSL",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-25T07:31:31.017552+00:00",
+      "latency": 100.836,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "DekaLLM",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1792913491-mEriyk5FBI5y1a628dbm",
+      "usage": {
+        "prompt_tokens": 4424,
+        "completion_tokens": 3938,
+        "total_tokens": 8362,
+        "cost": 0.00084156,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 48,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00084156,
+          "upstream_inference_prompt_cost": 0.00013272,
+          "upstream_inference_completions_cost": 0.00070884
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1630,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "fe99aa9d95d095aa2a113e0a66b182525a2dfa3acc595b8d0b522e2051cea532",
+      "response_sha256": "609f6156d949118bcc434761c2e85ce839bc0cf5e31008fcf0675fab72482429"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "BarSeriesManagerTest",
+    "package": "org.ta4j.core.backtest",
+    "fqcn": "org.ta4j.core.backtest.BarSeriesManagerTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java"
+}

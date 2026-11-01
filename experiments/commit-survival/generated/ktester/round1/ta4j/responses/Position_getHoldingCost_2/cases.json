@@ -1,0 +1,252 @@
+[
+  {
+    "group": "ZeroCostModel returns NaN",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 10
+          }
+        ],
+        "expected": "NaN",
+        "description": "When the Position is created with a ZeroCostModel, any call to getHoldingCost(int) should return NaN regardless of the supplied finalIndex."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -5
+          }
+        ],
+        "expected": "NaN",
+        "description": "ZeroCostModel must also return NaN for negative finalIndex values; the method does not perform its own validation."
+      }
+    ]
+  },
+  {
+    "group": "CustomCostModel with simple conditional logic",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 0
+          }
+        ],
+        "expected": "0",
+        "description": "CustomCostModel returns Num.valueOf(0) when finalIndex == 0. This tests the branch where the index is exactly zero."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 5
+          }
+        ],
+        "expected": "5",
+        "description": "CustomCostModel returns Num.valueOf(finalIndex) for positive indices. This covers the 'positive index' branch."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -3
+          }
+        ],
+        "expected": "-3",
+        "description": "CustomCostModel returns Num.valueOf(finalIndex) for negative indices as well, exercising the 'negative index' branch."
+      }
+    ]
+  },
+  {
+    "group": "CustomCostModel that throws on invalid index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -1
+          }
+        ],
+        "expected": "IllegalArgumentException",
+        "description": "The custom CostModel is designed to throw IllegalArgumentException when finalIndex < 0. The Position#getHoldingCost method should propagate this exception."
+      }
+    ]
+  },
+  {
+    "group": "Position with null holdingCostModel",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 3
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "If a Position is instantiated with a null holdingCostModel (e.g., via reflection or a faulty constructor), calling getHoldingCost should raise a NullPointerException because the method dereferences the field."
+      }
+    ]
+  },
+  {
+    "group": "CustomCostModel returning null",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 7
+          }
+        ],
+        "expected": "null",
+        "description": "A CostModel implementation that deliberately returns null from calculate(...). The Position#getHoldingCost method should forward this null value without throwing an exception."
+      }
+    ]
+  },
+  {
+    "group": "CustomCostModel returning NaN for a specific index",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 42
+          }
+        ],
+        "expected": "NaN",
+        "description": "CostModel returns Num.NaN only when finalIndex equals 42. This verifies that Position#getHoldingCost propagates NaN exactly as produced by the model."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 41
+          }
+        ],
+        "expected": "41",
+        "description": "For any index other than 42 the same CostModel returns Num.valueOf(finalIndex). Ensures normal values are still passed through."
+      }
+    ]
+  },
+  {
+    "group": "CostModel receives correct Position reference",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 3
+          }
+        ],
+        "expected": "true",
+        "description": "A mock CostModel records the Position instance received in calculate(...). The test asserts that the recorded reference is the same Position object on which getHoldingCost was invoked."
+      }
+    ]
+  },
+  {
+    "group": "Extreme index values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 2147483647
+          }
+        ],
+        "expected": "2147483647",
+        "description": "Using Integer.MAX_VALUE to ensure the method correctly forwards very large positive indices to the CostModel."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -2147483648
+          }
+        ],
+        "expected": "-2147483648",
+        "description": "Using Integer.MIN_VALUE to verify that extreme negative indices are handled (no overflow) and passed unchanged to the CostModel."
+      }
+    ]
+  },
+  {
+    "group": "CostModel that depends on Position state",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 2
+          }
+        ],
+        "expected": "200",
+        "description": "A CostModel calculates holding cost as entryPrice * finalIndex. The Position is created with an entry Trade whose price is Num.valueOf(100). For finalIndex 2 the expected cost is 100 * 2 = 200. This tests that Position#getHoldingCost forwards the Position itself so the model can inspect its trades."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 0
+          }
+        ],
+        "expected": "0",
+        "description": "Same state\u2011dependent CostModel, but with finalIndex 0, should yield a cost of 0, confirming correct handling of zero multiplier."
+      }
+    ]
+  },
+  {
+    "group": "CostModel throws unchecked exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 5
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "A custom CostModel implementation is programmed to throw IllegalStateException for any index. Position#getHoldingCost should propagate this unchecked exception unchanged."
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -2
+          }
+        ],
+        "expected": "ArithmeticException",
+        "description": "A custom CostModel throws ArithmeticException when finalIndex is negative. The method must not catch it and should let the exception bubble up."
+      }
+    ]
+  },
+  {
+    "group": "CostModel throws NullPointerException internally",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 0
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "The CostModel's calculate method deliberately throws a NullPointerException (e.g., due to a bug). Position#getHoldingCost should forward this exception rather than masking it."
+      }
+    ]
+  },
+  {
+    "group": "CostModel throws Error",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 1
+          }
+        ],
+        "expected": "AssertionError",
+        "description": "A CostModel implementation throws an AssertionError (or any subclass of java.lang.Error). Position#getHoldingCost must not catch Errors; they should propagate to the caller."
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "index": 49,
+  "sha": "2f39dbc00759dc4400b7857e0117a995c93604b7",
+  "parent": "39e75d0a3cab690cc2903c8077906643cb76bbe2",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterion.java": [
+      46,
+      47,
+      49,
+      54,
+      57,
+      58
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterion.java": [
+      46,
+      48,
+      49,
+      51,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      65,
+      68,
+      69,
+      70,
+      72,
+      73,
+      75
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterion.java\nindex 2e80272e4..f34cb4803 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/ProfitLossPercentageCriterion.java\n@@ -27,0 +28 @@ import org.ta4j.core.Position;\n+import org.ta4j.core.Trade;\n@@ -44,0 +46 @@ public class ProfitLossPercentageCriterion extends AbstractAnalysisCriterion {\n+        var numFactory = series.numFactory();\n@@ -46,2 +48,2 @@ public class ProfitLossPercentageCriterion extends AbstractAnalysisCriterion {\n-            Num entryPrice = position.getEntry().getValue();\n-            return position.getProfit().dividedBy(entryPrice).multipliedBy(series.numFactory().hundred());\n+            var entryPrice = position.getEntry().getValue();\n+            return position.getProfit().dividedBy(entryPrice).multipliedBy(numFactory.hundred());\n@@ -49 +51 @@ public class ProfitLossPercentageCriterion extends AbstractAnalysisCriterion {\n-        return series.numFactory().zero();\n+        return numFactory.zero();\n@@ -54 +56,10 @@ public class ProfitLossPercentageCriterion extends AbstractAnalysisCriterion {\n-        return tradingRecord.getPositions()\n+        var numFactory = series.numFactory();\n+        var zero = numFactory.zero();\n+\n+        var totalProfit = tradingRecord.getPositions()\n+                .stream()\n+                .filter(Position::isClosed)\n+                .map(Position::getProfit)\n+                .reduce(zero, Num::plus);\n+\n+        var totalEntryPrice = tradingRecord.getPositions()\n@@ -57,2 +68,8 @@ public class ProfitLossPercentageCriterion extends AbstractAnalysisCriterion {\n-                .map(position -> calculate(series, position))\n-                .reduce(series.numFactory().zero(), Num::plus);\n+                .map(Position::getEntry)\n+                .map(Trade::getValue)\n+                .reduce(zero, Num::plus);\n+\n+        if (totalEntryPrice.isZero()) {\n+            return zero;\n+        }\n+        return totalProfit.dividedBy(totalEntryPrice).multipliedBy(numFactory.hundred());"
+}

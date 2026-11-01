@@ -1,0 +1,12 @@
+{
+  "index": 81,
+  "sha": "54d3e2f91ecf271db5f08b4f239a4bc489a094eb",
+  "parent": "c2e21ed37f85b03dc5a38cf2f9d328758dc09319",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\nindex 402494307..b925d9dd2 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\n@@ -286 +286 @@ public class NumericIndicator implements Indicator<Num> {\n-    public Indicator<Num> previous() {\n+    public NumericIndicator previous() {"
+}

@@ -1,0 +1,125 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:18: error: cannot find symbol
+import org.ta4j.core.rules.Rule;
+                          ^
+  symbol:   class Rule
+  location: package org.ta4j.core.rules
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:19: error: package org.ta4j.core.trading.rules does not exist
+import org.ta4j.core.trading.rules.BasicRule;
+                                  ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:89: error: cannot find symbol
+    private Strategy alwaysEnterExitStrategy() {
+            ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:96: error: cannot find symbol
+    private Strategy entryAt0ExitAt2Strategy() {
+            ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:54: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:90: error: cannot find symbol
+        Rule entry = new BooleanRule(true);   // always true
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:91: error: cannot find symbol
+        Rule exit = new BooleanRule(true);    // always true
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:98: error: cannot find symbol
+        Rule entry = new UnderIndicatorRule(new ConstantIndicator<>(series, one.plus(series.numFactory().numOf(0.1))), series.numFactory().numOf(1.5));
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:100: error: cannot find symbol
+        Rule exit = new OverIndicatorRule(new ConstantIndicator<>(series, three), series.numFactory().numOf(2));
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:129: error: cannot find symbol
+        Strategy strategy = alwaysEnterExitStrategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:136: error: cannot find symbol
+        List<Position> positions = record.getPositions();
+             ^
+  symbol:   class Position
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:138: error: cannot find symbol
+        for (Position p : positions) {
+             ^
+  symbol:   class Position
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:149: error: cannot find symbol
+        Strategy strategy = alwaysEnterExitStrategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:163: error: cannot find symbol
+        Strategy strategy = alwaysEnterExitStrategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:170: error: cannot find symbol
+        Position first = record.getPositions().get(0);
+        ^
+  symbol:   class Position
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:177: error: cannot find symbol
+        Strategy strategy = alwaysEnterExitStrategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:196: error: cannot find symbol
+        Strategy strategy = entryAt0ExitAt2Strategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:207: error: cannot find symbol
+        List<Position> positions = record.getPositions();
+             ^
+  symbol:   class Position
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:209: error: cannot find symbol
+        Position position = positions.get(0);
+        ^
+  symbol:   class Position
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:220: error: cannot find symbol
+        Strategy strategy = entryAt0ExitAt2Strategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:227: error: cannot find symbol
+        Rule entry = new BooleanRule(true);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:228: error: cannot find symbol
+        Rule neverExit = new BooleanRule(false);
+        ^
+  symbol:   class Rule
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:229: error: cannot find symbol
+        Strategy neverExitStrategy = new BaseStrategy(entry, neverExit);
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:232: error: cannot find symbol
+        Position position = record.getCurrentPosition();
+        ^
+  symbol:   class Position
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/ZSL/BarSeriesManagerTest.java:262: error: cannot find symbol
+        Strategy strategy = alwaysEnterExitStrategy();
+        ^
+  symbol:   class Strategy
+  location: class BarSeriesManagerTest
+25 errors

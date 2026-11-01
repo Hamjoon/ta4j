@@ -1,0 +1,103 @@
+{
+  "file": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ouedraogo/round2/8/test/classes",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 1,
+    "timeout": false,
+    "seconds": 0.724,
+    "log": "work/validation/ouedraogo/round2/8/test/javac.txt"
+  },
+  "runs": [],
+  "methods": [
+    {
+      "file": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "testRunTypicalOpenClose",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|testRunTypicalOpenClose",
+      "body_hash": "408f247ccc137ef21b97dad9e20899eda478a4c7ee3dc6f4a212822d28e93f95",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:146: error: cannot find symbol\n        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol\n        @Override public Rule getExitRule()  { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:98: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries\n    private static class SimpleBarSeries implements BarSeries {\n                   ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:125: error: DummyBar is not abstract and does not override abstract method addPrice(Num) in Bar\n        private static class DummyBar implements Bar {\n                       ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:210: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:211: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:258: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(4), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:259: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(5), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n8 errors\n"
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "testRunStartAfterFinishProducesNoTrades",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|testRunStartAfterFinishProducesNoTrades",
+      "body_hash": "1d2279d4198f284e506ea691381e9523ae4d3c9f99342de8ec6291c7a9f4e50b",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:146: error: cannot find symbol\n        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol\n        @Override public Rule getExitRule()  { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:98: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries\n    private static class SimpleBarSeries implements BarSeries {\n                   ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:125: error: DummyBar is not abstract and does not override abstract method addPrice(Num) in Bar\n        private static class DummyBar implements Bar {\n                       ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:210: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:211: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:258: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(4), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:259: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(5), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n8 errors\n"
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "testRunWithNullStrategyThrowsException",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|testRunWithNullStrategyThrowsException",
+      "body_hash": "9010e5aa2c1a53a695e3072604c8dadfc8bdc41bd25e2d801e489cb4097d7bbe",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:146: error: cannot find symbol\n        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol\n        @Override public Rule getExitRule()  { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:98: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries\n    private static class SimpleBarSeries implements BarSeries {\n                   ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:125: error: DummyBar is not abstract and does not override abstract method addPrice(Num) in Bar\n        private static class DummyBar implements Bar {\n                       ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:210: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:211: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:258: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(4), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:259: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(5), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n8 errors\n"
+    },
+    {
+      "file": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java",
+      "class": "org.ta4j.core.backtest.BarSeriesManagerTest",
+      "method": "testRunClosesPositionAfterSeriesEnd",
+      "kind": "plain",
+      "id": "generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java|org.ta4j.core.backtest.BarSeriesManagerTest|testRunClosesPositionAfterSeriesEnd",
+      "body_hash": "d1af04c71bf252f9bb3261e6e7eecae26b40852bfa832a0e10d5e2d1aa497e74",
+      "round": "round2",
+      "technique": "ToT",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:146: error: cannot find symbol\n        @Override public Rule getEntryRule() { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:147: error: cannot find symbol\n        @Override public Rule getExitRule()  { throw new UnsupportedOperationException(); }\n                         ^\n  symbol:   class Rule\n  location: class IndexStrategy\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:98: error: SimpleBarSeries is not abstract and does not override abstract method getSubSeries(int,int) in BarSeries\n    private static class SimpleBarSeries implements BarSeries {\n                   ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:125: error: DummyBar is not abstract and does not override abstract method addPrice(Num) in Bar\n        private static class DummyBar implements Bar {\n                       ^\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:210: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(1), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:211: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(2), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:258: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(4), pos.getEntry().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java:259: error: reference to assertEquals is ambiguous\n        assertEquals(Integer.valueOf(5), pos.getExit().getIndex());\n        ^\n  both method assertEquals(long,long) in Assert and method assertEquals(Object,Object) in Assert match\n8 errors\n"
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/BarSeriesManager/ToT/BarSeriesManagerTest.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.52,
+    "log": "work/validation/ouedraogo/round2/8/inventory.tsv"
+  },
+  "input_sha256": "26bfc6c725a0ef16793bcb7ed100ee519a608d4ff8a0e783e77259089b5f3654"
+}

@@ -1,0 +1,11 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:73: error: cannot find symbol
+        BaseBar bar = BaseBar.builder()
+                             ^
+  symbol:   method builder()
+  location: class BaseBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/ATRIndicator/GToT/ATRIndicatorTest.java:169: error: cannot find symbol
+        BaseBar bar = BaseBar.builder()
+                             ^
+  symbol:   method builder()
+  location: class BaseBar
+2 errors

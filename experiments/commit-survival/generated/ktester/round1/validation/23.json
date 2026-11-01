@@ -1,0 +1,119 @@
+{
+  "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+  "compile": {
+    "command": [
+      "javac",
+      "-J-Xmx512m",
+      "-cp",
+      "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core/target/classes:/repo/experiments/commit-survival/work/libs/apiguardian-api-1.1.2.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-1.17.7.jar:/repo/experiments/commit-survival/work/libs/byte-buddy-agent-1.17.7.jar:/repo/experiments/commit-survival/work/libs/commons-io-2.16.1.jar:/repo/experiments/commit-survival/work/libs/commons-lang3-3.14.0.jar:/repo/experiments/commit-survival/work/libs/hamcrest-2.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-5.11.4.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-api-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-jupiter-params-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-commons-1.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-platform-engine-1.10.2.jar:/repo/experiments/commit-survival/work/libs/mockito-core-5.24.0.jar:/repo/experiments/commit-survival/work/libs/mockito-junit-jupiter-5.24.0.jar:/repo/experiments/commit-survival/work/libs/objenesis-3.3.jar:/repo/experiments/commit-survival/work/libs/opentest4j-1.3.0.jar:/repo/experiments/commit-survival/work/libs/junit-vintage-engine-5.10.2.jar:/repo/experiments/commit-survival/work/libs/junit-4.13.2.jar:/repo/experiments/commit-survival/work/libs/hamcrest-core-1.3.jar:/repo/experiments/commit-survival/work/libs/junit-platform-console-standalone-1.9.3.jar:/root/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/root/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/root/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/root/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/root/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/root/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/root/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/root/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/root/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.4.12/logback-classic-1.4.12.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.4.12/logback-core-1.4.12.jar",
+      "-sourcepath",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes",
+      "-d",
+      "/repo/experiments/commit-survival/work/validation/ktester/round1/23/test/classes",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 1,
+    "timeout": false,
+    "seconds": 0.774,
+    "log": "work/validation/ktester/round1/23/test/javac.txt"
+  },
+  "runs": [],
+  "methods": [
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test",
+      "method": "crossedOverWithConstantNumber",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test|crossedOverWithConstantNumber",
+      "body_hash": "a0c38400cdc9d5e62185dd2db88a8a75658f4874e33c29dc0eef58b20bc9a27d",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:21: error: package org.ta4j.core.mocks does not exist\nimport org.ta4j.core.mocks.MockBarSeries;\n                          ^\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:46: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 4, 6);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:127: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, seriesValues);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:153: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 1, 2);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n4 errors\n"
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test",
+      "method": "crossedOverWithIndicator",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test|crossedOverWithIndicator",
+      "body_hash": "d011c6c83f0bf2c0d26a81b0b09e938515dd3f2d1f7ddec8b7f8bca777368a58",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:21: error: package org.ta4j.core.mocks does not exist\nimport org.ta4j.core.mocks.MockBarSeries;\n                          ^\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:46: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 4, 6);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:127: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, seriesValues);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:153: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 1, 2);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n4 errors\n"
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test",
+      "method": "crossedOver_Number_Basic",
+      "kind": "parameterized",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test|crossedOver_Number_Basic",
+      "body_hash": "b08d555c2f804762acaa99471c90e9d0a73f98b596ed2957bcf869865dc0cf3d",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:21: error: package org.ta4j.core.mocks does not exist\nimport org.ta4j.core.mocks.MockBarSeries;\n                          ^\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:46: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 4, 6);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:127: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, seriesValues);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:153: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 1, 2);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n4 errors\n"
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test",
+      "method": "crossedOver_Number_Exceptions",
+      "kind": "parameterized",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test|crossedOver_Number_Exceptions",
+      "body_hash": "65472a82c5760c624bb0f2f7ed92731e83d9035348d502b81333c7a472c5adbb",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:21: error: package org.ta4j.core.mocks does not exist\nimport org.ta4j.core.mocks.MockBarSeries;\n                          ^\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:46: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 4, 6);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:127: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, seriesValues);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:153: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 1, 2);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n4 errors\n"
+    },
+    {
+      "file": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+      "class": "org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test",
+      "method": "crossedOver_WithIndicator_ReturnsCrossedUpRule",
+      "kind": "plain",
+      "id": "generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java|org.ta4j.core.indicators.numeric.NumericIndicator_crossedOver_2_Test|crossedOver_WithIndicator_ReturnsCrossedUpRule",
+      "body_hash": "51c1a2f2e31d3adb7640a860673a676c9c3ed0e0bce6f204854f0d94a51bb7a4",
+      "round": "round1",
+      "technique": "KTester",
+      "state": "compile-fail",
+      "initial_state": "compile-fail",
+      "baseline_states": [],
+      "selector": [],
+      "flaky": false,
+      "message": "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:21: error: package org.ta4j.core.mocks does not exist\nimport org.ta4j.core.mocks.MockBarSeries;\n                          ^\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:46: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 4, 6);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:127: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, seriesValues);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java:153: error: cannot find symbol\n        series = new MockBarSeries(NUM_FUNCTION, 1, 2);\n                     ^\n  symbol:   class MockBarSeries\n  location: class NumericIndicator_crossedOver_2_Test\n4 errors\n"
+    }
+  ],
+  "parse": {
+    "command": [
+      "java",
+      "-Xmx512m",
+      "/survival-package/adapters/java/SourceInventory.java",
+      "/repo/experiments/commit-survival/generated/ktester/round1/ta4j/test_classes/NumericIndicator_crossedOver_2_Test.java",
+      "auto"
+    ],
+    "cwd": "/repo/experiments/commit-survival/work/checkouts/0/ta4j-core",
+    "exit_code": 0,
+    "timeout": false,
+    "seconds": 0.569,
+    "log": "work/validation/ktester/round1/23/inventory.tsv"
+  },
+  "input_sha256": "4e8ddef2a756588b6dbe74a404300ecb992e581f1f5657b180cba8ef154d5cee"
+}

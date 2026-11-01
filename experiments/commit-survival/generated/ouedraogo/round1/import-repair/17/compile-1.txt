@@ -1,0 +1,57 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:20: error: cannot find symbol
+import org.ta4j.core.Num;
+                    ^
+  symbol:   class Num
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:23: error: package org.ta4j.core.trading does not exist
+import org.ta4j.core.trading.TradingRecord;
+                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:61: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(3),
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:63: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(2),
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:65: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,Num)
+        series.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(1),
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:251: error: cannot find symbol
+                new ConstantIndicator<>(series, numOf(-1)).minus(close));
+                                                          ^
+  symbol:   method minus(NumericIndicator)
+  location: class ConstantIndicator<Num>
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:270: error: cannot find symbol
+                new ConstantIndicator<>(series, numOf(-1)).minus(close)); // -1-1 = -2, etc.
+                                                          ^
+  symbol:   method minus(NumericIndicator)
+  location: class ConstantIndicator<Num>
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:385: error: cannot find symbol
+        series2.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(3),
+                                                          ^
+  symbol:   variable now
+  location: class NumericIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/NumericIndicator/GToT/NumericIndicatorTest.java:387: error: cannot find symbol
+        series2.addBar(new BaseBar(Duration.ofMinutes(1), now.minusMinutes(2),
+                                                          ^
+  symbol:   variable now
+  location: class NumericIndicatorTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+9 errors

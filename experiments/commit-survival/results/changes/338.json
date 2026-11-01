@@ -1,0 +1,55 @@
+{
+  "index": 338,
+  "sha": "33b560d298d348a972ed0f2f8ef24c07b213b30a",
+  "parent": "c9ee045eaae4d56f31b5e887611090921164c551",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      724,
+      725,
+      878,
+      879,
+      881,
+      906,
+      936,
+      937,
+      1035
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      724,
+      725,
+      878,
+      880,
+      881,
+      883,
+      899,
+      900,
+      901,
+      902,
+      912,
+      943,
+      944,
+      945,
+      1028,
+      1029,
+      1031,
+      1032,
+      1033,
+      1034,
+      1035,
+      1036,
+      1037,
+      1038,
+      1039,
+      1040,
+      1042,
+      1043,
+      1064,
+      1068,
+      1073,
+      1085
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 5a249b8a6..03c957509 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -724,2 +724,2 @@ public final class ElliottWaveAnalysisRunner {\n-        final int lookaheadLimit = Math.min(8, Math.max(2, MACRO_PIVOT_GRAPH_MAX_PIVOTS / 3));\n-        final int maxCandidatesPerStart = 3;\n+        final int lookaheadLimit = Math.min(16, Math.max(4, pivotGraph.pivots().size() / 2));\n+        final int maxCandidatesPerStart = 5;\n@@ -878,2 +878,4 @@ public final class ElliottWaveAnalysisRunner {\n-        if (promotedCandidates.size() == 1) {\n-            return List.of(promotedCandidates.getFirst().toAssessment(this::historicalLegAssessment));\n+        final List<HistoricalCycleCandidate> prunedCandidates = pruneSubordinateHistoricalCycleCandidates(\n+                promotedCandidates);\n+        if (prunedCandidates.size() == 1) {\n+            return List.of(prunedCandidates.getFirst().toAssessment(this::historicalLegAssessment));\n@@ -881 +883 @@ public final class ElliottWaveAnalysisRunner {\n-        return selectHistoricalCycleCandidates(promotedCandidates).stream()\n+        return selectHistoricalCycleCandidates(prunedCandidates).stream()\n@@ -896,0 +899,4 @@ public final class ElliottWaveAnalysisRunner {\n+        final int latestHistoricalEndIndex = historicalCandidates.stream()\n+                .mapToInt(CanonicalLegCandidate::endPivotIndex)\n+                .max()\n+                .orElse(-1);\n@@ -906 +912,2 @@ public final class ElliottWaveAnalysisRunner {\n-                        || !hasHistoricalCycleRecoverySupport(bearishLeg, bullishLeg, bullishCandidates)) {\n+                        || !hasHistoricalCycleRecoverySupport(bearishLeg, bullishLeg, bullishCandidates,\n+                                latestHistoricalEndIndex)) {\n@@ -936,2 +943,3 @@ public final class ElliottWaveAnalysisRunner {\n-                    .min(Comparator.comparingInt(HistoricalCycleCandidate::startIndex)\n-                            .thenComparing(Comparator.comparingDouble(HistoricalCycleCandidate::score).reversed()))\n+                    .max(Comparator.comparingDouble(this::historicalCycleStructuralScore)\n+                            .thenComparingDouble(HistoricalCycleCandidate::score)\n+                            .thenComparingInt(HistoricalCycleCandidate::startIndex))\n@@ -1017,0 +1026,20 @@ public final class ElliottWaveAnalysisRunner {\n+    private List<HistoricalCycleCandidate> pruneSubordinateHistoricalCycleCandidates(\n+            final List<HistoricalCycleCandidate> cycleCandidates) {\n+        if (cycleCandidates.size() <= 1) {\n+            return List.copyOf(cycleCandidates);\n+        }\n+        final List<HistoricalCycleCandidate> retained = new ArrayList<>(cycleCandidates.size());\n+        for (final HistoricalCycleCandidate candidate : cycleCandidates) {\n+            final boolean dominated = cycleCandidates.stream()\n+                    .filter(other -> other != candidate)\n+                    .filter(other -> historicalCycleSpan(other) > historicalCycleSpan(candidate))\n+                    .filter(other -> other.score() >= candidate.score() - HISTORICAL_CYCLE_FAMILY_SCORE_TOLERANCE)\n+                    .anyMatch(other -> other.startIndex() <= candidate.startIndex()\n+                            && other.endIndex() >= candidate.endIndex());\n+            if (!dominated) {\n+                retained.add(candidate);\n+            }\n+        }\n+        return List.copyOf(retained);\n+    }\n+\n@@ -1033 +1061,2 @@ public final class ElliottWaveAnalysisRunner {\n-            final CanonicalLegCandidate bullishLeg, final List<CanonicalLegCandidate> bullishCandidates) {\n+            final CanonicalLegCandidate bullishLeg, final List<CanonicalLegCandidate> bullishCandidates,\n+            final int latestHistoricalEndIndex) {\n@@ -1035 +1064 @@ public final class ElliottWaveAnalysisRunner {\n-        return bullishCandidates.stream()\n+        final boolean explicitSupport = bullishCandidates.stream()\n@@ -1038,0 +1068,6 @@ public final class ElliottWaveAnalysisRunner {\n+        return explicitSupport || boundaryHistoricalCycleEnd(bearishLeg, latestHistoricalEndIndex);\n+    }\n+\n+    private boolean boundaryHistoricalCycleEnd(final CanonicalLegCandidate bearishLeg,\n+            final int latestHistoricalEndIndex) {\n+        return bearishLeg.endPivotIndex() == latestHistoricalEndIndex && eligibleHistoricalSupport(bearishLeg);\n@@ -1048,0 +1084,4 @@ public final class ElliottWaveAnalysisRunner {\n+    private double historicalCycleStructuralScore(final HistoricalCycleCandidate cycleCandidate) {\n+        return cycleCandidate.bullishLeg().fitScore() + cycleCandidate.bearishLeg().fitScore();\n+    }\n+"
+}

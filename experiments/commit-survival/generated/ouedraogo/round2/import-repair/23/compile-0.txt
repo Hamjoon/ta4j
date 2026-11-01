@@ -1,0 +1,381 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:33: error: cannot find symbol
+    private static final class SimpleNum implements Num {
+                                                    ^
+  symbol:   class Num
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: cannot find symbol
+        @Override public Num plus(Num augend)   { return of(this.value + ((SimpleNum) augend).value); }
+                                  ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: cannot find symbol
+        @Override public Num plus(Num augend)   { return of(this.value + ((SimpleNum) augend).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:48: error: cannot find symbol
+        @Override public Num minus(Num subtrahend){ return of(this.value - ((SimpleNum) subtrahend).value); }
+                                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:48: error: cannot find symbol
+        @Override public Num minus(Num subtrahend){ return of(this.value - ((SimpleNum) subtrahend).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:49: error: cannot find symbol
+        @Override public Num multipliedBy(Num multiplicand){ return of(this.value * ((SimpleNum) multiplicand).value); }
+                                          ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:49: error: cannot find symbol
+        @Override public Num multipliedBy(Num multiplicand){ return of(this.value * ((SimpleNum) multiplicand).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:50: error: cannot find symbol
+        @Override public Num dividedBy(Num divisor){ return of(this.value / ((SimpleNum) divisor).value); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:50: error: cannot find symbol
+        @Override public Num dividedBy(Num divisor){ return of(this.value / ((SimpleNum) divisor).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:51: error: cannot find symbol
+        @Override public Num negate() { return of(-this.value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:54: error: cannot find symbol
+        @Override public int compareTo(Num o) { return Double.compare(this.value, ((SimpleNum) o).value); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:61: error: cannot find symbol
+        @Override public Num zero() { return of(0); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:62: error: cannot find symbol
+        @Override public Num one()  { return of(1); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:63: error: cannot find symbol
+        @Override public Num hundred(){ return of(100); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:64: error: cannot find symbol
+        @Override public Num abs()   { return of(Math.abs(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:65: error: cannot find symbol
+        @Override public Num floor() { return of(Math.floor(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:66: error: cannot find symbol
+        @Override public Num ceil()  { return of(Math.ceil(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:67: error: cannot find symbol
+        @Override public Num pow(int n) { return of(Math.pow(this.value, n)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:68: error: cannot find symbol
+        @Override public Num pow(Num n) { return of(Math.pow(this.value, ((SimpleNum) n).value)); }
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:68: error: cannot find symbol
+        @Override public Num pow(Num n) { return of(Math.pow(this.value, ((SimpleNum) n).value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:69: error: cannot find symbol
+        @Override public Num log() { return of(Math.log(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:70: error: cannot find symbol
+        @Override public Num sqrt() { return of(Math.sqrt(this.value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:71: error: cannot find symbol
+        @Override public Num sqrt(int precision) { return sqrt(); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:72: error: cannot find symbol
+        @Override public Num remainder(Num divisor) { return of(this.value % ((SimpleNum) divisor).value); }
+                                       ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:72: error: cannot find symbol
+        @Override public Num remainder(Num divisor) { return of(this.value % ((SimpleNum) divisor).value); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:73: error: cannot find symbol
+        @Override public Num min(Num other) { return of(Math.min(this.value, ((SimpleNum) other).value)); }
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:73: error: cannot find symbol
+        @Override public Num min(Num other) { return of(Math.min(this.value, ((SimpleNum) other).value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:74: error: cannot find symbol
+        @Override public Num max(Num other) { return of(Math.max(this.value, ((SimpleNum) other).value)); }
+                                 ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:74: error: cannot find symbol
+        @Override public Num max(Num other) { return of(Math.max(this.value, ((SimpleNum) other).value)); }
+                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:81: error: cannot find symbol
+        @Override public boolean isEqual(Num other) { return Double.compare(this.value, ((SimpleNum) other).value) == 0; }
+                                         ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:82: error: cannot find symbol
+        @Override public boolean isGreaterThan(Num other) { return this.value > ((SimpleNum) other).value; }
+                                               ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:83: error: cannot find symbol
+        @Override public boolean isGreaterThanOrEqual(Num other){ return this.value >= ((SimpleNum) other).value; }
+                                                      ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:84: error: cannot find symbol
+        @Override public boolean isLessThan(Num other){ return this.value < ((SimpleNum) other).value; }
+                                            ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:85: error: cannot find symbol
+        @Override public boolean isLessThanOrEqual(Num other){ return this.value <= ((SimpleNum) other).value; }
+                                                   ^
+  symbol:   class Num
+  location: class SimpleNum
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:47: error: method does not override or implement a method from a supertype
+        @Override public Num plus(Num augend)   { return of(this.value + ((SimpleNum) augend).value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:48: error: method does not override or implement a method from a supertype
+        @Override public Num minus(Num subtrahend){ return of(this.value - ((SimpleNum) subtrahend).value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:49: error: method does not override or implement a method from a supertype
+        @Override public Num multipliedBy(Num multiplicand){ return of(this.value * ((SimpleNum) multiplicand).value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:50: error: method does not override or implement a method from a supertype
+        @Override public Num dividedBy(Num divisor){ return of(this.value / ((SimpleNum) divisor).value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:51: error: method does not override or implement a method from a supertype
+        @Override public Num negate() { return of(-this.value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:54: error: method does not override or implement a method from a supertype
+        @Override public int compareTo(Num o) { return Double.compare(this.value, ((SimpleNum) o).value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:55: error: method does not override or implement a method from a supertype
+        @Override public boolean isPositive() { return this.value > 0; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:56: error: method does not override or implement a method from a supertype
+        @Override public boolean isNegative() { return this.value < 0; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:57: error: method does not override or implement a method from a supertype
+        @Override public boolean isZero() { return this.value == 0; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:58: error: method does not override or implement a method from a supertype
+        @Override public boolean isNaN() { return Double.isNaN(this.value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:61: error: method does not override or implement a method from a supertype
+        @Override public Num zero() { return of(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:62: error: method does not override or implement a method from a supertype
+        @Override public Num one()  { return of(1); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:63: error: method does not override or implement a method from a supertype
+        @Override public Num hundred(){ return of(100); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:64: error: method does not override or implement a method from a supertype
+        @Override public Num abs()   { return of(Math.abs(this.value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:65: error: method does not override or implement a method from a supertype
+        @Override public Num floor() { return of(Math.floor(this.value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:66: error: method does not override or implement a method from a supertype
+        @Override public Num ceil()  { return of(Math.ceil(this.value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:67: error: method does not override or implement a method from a supertype
+        @Override public Num pow(int n) { return of(Math.pow(this.value, n)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:68: error: method does not override or implement a method from a supertype
+        @Override public Num pow(Num n) { return of(Math.pow(this.value, ((SimpleNum) n).value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:69: error: method does not override or implement a method from a supertype
+        @Override public Num log() { return of(Math.log(this.value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:70: error: method does not override or implement a method from a supertype
+        @Override public Num sqrt() { return of(Math.sqrt(this.value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:71: error: method does not override or implement a method from a supertype
+        @Override public Num sqrt(int precision) { return sqrt(); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:72: error: method does not override or implement a method from a supertype
+        @Override public Num remainder(Num divisor) { return of(this.value % ((SimpleNum) divisor).value); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:73: error: method does not override or implement a method from a supertype
+        @Override public Num min(Num other) { return of(Math.min(this.value, ((SimpleNum) other).value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:74: error: method does not override or implement a method from a supertype
+        @Override public Num max(Num other) { return of(Math.max(this.value, ((SimpleNum) other).value)); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:76: error: method does not override or implement a method from a supertype
+        @Override public Number getDelegate() { return value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:77: error: method does not override or implement a method from a supertype
+        @Override public String getName() { return "SimpleNum"; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:79: error: method does not override or implement a method from a supertype
+        @Override public boolean isPositiveOrZero() { return this.value >= 0; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:80: error: method does not override or implement a method from a supertype
+        @Override public boolean isNegativeOrZero() { return this.value <= 0; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:81: error: method does not override or implement a method from a supertype
+        @Override public boolean isEqual(Num other) { return Double.compare(this.value, ((SimpleNum) other).value) == 0; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:82: error: method does not override or implement a method from a supertype
+        @Override public boolean isGreaterThan(Num other) { return this.value > ((SimpleNum) other).value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:83: error: method does not override or implement a method from a supertype
+        @Override public boolean isGreaterThanOrEqual(Num other){ return this.value >= ((SimpleNum) other).value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:84: error: method does not override or implement a method from a supertype
+        @Override public boolean isLessThan(Num other){ return this.value < ((SimpleNum) other).value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:85: error: method does not override or implement a method from a supertype
+        @Override public boolean isLessThanOrEqual(Num other){ return this.value <= ((SimpleNum) other).value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:87: error: method does not override or implement a method from a supertype
+        @Override public double doubleValue() { return value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:88: error: method does not override or implement a method from a supertype
+        @Override public int intValue() { return (int) value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:89: error: method does not override or implement a method from a supertype
+        @Override public long longValue() { return (long) value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:90: error: method does not override or implement a method from a supertype
+        @Override public float floatValue() { return (float) value; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:106: error: no suitable method found for buyAt(int,SimpleNum,SimpleNum)
+        Trade entry = Trade.buyAt(0, SimpleNum.of(entryPrice), SimpleNum.of(amount));
+                           ^
+    method Trade.buyAt(int,Num,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to Num)
+    method Trade.buyAt(int,BarSeries,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to BarSeries)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:107: error: no suitable method found for sellAt(int,SimpleNum,SimpleNum)
+        Trade exit  = Trade.sellAt(1, SimpleNum.of(exitPrice), SimpleNum.of(amount));
+                           ^
+    method Trade.sellAt(int,Num,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to Num)
+    method Trade.sellAt(int,BarSeries,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to BarSeries)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:112: error: no suitable method found for sellAt(int,SimpleNum,SimpleNum)
+        Trade entry = Trade.sellAt(0, SimpleNum.of(entryPrice), SimpleNum.of(amount));
+                           ^
+    method Trade.sellAt(int,Num,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to Num)
+    method Trade.sellAt(int,BarSeries,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to BarSeries)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:113: error: no suitable method found for buyAt(int,SimpleNum,SimpleNum)
+        Trade exit  = Trade.buyAt(1, SimpleNum.of(exitPrice), SimpleNum.of(amount));
+                           ^
+    method Trade.buyAt(int,Num,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to Num)
+    method Trade.buyAt(int,BarSeries,Num) is not applicable
+      (argument mismatch; SimpleNum cannot be converted to BarSeries)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:128: error: cannot find symbol
+        assertEquals(TradeType.BUY, p.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:137: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:139: error: incompatible types: SimpleNum cannot be converted to Num
+        Trade e = p.operate(0, SimpleNum.of(10), SimpleNum.of(1));
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:141: error: cannot find symbol
+        assertEquals(TradeType.BUY, e.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:145: error: incompatible types: SimpleNum cannot be converted to Num
+        Trade x = p.operate(2, SimpleNum.of(12), SimpleNum.of(1));
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:147: error: cannot find symbol
+        assertEquals(TradeType.SELL, x.getType());
+                     ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:157: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:158: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(5, SimpleNum.of(10), SimpleNum.of(1)); // creates entry at index 5
+                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:160: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(3, SimpleNum.of(12), SimpleNum.of(1));
+                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:167: error: incompatible types: SimpleNum cannot be converted to Num
+        assertNull(p.operate(5, SimpleNum.of(15), SimpleNum.of(1)));
+                                            ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:180: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(0, SimpleNum.of(10), SimpleNum.of(1));
+                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:185: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(1, SimpleNum.of(12), SimpleNum.of(1));
+                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:221: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:222: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(0, SimpleNum.of(10), SimpleNum.of(1));
+                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:252: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:253: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(0, SimpleNum.of(10), SimpleNum.of(1));
+                                 ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:268: error: cannot find symbol
+        Position p = new Position(TradeType.BUY);
+                                  ^
+  symbol:   variable TradeType
+  location: class PositionTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/Position/ToT/PositionTest.java:269: error: incompatible types: SimpleNum cannot be converted to Num
+        p.operate(0, SimpleNum.of(10), SimpleNum.of(1));
+                                 ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+93 errors

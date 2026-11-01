@@ -1,0 +1,28 @@
+{
+  "index": 42,
+  "sha": "1101dbe059cda92d7dd1f86e755b0466782911d5",
+  "parent": "64896b0d621e2b3d9aa4e161560df45ec8d7dedc",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java": [
+      152,
+      154,
+      156,
+      158,
+      209,
+      214
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java": [
+      104,
+      106,
+      156,
+      158,
+      160,
+      162,
+      213,
+      218
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java\nindex af43fcc56..cafffba23 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/ParabolicSarIndicator.java\n@@ -49,0 +50 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n+    private final LowestValueIndicator lowestValueIndicator;\n@@ -50,0 +52 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n+    private final HighestValueIndicator highestValueIndicator;\n@@ -101,0 +104 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n+        this.lowestValueIndicator = new LowestValueIndicator(lowPriceIndicator, 2);\n@@ -102,0 +106 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n+        this.highestValueIndicator = new HighestValueIndicator(highPriceIndicator, 2);\n@@ -152 +156 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-                sar = new LowestValueIndicator(lowPriceIndicator, 2).getValue(index - 1); // put the lowest low value of\n+                sar = lowestValueIndicator.getValue(index - 1); // put the lowest low value of\n@@ -154 +158 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-                lastExtreme.put(index, new HighestValueIndicator(highPriceIndicator, 2).getValue(index - 1));\n+                lastExtreme.put(index, highestValueIndicator.getValue(index - 1));\n@@ -156 +160 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-                sar = new HighestValueIndicator(highPriceIndicator, 2).getValue(index - 1); // put the highest high\n+                sar = highestValueIndicator.getValue(index - 1); // put the highest high\n@@ -158 +162 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-                lastExtreme.put(index, new LowestValueIndicator(lowPriceIndicator, 2).getValue(index - 1));\n+                lastExtreme.put(index, lowestValueIndicator.getValue(index - 1));\n@@ -209 +213 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-            Num lowestPriceOfTwoPreviousBars = new LowestValueIndicator(lowPriceIndicator, 2).getValue(index - 1);\n+            Num lowestPriceOfTwoPreviousBars = lowestValueIndicator.getValue(index - 1);\n@@ -214 +218 @@ public class ParabolicSarIndicator extends RecursiveCachedIndicator<Num> {\n-            Num highestPriceOfTwoPreviousBars = new HighestValueIndicator(highPriceIndicator, 2).getValue(index - 1);\n+            Num highestPriceOfTwoPreviousBars = highestValueIndicator.getValue(index - 1);"
+}

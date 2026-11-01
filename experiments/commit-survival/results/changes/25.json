@@ -1,0 +1,12 @@
+{
+  "index": 25,
+  "sha": "08268f52afa1269ab5d2a0ed9574d6ff1572fb2e",
+  "parent": "9484f521e107937031a4728ecd9f5168b626278b",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/helpers/FixedDecimalIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/helpers/FixedNumIndicator.java": []
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/FixedDecimalIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/FixedNumIndicator.java\nsimilarity index 90%\nrename from ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/FixedDecimalIndicator.java\nrename to ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/FixedNumIndicator.java\nindex 07feef818..b61e3d8ca 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/FixedDecimalIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/helpers/FixedNumIndicator.java\n@@ -37 +37 @@ import org.ta4j.core.num.Num;\n-public class FixedDecimalIndicator extends FixedIndicator<Num> {\n+public class FixedNumIndicator extends FixedIndicator<Num> {\n@@ -45 +45 @@ public class FixedDecimalIndicator extends FixedIndicator<Num> {\n-    public FixedDecimalIndicator(BarSeries series, double... values) {\n+    public FixedNumIndicator(BarSeries series, double... values) {\n@@ -58 +58 @@ public class FixedDecimalIndicator extends FixedIndicator<Num> {\n-    public FixedDecimalIndicator(BarSeries series, String... values) {\n+    public FixedNumIndicator(BarSeries series, String... values) {"
+}

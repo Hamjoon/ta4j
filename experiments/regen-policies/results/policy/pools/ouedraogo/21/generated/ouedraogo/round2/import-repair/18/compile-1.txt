@@ -1,0 +1,7 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:48: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+class SimpleNum implements Num {
+^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round2/sources/NumericIndicator/ToT/NumericIndicatorTest.java:102: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+class SimpleNumFactory implements NumFactory {
+^
+2 errors

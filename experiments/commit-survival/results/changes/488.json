@@ -1,0 +1,14 @@
+{
+  "index": 488,
+  "sha": "f738979c6affd5c2df089b316d3e02a08cbc6445",
+  "parent": "56753172e1954e7d81cffbd60026b52417348a29",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java": [
+      228
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\nindex 85d9351a4..0f807f4b4 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/numeric/NumericIndicator.java\n@@ -212 +211,0 @@ public class NumericIndicator implements Indicator<Num> {\n-        // TODO: implement pow(n); a few others\n@@ -215,0 +215,16 @@ public class NumericIndicator implements Indicator<Num> {\n+    /**\n+     * Returns an Indicator whose values are {@code this} raised to a constant\n+     * exponent, for example {@code relativeVolume.pow(0.5)} as a dampened\n+     * confidence weight. Unavailable inputs stay unavailable; the numeric domain\n+     * follows {@link Num#pow(Num)}, so keep values non-negative when the exponent\n+     * is fractional.\n+     *\n+     * @param exponent the constant exponent\n+     * @return {@code this^exponent}\n+     * @see UnaryOperationIndicator#pow(Indicator, Number)\n+     * @since 0.25.1\n+     */\n+    public NumericIndicator pow(Number exponent) {\n+        return NumericIndicator.of(UnaryOperationIndicator.pow(this, exponent));\n+    }\n+"
+}

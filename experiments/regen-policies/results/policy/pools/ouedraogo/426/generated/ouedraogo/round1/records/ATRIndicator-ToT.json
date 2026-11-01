@@ -1,0 +1,58 @@
+{
+  "class_name": "ATRIndicator",
+  "technique": "ToT",
+  "status": "ok",
+  "attempts": 1,
+  "calls": [
+    {
+      "timestamp": "2026-10-29T16:57:45.256099+00:00",
+      "latency": 87.578,
+      "status": "ok",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "provider": "Venice",
+      "model_requested": "openai/gpt-oss-120b",
+      "model_reported": "openai/gpt-oss-120b",
+      "request_id": "gen-1793293065-6j6Ggi1A6w1ifULmMQhq",
+      "usage": {
+        "prompt_tokens": 1653,
+        "completion_tokens": 3215,
+        "total_tokens": 4868,
+        "cost": 0.00053184,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00053184,
+          "upstream_inference_prompt_cost": 4.959e-05,
+          "upstream_inference_completions_cost": 0.00048225
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 859,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "error_type": null,
+      "prompt_sha256": "d56e9d4862ebd6e3b56495f8cb029d60d0c541e0610b3cb8e23e608305bdf652",
+      "response_sha256": "ea3420f6df5659ed4ddba3614620ae9d90d96550f43fc25a3ea4e16869f29df0"
+    }
+  ],
+  "extraction": {
+    "msr_detected": true,
+    "csr_v2": true,
+    "class_name": "ATRIndicatorTest",
+    "package": "org.ta4j.core.indicators",
+    "fqcn": "org.ta4j.core.indicators.ATRIndicatorTest",
+    "csr_success": null,
+    "selection": "markers",
+    "marker_pair": true,
+    "braces_balanced": true,
+    "html_detected": false
+  },
+  "file": "generated/ouedraogo/round1/sources/ATRIndicator/ToT/ATRIndicatorTest.java"
+}

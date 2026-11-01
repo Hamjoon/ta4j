@@ -1,0 +1,28 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:58: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        series = new BaseBarSeries("test-series");
+                 ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:151: error: cannot find symbol
+            public org.ta4j.core.ComponentDescriptor toDescriptor() {
+                                ^
+  symbol:   class ComponentDescriptor
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:166: error: cannot find symbol
+                .volume(DecimalNum.ONE)
+                                  ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:303: error: cannot find symbol
+        Num zero = DecimalNum.ZERO;
+                             ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round1/sources/BarSeriesManager/GToT/BarSeriesManagerTest.java:342: error: constructor BaseBarSeries in class BaseBarSeries cannot be applied to given types;
+        BarSeries empty = new BaseBarSeries("empty");
+                          ^
+  required: String,List<Bar>,int,int,boolean,NumFactory,BarBuilderFactory
+  found:    String
+  reason: actual and formal argument lists differ in length
+5 errors

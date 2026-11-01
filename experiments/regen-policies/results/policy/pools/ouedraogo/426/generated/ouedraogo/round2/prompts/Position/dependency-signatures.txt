@@ -1,0 +1,151 @@
+// public API of org.ta4j.core.Trade.TradeType
+public static enum TradeType {
+  public static final TradeType BUY;
+  public static final TradeType SELL;
+  public abstract TradeType complementType();
+}
+
+// public API of org.ta4j.core.analysis.cost.CostModel
+public interface CostModel {
+   Num calculate(Position position, int finalIndex);
+   Num calculate(Position position);
+   Num calculate(Num price, Num amount);
+   boolean equals(CostModel otherModel);
+}
+
+// public API of org.ta4j.core.Trade
+public interface Trade extends Serializable {
+   TradeType getType();
+   int getIndex();
+   Num getPricePerAsset();
+  default Num getPricePerAsset(BarSeries barSeries);
+   Num getNetPrice();
+   Num getAmount();
+   Num getCost();
+   CostModel getCostModel();
+  default Instant getTime();
+  default String getId();
+  default String getInstrument();
+  default String getOrderId();
+  default String getCorrelationId();
+  default boolean isBuy();
+  default boolean isSell();
+  default Num getValue();
+  default List<TradeFill> getFills();
+  static List<TradeFill> executionFillsOf(Trade trade);
+  static Trade fromFill(TradeFill fill);
+  static Trade fromFill(TradeFill fill, CostModel transactionCostModel);
+  static Trade fromFill(TradeType type, TradeFill fill);
+  static Trade fromFill(TradeType type, TradeFill fill, CostModel transactionCostModel);
+  static Trade fromFills(TradeType type, List<TradeFill> fills);
+  static Trade fromFills(TradeType type, List<TradeFill> fills, CostModel transactionCostModel);
+  static Trade buyAt(int index, BarSeries series);
+  static Trade buyAt(int index, Num price, Num amount, CostModel transactionCostModel);
+  static Trade buyAt(int index, Num price, Num amount);
+  static Trade buyAt(int index, BarSeries series, Num amount);
+  static Trade buyAt(int index, BarSeries series, Num amount, CostModel transactionCostModel);
+  static Trade sellAt(int index, BarSeries series);
+  static Trade sellAt(int index, Num price, Num amount);
+  static Trade sellAt(int index, Num price, Num amount, CostModel transactionCostModel);
+  static Trade sellAt(int index, BarSeries series, Num amount);
+  static Trade sellAt(int index, BarSeries series, Num amount, CostModel transactionCostModel);
+}
+
+// public API of org.ta4j.core.Position.ValidatedStartingPosition
+private record ValidatedStartingPosition(TradeType startingType, CostModel transactionCostModel, CostModel holdingCostModel) {
+}
+
+// public API of org.ta4j.core.Position.ValidatedClosedPosition
+private record ValidatedClosedPosition(Trade entry, Trade exit, CostModel transactionCostModel, CostModel holdingCostModel) {
+}
+
+// public API of org.ta4j.core.Position.ValidatedOpenPosition
+private record ValidatedOpenPosition(Trade entry, CostModel transactionCostModel, CostModel holdingCostModel) {
+}
+
+// public API of org.ta4j.core.ExecutionSide
+public enum ExecutionSide {
+  public static final ExecutionSide BUY;
+  public static final ExecutionSide SELL;
+  public Trade.TradeType toTradeType();
+}
+
+// public API of org.ta4j.core.num.Num
+public interface Num extends Comparable<Num>,Serializable {
+   Number getDelegate();
+   NumFactory getNumFactory();
+   String getName();
+   Num plus(Num augend);
+   Num minus(Num subtrahend);
+   Num multipliedBy(Num multiplicand);
+   Num dividedBy(Num divisor);
+   Num remainder(Num divisor);
+   Num floor();
+   Num ceil();
+   Num pow(int n);
+   Num pow(Num n);
+   Num log();
+   Num exp();
+   Num sqrt();
+   Num sqrt(MathContext mathContext);
+   Num abs();
+   Num negate();
+   boolean isZero();
+   boolean isPositive();
+   boolean isPositiveOrZero();
+   boolean isNegative();
+   boolean isNegativeOrZero();
+   boolean isEqual(Num other);
+   boolean isGreaterThan(Num other);
+   boolean isGreaterThanOrEqual(Num other);
+   boolean isLessThan(Num other);
+   boolean isLessThanOrEqual(Num other);
+   Num min(Num other);
+   Num max(Num other);
+  default boolean isNaN();
+  default int intValue();
+  default long longValue();
+  default float floatValue();
+  default double doubleValue();
+  static boolean isNaNOrNull(Num value);
+  static boolean isValid(Num value);
+  static boolean isFinite(Num value);
+   BigDecimal bigDecimalValue();
+   int hashCode();
+   String toString();
+   boolean equals(Object obj);
+}
+
+// public API of org.ta4j.core.BarSeries
+public interface BarSeries extends Serializable {
+   NumFactory numFactory();
+   BarBuilder barBuilder();
+   String getName();
+   Bar getBar(int i);
+  default Bar getFirstBar();
+  default Bar getLastBar();
+   int getBarCount();
+  default boolean isEmpty();
+   List<Bar> getBarData();
+  default void clear();
+   int getBeginIndex();
+   int getEndIndex();
+  default String getSeriesPeriodDescription();
+  default String getSeriesPeriodDescriptionInSystemTimeZone();
+   int getMaximumBarCount();
+   void setMaximumBarCount(int maximumBarCount);
+   int getRemovedBarsCount();
+  default void addBar(Bar bar);
+   void addBar(Bar bar, boolean replace);
+  default void addTrade(Number tradeVolume, Number tradePrice);
+   void addTrade(Num tradeVolume, Num tradePrice);
+   void addPrice(Num price);
+  default void addPrice(Number price);
+   BarSeries getSubSeries(int startIndex, int endIndex);
+}
+
+// public API of org.ta4j.core.analysis.cost.ZeroCostModel
+public class ZeroCostModel extends FixedTransactionCostModel {
+  public ZeroCostModel();
+}
+

@@ -1,0 +1,38 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:191: error: cannot find symbol
+        public Rule getEntryRule() {
+               ^
+  symbol:   class Rule
+  location: class DummyStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:196: error: cannot find symbol
+        public Rule getExitRule() {
+               ^
+  symbol:   class Rule
+  location: class DummyStrategy
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:56: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:59: error: cannot find symbol
+            return DecimalNum.ZERO;
+                             ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:64: error: cannot find symbol
+            return DecimalNum.ONE;
+                             ^
+  symbol:   variable ONE
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:67: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:72: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:77: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/BarSeriesManager/CoT/BarSeriesManagerTest.java:423: error: cannot find symbol
+        TradingRecord record = manager.run(strategy, TradeType.BUY, DecimalNum.ONE, 2, 1);
+                                                                              ^
+  symbol:   variable ONE
+  location: class DecimalNum
+9 errors

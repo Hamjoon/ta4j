@@ -1,0 +1,10 @@
+{
+  "pid": 44348,
+  "identity": "darwin:1793348842:576993",
+  "run_id": "f3e1c38c02be43a197839f921cfa077c",
+  "log": "/Users/donggi/_projects/experiment-projects/ta4j/experiments/regen-policies/state/log.txt",
+  "status": "completed",
+  "started": "2026-10-30T08:28:26.679177+00:00",
+  "finished": "2026-10-30T09:19:55.984712+00:00",
+  "notes": "stopped by user"
+}

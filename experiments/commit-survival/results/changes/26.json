@@ -1,0 +1,53 @@
+{
+  "index": 26,
+  "sha": "3df6c700973be0361be690bc39b71e1c2061ab16",
+  "parent": "08268f52afa1269ab5d2a0ed9574d6ff1572fb2e",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [
+      73,
+      74,
+      99,
+      100,
+      109,
+      110,
+      120,
+      121,
+      122,
+      127,
+      128,
+      129
+    ],
+    "src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java": [
+      64
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java": [
+      81,
+      94,
+      95,
+      108,
+      117,
+      122,
+      123,
+      132,
+      133,
+      143,
+      144,
+      145,
+      146,
+      151,
+      152,
+      153,
+      154
+    ],
+    "src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java": [
+      66,
+      67,
+      79,
+      80,
+      81
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\nindex 92b1ec489..fcab116db 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/EnterAndHoldCriterion.java\n@@ -25,0 +26,3 @@ package org.ta4j.core.criteria;\n+import java.math.BigDecimal;\n+import java.util.Objects;\n+\n@@ -55,0 +59,2 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n+    /** The amount to be used to hold the entry position */\n+    private final BigDecimal amount;\n@@ -59 +64,4 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-    /** The {@link ReturnCriterion} (with base) from a buy-and-hold strategy. */\n+    /**\n+     * The {@link ReturnCriterion} (with base) from a buy-and-hold strategy with an\n+     * {@link #amount} of {@code 1}.\n+     */\n@@ -65 +73 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-     * Constructor for buy-and-hold strategy.\n+     * Constructor for buy-and-hold strategy with an {@link #amount} of {@code 1}.\n@@ -73,2 +81 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        this.tradeType = TradeType.BUY;\n-        this.criterion = criterion;\n+        this(TradeType.BUY, criterion);\n@@ -78 +85 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-     * Constructor.\n+     * Constructor with an {@link #amount} of {@code 1}.\n@@ -86,0 +94,15 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n+        this(tradeType, criterion, BigDecimal.ONE);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param tradeType the {@link TradeType} used to open the position\n+     * @param criterion the {@link AnalysisCriterion criterion} to calculate\n+     * @param amount    the amount to be used to hold the entry position\n+     * @throws IllegalArgumentException if {@code criterion} is an instance of\n+     *                                  {@code EnterAndHoldCriterion} or\n+     *                                  {@code VersusEnterAndHoldCriterion}\n+     * @throws NullPointerException     if {@code amount} is {@code null}\n+     */\n+    public EnterAndHoldCriterion(TradeType tradeType, AnalysisCriterion criterion, BigDecimal amount) {\n@@ -94,0 +117 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n+        this.amount = Objects.requireNonNull(amount);\n@@ -99,2 +122,2 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        int beginIndex = position.getEntry().getIndex();\n-        int endIndex = series.getEndIndex();\n+        var beginIndex = position.getEntry().getIndex();\n+        var endIndex = series.getEndIndex();\n@@ -109,2 +132,2 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        int beginIndex = tradingRecord.getStartIndex(series);\n-        int endIndex = tradingRecord.getEndIndex(series);\n+        var beginIndex = tradingRecord.getStartIndex(series);\n+        var endIndex = tradingRecord.getEndIndex(series);\n@@ -120,3 +143,4 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        Position position = new Position(tradeType);\n-        position.operate(beginIndex, series.getBar(beginIndex).getClosePrice(), series.numFactory().one());\n-        position.operate(endIndex, series.getBar(endIndex).getClosePrice(), series.numFactory().one());\n+        var position = new Position(tradeType);\n+        var entryAmount = series.numFactory().numOf(amount);\n+        position.operate(beginIndex, series.getBar(beginIndex).getClosePrice(), entryAmount);\n+        position.operate(endIndex, series.getBar(endIndex).getClosePrice(), entryAmount);\n@@ -127,3 +151,4 @@ public class EnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        TradingRecord fakeRecord = new BaseTradingRecord(tradeType);\n-        fakeRecord.enter(beginIndex, series.getBar(beginIndex).getClosePrice(), series.numFactory().one());\n-        fakeRecord.exit(endIndex, series.getBar(endIndex).getClosePrice(), series.numFactory().one());\n+        var fakeRecord = new BaseTradingRecord(tradeType);\n+        var entryAmount = series.numFactory().numOf(amount);\n+        fakeRecord.enter(beginIndex, series.getBar(beginIndex).getClosePrice(), entryAmount);\n+        fakeRecord.exit(endIndex, series.getBar(endIndex).getClosePrice(), entryAmount);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\nindex 5e80c2b9c..9f4b1b657 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/VersusEnterAndHoldCriterion.java\n@@ -25,0 +26,2 @@ package org.ta4j.core.criteria;\n+import java.math.BigDecimal;\n+\n@@ -46 +48 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-     * Constructor for buy-and-hold strategy.\n+     * Constructor with an entry amount of {@code 1}.\n@@ -56 +58 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-     * Constructor.\n+     * Constructor with an entry amount of {@code 1}.\n@@ -64 +66,16 @@ public class VersusEnterAndHoldCriterion extends AbstractAnalysisCriterion {\n-        this.enterAndHoldCriterion = new EnterAndHoldCriterion(tradeType, criterion);\n+        this.enterAndHoldCriterion = new EnterAndHoldCriterion(tradeType, criterion, BigDecimal.ONE);\n+    }\n+\n+    /**\n+     * Constructor.\n+     *\n+     * @param tradeType the {@link TradeType} used to open the position\n+     * @param criterion the criterion to be compared to\n+     *                  {@link EnterAndHoldCriterion}\n+     * @param amount    the amount to be used to hold the entry position; if\n+     *                  {@code null} then {@code 1} is used.\n+     * @throws NullPointerException if {@code amount} is {@code null}\n+     */\n+    public VersusEnterAndHoldCriterion(TradeType tradeType, AnalysisCriterion criterion, BigDecimal amount) {\n+        this.criterion = criterion;\n+        this.enterAndHoldCriterion = new EnterAndHoldCriterion(tradeType, criterion, amount);"
+}

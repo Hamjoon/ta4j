@@ -1,0 +1,212 @@
+[
+  {
+    "group": "Standard calculations",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 0
+          }
+        ],
+        "expected": "15",
+        "description": "finalIndex = 0, transactionCostModel returns 5, holdingCost returns 10 \u2192 position cost = 5 + 10 = 15"
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 5
+          }
+        ],
+        "expected": "0",
+        "description": "finalIndex = 5, both transaction cost and holding cost are zero \u2192 position cost = 0"
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -1
+          }
+        ],
+        "expected": "5",
+        "description": "finalIndex = -1 (edge case), transactionCost = 2, holdingCost = 3 \u2192 position cost = 5"
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 1000
+          }
+        ],
+        "expected": "15",
+        "description": "finalIndex = 1000, transactionCost = 7, holdingCost = 8 \u2192 position cost = 15"
+      }
+    ]
+  },
+  {
+    "group": "Zero cost scenarios",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 3
+          }
+        ],
+        "expected": "12",
+        "description": "ZeroCostModel returns 0 for transaction cost, holding cost = 12 \u2192 position cost = 12"
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 8
+          }
+        ],
+        "expected": "0",
+        "description": "ZeroCostModel returns 0 and holding cost also 0 \u2192 total cost = 0"
+      }
+    ]
+  },
+  {
+    "group": "Exception propagation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 2
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "transactionCostModel.calculate throws RuntimeException; getPositionCost should propagate the exception"
+      }
+    ]
+  },
+  {
+    "group": "Negative transaction cost",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 4
+          }
+        ],
+        "expected": "5",
+        "description": "finalIndex = 4, transactionCostModel returns -5 (rebate), holdingCost returns 10 \u2192 position cost = -5 + 10 = 5"
+      }
+    ]
+  },
+  {
+    "group": "Negative holding cost (profit)",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 9
+          }
+        ],
+        "expected": "1",
+        "description": "finalIndex = 9, transactionCostModel returns 3, holdingCost returns -2 (profit) \u2192 position cost = 3 + (-2) = 1"
+      }
+    ]
+  },
+  {
+    "group": "NaN cost handling",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 6
+          }
+        ],
+        "expected": "NaN",
+        "description": "finalIndex = 6, transactionCostModel returns NaN, holdingCost returns 4 \u2192 position cost = NaN + 4 = NaN"
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 11
+          }
+        ],
+        "expected": "NaN",
+        "description": "finalIndex = 11, both transactionCostModel and holdingCost return NaN \u2192 position cost = NaN"
+      }
+    ]
+  },
+  {
+    "group": "Null transaction cost",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 12
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "finalIndex = 12, transactionCostModel.calculate returns null, holdingCost returns 5 \u2192 getPositionCost should throw NullPointerException when calling plus()"
+      }
+    ]
+  },
+  {
+    "group": "Holding cost exception propagation",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 13
+          }
+        ],
+        "expected": "IllegalStateException",
+        "description": "finalIndex = 13, transactionCostModel returns 4, getHoldingCost(finalIndex) throws IllegalStateException \u2192 getPositionCost should propagate the exception"
+      }
+    ]
+  },
+  {
+    "group": "Extreme index values",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 2147483647
+          }
+        ],
+        "expected": "0",
+        "description": "finalIndex = Integer.MAX_VALUE, both transactionCostModel and holdingCost return 0 (e.g., position already closed) \u2192 position cost = 0"
+      },
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": -2147483648
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "finalIndex = Integer.MIN_VALUE, transactionCostModel throws RuntimeException due to invalid index \u2192 exception should be propagated"
+      }
+    ]
+  },
+  {
+    "group": "Null transactionCostModel field",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "finalIndex",
+            "value": 0
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "The Position instance is constructed with a null transactionCostModel; calling getPositionCost should throw NullPointerException when attempting to invoke calculate()"
+      }
+    ]
+  }
+]

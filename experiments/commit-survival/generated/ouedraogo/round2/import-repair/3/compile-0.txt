@@ -1,0 +1,151 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:120: error: method addBar(ZonedDateTime,Number,Number,Number,Number) is already defined in class SimpleBarSeries
+        @Override public void addBar(ZonedDateTime endTime, Number openPrice,
+                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:208: error: method getSeriesPeriodDescription() is already defined in class SimpleBarSeries
+        @Override public String getSeriesPeriodDescription() { return ""; }
+                                ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:54: error: addBar(ZonedDateTime,Number,Number,Number,Number) in SimpleBarSeries cannot implement addBar(ZonedDateTime,Number,Number,Number,Number) in BarSeries
+        void addBar(ZonedDateTime endTime,
+             ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:152: error: no suitable constructor found for DecimalNum(String)
+                    new DecimalNum(openPrice),
+                    ^
+    constructor DecimalNum.DecimalNum(String) is not applicable
+      (DecimalNum(String) has private access in DecimalNum)
+    constructor DecimalNum.DecimalNum(short) is not applicable
+      (argument mismatch; String cannot be converted to short)
+    constructor DecimalNum.DecimalNum(int) is not applicable
+      (argument mismatch; String cannot be converted to int)
+    constructor DecimalNum.DecimalNum(long) is not applicable
+      (argument mismatch; String cannot be converted to long)
+    constructor DecimalNum.DecimalNum(float) is not applicable
+      (argument mismatch; String cannot be converted to float)
+    constructor DecimalNum.DecimalNum(double) is not applicable
+      (argument mismatch; String cannot be converted to double)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:153: error: no suitable constructor found for DecimalNum(String)
+                    new DecimalNum(highPrice),
+                    ^
+    constructor DecimalNum.DecimalNum(String) is not applicable
+      (DecimalNum(String) has private access in DecimalNum)
+    constructor DecimalNum.DecimalNum(short) is not applicable
+      (argument mismatch; String cannot be converted to short)
+    constructor DecimalNum.DecimalNum(int) is not applicable
+      (argument mismatch; String cannot be converted to int)
+    constructor DecimalNum.DecimalNum(long) is not applicable
+      (argument mismatch; String cannot be converted to long)
+    constructor DecimalNum.DecimalNum(float) is not applicable
+      (argument mismatch; String cannot be converted to float)
+    constructor DecimalNum.DecimalNum(double) is not applicable
+      (argument mismatch; String cannot be converted to double)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:154: error: no suitable constructor found for DecimalNum(String)
+                    new DecimalNum(lowPrice),
+                    ^
+    constructor DecimalNum.DecimalNum(String) is not applicable
+      (DecimalNum(String) has private access in DecimalNum)
+    constructor DecimalNum.DecimalNum(short) is not applicable
+      (argument mismatch; String cannot be converted to short)
+    constructor DecimalNum.DecimalNum(int) is not applicable
+      (argument mismatch; String cannot be converted to int)
+    constructor DecimalNum.DecimalNum(long) is not applicable
+      (argument mismatch; String cannot be converted to long)
+    constructor DecimalNum.DecimalNum(float) is not applicable
+      (argument mismatch; String cannot be converted to float)
+    constructor DecimalNum.DecimalNum(double) is not applicable
+      (argument mismatch; String cannot be converted to double)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:155: error: no suitable constructor found for DecimalNum(String)
+                    new DecimalNum(closePrice));
+                    ^
+    constructor DecimalNum.DecimalNum(String) is not applicable
+      (DecimalNum(String) has private access in DecimalNum)
+    constructor DecimalNum.DecimalNum(short) is not applicable
+      (argument mismatch; String cannot be converted to short)
+    constructor DecimalNum.DecimalNum(int) is not applicable
+      (argument mismatch; String cannot be converted to int)
+    constructor DecimalNum.DecimalNum(long) is not applicable
+      (argument mismatch; String cannot be converted to long)
+    constructor DecimalNum.DecimalNum(float) is not applicable
+      (argument mismatch; String cannot be converted to float)
+    constructor DecimalNum.DecimalNum(double) is not applicable
+      (argument mismatch; String cannot be converted to double)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:173: error: no suitable method found for addBar(ZonedDateTime,Num,Num,Num,Num)
+            addBar(endTime, openPrice, highPrice, lowPrice, closePrice);
+            ^
+    method SimpleBarSeries.addBar(ZonedDateTime,Number,Number,Number,Number) is not applicable
+      (argument mismatch; Num cannot be converted to Number)
+    method SimpleBarSeries.addBar(ZonedDateTime,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:179: error: no suitable method found for addBar(ZonedDateTime,Num,Num,Num,Num)
+            addBar(endTime, openPrice, highPrice, lowPrice, closePrice);
+            ^
+    method SimpleBarSeries.addBar(ZonedDateTime,Number,Number,Number,Number) is not applicable
+      (argument mismatch; Num cannot be converted to Number)
+    method SimpleBarSeries.addBar(ZonedDateTime,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:185: error: no suitable method found for addBar(ZonedDateTime,Num,Num,Num,Num)
+            addBar(endTime, openPrice, highPrice, lowPrice, closePrice);
+            ^
+    method SimpleBarSeries.addBar(ZonedDateTime,Number,Number,Number,Number) is not applicable
+      (argument mismatch; Num cannot be converted to Number)
+    method SimpleBarSeries.addBar(ZonedDateTime,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:191: error: no suitable method found for addBar(ZonedDateTime,Num,Num,Num,Num)
+            addBar(endTime, openPrice, highPrice, lowPrice, closePrice);
+            ^
+    method SimpleBarSeries.addBar(ZonedDateTime,Number,Number,Number,Number) is not applicable
+      (argument mismatch; Num cannot be converted to Number)
+    method SimpleBarSeries.addBar(ZonedDateTime,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:212: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:239: error: method does not override or implement a method from a supertype
+        @Override public Num getTradeVolume() { return DecimalNum.valueOf(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:241: error: method does not override or implement a method from a supertype
+        @Override public Num getTradePrice() { return DecimalNum.valueOf(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:245: error: method does not override or implement a method from a supertype
+        @Override public Num getBidVolume() { return DecimalNum.valueOf(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:247: error: method does not override or implement a method from a supertype
+        @Override public Num getAskVolume() { return DecimalNum.valueOf(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:249: error: method does not override or implement a method from a supertype
+        @Override public Num getBidPrice() { return DecimalNum.valueOf(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:251: error: method does not override or implement a method from a supertype
+        @Override public Num getAskPrice() { return DecimalNum.valueOf(0); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:255: error: method does not override or implement a method from a supertype
+        @Override public Bar getPreviousBar() { return null; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:257: error: method does not override or implement a method from a supertype
+        @Override public Bar getNextBar() { return null; }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:259: error: method does not override or implement a method from a supertype
+        @Override public boolean isUpBar() { return close.isGreaterThan(open); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:261: error: method does not override or implement a method from a supertype
+        @Override public boolean isDownBar() { return close.isLessThan(open); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:263: error: method does not override or implement a method from a supertype
+        @Override public boolean isEqualBar() { return close.isEqual(open); }
+        ^
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:293: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+        ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:293: error: cannot find symbol
+        TRIndicator tr = new TRIndicator(series);
+                             ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+/repo/experiments/commit-survival/generated/ouedraogo/round2/sources/ATRIndicator/ToT/ATRIndicatorTest.java:321: error: cannot find symbol
+            MMAIndicator expectedMMA = new MMAIndicator(new TRIndicator(series), BAR_COUNT);
+                                                            ^
+  symbol:   class TRIndicator
+  location: class ATRIndicatorTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+26 errors

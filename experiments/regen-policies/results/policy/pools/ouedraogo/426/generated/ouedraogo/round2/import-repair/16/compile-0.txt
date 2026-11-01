@@ -1,0 +1,7 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:90: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/NumericIndicator/FSL/NumericIndicatorTest.java:106: error: method does not override or implement a method from a supertype
+        @Override public Num NaN() { return new SimpleNum(Double.NaN); }
+        ^
+2 errors

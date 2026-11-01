@@ -1,0 +1,18 @@
+{
+  "index": 308,
+  "sha": "eaf3db91f2741d923172bf35e11ae2e2940de1cf",
+  "parent": "0a02e742d4e79b43aadf02b1d933a8ddadfd49f7",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": []
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java": [
+      366,
+      367,
+      368,
+      369,
+      370
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\nindex 06093de5d..3812d060a 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/indicators/elliott/ElliottWaveAnalysisRunner.java\n@@ -334,0 +335,38 @@ public final class ElliottWaveAnalysisRunner {\n+    }\n+\n+    /**\n+     * Selects the best accepted terminal leg for an anchored window, falling back\n+     * to the strongest matching scenario when the acceptance gate is missed.\n+     *\n+     * <p>\n+     * This is the semantic convenience entry point for completed macro-leg fitting.\n+     * Bullish windows map to a five-wave impulse ending in\n+     * {@link ElliottPhase#WAVE5}. Bearish windows map to a three-wave corrective\n+     * path ending in {@link ElliottPhase#CORRECTIVE_C}.\n+     *\n+     * @param series                root series\n+     * @param startIndex            inclusive window start index in the root series\n+     * @param endIndex              inclusive window end index in the root series\n+     * @param bullish               {@code true} for bullish impulse legs,\n+     *                              {@code false} for bearish corrective legs\n+     * @param maxAnchorDriftBars    soft anchor tolerance used during ranking and\n+     *                              acceptance\n+     * @param minimumFitScore       minimum blended fit score\n+     * @param minimumRuleScore      minimum rule-quality score\n+     * @param minimumStartAlignment minimum allowed start alignment\n+     * @param minimumEndAlignment   minimum allowed end alignment\n+     * @return selected anchored terminal-leg scenario plus its accepted/fallback\n+     *         status, if any scenario matched\n+     * @since 0.22.4\n+     */\n+    public Optional<AnchoredWindowSelection> selectAcceptedOrFallbackTerminalLegForWindow(final BarSeries series,\n+            final int startIndex, final int endIndex, final boolean bullish, final int maxAnchorDriftBars,\n+            final double minimumFitScore, final double minimumRuleScore, final double minimumStartAlignment,\n+            final double minimumEndAlignment) {\n+        final ScenarioType expectedType = bullish ? ScenarioType.IMPULSE : null;\n+        final ElliottPhase expectedPhase = bullish ? ElliottPhase.WAVE5 : ElliottPhase.CORRECTIVE_C;\n+        final int expectedWaveCount = bullish ? 5 : 3;\n+        final Boolean expectedDirection = bullish ? Boolean.TRUE : Boolean.FALSE;\n+        return selectAcceptedOrFallbackBaseScenarioForWindow(series, startIndex, endIndex, expectedType, expectedPhase,\n+                expectedWaveCount, expectedDirection, maxAnchorDriftBars, minimumFitScore, minimumRuleScore,\n+                minimumStartAlignment, minimumEndAlignment);"
+}

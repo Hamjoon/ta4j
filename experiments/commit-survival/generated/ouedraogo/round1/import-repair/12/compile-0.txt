@@ -1,0 +1,81 @@
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:16: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:55: error: no suitable constructor found for BaseBar(Duration,ZonedDateTime,Num,Num,Num,Num,DecimalNum)
+            Bar bar = new BaseBar(Duration.ofDays(1), now.plusDays(i),
+                      ^
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,double,double,double,double,double) is not applicable
+      (argument mismatch; Num cannot be converted to double)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,BigDecimal,BigDecimal,BigDecimal,BigDecimal,BigDecimal) is not applicable
+      (argument mismatch; Num cannot be converted to BigDecimal)
+    constructor BaseBar.BaseBar(Duration,ZonedDateTime,String,String,String,String,String) is not applicable
+      (argument mismatch; Num cannot be converted to String)
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:73: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:74: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(entryIdx));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:75: error: cannot find symbol
+        Trade exit = new Trade(TradeType.SELL, series.getBar(exitIdx).getClosePrice(),
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:76: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(exitIdx));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:81: error: cannot find symbol
+        Trade entry = new Trade(TradeType.BUY, series.getBar(entryIdx).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:82: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(entryIdx));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:92: error: ONE has private access in DecimalNum
+                    DecimalNum.ONE);
+                              ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:95: error: ONE has private access in DecimalNum
+                        DecimalNum.ONE);
+                                  ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:169: error: cannot find symbol
+        Trade entry = new Trade(TradeType.SELL, series.getBar(0).getClosePrice(),
+                                ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:170: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(0));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:171: error: cannot find symbol
+        Trade exit = new Trade(TradeType.BUY, series.getBar(2).getClosePrice(),
+                               ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:172: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(2));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:211: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openPos, series.getEndIndex());
+                                           ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:314: error: cannot find symbol
+        Trade entryShort = new Trade(TradeType.SELL, series.getBar(3).getClosePrice(),
+                                     ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:315: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(3));
+                          ^
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:316: error: cannot find symbol
+        Trade exitShort = new Trade(TradeType.BUY, series.getBar(4).getClosePrice(),
+                                    ^
+  symbol:   variable TradeType
+  location: class CashFlowTest
+/repo/experiments/commit-survival/generated/ouedraogo/round1/sources/CashFlow/GToT/CashFlowTest.java:317: error: ONE has private access in DecimalNum
+                DecimalNum.ONE, series.getBar(4));
+                          ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+19 errors

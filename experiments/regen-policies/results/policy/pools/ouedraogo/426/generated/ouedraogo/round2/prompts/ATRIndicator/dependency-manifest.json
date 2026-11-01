@@ -1,0 +1,37 @@
+{
+  "class_name": "org.ta4j.core.indicators.ATRIndicator",
+  "ordered_types": [
+    "org.ta4j.core.indicators.AbstractIndicator",
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.indicators.helpers.TRIndicator",
+    "org.ta4j.core.indicators.ATRIndicator.Config",
+    "org.ta4j.core.indicators.averages.MMAIndicator"
+  ],
+  "included": [
+    "org.ta4j.core.indicators.AbstractIndicator",
+    "org.ta4j.core.Indicator",
+    "org.ta4j.core.num.Num",
+    "org.ta4j.core.BarSeries",
+    "org.ta4j.core.indicators.helpers.TRIndicator",
+    "org.ta4j.core.indicators.ATRIndicator.Config",
+    "org.ta4j.core.indicators.averages.MMAIndicator"
+  ],
+  "omitted": [],
+  "reasons": {
+    "org.ta4j.core.indicators.AbstractIndicator": "superclass/interface chain",
+    "org.ta4j.core.Indicator": "superclass/interface chain",
+    "org.ta4j.core.num.Num": "superclass/interface chain",
+    "org.ta4j.core.BarSeries": "constructor",
+    "org.ta4j.core.indicators.helpers.TRIndicator": "constructor",
+    "org.ta4j.core.indicators.ATRIndicator.Config": "constructor",
+    "org.ta4j.core.indicators.averages.MMAIndicator": "field"
+  },
+  "types": 7,
+  "lines": 112,
+  "limits": {
+    "types": 15,
+    "lines": 400
+  }
+}

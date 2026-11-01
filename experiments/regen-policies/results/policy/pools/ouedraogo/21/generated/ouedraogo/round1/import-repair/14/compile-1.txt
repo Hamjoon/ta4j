@@ -1,0 +1,53 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:13: error: cannot find symbol
+import org.ta4j.core.TradeType;
+                    ^
+  symbol:   class TradeType
+  location: package org.ta4j.core
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:102: error: method one() is already defined in class SimpleNumFactory
+        @Override public Num one() { return one(); }
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:106: error: method numOf(double) is already defined in class SimpleNumFactory
+        @Override public Num numOf(double d) { return numOf(d); }
+                             ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:46: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static final class SimpleNum implements Num {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:99: error: SimpleNumFactory is not abstract and does not override abstract method numOf(String) in NumFactory
+    private static final class SimpleNumFactory implements NumFactory {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:100: error: one() in SimpleNumFactory cannot implement one() in NumFactory
+        SimpleNum one() { return numOf(1.0); }
+                  ^
+  attempting to assign weaker access privileges; was public
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:104: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(int i) { return numOf((double) i); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:105: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(long l) { return numOf((double) l); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:106: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(double d) { return numOf(d); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:107: error: method does not override or implement a method from a supertype
+        @Override public Num numOf(java.math.BigDecimal bd) { return numOf(bd.doubleValue()); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:111: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static final class SimpleBar implements org.ta4j.core.Bar {
+                         ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:127: error: method does not override or implement a method from a supertype
+        @Override public long getTimestamp() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:128: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:257: error: incompatible types: Position cannot be converted to TradingRecord
+        CashFlow cf = new CashFlow(series, openPos, series.getEndIndex());
+                                           ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:325: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(true, entry, exit);
+                            ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/CashFlow/ZSL/CashFlowTest.java:334: error: getIntermediateRatio(boolean,Num,Num) has private access in CashFlow
+        Num ratio = CashFlow.getIntermediateRatio(false, entry, exit);
+                            ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+16 errors

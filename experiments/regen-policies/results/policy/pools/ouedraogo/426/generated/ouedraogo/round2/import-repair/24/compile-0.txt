@@ -1,0 +1,11 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:31: error: cannot find symbol
+    private static final CostModel ZERO_COST = new ZeroCostModel();
+                         ^
+  symbol:   class CostModel
+  location: class PositionTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/Position/ZSL/PositionTest.java:170: error: cannot find symbol
+        CostModel otherCost = new ZeroCostModel(); // a different instance
+        ^
+  symbol:   class CostModel
+  location: class PositionTest
+2 errors

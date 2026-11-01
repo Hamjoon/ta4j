@@ -1,0 +1,70 @@
+{
+  "index": 50,
+  "sha": "c6400ff7bf4030ee3940be3a6964ff013b48a2fe",
+  "parent": "2f39dbc00759dc4400b7857e0117a995c93604b7",
+  "pre_image": {
+    "src/main/java/org/ta4j/core/criteria/pnl/AverageLossCriterion.java": [
+      42,
+      47,
+      49,
+      51,
+      52,
+      53,
+      55,
+      60,
+      62,
+      64,
+      65,
+      66,
+      68
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AverageProfitCriterion.java": [
+      42,
+      47,
+      49,
+      51,
+      53,
+      60,
+      62,
+      64,
+      65,
+      66,
+      68
+    ]
+  },
+  "post_image": {
+    "src/main/java/org/ta4j/core/criteria/pnl/AverageLossCriterion.java": [
+      42,
+      47,
+      48,
+      50,
+      52,
+      53,
+      54,
+      56,
+      61,
+      62,
+      64,
+      66,
+      67,
+      68,
+      70
+    ],
+    "src/main/java/org/ta4j/core/criteria/pnl/AverageProfitCriterion.java": [
+      42,
+      47,
+      48,
+      50,
+      52,
+      54,
+      61,
+      62,
+      64,
+      66,
+      67,
+      68,
+      70
+    ]
+  },
+  "diff": "diff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageLossCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageLossCriterion.java\nindex bb69b8a9d..fb5803e2c 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageLossCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageLossCriterion.java\n@@ -42 +42 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-    private final LossCriterion grossLossCriterion = new LossCriterion(false);\n+    private final LossCriterion netLossCriterion = new LossCriterion(false);\n@@ -47 +47,2 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-        Num numberOfLosingPositions = numberOfLosingPositionsCriterion.calculate(series, position);\n+        var zero = series.numFactory().zero();\n+        var numberOfLosingPositions = numberOfLosingPositionsCriterion.calculate(series, position);\n@@ -49 +50 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-            return series.numFactory().zero();\n+            return zero;\n@@ -51,3 +52,3 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-        Num grossLoss = grossLossCriterion.calculate(series, position);\n-        if (grossLoss.isZero()) {\n-            return series.numFactory().zero();\n+        var netLoss = netLossCriterion.calculate(series, position);\n+        if (netLoss.isZero()) {\n+            return zero;\n@@ -55 +56 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-        return grossLoss.dividedBy(numberOfLosingPositions);\n+        return netLoss.dividedBy(numberOfLosingPositions);\n@@ -60 +61,2 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-        Num numberOfLosingPositions = numberOfLosingPositionsCriterion.calculate(series, tradingRecord);\n+        var zero = series.numFactory().zero();\n+        var numberOfLosingPositions = numberOfLosingPositionsCriterion.calculate(series, tradingRecord);\n@@ -62 +64 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-            return series.numFactory().zero();\n+            return zero;\n@@ -64,3 +66,3 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-        Num grossLoss = grossLossCriterion.calculate(series, tradingRecord);\n-        if (grossLoss.isZero()) {\n-            return series.numFactory().zero();\n+        var netLoss = netLossCriterion.calculate(series, tradingRecord);\n+        if (netLoss.isZero()) {\n+            return zero;\n@@ -68 +70 @@ public class AverageLossCriterion extends AbstractAnalysisCriterion {\n-        return grossLoss.dividedBy(numberOfLosingPositions);\n+        return netLoss.dividedBy(numberOfLosingPositions);\ndiff --git a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageProfitCriterion.java b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageProfitCriterion.java\nindex cd0325d3c..5256f4fc5 100644\n--- a/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageProfitCriterion.java\n+++ b/ta4j-core/src/main/java/org/ta4j/core/criteria/pnl/AverageProfitCriterion.java\n@@ -42 +42 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-    private final ProfitCriterion grossProfitCriterion = new ProfitCriterion(false);\n+    private final ProfitCriterion netProfitCriterion = new ProfitCriterion(false);\n@@ -47 +47,2 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-        Num numberOfWinningPositions = numberOfWinningPositionsCriterion.calculate(series, position);\n+        var zero = series.numFactory().zero();\n+        var numberOfWinningPositions = numberOfWinningPositionsCriterion.calculate(series, position);\n@@ -49 +50 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-            return series.numFactory().zero();\n+            return zero;\n@@ -51 +52 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-        Num grossProfit = grossProfitCriterion.calculate(series, position);\n+        var grossProfit = netProfitCriterion.calculate(series, position);\n@@ -53 +54 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-            return series.numFactory().zero();\n+            return zero;\n@@ -60 +61,2 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-        Num numberOfWinningPositions = numberOfWinningPositionsCriterion.calculate(series, tradingRecord);\n+        var zero = series.numFactory().zero();\n+        var numberOfWinningPositions = numberOfWinningPositionsCriterion.calculate(series, tradingRecord);\n@@ -62 +64 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-            return series.numFactory().zero();\n+            return zero;\n@@ -64,3 +66,3 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-        Num grossProfit = grossProfitCriterion.calculate(series, tradingRecord);\n-        if (grossProfit.isZero()) {\n-            return series.numFactory().zero();\n+        var netProfit = netProfitCriterion.calculate(series, tradingRecord);\n+        if (netProfit.isZero()) {\n+            return zero;\n@@ -68 +70 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-        return grossProfit.dividedBy(numberOfWinningPositions);\n+        return netProfit.dividedBy(numberOfWinningPositions);\n@@ -71 +73,3 @@ public class AverageProfitCriterion extends AbstractAnalysisCriterion {\n-    /** The higher the criterion value, the better. */\n+    /**\n+     * The higher the criterion value, the better.\n+     */"
+}

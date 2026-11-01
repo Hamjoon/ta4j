@@ -1,0 +1,117 @@
+[
+  {
+    "group": "ATRIndicator.getBarCount",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": 10
+          }
+        ],
+        "expected": 10,
+        "description": "Typical case \u2013 the underlying MMAIndicator reports a positive bar count (10). getBarCount() should return the same value."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": 0
+          }
+        ],
+        "expected": 0,
+        "description": "Edge case \u2013 the underlying MMAIndicator reports zero bars. getBarCount() must forward this value unchanged."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": -5
+          }
+        ],
+        "expected": -5,
+        "description": "Defensive case \u2013 if the underlying MMAIndicator (perhaps due to a bug) returns a negative bar count, getBarCount() should still return the exact value without modification."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getBarCount.additional",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": 2147483647
+          }
+        ],
+        "expected": 2147483647,
+        "description": "Boundary case \u2013 the underlying MMAIndicator reports Integer.MAX_VALUE. getBarCount() must forward this maximum int value unchanged."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": -2147483648
+          }
+        ],
+        "expected": -2147483648,
+        "description": "Boundary case \u2013 the underlying MMAIndicator reports Integer.MIN_VALUE. Even though this is an unlikely real\u2011world value, getBarCount() should return it verbatim."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": 7
+          }
+        ],
+        "expected": 7,
+        "description": "Typical odd number \u2013 verifies that non\u2011even, non\u2011round numbers are propagated correctly."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": 123456789
+          }
+        ],
+        "expected": 123456789,
+        "description": "Large positive number \u2013 ensures that getBarCount() works for high\u2011magnitude but still valid counts."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicatorBarCount",
+            "value": -42
+          }
+        ],
+        "expected": -42,
+        "description": "Negative value different from the already\u2011tested -5 \u2013 confirms that any negative integer is returned unchanged, highlighting the method's lack of validation."
+      }
+    ]
+  },
+  {
+    "group": "ATRIndicator.getBarCount.exception",
+    "cases": [
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicator",
+            "value": null
+          }
+        ],
+        "expected": "NullPointerException",
+        "description": "When the ATRIndicator is constructed with a null averageTrueRangeIndicator, calling getBarCount() should throw a NullPointerException because the method dereferences the field."
+      },
+      {
+        "input": [
+          {
+            "parameter": "averageTrueRangeIndicator",
+            "value": "throwsRuntimeException"
+          }
+        ],
+        "expected": "RuntimeException",
+        "description": "If the underlying MMAIndicator's getBarCount() implementation throws a RuntimeException (e.g., IllegalStateException), getBarCount() must propagate that exception unchanged."
+      }
+    ]
+  }
+]

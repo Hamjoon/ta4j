@@ -1,0 +1,275 @@
+###Test START##
+package org.ta4j.core.indicators.numeric;
+
+import static org.junit.Assert.*;
+
+import java.time.Duration;
+import java.time.ZonedDateTime;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.BaseBarSeriesBuilder;
+import org.ta4j.core.Num;
+import org.ta4j.core.indicators.helpers.ConstantIndicator;
+import org.ta4j.core.rules.CrossedDownIndicatorRule;
+import org.ta4j.core.rules.CrossedUpIndicatorRule;
+import org.ta4j.core.rules.OverIndicatorRule;
+import org.ta4j.core.rules.UnderIndicatorRule;
+import org.ta4j.core.Rule;
+
+/**
+ * Comprehensive tests for {@link NumericIndicator}.
+ *
+ * The tests use a real {@link BarSeries} (built via {@link BaseBarSeriesBuilder})
+ * and real indicator implementations (e.g. {@link ConstantIndicator},
+ * {@link org.ta4j.core.indicators.helpers.ClosePriceIndicator}) – no mocks or
+ * custom subclasses of library abstractions are used.
+ */
+public class NumericIndicatorTest {
+
+    private BarSeries series;
+    private Num n1;
+    private Num n2;
+    private Num n3;
+
+    @Before
+    public void setUp() {
+        // Build a simple series with three bars: close prices 1, 2, 3
+        series = new BaseBarSeriesBuilder()
+                .withName("testSeries")
+                .build();
+
+        // Add three bars – only the close price is relevant for the tests.
+        series.addBar(createBar(1.0));
+        series.addBar(createBar(2.0));
+        series.addBar(createBar(3.0));
+
+        // Helper Num instances
+        n1 = series.numFactory().numOf(1);
+        n2 = series.numFactory().numOf(2);
+        n3 = series.numFactory().numOf(3);
+    }
+
+    /** Helper to create a bar with the same value for open, high, low, close and volume. */
+    private org.ta4j.core.Bar createBar(double price) {
+        ZonedDateTime endTime = ZonedDateTime.now().plusSeconds(series.getBarCount());
+        return new org.ta4j.core.BaseBar(
+                Duration.ofDays(1),
+                endTime,
+                series.numFactory().numOf(price), // open
+                series.numFactory().numOf(price), // high
+                series.numFactory().numOf(price), // low
+                series.numFactory().numOf(price), // close
+                series.numFactory().numOf(0)      // volume
+        );
+    }
+
+    @Test
+    public void testFactoryMethods() {
+        NumericIndicator ci = NumericIndicator.closePrice(series);
+        assertNotNull(ci);
+        assertEquals(series, ci.getBarSeries());
+
+        NumericIndicator vi = NumericIndicator.volume(series);
+        assertNotNull(vi);
+        assertEquals(series, vi.getBarSeries());
+
+        NumericIndicator wrapped = NumericIndicator.of(new ConstantIndicator<>(series, n2));
+        assertEquals(n2, wrapped.getValue(0));
+        assertSame(wrapped.delegate(), wrapped.delegate());
+    }
+
+    @Test
+    public void testArithmeticOperationsWithIndicator() {
+        ConstantIndicator<Num> c1 = new ConstantIndicator<>(series, n1);
+        ConstantIndicator<Num> c2 = new ConstantIndicator<>(series, n2);
+
+        NumericIndicator ni1 = NumericIndicator.of(c1);
+        NumericIndicator sum = ni1.plus(c2);
+        assertEquals(n1.plus(n2), sum.getValue(0));
+
+        NumericIndicator diff = ni1.minus(c2);
+        assertEquals(n1.minus(n2), diff.getValue(0));
+
+        NumericIndicator prod = ni1.multipliedBy(c2);
+        assertEquals(n1.multipliedBy(n2), prod.getValue(0));
+
+        NumericIndicator quot = ni1.dividedBy(c2);
+        assertEquals(n1.dividedBy(n2), quot.getValue(0));
+
+        NumericIndicator min = ni1.min(c2);
+        assertEquals(n1.min(n2), min.getValue(0));
+
+        NumericIndicator max = ni1.max(c2);
+        assertEquals(n1.max(n2), max.getValue(0));
+    }
+
+    @Test
+    public void testArithmeticOperationsWithNumber() {
+        ConstantIndicator<Num> c1 = new ConstantIndicator<>(series, n3);
+
+        NumericIndicator ni = NumericIndicator.of(c1);
+        NumericIndicator sum = ni.plus(4); // 3 + 4 = 7
+        assertEquals(n3.plus(series.numFactory().numOf(4)), sum.getValue(0));
+
+        NumericIndicator diff = ni.minus(1); // 3 - 1 = 2
+        assertEquals(n3.minus(series.numFactory().numOf(1)), diff.getValue(0));
+
+        NumericIndicator prod = ni.multipliedBy(2); // 3 * 2 = 6
+        assertEquals(n3.multipliedBy(series.numFactory().numOf(2)), prod.getValue(0));
+
+        NumericIndicator quot = ni.dividedBy(3); // 3 / 3 = 1
+        assertEquals(n3.dividedBy(series.numFactory().numOf(3)), quot.getValue(0));
+
+        NumericIndicator min = ni.min(5);
+        assertEquals(n3.min(series.numFactory().numOf(5)), min.getValue(0));
+
+        NumericIndicator max = ni.max(2);
+        assertEquals(n3.max(series.numFactory().numOf(2)), max.getValue(0));
+    }
+
+    @Test
+    public void testUnaryOperations() {
+        ConstantIndicator<Num> cNeg = new ConstantIndicator<>(series, series.numFactory().numOf(-5));
+
+        NumericIndicator ni = NumericIndicator.of(cNeg);
+        NumericIndicator abs = ni.abs();
+        assertEquals(series.numFactory().numOf(5), abs.getValue(0));
+
+        NumericIndicator sqrt = NumericIndicator.of(new ConstantIndicator<>(series, series.numFactory().numOf(4))).sqrt();
+        assertEquals(series.numFactory().numOf(2), sqrt.getValue(0));
+
+        NumericIndicator squared = ni.squared(); // (-5) * (-5) = 25
+        assertEquals(series.numFactory().numOf(25), squared.getValue(0));
+    }
+
+    @Test
+    public void testStatisticalIndicators() {
+        // SMA of barCount = 2 on series [1,2,3] -> values: index0=1, index1= (1+2)/2=1.5, index2= (2+3)/2=2.5
+        NumericIndicator close = NumericIndicator.closePrice(series);
+        NumericIndicator sma = close.sma(2);
+        assertEquals(n1, sma.getValue(0));
+        assertEquals(series.numFactory().numOf(1.5), sma.getValue(1));
+        assertEquals(series.numFactory().numOf(2.5), sma.getValue(2));
+
+        // EMA of barCount = 2 (ta4j EMA uses smoothing factor 2/(barCount+1))
+        NumericIndicator ema = close.ema(2);
+        // we only verify that the EMA indicator returns a non‑null Num and that it is stable after enough bars
+        assertNotNull(ema.getValue(2));
+
+        // Standard deviation of barCount = 2
+        NumericIndicator stddev = close.stddev(2);
+        assertNotNull(stddev.getValue(2));
+
+        // Highest and Lowest of barCount = 2
+        NumericIndicator highest = close.highest(2);
+        assertEquals(series.numFactory().numOf(2), highest.getValue(1)); // max of [1,2]
+        assertEquals(series.numFactory().numOf(3), highest.getValue(2)); // max of [2,3]
+
+        NumericIndicator lowest = close.lowest(2);
+        assertEquals(series.numFactory().numOf(1), lowest.getValue(1)); // min of [1,2]
+        assertEquals(series.numFactory().numOf(2), lowest.getValue(2)); // min of [2,3]
+
+        // Previous indicator
+        NumericIndicator prev1 = close.previous(1);
+        assertEquals(n1, prev1.getValue(0)); // index 0 has no previous -> returns first value
+        assertEquals(n1, prev1.getValue(1)); // previous of index1 is value at 0 (1)
+        assertEquals(n2, prev1.getValue(2)); // previous of index2 is value at 1 (2)
+
+        NumericIndicator prevDefault = close.previous();
+        assertEquals(prev1.getValue(2), prevDefault.getValue(2));
+    }
+
+    @Test
+    public void testCrossedOverRuleWithNumber() {
+        // Use close price series [1,2,3] and threshold 1.5 -> crossing up occurs at index 1
+        NumericIndicator close = NumericIndicator.closePrice(series);
+        Rule crossedUp = close.crossedOver(1.5);
+        assertTrue(crossedUp instanceof CrossedUpIndicatorRule);
+        assertTrue(crossedUp.isSatisfied(1, null));
+        assertFalse(crossedUp.isSatisfied(0, null));
+    }
+
+    @Test
+    public void testCrossedUnderRuleWithNumber() {
+        // Threshold 2.5 -> crossing down occurs at index 2 (price goes from 2 to 3, not crossing down)
+        // We'll use a decreasing series to get a real crossing.
+        BarSeries decSeries = new BaseBarSeriesBuilder()
+                .withName("decSeries")
+                .build();
+        decSeries.addBar(createBar(3));
+        decSeries.addBar(createBar(2));
+        decSeries.addBar(createBar(1));
+
+        NumericIndicator close = NumericIndicator.closePrice(decSeries);
+        Rule crossedDown = close.crossedUnder(2.5);
+        assertTrue(crossedDown instanceof CrossedDownIndicatorRule);
+        // crossing down occurs at index 1 (3 -> 2 crosses below 2.5)
+        assertTrue(crossedDown.isSatisfied(1, null));
+        // no crossing at index 0
+        assertFalse(crossedDown.isSatisfied(0, null));
+    }
+
+    @Test
+    public void testCrossedOverRuleWithIndicator() {
+        // First indicator: close price, second indicator: constant 2
+        ConstantIndicator<Num> constantTwo = new ConstantIndicator<>(series, series.numFactory().numOf(2));
+        NumericIndicator close = NumericIndicator.closePrice(series);
+        Rule crossedUp = close.crossedOver(constantTwo);
+        assertTrue(crossedUp instanceof CrossedUpIndicatorRule);
+        // price 1 -> 2 -> 3 crosses over 2 between index 1 and 2
+        assertTrue(crossedUp.isSatisfied(2, null));
+        assertFalse(crossedUp.isSatisfied(1, null));
+    }
+
+    @Test
+    public void testCrossedUnderRuleWithIndicator() {
+        // First: close price, second: constant 2
+        ConstantIndicator<Num> constantTwo = new ConstantIndicator<>(series, series.numFactory().numOf(2));
+        NumericIndicator close = NumericIndicator.closePrice(series);
+        Rule crossedDown = close.crossedUnder(constantTwo);
+        assertTrue(crossedDown instanceof CrossedDownIndicatorRule);
+        // No crossing down in increasing series
+        assertFalse(crossedDown.isSatisfied(2, null));
+    }
+
+    @Test
+    public void testIsGreaterThanRule() {
+        NumericIndicator close = NumericIndicator.closePrice(series);
+        Rule greaterThan = close.isGreaterThan(2);
+        assertTrue(greaterThan instanceof OverIndicatorRule);
+        // index 2 value = 3 > 2
+        assertTrue(greaterThan.isSatisfied(2, null));
+        // index 0 value = 1 <= 2
+        assertFalse(greaterThan.isSatisfied(0, null));
+    }
+
+    @Test
+    public void testIsLessThanRule() {
+        NumericIndicator close = NumericIndicator.closePrice(series);
+        Rule lessThan = close.isLessThan(2);
+        assertTrue(lessThan instanceof UnderIndicatorRule);
+        // index 0 value = 1 < 2
+        assertTrue(lessThan.isSatisfied(0, null));
+        // index 2 value = 3 >= 2
+        assertFalse(lessThan.isSatisfied(2, null));
+    }
+
+    @Test
+    public void testDelegateRetrieval() {
+        ConstantIndicator<Num> constant = new ConstantIndicator<>(series, n1);
+        NumericIndicator ni = NumericIndicator.of(constant);
+        assertSame(constant, ni.delegate());
+        assertEquals(constant.getValue(0), ni.getValue(0));
+    }
+
+    @Test
+    public void testToStringDelegatesToInnerIndicator() {
+        ConstantIndicator<Num> constant = new ConstantIndicator<>(series, n2);
+        NumericIndicator ni = NumericIndicator.of(constant);
+        assertEquals(constant.toString(), ni.toString());
+    }
+}
+###Test END##

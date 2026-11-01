@@ -1,0 +1,80 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:45: error: cannot find symbol
+        @Override public ZonedDateTime getEndTime() { return null; }
+                         ^
+  symbol:   class ZonedDateTime
+  location: class SimpleBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:46: error: cannot find symbol
+        @Override public ZonedDateTime getBeginTime() { return null; }
+                         ^
+  symbol:   class ZonedDateTime
+  location: class SimpleBar
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:27: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:41: error: cannot find symbol
+        @Override public Num getVolume() { return DecimalNum.ZERO; }
+                                                            ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:42: error: cannot find symbol
+        @Override public Num getAmount() { return DecimalNum.ZERO; }
+                                                            ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:43: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { return 0; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:44: error: method does not override or implement a method from a supertype
+        @Override public BarSeries getSeries() { return null; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:47: error: method does not override or implement a method from a supertype
+        @Override public Num getNumClosePrice() { return close; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:48: error: method does not override or implement a method from a supertype
+        @Override public Num getNumOpenPrice() { return open; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:49: error: method does not override or implement a method from a supertype
+        @Override public Num getNumHighPrice() { return high; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:50: error: method does not override or implement a method from a supertype
+        @Override public Num getNumLowPrice() { return low; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:51: error: method does not override or implement a method from a supertype
+        @Override public Num getNumVolume() { return DecimalNum.ZERO; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:51: error: cannot find symbol
+        @Override public Num getNumVolume() { return DecimalNum.ZERO; }
+                                                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:52: error: method does not override or implement a method from a supertype
+        @Override public Num getNumAmount() { return DecimalNum.ZERO; }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:52: error: cannot find symbol
+        @Override public Num getNumAmount() { return DecimalNum.ZERO; }
+                                                               ^
+  symbol:   variable ZERO
+  location: class DecimalNum
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:59: error: constructor DecimalNumFactory in class DecimalNumFactory cannot be applied to given types;
+        private final NumFactory numFactory = new DecimalNumFactory();
+                                              ^
+  required: no arguments
+  found:    no arguments
+  reason: DecimalNumFactory() has private access in DecimalNumFactory
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:205: error: cannot find symbol
+        TradingRecord record = mgr.run(strategy, TradeType.SELL, customAmount, 0, 2);
+                                                 ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:215: error: cannot find symbol
+        assertEquals(TradeType.SELL, record.getStartingType());
+                     ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/21/generated/ouedraogo/round1/sources/BarSeriesManager/FSL/BarSeriesManagerTest.java:227: error: cannot find symbol
+        TradingRecord record = mgr.run(strategy, TradeType.BUY, 2, 4);
+                                                 ^
+  symbol:   variable TradeType
+  location: class BarSeriesManagerTest
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+19 errors

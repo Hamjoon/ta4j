@@ -1,0 +1,5 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/426/generated/ouedraogo/round2/sources/CashFlow/CoT/CashFlowTest.java:133: error: reference to CashFlow is ambiguous
+        new CashFlow(series, null);
+        ^
+  both constructor CashFlow(BarSeries,Position) in CashFlow and constructor CashFlow(BarSeries,TradingRecord) in CashFlow match
+1 error

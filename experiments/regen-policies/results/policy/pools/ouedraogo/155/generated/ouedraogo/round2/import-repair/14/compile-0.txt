@@ -1,0 +1,181 @@
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:294: error: cannot find symbol
+        private final List<Bar> bars;
+                           ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:297: error: cannot find symbol
+        SimpleBarSeries(List<Bar> bars) {
+                             ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:307: error: cannot find symbol
+        public Bar getBar(int i) {
+               ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:322: error: cannot find symbol
+        public List<Bar> getBarData() {
+                    ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:327: error: cannot find symbol
+        @Override public BarBuilder barBuilder() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class BarBuilder
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:329: error: cannot find symbol
+        @Override public Bar getFirstBar() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:330: error: cannot find symbol
+        @Override public Bar getLastBar() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:336: error: cannot find symbol
+        @Override public void addBar(Bar bar) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:337: error: cannot find symbol
+        @Override public void addBar(Bar bar, boolean replace) { throw new UnsupportedOperationException(); }
+                                     ^
+  symbol:   class Bar
+  location: class SimpleBarSeries
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:348: error: interface expected here
+    private static class SimpleTrade implements Trade {
+                                                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:383: error: cannot find symbol
+        @Override public TradeType getTradeType() { throw new UnsupportedOperationException(); }
+                         ^
+  symbol:   class TradeType
+  location: class SimpleTrade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:384: error: cannot find symbol
+        @Override public void setTradeType(TradeType tradeType) { throw new UnsupportedOperationException(); }
+                                           ^
+  symbol:   class TradeType
+  location: class SimpleTrade
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:408: error: cannot find symbol
+        public CostModel getTransactionCostModel() { throw new UnsupportedOperationException(); }
+               ^
+  symbol:   class CostModel
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:411: error: cannot find symbol
+        public CostModel getHoldingCostModel() { throw new UnsupportedOperationException(); }
+               ^
+  symbol:   class CostModel
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:420: error: cannot find symbol
+        public Trade getLastTrade(TradeType tradeType) { throw new UnsupportedOperationException(); }
+                                  ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:441: error: cannot find symbol
+        public TradeType getStartingType() { throw new UnsupportedOperationException(); }
+               ^
+  symbol:   class TradeType
+  location: class SimpleTradingRecord
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:22: error: SimpleNum is not abstract and does not override abstract method compareTo(Num) in Comparable
+    private static class SimpleNum implements Num {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:242: error: SimpleNumFactory is not abstract and does not override abstract method thousand() in NumFactory
+    private static class SimpleNumFactory implements NumFactory {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:268: error: SimpleBar is not abstract and does not override abstract method addPrice(Num) in Bar
+    private static class SimpleBar implements org.ta4j.core.Bar {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:289: error: getTimePeriod() in SimpleBar cannot implement getTimePeriod() in Bar
+        @Override public org.ta4j.core.num.Num getTimePeriod() { throw new UnsupportedOperationException(); }
+                                               ^
+  return type Num is not compatible with Duration
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:287: error: method does not override or implement a method from a supertype
+        @Override public int getIndex() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:288: error: method does not override or implement a method from a supertype
+        @Override public org.ta4j.core.num.Num getTimestamp() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:289: error: method does not override or implement a method from a supertype
+        @Override public org.ta4j.core.num.Num getTimePeriod() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:359: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:364: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:369: error: method does not override or implement a method from a supertype
+        @Override
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:375: error: method does not override or implement a method from a supertype
+        @Override public Num getPrice() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:376: error: method does not override or implement a method from a supertype
+        @Override public Num getAmount() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:377: error: method does not override or implement a method from a supertype
+        @Override public Num getVolume() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:378: error: method does not override or implement a method from a supertype
+        @Override public Num getCost() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:379: error: method does not override or implement a method from a supertype
+        @Override public Num getFee() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:380: error: method does not override or implement a method from a supertype
+        @Override public Num getCommission() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:381: error: method does not override or implement a method from a supertype
+        @Override public boolean isEntry() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:382: error: method does not override or implement a method from a supertype
+        @Override public boolean isExit() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:383: error: method does not override or implement a method from a supertype
+        @Override public TradeType getTradeType() { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:384: error: method does not override or implement a method from a supertype
+        @Override public void setTradeType(TradeType tradeType) { throw new UnsupportedOperationException(); }
+        ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:388: error: SimpleTradingRecord is not abstract and does not override abstract method exit(int,Num,Num) in TradingRecord
+    private static class SimpleTradingRecord implements TradingRecord {
+                   ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:460: error: cannot find symbol
+        List<Bar> bars = List.of(
+             ^
+  symbol:   class Bar
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:468: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, true, numFactory.numOf(10)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:491: error: cannot find symbol
+        List<Bar> bars = List.of(
+             ^
+  symbol:   class Bar
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:499: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, false, numFactory.numOf(20)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:513: error: cannot find symbol
+        List<Bar> bars = List.of(
+             ^
+  symbol:   class Bar
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:523: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, true, numFactory.numOf(10)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:529: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(2, false, numFactory.numOf(30)),
+                ^
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:555: error: cannot find symbol
+        List<Bar> bars = List.of(new SimpleBar(numFactory.numOf(10)));
+             ^
+  symbol:   class Bar
+  location: class CashFlowTest
+/repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java:560: error: incompatible types: SimpleTrade cannot be converted to Trade
+                new SimpleTrade(0, true, numFactory.numOf(10)),
+                ^
+Note: /repo/experiments/regen-policies/results/policy/pools/ouedraogo/155/generated/ouedraogo/round2/sources/CashFlow/ZSL/CashFlowTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+46 errors

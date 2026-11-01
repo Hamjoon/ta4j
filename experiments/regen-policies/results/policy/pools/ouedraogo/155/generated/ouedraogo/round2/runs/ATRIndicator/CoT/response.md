@@ -1,0 +1,186 @@
+###Test START##
+```java
+package org.ta4j.core.indicators;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.ta4j.core.Bar;
+import org.ta4j.core.BarSeries;
+import org.ta4j.core.num.Num;
+import org.ta4j.core.num.DecimalNum;
+
+/**
+ * JUnit 4 test cases for {@link ATRIndicator}.
+ *
+ * The tests cover:
+ * <ul>
+ *   <li>Extraction of all public methods and their basic usage.</li>
+ *   <li>Verification of normal behaviour (correct values, correct delegation to
+ *       internal indicators, proper {@code toString()} output).</li>
+ *   <li>Edge‑case handling such as illegal arguments and index bounds.</li>
+ * </ul>
+ *
+ * The test uses the concrete {@link BaseBarSeries} implementation that ships
+ * with Ta4j (it implements {@link BarSeries}) together with the built‑in
+ * {@link DecimalNum} for numeric values. No mocking frameworks are used – all
+ * objects are created through their public constructors as required.
+ */
+public class ATRIndicatorTest {
+
+    /** Minimal series with deterministic data – 20 identical bars. */
+    private BarSeries series;
+
+    /** The ATR indicator under test (default 14‑period). */
+    private ATRIndicator atr;
+
+    /** Number of periods used for the ATR calculation in the tests. */
+    private static final int BAR_COUNT = 14;
+
+    /**
+     * Helper to create a {@link Bar} with the same high, low and close price.
+     *
+     * @param price price for high, low and close
+     * @return a new {@link Bar}
+     */
+    private Bar createBar(double price) {
+        // In Ta4j a {@code Bar} can be created via the BarBuilder obtained from the series.
+        // The builder requires the open price, close price, high price, low price,
+        // volume and amount. For this test the volume and amount are set to zero.
+        Num nPrice = DecimalNum.valueOf(price);
+        return series.barBuilder()
+                .openPrice(nPrice)
+                .closePrice(nPrice)
+                .highPrice(nPrice)
+                .lowPrice(nPrice)
+                .volume(DecimalNum.ZERO)
+                .amount(DecimalNum.ZERO)
+                .build();
+    }
+
+    @Before
+    public void setUp() {
+        // Use the default concrete implementation provided by the library.
+        series = new BaseBarSeries("test-series");
+        // Populate the series with 20 identical bars (price = 100.0).
+        for (int i = 0; i < 20; i++) {
+            series.addBar(createBar(100.0));
+        }
+        // Create the ATR indicator with a 14‑period time frame.
+        atr = new ATRIndicator(series, BAR_COUNT);
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 1.  Public method signatures (extracted for documentation purposes)   */
+    /* ---------------------------------------------------------------------- */
+    // public ATRIndicator(BarSeries series, int barCount)
+    // public ATRIndicator(TRIndicator tr, int barCount)
+    // public Num getValue(int index)
+    // public int getCountOfUnstableBars()
+    // public TRIndicator getTRIndicator()
+    // public int getBarCount()
+    // public String toString()
+
+    /* ---------------------------------------------------------------------- */
+    /* 2.  Basic functionality tests                                         */
+    /* ---------------------------------------------------------------------- */
+
+    @Test
+    public void testConstructorWithSeries() {
+        ATRIndicator indicator = new ATRIndicator(series, BAR_COUNT);
+        assertNotNull("ATRIndicator should not be null", indicator);
+        assertEquals("Bar count must be stored correctly", BAR_COUNT, indicator.getBarCount());
+    }
+
+    @Test
+    public void testConstructorWithTRIndicator() {
+        TRIndicator tr = new TRIndicator(series);
+        ATRIndicator indicator = new ATRIndicator(tr, BAR_COUNT);
+        assertSame("TRIndicator passed to constructor must be returned by getTRIndicator()", tr,
+                indicator.getTRIndicator());
+        assertEquals("Bar count must be stored correctly", BAR_COUNT, indicator.getBarCount());
+    }
+
+    @Test
+    public void testGetValueReturnsNum() {
+        // The series has 20 bars; index 15 is safely inside the range.
+        Num value = atr.getValue(15);
+        assertNotNull("getValue should never return null", value);
+    }
+
+    @Test
+    public void testGetCountOfUnstableBarsEqualsBarCount() {
+        assertEquals("Unstable bars count must equal the bar count used for the MMA",
+                BAR_COUNT, atr.getCountOfUnstableBars());
+    }
+
+    @Test
+    public void testGetTRIndicatorNotNull() {
+        assertNotNull("TRIndicator should be instantiated", atr.getTRIndicator());
+    }
+
+    @Test
+    public void testGetBarCountMatchesConstructorArgument() {
+        assertEquals("getBarCount must return the value supplied to the constructor",
+                BAR_COUNT, atr.getBarCount());
+    }
+
+    @Test
+    public void testToStringContainsClassNameAndBarCount() {
+        String txt = atr.toString();
+        assertTrue("toString must contain class simple name", txt.contains("ATRIndicator"));
+        assertTrue("toString must contain the barCount value", txt.contains(String.valueOf(BAR_COUNT)));
+    }
+
+    /* ---------------------------------------------------------------------- */
+    /* 3.  Edge‑case and exception handling tests                             */
+    /* ---------------------------------------------------------------------- */
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorZeroBarCountThrowsException() {
+        // MMAIndicator (the underlying EMA) validates the barCount argument.
+        new ATRIndicator(series, 0);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorNegativeBarCountThrowsException() {
+        new ATRIndicator(series, -5);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueWithNegativeIndexThrowsException() {
+        atr.getValue(-1);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueWithIndexBeyondSeriesThrowsException() {
+        // series has 20 bars, valid indices are 0‑19.
+        atr.getValue(20);
+    }
+
+    @Test
+    public void testGetValueBeforeEnoughBarsAreAvailable() {
+        // For the first (BAR_COUNT‑1) bars the MMAIndicator may return NaN.
+        // The test checks that the indicator does not throw and returns a Num.
+        for (int i = 0; i < BAR_COUNT - 1; i++) {
+            Num v = atr.getValue(i);
+            assertNotNull("Value at index " + i + " should not be null", v);
+        }
+    }
+
+    @Test
+    public void testGetValueAfterStabilisationMatchesMMAIndicator() {
+        // The ATRIndicator delegates to MMAIndicator, therefore the value returned
+        // by ATRIndicator must be identical (by reference) to the value returned by
+        // the underlying MMAIndicator.
+        MMAIndicator mma = new MMAIndicator(atr.getTRIndicator(), BAR_COUNT);
+        for (int i = BAR_COUNT; i < series.getBarCount(); i++) {
+            Num atrValue = atr.getValue(i);
+            Num mmaValue = mma.getValue(i);
+            assertEquals("ATR and MMA values must be equal at index " + i, mmaValue, atrValue);
+        }
+    }
+}
+```
+###Test END##
